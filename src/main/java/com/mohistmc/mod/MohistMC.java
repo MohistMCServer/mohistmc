@@ -6,6 +6,8 @@ import com.mohistmc.mod.register.ItemRegister;
 import com.mohistmc.mod.register.ModEntities;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.TitleScreen;
+import net.minecraft.client.tutorial.TutorialSteps;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +22,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
+import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -77,6 +80,13 @@ public class MohistMC {
 
         @SubscribeEvent
         public static void registerGuiOverlays(RegisterGuiLayersEvent event) {
+        }
+
+        @SubscribeEvent
+        public static void onGuiOpen(ScreenEvent.Opening e) {
+            if (e.getScreen().getClass() == TitleScreen.class) {
+                Minecraft.getInstance().getTutorial().setStep(TutorialSteps.NONE);
+            }
         }
     }
 }

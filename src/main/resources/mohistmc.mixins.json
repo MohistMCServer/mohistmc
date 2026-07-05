@@ -7,10 +7,6 @@
     "MixinComponent"
   ],
   "client": [
-    "GameRendererMixin",
-    "GlDeviceMixin",
-    "GpuDeviceMixin",
-    "MinecraftMixin",
     "MixinAbstractContainerScreen",
     "MixinGuiGraphicsExtractor",
     "MixinItemEnchants",
