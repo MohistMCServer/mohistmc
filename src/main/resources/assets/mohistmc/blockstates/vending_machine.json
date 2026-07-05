@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mohistmc:block/vending_machine"
+    },
+    "facing=east": {
+      "model": "mohistmc:block/vending_machine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mohistmc:block/vending_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mohistmc:block/vending_machine",
+      "y": 270
+    }
+  }
+}

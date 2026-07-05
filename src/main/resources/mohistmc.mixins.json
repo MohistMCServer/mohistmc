@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.mohistmc.mod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinComponent"
+  ],
+  "client": [
+    "GameRendererMixin",
+    "GlDeviceMixin",
+    "GpuDeviceMixin",
+    "MinecraftMixin",
+    "MixinAbstractContainerScreen",
+    "MixinGuiGraphicsExtractor",
+    "MixinItemEnchants",
+    "MixinLevelRenderer",
+    "MixinParticleEngine",
+    "MixinWorldSelectionList"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

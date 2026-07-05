@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mohistmc:block/ji_guan",
+    "particle": "mohistmc:block/ji_guan"
+  },
+  "render_type": "cutout"
+}

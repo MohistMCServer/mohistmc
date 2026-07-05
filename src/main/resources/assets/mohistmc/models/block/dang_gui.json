@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mohistmc:block/dang_gui",
+    "particle": "mohistmc:block/dang_gui"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mohistmc:block/yu_lou"
+    },
+    "facing=east": {
+      "model": "mohistmc:block/yu_lou",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mohistmc:block/yu_lou",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mohistmc:block/yu_lou",
+      "y": 270
+    }
+  }
+}

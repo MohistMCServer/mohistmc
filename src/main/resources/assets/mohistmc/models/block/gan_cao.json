@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mohistmc:block/gan_cao",
+    "particle": "mohistmc:block/gan_cao"
+  },
+  "render_type": "cutout"
+}

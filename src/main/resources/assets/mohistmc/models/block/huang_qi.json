@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mohistmc:block/huang_qi",
+    "particle": "mohistmc:block/huang_qi"
+  },
+  "render_type": "cutout"
+}
