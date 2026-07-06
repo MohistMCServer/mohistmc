@@ -9,9 +9,22 @@ public class SimpleLabel extends PositionedWidget {
     private final int color;
 
     public SimpleLabel(int relX, int relY, Component text, int color) {
-        super(relX, relY, 0, 0); // 宽高可根据文本计算
+        super(relX, relY, 0, 0);
         this.text = text;
         this.color = color;
+        autoSize();
+    }
+
+    /** 根据文本自动计算宽高 */
+    private void autoSize() {
+        try {
+            var font = Minecraft.getInstance().font;
+            this.width = font.width(text);
+            this.height = font.lineHeight;
+        } catch (Exception e) {
+            this.width = 60;
+            this.height = 10;
+        }
     }
 
     @Override

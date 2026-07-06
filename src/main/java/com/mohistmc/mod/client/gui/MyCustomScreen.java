@@ -4,6 +4,8 @@ import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
+import java.util.List;
+
 public class MyCustomScreen extends EnhancedScreen {
 
     public static Identifier BG_COLOR = Identifier.fromNamespaceAndPath("mohistmc", "textures/gui/bg.png");
@@ -22,30 +24,63 @@ public class MyCustomScreen extends EnhancedScreen {
                 .setLayout(Panel.LayoutDirection.VERTICAL, 8);
 
         // ────────────────────────────────────
-        // 顶部行：信息面板 + 弹性间隔 + 操作面板
+        // 顶部行：信息面板 + 弹性间隔 + 操作面板（1.5:1 比例 + 响应式内边距）
         // ────────────────────────────────────
-        var topRow = new Panel(0, 0, sw, 120, 0)
-                .setLayout(Panel.LayoutDirection.HORIZONTAL, 0);
+        int topH = sw * 4 / 15; // 1.5:1 比例
+        int pad = Math.max(8, topH / 8);
+        var topRow = new Panel(0, 0, sw, topH, 0)
+                .setLayout(Panel.LayoutDirection.HORIZONTAL, 8);
 
-        var infoPanel = new Panel(0, 0, 200, 120, ColorUtil.fromHex("#2D2D2D"))
+        var infoPanel = new Panel(0, 0, 0, topH, ColorUtil.fromHex("#2D2D2D"))
                 .setBorder(ColorUtil.fromHex("#CCCCCC"), 2)
                 .setAlpha(0.85f)
+                .setFlexGrow(1)
                 .onClick(p -> System.out.println("左侧信息面板被点击"));
-        infoPanel.addChild(new SimpleLabel(15, 15, Component.literal("信息面板"), 0xFFFFFFFF));
-        infoPanel.addChild(new SimpleLabel(15, 35, Component.literal("这里是内容区"), 0xFFAAAAAA));
+        infoPanel.addChild(new SimpleLabel(pad, pad, Component.literal("信息面板"), 0xFFFFFFFF));
+        infoPanel.addChild(new SimpleLabel(pad, pad * 2 + 4, Component.literal("这里是内容区"), 0xFFAAAAAA));
         topRow.addChild(infoPanel);
 
-        // 弹性间隔，把操作面板推到右侧
-        var topSpacer = new Panel(0, 0, 0, 0, 0).setFlexGrow(1);
-        topRow.addChild(topSpacer);
-
-        var actionPanel = new Panel(0, 0, 200, 120, ColorUtil.fromHex("#3D1F2A"))
+        var actionPanel = new Panel(0, 0, 0, topH, ColorUtil.fromHex("#3D1F2A"))
                 .setBorder(ColorUtil.fromHex("#9d2933"), 2)
                 .setAlpha(0.85f)
+                .setFlexGrow(1)
                 .onClick(p -> System.out.println("右侧操作面板被点击"));
-        actionPanel.addChild(new SimpleLabel(15, 15, Component.literal("操作面板"), 0xFFFFFFFF));
-        actionPanel.addChild(new SimpleLabel(15, 35, Component.literal("点击面板执行操作"), 0xFFCCCCCC));
+        actionPanel.addChild(new SimpleLabel(pad, pad, Component.literal("操作面板"), 0xFFFFFFFF));
+        actionPanel.addChild(new SimpleLabel(pad, pad * 2 + 4, Component.literal("点击面板执行操作"), 0xFFCCCCCC));
         topRow.addChild(actionPanel);
+
+        // 剩余空间：滚动列表演示
+        var topRemaining = new Panel(0, 0, 0, topH, ColorUtil.fromHex("#1A1A2E"))
+                .setAlpha(0.5f)
+                .setFlexGrow(1)
+                .setBorder(ColorUtil.fromHex("#888888"), 1)
+                .setLayout(Panel.LayoutDirection.HORIZONTAL, 4);
+        var list = new ScrollList(0, 0, 0, topH, 0x00000000)
+                .setFlexGrow(1)
+                .setHoverColor(0x22FFFFFF)
+                .setScrollbarColor(0xFF888888);
+        // 添加自定义子项
+        list.addItem(new LabelItem(Component.literal("§n§l设置选项"), 0xFFFFAA00).setHeight(22));
+        list.addItem(new CheckboxItem(Component.literal("启用自动保存"), true)
+                .onChange(v -> System.out.println("自动保存: " + v)));
+        list.addItem(new CheckboxItem(Component.literal("显示通知"), false)
+                .onChange(v -> System.out.println("通知: " + v)));
+        list.addItem(new ToggleItem(Component.literal("主题"),
+                List.of(Component.literal("深色"), Component.literal("浅色"), Component.literal("跟随系统")), 0)
+                .onChange(v -> System.out.println("主题: " + v)));
+        list.addItem(new SliderItem(Component.literal("音量"), 0.7f)
+                .setFillColor(0xFF2196F3)
+                .onChange(v -> System.out.println("音量: " + (int)(v * 100) + "%")));
+        list.addItem(new SliderItem(Component.literal("亮度"), 0.5f)
+                .setFillColor(0xFFFFC107)
+                .onChange(v -> System.out.println("亮度: " + (int)(v * 100) + "%")));
+        list.addItem(new ToggleItem(Component.literal("难度"),
+                List.of(Component.literal("和平"), Component.literal("简单"), Component.literal("普通"), Component.literal("困难")), 2)
+                .setValueColor(0xFFFF5555)
+                .onChange(v -> System.out.println("难度变更")));
+        topRemaining.addChild(list);
+        topRow.addChild(topRemaining);
+        topRow.addChild(new Panel(0, 0, 8, 0, 0).setFlexGrow(0)); // 右边距（保持与左边距一致）
 
         root.addChild(topRow);
 
@@ -143,26 +178,60 @@ public class MyCustomScreen extends EnhancedScreen {
         root.addChild(dropdownRow);
 
         // ────────────────────────────────────
-        // Swap 标签切换演示
+        // 演示行：左侧头像面板 + 右侧 Swap 标签切换
         // ────────────────────────────────────
-        var infoContent = new Panel(0, 0, 300, 80, ColorUtil.fromHex("#2D2D2D"))
-                .setAlpha(0.5f);
-        infoContent.addChild(new SimpleLabel(12, 12, Component.literal("这是信息面板的内容区"), 0xFFFFFFFF));
-        infoContent.addChild(new SimpleLabel(12, 34, Component.literal("你可以在这里查看状态和信息"), 0xFFAAAAAA));
+        var demoRow = new Panel(0, 0, sw, 150, 0)
+                .setLayout(Panel.LayoutDirection.HORIZONTAL, 10);
 
-        var settingContent = new Panel(0, 0, 300, 80, ColorUtil.fromHex("#2D1F2A"))
-                .setAlpha(0.5f);
-        settingContent.addChild(new SimpleLabel(12, 12, Component.literal("⚙ 设置面板"), 0xFFFFFFFF));
-        settingContent.addChild(new SimpleLabel(12, 34, Component.literal("修改各项参数"), 0xFFCCCCCC));
+        // 左侧：头像演示（较窄）
+        var avatarPanel = new Panel(0, 0, 230, 150, ColorUtil.fromHex("#1A1A2E"))
+                .setAlpha(0.7f)
+                .setLayout(Panel.LayoutDirection.VERTICAL, 6);
+        avatarPanel.addChild(new Panel(0, 0, 0, 0, 0).setFlexGrow(1)); // 上边距
 
-        var swap = new Swap(0, 0, 300, 100, ColorUtil.fromHex("#1A1A2E"))
-                .addPage(infoContent, Component.literal("信息"))
-                .addPage(settingContent, Component.literal("设置"))
+        var r1 = new Panel(0, 0, avatarPanel.width, 30, 0).setLayout(Panel.LayoutDirection.HORIZONTAL, 10);
+        r1.addChild(new Avatar(0, 0, 28, "M").setBackground(ColorUtil.fromHex("#9d2933"))
+                .setBorder(ColorUtil.fromHex("#FFFFFF"), 2).setShape(Avatar.Shape.CIRCLE));
+        r1.addChild(new SimpleLabel(0, 6, Component.literal("首字母"), 0xFFFFFFFF));
+        avatarPanel.addChild(r1);
+
+        var r2 = new Panel(0, 0, avatarPanel.width, 30, 0).setLayout(Panel.LayoutDirection.HORIZONTAL, 10);
+        r2.addChild(new Avatar(0, 0, 28).setTexture(Identifier.fromNamespaceAndPath("mohistmc", "textures/gui/avatar.png"))
+                .setBorderTexture(Identifier.fromNamespaceAndPath("mohistmc", "textures/gui/avatar_border.png")));
+        r2.addChild(new SimpleLabel(0, 6, Component.literal("纹理头像"), 0xFFFFFFFF));
+        avatarPanel.addChild(r2);
+
+        var r3 = new Panel(0, 0, avatarPanel.width, 24, 0).setLayout(Panel.LayoutDirection.HORIZONTAL, 6);
+        r3.addChild(new SimpleLabel(0, 0, Component.literal("形状:"), 0xFFCCCCCC));
+        r3.addChild(new Avatar(0, 0, 16).setBackground(ColorUtil.fromHex("#FF9800")).setShape(Avatar.Shape.SQUARE));
+        r3.addChild(new Avatar(0, 0, 16).setBackground(ColorUtil.fromHex("#9C27B0")).setShape(Avatar.Shape.CIRCLE));
+        r3.addChild(new Avatar(0, 0, 16).setBackground(ColorUtil.fromHex("#2196F3")).setShape(Avatar.Shape.ROUNDED).setRoundRadius(4));
+        avatarPanel.addChild(r3);
+
+        avatarPanel.addChild(new Panel(0, 0, 0, 0, 0).setFlexGrow(1)); // 下边距
+        demoRow.addChild(avatarPanel);
+
+        // 右侧：Swap 标签切换
+        var swapInfo = new Panel(0, 0, 0, 0, ColorUtil.fromHex("#2D2D2D"))
+                .setAlpha(0.5f);
+        swapInfo.addChild(new SimpleLabel(12, 12, Component.literal("信息面板"), 0xFFFFFFFF));
+        swapInfo.addChild(new SimpleLabel(12, 34, Component.literal("这是信息标签页的内容"), 0xFFAAAAAA));
+
+        var swapSetting = new Panel(0, 0, 0, 0, ColorUtil.fromHex("#2D1F2A"))
+                .setAlpha(0.5f);
+        swapSetting.addChild(new SimpleLabel(12, 12, Component.literal("⚙ 设置面板"), 0xFFFFFFFF));
+        swapSetting.addChild(new SimpleLabel(12, 34, Component.literal("这是设置标签页的内容"), 0xFFCCCCCC));
+
+        var swap = new Swap(0, 0, 300, 150, ColorUtil.fromHex("#2A2A3E"))
+                .addPage(swapInfo, Component.literal("信息"))
+                .addPage(swapSetting, Component.literal("设置"))
                 .setActiveTabColor(ColorUtil.fromHex("#9d2933"))
-                .setInactiveTabColor(ColorUtil.fromHex("#2A2A3E"))
+                .setInactiveTabColor(ColorUtil.fromHex("#3A3A4E"))
                 .setTabHeight(18)
                 .setOnSwap(i -> System.out.println("切换到标签: " + i));
-        root.addChild(swap);
+        demoRow.addChild(swap);
+        demoRow.addChild(new Panel(0, 0, 0, 0, 0).setFlexGrow(1)); // 右边距
+        root.addChild(demoRow);
 
         // ────────────────────────────────────
         // 弹性撑杆：占满剩余空间，把底部内容推到窗口底部

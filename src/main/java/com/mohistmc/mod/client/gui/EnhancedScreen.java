@@ -203,6 +203,41 @@ public abstract class EnhancedScreen extends Screen {
     }
 
     @Override
+    public boolean mouseDragged(MouseButtonEvent event, double dragX, double dragY) {
+        for (var widget : widgets) {
+            if (dragScrollListRecursive(widget, (int) event.x(), (int) event.y())) return true;
+        }
+        return super.mouseDragged(event, dragX, dragY);
+    }
+
+    @Override
+    public boolean mouseReleased(MouseButtonEvent event) {
+        for (var widget : widgets) {
+            releaseScrollListRecursive(widget);
+        }
+        return super.mouseReleased(event);
+    }
+
+    private boolean dragScrollListRecursive(PositionedWidget w, int mx, int my) {
+        if (w instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
+        if (w instanceof Panel panel) {
+            for (var child : panel.collectAllChildren()) {
+                if (child instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
+            }
+        }
+        return false;
+    }
+
+    private void releaseScrollListRecursive(PositionedWidget w) {
+        if (w instanceof ScrollList sl) sl.handleRelease();
+        if (w instanceof Panel panel) {
+            for (var child : panel.collectAllChildren()) {
+                if (child instanceof ScrollList sl) sl.handleRelease();
+            }
+        }
+    }
+
+    @Override
     public boolean mouseClicked(MouseButtonEvent event, boolean doubleClick) {
         // 1) 模态对话框优先（阻挡底层点击）
         for (var modal : modals) {
@@ -219,8 +254,29 @@ public abstract class EnhancedScreen extends Screen {
         return super.mouseClicked(event, doubleClick);
     }
 
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
+        for (var widget : widgets) {
+            if (scrollListRecursive(widget, mouseX, mouseY, scrollY)) return true;
+        }
+        return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
+    }
+
+    private boolean scrollListRecursive(PositionedWidget w, double mx, double my, double delta) {
+        if (w instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
+        if (w instanceof Panel panel) {
+            for (var child : panel.collectAllChildren()) {
+                if (child instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
+            }
+        }
+        return false;
+    }
+
     /** 递归检查 widget 及其所有嵌套子组件的点击 */
     private boolean checkClickRecursive(PositionedWidget w, MouseButtonEvent event, boolean doubleClick) {
+        if (w instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
+            return true;
+        }
         if (w instanceof DropdownMenu<?> dm && dm.handleClick(event, doubleClick)) {
             return true;
         }
@@ -232,6 +288,9 @@ public abstract class EnhancedScreen extends Screen {
                 return true;
             }
             for (var child : panel.collectAllChildren()) {
+                if (child instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
+                    return true;
+                }
                 if (child instanceof DropdownMenu<?> d && d.handleClick(event, doubleClick)) {
                     return true;
                 }

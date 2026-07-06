@@ -151,9 +151,11 @@ public class Swap extends Panel {
             graphics.fill(x, cy, x + width, y + height, applyAlpha(backgroundColor));
         }
 
-        // 3) 只渲染当前活跃页
+        // 3) 只渲染当前活跃页（覆盖宽高让其自适应容器）
         if (activeIndex >= 0 && activeIndex < pages.size()) {
             var page = pages.get(activeIndex);
+            page.width = width;
+            page.height = ch;
             page.setScreenPos(x, cy, width, ch);
             page.render(graphics, mouseX, mouseY, partialTick);
         }
