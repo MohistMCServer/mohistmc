@@ -34,6 +34,7 @@ public class Avatar extends PositionedWidget {
     // ======== 样式 ========
     private String initials;
     private int bgColor = 0xFF555555;
+    private boolean bgColorSet;
     private int textColor = 0xFFFFFFFF;
     private int borderColor;
     private int borderWidth;
@@ -47,10 +48,11 @@ public class Avatar extends PositionedWidget {
         super(relX, relY, Math.max(8, size), Math.max(8, size));
     }
 
-    /** 首字母头像 */
+    /** 首字母头像（未设背景色时自动根据名称生成颜色） */
     public Avatar(int relX, int relY, int size, String initials) {
         this(relX, relY, size);
         this.initials = initials != null && !initials.isEmpty() ? initials.substring(0, 1).toUpperCase() : null;
+        if (!bgColorSet) bgColor = generateColor(initials);
     }
 
     // ======== 链式配置 ========
@@ -61,13 +63,14 @@ public class Avatar extends PositionedWidget {
         return this;
     }
 
-    /** 设置首字母（覆盖 texture） */
+    /** 设置首字母（未设背景色时自动根据名称生成颜色） */
     public Avatar setInitials(String s) {
         this.initials = s != null && !s.isEmpty() ? s.substring(0, 1).toUpperCase() : null;
+        if (!bgColorSet && this.initials != null) bgColor = generateColor(s);
         return this;
     }
 
-    public Avatar setBackground(int c) { this.bgColor = c; return this; }
+    public Avatar setBackground(int c) { this.bgColor = c; this.bgColorSet = true; return this; }
     public Avatar setTextColor(int c) { this.textColor = c; return this; }
 
     /** 设置边框纹理（叠加在头像之上，如装饰框 / 稀有度外框） */
@@ -179,5 +182,17 @@ public class Avatar extends PositionedWidget {
                 g.fill(x + w - r + px, y + h - i - 1, x + w, y + h - i, bg);     // BR 外部
             }
         }
+    }
+
+    /** 根据名称生成确定性颜色 */
+    private static int generateColor(String name) {
+        if (name == null || name.isEmpty()) return 0xFF555555;
+        int[] palette = {
+            0xFF9d2933, 0xFF4CAF50, 0xFF2196F3, 0xFFFF9800, 0xFF9C27B0,
+            0xFF009688, 0xFFE91E63, 0xFF3F51B5, 0xFFFF5722, 0xFF607D8B,
+            0xFF795548, 0xFFCDDC39, 0xFF00BCD4, 0xFFFF4081, 0xFF7C4DFF,
+            0xFF448AFF, 0xFF69F0AE, 0xFFFFD740, 0xFF40C4FF, 0xFFE040FB
+        };
+        return palette[Math.abs(name.hashCode()) % palette.length];
     }
 }

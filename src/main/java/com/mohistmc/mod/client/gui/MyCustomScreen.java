@@ -190,7 +190,7 @@ public class MyCustomScreen extends EnhancedScreen {
         avatarPanel.addChild(new Panel(0, 0, 0, 0, 0).setFlexGrow(1)); // 上边距
 
         var r1 = new Panel(0, 0, avatarPanel.width, 30, 0).setLayout(Panel.LayoutDirection.HORIZONTAL, 10);
-        r1.addChild(new Avatar(0, 0, 28, "M").setBackground(ColorUtil.fromHex("#9d2933"))
+        r1.addChild(new Avatar(0, 0, 28, "M")
                 .setBorder(ColorUtil.fromHex("#FFFFFF"), 2).setShape(Avatar.Shape.CIRCLE));
         r1.addChild(new SimpleLabel(0, 6, Component.literal("首字母"), 0xFFFFFFFF));
         avatarPanel.addChild(r1);
