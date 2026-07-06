@@ -1,5 +1,6 @@
 package com.mohistmc.mod;
 
+import com.mohistmc.mod.client.gui.MyCustomScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.register.BlockRegister;
 import com.mohistmc.mod.register.ItemRegister;
@@ -86,6 +87,7 @@ public class MohistMC {
         public static void onGuiOpen(ScreenEvent.Opening e) {
             if (e.getScreen().getClass() == TitleScreen.class) {
                 Minecraft.getInstance().getTutorial().setStep(TutorialSteps.NONE);
+                e.setNewScreen(new MyCustomScreen());
             }
         }
     }
