@@ -16,6 +16,7 @@
     "MixinDrawContext",
     "MixinGuiGraphicsExtractor",
     "MixinItemEnchants",
+    "MixinItemEntity",
     "MixinLevelRenderer",
     "MixinParticleEngine",
     "MixinWorldSelectionList",
