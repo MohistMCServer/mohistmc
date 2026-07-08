@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.loadingbackgrounds;
 
-import com.mohistmc.mod.client.LoadingBackgrounds;
+import com.mohistmc.mod.client.gui.LoadingBackgrounds;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.GenericWaitingScreen;
 import net.minecraft.client.gui.screens.Screen;

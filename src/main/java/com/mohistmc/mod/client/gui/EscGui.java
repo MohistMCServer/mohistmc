@@ -5,6 +5,7 @@ import com.mohistmc.mod.api.gui.EnhancedScreen;
 import com.mohistmc.mod.api.gui.IconButton;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.SimpleLabel;
+import com.mohistmc.mod.utils.ProcessWorkingSetUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.achievement.StatsScreen;
@@ -44,9 +45,11 @@ public class EscGui extends EnhancedScreen {
     }
 
     /** 左侧工具栏宽度 */
-    private static final int TOOL_W = 30;
-    /** 工具栏图标大小 */
-    private static final int BTN_SZ = 24;
+    private static final int TOOL_W = 24;
+    /** 工具栏左右固定边距 */
+    private static final int TOOL_MARGIN = 2;
+    /** 工具栏图标大小（响应式：宽度减去边距） */
+    private static final int BTN_SZ = TOOL_W - TOOL_MARGIN * 2;
     /** 网格列数 */
     private static final int COLS = 4;
     /** 网格间距 */
@@ -74,7 +77,7 @@ public class EscGui extends EnhancedScreen {
         int sh = height;
 
         // GUI 宽度：屏幕的 28%，响应式范围 180~450px
-        int guiW = Math.max(Math.min(sw * 28 / 100, 450), 180);
+        int guiW = Math.clamp(sw * 28L / 100, 180, 450);
         int guiH = sh;
 
         // ================================================================
@@ -192,43 +195,38 @@ public class EscGui extends EnhancedScreen {
         IconDef[] icons = {
                 new IconDef("0", Component.literal("统计信息"), () ->
                         minecraft.gui.setScreen(new StatsScreen(this, minecraft.player.getStats()))),
-                new IconDef("1", Component.literal("重生"), () -> {}),
-                new IconDef("2", Component.literal("内存清理"), () -> {}),
+                new IconDef("1", Component.literal("重生"), () -> {
+                    System.out.println("debug");
+                }),
+                new IconDef("2", Component.literal("内存清理"), () -> {
+                    ProcessWorkingSetUtils.setProcessWorkingSetSize(50, 100);
+                }),
                 new IconDef("3", Component.literal("查看公告"), () -> {}),
                 new IconDef("4", Component.literal("签到"), () -> {}),
                 new IconDef("5", Component.literal("好友"), () -> {}),
         };
 
-        int gridMargin = 8; // 左右固定边距
+        int gridMargin = 8;
         int gridY = cardH + 12;
-        int gridInnerW = cw - gridMargin * 2; // 网格可用宽度
-        int gridSz = (gridInnerW - (COLS - 1) * GAP) / COLS; // 每个图标大小（等分）
-        int gridRows = (icons.length + COLS - 1) / COLS;
-        int gridW = gridInnerW;
-        int gridH = gridRows * gridSz + (gridRows - 1) * GAP;
+        int gridInnerW = cw - gridMargin * 2;
+        int gridSz = (gridInnerW - (COLS - 1) * GAP) / COLS;
 
-        var gridPanel = new Panel(cx + gridMargin, gridY, gridW, gridH, 0x00000000);
+        // 直接作为根级 widget 加入（跳过 Panel 容器嵌套，确保点击分发可靠）
         for (int i = 0; i < icons.length; i++) {
             int col = i % COLS;
             int row = i / COLS;
-            int ix = col * (gridSz + GAP);
-            int iy = row * (gridSz + GAP);
+            int ix = cx + gridMargin + col * (gridSz + GAP);
+            int iy = gridY + row * (gridSz + GAP);
 
-            // 每个图标的背景方块（background.png）
-            var iconBg = new IconButton(ix, iy, gridSz)
+            addWidget(new IconButton(ix, iy, gridSz)
                     .setTexture(tex("background.png"))
-                    .setHoverBgColor(0x00000000);
-            gridPanel.addChild(iconBg);
-
-            // 图标按钮本身（覆盖在背景之上）
-            var iconBtn = new IconButton(ix, iy, gridSz)
+                    .setHoverBgColor(0x00000000));
+            addWidget(new IconButton(ix, iy, gridSz)
                     .setTexture(tex(icons[i].tex + ".png"))
                     .setHoverBgColor(0x44FFFFFF)
                     .setTooltip(icons[i].tip)
-                    .onClick(icons[i].action);
-            gridPanel.addChild(iconBtn);
+                    .onClick(icons[i].action));
         }
-        addWidget(gridPanel);
     }
 
     // ======== 辅助 ========

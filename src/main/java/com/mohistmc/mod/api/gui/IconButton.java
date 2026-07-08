@@ -99,8 +99,8 @@ public class IconButton extends PositionedWidget {
         if (isMouseOver(event.x(), event.y())) {
             if (onClick != null) {
                 onClick.run();
+                return true;
             }
-            return true;
         }
         return false;
     }
