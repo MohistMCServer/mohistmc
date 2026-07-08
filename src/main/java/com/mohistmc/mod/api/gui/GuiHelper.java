@@ -1,4 +1,4 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;

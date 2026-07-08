@@ -1,4 +1,4 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * 自定义色块按钮 — 纯色背景，支持圆角、发光、阴影等前端风格
@@ -34,6 +35,8 @@ public class CustomButton extends PositionedWidget {
     private SoundEvent hoverSound;         // 悬停进入音效（null=无声）
     private boolean wasHovered;            // 上一帧悬停状态，用于检测悬停进入
     private boolean enabled = true;          // 是否启用（禁用后不可点击、无悬停效果）
+    @Nullable
+    private Component tooltip;               // 悬停提示文字（null=不显示）
 
     /** 渐变方向枚举 */
     public enum GradientDirection {
@@ -189,6 +192,32 @@ public class CustomButton extends PositionedWidget {
         return enabled;
     }
 
+    /**
+     * 获取当前 tooltip
+     */
+    @Nullable
+    public Component getTooltip() {
+        return tooltip;
+    }
+
+    /**
+     * 设置悬停提示文字（tooltip）
+     * <p>鼠标悬停在按钮上时，会在鼠标旁显示一段文字提示</p>
+     *
+     * @param tooltip 提示文字，传 null 清除提示
+     */
+    public CustomButton setTooltip(@Nullable Component tooltip) {
+        this.tooltip = tooltip;
+        return this;
+    }
+
+    /**
+     * 是否有 tooltip
+     */
+    public boolean hasTooltip() {
+        return tooltip != null;
+    }
+
     @Override
     public CustomButton setRightAnchored(boolean anchored) {
         super.setRightAnchored(anchored);
@@ -233,28 +262,25 @@ public class CustomButton extends PositionedWidget {
         int y = getAbsoluteY();
         boolean hovered = enabled && isMouseOver(mouseX, mouseY);
 
-        // 禁用时不做任何悬停响应
-        if (enabled) {
-            // 悬停音效：鼠标刚移入按钮时播放
-            if (hovered && !wasHovered) {
-                playSound(hoverSound);
-            }
-            // 悬停放大视觉效果 — 以按钮中心为基准缩放
-            if (hovered && Float.compare(hoverScale, 1.0f) != 0) {
-                var pose = graphics.pose();
-                pose.pushMatrix();
-                float cx = x + width / 2.0f;
-                float cy = y + height / 2.0f;
-                pose.translate(cx, cy);
-                pose.scale(hoverScale, hoverScale);
-                pose.translate(-cx, -cy);
-                renderContent(graphics, x, y, true);
-                pose.popMatrix();
-                wasHovered = true;
-                return;
-            }
+        // 悬停音效：鼠标刚移入按钮时播放
+        if (enabled && hovered && !wasHovered) {
+            playSound(hoverSound);
         }
-        renderContent(graphics, x, y, hovered);
+
+        if (enabled && hovered && Float.compare(hoverScale, 1.0f) != 0) {
+            // 悬停放大视觉效果 — 以按钮中心为基准缩放
+            var pose = graphics.pose();
+            pose.pushMatrix();
+            float cx = x + width / 2.0f;
+            float cy = y + height / 2.0f;
+            pose.translate(cx, cy);
+            pose.scale(hoverScale, hoverScale);
+            pose.translate(-cx, -cy);
+            renderContent(graphics, x, y, true);
+            pose.popMatrix();
+        } else {
+            renderContent(graphics, x, y, hovered);
+        }
         wasHovered = hovered;
 
         // 禁用遮罩：半透灰覆盖（保持圆角完整）
@@ -265,6 +291,11 @@ public class CustomButton extends PositionedWidget {
             } else {
                 graphics.fill(x, y, x + width, y + height, 0x80808080);
             }
+        }
+
+        // 悬停提示文字（tooltip）— 注册到延迟渲染管线
+        if (tooltip != null && hovered) {
+            graphics.setTooltipForNextFrame(tooltip, mouseX, mouseY);
         }
     }
 

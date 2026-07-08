@@ -1,12 +1,14 @@
 package com.mohistmc.mod;
 
-import com.mohistmc.mod.client.gui.MyCustomScreen;
+import com.mohistmc.mod.client.gui.EscGui;
+import com.mohistmc.mod.client.gui.FakeMainGui;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.register.BlockRegister;
 import com.mohistmc.mod.register.ItemRegister;
 import com.mohistmc.mod.register.ModEntities;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.tutorial.TutorialSteps;
 import net.minecraft.core.registries.Registries;
@@ -39,7 +41,6 @@ public class MohistMC {
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-
      public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.mohistmc")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> ItemRegister.LOGO.get().getDefaultInstance()).displayItems((parameters, output) -> {
         ItemRegister.ALL_ITEMS.forEach(itemSupplier -> output.accept(itemSupplier.get()));
     }).build());
@@ -60,8 +61,6 @@ public class MohistMC {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -69,9 +68,6 @@ public class MohistMC {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
 
         @SubscribeEvent // on the mod event bus only on the physical client
@@ -87,7 +83,10 @@ public class MohistMC {
         public static void onGuiOpen(ScreenEvent.Opening e) {
             if (e.getScreen().getClass() == TitleScreen.class) {
                 Minecraft.getInstance().getTutorial().setStep(TutorialSteps.NONE);
-                e.setNewScreen(new MyCustomScreen());
+                e.setNewScreen(new FakeMainGui());
+            }
+            if (e.getScreen().getClass() == PauseScreen.class) {
+                e.setNewScreen(new EscGui());
             }
         }
     }

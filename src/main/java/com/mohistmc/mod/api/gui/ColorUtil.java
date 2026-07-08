@@ -1,4 +1,4 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;

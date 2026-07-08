@@ -1,5 +1,7 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
+import java.util.ArrayList;
+import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.screens.Screen;
@@ -12,9 +14,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public abstract class EnhancedScreen extends Screen {
@@ -283,6 +282,9 @@ public abstract class EnhancedScreen extends Screen {
         if (w instanceof CustomButton btn && btn.handleClick(event, doubleClick)) {
             return true;
         }
+        if (w instanceof IconButton ib && ib.handleClick(event, doubleClick)) {
+            return true;
+        }
         if (w instanceof Panel panel) {
             if (panel.handleClick(event, doubleClick)) {
                 return true;
@@ -295,6 +297,9 @@ public abstract class EnhancedScreen extends Screen {
                     return true;
                 }
                 if (child instanceof CustomButton b && b.handleClick(event, doubleClick)) {
+                    return true;
+                }
+                if (child instanceof IconButton ib && ib.handleClick(event, doubleClick)) {
                     return true;
                 }
                 if (child instanceof Panel p && p.handleClick(event, doubleClick)) {

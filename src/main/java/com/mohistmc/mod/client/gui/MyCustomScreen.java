@@ -1,10 +1,23 @@
 package com.mohistmc.mod.client.gui;
 
+import com.mohistmc.mod.api.gui.Avatar;
+import com.mohistmc.mod.api.gui.CheckboxItem;
+import com.mohistmc.mod.api.gui.ColorUtil;
+import com.mohistmc.mod.api.gui.CustomButton;
+import com.mohistmc.mod.api.gui.DropdownMenu;
+import com.mohistmc.mod.api.gui.EnhancedScreen;
+import com.mohistmc.mod.api.gui.LabelItem;
+import com.mohistmc.mod.api.gui.Modal;
+import com.mohistmc.mod.api.gui.Panel;
+import com.mohistmc.mod.api.gui.ScrollList;
+import com.mohistmc.mod.api.gui.SimpleLabel;
+import com.mohistmc.mod.api.gui.SliderItem;
+import com.mohistmc.mod.api.gui.Swap;
+import com.mohistmc.mod.api.gui.ToggleItem;
+import java.util.List;
 import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-
-import java.util.List;
 
 public class MyCustomScreen extends EnhancedScreen {
 
@@ -320,6 +333,7 @@ public class MyCustomScreen extends EnhancedScreen {
                 .setBorderRadius(4)
                 .setGlow(0x40A5D6A7)
                 .withDefaultClickSound()
+                .setTooltip(Component.literal("打开设置菜单"))
                 .onClick(() -> this.minecraft.gui.setScreen(new OptionsScreen(this, this.minecraft.options, false))));
 
         root.addChild(bottomRow);

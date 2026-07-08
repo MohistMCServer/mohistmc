@@ -1,15 +1,14 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * 交换/标签容器 — 通过标签栏切换显示不同的子页面，同时只显示一个活动页。

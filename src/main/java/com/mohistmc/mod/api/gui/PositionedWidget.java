@@ -1,10 +1,11 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 public abstract class PositionedWidget {
     protected int relativeX, relativeY;
-    protected int width, height;
+    public int width;
+    public int height;
     protected int screenLeft, screenTop; // 由 Screen 注入
     protected int contentWidth, contentHeight; // 内容区域大小（用于锚点计算）
     protected boolean anchorRight, anchorBottom; // 是否锚定右下

@@ -1,15 +1,12 @@
-package com.mohistmc.mod.client.gui;
+package com.mohistmc.mod.api.gui;
 
-import net.minecraft.client.Minecraft;
+import java.util.ArrayList;
+import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * 滚动列表组件 — 支持自定义子项（LabelItem / CheckboxItem / ToggleItem / SliderItem）。
