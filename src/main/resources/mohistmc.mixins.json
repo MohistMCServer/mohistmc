@@ -17,6 +17,7 @@
     "MixinLevelRenderer",
     "MixinParticleEngine",
     "MixinWorldSelectionList",
+    "TutorialMixin",
     "WorldOpenFlowsMixin",
     "loadingbackgrounds.LoadingOverlayMixin",
     "loadingbackgrounds.MixinConnectScreen",

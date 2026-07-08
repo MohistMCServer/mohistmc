@@ -61,6 +61,12 @@ public class ScrollList extends PositionedWidget {
     @Override public ScrollList setAlpha(int alpha) { super.setAlpha(alpha); return this; }
     @Override public ScrollList setAlpha(float alpha) { super.setAlpha(alpha); return this; }
 
+    /** 获取所有子项（外部只读遍历） */
+    public List<ScrollListItem> getItems() { return slotItems; }
+
+    /** 清空所有子项 */
+    public void clearItems() { slotItems.clear(); scrollOffset = 0; }
+
     /** 添加自定义子项 */
     public ScrollList addItem(ScrollListItem item) { slotItems.add(item); return this; }
     /** 添加纯文本标签（快捷方式） */

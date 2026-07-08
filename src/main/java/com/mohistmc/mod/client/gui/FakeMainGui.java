@@ -61,11 +61,8 @@ public class FakeMainGui extends EnhancedScreen {
                 .setBorderRadius(4)
                 .setTooltip(Component.translatable("menu.multiplayer"))
                 .onClick(() -> {
-                    boolean skipWarning = minecraft.options.skipMultiplayerWarning;
-                    var screen = skipWarning
-                            ? new JoinMultiplayerScreen(this)
-                            : new SafetyScreen(this);
-                    minecraft.gui.setScreen(screen);
+                    // minecraft.gui.setScreen(new ModernServerListScreen());
+                    minecraft.gui.setScreen(new JoinMultiplayerScreen(this));
                 });
         sidebar.addChild(multiplayer);
 
@@ -101,7 +98,7 @@ public class FakeMainGui extends EnhancedScreen {
                 Component.literal("退出游戏"), 0xFF555555)
                 .setBorderRadius(4)
                 .setTooltip(Component.translatable("menu.quit"))
-                .onClick(() -> minecraft.stop());
+                .onClick(minecraft::stop);
         sidebar.addChild(quit);
 
         // ====== 底部左侧信息 ======
