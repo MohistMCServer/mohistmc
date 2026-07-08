@@ -9,7 +9,9 @@
     "PrimaryLevelDataMixinNeo"
   ],
   "client": [
+    "BakedGlyphMixin",
     "CreateWorldScreenMixin",
+    "FontMixin",
     "MixinAbstractContainerScreen",
     "MixinDrawContext",
     "MixinGuiGraphicsExtractor",
