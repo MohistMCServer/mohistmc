@@ -60,7 +60,7 @@ public class MyCustomScreen extends EnhancedScreen {
                 .setLayout(Panel.LayoutDirection.HORIZONTAL, 4);
         var list = new ScrollList(0, 0, 0, topH, 0x00000000)
                 .setFlexGrow(1).setHoverColor(0x22FFFFFF).setScrollbarColor(0xFF888888);
-        list.addItem(new LabelItem(Component.literal("§n§l设置选项"), 0xFFFFAA00).setHeight(22));
+        list.addItem(new LabelItem(Component.literal("设置选项"), 0xFFFFAA00).setHeight(22));
         list.addItem(new CheckboxItem(Component.literal("启用自动保存"), true).onChange(v -> System.out.println("自动保存: " + v)));
         list.addItem(new CheckboxItem(Component.literal("显示通知"), false).onChange(v -> System.out.println("通知: " + v)));
         list.addItem(new ToggleItem(Component.literal("主题"),
