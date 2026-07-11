@@ -1,0 +1,25 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:pumpkin"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "mohistmc:pumpkin_slice"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

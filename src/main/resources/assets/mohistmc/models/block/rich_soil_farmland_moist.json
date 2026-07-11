@@ -1,0 +1,8 @@
+{
+  "parent": "mohistmc:block/template_farmland_custom",
+  "textures": {
+    "bottom": "mohistmc:block/rich_soil",
+    "side": "mohistmc:block/rich_soil_farmland_moist_side",
+    "top": "mohistmc:block/rich_soil_farmland_moist"
+  }
+}

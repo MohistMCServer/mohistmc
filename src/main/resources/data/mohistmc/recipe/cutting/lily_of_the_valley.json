@@ -1,0 +1,25 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:lily_of_the_valley"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "minecraft:white_dye"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

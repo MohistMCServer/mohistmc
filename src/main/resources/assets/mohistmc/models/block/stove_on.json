@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "mohistmc:block/stove_bottom",
+    "front": "mohistmc:block/stove_front_on",
+    "side": "mohistmc:block/stove_side",
+    "top": "mohistmc:block/stove_top_on"
+  }
+}

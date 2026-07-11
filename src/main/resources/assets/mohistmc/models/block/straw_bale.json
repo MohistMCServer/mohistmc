@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mohistmc:block/straw_bale_end",
+    "side": "mohistmc:block/straw_bale_side"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_bricks"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "minecraft:nether_brick"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type": "immersiveengineering:cloche",
+  "input": {
+    "item": "mohistmc:onion"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "mohistmc:onions"
+  },
+  "results": [
+    {
+      "count": 2,
+      "id": "mohistmc:onion"
+    }
+  ],
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 800
+}

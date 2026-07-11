@@ -1,0 +1,31 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "mohistmc:wooden_basket"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "mohistmc:canvas"
+      }
+    },
+    {
+      "item": {
+        "count": 1,
+        "id": "minecraft:stick"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "axe_dig"
+    },
+    {
+      "tag": "minecraft:axes"
+    }
+  ]
+}

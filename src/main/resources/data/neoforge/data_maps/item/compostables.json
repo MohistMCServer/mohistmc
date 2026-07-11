@@ -1,0 +1,118 @@
+{
+  "values": {
+    "mohistmc:apple_pie": {
+      "chance": 1.0
+    },
+    "mohistmc:apple_pie_slice": {
+      "chance": 0.85
+    },
+    "mohistmc:brown_mushroom_colony": {
+      "chance": 1.0
+    },
+    "mohistmc:cabbage": {
+      "chance": 0.65
+    },
+    "mohistmc:cabbage_leaf": {
+      "chance": 0.5
+    },
+    "mohistmc:cabbage_seeds": {
+      "chance": 0.3
+    },
+    "mohistmc:cake_slice": {
+      "chance": 0.85
+    },
+    "mohistmc:chocolate_pie": {
+      "chance": 1.0
+    },
+    "mohistmc:chocolate_pie_slice": {
+      "chance": 0.85
+    },
+    "mohistmc:dumplings": {
+      "chance": 1.0
+    },
+    "mohistmc:honey_cookie": {
+      "chance": 0.85
+    },
+    "mohistmc:kelp_roll": {
+      "chance": 0.85
+    },
+    "mohistmc:kelp_roll_slice": {
+      "chance": 0.5
+    },
+    "mohistmc:onion": {
+      "chance": 0.65
+    },
+    "mohistmc:pie_crust": {
+      "chance": 0.65
+    },
+    "mohistmc:pumpkin_slice": {
+      "chance": 0.5
+    },
+    "mohistmc:raw_pasta": {
+      "chance": 0.85
+    },
+    "mohistmc:red_mushroom_colony": {
+      "chance": 1.0
+    },
+    "mohistmc:rice": {
+      "chance": 0.3
+    },
+    "mohistmc:rice_bale": {
+      "chance": 0.85
+    },
+    "mohistmc:rice_panicle": {
+      "chance": 0.3
+    },
+    "mohistmc:rotten_tomato": {
+      "chance": 0.85
+    },
+    "mohistmc:sandy_shrub": {
+      "chance": 0.3
+    },
+    "mohistmc:straw": {
+      "chance": 0.3
+    },
+    "mohistmc:stuffed_pumpkin_block": {
+      "chance": 1.0
+    },
+    "mohistmc:sweet_berry_cheesecake": {
+      "chance": 1.0
+    },
+    "mohistmc:sweet_berry_cheesecake_slice": {
+      "chance": 0.85
+    },
+    "mohistmc:sweet_berry_cookie": {
+      "chance": 0.85
+    },
+    "mohistmc:tomato": {
+      "chance": 0.65
+    },
+    "mohistmc:tomato_seeds": {
+      "chance": 0.3
+    },
+    "mohistmc:tree_bark": {
+      "chance": 0.3
+    },
+    "mohistmc:wild_beetroots": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_cabbages": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_carrots": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_onions": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_potatoes": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_rice": {
+      "chance": 0.65
+    },
+    "mohistmc:wild_tomatoes": {
+      "chance": 0.65
+    }
+  }
+}

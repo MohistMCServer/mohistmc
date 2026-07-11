@@ -1,0 +1,25 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "mohistmc:minced_beef"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

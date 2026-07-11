@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "fd_organic_compost",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "mohistmc:straw"
+    },
+    {
+      "item": "mohistmc:straw"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "mohistmc:tree_bark"
+    },
+    {
+      "item": "mohistmc:tree_bark"
+    },
+    {
+      "item": "mohistmc:tree_bark"
+    },
+    {
+      "item": "mohistmc:tree_bark"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:organic_compost"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "mohistmc:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/safe_raw_fish"
+    },
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:squid_ink_pasta"
+  }
+}

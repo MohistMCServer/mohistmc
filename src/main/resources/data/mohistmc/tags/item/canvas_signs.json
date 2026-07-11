@@ -1,0 +1,21 @@
+{
+  "values": [
+    "mohistmc:canvas_sign",
+    "mohistmc:white_canvas_sign",
+    "mohistmc:orange_canvas_sign",
+    "mohistmc:magenta_canvas_sign",
+    "mohistmc:light_blue_canvas_sign",
+    "mohistmc:yellow_canvas_sign",
+    "mohistmc:lime_canvas_sign",
+    "mohistmc:pink_canvas_sign",
+    "mohistmc:gray_canvas_sign",
+    "mohistmc:light_gray_canvas_sign",
+    "mohistmc:cyan_canvas_sign",
+    "mohistmc:purple_canvas_sign",
+    "mohistmc:blue_canvas_sign",
+    "mohistmc:brown_canvas_sign",
+    "mohistmc:green_canvas_sign",
+    "mohistmc:red_canvas_sign",
+    "mohistmc:black_canvas_sign"
+  ]
+}

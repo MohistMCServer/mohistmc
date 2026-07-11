@@ -1,0 +1,9 @@
+{
+  "parent": "mohistmc:block/template_basket",
+  "textures": {
+    "bottom": "mohistmc:block/bamboo_basket_bottom",
+    "handle": "mohistmc:block/bamboo_basket_handle",
+    "side": "mohistmc:block/bamboo_basket_side",
+    "top": "mohistmc:block/bamboo_basket_top"
+  }
+}

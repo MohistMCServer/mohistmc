@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cake",
+  "ingredients": [
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    },
+    {
+      "item": "mohistmc:cake_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cake"
+  }
+}

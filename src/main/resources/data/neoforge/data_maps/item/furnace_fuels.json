@@ -1,0 +1,13 @@
+{
+  "values": {
+    "mohistmc:canvas": {
+      "burn_time": 400
+    },
+    "mohistmc:straw": {
+      "burn_time": 100
+    },
+    "mohistmc:tree_bark": {
+      "burn_time": 200
+    }
+  }
+}

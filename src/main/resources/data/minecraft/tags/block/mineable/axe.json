@@ -1,0 +1,33 @@
+{
+  "values": [
+    "mohistmc:wooden_basket",
+    "mohistmc:bamboo_basket",
+    "mohistmc:rope_fence",
+    "mohistmc:rope_fence_gate",
+    "mohistmc:cutting_board",
+    "mohistmc:carrot_crate",
+    "mohistmc:potato_crate",
+    "mohistmc:beetroot_crate",
+    "mohistmc:cabbage_crate",
+    "mohistmc:tomato_crate",
+    "mohistmc:onion_crate",
+    "mohistmc:oak_cabinet",
+    "mohistmc:birch_cabinet",
+    "mohistmc:spruce_cabinet",
+    "mohistmc:jungle_cabinet",
+    "mohistmc:acacia_cabinet",
+    "mohistmc:dark_oak_cabinet",
+    "mohistmc:mangrove_cabinet",
+    "mohistmc:cherry_cabinet",
+    "mohistmc:bamboo_cabinet",
+    "mohistmc:crimson_cabinet",
+    "mohistmc:warped_cabinet",
+    "mohistmc:sandy_shrub",
+    "mohistmc:roast_chicken_block",
+    "mohistmc:stuffed_pumpkin_block",
+    "mohistmc:shepherds_pie_block",
+    "mohistmc:honey_glazed_ham_block",
+    "mohistmc:gleaming_salad_block",
+    "mohistmc:rice_roll_medley_block"
+  ]
+}

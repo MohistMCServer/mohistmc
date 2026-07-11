@@ -1,0 +1,31 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "mohistmc:rice_panicle"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "mohistmc:rice"
+      }
+    },
+    {
+      "item": {
+        "count": 1,
+        "id": "mohistmc:straw"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

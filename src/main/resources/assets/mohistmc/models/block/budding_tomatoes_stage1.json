@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/template_crop_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "mohistmc:block/budding_tomatoes_stage1"
+  }
+}

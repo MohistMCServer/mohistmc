@@ -1,0 +1,140 @@
+{
+  "variants": {
+    "composting=0": [
+      {
+        "model": "mohistmc:block/organic_compost_stage0"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 270
+      }
+    ],
+    "composting=1": [
+      {
+        "model": "mohistmc:block/organic_compost_stage0"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage0",
+        "y": 270
+      }
+    ],
+    "composting=2": [
+      {
+        "model": "mohistmc:block/organic_compost_stage1"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 270
+      }
+    ],
+    "composting=3": [
+      {
+        "model": "mohistmc:block/organic_compost_stage1"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage1",
+        "y": 270
+      }
+    ],
+    "composting=4": [
+      {
+        "model": "mohistmc:block/organic_compost_stage2"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 270
+      }
+    ],
+    "composting=5": [
+      {
+        "model": "mohistmc:block/organic_compost_stage2"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage2",
+        "y": 270
+      }
+    ],
+    "composting=6": [
+      {
+        "model": "mohistmc:block/organic_compost_stage3"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 270
+      }
+    ],
+    "composting=7": [
+      {
+        "model": "mohistmc:block/organic_compost_stage3"
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/organic_compost_stage3",
+        "y": 270
+      }
+    ]
+  }
+}

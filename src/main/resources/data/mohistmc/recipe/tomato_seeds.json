@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "mohistmc:tomato"
+      },
+      {
+        "item": "mohistmc:rotten_tomato"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:tomato_seeds"
+  }
+}

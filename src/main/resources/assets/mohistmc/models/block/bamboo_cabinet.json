@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "mohistmc:block/bamboo_cabinet_front",
+    "side": "mohistmc:block/bamboo_cabinet_side",
+    "top": "mohistmc:block/bamboo_cabinet_top"
+  }
+}

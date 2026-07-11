@@ -1,0 +1,17 @@
+{
+  "values": [
+    "mohistmc:tomato_sauce",
+    "mohistmc:pie_crust",
+    "mohistmc:pumpkin_slice",
+    "mohistmc:ham",
+    "mohistmc:smoked_ham",
+    "mohistmc:dog_food",
+    "#mohistmc:snacks",
+    "#mohistmc:meals",
+    "#mohistmc:sweets",
+    "#c:foods/leafy_green",
+    "#c:foods/dough",
+    "#c:foods/pasta",
+    "#c:foods/cooked_egg"
+  ]
+}

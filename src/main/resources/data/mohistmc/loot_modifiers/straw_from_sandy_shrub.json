@@ -1,0 +1,20 @@
+{
+  "type": "mohistmc:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "#mohistmc:straw_harvesters"
+      }
+    },
+    {
+      "chance": 0.3,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "block": "mohistmc:sandy_shrub",
+      "condition": "minecraft:block_state_property"
+    }
+  ],
+  "item": "mohistmc:straw"
+}

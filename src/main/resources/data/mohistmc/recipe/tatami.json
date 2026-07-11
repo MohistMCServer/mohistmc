@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "fd_tatami",
+  "key": {
+    "c": {
+      "item": "mohistmc:canvas"
+    },
+    "s": {
+      "item": "mohistmc:straw"
+    }
+  },
+  "pattern": [
+    "cs",
+    "sc"
+  ],
+  "result": {
+    "count": 2,
+    "id": "mohistmc:tatami"
+  }
+}

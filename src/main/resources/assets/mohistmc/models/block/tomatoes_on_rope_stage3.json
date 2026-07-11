@@ -1,0 +1,9 @@
+{
+  "parent": "mohistmc:block/template_crop_with_rope",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "mohistmc:block/tomatoes_on_rope_stage3",
+    "rope_side": "mohistmc:block/tomatoes_coiled_rope",
+    "rope_top": "mohistmc:block/rope_top"
+  }
+}

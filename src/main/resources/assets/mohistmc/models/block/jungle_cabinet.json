@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "mohistmc:block/jungle_cabinet_front",
+    "side": "mohistmc:block/jungle_cabinet_side",
+    "top": "mohistmc:block/jungle_cabinet_top"
+  }
+}

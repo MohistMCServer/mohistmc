@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "mohistmc:block/rice_bag_bottom",
+    "east": "mohistmc:block/rice_bag_side",
+    "north": "mohistmc:block/rice_bag_side_tied",
+    "particle": "mohistmc:block/rice_bag_top",
+    "south": "mohistmc:block/rice_bag_side_tied",
+    "up": "mohistmc:block/rice_bag_top",
+    "west": "mohistmc:block/rice_bag_side"
+  }
+}

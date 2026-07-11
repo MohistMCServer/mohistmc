@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:magma_block",
+    "minecraft:lava_cauldron",
+    "mohistmc:stove",
+    "#mohistmc:tray_heat_sources"
+  ]
+}

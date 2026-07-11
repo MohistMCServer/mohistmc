@@ -1,0 +1,9 @@
+{
+  "parent": "mohistmc:block/template_pie_slice1",
+  "textures": {
+    "bottom": "mohistmc:block/pie_bottom",
+    "inner": "mohistmc:block/apple_pie_inner",
+    "side": "mohistmc:block/pie_side",
+    "top": "mohistmc:block/apple_pie_top"
+  }
+}

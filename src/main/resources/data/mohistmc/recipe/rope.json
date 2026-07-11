@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fd_rope",
+  "key": {
+    "s": {
+      "item": "mohistmc:straw"
+    }
+  },
+  "pattern": [
+    "s",
+    "s"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mohistmc:rope"
+  }
+}

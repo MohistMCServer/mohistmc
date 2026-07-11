@@ -1,0 +1,19 @@
+{
+  "type": "mohistmc:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "#mohistmc:straw_harvesters"
+      }
+    },
+    {
+      "block": "mohistmc:rice_panicles",
+      "condition": "minecraft:block_state_property",
+      "properties": {
+        "age": "3"
+      }
+    }
+  ],
+  "item": "mohistmc:straw"
+}

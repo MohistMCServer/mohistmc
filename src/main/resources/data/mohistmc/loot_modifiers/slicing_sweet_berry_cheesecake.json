@@ -1,0 +1,16 @@
+{
+  "type": "mohistmc:pastry_slicing",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "#mohistmc:tools/knives"
+      }
+    },
+    {
+      "block": "mohistmc:sweet_berry_cheesecake",
+      "condition": "minecraft:block_state_property"
+    }
+  ],
+  "slice": "mohistmc:sweet_berry_cheesecake_slice"
+}

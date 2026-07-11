@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mohistmc:item/baked_cod_stew"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "fd_cabbage",
+  "ingredients": [
+    {
+      "item": "mohistmc:cabbage_leaf"
+    },
+    {
+      "item": "mohistmc:cabbage_leaf"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cabbage"
+  }
+}

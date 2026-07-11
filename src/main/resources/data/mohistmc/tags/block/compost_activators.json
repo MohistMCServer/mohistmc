@@ -1,0 +1,12 @@
+{
+  "values": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:podzol",
+    "minecraft:mycelium",
+    "mohistmc:organic_compost",
+    "mohistmc:rich_soil",
+    "mohistmc:rich_soil_farmland",
+    "#mohistmc:mushroom_colonies"
+  ]
+}

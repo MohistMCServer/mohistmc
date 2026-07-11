@@ -3,6 +3,7 @@ package com.mohistmc.mod;
 import com.mohistmc.mod.client.gui.EscGui;
 import com.mohistmc.mod.client.gui.FakeMainGui;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.register.BlockRegister;
 import com.mohistmc.mod.register.ItemRegister;
 import com.mohistmc.mod.register.ModEntities;
@@ -53,6 +54,7 @@ public class MohistMC {
         CREATIVE_MODE_TABS.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
+        new FarmersDelight(modEventBus, modContainer);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

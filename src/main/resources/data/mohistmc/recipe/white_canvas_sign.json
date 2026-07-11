@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "fd_canvas_sign",
+  "ingredients": [
+    {
+      "tag": "mohistmc:canvas_signs"
+    },
+    {
+      "tag": "c:dyes/white"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:white_canvas_sign"
+  }
+}

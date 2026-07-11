@@ -1,0 +1,20 @@
+{
+  "type": "mohistmc:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "mohistmc:minced_beef"
+    },
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "item": "mohistmc:tomato_sauce"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:pasta_with_meatballs"
+  }
+}

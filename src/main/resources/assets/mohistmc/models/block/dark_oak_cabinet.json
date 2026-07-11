@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "mohistmc:block/dark_oak_cabinet_front",
+    "side": "mohistmc:block/dark_oak_cabinet_side",
+    "top": "mohistmc:block/dark_oak_cabinet_top"
+  }
+}

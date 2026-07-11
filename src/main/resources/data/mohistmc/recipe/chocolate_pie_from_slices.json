@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fd_chocolate_pie",
+  "key": {
+    "#": {
+      "item": "mohistmc:chocolate_pie_slice"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:chocolate_pie"
+  }
+}

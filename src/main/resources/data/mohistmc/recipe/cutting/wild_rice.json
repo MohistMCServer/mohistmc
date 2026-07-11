@@ -1,0 +1,32 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "mohistmc:wild_rice"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "mohistmc:rice"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "count": 1,
+        "id": "mohistmc:straw"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

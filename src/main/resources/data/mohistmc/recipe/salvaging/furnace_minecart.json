@@ -1,0 +1,34 @@
+{
+  "type": "mohistmc:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:furnace_minecart"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "minecraft:minecart"
+      }
+    },
+    {
+      "item": {
+        "count": 1,
+        "id": "minecraft:furnace"
+      }
+    }
+  ],
+  "sound": {
+    "sound_id": "minecraft:block.metal.break"
+  },
+  "tool": [
+    {
+      "type": "mohistmc:item_ability",
+      "action": "hoe_dig"
+    },
+    {
+      "tag": "minecraft:hoes"
+    }
+  ]
+}

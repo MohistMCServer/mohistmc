@@ -14,7 +14,6 @@
     "FontMixin",
     "MixinAbstractContainerScreen",
     "MixinDrawContext",
-    "MixinEmojiGlyph",
     "MixinGuiGraphicsExtractor",
     "MixinItemEnchants",
     "MixinItemEntity",

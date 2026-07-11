@@ -1,0 +1,9 @@
+{
+  "parent": "mohistmc:block/template_pie_slice3",
+  "textures": {
+    "bottom": "mohistmc:block/pie_bottom",
+    "inner": "mohistmc:block/sweet_berry_cheesecake_inner",
+    "side": "mohistmc:block/pie_side",
+    "top": "mohistmc:block/sweet_berry_cheesecake_top"
+  }
+}

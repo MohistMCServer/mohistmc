@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "mohistmc:block/crate_bottom",
+    "side": "mohistmc:block/potato_crate_side",
+    "top": "mohistmc:block/potato_crate_top"
+  }
+}

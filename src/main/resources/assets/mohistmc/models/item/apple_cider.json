@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:item/mug",
+  "textures": {
+    "layer0": "mohistmc:item/apple_cider"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mohistmc:block/rich_soil"
+      },
+      {
+        "model": "mohistmc:block/rich_soil",
+        "y": 90
+      },
+      {
+        "model": "mohistmc:block/rich_soil",
+        "y": 180
+      },
+      {
+        "model": "mohistmc:block/rich_soil",
+        "y": 270
+      }
+    ]
+  }
+}
