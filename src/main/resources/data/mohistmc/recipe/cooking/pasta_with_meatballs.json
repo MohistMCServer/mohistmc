@@ -2,15 +2,9 @@
   "type": "mohistmc:cooking",
   "experience": 1.0,
   "ingredients": [
-    {
-      "item": "mohistmc:minced_beef"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "item": "mohistmc:tomato_sauce"
-    }
+    "mohistmc:minced_beef",
+    "#c:foods/pasta",
+    "mohistmc:tomato_sauce"
   ],
   "recipe_book_tab": "meals",
   "result": {

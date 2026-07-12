@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 600,
   "experience": 0.35,
-  "ingredient": {
-    "item": "mohistmc:cod_slice"
-  },
+  "ingredient": "mohistmc:cod_slice",
   "result": {
     "count": 1,
     "id": "mohistmc:cooked_cod_slice"

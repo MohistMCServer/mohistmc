@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "mohistmc:kelp_roll"
-    }
+    "mohistmc:kelp_roll"
   ],
   "result": [
     {
@@ -13,13 +11,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "knife_dig"
-    },
-    {
-      "tag": "c:tools/knife"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "knife_dig"
+  }
 }

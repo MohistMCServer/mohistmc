@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo_chest_raft"
-    }
+    "minecraft:bamboo_chest_raft"
   ],
   "result": [
     {
@@ -19,13 +17,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "hoe_dig"
-    },
-    {
-      "tag": "minecraft:hoes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "hoe_dig"
+  }
 }

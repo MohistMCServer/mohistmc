@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "mohistmc:brown_mushroom_colony"
-    }
+    "mohistmc:brown_mushroom_colony"
   ],
   "result": [
     {
@@ -13,13 +11,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "knife_dig"
-    },
-    {
-      "tag": "c:tools/knife"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "knife_dig"
+  }
 }

@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "mohistmc:wild_potatoes"
-    }
+    "mohistmc:wild_potatoes"
   ],
   "result": [
     {
@@ -20,13 +18,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "knife_dig"
-    },
-    {
-      "tag": "c:tools/knife"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "knife_dig"
+  }
 }

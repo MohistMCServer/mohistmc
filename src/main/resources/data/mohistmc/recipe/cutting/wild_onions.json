@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "mohistmc:wild_onions"
-    }
+    "mohistmc:wild_onions"
   ],
   "result": [
     {
@@ -26,13 +24,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "knife_dig"
-    },
-    {
-      "tag": "c:tools/knife"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "knife_dig"
+  }
 }

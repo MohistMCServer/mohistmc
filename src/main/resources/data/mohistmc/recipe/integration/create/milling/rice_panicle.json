@@ -7,9 +7,7 @@
   ],
   "type": "create:milling",
   "ingredients": [
-    {
-      "item": "mohistmc:rice_panicle"
-    }
+    "mohistmc:rice_panicle"
   ],
   "results": [
     {

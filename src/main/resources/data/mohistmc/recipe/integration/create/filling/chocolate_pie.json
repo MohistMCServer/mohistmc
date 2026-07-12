@@ -7,11 +7,9 @@
   ],
   "type": "create:filling",
   "ingredients": [
+    "mohistmc:pie_crust",
     {
-      "item": "mohistmc:pie_crust"
-    },
-    {
-      "type": "neoforge:tag",
+      "neoforge:ingredient_type": "neoforge:tag",
       "amount": 500,
       "tag": "c:chocolate"
     }

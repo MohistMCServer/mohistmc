@@ -3,9 +3,7 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.1,
-  "ingredient": {
-    "item": "mohistmc:iron_knife"
-  },
+  "ingredient": "mohistmc:iron_knife",
   "result": {
     "count": 1,
     "id": "minecraft:iron_nugget"

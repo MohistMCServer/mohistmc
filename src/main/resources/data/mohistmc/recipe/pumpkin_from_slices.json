@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "mohistmc:pumpkin_slice"
-    }
+    "#": "mohistmc:pumpkin_slice"
   },
   "pattern": [
     "##",

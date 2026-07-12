@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_sweet_berry_cheesecake",
   "key": {
-    "#": {
-      "item": "mohistmc:sweet_berry_cheesecake_slice"
-    }
+    "#": "mohistmc:sweet_berry_cheesecake_slice"
   },
   "pattern": [
     "##",

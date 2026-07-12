@@ -3,12 +3,8 @@
   "category": "building",
   "group": "fd_tatami",
   "ingredients": [
-    {
-      "item": "mohistmc:full_tatami_mat"
-    },
-    {
-      "item": "mohistmc:full_tatami_mat"
-    }
+    "mohistmc:full_tatami_mat",
+    "mohistmc:full_tatami_mat"
   ],
   "result": {
     "count": 1,

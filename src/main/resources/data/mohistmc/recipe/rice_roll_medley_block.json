@@ -2,33 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:kelp_roll_slice"
-    },
-    {
-      "item": "mohistmc:kelp_roll_slice"
-    },
-    {
-      "item": "mohistmc:kelp_roll_slice"
-    },
-    {
-      "item": "mohistmc:salmon_roll"
-    },
-    {
-      "item": "mohistmc:salmon_roll"
-    },
-    {
-      "item": "mohistmc:salmon_roll"
-    },
-    {
-      "item": "mohistmc:cod_roll"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "mohistmc:cod_roll"
-    }
+    "mohistmc:kelp_roll_slice",
+    "mohistmc:kelp_roll_slice",
+    "mohistmc:kelp_roll_slice",
+    "mohistmc:salmon_roll",
+    "mohistmc:salmon_roll",
+    "mohistmc:salmon_roll",
+    "mohistmc:cod_roll",
+    "minecraft:bowl",
+    "mohistmc:cod_roll"
   ],
   "result": {
     "count": 1,

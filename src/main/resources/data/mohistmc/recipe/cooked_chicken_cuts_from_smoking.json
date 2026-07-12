@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 100,
   "experience": 0.35,
-  "ingredient": {
-    "item": "mohistmc:chicken_cuts"
-  },
+  "ingredient": "mohistmc:chicken_cuts",
   "result": {
     "count": 1,
     "id": "mohistmc:cooked_chicken_cuts"

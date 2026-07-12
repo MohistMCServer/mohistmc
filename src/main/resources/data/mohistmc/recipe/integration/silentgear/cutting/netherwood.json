@@ -7,12 +7,10 @@
   ],
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "silentgear:netherwood_log"
-    }
+    "silentgear:netherwood_log"
   ],
   "tool": {
-    "type": "mohistmc:tool_action",
+    "neoforge:ingredient_type": "mohistmc:tool_action",
     "action": "axe_strip"
   },
   "result": [

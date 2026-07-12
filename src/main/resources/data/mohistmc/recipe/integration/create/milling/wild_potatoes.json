@@ -7,9 +7,7 @@
   ],
   "type": "create:milling",
   "ingredients": [
-    {
-      "item": "mohistmc:wild_potatoes"
-    }
+    "mohistmc:wild_potatoes"
   ],
   "results": [
     {

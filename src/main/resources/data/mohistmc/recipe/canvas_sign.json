@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "mohistmc:canvas"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    },
-    "w": {
-      "tag": "minecraft:planks"
-    }
+    "#": "mohistmc:canvas",
+    "/": "minecraft:stick",
+    "w": "#minecraft:planks"
   },
   "pattern": [
     "w#w",

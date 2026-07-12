@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 200,
   "experience": 0.35,
-  "ingredient": {
-    "item": "mohistmc:ham"
-  },
+  "ingredient": "mohistmc:ham",
   "result": {
     "count": 1,
     "id": "mohistmc:smoked_ham"

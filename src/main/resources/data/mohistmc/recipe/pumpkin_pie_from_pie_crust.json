@@ -3,18 +3,10 @@
   "category": "misc",
   "group": "fd_pumpkin_pie",
   "key": {
-    "O": {
-      "item": "mohistmc:pie_crust"
-    },
-    "c": {
-      "item": "mohistmc:pumpkin_slice"
-    },
-    "e": {
-      "tag": "c:eggs"
-    },
-    "s": {
-      "item": "minecraft:sugar"
-    }
+    "O": "mohistmc:pie_crust",
+    "c": "mohistmc:pumpkin_slice",
+    "e": "#c:eggs",
+    "s": "minecraft:sugar"
   },
   "pattern": [
     "cec",

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:tree_bark"
-    },
-    {
-      "item": "mohistmc:tree_bark"
-    },
-    {
-      "item": "mohistmc:tree_bark"
-    }
+    "mohistmc:tree_bark",
+    "mohistmc:tree_bark",
+    "mohistmc:tree_bark"
   ],
   "result": {
     "count": 1,

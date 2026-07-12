@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:cod_slice"
-    },
-    {
-      "item": "mohistmc:cod_slice"
-    },
-    {
-      "item": "mohistmc:cooked_rice"
-    }
+    "mohistmc:cod_slice",
+    "mohistmc:cod_slice",
+    "mohistmc:cooked_rice"
   ],
   "result": {
     "count": 2,

@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:gravel"
-    }
+    "minecraft:gravel"
   ],
   "result": [
     {
@@ -20,13 +18,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "shovel_dig"
-    },
-    {
-      "tag": "minecraft:shovels"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "shovel_dig"
+  }
 }

@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_log"
-    }
+    "minecraft:mangrove_log"
   ],
   "result": [
     {
@@ -22,13 +20,8 @@
   "sound": {
     "sound_id": "minecraft:item.axe.strip"
   },
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "axe_strip"
-    },
-    {
-      "tag": "minecraft:axes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "axe_strip"
+  }
 }

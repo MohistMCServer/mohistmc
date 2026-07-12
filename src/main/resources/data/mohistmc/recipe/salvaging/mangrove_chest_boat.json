@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_chest_boat"
-    }
+    "minecraft:mangrove_chest_boat"
   ],
   "result": [
     {
@@ -19,13 +17,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "hoe_dig"
-    },
-    {
-      "tag": "minecraft:hoes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "hoe_dig"
+  }
 }

@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:cooked_mutton_chops"
-    },
-    {
-      "tag": "c:crops/beetroot"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "mohistmc:cooked_rice"
-    },
-    {
-      "tag": "c:crops/tomato"
-    }
+    "mohistmc:cooked_mutton_chops",
+    "#c:crops/beetroot",
+    "minecraft:bowl",
+    "mohistmc:cooked_rice",
+    "#c:crops/tomato"
   ],
   "result": {
     "count": 1,

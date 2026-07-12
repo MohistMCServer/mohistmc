@@ -2,15 +2,9 @@
   "type": "mohistmc:cooking",
   "experience": 1.0,
   "ingredients": [
-    {
-      "tag": "c:foods/safe_raw_fish"
-    },
-    {
-      "item": "mohistmc:tomato_sauce"
-    },
-    {
-      "tag": "c:crops/onion"
-    }
+    "#c:foods/safe_raw_fish",
+    "mohistmc:tomato_sauce",
+    "#c:crops/onion"
   ],
   "recipe_book_tab": "meals",
   "result": {

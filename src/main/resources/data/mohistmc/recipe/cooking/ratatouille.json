@@ -2,17 +2,11 @@
   "type": "mohistmc:cooking",
   "experience": 1.0,
   "ingredients": [
+    "#c:crops/tomato",
+    "#c:crops/onion",
+    "#c:crops/beetroot",
     {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:crops/onion"
-    },
-    {
-      "tag": "c:crops/beetroot"
-    },
-    {
-      "type": "neoforge:difference",
+      "neoforge:ingredient_type": "neoforge:difference",
       "base": {
         "tag": "c:foods/vegetable"
       },

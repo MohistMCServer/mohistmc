@@ -7,9 +7,7 @@
   ],
   "type": "create:milling",
   "ingredients": [
-    {
-      "item": "mohistmc:wild_tomatoes"
-    }
+    "mohistmc:wild_tomatoes"
   ],
   "results": [
     {

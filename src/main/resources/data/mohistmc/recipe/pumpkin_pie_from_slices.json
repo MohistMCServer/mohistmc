@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_pumpkin_pie",
   "key": {
-    "#": {
-      "item": "mohistmc:pumpkin_pie_slice"
-    }
+    "#": "mohistmc:pumpkin_pie_slice"
   },
   "pattern": [
     "##",

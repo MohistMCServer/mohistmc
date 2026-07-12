@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fd_canvas_sign",
   "ingredients": [
-    {
-      "tag": "mohistmc:canvas_signs"
-    },
-    {
-      "tag": "c:dyes/red"
-    }
+    "#mohistmc:canvas_signs",
+    "#c:dyes/red"
   ],
   "result": {
     "count": 1,

@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 600,
   "experience": 0.35,
-  "ingredient": {
-    "item": "mohistmc:mutton_chops"
-  },
+  "ingredient": "mohistmc:mutton_chops",
   "result": {
     "count": 1,
     "id": "mohistmc:cooked_mutton_chops"

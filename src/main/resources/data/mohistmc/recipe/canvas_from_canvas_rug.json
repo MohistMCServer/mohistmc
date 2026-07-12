@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fd_canvas",
   "ingredients": [
-    {
-      "item": "mohistmc:canvas_rug"
-    },
-    {
-      "item": "mohistmc:canvas_rug"
-    }
+    "mohistmc:canvas_rug",
+    "mohistmc:canvas_rug"
   ],
   "result": {
     "count": 1,

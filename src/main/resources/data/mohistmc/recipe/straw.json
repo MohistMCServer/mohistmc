@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:straw_bale"
-    }
+    "mohistmc:straw_bale"
   ],
   "result": {
     "count": 9,

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_chocolate_pie",
   "key": {
-    "#": {
-      "item": "mohistmc:chocolate_pie_slice"
-    }
+    "#": "mohistmc:chocolate_pie_slice"
   },
   "pattern": [
     "##",

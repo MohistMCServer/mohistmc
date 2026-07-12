@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_rice",
   "ingredients": [
-    {
-      "item": "mohistmc:rice_panicle"
-    }
+    "mohistmc:rice_panicle"
   ],
   "result": {
     "count": 1,

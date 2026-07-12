@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "mohistmc:canvas"
-    },
-    "X": {
-      "item": "minecraft:chain"
-    },
-    "w": {
-      "tag": "minecraft:logs"
-    }
+    "#": "mohistmc:canvas",
+    "X": "minecraft:chain",
+    "w": "#minecraft:logs"
   },
   "pattern": [
     "X X",

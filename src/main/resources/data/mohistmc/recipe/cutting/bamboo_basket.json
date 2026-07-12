@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "mohistmc:bamboo_basket"
-    }
+    "mohistmc:bamboo_basket"
   ],
   "result": [
     {
@@ -19,13 +17,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "axe_dig"
-    },
-    {
-      "tag": "minecraft:axes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "axe_dig"
+  }
 }

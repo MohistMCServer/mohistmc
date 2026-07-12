@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_apple_pie",
   "key": {
-    "#": {
-      "item": "mohistmc:apple_pie_slice"
-    }
+    "#": "mohistmc:apple_pie_slice"
   },
   "pattern": [
     "##",

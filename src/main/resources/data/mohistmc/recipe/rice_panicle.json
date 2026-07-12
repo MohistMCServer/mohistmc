@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:rice_bale"
-    }
+    "mohistmc:rice_bale"
   ],
   "result": {
     "count": 9,

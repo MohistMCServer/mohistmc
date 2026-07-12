@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:hopper_minecart"
-    }
+    "minecraft:hopper_minecart"
   ],
   "result": [
     {
@@ -22,13 +20,8 @@
   "sound": {
     "sound_id": "minecraft:block.metal.break"
   },
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "hoe_dig"
-    },
-    {
-      "tag": "minecraft:hoes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "hoe_dig"
+  }
 }

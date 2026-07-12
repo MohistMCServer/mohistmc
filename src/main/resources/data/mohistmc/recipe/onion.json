@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:onion_crate"
-    }
+    "mohistmc:onion_crate"
   ],
   "result": {
     "count": 9,

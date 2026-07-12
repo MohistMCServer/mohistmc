@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fd_cabbage",
   "ingredients": [
-    {
-      "item": "mohistmc:cabbage_crate"
-    }
+    "mohistmc:cabbage_crate"
   ],
   "result": {
     "count": 9,

@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:leather_horse_armor"
-    }
+    "minecraft:leather_horse_armor"
   ],
   "result": [
     {
@@ -13,13 +11,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "shears_dig"
-    },
-    {
-      "tag": "c:tools/shear"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "shears_dig"
+  }
 }

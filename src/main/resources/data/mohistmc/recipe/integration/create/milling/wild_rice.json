@@ -7,9 +7,7 @@
   ],
   "type": "create:milling",
   "ingredients": [
-    {
-      "item": "mohistmc:wild_rice"
-    }
+    "mohistmc:wild_rice"
   ],
   "results": [
     {

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "mohistmc:canvas"
-    },
-    "b": {
-      "item": "minecraft:bamboo"
-    }
+    "#": "mohistmc:canvas",
+    "b": "minecraft:bamboo"
   },
   "pattern": [
     "b#b",

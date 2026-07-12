@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fd_canvas_sign",
   "ingredients": [
-    {
-      "tag": "mohistmc:canvas_signs"
-    },
-    {
-      "tag": "c:dyes/yellow"
-    }
+    "#mohistmc:canvas_signs",
+    "#c:dyes/yellow"
   ],
   "result": {
     "count": 1,

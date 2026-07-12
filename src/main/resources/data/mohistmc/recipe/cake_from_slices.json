@@ -3,27 +3,13 @@
   "category": "misc",
   "group": "cake",
   "ingredients": [
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    },
-    {
-      "item": "mohistmc:cake_slice"
-    }
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice",
+    "mohistmc:cake_slice"
   ],
   "result": {
     "count": 1,

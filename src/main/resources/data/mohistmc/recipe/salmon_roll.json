@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mohistmc:salmon_slice"
-    },
-    {
-      "item": "mohistmc:salmon_slice"
-    },
-    {
-      "item": "mohistmc:cooked_rice"
-    }
+    "mohistmc:salmon_slice",
+    "mohistmc:salmon_slice",
+    "mohistmc:cooked_rice"
   ],
   "result": {
     "count": 2,

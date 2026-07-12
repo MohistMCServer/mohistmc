@@ -7,9 +7,7 @@
   ],
   "type": "create:mixing",
   "ingredients": [
-    {
-      "item": "mohistmc:cabbage"
-    }
+    "mohistmc:cabbage"
   ],
   "results": [
     {

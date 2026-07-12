@@ -3,12 +3,8 @@
   "category": "building",
   "group": "fd_tatami",
   "key": {
-    "c": {
-      "item": "mohistmc:canvas"
-    },
-    "s": {
-      "item": "mohistmc:straw"
-    }
+    "c": "mohistmc:canvas",
+    "s": "mohistmc:straw"
   },
   "pattern": [
     "cs",

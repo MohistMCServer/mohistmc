@@ -1,9 +1,7 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:amethyst_block"
-    }
+    "minecraft:amethyst_block"
   ],
   "result": [
     {
@@ -13,13 +11,8 @@
       }
     }
   ],
-  "tool": [
-    {
-      "type": "mohistmc:item_ability",
-      "action": "pickaxe_dig"
-    },
-    {
-      "tag": "minecraft:pickaxes"
-    }
-  ]
+  "tool": {
+    "neoforge:ingredient_type": "mohistmc:item_ability",
+    "action": "pickaxe_dig"
+  }
 }

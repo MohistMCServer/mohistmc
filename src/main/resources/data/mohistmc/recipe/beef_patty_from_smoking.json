@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 100,
   "experience": 0.35,
-  "ingredient": {
-    "item": "mohistmc:minced_beef"
-  },
+  "ingredient": "mohistmc:minced_beef",
   "result": {
     "count": 1,
     "id": "mohistmc:beef_patty"
