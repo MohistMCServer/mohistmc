@@ -28,7 +28,7 @@ public class SteamParticle extends SingleQuadParticle
 	@Override
 	@Nonnull
 	protected Layer getLayer() {
-		return Layer.TRANSLUCENT_TERRAIN;
+		return Layer.TRANSLUCENT;
 	}
 
 	public void tick() {

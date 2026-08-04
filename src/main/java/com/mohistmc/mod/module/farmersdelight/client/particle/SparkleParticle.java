@@ -37,7 +37,7 @@ public class SparkleParticle extends SingleQuadParticle
 
 	@Override
 	protected Layer getLayer() {
-		return Layer.OPAQUE_TERRAIN;
+		return Layer.OPAQUE;
 	}
 
 	public static class Factory implements ParticleProvider<SimpleParticleType>

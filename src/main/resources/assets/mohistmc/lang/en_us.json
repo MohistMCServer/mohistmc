@@ -704,5 +704,6 @@
   "item.mohistmc.wild_tomatoes": "番茄灌木",
   "item.mohistmc.wooden_basket": "木篮",
   "item.mohistmc.yellow_canvas_sign": "黄色粗布告示牌",
-  "item.mohistmc.yellow_hanging_canvas_sign": "悬挂式黄色粗布告示牌"
+  "item.mohistmc.yellow_hanging_canvas_sign": "悬挂式黄色粗布告示牌",
+  "gui.recipebook.toggleRecipes.cookable": "仅显示可烹饪"
 }

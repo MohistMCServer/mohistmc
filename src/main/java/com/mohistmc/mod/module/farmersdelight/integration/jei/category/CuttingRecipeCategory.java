@@ -54,10 +54,6 @@ public class CuttingRecipeCategory implements IRecipeCategory<RecipeHolder<Cutti
 		return this.title;
 	}
 
-	public IDrawable getBackground() {
-		return this.background;
-	}
-
 	@Override
 	public int getWidth() {
 		return 117;

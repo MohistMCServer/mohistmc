@@ -60,10 +60,6 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 		return this.title;
 	}
 
-	public IDrawable getBackground() {
-		return null;
-	}
-
 	@Override
 	public int getWidth() {
 		return 118;

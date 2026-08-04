@@ -12,6 +12,7 @@ import com.mohistmc.mod.module.farmersdelight.integration.jei.category.CookingRe
 import com.mohistmc.mod.module.farmersdelight.integration.jei.category.CuttingRecipeCategory;
 import com.mohistmc.mod.module.farmersdelight.integration.jei.category.DecompositionRecipeCategory;
 import com.mohistmc.mod.module.farmersdelight.integration.jei.resource.DecompositionDummy;
+import com.mohistmc.mod.module.farmersdelight.integration.jei.resource.DoughRecipeMaker;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
 import mezz.jei.api.IModPlugin;
@@ -48,7 +49,7 @@ public class JEIPlugin implements IModPlugin
 		registration.addRecipes(FDRecipeTypes.CUTTING, modRecipes.getCuttingBoardRecipes());
 		registration.addRecipes(FDRecipeTypes.DECOMPOSITION, ImmutableList.of(new DecompositionDummy()));
 
-		registration.addRecipes(RecipeTypes.CRAFTING, modRecipes.getSpecialCraftingRecipes());
+		registration.addRecipes(RecipeTypes.CRAFTING, DoughRecipeMaker.createRecipe());
 
 		registration.addIngredientInfo(new ItemStack(ModItems.WHEAT_DOUGH.get()), VanillaTypes.ITEM_STACK, TextUtils.JEI("info.dough"));
 		registration.addIngredientInfo(new ItemStack(ModItems.STRAW.get()), VanillaTypes.ITEM_STACK, TextUtils.JEI("info.straw"));
@@ -71,11 +72,11 @@ public class JEIPlugin implements IModPlugin
 
 	@Override
 	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-		registration.addRecipeCatalyst(new ItemStack(ModItems.COOKING_POT.get()), FDRecipeTypes.COOKING);
-		registration.addRecipeCatalyst(new ItemStack(ModItems.CUTTING_BOARD.get()), FDRecipeTypes.CUTTING);
-		registration.addRecipeCatalyst(new ItemStack(ModItems.STOVE.get()), RecipeTypes.CAMPFIRE_COOKING);
-		registration.addRecipeCatalyst(new ItemStack(ModItems.SKILLET.get()), RecipeTypes.CAMPFIRE_COOKING);
-		registration.addRecipeCatalyst(new ItemStack(ModBlocks.ORGANIC_COMPOST.get()), FDRecipeTypes.DECOMPOSITION);
+		registration.addCraftingStation(FDRecipeTypes.COOKING, new ItemStack(ModItems.COOKING_POT.get()));
+		registration.addCraftingStation(FDRecipeTypes.CUTTING, new ItemStack(ModItems.CUTTING_BOARD.get()));
+		registration.addCraftingStation(RecipeTypes.CAMPFIRE_COOKING, new ItemStack(ModItems.STOVE.get()));
+		registration.addCraftingStation(RecipeTypes.CAMPFIRE_COOKING, new ItemStack(ModItems.SKILLET.get()));
+		registration.addCraftingStation(FDRecipeTypes.DECOMPOSITION, new ItemStack(ModBlocks.ORGANIC_COMPOST.get()));
 	}
 
 	@Override

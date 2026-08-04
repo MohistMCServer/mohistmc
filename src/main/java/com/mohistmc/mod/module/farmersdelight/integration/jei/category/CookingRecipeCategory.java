@@ -61,10 +61,6 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 		return this.title;
 	}
 
-	public IDrawable getBackground() {
-		return this.background;
-	}
-
 	@Override
 	public int getWidth() {
 		return 116;

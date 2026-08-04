@@ -27,6 +27,7 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import com.mohistmc.mod.module.farmersdelight.common.registry.RegistryAliases;
 import com.mohistmc.mod.module.farmersdelight.common.world.VillageStructures;
+import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -42,6 +43,10 @@ public class FarmersDelight
 {
 	public static final String MODID = MohistMC.MODID;
 	public static final Logger LOGGER = LogManager.getLogger();
+
+	public static Identifier id(String name) {
+		return Identifier.fromNamespaceAndPath(MODID, name);
+	}
 
 	public FarmersDelight(IEventBus modEventBus, ModContainer modContainer) {
 		modEventBus.addListener(CommonSetup::init);

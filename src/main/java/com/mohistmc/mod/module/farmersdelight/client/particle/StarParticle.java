@@ -24,7 +24,7 @@ public class StarParticle extends SingleQuadParticle
 
 	@Override
 	protected Layer getLayer() {
-		return Layer.OPAQUE_TERRAIN;
+		return Layer.OPAQUE;
 	}
 
 	@Override
