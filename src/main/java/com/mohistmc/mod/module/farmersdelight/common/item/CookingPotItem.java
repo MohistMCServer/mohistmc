@@ -1,17 +1,16 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
+import com.mohistmc.mod.module.farmersdelight.client.gui.CookingPotTooltip;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import java.util.Optional;
-import net.minecraft.util.ARGB;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import com.mohistmc.mod.module.farmersdelight.client.gui.CookingPotTooltip;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
 
 public class CookingPotItem extends BlockItem
 {
-	private static final int BAR_COLOR = ARGB.colorFromFloat(1.0F, 0.4F, 0.4F, 1.0F);
+	private static final int BAR_COLOR = 0x6666FF;
 
 	public CookingPotItem(Block block, Properties properties) {
 		super(block, properties);

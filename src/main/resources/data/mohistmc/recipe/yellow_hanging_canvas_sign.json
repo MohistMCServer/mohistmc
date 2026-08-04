@@ -1,13 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "group": "fd_hanging_canvas_sign",
   "ingredients": [
     "#mohistmc:hanging_canvas_signs",
     "#c:dyes/yellow"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:yellow_hanging_canvas_sign"
   }
 }

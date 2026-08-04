@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cooked_cod_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:cod_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mohistmc:cooked_cod_slice_from_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cooked_cod_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mohistmc:cooked_cod_slice_from_smoking"
+    ]
+  }
+}

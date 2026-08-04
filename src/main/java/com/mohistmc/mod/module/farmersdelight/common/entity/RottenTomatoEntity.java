@@ -1,6 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.entity;
 
-
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModEntityTypes;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
@@ -15,9 +17,6 @@ import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModEntityTypes;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 
 @ParametersAreNonnullByDefault
 public class RottenTomatoEntity extends ThrowableItemProjectile
@@ -26,12 +25,12 @@ public class RottenTomatoEntity extends ThrowableItemProjectile
 		super(entityType, level);
 	}
 
-	public RottenTomatoEntity(Level level, LivingEntity entity, ItemStack itemStack) {
-		super(ModEntityTypes.ROTTEN_TOMATO.get(), entity, level, itemStack);
+	public RottenTomatoEntity(Level level, LivingEntity entity) {
+		super(ModEntityTypes.ROTTEN_TOMATO.get(), entity, level, new ItemStack(ModItems.ROTTEN_TOMATO.get()));
 	}
 
-	public RottenTomatoEntity(Level level, double x, double y, double z, ItemStack itemStack) {
-		super(ModEntityTypes.ROTTEN_TOMATO.get(), x, y, z, level, itemStack);
+	public RottenTomatoEntity(Level level, double x, double y, double z) {
+		super(ModEntityTypes.ROTTEN_TOMATO.get(), x, y, z, level, new ItemStack(ModItems.ROTTEN_TOMATO.get()));
 	}
 
 	@Override
@@ -43,13 +42,13 @@ public class RottenTomatoEntity extends ThrowableItemProjectile
 	public void handleEntityEvent(byte id) {
 		ItemStack entityStack = new ItemStack(this.getDefaultItem());
 		if (id == 3) {
-			ParticleOptions iparticledata = new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(entityStack));
+			ParticleOptions iparticledata = new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromStack(entityStack));
 
 			for (int i = 0; i < 12; ++i) {
 				this.level().addParticle(iparticledata, this.getX(), this.getY(), this.getZ(),
-					((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F,
-					((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F + 0.1F,
-					((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F);
+						((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F,
+						((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F + 0.1F,
+						((double) this.random.nextFloat() * 2.0D - 1.0D) * 0.1F);
 			}
 		}
 	}

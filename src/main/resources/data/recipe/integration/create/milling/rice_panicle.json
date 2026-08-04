@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "mohistmc:rice_panicle"
+    }
+  ],
+  "results": [
+    {
+      "id": "mohistmc:rice",
+      "count": 1
+    },
+    {
+      "id": "mohistmc:straw",
+      "count": 1
+    }
+  ],
+  "processing_time": 50
+}

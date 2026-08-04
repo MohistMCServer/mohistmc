@@ -6,13 +6,18 @@
   "result": [
     {
       "item": {
-        "count": 1,
         "id": "minecraft:cobbled_deepslate"
       }
     }
   ],
   "tool": {
-    "neoforge:ingredient_type": "mohistmc:item_ability",
-    "action": "pickaxe_dig"
+    "neoforge:ingredient_type": "neoforge:compound",
+    "children": [
+      {
+        "neoforge:ingredient_type": "mohistmc:item_ability",
+        "action": "pickaxe_dig"
+      },
+      "#minecraft:pickaxes"
+    ]
   }
 }

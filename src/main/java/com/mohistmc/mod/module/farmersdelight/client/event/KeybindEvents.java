@@ -1,18 +1,17 @@
 package com.mohistmc.mod.module.farmersdelight.client.event;
 
-import java.util.Objects;
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.item.SkilletItem;
+import com.mohistmc.mod.module.farmersdelight.common.network.payload.FlipSkilletPayload;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModDataComponents;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.item.SkilletItem;
-import com.mohistmc.mod.module.farmersdelight.common.network.payload.FlipSkilletPayload;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModDataComponents;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 @EventBusSubscriber(modid = FarmersDelight.MODID, value = Dist.CLIENT)
 public class KeybindEvents
@@ -25,8 +24,7 @@ public class KeybindEvents
 			ItemStack useItem = player.getUseItem();
 			if (useItem.getItem() instanceof SkilletItem && !useItem.has(ModDataComponents.SKILLET_FLIP_TIMESTAMP.get())) {
 				while (mc.options.keyAttack.consumeClick()) {
-					ClientPacketListener listener = Objects.requireNonNull(Minecraft.getInstance().getConnection());
-					listener.send(FlipSkilletPayload.INSTANCE);
+					ClientPacketDistributor.sendToServer(FlipSkilletPayload.INSTANCE);
 				}
 			}
 		}

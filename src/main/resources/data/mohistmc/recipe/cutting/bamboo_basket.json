@@ -6,19 +6,23 @@
   "result": [
     {
       "item": {
-        "count": 1,
         "id": "mohistmc:canvas"
       }
     },
     {
       "item": {
-        "count": 1,
         "id": "minecraft:bamboo"
       }
     }
   ],
   "tool": {
-    "neoforge:ingredient_type": "mohistmc:item_ability",
-    "action": "axe_dig"
+    "neoforge:ingredient_type": "neoforge:compound",
+    "children": [
+      {
+        "neoforge:ingredient_type": "mohistmc:item_ability",
+        "action": "axe_dig"
+      },
+      "#minecraft:axes"
+    ]
   }
 }

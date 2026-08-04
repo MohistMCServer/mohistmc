@@ -1,0 +1,7 @@
+{
+  "type": "mohistmc:add_features_by_filter",
+  "allowed_biomes": "#c:is_wet/overworld",
+  "denied_biomes": "#c:is_underground",
+  "features": "mohistmc:patch_wild_rice",
+  "step": "vegetal_decoration"
+}

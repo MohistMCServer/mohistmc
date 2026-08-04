@@ -20,16 +20,15 @@ public class NourishmentEffect extends MobEffect
 	}
 
 	@Override
-	public boolean applyEffectTick(ServerLevel serverLevel, LivingEntity entity, int amplification) {
+	public boolean applyEffectTick(ServerLevel serverLevel, LivingEntity entity, int amplifier) {
 		if (entity instanceof Player player) {
 			FoodData foodData = player.getFoodData();
 			boolean isPlayerHealingWithSaturation =
-				serverLevel.getGameRules().get(GameRules.NATURAL_HEALTH_REGENERATION)
+					serverLevel.getGameRules().get(GameRules.NATURAL_HEALTH_REGENERATION)
 					&& player.isHurt()
 					&& foodData.getSaturationLevel() > 0.0;
 			if (!isPlayerHealingWithSaturation) {
-				// TODO: See if this works.
-				foodData.exhaustionLevel = 0;
+				foodData.addExhaustion(-40.0F);
 			}
 		}
 

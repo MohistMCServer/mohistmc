@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:baked_potato",
     "#c:drinks/milk",
@@ -13,7 +12,6 @@
     "#c:crops/onion"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:shepherds_pie_block"
   }
 }

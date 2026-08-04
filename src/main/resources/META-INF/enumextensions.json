@@ -1,11 +1,17 @@
 {
   "entries": [
     {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "MOHISTMC_COOKING",
+      "constructor": "()V",
+      "parameters": []
+    },
+    {
       "enum": "net/minecraft/client/model/HumanoidModel$ArmPose",
-      "name": "farmersdelight_skillet_flip",
+      "name": "MOHISTMC_SKILLET_FLIP",
       "constructor": "(ZZLnet/neoforged/neoforge/client/IArmPoseTransformer;)V",
       "parameters": {
-        "class": "vectorwing/farmersdelight/common/EnumParameters",
+        "class": "com/mohistmc/mod/module/farmersdelight/common/EnumParameters",
         "field": "PROXY_SKILLET_FLIP"
       }
     }

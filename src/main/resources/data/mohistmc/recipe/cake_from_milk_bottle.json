@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "cake",
   "key": {
     "e": "#c:eggs",
@@ -14,7 +13,6 @@
     "www"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:cake"
   }
 }

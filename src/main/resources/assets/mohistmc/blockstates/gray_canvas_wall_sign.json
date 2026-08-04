@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "mohistmc:block/canvas_sign"
+    "facing=east": {
+      "model": "mohistmc:block/gray_canvas_wall_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "mohistmc:block/gray_canvas_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "mohistmc:block/gray_canvas_wall_sign"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/gray_canvas_wall_sign",
+      "y": 90
     }
   }
 }

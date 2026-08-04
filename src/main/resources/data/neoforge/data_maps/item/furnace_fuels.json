@@ -1,13 +1,56 @@
 {
+  "remove": [
+    "mohistmc:crimson_cabinet",
+    "mohistmc:warped_cabinet"
+  ],
   "values": {
+    "#mohistmc:cabinets/wooden": {
+      "burn_time": 300
+    },
+    "mohistmc:bamboo_basket": {
+      "burn_time": 300
+    },
     "mohistmc:canvas": {
       "burn_time": 400
+    },
+    "mohistmc:canvas_rug": {
+      "burn_time": 200
+    },
+    "mohistmc:cutting_board": {
+      "burn_time": 200
+    },
+    "mohistmc:full_tatami_mat": {
+      "burn_time": 200
+    },
+    "mohistmc:half_tatami_mat": {
+      "burn_time": 100
+    },
+    "mohistmc:rope": {
+      "burn_time": 200
+    },
+    "mohistmc:rope_fence": {
+      "burn_time": 200
+    },
+    "mohistmc:rope_fence_gate": {
+      "burn_time": 200
+    },
+    "mohistmc:safety_net": {
+      "burn_time": 200
     },
     "mohistmc:straw": {
       "burn_time": 100
     },
+    "mohistmc:straw_bale": {
+      "burn_time": 1000
+    },
+    "mohistmc:tatami": {
+      "burn_time": 400
+    },
     "mohistmc:tree_bark": {
       "burn_time": 200
+    },
+    "mohistmc:wooden_basket": {
+      "burn_time": 300
     }
   }
 }

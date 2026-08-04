@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "mohistmc:kelp_roll_slice",
     "mohistmc:kelp_roll_slice",
@@ -13,7 +12,6 @@
     "mohistmc:cod_roll"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:rice_roll_medley_block"
   }
 }

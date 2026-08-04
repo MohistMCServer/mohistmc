@@ -5,7 +5,6 @@
   "experience": 0.35,
   "ingredient": "mohistmc:salmon_slice",
   "result": {
-    "count": 1,
     "id": "mohistmc:cooked_salmon_slice"
   }
 }

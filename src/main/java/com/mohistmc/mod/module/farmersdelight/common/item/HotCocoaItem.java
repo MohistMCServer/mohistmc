@@ -24,8 +24,6 @@ public class HotCocoaItem extends DrinkableItem
 
 		while (itr.hasNext()) {
 			MobEffectInstance effect = itr.next();
-			// TODO: Effect cures were apparently removed. Check later if there's an alternative, or if the system was removed for good.
-//			if (effect.getEffect().value().getCategory().equals(MobEffectCategory.HARMFUL) && effect.getCures().contains(EffectCures.MILK)) {
 			if (effect.getEffect().value().getCategory().equals(MobEffectCategory.HARMFUL)) {
 				compatibleEffects.add(effect.getEffect());
 			}

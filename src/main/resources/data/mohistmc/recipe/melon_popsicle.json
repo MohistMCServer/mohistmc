@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "-": "minecraft:stick",
     "i": "minecraft:ice",
@@ -12,7 +11,6 @@
     "-i "
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:melon_popsicle"
   }
 }

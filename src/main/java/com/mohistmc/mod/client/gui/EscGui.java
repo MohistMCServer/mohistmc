@@ -3,6 +3,7 @@ package com.mohistmc.mod.client.gui;
 import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.api.gui.EnhancedScreen;
 import com.mohistmc.mod.api.gui.IconButton;
+import com.mohistmc.mod.api.gui.ImageWidget;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.SimpleLabel;
 import com.mohistmc.mod.utils.ProcessWorkingSetUtils;
@@ -56,7 +57,7 @@ public class EscGui extends EnhancedScreen {
     private static final int GAP = 4;
 
     public EscGui() {
-        super(Component.translatable("narrator.screen.title"), (Identifier) null);
+        super(Component.translatable("narrator.screen.title"), null);
     }
 
     /** 暂停游戏，让世界在背景继续渲染 */
@@ -83,7 +84,7 @@ public class EscGui extends EnhancedScreen {
         // ================================================================
         // 左侧工具栏（0 ~ TOOL_W）
         // ================================================================
-        var toolPanel = new Panel(0, 0, TOOL_W, guiH, 0xCC111111);
+        var toolPanel = new Panel(0, 0, TOOL_W, guiH, Identifier.fromNamespaceAndPath("mohistmc", "textures/ui/bg0.png"));
         int btnX = (TOOL_W - BTN_SZ) / 2;
         int topGap = 12;
         int bottomGap = 12;
@@ -135,18 +136,18 @@ public class EscGui extends EnhancedScreen {
         // 信息卡高度：30% 屏高，同时至少留 110px 给网格，且不低于 95px
         int cardH = Math.max(Math.min(guiH * 3 / 10, guiH - 110), 95);
         // 当卡高度不足时自动缩小文字（0.7~1.0 倍）
-        float cardTextScale = Math.min(1.0f, Math.max(0.7f, (float) cardH / 95));
+        float cardTextScale = Math.clamp((float) cardH / 95, 0.7f, 1.0f);
 
         // ---- 玩家信息卡（深蓝黑底） ----
         // 布局：所有内容平分高度，保持统一间距，文字自动缩放
-        var card = new Panel(cx, 0, cw, cardH, 0xCC1A1A2E);
+        var card = new Panel(cx, 0, cw, cardH, Identifier.fromNamespaceAndPath("mohistmc", "textures/ui/bg.png"));
         int pad = 6;
         int rowH = 12;   // 每行高度（图标+文字）
         int fh = Minecraft.getInstance().font.lineHeight;
 
         // 动态间距
         int avatarSize = Math.min(Math.min(cardH / 4, 36), cw / 2);
-        int statRowsH = rowH + 3 + rowH; // level 行 + xp(3px) + ping 行
+        int statRowsH = fh + 3 + rowH; // Lv. 行 + xp(3px) + ping 行
         int fixedH = avatarSize + 2 + fh + statRowsH;
         int gap = Math.max(2, Math.min(10, (cardH - pad * 2 - fixedH) / 2));
         int y = pad;
@@ -161,49 +162,44 @@ public class EscGui extends EnhancedScreen {
         card.addChild(new SimpleLabel(nameX, y + avatarSize + 2,
                 Component.literal(name), 0xFFFFFFFF)
                 .setTextScale(cardTextScale));
-        y += avatarSize + 2 + fh + gap;
+        y += avatarSize + 2 + fh + 2; // 名字到等级只留 2px，避免间距过大
 
-        // ── 经验等级 + 经验条 ──
-        var levelBg = new Panel(8, y, cw - 16, rowH, 0x55282828);
-        levelBg.addChild(new SimpleLabel(4, 1, Component.literal("经验等级"), 0xFFFFFFFF)
-                .setTextScale(cardTextScale));
+        // ── 等级 + 经验条 ──
         int level = minecraft.player != null ? minecraft.player.experienceLevel : 0;
-        String levelStr = String.valueOf(level);
-        levelBg.addChild(new SimpleLabel(
-                (cw - 16) - 4 - Minecraft.getInstance().font.width(levelStr), 1,
-                Component.literal(levelStr), 0xFFFFFFFF)
+        String lvText = "Lv." + level;
+        int lvX = (cw - Minecraft.getInstance().font.width(lvText)) / 2;
+        card.addChild(new SimpleLabel(lvX, y, Component.literal(lvText), 0xFFFFFFFF)
                 .setTextScale(cardTextScale));
-        card.addChild(levelBg);
 
         float xpPct = minecraft.player != null ? minecraft.player.experienceProgress : 0;
-        card.addChild(new ExpBarWidget(8, y + rowH + 2, cw - 16, 3, xpPct));
-        y += rowH + 2 + 3 + gap;
+        card.addChild(new ExpBarWidget(8, y + fh + 2, cw - 16, 3, xpPct));
+        y += fh + 2 + 3 + gap;
 
         // ── 图标+数值行（延迟、金币等） ──
-        // 每行：[icon 10x10] + 数值，方便后续追加
-        addStatRow(card, y, "ping_logo.png", getCurrentPing() + "ms", rowH, fh, cw, cardTextScale);
-        // ↓ 未来追加示例：
-        // addStatRow(card, y + rowH + gap, "coin.png", "100");
+        // 每行：[icon 10x10] + 数值，按 X 往后排列
+        int statX = 8;
+        statX = addStatRow(card, statX, y, "ping_logo.png", getCurrentPing() + " ms", rowH, fh, cardTextScale);
+        addStatRow(card, statX, y, "jinbi.png", "114514", rowH, fh, cardTextScale);
 
         addWidget(card);
 
         // ---- 图标网格区域背景（深灰，区别于信息卡的深蓝黑） ----
-        addWidget(new Panel(cx, cardH, cw, guiH - cardH, 0xCC2D2D2D));
+        addWidget(new Panel(cx, cardH, cw, guiH - cardH, Identifier.fromNamespaceAndPath("mohistmc", "textures/ui/bg1.png")));
 
         // ---- 图标网格 ----
         record IconDef(String tex, Component tip, Runnable action) {}
         IconDef[] icons = {
-                new IconDef("0", Component.literal("统计信息"), () ->
+                new IconDef("0", Component.literal("邮件"), () ->
                         minecraft.gui.setScreen(new StatsScreen(this, minecraft.player.getStats()))),
-                new IconDef("1", Component.literal("重生"), () -> {
+                new IconDef("1", Component.literal("活动"), () -> {
                     System.out.println("debug");
                 }),
-                new IconDef("2", Component.literal("内存清理"), () -> {
+                new IconDef("2", Component.literal("好友"), () -> {
                     ProcessWorkingSetUtils.setProcessWorkingSetSize(50, 100);
                 }),
-                new IconDef("3", Component.literal("查看公告"), () -> {}),
-                new IconDef("4", Component.literal("签到"), () -> {}),
-                new IconDef("5", Component.literal("好友"), () -> {}),
+                new IconDef("3", Component.literal("背包"), () -> {}),
+                new IconDef("4", Component.literal("百科"), () -> {}),
+                new IconDef("5", Component.literal("公告"), () -> {}),
         };
 
         int gridMargin = 8;
@@ -232,17 +228,20 @@ public class EscGui extends EnhancedScreen {
     // ======== 辅助 ========
 
     /** 添加一行 [图标 + 数值]，图标 10×10，文字跟随 */
-    private void addStatRow(Panel parent, int y, String iconTex, String value,
-                            int rowH, int fh, int cw, float textScale) {
+    private int addStatRow(Panel parent, int x, int y, String iconTex, String value,
+                           int rowH, int fh, float textScale) {
         int iconSize = 10;
-        int iconX = 8;
-        int labelX = iconX + iconSize + 4;
+        int labelX = x + iconSize + 4;
 
-        parent.addChild(new IconButton(iconX, y + (rowH - iconSize) / 2, iconSize)
+        parent.addChild(new ImageWidget(x, y + (rowH - iconSize) / 2, iconSize, iconSize)
                 .setTexture(tex(iconTex)));
         parent.addChild(new SimpleLabel(labelX, y + (rowH - fh) / 2,
                 Component.literal(value), 0xFFFFFFFF)
                 .setTextScale(textScale));
+
+        // 返回下一个统计项的 X 起点（图标 + 间距 + 文字宽度）
+        int consumed = iconSize + 4 + Minecraft.getInstance().font.width(value);
+        return x + consumed + 8; // 组间距 8px
     }
 
     private void addToolButton(Panel parent, int x, int y, String texName, Component tip, Runnable action) {
@@ -298,10 +297,10 @@ public class EscGui extends EnhancedScreen {
         public void render(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
             int ax = getAbsoluteX();
             int ay = getAbsoluteY();
-            graphics.fill(ax, ay, ax + width, ay + height, 0xFF565D87);
+            graphics.fill(ax, ay, ax + width, ay + height, 0xFF555555);
             int fillW = (int) (width * progress);
             if (fillW > 0) {
-                graphics.fill(ax, ay, ax + fillW, ay + height, 0xFF00EE00);
+                graphics.fill(ax, ay, ax + fillW, ay + height, 0xFF00AA00);
             }
         }
     }

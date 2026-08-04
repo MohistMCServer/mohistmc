@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "#c:crops/onion",
     "#c:eggs",
@@ -13,7 +12,6 @@
     "minecraft:baked_potato"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:roast_chicken_block"
   }
 }

@@ -1,10 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import java.util.Optional;
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
@@ -32,14 +35,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
-// TODO: Remove ropelogged state from TomatoBlock on 26.1.2.
-
+@SuppressWarnings("deprecation")
 public class TomatoBlock extends CropBlock
 {
 	public static final IntegerProperty VINE_AGE = BlockStateProperties.AGE_3;
@@ -58,8 +55,7 @@ public class TomatoBlock extends CropBlock
 	protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 		int age = state.getValue(getAgeProperty());
 		boolean isMature = age == getMaxAge();
-		// TODO: This used to skip block interaction for bone meal. Test if it works as intended with SUCCESS.
-		return !isMature && stack.is(Items.BONE_MEAL) ? InteractionResult.SUCCESS : super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+		return !isMature && stack.is(Items.BONE_MEAL) ? InteractionResult.PASS : super.useItemOn(stack, state, level, pos, player, hand, hitResult);
 	}
 
 	@Override
@@ -154,15 +150,24 @@ public class TomatoBlock extends CropBlock
 		return Configuration.ENABLE_TOMATO_VINE_CLIMBING_TAGGED_ROPES.get() ? stateAbove.is(ModTags.Blocks.ROPES) : stateAbove.is(ModBlocks.ROPE.get());
 	}
 
+	@Nullable
+	public BlockState getClimbingState(BlockState stateAbove) {
+		if (this.canClimbBlock(stateAbove)){
+			return ModBlocks.TOMATO_CROP_ON_ROPE.get().defaultBlockState();
+		}
+		return null;
+	}
+
 	public void climbRopeAbove(ServerLevel level, BlockPos pos) {
 		BlockPos posAbove = pos.above();
 		BlockState stateAbove = level.getBlockState(posAbove);
-		if (canClimbBlock(stateAbove)) {
+		BlockState climbingState = getClimbingState(stateAbove);
+		if (climbingState != null) {
 			int vineHeight;
 			for (vineHeight = 1; level.getBlockState(pos.below(vineHeight)).is(this); ++vineHeight) {
 			}
 			if (vineHeight < 3) {
-				level.setBlockAndUpdate(posAbove, ModBlocks.TOMATO_CROP_ON_ROPE.get().defaultBlockState());
+				level.setBlockAndUpdate(posAbove, climbingState);
 			}
 		}
 	}
@@ -185,7 +190,7 @@ public class TomatoBlock extends CropBlock
 			if (canClimbBlock(nextState)) {
 				return true;
 			}
-			if (nextState.is(ModBlocks.TOMATO_CROP_ON_ROPE.get())) {
+			if (nextState.getBlock() instanceof HangingTomatoBlock) {
 				if (!isMaxAge(nextState)) {
 					return true;
 				}
@@ -220,11 +225,11 @@ public class TomatoBlock extends CropBlock
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		BlockPos belowPos = pos.below();
 		BlockState belowState = level.getBlockState(belowPos);
 
-		if (belowState.is(ModBlocks.TOMATO_CROP.get()) || belowState.is(ModBlocks.TOMATO_CROP_ON_ROPE.get())) {
+		if (belowState.getBlock() instanceof TomatoBlock) {
 			return hasGoodCropConditions(level, pos);
 		}
 
@@ -236,14 +241,15 @@ public class TomatoBlock extends CropBlock
 	}
 
 	@Override
-	public BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		if (!state.canSurvive(level, pos)) {
-			ticks.scheduleTick(pos, this, 1);
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		if (!state.canSurvive(level, currentPos)) {
+			scheduledTickAccess.scheduleTick(currentPos, this, 1);
 		}
 
 		return state;
 	}
 
+	@Deprecated(forRemoval = true)
 	@Override
 	public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack stack) {
 		boolean isRopelogged = state.getValue(TomatoBlock.ROPELOGGED);
@@ -257,10 +263,11 @@ public class TomatoBlock extends CropBlock
 	/**
 	 * Deprecated - This block will no longer use its ropelogged state. Refer to HangingTomatoBlock instead.
 	 */
-	@Deprecated
+	@Deprecated(forRemoval = true)
 	public static void destroyAndPlaceRope(Level level, BlockPos pos) {
-		Optional<Holder.Reference<Block>> configuredRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()));
-		Block finalRopeBlock = configuredRopeBlock.map(Holder.Reference::value).orElseGet(ModBlocks.ROPE);
+		Block finalRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()))
+				.map(blockReference -> blockReference.value())
+				.orElse(ModBlocks.ROPE.get());
 		level.setBlockAndUpdate(pos, finalRopeBlock.defaultBlockState());
 	}
 }

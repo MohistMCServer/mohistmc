@@ -1,6 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity.dispenser;
 
-
+import com.mohistmc.mod.module.farmersdelight.common.block.CuttingBoardBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
 import java.util.HashMap;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -13,8 +14,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.block.CuttingBoardBlock;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
 
 /**
  * Uses the given item as a tool when facing a Cutting Board.

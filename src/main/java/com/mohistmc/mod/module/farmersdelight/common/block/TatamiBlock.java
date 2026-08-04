@@ -38,7 +38,6 @@ public class TatamiBlock extends Block
 		BlockState targetState = context.getLevel().getBlockState(targetPos);
 		boolean pairing = false;
 
-		// TODO: IDEA says this can be simplified. Try it once the mod is booting!
 		if (context.getPlayer() != null && !context.getPlayer().isShiftKeyDown() && targetState.getBlock() == this && !targetState.getValue(PAIRED)) {
 			pairing = true;
 		}
@@ -57,18 +56,18 @@ public class TatamiBlock extends Block
 			BlockState facingState = level.getBlockState(facingPos);
 			if (facingState.getBlock() == this && !facingState.getValue(PAIRED)) {
 				level.setBlock(facingPos, state.setValue(FACING, state.getValue(FACING).getOpposite()).setValue(PAIRED, true), 3);
-				level.updateNeighborsAt(pos, Blocks.AIR);
+				level.updateNeighborsAt(pos, Blocks.AIR, null);
 				state.updateNeighbourShapes(level, pos, 3);
 			}
 		}
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		if (directionToNeighbour.equals(state.getValue(FACING)) && state.getValue(PAIRED) && level.getBlockState(neighbourPos).getBlock() != this) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		if (facing.equals(state.getValue(FACING)) && state.getValue(PAIRED) && level.getBlockState(facingPos).getBlock() != this) {
 			return state.setValue(PAIRED, false);
 		}
-		return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+		return super.updateShape(state, level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override

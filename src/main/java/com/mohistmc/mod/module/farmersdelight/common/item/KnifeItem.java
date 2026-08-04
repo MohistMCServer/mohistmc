@@ -1,5 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 import java.util.Set;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,7 +22,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
@@ -37,11 +41,6 @@ import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.event.entity.living.LivingKnockBackEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 
 public class KnifeItem extends Item
 {
@@ -56,20 +55,27 @@ public class KnifeItem extends Item
 
 	public static final Set<ItemAbility> KNIFE_ACTIONS = Set.of(ItemAbilities.SHEARS_CARVE, KNIFE_DIG, KNIFE_HARVEST);
 
-	public KnifeItem(Properties properties) {
-		super(properties);
+	public KnifeItem(ToolMaterial tier, Properties properties) {
+		super(properties.tool(tier, ModTags.Blocks.MINEABLE_WITH_KNIFE, 0.5F, -2.0F, 0.0F));
+	}
+
+	public static ItemAttributeModifiers createAttributes(ToolMaterial tier, float attackDamage, float attackSpeed) {
+		return ItemAttributeModifiers.builder()
+				.add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, attackDamage + tier.attackDamageBonus(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+				.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+				.build();
+	}
+
+	public boolean canAttackBlock(BlockState state, Level level, BlockPos pos, Player player) {
+		return !player.isCreative();
 	}
 
 	@Override
-	public void postHurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		stack.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
+	public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 	}
 
-	public static ItemAttributeModifiers createAttributes(ToolMaterial material, float attackDamage, float attackSpeed) {
-		return ItemAttributeModifiers.builder()
-			.add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, attackDamage + material.attackDamageBonus(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
-			.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
-			.build();
+	public void postHurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		stack.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
 	}
 
 	@Override
@@ -88,8 +94,7 @@ public class KnifeItem extends Item
 		return super.supportsEnchantment(stack, enchantment);
 	}
 
-	@Override
-	public boolean canPerformAction(ItemInstance stack, ItemAbility toolAction) {
+	public boolean canPerformAction(ItemStack stack, ItemAbility toolAction) {
 		return KNIFE_ACTIONS.contains(toolAction);
 	}
 
@@ -122,8 +127,8 @@ public class KnifeItem extends Item
 				level.setBlock(pos, Blocks.CAKE.defaultBlockState().setValue(CakeBlock.BITES, 1), 3);
 				Block.dropResources(state, level, pos);
 				ItemUtils.spawnItemEntity(level, new ItemStack(ModItems.CAKE_SLICE.get()),
-					pos.getX(), pos.getY() + 0.2, pos.getZ() + 0.5,
-					-0.05, 0, 0);
+						pos.getX(), pos.getY() + 0.2, pos.getZ() + 0.5,
+						-0.05, 0, 0);
 				level.playSound(null, pos, ModSounds.BLOCK_FOOD_SLICE.get(), SoundSource.PLAYERS, 0.8F, 0.8F);
 
 				event.getEntity().awardStat(Stats.ITEM_USED.get(heldStack.getItem()));
@@ -139,8 +144,8 @@ public class KnifeItem extends Item
 					level.removeBlock(pos, false);
 				}
 				ItemUtils.spawnItemEntity(level, new ItemStack(ModItems.CAKE_SLICE.get()),
-					pos.getX() + (bites * 0.1), pos.getY() + 0.2, pos.getZ() + 0.5,
-					-0.05, 0, 0);
+						pos.getX() + (bites * 0.1), pos.getY() + 0.2, pos.getZ() + 0.5,
+						-0.05, 0, 0);
 				level.playSound(null, pos, ModSounds.BLOCK_FOOD_SLICE.get(), SoundSource.PLAYERS, 0.8F, 0.8F);
 
 				event.getEntity().awardStat(Stats.ITEM_USED.get(heldStack.getItem()));
@@ -167,7 +172,7 @@ public class KnifeItem extends Item
 				ItemEntity itemEntity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction.getStepZ() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));
 				itemEntity.setDeltaMovement(0.05D * (double) direction.getStepX() + level.getRandom().nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction.getStepZ() + level.getRandom().nextDouble() * 0.02D);
 				level.addFreshEntity(itemEntity);
-				toolStack.hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
+				toolStack.hurtAndBreak(1, player, context.getHand());
 			}
 			return InteractionResult.SUCCESS;
 		} else {

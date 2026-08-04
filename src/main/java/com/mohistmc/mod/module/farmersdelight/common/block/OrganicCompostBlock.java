@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -12,9 +14,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
+@SuppressWarnings("deprecation")
 public class OrganicCompostBlock extends Block
 {
 	public static IntegerProperty COMPOSTING = IntegerProperty.create("composting", 0, 7);
@@ -40,6 +41,7 @@ public class OrganicCompostBlock extends Block
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		if (level.isClientSide()) return;
 
@@ -73,13 +75,13 @@ public class OrganicCompostBlock extends Block
 	}
 
 	@Override
-	public boolean hasAnalogOutputSignal(BlockState state) {
+	protected boolean hasAnalogOutputSignal(BlockState state) {
 		return true;
 	}
 
 	@Override
-	protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos, Direction direction) {
-		return (getMaxCompostingStage() + 1 - state.getValue(COMPOSTING));
+	protected int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos, Direction direction) {
+		return (getMaxCompostingStage() + 1 - blockState.getValue(COMPOSTING));
 	}
 
 	@Override

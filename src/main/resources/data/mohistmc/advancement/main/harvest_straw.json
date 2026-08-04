@@ -1,0 +1,33 @@
+{
+  "parent": "mohistmc:main/craft_knife",
+  "criteria": {
+    "harvest_straw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:straw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.mohistmc.harvest_straw.description"
+    },
+    "icon": {
+      "id": "mohistmc:straw"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.harvest_straw.title"
+    }
+  },
+  "requirements": [
+    [
+      "harvest_straw"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

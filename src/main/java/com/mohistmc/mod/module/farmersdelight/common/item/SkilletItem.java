@@ -1,12 +1,22 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.block.SkilletBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.SkilletBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.item.component.ItemStackWrapper;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModDataComponents;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.Optional;
 import java.util.function.Consumer;
 import javax.annotation.Nullable;
 import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
@@ -42,27 +52,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.block.SkilletBlock;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.SkilletBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.item.component.ItemStackWrapper;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModDataComponents;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 
 @SuppressWarnings({"deprecation", "unused"})
 public class SkilletItem extends BlockItem
 {
 	public static final float FLIP_TIME = 12;
 
-	public static final ToolMaterial SKILLET_MATERIAL = ToolMaterial.IRON;
+	public static final ToolMaterial SKILLET_TIER = ToolMaterial.IRON;
 	protected static final Identifier FD_ATTACK_KNOCKBACK_UUID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "base_attack_knockback");
 
 	public SkilletItem(Block block, Properties properties) {
-		super(block, properties);
+		super(block, properties.durability(SKILLET_TIER.durability()));
+		float attackDamage = 5.0F + SKILLET_TIER.attackDamageBonus();
 	}
 
 	@Override
@@ -110,16 +111,14 @@ public class SkilletItem extends BlockItem
 			}
 		}
 	}
-//
-//	@Override
-//	public boolean canAttackBlock(BlockState state, Level level, BlockPos pos, Player player) {
-//		return !player.isCreative();
-//	}
 
-//	@Override
-//	public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-//		return true;
-//	}
+	public boolean canAttackBlock(BlockState state, Level level, BlockPos pos, Player player) {
+		return !player.isCreative();
+	}
+
+	@Override
+	public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+	}
 
 	@Override
 	public void postHurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -140,17 +139,13 @@ public class SkilletItem extends BlockItem
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
-		builder.accept(TextUtils.PLACEABLE_SNEAKING);
+	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag isAdvanced) {
+		tooltip.accept(TextUtils.PLACEABLE_SNEAKING);
 	}
 
 	@Override
 	public int getUseDuration(ItemStack stack, LivingEntity entity) {
-		Optional<Holder.Reference<Enchantment>> fireAspect = entity.level().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).get(Enchantments.FIRE_ASPECT);
-		if (fireAspect.isEmpty()) {
-			return 0;
-		}
-		int fireAspectLevel = fireAspect.map(stack::getEnchantmentLevel).orElse(0);
+		int fireAspectLevel = ItemUtils.getValidatedEnchantmentLevel(Enchantments.FIRE_ASPECT, entity.level().registryAccess(), stack);
 		int cookingTime = stack.getOrDefault(ModDataComponents.COOKING_TIME_LENGTH, 0);
 		return SkilletBlock.getSkilletCookingTime(cookingTime, fireAspectLevel);
 	}
@@ -222,7 +217,7 @@ public class SkilletItem extends BlockItem
 				stack.remove(ModDataComponents.SKILLET_FLIPPED.get());
 			}
 		}
-		return false;
+		return true;
 	}
 
 	@Override
@@ -274,8 +269,11 @@ public class SkilletItem extends BlockItem
 	}
 
 	public static Optional<RecipeHolder<CampfireCookingRecipe>> getCookingRecipe(ItemStack stack, Level level) {
-		if (!stack.isEmpty() && level instanceof ServerLevel serverLevel) {
-			return serverLevel.recipeAccess().getRecipeFor(RecipeType.CAMPFIRE_COOKING, new SingleRecipeInput(stack), level);
+		if (stack.isEmpty()) {
+			return Optional.empty();
+		}
+		if (level instanceof ServerLevel serverLevel) {
+			return serverLevel.recipeAccess().getRecipeFor(RecipeType.CAMPFIRE_COOKING, new SingleRecipeInput(stack), serverLevel);
 		}
 		return Optional.empty();
 	}
@@ -322,4 +320,5 @@ public class SkilletItem extends BlockItem
 		}
 		return super.supportsEnchantment(stack, enchantment);
 	}
+
 }

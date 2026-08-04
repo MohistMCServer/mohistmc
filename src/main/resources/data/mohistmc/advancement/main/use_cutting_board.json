@@ -1,0 +1,26 @@
+{
+  "parent": "mohistmc:main/craft_knife",
+  "criteria": {
+    "cutting_board": {
+      "trigger": "mohistmc:use_cutting_board"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.mohistmc.use_cutting_board.description"
+    },
+    "icon": {
+      "id": "mohistmc:cutting_board"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.use_cutting_board.title"
+    }
+  },
+  "requirements": [
+    [
+      "cutting_board"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

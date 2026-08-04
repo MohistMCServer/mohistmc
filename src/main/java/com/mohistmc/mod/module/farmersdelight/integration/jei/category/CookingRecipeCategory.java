@@ -1,6 +1,12 @@
 package com.mohistmc.mod.module.farmersdelight.integration.jei.category;
 
-
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
+import com.mohistmc.mod.module.farmersdelight.integration.jei.FDRecipeTypes;
 import javax.annotation.ParametersAreNonnullByDefault;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -11,8 +17,8 @@ import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import mezz.jei.api.recipe.types.IRecipeType;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -20,12 +26,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.farmersdelight.integration.jei.FDRecipeTypes;
 
 @ParametersAreNonnullByDefault
 public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<CookingPotRecipe>>
@@ -52,7 +52,7 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 	}
 
 	@Override
-	public IRecipeType<RecipeHolder<CookingPotRecipe>> getRecipeType() {
+	public RecipeType<RecipeHolder<CookingPotRecipe>> getRecipeType() {
 		return FDRecipeTypes.COOKING;
 	}
 
@@ -61,10 +61,9 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 		return this.title;
 	}
 
-//	@Override
-//	public IDrawable getBackground() {
-//		return this.background;
-//	}
+	public IDrawable getBackground() {
+		return this.background;
+	}
 
 	@Override
 	public int getWidth() {
@@ -85,8 +84,7 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 	public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<CookingPotRecipe> holder, IFocusGroup focusGroup) {
 		CookingPotRecipe recipe = holder.value();
 		NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
-		ItemStack resultStack = recipe.assemble(null); // This is usually very bad, but CookingPotRecipe always
-		                                               // has the same output, so it's fine to pass null in this case.
+		ItemStack resultStack = RecipeUtils.getResultItem(recipe);
 		ItemStack containerStack = recipe.getOutputContainer();
 
 		int borderSlotSize = 18;
@@ -94,8 +92,8 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 			for (int column = 0; column < 3; ++column) {
 				int inputIndex = row * 3 + column;
 				if (inputIndex < recipeIngredients.size()) {
-					// TODO: Verify if the replacement for addItemStacks() works.
-					builder.addSlot(RecipeIngredientRole.INPUT, (column * borderSlotSize) + 1, (row * borderSlotSize) + 1).add(recipeIngredients.get(inputIndex));
+					builder.addSlot(RecipeIngredientRole.INPUT, (column * borderSlotSize) + 1, (row * borderSlotSize) + 1)
+							.add(recipeIngredients.get(inputIndex));
 				}
 			}
 		}

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fd_pumpkin_pie",
   "key": {
     "O": "mohistmc:pie_crust",

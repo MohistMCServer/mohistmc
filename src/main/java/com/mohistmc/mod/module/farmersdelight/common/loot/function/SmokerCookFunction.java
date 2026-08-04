@@ -1,11 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.common.loot.function;
 
-
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModLootFunctions;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -18,17 +20,13 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 @ParametersAreNonnullByDefault
 public class SmokerCookFunction extends LootItemConditionalFunction
 {
+	public static final Identifier ID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "smoker_cook");
 	public static final MapCodec<SmokerCookFunction> CODEC = RecordCodecBuilder.mapCodec(
-		i -> commonFields(i).apply(i, SmokerCookFunction::new)
+			p_298131_ -> commonFields(p_298131_).apply(p_298131_, SmokerCookFunction::new)
 	);
 
-	protected SmokerCookFunction(List<LootItemCondition> predicates) {
-		super(predicates);
-	}
-
-	@Override
-	public MapCodec<? extends LootItemConditionalFunction> codec() {
-		return CODEC;
+	protected SmokerCookFunction(List<LootItemCondition> conditionsIn) {
+		super(conditionsIn);
 	}
 
 	@Override
@@ -36,16 +34,20 @@ public class SmokerCookFunction extends LootItemConditionalFunction
 		if (stack.isEmpty()) {
 			return stack;
 		}
-		SingleRecipeInput input = new SingleRecipeInput(stack);
-		Optional<RecipeHolder<SmokingRecipe>> recipe = context.getLevel().recipeAccess().getRecipeFor(RecipeType.SMOKING, input, context.getLevel());
+
+		Optional<RecipeHolder<SmokingRecipe>> recipe = context.getLevel().recipeAccess()
+				.getRecipeFor(RecipeType.SMOKING, new SingleRecipeInput(stack), context.getLevel());
 		if (recipe.isPresent()) {
-			ItemStack resultStack = recipe.get().value().assemble(input).copy();
-			if (!resultStack.isEmpty()) {
-				int newCount = stack.count() * resultStack.getCount();
-				return resultStack.copyWithCount(Math.min(newCount, resultStack.getMaxStackSize()));
-			}
+			ItemStack resultStack = recipe.get().value().assemble(new SingleRecipeInput(stack));
+			resultStack.setCount(resultStack.getCount() * stack.getCount());
+			return resultStack;
 		}
 
 		return stack;
+	}
+
+	@Override
+	public MapCodec<SmokerCookFunction> codec() {
+		return ModLootFunctions.SMOKER_COOK.get();
 	}
 }

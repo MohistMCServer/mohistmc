@@ -1,7 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.client.renderer;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.CuttingBoardBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -13,24 +19,20 @@ import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TridentItem;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
-import com.mohistmc.mod.module.farmersdelight.common.block.CuttingBoardBlock;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
 public class CuttingBoardRenderer implements BlockEntityRenderer<CuttingBoardBlockEntity, CuttingBoardRenderer.CuttingBoardRenderState>
 {
-	private final Random random = new Random();
 	private final ItemModelResolver itemModelResolver;
+	private final Random random = new Random();
 
 	public CuttingBoardRenderer(BlockEntityRendererProvider.Context context) {
 		this.itemModelResolver = context.itemModelResolver();
@@ -42,140 +44,110 @@ public class CuttingBoardRenderer implements BlockEntityRenderer<CuttingBoardBlo
 	}
 
 	@Override
-	public void submit(CuttingBoardRenderState state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState cameraRenderState) {
-		if (state.itemRenderState == null) {
-			return;
-		}
-
-		this.random.setSeed(state.seed);
-
-		for (int i = 0; i < state.modelCount; i++) {
-			poseStack.pushPose();
-
-			float xOffset = state.modelCount == 1 ? 0 : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
-			float zOffset = state.modelCount == 1 ? 0 : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
-
-			if (state.carvesBoard) {
-				renderItemCarved(poseStack, state);
-			} else if (state.isBlockItem && !state.rendersFlat) {
-				renderBlock(poseStack, state, xOffset, i, zOffset);
-			} else {
-				renderItemLayingDown(poseStack, state, xOffset, i, zOffset);
-			}
-
-			state.itemRenderState.submit(poseStack, collector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
-			poseStack.popPose();
-		}
-	}
-
-	public void renderItemLayingDown(PoseStack matrixStackIn, CuttingBoardRenderState state, float xOffset, int yIndex, float zOffset) {
-		// Center item above the cutting board
-		matrixStackIn.translate(0.5D + xOffset, 0.08D + 0.03 * (yIndex + 1), 0.5D + zOffset);
-
-		// Rotate item to face the cutting board's front side
-		float f = -state.direction.toYRot();
-		matrixStackIn.mulPose(Axis.YP.rotationDegrees(f));
-
-		// Rotate item flat on the cutting board. Use X and Y from now on
-		matrixStackIn.mulPose(Axis.XP.rotationDegrees(90.0F));
-
-		// Resize the item
-		matrixStackIn.scale(0.6F, 0.6F, 0.6F);
-	}
-
-	public void renderBlock(PoseStack matrixStackIn, CuttingBoardRenderState state, float xOffset, int yIndex, float zOffset) {
-		// Center block above the cutting board
-		matrixStackIn.translate(0.5D + xOffset, 0.27D + 0.03 * (yIndex + 1), 0.5D + zOffset);
-
-		// Rotate block to face the cutting board's front side
-		float f = -state.direction.toYRot();
-		matrixStackIn.mulPose(Axis.YP.rotationDegrees(f));
-
-		// Resize the block
-		matrixStackIn.scale(0.8F, 0.8F, 0.8F);
-	}
-
-	public void renderItemCarved(PoseStack matrixStackIn, CuttingBoardRenderState state) {
-		// Center item above the cutting board
-		matrixStackIn.translate(0.5D, 0.23D, 0.5D);
-
-		// Rotate item to face the cutting board's front side
-		float f = -state.direction.toYRot() + 180;
-		matrixStackIn.mulPose(Axis.YP.rotationDegrees(f));
-
-		// Rotate item to be carved on the surface, A little less so for hoes and pickaxes.
-		float poseAngle;
-		if (state.isPickaxe || state.isHoe) {
-			poseAngle = 225.0F;
-		} else if (state.isTrident) {
-			poseAngle = 135.0F;
-		} else {
-			poseAngle = 180.0F;
-		}
-		matrixStackIn.mulPose(Axis.ZP.rotationDegrees(poseAngle));
-
-		// Resize the item
-		matrixStackIn.scale(0.6F, 0.6F, 0.6F);
-	}
-
-	protected int getModelCount(ItemStack stack) {
-		int modelCount = 1;
-
-		if (stack.getCount() > 1) {
-			modelCount += Mth.ceil(((float) stack.getCount() / stack.getMaxStackSize()) * 4);
-		}
-
-		return modelCount;
-	}
-
-	@Override
-	public void extractRenderState(CuttingBoardBlockEntity cuttingBoard, CuttingBoardRenderState state, float partialTicks, Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
+	public void extractRenderState(CuttingBoardBlockEntity cuttingBoard, CuttingBoardRenderState state, float partialTicks, Vec3 cameraPosition,
+			ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
 		BlockEntityRenderer.super.extractRenderState(cuttingBoard, state, partialTicks, cameraPosition, breakProgress);
 		state.direction = cuttingBoard.getBlockState().getValue(CuttingBoardBlock.FACING).getOpposite();
 
 		ItemStack stack = cuttingBoard.getStoredItem();
 		if (stack.isEmpty()) {
-			state.itemRenderState = null;
-		} else {
-			state.itemRenderState = new ItemStackRenderState();
-			this.itemModelResolver.updateForTopItem(
-				state.itemRenderState,
-				stack,
-				ItemDisplayContext.FIXED,
-				cuttingBoard.getLevel(),
-				null,
-				(int) cuttingBoard.getBlockPos().asLong()
-			);
-
-
-			// TODO this is a very hacky check for pickaxes.
-			Item toolItem = stack.getItem();
-			state.isPickaxe = toolItem.isCorrectToolForDrops(toolItem.getDefaultInstance(), Blocks.COBBLESTONE.defaultBlockState());
-			state.isHoe = toolItem instanceof HoeItem;
-			state.isTrident = toolItem instanceof TridentItem;
-
-			state.rendersFlat = stack.is(ModTags.Items.FLAT_ON_CUTTING_BOARD);
-			// TODO this will not catch every block. I'm not familiar enough with the new way of doing things
-			//      to know if there's a better way to catch this.
-			state.isBlockItem = toolItem instanceof BlockItem;
+			state.items = Collections.emptyList();
+			return;
 		}
 
-		state.seed = stack.isEmpty() ? 187 : Item.getId(stack.getItem()) + stack.getDamageValue();
-		state.modelCount = this.getModelCount(stack);
+		int modelCount = this.getModelCount(stack);
+		int seed = Item.getId(stack.getItem()) + stack.getDamageValue();
+		this.random.setSeed(seed);
 
-		state.carvesBoard = cuttingBoard.isItemCarvingBoard();
+		List<RenderedItem> items = new ArrayList<>(modelCount);
+		for (int i = 0; i < modelCount; ++i) {
+			float xOffset = modelCount == 1 ? 0.0F : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
+			float zOffset = modelCount == 1 ? 0.0F : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
+
+			ItemStackRenderState itemState = new ItemStackRenderState();
+			this.itemModelResolver.updateForTopItem(itemState, stack, ItemDisplayContext.FIXED, cuttingBoard.getLevel(), null, seed + i);
+			items.add(new RenderedItem(itemState, getPoseType(stack, cuttingBoard.isItemCarvingBoard()), xOffset, zOffset, getCarvedToolPoseAngle(stack)));
+		}
+		state.items = items;
 	}
 
-	public static class CuttingBoardRenderState extends BlockEntityRenderState {
-		public Direction direction;
-		public ItemStackRenderState itemRenderState;
-		public int seed;
-		public int modelCount;
-		public boolean rendersFlat = false;
-		public boolean carvesBoard;
-		public boolean isPickaxe = false;
-		public boolean isHoe = false;
-		public boolean isTrident = false;
-		public boolean isBlockItem = false;
+	@Override
+	public void submit(CuttingBoardRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+		for (int i = 0; i < state.items.size(); ++i) {
+			RenderedItem item = state.items.get(i);
+			poseStack.pushPose();
+			this.applyPose(poseStack, state.direction, item, i);
+			item.itemState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
+			poseStack.popPose();
+		}
+	}
+
+	private static PoseType getPoseType(ItemStack stack, boolean isItemCarvingBoard) {
+		if (isItemCarvingBoard) {
+			return PoseType.CARVED_TOOL;
+		}
+		if (stack.getItem() instanceof BlockItem && !stack.is(ModTags.Items.FLAT_ON_CUTTING_BOARD)) {
+			return PoseType.BLOCK;
+		}
+		return PoseType.FLAT_ITEM;
+	}
+
+	private void applyPose(PoseStack poseStack, Direction direction, RenderedItem item, int index) {
+		switch (item.poseType) {
+			case CARVED_TOOL -> this.applyCarvedToolPose(poseStack, direction, item.poseAngle);
+			case BLOCK -> this.applyBlockPose(poseStack, direction, item.xOffset, index, item.zOffset);
+			case FLAT_ITEM -> this.applyFlatItemPose(poseStack, direction, item.xOffset, index, item.zOffset);
+		}
+	}
+
+	private void applyFlatItemPose(PoseStack poseStack, Direction direction, float xOffset, int yIndex, float zOffset) {
+		poseStack.translate(0.5D + xOffset, 0.08D + 0.03D * (yIndex + 1), 0.5D + zOffset);
+		poseStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));
+		poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
+		poseStack.scale(0.6F, 0.6F, 0.6F);
+	}
+
+	private void applyBlockPose(PoseStack poseStack, Direction direction, float xOffset, int yIndex, float zOffset) {
+		poseStack.translate(0.5D + xOffset, 0.27D + 0.03D * (yIndex + 1), 0.5D + zOffset);
+		poseStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));
+		poseStack.scale(0.8F, 0.8F, 0.8F);
+	}
+
+	private void applyCarvedToolPose(PoseStack poseStack, Direction direction, float poseAngle) {
+		poseStack.translate(0.5D, 0.23D, 0.5D);
+		poseStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot() + 180.0F));
+		poseStack.mulPose(Axis.ZP.rotationDegrees(poseAngle));
+		poseStack.scale(0.6F, 0.6F, 0.6F);
+	}
+
+	private static float getCarvedToolPoseAngle(ItemStack stack) {
+		Item item = stack.getItem();
+		if (stack.is(ItemTags.PICKAXES) || stack.is(ItemTags.HOES)) {
+			return 225.0F;
+		}
+		return item instanceof TridentItem ? 135.0F : 180.0F;
+	}
+
+	private int getModelCount(ItemStack stack) {
+		int modelCount = 1;
+		if (stack.getCount() > 1) {
+			modelCount += Mth.ceil(((float) stack.getCount() / stack.getMaxStackSize()) * 4.0F);
+		}
+		return modelCount;
+	}
+
+	public static class CuttingBoardRenderState extends BlockEntityRenderState
+	{
+		public List<RenderedItem> items = Collections.emptyList();
+		public Direction direction = Direction.NORTH;
+	}
+
+	public record RenderedItem(ItemStackRenderState itemState, PoseType poseType, float xOffset, float zOffset, float poseAngle) {}
+
+	public enum PoseType
+	{
+		FLAT_ITEM,
+		BLOCK,
+		CARVED_TOOL
 	}
 }

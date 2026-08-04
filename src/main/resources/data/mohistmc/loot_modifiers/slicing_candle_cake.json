@@ -82,5 +82,6 @@
     }
   ],
   "count": 7,
-  "item": "mohistmc:cake_slice"
+  "item": "mohistmc:cake_slice",
+  "priority": 0
 }

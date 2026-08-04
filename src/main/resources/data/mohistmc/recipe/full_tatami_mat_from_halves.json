@@ -1,13 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "group": "fd_full_tatami_mat",
   "ingredients": [
     "mohistmc:half_tatami_mat",
     "mohistmc:half_tatami_mat"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:full_tatami_mat"
   }
 }

@@ -1,5 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -27,10 +30,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 
+@SuppressWarnings("deprecation")
 public class RopeBlock extends IronBarsBlock
 {
 	public static final BooleanProperty TIED_TO_BELL = BooleanProperty.create("tied_to_bell");
@@ -49,24 +50,23 @@ public class RopeBlock extends IronBarsBlock
 	}
 
 	@Override
-	public boolean isPathfindable(BlockState state, PathComputationType type) {
+	protected boolean isPathfindable(BlockState state, PathComputationType type) {
 		return true;
 	}
 
 	protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 		if (stack.is(ModItems.ROPE.get())) {
-			// TODO: Find equivalent to InteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION.
-			return InteractionResult.SUCCESS;
+			return InteractionResult.PASS;
 		}
 		return InteractionResult.PASS;
 	}
 
 	@Override
-	public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
 		if (Configuration.ENABLE_ROPE_REELING.get() && player.isSecondaryUseActive()) {
 			if (player.getAbilities().mayBuild && (player.getAbilities().instabuild || player.getInventory().add(new ItemStack(this.asItem())))) {
 				BlockPos.MutableBlockPos reelingPos = pos.mutable().move(Direction.DOWN);
-				int minBuildHeight = level.getMinY();
+				int minBuildHeight = level.dimensionType().minY();
 
 				while (reelingPos.getY() >= minBuildHeight) {
 					BlockState blockStateBelow = level.getBlockState(reelingPos);
@@ -134,7 +134,7 @@ public class RopeBlock extends IronBarsBlock
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
 	}
 
@@ -149,19 +149,19 @@ public class RopeBlock extends IronBarsBlock
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			scheduledTickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
 
 		boolean tiedToBell = state.getValue(TIED_TO_BELL);
-		if (directionToNeighbour == Direction.UP) {
-			tiedToBell = level.getBlockState(neighbourPos).getBlock() == Blocks.BELL;
+		if (facing == Direction.UP) {
+			tiedToBell = level.getBlockState(facingPos).getBlock() == Blocks.BELL;
 		}
 
-		return directionToNeighbour.getAxis().isHorizontal()
-				? state.setValue(TIED_TO_BELL, tiedToBell).setValue(PROPERTY_BY_DIRECTION.get(directionToNeighbour), tieToRopeAndWalls(neighbourState))
-				: super.updateShape(state.setValue(TIED_TO_BELL, tiedToBell), level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+		return facing.getAxis().isHorizontal()
+				? state.setValue(TIED_TO_BELL, tiedToBell).setValue(PROPERTY_BY_DIRECTION.get(facing), tieToRopeAndWalls(facingState))
+				: super.updateShape(state.setValue(TIED_TO_BELL, tiedToBell), level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override

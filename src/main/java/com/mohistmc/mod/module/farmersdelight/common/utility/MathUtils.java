@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.farmersdelight.common.utility;
 
 import java.util.Random;
 import javax.annotation.Nullable;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.transfer.item.ItemResource;
 
@@ -14,8 +13,7 @@ public class MathUtils
 	public static final Random RAND = new Random();
 
 	/**
-	 * Calculates a comparator signal using an ItemHandler inventory, instead of IInventory.
-	 * Employing a RecipeWrapper would have caused a divide-by-zero, hence why this method was made.
+	 * Calculates a comparator signal using a transfer item handler.
 	 *
 	 * @param handler The inventory to compare.
 	 * @return The redstone signal strength.
@@ -29,14 +27,16 @@ public class MathUtils
 
 			for (int j = 0; j < handler.size(); ++j) {
 				ItemResource resource = handler.getResource(j);
-				ItemStack stack = resource.toStack();
-				if (!stack.isEmpty()) {
-					f += (float) stack.getCount() / (float) Math.min(handler.getCapacityAsInt(j, resource), stack.getMaxStackSize());
+				if (!resource.isEmpty()) {
+					int capacity = handler.getCapacityAsInt(j, resource);
+					if (capacity > 0) {
+						f += (float) handler.getAmountAsInt(j) / (float) capacity;
+					}
 					++i;
 				}
 			}
 
-			f = f / (float) handler.size();
+			f = handler.size() == 0 ? 0.0F : f / (float) handler.size();
 			return net.minecraft.util.Mth.floor(f * 14.0F) + (i > 0 ? 1 : 0);
 		}
 	}

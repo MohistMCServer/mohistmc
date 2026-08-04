@@ -14,15 +14,14 @@ import com.mohistmc.mod.api.gui.SimpleLabel;
 import com.mohistmc.mod.api.gui.SliderItem;
 import com.mohistmc.mod.api.gui.Swap;
 import com.mohistmc.mod.api.gui.ToggleItem;
+import java.util.List;
 import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
-import java.util.List;
-
 public class MyCustomScreen extends EnhancedScreen {
 
-    public static Identifier BG_COLOR = Identifier.fromNamespaceAndPath("mohistmc", "textures/gui/bg.png");
+    public static Identifier BG_COLOR = Identifier.fromNamespaceAndPath("mohistmc", "textures/gui/bg1.png");
 
     public MyCustomScreen() {
         super(Component.literal("我的界面"), BG_COLOR);

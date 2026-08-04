@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mohistmc:item/tatami"
+    "model": "mohistmc:block/tatami_half"
   }
 }

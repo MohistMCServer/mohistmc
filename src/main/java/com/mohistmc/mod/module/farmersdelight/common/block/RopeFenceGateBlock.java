@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 
 public class RopeFenceGateBlock extends FenceGateBlock
 {
@@ -26,12 +26,13 @@ public class RopeFenceGateBlock extends FenceGateBlock
 		super(props, ModSounds.BLOCK_ROPE_FENCE_GATE_OPEN.get(), ModSounds.BLOCK_ROPE_FENCE_GATE_CLOSE.get());
 	}
 
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		Direction.Axis axis = directionToNeighbour.getAxis();
+	@Override
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		Direction.Axis axis = facing.getAxis();
 		if (state.getValue(FACING).getClockWise().getAxis() != axis) {
-			return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+			return super.updateShape(state, level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 		} else {
-			boolean isBorderedByWalls = this.isWall(neighbourState) && this.isWall(level.getBlockState(pos.relative(directionToNeighbour.getOpposite())));
+			boolean isBorderedByWalls = this.isWall(facingState) && this.isWall(level.getBlockState(currentPos.relative(facing.getOpposite())));
 			return state.setValue(IN_WALL, isBorderedByWalls);
 		}
 	}
@@ -41,12 +42,12 @@ public class RopeFenceGateBlock extends FenceGateBlock
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return state.getValue(FACING).getAxis() == Direction.Axis.X ? X_SHAPE : Z_SHAPE;
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		if (state.getValue(OPEN)) {
 			return Shapes.empty();
 		} else {

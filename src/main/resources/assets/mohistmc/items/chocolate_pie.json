@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mohistmc:block/chocolate_pie"
+    "model": "mohistmc:item/chocolate_pie"
   }
 }

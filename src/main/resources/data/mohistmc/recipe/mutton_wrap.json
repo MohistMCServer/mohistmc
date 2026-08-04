@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "#c:foods/bread",
     "#c:foods/cooked_mutton",
@@ -8,7 +7,6 @@
     "#c:crops/onion"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:mutton_wrap"
   }
 }

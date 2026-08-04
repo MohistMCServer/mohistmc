@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fd_sweet_berry_cheesecake",
   "key": {
     "O": "mohistmc:pie_crust",
@@ -13,7 +12,6 @@
     "mOm"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:sweet_berry_cheesecake"
   }
 }

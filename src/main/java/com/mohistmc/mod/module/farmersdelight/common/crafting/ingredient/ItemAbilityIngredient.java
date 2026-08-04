@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.crafting.ingredient;
 
-
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModIngredientTypes;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.stream.Stream;
@@ -13,7 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.common.crafting.ICustomIngredient;
 import net.neoforged.neoforge.common.crafting.IngredientType;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModIngredientTypes;
 
 /**
  * Ingredient that checks if the given stack can perform a ItemAbility from Forge.
@@ -26,17 +25,17 @@ public class ItemAbilityIngredient implements ICustomIngredient
 			).apply(inst, ItemAbilityIngredient::new));
 
 	protected final ItemAbility itemAbility;
-	protected Stream<Holder<Item>> itemHolders;
+	protected Stream<Holder<Item>> itemStacks;
 
 	public ItemAbilityIngredient(ItemAbility itemAbility) {
 		this.itemAbility = itemAbility;
 	}
 
 	protected void dissolve() {
-		if (this.itemHolders == null) {
-			itemHolders = BuiltInRegistries.ITEM.stream()
-					.filter(item -> item.canPerformAction(new ItemStack(item), itemAbility))
-					.map(BuiltInRegistries.ITEM::wrapAsHolder);
+		if (this.itemStacks == null) {
+			itemStacks = BuiltInRegistries.ITEM.stream()
+					.map(item -> (Holder<Item>) item.builtInRegistryHolder())
+					.filter(item -> new ItemStack(item).canPerformAction(itemAbility));
 		}
 	}
 
@@ -48,7 +47,7 @@ public class ItemAbilityIngredient implements ICustomIngredient
 	@Override
 	public Stream<Holder<Item>> items() {
 		dissolve();
-		return itemHolders;
+		return itemStacks;
 	}
 
 	@Override

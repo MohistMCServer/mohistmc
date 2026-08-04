@@ -1,42 +1,36 @@
 package com.mohistmc.mod.module.farmersdelight.client.gui;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.block.state.CanvasSign;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.HangingSignEditScreen;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
-import org.joml.Vector3f;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.block.state.CanvasSign;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class HangingCanvasSignEditScreen extends HangingSignEditScreen
 {
-	private static final Vector3f TEXT_SCALE = new Vector3f(0.9F, 0.9F, 0.9F);
+	private static final String TEXTURE_PATH = "textures/gui/hanging_signs/";
 
-	protected DyeColor dye;
 	private final Identifier texture;
 
-	public HangingCanvasSignEditScreen(SignBlockEntity signBlockEntity, boolean isFrontText, boolean isTextFilteringEnabled) {
-		super(signBlockEntity, isFrontText, isTextFilteringEnabled);
-		Block block = signBlockEntity.getBlockState().getBlock();
-		if (block instanceof CanvasSign canvasSign) {
-			this.dye = canvasSign.getBackgroundColor();
-		}
-		String dyeName = dye != null ? "_" + dye.getName() : "";
-		this.texture = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "canvas" + dyeName + ".png").withPrefix("textures/gui/hanging_signs/");
+	public HangingCanvasSignEditScreen(SignBlockEntity signBlockEntity, boolean isFront, boolean isTextFilteringEnabled) {
+		super(signBlockEntity, isFront, isTextFilteringEnabled);
+		this.texture = getTexture(signBlockEntity.getBlockState());
 	}
 
 	@Override
 	protected void extractSignBackground(GuiGraphicsExtractor graphics) {
 		graphics.pose().translate(0.0F, -13.0F);
-		graphics.pose().scale(4.5F, 4.5F);
+		graphics.pose().scale(MAGIC_BACKGROUND_SCALE, MAGIC_BACKGROUND_SCALE);
 		graphics.blit(RenderPipelines.GUI_TEXTURED, this.texture, -8, -8, 0.0F, 0.0F, 16, 16, 16, 16);
 	}
 
-	@Override
-	protected Vector3f getSignTextScale() {
-		return TEXT_SCALE;
+	private static Identifier getTexture(BlockState state) {
+		DyeColor backgroundColor = state.getBlock() instanceof CanvasSign canvasSign ? canvasSign.getBackgroundColor() : null;
+		String textureName = backgroundColor != null ? "canvas_" + backgroundColor.getName() : "canvas";
+		return Identifier.fromNamespaceAndPath(FarmersDelight.MODID, TEXTURE_PATH + textureName + ".png");
 	}
 }

@@ -1,7 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.utility;
 
+import com.google.common.collect.Lists;
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mojang.datafixers.util.Pair;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;
@@ -19,14 +20,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
-import net.minecraft.world.item.consume_effects.ConsumeEffect;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 
 /**
  * Util for obtaining and formatting ITextComponents for use across the mod.
  */
 public class TextUtils
 {
+	public static final MutableComponent NO_EFFECTS = Component.translatable("effect.none").withStyle(ChatFormatting.GRAY);
 	public static final MutableComponent PLACEABLE = tooltip("placeable").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC);
 	public static final MutableComponent PLACEABLE_SNEAKING = tooltip("placeable_sneaking").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC);
 	public static final MutableComponent DEBUG_ITEM = tooltip("debug_item").withStyle(ChatFormatting.RED);
@@ -87,51 +87,56 @@ public class TextUtils
 			return;
 		}
 
-		List<ConsumeEffect> consumeEffectList = consumable.onConsumeEffects();
-		List<Pair<Holder<Attribute>, AttributeModifier>> attributeList = new ArrayList<>();
-		MutableComponent mutableComponent;
-
-		for (ConsumeEffect possibleConsumeEffect : consumeEffectList) {
-			if (!(possibleConsumeEffect instanceof ApplyStatusEffectsConsumeEffect statusEffectsEffect))
-				continue;
-
-			List<MobEffectInstance> effectList = statusEffectsEffect.effects();
-			for (MobEffectInstance instance : effectList) {
-				mutableComponent = Component.translatable(instance.getDescriptionId());
-				MobEffect effect = instance.getEffect().value();
-				effect.createModifiers(instance.getAmplifier(), (attributeHolder, attributeModifier) -> attributeList.add(new Pair<>(attributeHolder, attributeModifier)));
-
-				if (instance.getAmplifier() > 0) {
-					mutableComponent = Component.translatable("potion.withAmplifier", mutableComponent, Component.translatable("potion.potency." + instance.getAmplifier()));
+		boolean hasEffects = false;
+		for (var consumeEffect : consumable.onConsumeEffects()) {
+			if (consumeEffect instanceof ApplyStatusEffectsConsumeEffect statusEffects) {
+				for (MobEffectInstance instance : statusEffects.effects()) {
+					addEffectTooltip(instance, tooltipAdder, durationFactor, tickRate);
+					hasEffects = true;
 				}
-
-				if (instance.getDuration() > 20) {
-					mutableComponent = Component.translatable("potion.withDuration", mutableComponent, MobEffectUtil.formatDuration(instance, durationFactor, tickRate));
-				}
-
-				tooltipAdder.accept(mutableComponent.withStyle(effect.getCategory().getTooltipFormatting()));
 			}
 		}
+
+		if (!hasEffects) {
+			tooltipAdder.accept(NO_EFFECTS);
+		}
+	}
+
+	public static void addEffectTooltip(MobEffectInstance instance, Consumer<Component> tooltipAdder, float durationFactor, float tickRate) {
+		List<Pair<Holder<Attribute>, AttributeModifier>> attributeList = Lists.newArrayList();
+		MutableComponent mutableComponent = Component.translatable(instance.getDescriptionId());
+		MobEffect effect = instance.getEffect().value();
+		effect.createModifiers(instance.getAmplifier(), (attributeHolder, attributeModifier) -> {
+			attributeList.add(new Pair<>(attributeHolder, attributeModifier));
+		});
+
+		if (instance.getAmplifier() > 0) {
+			mutableComponent = Component.translatable("potion.withAmplifier", mutableComponent, Component.translatable("potion.potency." + instance.getAmplifier()));
+		}
+
+		if (instance.getDuration() > 20) {
+			mutableComponent = Component.translatable("potion.withDuration", mutableComponent, MobEffectUtil.formatDuration(instance, durationFactor, tickRate));
+		}
+
+		tooltipAdder.accept(mutableComponent.withStyle(effect.getCategory().getTooltipFormatting()));
 
 		if (!attributeList.isEmpty()) {
 			tooltipAdder.accept(CommonComponents.EMPTY);
 			tooltipAdder.accept(Component.translatable("potion.whenDrank").withStyle(ChatFormatting.DARK_PURPLE));
 
 			for (Pair<Holder<Attribute>, AttributeModifier> pair : attributeList) {
-				AttributeModifier attributemodifier = pair.getSecond();
-				double amount = attributemodifier.amount();
-				double formattedAmount;
-				if (attributemodifier.operation() != AttributeModifier.Operation.ADD_MULTIPLIED_BASE && attributemodifier.operation() != AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL) {
-					formattedAmount = attributemodifier.amount();
-				} else {
-					formattedAmount = attributemodifier.amount() * 100.0;
+				AttributeModifier modifier = pair.getSecond();
+				double amount = modifier.amount();
+				double formattedAmount = amount;
+				if (modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_BASE || modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL) {
+					formattedAmount *= 100.0;
 				}
 
 				if (amount > 0.0) {
-					tooltipAdder.accept(Component.translatable("attribute.modifier.plus." + attributemodifier.operation().id(), ItemAttributeModifiers.ATTRIBUTE_MODIFIER_FORMAT.format(formattedAmount), Component.translatable(((Attribute) ((Holder) pair.getFirst()).value()).getDescriptionId())).withStyle(ChatFormatting.BLUE));
+					tooltipAdder.accept(Component.translatable("attribute.modifier.plus." + modifier.operation().id(), ItemAttributeModifiers.ATTRIBUTE_MODIFIER_FORMAT.format(formattedAmount), Component.translatable(pair.getFirst().value().getDescriptionId())).withStyle(ChatFormatting.BLUE));
 				} else if (amount < 0.0) {
 					formattedAmount *= -1.0;
-					tooltipAdder.accept(Component.translatable("attribute.modifier.take." + attributemodifier.operation().id(), ItemAttributeModifiers.ATTRIBUTE_MODIFIER_FORMAT.format(formattedAmount), Component.translatable(((Attribute) ((Holder) pair.getFirst()).value()).getDescriptionId())).withStyle(ChatFormatting.RED));
+					tooltipAdder.accept(Component.translatable("attribute.modifier.take." + modifier.operation().id(), ItemAttributeModifiers.ATTRIBUTE_MODIFIER_FORMAT.format(formattedAmount), Component.translatable(pair.getFirst().value().getDescriptionId())).withStyle(ChatFormatting.RED));
 				}
 			}
 		}

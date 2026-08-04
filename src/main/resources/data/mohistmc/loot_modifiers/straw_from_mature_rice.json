@@ -15,5 +15,6 @@
       }
     }
   ],
-  "item": "mohistmc:straw"
+  "item": "mohistmc:straw",
+  "priority": 0
 }

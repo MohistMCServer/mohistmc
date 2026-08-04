@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -32,21 +34,19 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 
 @SuppressWarnings("deprecation")
 public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlockContainer
 {
-	public static final MapCodec<BushBlock> CODEC = simpleCodec(RiceBlock::new);
+	public static final MapCodec<RiceBlock> CODEC = simpleCodec(RiceBlock::new);
 
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 	public static final BooleanProperty SUPPORTING = BooleanProperty.create("supporting");
 	private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
-		Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D),
-		Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D),
-		Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D),
-		Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D)};
+			Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D),
+			Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D),
+			Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D),
+			Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D)};
 
 	public RiceBlock(Properties properties) {
 		super(properties);
@@ -54,7 +54,13 @@ public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlo
 	}
 
 	@Override
-	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+	@SuppressWarnings("unchecked")
+	public MapCodec<BushBlock> codec() {
+		return (MapCodec<BushBlock>) (MapCodec<?>) CODEC;
+	}
+
+	@Override
+	protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		super.tick(state, level, pos, random);
 		if (!level.isAreaLoaded(pos, 1)) return;
 		if (level.getRawBrightness(pos.above(), 0) >= 6) {
@@ -78,12 +84,12 @@ public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlo
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE_BY_AGE[state.getValue(this.getAgeProperty())];
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		FluidState fluid = level.getFluidState(pos);
 		return super.canSurvive(state, level, pos) && fluid.is(FluidTags.WATER) && fluid.getAmount() == 8;
 	}
@@ -106,7 +112,7 @@ public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlo
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+	protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
 		return new ItemStack(ModItems.RICE.get());
 	}
 
@@ -124,12 +130,12 @@ public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlo
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		BlockState updatedState = super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		BlockState updatedState = super.updateShape(state, level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 		if (!updatedState.isAir()) {
-			ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
-			if (directionToNeighbour == Direction.UP) {
-				return updatedState.setValue(SUPPORTING, isSupportingRiceUpper(neighbourState));
+			scheduledTickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			if (facing == Direction.UP) {
+				return updatedState.setValue(SUPPORTING, isSupportingRiceUpper(facingState));
 			}
 		}
 
@@ -189,12 +195,12 @@ public class RiceBlock extends BushBlock implements BonemealableBlock, LiquidBlo
 	}
 
 	@Override
-	public FluidState getFluidState(BlockState state) {
+	protected FluidState getFluidState(BlockState state) {
 		return Fluids.WATER.getSource(false);
 	}
 
 	@Override
-	public boolean canPlaceLiquid(@Nullable LivingEntity player, BlockGetter level, BlockPos pos, BlockState state, Fluid fluid) {
+	public boolean canPlaceLiquid(@Nullable LivingEntity entity, BlockGetter level, BlockPos pos, BlockState state, Fluid fluid) {
 		return false;
 	}
 

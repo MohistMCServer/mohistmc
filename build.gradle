@@ -118,7 +118,7 @@ configurations {
 }
 
 dependencies {
-    implementation "maven.modrinth:u6dRKJwZ:7Y8v8DOl"
+    implementation "maven.modrinth:u6dRKJwZ:XHfz4E3t"
     implementation "maven.modrinth:EsAfCjCV:slnk1Qah"
 }
 

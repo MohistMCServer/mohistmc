@@ -1,11 +1,9 @@
 {
   "type": "minecraft:smelting",
   "category": "food",
-  "cookingtime": 200,
   "experience": 0.35,
   "ingredient": "mohistmc:mutton_chops",
   "result": {
-    "count": 1,
     "id": "mohistmc:cooked_mutton_chops"
   }
 }

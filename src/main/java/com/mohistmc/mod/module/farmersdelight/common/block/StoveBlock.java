@@ -1,5 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.StoveBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -12,11 +15,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.StoveBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 
 public class StoveBlock extends AbstractStoveBlock
 {
@@ -27,7 +26,7 @@ public class StoveBlock extends AbstractStoveBlock
         return CODEC;
     }
 
-	public StoveBlock(BlockBehaviour.Properties properties) {
+	public StoveBlock(Properties properties) {
 		super(properties);
 	}
 

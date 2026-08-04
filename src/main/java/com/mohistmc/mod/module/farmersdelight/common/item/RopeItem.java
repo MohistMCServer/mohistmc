@@ -4,16 +4,17 @@ import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
-public class RopeItem extends FuelBlockItem
+public class RopeItem extends BlockItem
 {
 	public RopeItem(Block block, Properties properties) {
-		super(block, properties, 200);
+		super(block, properties);
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class RopeItem extends FuelBlockItem
 
 		BlockPos.MutableBlockPos mutablePos = pos.mutable().move(direction);
 
-		while (mutablePos.getY() >= level.getMinY()) {
+		while (mutablePos.getY() >= level.dimensionType().minY()) {
 			state = level.getBlockState(mutablePos);
 			if (!state.is(this.getBlock())) {
 				FluidState fluid = state.getFluidState();

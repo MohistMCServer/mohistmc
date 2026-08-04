@@ -1,22 +1,19 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import java.util.Optional;
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 
 @SuppressWarnings("deprecation")
 public class HangingTomatoBlock extends TomatoBlock
@@ -33,27 +30,26 @@ public class HangingTomatoBlock extends TomatoBlock
 		}
 	}
 
-	@Override
-	public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, ItemStack toolStack, boolean willHarvest, FluidState fluid) {
+	public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
 		this.playerWillDestroy(level, pos, state, player);
 		return placeRope(level, pos);
 	}
 
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
+	@Override
+	protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
 		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
 		if (Configuration.ENABLE_TOMATO_ROPE_PERMANENCE.get() && !movedByPiston) {
 			placeRope(level, pos);
 		}
 	}
 
-	// TODO: Verify if this is working.
-	public static boolean placeRope(Level level, BlockPos pos) {
-		Optional<Holder.Reference<Block>> configuredRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()));
-		Block ropeBlock = configuredRopeBlock.map(Holder.Reference::value).orElseGet(ModBlocks.ROPE);
-
-		BlockState finalRopeState = ropeBlock.equals(ModBlocks.ROPE.get())
+	public boolean placeRope(Level level, BlockPos pos) {
+		Block configuredRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()))
+				.map(blockReference -> blockReference.value())
+				.orElse(ModBlocks.ROPE.get());
+		BlockState finalRopeState = configuredRopeBlock.equals(ModBlocks.ROPE.get())
 				? RopeBlock.getStateWithConnections(ModBlocks.ROPE.get().defaultBlockState(), level, pos, Direction.UP)
-				: ropeBlock.defaultBlockState();
+				: configuredRopeBlock.defaultBlockState();
 
 		return level.setBlock(pos, finalRopeState, level.isClientSide() ? 11 : 3);
 	}

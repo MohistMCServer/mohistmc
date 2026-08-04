@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.client.particle;
 
+import javax.annotation.Nonnull;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
@@ -10,12 +11,11 @@ import net.minecraft.util.RandomSource;
 
 public class SteamParticle extends SingleQuadParticle
 {
-//	private final SpriteSet sprites;
-
 	protected SteamParticle(ClientLevel level, double x, double y, double z, double motionX, double motionY, double motionZ, SpriteSet sprites) {
-		super(level, x, y, z, sprites.first());
+		super(level, x, y, z, motionX, motionY, motionZ, sprites.get(level.getRandom()));
 		this.scale(2.0F);
 		this.setSize(0.25F, 0.25F);
+		this.setSpriteFromAge(sprites);
 
 		this.lifetime = this.random.nextInt(50) + 80;
 
@@ -23,13 +23,12 @@ public class SteamParticle extends SingleQuadParticle
 		this.xd = motionX;
 		this.yd = motionY + (double) (this.random.nextFloat() / 500.0F);
 		this.zd = motionZ;
-
-//		this.sprites = sprites;
 	}
 
 	@Override
+	@Nonnull
 	protected Layer getLayer() {
-		return Layer.TRANSLUCENT;
+		return Layer.TRANSLUCENT_TERRAIN;
 	}
 
 	public void tick() {
@@ -49,11 +48,11 @@ public class SteamParticle extends SingleQuadParticle
 		}
 	}
 
-	public static class Provider implements ParticleProvider<SimpleParticleType>
+	public static class Factory implements ParticleProvider<SimpleParticleType>
 	{
 		private final SpriteSet spriteSet;
 
-		public Provider(SpriteSet sprite) {
+		public Factory(SpriteSet sprite) {
 			this.spriteSet = sprite;
 		}
 

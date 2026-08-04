@@ -1,0 +1,31 @@
+{
+  "parent": "mohistmc:main/place_campfire",
+  "criteria": {
+    "skillet": {
+      "conditions": {
+        "item": {
+          "items": "mohistmc:skillet"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.mohistmc.use_skillet.description"
+    },
+    "icon": {
+      "id": "mohistmc:skillet"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.use_skillet.title"
+    }
+  },
+  "requirements": [
+    [
+      "skillet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

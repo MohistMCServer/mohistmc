@@ -22,6 +22,7 @@ public class IconButton extends PositionedWidget {
     @Nullable
     private Runnable onClick;
     private boolean enabled = true;
+    private boolean renderHover = true;
     private boolean wasHovered;
 
     public IconButton(int relX, int relY, int size) {
@@ -65,6 +66,12 @@ public class IconButton extends PositionedWidget {
         return this;
     }
 
+    /** 悬停高亮开关，设为 false 可禁用 hover 背景色变化（纯图片显示模式） */
+    public IconButton setRenderHover(boolean renderHover) {
+        this.renderHover = renderHover;
+        return this;
+    }
+
     public boolean hasTooltip() {
         return tooltip != null;
     }
@@ -75,8 +82,8 @@ public class IconButton extends PositionedWidget {
         int y = getAbsoluteY();
         boolean hovered = enabled && isMouseOver(mouseX, mouseY);
 
-        // 背景
-        int color = hovered ? hoverBgColor : bgColor;
+        // 背景（renderHover=false 时不渲染悬停背景）
+        int color = (hovered && renderHover) ? hoverBgColor : bgColor;
         if ((color >>> 24) != 0) {
             graphics.fill(x, y, x + width, y + height, color);
         }

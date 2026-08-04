@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,7 +18,6 @@ import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.neoforge.common.FarmlandWaterManager;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 
 public class RichSoilFarmlandBlock extends FarmlandBlock
 {
@@ -94,6 +94,6 @@ public class RichSoilFarmlandBlock extends FarmlandBlock
 
 	@Override
 	public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
-		entity.causeFallDamage(fallDistance, 1.0F, entity.damageSources().fall());
+		entity.causeFallDamage((float) fallDistance, 1.0F, entity.damageSources().fall());
 	}
 }

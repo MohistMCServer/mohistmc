@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:sweet_berries",
     "minecraft:honey_bottle",
@@ -13,7 +12,6 @@
     "mohistmc:cooked_rice"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:honey_glazed_ham_block"
   }
 }

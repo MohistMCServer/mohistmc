@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.AbstractStoveBlock;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -7,8 +9,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec2;
-import com.mohistmc.mod.module.farmersdelight.common.block.AbstractStoveBlock;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 
 public class StoveBlockEntity extends AbstractStoveBlockEntity
 {
@@ -25,8 +25,8 @@ public class StoveBlockEntity extends AbstractStoveBlockEntity
 		assert this.level != null;
 
 		var items = this.getItems();
-		for (int i = 0; i < getInventorySlotCount(); ++i) {
-			if (items.getResource(i).isEmpty()) continue;
+		for (int i = 0; i < items.getSlots(); ++i) {
+			if (items.getStackInSlot(i).isEmpty()) continue;
 			if (level.getRandom().nextFloat() >= 0.2F) continue;
 			Vec2 itemOffset = this.getStoveItemOffset(i);
 			Direction direction = this.getBlockState().getValue(AbstractStoveBlock.FACING);

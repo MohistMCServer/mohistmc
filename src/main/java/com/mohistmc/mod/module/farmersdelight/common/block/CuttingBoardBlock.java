@@ -1,10 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -17,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -41,10 +45,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 
 @SuppressWarnings("deprecation")
 public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
@@ -63,7 +63,7 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 
 	@Override
 	protected MapCodec<? extends BaseEntityBlock> codec() {
-		return CODEC;
+		return null;
 	}
 
 	@Override
@@ -99,20 +99,20 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 			return InteractionResult.SUCCESS;
 		} else {
 			if (cuttingBoard.processStoredItemUsingTool(mainHandStack, player)) {
-				return InteractionResult.SUCCESS_SERVER;
+				return InteractionResult.SUCCESS;
 			}
 		}
 		return InteractionResult.CONSUME;
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
-		if (level.getBlockEntity(pos) instanceof CuttingBoardBlockEntity cuttingBoard) {
-			Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), cuttingBoard.getStoredItem());
-			level.updateNeighbourForOutputSignal(pos, this);
+	public void destroy(LevelAccessor level, BlockPos pos, BlockState state) {
+		if (level instanceof Level realLevel && realLevel.getBlockEntity(pos) instanceof CuttingBoardBlockEntity cuttingBoard) {
+			Containers.dropItemStack(realLevel, pos.getX(), pos.getY(), pos.getZ(), cuttingBoard.getStoredItem());
+			realLevel.updateNeighbourForOutputSignal(pos, this);
 		}
 
-		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
+		super.destroy(level, pos, state);
 	}
 
 	@Override
@@ -124,21 +124,21 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		FluidState fluid = context.getLevel().getFluidState(context.getClickedPos());
 		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite())
-			.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
+				.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			tickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
-		return directionToNeighbour == Direction.DOWN && !state.canSurvive(level, pos)
-			? Blocks.AIR.defaultBlockState()
-			: super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+		return facing == Direction.DOWN && !state.canSurvive(level, currentPos)
+				? Blocks.AIR.defaultBlockState()
+				: super.updateShape(state, level, tickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		BlockPos floorPos = pos.below();
 		return canSupportRigidBlock(level, floorPos) || canSupportCenter(level, floorPos, Direction.UP);
 	}
@@ -150,12 +150,12 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 	}
 
 	@Override
-	public FluidState getFluidState(BlockState state) {
+	protected FluidState getFluidState(BlockState state) {
 		return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
 
 	@Override
-	public boolean hasAnalogOutputSignal(BlockState state) {
+	protected boolean hasAnalogOutputSignal(BlockState state) {
 		return true;
 	}
 
@@ -178,7 +178,7 @@ public class CuttingBoardBlock extends BaseEntityBlock implements SimpleWaterlog
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 

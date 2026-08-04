@@ -1,16 +1,17 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 
 public class BuddingTomatoBlock extends BuddingBushBlock implements BonemealableBlock
 {
@@ -19,17 +20,13 @@ public class BuddingTomatoBlock extends BuddingBushBlock implements Bonemealable
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(BuddingBushBlock.AGE) == 4) {
-			// TODO: We can't setBlock here anymore. See if this still works as intended.
-			ticks.scheduleTick(pos, this, 3);
+			if (level instanceof LevelAccessor levelAccessor) {
+				levelAccessor.setBlock(currentPos, ModBlocks.TOMATO_CROP.get().defaultBlockState(), 3);
+			}
 		}
-		return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
-	}
-
-	@Override
-	protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-		growPastMaxAge(state, level, pos, random);
+		return super.updateShape(state, level, tickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override

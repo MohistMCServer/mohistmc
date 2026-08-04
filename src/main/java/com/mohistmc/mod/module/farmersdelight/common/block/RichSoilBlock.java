@@ -1,5 +1,9 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.network.payload.RichSoilBoostParticlesPayload;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,10 +20,6 @@ import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.network.PacketDistributor;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.network.payload.RichSoilBoostParticlesPayload;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
 public class RichSoilBlock extends Block
 {
@@ -96,11 +96,11 @@ public class RichSoilBlock extends Block
 
 
 	@Override
-	public TriState canSustainPlant(BlockState state, BlockGetter level, BlockPos pos, Direction directionToNeighbour, BlockState plantState) {
+	public TriState canSustainPlant(BlockState state, BlockGetter level, BlockPos pos, Direction facing, BlockState plantState) {
 		return TriState.DEFAULT;
 
 		// TODO: Figure out how to correctly configure Rich Soil's plant compatibility, since PlantType was removed
-//		PlantType plantType = plantState.getPlantType(level, pos.relative(directionToNeighbour));
+//		PlantType plantType = plantState.getPlantType(level, pos.relative(facing));
 //		return plantType != PlantType.CROP && plantType != PlantType.NETHER && plantType != PlantType.WATER;
 	}
 }

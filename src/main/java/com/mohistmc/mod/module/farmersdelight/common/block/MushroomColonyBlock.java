@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -13,7 +15,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraft.util.TriState;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -35,15 +36,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.Tags;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 
 @SuppressWarnings("deprecation")
 public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 {
 	public static final MapCodec<MushroomColonyBlock> CODEC = RecordCodecBuilder.mapCodec(
-		builder -> builder.group(BuiltInRegistries.ITEM.holderByNameCodec().fieldOf("mushroom").forGetter(block -> block.mushroomType), propertiesCodec())
-			.apply(builder, MushroomColonyBlock::new)
+			builder -> builder.group(BuiltInRegistries.ITEM.holderByNameCodec().fieldOf("mushroom").forGetter(block -> block.mushroomType), propertiesCodec())
+					.apply(builder, MushroomColonyBlock::new)
 	);
 
 	public static final int PLACING_LIGHT_LEVEL = 13;
@@ -51,10 +50,10 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 
 	public static final IntegerProperty COLONY_AGE = BlockStateProperties.AGE_3;
 	protected static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
-		Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D),
-		Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D),
-		Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D),
-		Block.box(1.0D, 0.0D, 1.0D, 15.0D, 14.0D, 15.0D),
+			Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D),
+			Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D),
+			Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D),
+			Block.box(1.0D, 0.0D, 1.0D, 15.0D, 14.0D, 15.0D),
 	};
 
 	public MushroomColonyBlock(Holder<Item> mushroomType, Properties properties) {
@@ -64,17 +63,17 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 	}
 
 	@Override
-	public InteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+	protected InteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		int age = state.getValue(COLONY_AGE);
 
 		if (age > 0) {
-			ItemStack mushroomStack = getCloneItemStack(level, pos, state, true);
+			ItemStack mushroomStack = getCloneItemStack(level, pos, state, false);
 			if (ItemUtils.isValidTool(heldStack, ItemAbilities.SHEARS_HARVEST, Tags.Items.TOOLS_SHEAR)) {
 				level.setBlock(pos, state.setValue(COLONY_AGE, age - 1), 2);
 				level.playSound(null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.BLOCKS, 1.0F, 1.0F);
 				popResource(level, pos, mushroomStack);
 				if (!level.isClientSide()) {
-					heldStack.hurtAndBreak(1, player, hand.asEquipmentSlot());
+					heldStack.hurtAndBreak(1, player, hand);
 					((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, state), pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 3, 0.1, 0.1, 0.1, 0.001D);
 				}
 
@@ -87,7 +86,7 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 				level.playSound(null, pos, this.soundType.getBreakSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
 				popResource(level, pos, mushroomStack);
 				if (!level.isClientSide()) {
-					heldStack.hurtAndBreak(1, player, hand.asEquipmentSlot());
+					heldStack.hurtAndBreak(1, player, hand);
 					((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, state), pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 10, 0.2, 0.2, 0.2, 0.1D);
 				}
 
@@ -99,7 +98,7 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE_BY_AGE[state.getValue(getAgeProperty())];
 	}
 
@@ -108,15 +107,21 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
+	public MapCodec<BushBlock> codec() {
+		return (MapCodec<BushBlock>) (MapCodec<?>) CODEC;
+	}
+
+	@Override
 	protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
 		return state.isSolidRender();
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		BlockPos floorPos = pos.below();
 		BlockState floorState = level.getBlockState(floorPos);
-		TriState soilDecision = floorState.canSustainPlant(level, floorPos, net.minecraft.core.Direction.UP, state);
+		net.minecraft.util.TriState soilDecision = floorState.canSustainPlant(level, floorPos, net.minecraft.core.Direction.UP, state);
 		return floorState.is(BlockTags.OVERRIDES_MUSHROOM_LIGHT_REQUIREMENT) || (soilDecision.isDefault() ? (level.getRawBrightness(pos, 0) < 13 && this.mayPlaceOn(floorState, level, floorPos)) : soilDecision.isTrue());
 	}
 
@@ -125,7 +130,7 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 	}
 
 	@Override
-	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+	protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		int age = state.getValue(COLONY_AGE);
 		BlockState groundState = level.getBlockState(pos.below());
 		if (age < getMaxAge() && groundState.is(ModTags.Blocks.MUSHROOM_COLONY_GROWABLE_ON) && CommonHooks.canCropGrow(level, pos, state, random.nextInt(4) == 0)) {
@@ -135,7 +140,7 @@ public class MushroomColonyBlock extends BushBlock implements BonemealableBlock
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+	protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
 		return new ItemStack(this.mushroomType.value());
 	}
 

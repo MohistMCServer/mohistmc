@@ -2,6 +2,7 @@ package com.mohistmc.mod;
 
 import com.mohistmc.mod.client.gui.EscGui;
 import com.mohistmc.mod.client.gui.FakeMainGui;
+import com.mohistmc.mod.client.gui.YouerInventoryScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.register.BlockRegister;
@@ -11,6 +12,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.tutorial.TutorialSteps;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -33,16 +35,13 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MohistMC.MODID)
 public class MohistMC {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "mohistmc";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.mohistmc")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> ItemRegister.LOGO.get().getDefaultInstance()).displayItems((parameters, output) -> {
+     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOHISTMC_TAB = CREATIVE_MODE_TABS.register("mohistmc_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.mohistmc")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> ItemRegister.LOGO.get().getDefaultInstance()).displayItems((parameters, output) -> {
         ItemRegister.ALL_ITEMS.forEach(itemSupplier -> output.accept(itemSupplier.get()));
     }).build());
 
@@ -89,6 +88,10 @@ public class MohistMC {
             }
             if (e.getScreen().getClass() == PauseScreen.class) {
                 e.setNewScreen(new EscGui());
+            }
+            System.out.println(e.getScreen().getClass());
+            if (e.getScreen().getClass() == InventoryScreen.class) {
+                e.setNewScreen(new YouerInventoryScreen(Minecraft.getInstance().player));
             }
         }
     }

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "/": "minecraft:stick",
     "r": "mohistmc:rope"
@@ -10,7 +9,6 @@
     "/r/"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:rope_fence_gate"
   }
 }

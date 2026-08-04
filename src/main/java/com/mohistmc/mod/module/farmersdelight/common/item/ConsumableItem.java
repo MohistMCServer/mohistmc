@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.triggers.CriteriaTriggers;
@@ -12,14 +14,10 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 
-@SuppressWarnings("deprecation")
 public class ConsumableItem extends Item
 {
 	private final boolean hasFoodEffectTooltip;
@@ -53,7 +51,9 @@ public class ConsumableItem extends Item
 			this.affectConsumer(stack, level, consumer);
 		}
 
-		if (stack.get(DataComponents.FOOD) != null) {
+		ItemStack containerStack = com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils.getCraftingRemainingItem(stack);
+
+		if (stack.has(DataComponents.FOOD)) {
 			super.finishUsingItem(stack, level, consumer);
 		} else {
 			Player player = consumer instanceof Player ? (Player) consumer : null;
@@ -68,22 +68,16 @@ public class ConsumableItem extends Item
 			}
 		}
 
-		ItemStackTemplate containerTemplate = stack.getCraftingRemainder();
-
-		if (containerTemplate != null) {
-			ItemStack containerStack = containerTemplate.create();
-			if (stack.isEmpty()) {
-				return containerStack;
-			} else {
-				if (consumer instanceof Player player && !((Player) consumer).getAbilities().instabuild) {
-					if (!player.getInventory().add(containerStack)) {
-						player.drop(containerStack, false);
-					}
+		if (stack.isEmpty()) {
+			return containerStack;
+		} else {
+			if (consumer instanceof Player player && !player.getAbilities().instabuild && !containerStack.isEmpty()) {
+				if (!player.getInventory().add(containerStack)) {
+					player.drop(containerStack, false);
 				}
-				return stack;
 			}
+			return stack;
 		}
-		return stack;
 	}
 
 	/**
@@ -93,13 +87,13 @@ public class ConsumableItem extends Item
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag isAdvanced) {
 		if (Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
 			if (this.hasCustomTooltip) {
-				builder.accept(TextUtils.tooltip(BuiltInRegistries.ITEM.getKey(this).getPath()).withStyle(ChatFormatting.BLUE));
+				tooltip.accept(TextUtils.tooltip(BuiltInRegistries.ITEM.getKey(this).getPath()).withStyle(ChatFormatting.BLUE));
 			}
 			if (this.hasFoodEffectTooltip) {
-				TextUtils.addFoodEffectTooltip(itemStack, builder, 1.0F, context.tickRate());
+				TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F, context.tickRate());
 			}
 		}
 	}

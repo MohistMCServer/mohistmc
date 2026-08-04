@@ -1,43 +1,38 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import net.minecraft.client.renderer.SpriteMapper;
-import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.client.resources.model.sprite.SpriteId;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 
 public class ModAtlases
 {
-	private static final SpriteMapper CANVAS_SIGN_MAPPER = new SpriteMapper(TextureAtlas.LOCATION_BLOCKS, "entity/signs");
-	private static final SpriteMapper HANGING_SIGN_MAPPER = new SpriteMapper(TextureAtlas.LOCATION_BLOCKS, "entity/signs/hanging");
+	public static final Material BLANK_CANVAS_SIGN_MATERIAL = new Material(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "entity/signs/canvas"));
+	public static final Material BLANK_HANGING_CANVAS_SIGN_MATERIAL = new Material(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "entity/signs/hanging/canvas"));
 
-	public static final SpriteId BLANK_CANVAS_SIGN_SPRITE = CANVAS_SIGN_MAPPER.apply(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "canvas"));
-	public static final SpriteId BLANK_HANGING_CANVAS_SIGN_SPRITE = HANGING_SIGN_MAPPER.apply(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "canvas"));
+	public static final Map<DyeColor, Material> DYED_CANVAS_SIGN_MATERIALS =
+			Arrays.stream(DyeColor.values()).collect(Collectors.toMap(Function.identity(), ModAtlases::createCanvasSignMaterial));
+	public static final Map<DyeColor, Material> DYED_HANGING_CANVAS_SIGN_MATERIALS =
+			Arrays.stream(DyeColor.values()).collect(Collectors.toMap(Function.identity(), ModAtlases::createHangingCanvasSignMaterial));
 
-	public static final Map<DyeColor, SpriteId> DYED_CANVAS_SIGN_SPRITES =
-			Arrays.stream(DyeColor.values()).collect(Collectors.toMap(Function.identity(), ModAtlases::createCanvasSignSprite));
-	public static final Map<DyeColor, SpriteId> DYED_HANGING_CANVAS_SIGN_SPRITES =
-			Arrays.stream(DyeColor.values()).collect(Collectors.toMap(Function.identity(), ModAtlases::createHangingCanvasSignSprite));
-
-	public static SpriteId createCanvasSignSprite(DyeColor dyeType) {
-		return CANVAS_SIGN_MAPPER.apply(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "canvas_" + dyeType.getName()));
+	public static Material createCanvasSignMaterial(DyeColor dyeType) {
+		return new Material(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "entity/signs/canvas_" + dyeType.getName()));
 	}
 
-	public static SpriteId createHangingCanvasSignSprite(DyeColor dyeType) {
-		return HANGING_SIGN_MAPPER.apply(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "canvas_" + dyeType.getName()));
+	public static Material createHangingCanvasSignMaterial(DyeColor dyeType) {
+		return new Material(Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "entity/signs/hanging/canvas_" + dyeType.getName()));
 	}
 
-	public static SpriteId getCanvasSignSprite(@Nullable DyeColor dyeColor) {
-		return dyeColor != null ? ModAtlases.DYED_CANVAS_SIGN_SPRITES.get(dyeColor) : ModAtlases.BLANK_CANVAS_SIGN_SPRITE;
+	public static Material getCanvasSignMaterial(@Nullable DyeColor dyeColor) {
+		return dyeColor != null ? ModAtlases.DYED_CANVAS_SIGN_MATERIALS.get(dyeColor) : ModAtlases.BLANK_CANVAS_SIGN_MATERIAL;
 	}
 
-	public static SpriteId getHangingCanvasSignSprite(@Nullable DyeColor dyeColor) {
-		return dyeColor != null ? ModAtlases.DYED_HANGING_CANVAS_SIGN_SPRITES.get(dyeColor) : ModAtlases.BLANK_HANGING_CANVAS_SIGN_SPRITE;
+	public static Material getHangingCanvasSignMaterial(@Nullable DyeColor dyeColor) {
+		return dyeColor != null ? ModAtlases.DYED_HANGING_CANVAS_SIGN_MATERIALS.get(dyeColor) : ModAtlases.BLANK_HANGING_CANVAS_SIGN_MATERIAL;
 	}
 }

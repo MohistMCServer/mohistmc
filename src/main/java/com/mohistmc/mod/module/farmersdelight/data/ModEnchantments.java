@@ -1,0 +1,45 @@
+package com.mohistmc.mod.module.farmersdelight.data;
+
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModDataComponents;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.LevelBasedValue;
+import net.minecraft.world.item.enchantment.effects.MultiplyValue;
+
+public class ModEnchantments
+{
+	public static final ResourceKey<Enchantment> BACKSTABBING = key("backstabbing");
+
+	public static void bootstrap(BootstrapContext<Enchantment> context) {
+		HolderGetter<Item> items = context.lookup(Registries.ITEM);
+
+		register(context, BACKSTABBING,
+				Enchantment.enchantment(
+								Enchantment.definition(
+										items.getOrThrow(ModTags.Items.KNIFE_ENCHANTABLE),
+										5, // weight
+										3, // max level
+										Enchantment.dynamicCost(15, 9),
+										Enchantment.dynamicCost(50, 8),
+										2, // anvil cost
+										EquipmentSlotGroup.MAINHAND))
+						.withEffect(ModDataComponents.BACKSTABBING.get(),
+								new MultiplyValue(LevelBasedValue.perLevel(1.4F, 0.2F))));
+	}
+
+	private static void register(BootstrapContext<Enchantment> context, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
+		context.register(key, builder.build(key.identifier()));
+	}
+
+	private static ResourceKey<Enchantment> key(String name) {
+		return ResourceKey.create(Registries.ENCHANTMENT, Identifier.fromNamespaceAndPath(FarmersDelight.MODID, name));
+	}
+}

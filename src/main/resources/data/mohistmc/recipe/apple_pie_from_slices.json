@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fd_apple_pie",
   "key": {
     "#": "mohistmc:apple_pie_slice"
@@ -10,7 +9,6 @@
     "##"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:apple_pie"
   }
 }

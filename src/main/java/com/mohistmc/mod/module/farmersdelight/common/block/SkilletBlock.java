@@ -1,5 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.SkilletBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -9,7 +14,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -38,11 +42,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.transfer.item.ItemStacksResourceHandler;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.SkilletBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
 @SuppressWarnings("deprecation")
 public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
@@ -69,7 +68,7 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 	}
 
 	@Override
-	public InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+	protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		if (level.getBlockEntity(pos) instanceof SkilletBlockEntity skillet) {
 			if (level.isClientSide()) {
 				return InteractionResult.CONSUME;
@@ -83,44 +82,39 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 				}
 				return InteractionResult.SUCCESS;
 			}
-			if (level instanceof ServerLevel sLevel) {
-				ItemStack remainderStack = skillet.addItemToCook(heldStack, player, sLevel);
-				if (remainderStack.getCount() != heldStack.getCount()) {
-					if (!player.isCreative()) {
-						player.setItemSlot(heldSlot, remainderStack);
-					}
-					level.playSound(null, pos, SoundEvents.LANTERN_PLACE, SoundSource.BLOCKS, 0.7F, 1.0F);
-					return InteractionResult.SUCCESS;
+			ItemStack remainderStack = skillet.addItemToCook(heldStack, player);
+			if (remainderStack.getCount() != heldStack.getCount()) {
+				if (!player.isCreative()) {
+					player.setItemSlot(heldSlot, remainderStack);
 				}
-			} else {
-				return InteractionResult.SUCCESS_SERVER;
+				level.playSound(null, pos, SoundEvents.LANTERN_PLACE, SoundSource.BLOCKS, 0.7F, 1.0F);
+				return InteractionResult.SUCCESS;
 			}
 		}
 		return InteractionResult.PASS;
 	}
 
 	@Override
-	public RenderShape getRenderShape(BlockState state) {
+	protected RenderShape getRenderShape(BlockState state) {
 		return RenderShape.MODEL;
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
-		if (level.getBlockEntity(pos) instanceof SkilletBlockEntity skillet) {
-			ItemStacksResourceHandler inventory = skillet.getInventory();
-			Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), inventory.getResource(0).toStack(inventory.getAmountAsInt(0)));
-		}
+	protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean isMoving) {
+			if (level.getBlockEntity(pos) instanceof SkilletBlockEntity skillet) {
+				ItemUtils.dropItems(level, pos, skillet.getTransferInventory());
+			}
 
-		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
+			super.affectNeighborsAfterRemoval(state, level, pos, isMoving);
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return state.getValue(SUPPORT).equals(true) ? SHAPE_WITH_TRAY : SHAPE;
 	}
 
@@ -130,24 +124,24 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 		FluidState fluid = level.getFluidState(context.getClickedPos());
 
 		return this.defaultBlockState()
-			.setValue(FACING, context.getHorizontalDirection())
-			.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER)
-			.setValue(SUPPORT, getTrayState(context.getLevel(), context.getClickedPos()));
+				.setValue(FACING, context.getHorizontalDirection())
+				.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER)
+				.setValue(SUPPORT, getTrayState(context.getLevel(), context.getClickedPos()));
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			scheduledTickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
-		if (directionToNeighbour.getAxis().equals(Direction.Axis.Y)) {
-			return state.setValue(SUPPORT, getTrayState(level, pos));
+		if (facing.getAxis().equals(Direction.Axis.Y)) {
+			return state.setValue(SUPPORT, getTrayState(level, currentPos));
 		}
 		return state;
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+	protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
 		if (level.getBlockEntity(pos) instanceof SkilletBlockEntity skillet) {
 			return skillet.getSkilletAsItem();
 		}
@@ -175,7 +169,7 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 	}
 
 	@Override
-	public FluidState getFluidState(BlockState state) {
+	protected FluidState getFluidState(BlockState state) {
 		return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
 
@@ -209,7 +203,7 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 		float cookingTimeReduction = 0.2F;
 
 		if (fireAspectLevel > 0) {
-			cookingTimeReduction -= (float) (fireAspectLevel * 0.05);
+			cookingTimeReduction -= fireAspectLevel * 0.05;
 		}
 
 		int result = (int) (cookingSeconds * cookingTimeReduction) * 20;

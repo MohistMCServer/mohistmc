@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:bucket",
     "mohistmc:milk_bottle",
@@ -9,7 +8,6 @@
     "mohistmc:milk_bottle"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:milk_bucket"
   }
 }

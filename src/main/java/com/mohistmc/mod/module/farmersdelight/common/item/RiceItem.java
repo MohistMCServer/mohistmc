@@ -1,18 +1,18 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.PlaceOnWaterBlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 
-public class RiceItem extends BlockItem
+public class RiceItem extends PlaceOnWaterBlockItem
 {
 	public RiceItem(Block block, Properties properties) {
 		super(block, properties);

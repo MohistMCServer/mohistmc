@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "#c:foods/cooked_salmon",
     "minecraft:sweet_berries",
@@ -9,7 +8,6 @@
     "#c:crops/onion"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:grilled_salmon"
   }
 }

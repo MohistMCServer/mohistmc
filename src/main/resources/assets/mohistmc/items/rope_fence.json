@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mohistmc:item/rope_fence"
+    "model": "mohistmc:block/rope_fence_inventory"
   }
 }

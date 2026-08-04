@@ -1,5 +1,11 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.block.BasketBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory.BasketInvWrapper;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory.ItemHandlerResourceHandler;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.function.BooleanSupplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -19,11 +25,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.block.BasketBlock;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory.BasketInvWrapper;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 
 @EventBusSubscriber(modid = FarmersDelight.MODID)
 public class BasketBlockEntity extends RandomizableContainerBlockEntity implements Basket
@@ -37,30 +38,27 @@ public class BasketBlockEntity extends RandomizableContainerBlockEntity implemen
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-			Capabilities.Item.BLOCK,
-			ModBlockEntityTypes.BASKET.get(),
-			(blockEntity, _) -> new BasketInvWrapper(blockEntity)
-		);
+		event.registerBlockEntity(Capabilities.Item.BLOCK, ModBlockEntityTypes.BASKET.get(), (basket, side) ->
+				new ItemHandlerResourceHandler(new BasketInvWrapper(basket), slot -> true, slot -> true, originalState -> {
+					if (originalState.stream().allMatch(ItemStack::isEmpty) && !basket.isEmpty() && !basket.isOnCustomCooldown()) {
+						basket.setCooldown(8);
+					}
+					basket.setChanged();
+				}));
 	}
 
 	@Override
 	protected void loadAdditional(ValueInput input) {
 		super.loadAdditional(input);
 		this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-		if (!this.tryLoadLootTable(input)) {
-			ContainerHelper.loadAllItems(input, this.items);
-		}
+		ContainerHelper.loadAllItems(input, this.items);
 		this.transferCooldown = input.getIntOr("TransferCooldown", -1);
 	}
 
 	@Override
-	public void saveAdditional(ValueOutput output) {
+	protected void saveAdditional(ValueOutput output) {
 		super.saveAdditional(output);
-		if (!this.trySaveLootTable(output)) {
-			ContainerHelper.saveAllItems(output, this.items);
-		}
-
+		ContainerHelper.saveAllItems(output, this.items);
 		output.putInt("TransferCooldown", this.transferCooldown);
 	}
 
@@ -160,7 +158,6 @@ public class BasketBlockEntity extends RandomizableContainerBlockEntity implemen
 		return (double) this.worldPosition.getZ() + 0.5D;
 	}
 
-	@SuppressWarnings("unused")
 	public static void pushItemsTick(Level level, BlockPos pos, BlockState state, BasketBlockEntity blockEntity) {
 		--blockEntity.transferCooldown;
 		if (!blockEntity.isOnCooldown()) {

@@ -1,5 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -15,7 +18,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -33,8 +35,6 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 
 @SuppressWarnings("deprecation")
 public class FeastBlock extends Block
@@ -87,12 +87,12 @@ public class FeastBlock extends Block
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPES[state.getValue(SERVINGS)];
 	}
 
 	@Override
-	public InteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+	protected InteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		if (level.isClientSide()) {
 			if (this.takeServing(level, pos, state, player, hand).consumesAction()) {
 				return InteractionResult.SUCCESS;
@@ -115,11 +115,11 @@ public class FeastBlock extends Block
 		ItemStack heldStack = player.getItemInHand(hand);
 
 		if (servings > 0) {
-			ItemStackTemplate container = serving.getCraftingRemainder();
-			if (container != null && ItemStack.isSameItem(heldStack, container.create())) {
+			ItemStack craftingRemainingItem = ItemUtils.getCraftingRemainingItem(serving);
+			if (craftingRemainingItem.isEmpty() || ItemStack.isSameItem(heldStack, craftingRemainingItem)) {
 				level.setBlock(pos, state.setValue(getServingsProperty(), servings - 1), 3);
 				player.awardStat(Stats.ITEM_USED.get(heldStack.getItem()));
-				if (!player.getAbilities().instabuild) {
+				if (!player.getAbilities().instabuild && !craftingRemainingItem.isEmpty()) {
 					heldStack.shrink(1);
 				}
 				if (!player.getInventory().add(serving)) {
@@ -134,7 +134,7 @@ public class FeastBlock extends Block
 				}
 				return InteractionResult.SUCCESS;
 			} else {
-				player.sendOverlayMessage(TextUtils.block("feast.use_container", serving.getCraftingRemainder().create().getHoverName()));
+				player.sendOverlayMessage(TextUtils.block("feast.use_container", craftingRemainingItem.getHoverName()));
 			}
 		}
 		return InteractionResult.PASS;
@@ -146,12 +146,12 @@ public class FeastBlock extends Block
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		return directionToNeighbour == Direction.DOWN && !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		return facing == Direction.DOWN && !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		return canSupportRigidBlock(level, pos.below());
 	}
 
@@ -166,12 +166,12 @@ public class FeastBlock extends Block
 	}
 
 	@Override
-	public boolean hasAnalogOutputSignal(BlockState state) {
+	protected boolean hasAnalogOutputSignal(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public boolean isPathfindable(BlockState state, PathComputationType type) {
+	protected boolean isPathfindable(BlockState state, PathComputationType type) {
 		return false;
 	}
 }

@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CabinetBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -14,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
@@ -26,8 +29,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CabinetBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 
 @SuppressWarnings("deprecation")
 public class CabinetBlock extends BaseEntityBlock
@@ -54,18 +55,20 @@ public class CabinetBlock extends BaseEntityBlock
 		}
 		if (level.getBlockEntity(pos) instanceof CabinetBlockEntity cabinet) {
 			player.openMenu(cabinet);
-			PiglinAi.angerNearbyPiglins((ServerLevel) level, player, true);
+			if (level instanceof ServerLevel serverLevel) {
+				PiglinAi.angerNearbyPiglins(serverLevel, player, true);
+			}
 		}
 		return InteractionResult.CONSUME;
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
-		if (level.getBlockEntity(pos) instanceof Container container) {
-			Containers.dropContents(level, pos, container);
-			level.updateNeighbourForOutputSignal(pos, this);
+	public void destroy(LevelAccessor level, BlockPos pos, BlockState state) {
+		if (level instanceof Level realLevel && realLevel.getBlockEntity(pos) instanceof Container container) {
+			Containers.dropContents(realLevel, pos, container);
+			realLevel.updateNeighbourForOutputSignal(pos, this);
 		}
-		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
+		super.destroy(level, pos, state);
 	}
 
 	@Override
@@ -86,7 +89,7 @@ public class CabinetBlock extends BaseEntityBlock
 	}
 
 	@Override
-	public boolean hasAnalogOutputSignal(BlockState state) {
+	protected boolean hasAnalogOutputSignal(BlockState state) {
 		return true;
 	}
 

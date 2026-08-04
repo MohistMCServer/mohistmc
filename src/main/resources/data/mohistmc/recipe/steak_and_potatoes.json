@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:baked_potato",
     "minecraft:cooked_beef",
@@ -9,7 +8,6 @@
     "mohistmc:cooked_rice"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:steak_and_potatoes"
   }
 }

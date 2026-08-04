@@ -13,14 +13,14 @@ public class SparkleParticle extends SingleQuadParticle
 	private final SpriteSet sprites;
 
 	protected SparkleParticle(ClientLevel level, double x, double y, double z, SpriteSet sprites, float gravity) {
-		super(level, x, y, z, 0.0, 0.0, 0.0, sprites.first());
+		super(level, x, y, z, 0.0, 0.0, 0.0, sprites.get(level.getRandom()));
 		this.lifetime = 4;
 		this.quadSize *= 0.75F;
 		this.sprites = sprites;
 		this.setSpriteFromAge(sprites);
 	}
 
-	public int getLightColor(float partialTick) {
+	public int getLightCoords(float partialTick) {
 		return 15728880;
 	}
 
@@ -36,15 +36,15 @@ public class SparkleParticle extends SingleQuadParticle
 	}
 
 	@Override
-	public Layer getLayer() {
-		return Layer.OPAQUE;
+	protected Layer getLayer() {
+		return Layer.OPAQUE_TERRAIN;
 	}
 
-	public static class Provider implements ParticleProvider<SimpleParticleType>
+	public static class Factory implements ParticleProvider<SimpleParticleType>
 	{
 		private final SpriteSet sprites;
 
-		public Provider(SpriteSet sprites) {
+		public Factory(SpriteSet sprites) {
 			this.sprites = sprites;
 		}
 

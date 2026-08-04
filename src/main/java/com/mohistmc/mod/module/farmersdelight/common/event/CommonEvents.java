@@ -1,28 +1,34 @@
 package com.mohistmc.mod.module.farmersdelight.common.event;
 
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.server.level.ServerPlayer;
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.Configuration;
+import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
-import net.minecraft.world.level.gamerules.GameRules;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
-import net.neoforged.neoforge.network.PacketDistributor;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
-import com.mohistmc.mod.module.farmersdelight.common.network.payload.NaturalRegenerationGameRulePayload;
+import net.neoforged.neoforge.event.level.AlterGroundEvent;
 
 @EventBusSubscriber(modid = FarmersDelight.MODID)
 public class CommonEvents
 {
-	private static boolean NATURAL_REGENERATION = true;
+	@SubscribeEvent
+	public static void keepRichSoilUnderGiantTrees(AlterGroundEvent event) {
+		AlterGroundEvent.StateProvider originalProvider = event.getStateProvider();
+		event.setStateProvider((level, random, pos) -> {
+			BlockPos placementPos = findGroundPlacementPos(event, pos);
+			if (placementPos != null && level.getBlockState(placementPos).is(ModBlocks.RICH_SOIL.get())) {
+				return null;
+			}
+			return originalProvider.getState(level, random, pos);
+		});
+	}
 
 	@SubscribeEvent
 	public static void handleVanillaSoupEffects(LivingEntityUseItemEvent.Finish event) {
@@ -34,38 +40,25 @@ public class CommonEvents
 		}
 
 		if (Configuration.ENABLE_VANILLA_SOUP_EXTRA_EFFECTS.get()) {
-			ApplyStatusEffectsConsumeEffect soupEffects = FoodValues.ConsumableValues.VANILLA_SOUP_EFFECTS.get(food);
+			MobEffectInstance soupEffect = FoodValues.VANILLA_SOUP_EFFECTS.get(food);
 
-			if (soupEffects != null) {
-				for (MobEffectInstance effect : soupEffects.effects()) {
-					entity.addEffect(effect);
-				}
+			if (soupEffect != null) {
+				entity.addEffect(new MobEffectInstance(soupEffect));
 			}
 		}
 	}
 
-	@SubscribeEvent
-	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		sendPayload((ServerPlayer) event.getEntity(), new NaturalRegenerationGameRulePayload(NATURAL_REGENERATION));
-	}
-
-	@SubscribeEvent
-	public static void onServerWorldTick(ServerTickEvent.Post event) {
-		boolean currentNaturalRegen = event.getServer().getGameRules().get(GameRules.NATURAL_HEALTH_REGENERATION);
-		if (NATURAL_REGENERATION != currentNaturalRegen) {
-			NATURAL_REGENERATION = currentNaturalRegen;
-
-			NaturalRegenerationGameRulePayload payload = new NaturalRegenerationGameRulePayload(NATURAL_REGENERATION);
-			for (ServerPlayer player : event.getServer().getPlayerList().getPlayers()) {
-				sendPayload(player, payload);
+	private static BlockPos findGroundPlacementPos(AlterGroundEvent event, BlockPos pos) {
+		for (int i = 2; i >= -3; i--) {
+			BlockPos blockPos = pos.above(i);
+			BlockState state = event.getContext().level().getBlockState(blockPos);
+			if (state.is(ModBlocks.RICH_SOIL.get())) {
+				return blockPos;
+			}
+			if (!event.getContext().isAir(blockPos) && i < 0) {
+				return null;
 			}
 		}
-	}
-
-	private static void sendPayload(ServerPlayer player, CustomPacketPayload payload) {
-		if (!player.connection.hasChannel(payload.type().id())) {
-			return;
-		}
- 		PacketDistributor.sendToPlayer(player, payload);
+		return null;
 	}
 }

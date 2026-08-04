@@ -1,7 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.world.WildCropGeneration;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
@@ -26,7 +29,13 @@ public class SandyShrubBlock extends BushBlock implements IShearable, Bonemealab
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	@SuppressWarnings("unchecked")
+	public MapCodec<BushBlock> codec() {
+		return (MapCodec<BushBlock>) (MapCodec<?>) CODEC;
+	}
+
+	@Override
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
@@ -43,5 +52,12 @@ public class SandyShrubBlock extends BushBlock implements IShearable, Bonemealab
 	@Override
 	public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
 		return true;
+	}
+
+	@Override
+	public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+		level.registryAccess().lookupOrThrow(Registries.CONFIGURED_FEATURE)
+				.getValueOrThrow(WildCropGeneration.FEATURE_PATCH_SANDY_SHRUB)
+				.place(level, level.getChunkSource().getGenerator(), random, pos.above());
 	}
 }

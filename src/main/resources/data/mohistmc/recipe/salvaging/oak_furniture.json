@@ -1,33 +1,35 @@
 {
   "type": "mohistmc:cutting",
   "ingredients": [
-    {
-      "neoforge:ingredient_type": "neoforge:compound",
-      "children": [
-        "minecraft:oak_door",
-        "minecraft:oak_trapdoor",
-        "minecraft:oak_sign",
-        "minecraft:oak_hanging_sign",
-        "minecraft:oak_fence",
-        "minecraft:oak_fence_gate",
-        "minecraft:oak_pressure_plate",
-        "minecraft:oak_button",
-        "minecraft:oak_boat",
-        "mohistmc:oak_cabinet"
-      ]
-    }
+    [
+      "minecraft:oak_door",
+      "minecraft:oak_trapdoor",
+      "minecraft:oak_sign",
+      "minecraft:oak_hanging_sign",
+      "minecraft:oak_fence",
+      "minecraft:oak_fence_gate",
+      "minecraft:oak_pressure_plate",
+      "minecraft:oak_button",
+      "minecraft:oak_boat",
+      "mohistmc:oak_cabinet"
+    ]
   ],
   "result": [
     {
       "chance": 0.75,
       "item": {
-        "count": 1,
         "id": "minecraft:oak_planks"
       }
     }
   ],
   "tool": {
-    "neoforge:ingredient_type": "mohistmc:item_ability",
-    "action": "axe_dig"
+    "neoforge:ingredient_type": "neoforge:compound",
+    "children": [
+      {
+        "neoforge:ingredient_type": "mohistmc:item_ability",
+        "action": "axe_dig"
+      },
+      "#minecraft:axes"
+    ]
   }
 }

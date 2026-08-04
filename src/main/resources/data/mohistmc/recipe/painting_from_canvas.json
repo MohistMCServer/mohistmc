@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "c": "mohistmc:canvas",
     "s": "minecraft:stick"
@@ -11,7 +10,6 @@
     "sss"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:painting"
   }
 }

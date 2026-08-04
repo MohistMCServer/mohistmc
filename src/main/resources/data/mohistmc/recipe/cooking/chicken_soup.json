@@ -7,17 +7,12 @@
     "#c:foods/leafy_green",
     {
       "neoforge:ingredient_type": "neoforge:difference",
-      "base": {
-        "tag": "c:foods/vegetable"
-      },
-      "subtracted": {
-        "item": "minecraft:melon_slice"
-      }
+      "base": "#c:foods/vegetable",
+      "subtracted": "minecraft:melon_slice"
     }
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "mohistmc:chicken_soup"
   }
 }

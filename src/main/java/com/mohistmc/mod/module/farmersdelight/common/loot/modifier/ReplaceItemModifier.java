@@ -41,10 +41,6 @@ public class ReplaceItemModifier extends LootModifier
 		this.addedCount = addedCount;
 	}
 
-	public ReplaceItemModifier(LootItemCondition[] conditions, Item removedItem, Item addedItem, int addedCount) {
-		this(conditions, IGlobalLootModifier.DEFAULT_PRIORITY, removedItem, addedItem, addedCount);
-	}
-
 	@Override
 	protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		ItemStack addedStack = new ItemStack(addedItem, addedCount);

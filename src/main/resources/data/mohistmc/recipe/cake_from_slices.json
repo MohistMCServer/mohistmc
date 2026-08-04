@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "group": "cake",
   "ingredients": [
     "mohistmc:cake_slice",
@@ -12,7 +11,6 @@
     "mohistmc:cake_slice"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:cake"
   }
 }

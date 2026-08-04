@@ -2,11 +2,12 @@ package com.mohistmc.mod.module.farmersdelight.common.block;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.BasketBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
@@ -15,6 +16,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -40,8 +42,6 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.BasketBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 
 @SuppressWarnings("deprecation")
 public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
@@ -55,14 +55,14 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	public static final VoxelShape OUT_SHAPE = Shapes.block();
 	public static final VoxelShape RENDER_SHAPE = box(1.0D, 1.0D, 1.0D, 15.0D, 15.0D, 15.0D);
 	public static final ImmutableMap<Direction, VoxelShape> COLLISION_SHAPE_FACING =
-		Maps.immutableEnumMap(ImmutableMap.<Direction, VoxelShape>builder()
-			.put(Direction.DOWN, makeHollowCubeShape(box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D)))
-			.put(Direction.UP, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 14.0D, 16.0D, 14.0D)))
-			.put(Direction.NORTH, makeHollowCubeShape(box(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 14.0D)))
-			.put(Direction.SOUTH, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 14.0D, 14.0D, 16.0D)))
-			.put(Direction.WEST, makeHollowCubeShape(box(0.0D, 2.0D, 2.0D, 14.0D, 14.0D, 14.0D)))
-			.put(Direction.EAST, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 16.0D, 14.0D, 14.0D)))
-			.build());
+			Maps.immutableEnumMap(ImmutableMap.<Direction, VoxelShape>builder()
+					.put(Direction.DOWN, makeHollowCubeShape(box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D)))
+					.put(Direction.UP, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 14.0D, 16.0D, 14.0D)))
+					.put(Direction.NORTH, makeHollowCubeShape(box(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 14.0D)))
+					.put(Direction.SOUTH, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 14.0D, 14.0D, 16.0D)))
+					.put(Direction.WEST, makeHollowCubeShape(box(0.0D, 2.0D, 2.0D, 14.0D, 14.0D, 14.0D)))
+					.put(Direction.EAST, makeHollowCubeShape(box(2.0D, 2.0D, 2.0D, 16.0D, 14.0D, 14.0D)))
+					.build());
 
 	private static VoxelShape makeHollowCubeShape(VoxelShape cutout) {
 		return Shapes.joinUnoptimized(OUT_SHAPE, cutout, BooleanOp.ONLY_FIRST).optimize();
@@ -97,22 +97,21 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
-		if (level.getBlockEntity(pos) instanceof BasketBlockEntity basket) {
-			Containers.dropContents(level, pos, basket);
-			level.updateNeighbourForOutputSignal(pos, this);
+	public void destroy(LevelAccessor level, BlockPos pos, BlockState state) {
+		if (level instanceof Level realLevel && realLevel.getBlockEntity(pos) instanceof BasketBlockEntity basket) {
+			Containers.dropContents(realLevel, pos, basket);
+			realLevel.updateNeighbourForOutputSignal(pos, this);
 		}
-
-		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
+		super.destroy(level, pos, state);
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
 		if (state.getValue(WATERLOGGED)) {
-			ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+			tickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
 
-		return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+		return super.updateShape(state, level, tickAccess, currentPos, facing, facingPos, facingState, random);
 	}
 
 	@Override
@@ -121,7 +120,7 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	@Override
-	public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, Orientation orientation, boolean movedByPiston) {
+	protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, Orientation orientation, boolean isMoving) {
 		boolean isPowered = !level.hasNeighborSignal(pos);
 		if (isPowered != state.getValue(ENABLED)) {
 			level.setBlock(pos, state.setValue(ENABLED, isPowered), 4);
@@ -129,7 +128,7 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	@Override
-	public boolean hasAnalogOutputSignal(BlockState state) {
+	protected boolean hasAnalogOutputSignal(BlockState state) {
 		return true;
 	}
 
@@ -142,21 +141,21 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		FluidState fluid = context.getLevel().getFluidState(context.getClickedPos());
 		return this.defaultBlockState()
-			.setValue(FACING, context.getNearestLookingDirection().getOpposite())
-			.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
+				.setValue(FACING, context.getNearestLookingDirection().getOpposite())
+				.setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
 	}
 
-	public boolean useShapeForLightOcclusion(BlockState state) {
+	protected boolean useShapeForLightOcclusion(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return COLLISION_SHAPE_FACING.get(state.getValue(FACING));
 	}
 
 	@Override
-	public VoxelShape getOcclusionShape(BlockState state) {
+	protected VoxelShape getOcclusionShape(BlockState state) {
 		return RENDER_SHAPE;
 	}
 
@@ -166,7 +165,7 @@ public class BasketBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 
 	@Override
-	public VoxelShape getInteractionShape(BlockState state, BlockGetter level, BlockPos pos) {
+	protected VoxelShape getInteractionShape(BlockState state, BlockGetter level, BlockPos pos) {
 		return OUT_SHAPE;
 	}
 

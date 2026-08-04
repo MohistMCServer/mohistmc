@@ -6,7 +6,18 @@
   "mixins": [
     "LevelSummaryMixin",
     "MixinComponent",
-    "PrimaryLevelDataMixinNeo"
+    "PrimaryLevelDataMixinNeo",
+    "farmersdelight.datafix.ItemStackComponentizationFixMixin",
+    "farmersdelight.datafix.V1460Mixin",
+    "farmersdelight.datafix.V3818_3Mixin",
+    "farmersdelight.CampfireBaleMixin",
+    "farmersdelight.CuttingBoardDispenserMixin",
+    "farmersdelight.KeepRichSoilTreeMixin",
+    "farmersdelight.KeepRichSoilUntrampledMixin",
+    "farmersdelight.NourishmentAlwaysEatMixin",
+    "farmersdelight.PlacePumpkinPieMixin",
+    "farmersdelight.RopeFenceConnectionMixin",
+    "farmersdelight.VillagersTargetRichSoilMixin"
   ],
   "client": [
     "BakedGlyphMixin",
@@ -26,7 +37,9 @@
     "loadingbackgrounds.MixinConnectScreen",
     "loadingbackgrounds.MixinDownloadingTerrainScreen",
     "loadingbackgrounds.MixinLevelLoadingScreen",
-    "loadingbackgrounds.MixinProgressScreen"
+    "loadingbackgrounds.MixinProgressScreen",
+    "farmersdelight.CanvasSignEditScreenMixin",
+    "farmersdelight.HideBlockBreakProgressMixin"
   ],
   "injectors": {
     "defaultRequire": 1

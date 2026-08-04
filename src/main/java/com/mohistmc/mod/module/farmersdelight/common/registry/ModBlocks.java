@@ -1,7 +1,52 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.BlockShapes;
+import com.mohistmc.mod.module.farmersdelight.common.block.BasketBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.BuddingTomatoBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CabbageBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CabinetBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CanvasRugBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CeilingHangingCanvasSignBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CookingPotBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.CuttingBoardBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.FeastBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.GleamingSaladBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.HangingTomatoBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.MushroomColonyBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.OnionBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.OrganicCompostBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.PieBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RiceBaleBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RiceBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RicePaniclesBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RiceRollMedleyBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RichSoilBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RichSoilFarmlandBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RopeBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RopeFenceBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RopeFenceGateBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.RotatedFeastBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.SafetyNetBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.SandyShrubBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.SkilletBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.StandingCanvasSignBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.StoveBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.StrawBaleBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.TatamiBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.TatamiHalfMatBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.TatamiMatBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.TomatoBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.WallCanvasSignBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.WallHangingCanvasSignBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.WildCropBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.WildRiceBlock;
+import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -15,16 +60,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.BlockShapes;
-import com.mohistmc.mod.module.farmersdelight.common.block.*;
 
 public class ModBlocks
 {
-	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FarmersDelight.MODID);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, FarmersDelight.MODID);
 
 	private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {
 		return (state) -> state.getValue(BlockStateProperties.LIT) ? lightValue : 0;
@@ -34,281 +76,316 @@ public class ModBlocks
 		return (state) -> state.getValue(FeastBlock.SERVINGS) * 3;
 	}
 
+	private static ResourceKey<Block> blockKey(String name) {
+		return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FarmersDelight.MODID, name));
+	}
+
+	private static BlockBehaviour.Properties cropProperties(String name) {
+		return BlockBehaviour.Properties.of()
+				.mapColor(MapColor.PLANT)
+				.noCollision()
+				.randomTicks()
+				.instabreak()
+				.sound(SoundType.CROP)
+				.pushReaction(PushReaction.DESTROY)
+				.setId(blockKey(name));
+	}
+
 	// Workstations
-	public static final DeferredBlock<Block> STOVE = BLOCKS.registerBlock("stove", StoveBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).lightLevel(litBlockEmission(13)));
-	public static final DeferredBlock<Block> COOKING_POT = BLOCKS.registerBlock("cooking_pot", CookingPotBlock::new, () -> BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN));
-	public static final DeferredBlock<Block> SKILLET = BLOCKS.registerBlock("skillet", SkilletBlock::new, () -> BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN));
-	public static final DeferredBlock<Block> WOODEN_BASKET = BLOCKS.registerBlock("wooden_basket", BasketBlock::new, () -> BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> BAMBOO_BASKET = BLOCKS.registerBlock("bamboo_basket", BasketBlock::new, () -> BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.BAMBOO_WOOD));
-	public static final DeferredBlock<Block> CUTTING_BOARD = BLOCKS.registerBlock("cutting_board", CuttingBoardBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F).sound(SoundType.WOOD));
+	public static final Supplier<Block> STOVE = BLOCKS.register("stove",
+			() -> new StoveBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BRICKS).lightLevel(litBlockEmission(13)).setId(blockKey("stove"))));
+	public static final Supplier<Block> COOKING_POT = BLOCKS.register("cooking_pot",
+			() -> new CookingPotBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN).setId(blockKey("cooking_pot"))));
+	public static final Supplier<Block> SKILLET = BLOCKS.register("skillet",
+			() -> new SkilletBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN).setId(blockKey("skillet"))));
+	public static final Supplier<Block> WOODEN_BASKET = BLOCKS.register("wooden_basket",
+			() -> new BasketBlock(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).setId(blockKey("wooden_basket"))));
+	public static final Supplier<Block> BAMBOO_BASKET = BLOCKS.register("bamboo_basket",
+			() -> new BasketBlock(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.BAMBOO_WOOD).setId(blockKey("bamboo_basket"))));
+	public static final Supplier<Block> CUTTING_BOARD = BLOCKS.register("cutting_board",
+			() -> new CuttingBoardBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F).sound(SoundType.WOOD).setId(blockKey("cutting_board"))));
+
+	/**
+	 * Deprecated reference added for backwards compatibility. Use BAMBOO_BASKET instead.
+	 */
+	@Deprecated(forRemoval = true)
+	public static final Supplier<Block> BASKET = BAMBOO_BASKET;
 
 	// Crop Storage
-	public static final DeferredBlock<Block> CARROT_CRATE = BLOCKS.registerBlock("carrot_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> POTATO_CRATE = BLOCKS.registerBlock("potato_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> BEETROOT_CRATE = BLOCKS.registerBlock("beetroot_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> CABBAGE_CRATE = BLOCKS.registerBlock("cabbage_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> TOMATO_CRATE = BLOCKS.registerBlock("tomato_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> ONION_CRATE = BLOCKS.registerBlock("onion_crate",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD));
-	public static final DeferredBlock<Block> RICE_BALE = BLOCKS.registerBlock("rice_bale",
-		RiceBaleBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK));
-	public static final DeferredBlock<Block> RICE_BAG = BLOCKS.registerBlock("rice_bag",
-		Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()));
-	public static final DeferredBlock<Block> STRAW_BALE = BLOCKS.registerBlock("straw_bale",
-		StrawBaleBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK));
+	public static final Supplier<Block> CARROT_CRATE = BLOCKS.register("carrot_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("carrot_crate"))));
+	public static final Supplier<Block> POTATO_CRATE = BLOCKS.register("potato_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("potato_crate"))));
+	public static final Supplier<Block> BEETROOT_CRATE = BLOCKS.register("beetroot_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("beetroot_crate"))));
+	public static final Supplier<Block> CABBAGE_CRATE = BLOCKS.register("cabbage_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("cabbage_crate"))));
+	public static final Supplier<Block> TOMATO_CRATE = BLOCKS.register("tomato_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("tomato_crate"))));
+	public static final Supplier<Block> ONION_CRATE = BLOCKS.register("onion_crate",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD).setId(blockKey("onion_crate"))));
+	public static final Supplier<Block> RICE_BALE = BLOCKS.register("rice_bale",
+			() -> new RiceBaleBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.HAY_BLOCK).setId(blockKey("rice_bale"))));
+	public static final Supplier<Block> RICE_BAG = BLOCKS.register("rice_bag",
+			() -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.WOOL.white()).setId(blockKey("rice_bag"))));
+	public static final Supplier<Block> STRAW_BALE = BLOCKS.register("straw_bale",
+			() -> new StrawBaleBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.HAY_BLOCK).setId(blockKey("straw_bale"))));
 
 	// Building
-	public static final DeferredBlock<Block> ROPE = BLOCKS.registerBlock("rope",
-		RopeBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CARPET.brown()).noCollision().noOcclusion().strength(0.2F).sound(SoundType.WOOL));
-	public static final DeferredBlock<Block> SAFETY_NET = BLOCKS.registerBlock("safety_net",
-		SafetyNetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CARPET.brown()).strength(0.2F).sound(SoundType.WOOL));
-	public static final DeferredBlock<Block> ROPE_FENCE = BLOCKS.registerBlock("rope_fence",
-		RopeFenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE).strength(1.0F));
-	public static final DeferredBlock<Block> ROPE_FENCE_GATE = BLOCKS.registerBlock("rope_fence_gate",
-		RopeFenceGateBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE).strength(1.0F));
-	public static final DeferredBlock<Block> OAK_CABINET = BLOCKS.registerBlock("oak_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> SPRUCE_CABINET = BLOCKS.registerBlock("spruce_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> BIRCH_CABINET = BLOCKS.registerBlock("birch_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> JUNGLE_CABINET = BLOCKS.registerBlock("jungle_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> ACACIA_CABINET = BLOCKS.registerBlock("acacia_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> DARK_OAK_CABINET = BLOCKS.registerBlock("dark_oak_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> MANGROVE_CABINET = BLOCKS.registerBlock("mangrove_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL));
-	public static final DeferredBlock<Block> CHERRY_CABINET = BLOCKS.registerBlock("cherry_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).sound(SoundType.CHERRY_WOOD));
-	public static final DeferredBlock<Block> BAMBOO_CABINET = BLOCKS.registerBlock("bamboo_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).sound(SoundType.BAMBOO_WOOD));
-	public static final DeferredBlock<Block> CRIMSON_CABINET = BLOCKS.registerBlock("crimson_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).sound(SoundType.NETHER_WOOD));
-	public static final DeferredBlock<Block> WARPED_CABINET = BLOCKS.registerBlock("warped_cabinet",
-		CabinetBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).sound(SoundType.NETHER_WOOD));
-	public static final DeferredBlock<Block> CANVAS_RUG = BLOCKS.registerBlock("canvas_rug",
-		CanvasRugBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CARPET.white()).sound(SoundType.GRASS).strength(0.2F));
-	public static final DeferredBlock<Block> TATAMI = BLOCKS.registerBlock("tatami",
-		TatamiBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()));
-	public static final DeferredBlock<Block> FULL_TATAMI_MAT = BLOCKS.registerBlock("full_tatami_mat",
-		TatamiMatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()).strength(0.3F));
-	public static final DeferredBlock<Block> HALF_TATAMI_MAT = BLOCKS.registerBlock("half_tatami_mat",
-		TatamiHalfMatBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()).strength(0.3F).pushReaction(PushReaction.DESTROY));
+	public static final Supplier<Block> ROPE = BLOCKS.register("rope",
+			() -> new RopeBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.brown()).noCollision().noOcclusion().strength(0.2F).sound(SoundType.WOOL).setId(blockKey("rope"))));
+	public static final Supplier<Block> SAFETY_NET = BLOCKS.register("safety_net",
+			() -> new SafetyNetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.brown()).strength(0.2F).sound(SoundType.WOOL).setId(blockKey("safety_net"))));
+	public static final Supplier<Block> ROPE_FENCE = BLOCKS.register("rope_fence",
+			() -> new RopeFenceBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_FENCE).strength(1.0F).setId(blockKey("rope_fence"))));
+	public static final Supplier<Block> ROPE_FENCE_GATE = BLOCKS.register("rope_fence_gate",
+			() -> new RopeFenceGateBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_FENCE).strength(1.0F).setId(blockKey("rope_fence_gate"))));
+	public static final Supplier<Block> OAK_CABINET = BLOCKS.register("oak_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("oak_cabinet"))));
+	public static final Supplier<Block> SPRUCE_CABINET = BLOCKS.register("spruce_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("spruce_cabinet"))));
+	public static final Supplier<Block> BIRCH_CABINET = BLOCKS.register("birch_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("birch_cabinet"))));
+	public static final Supplier<Block> JUNGLE_CABINET = BLOCKS.register("jungle_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("jungle_cabinet"))));
+	public static final Supplier<Block> ACACIA_CABINET = BLOCKS.register("acacia_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("acacia_cabinet"))));
+	public static final Supplier<Block> DARK_OAK_CABINET = BLOCKS.register("dark_oak_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("dark_oak_cabinet"))));
+	public static final Supplier<Block> MANGROVE_CABINET = BLOCKS.register("mangrove_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).setId(blockKey("mangrove_cabinet"))));
+	public static final Supplier<Block> CHERRY_CABINET = BLOCKS.register("cherry_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).sound(SoundType.CHERRY_WOOD).setId(blockKey("cherry_cabinet"))));
+	public static final Supplier<Block> BAMBOO_CABINET = BLOCKS.register("bamboo_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).sound(SoundType.BAMBOO_WOOD).setId(blockKey("bamboo_cabinet"))));
+	public static final Supplier<Block> CRIMSON_CABINET = BLOCKS.register("crimson_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).sound(SoundType.NETHER_WOOD).setId(blockKey("crimson_cabinet"))));
+	public static final Supplier<Block> WARPED_CABINET = BLOCKS.register("warped_cabinet",
+			() -> new CabinetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.BARREL).sound(SoundType.NETHER_WOOD).setId(blockKey("warped_cabinet"))));
+	public static final Supplier<Block> CANVAS_RUG = BLOCKS.register("canvas_rug",
+			() -> new CanvasRugBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.white()).sound(SoundType.GRASS).strength(0.2F).setId(blockKey("canvas_rug"))));
+	public static final Supplier<Block> TATAMI = BLOCKS.register("tatami",
+			() -> new TatamiBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.WOOL.white()).setId(blockKey("tatami"))));
+	public static final Supplier<Block> FULL_TATAMI_MAT = BLOCKS.register("full_tatami_mat",
+			() -> new TatamiMatBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.WOOL.white()).strength(0.3F).setId(blockKey("full_tatami_mat"))));
+	public static final Supplier<Block> HALF_TATAMI_MAT = BLOCKS.register("half_tatami_mat",
+			() -> new TatamiHalfMatBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.WOOL.white()).strength(0.3F).pushReaction(PushReaction.DESTROY).setId(blockKey("half_tatami_mat"))));
 
-	public static final DeferredBlock<Block> CANVAS_SIGN = BLOCKS.registerBlock("canvas_sign",
-		props -> new StandingCanvasSignBlock(props, null), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> WHITE_CANVAS_SIGN = BLOCKS.registerBlock("white_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.WHITE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> ORANGE_CANVAS_SIGN = BLOCKS.registerBlock("orange_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.ORANGE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> MAGENTA_CANVAS_SIGN = BLOCKS.registerBlock("magenta_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.MAGENTA), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> LIGHT_BLUE_CANVAS_SIGN = BLOCKS.registerBlock("light_blue_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.LIGHT_BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> YELLOW_CANVAS_SIGN = BLOCKS.registerBlock("yellow_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.YELLOW), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> LIME_CANVAS_SIGN = BLOCKS.registerBlock("lime_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.LIME), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> PINK_CANVAS_SIGN = BLOCKS.registerBlock("pink_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.PINK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> GRAY_CANVAS_SIGN = BLOCKS.registerBlock("gray_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> LIGHT_GRAY_CANVAS_SIGN = BLOCKS.registerBlock("light_gray_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.LIGHT_GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> CYAN_CANVAS_SIGN = BLOCKS.registerBlock("cyan_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.CYAN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> PURPLE_CANVAS_SIGN = BLOCKS.registerBlock("purple_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.PURPLE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> BLUE_CANVAS_SIGN = BLOCKS.registerBlock("blue_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> BROWN_CANVAS_SIGN = BLOCKS.registerBlock("brown_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.BROWN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> GREEN_CANVAS_SIGN = BLOCKS.registerBlock("green_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.GREEN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> RED_CANVAS_SIGN = BLOCKS.registerBlock("red_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.RED), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
-	public static final DeferredBlock<Block> BLACK_CANVAS_SIGN = BLOCKS.registerBlock("black_canvas_sign",
-		props -> new StandingCanvasSignBlock(props, DyeColor.BLACK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN));
+	public static final Supplier<Block> CANVAS_SIGN = BLOCKS.register("canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("canvas_sign")), null));
+	public static final Supplier<Block> WHITE_CANVAS_SIGN = BLOCKS.register("white_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("white_canvas_sign")), DyeColor.WHITE));
+	public static final Supplier<Block> ORANGE_CANVAS_SIGN = BLOCKS.register("orange_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("orange_canvas_sign")), DyeColor.ORANGE));
+	public static final Supplier<Block> MAGENTA_CANVAS_SIGN = BLOCKS.register("magenta_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("magenta_canvas_sign")), DyeColor.MAGENTA));
+	public static final Supplier<Block> LIGHT_BLUE_CANVAS_SIGN = BLOCKS.register("light_blue_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("light_blue_canvas_sign")), DyeColor.LIGHT_BLUE));
+	public static final Supplier<Block> YELLOW_CANVAS_SIGN = BLOCKS.register("yellow_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("yellow_canvas_sign")), DyeColor.YELLOW));
+	public static final Supplier<Block> LIME_CANVAS_SIGN = BLOCKS.register("lime_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("lime_canvas_sign")), DyeColor.LIME));
+	public static final Supplier<Block> PINK_CANVAS_SIGN = BLOCKS.register("pink_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("pink_canvas_sign")), DyeColor.PINK));
+	public static final Supplier<Block> GRAY_CANVAS_SIGN = BLOCKS.register("gray_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("gray_canvas_sign")), DyeColor.GRAY));
+	public static final Supplier<Block> LIGHT_GRAY_CANVAS_SIGN = BLOCKS.register("light_gray_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("light_gray_canvas_sign")), DyeColor.LIGHT_GRAY));
+	public static final Supplier<Block> CYAN_CANVAS_SIGN = BLOCKS.register("cyan_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("cyan_canvas_sign")), DyeColor.CYAN));
+	public static final Supplier<Block> PURPLE_CANVAS_SIGN = BLOCKS.register("purple_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("purple_canvas_sign")), DyeColor.PURPLE));
+	public static final Supplier<Block> BLUE_CANVAS_SIGN = BLOCKS.register("blue_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("blue_canvas_sign")), DyeColor.BLUE));
+	public static final Supplier<Block> BROWN_CANVAS_SIGN = BLOCKS.register("brown_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("brown_canvas_sign")), DyeColor.BROWN));
+	public static final Supplier<Block> GREEN_CANVAS_SIGN = BLOCKS.register("green_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("green_canvas_sign")), DyeColor.GREEN));
+	public static final Supplier<Block> RED_CANVAS_SIGN = BLOCKS.register("red_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("red_canvas_sign")), DyeColor.RED));
+	public static final Supplier<Block> BLACK_CANVAS_SIGN = BLOCKS.register("black_canvas_sign",
+			() -> new StandingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).setId(blockKey("black_canvas_sign")), DyeColor.BLACK));
 
-	public static final DeferredBlock<Block> CANVAS_WALL_SIGN = BLOCKS.registerBlock("canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, null), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> WHITE_CANVAS_WALL_SIGN = BLOCKS.registerBlock("white_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.WHITE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(WHITE_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> ORANGE_CANVAS_WALL_SIGN = BLOCKS.registerBlock("orange_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.ORANGE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(ORANGE_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> MAGENTA_CANVAS_WALL_SIGN = BLOCKS.registerBlock("magenta_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.MAGENTA), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(MAGENTA_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIGHT_BLUE_CANVAS_WALL_SIGN = BLOCKS.registerBlock("light_blue_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.LIGHT_BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(LIGHT_BLUE_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> YELLOW_CANVAS_WALL_SIGN = BLOCKS.registerBlock("yellow_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.YELLOW), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(YELLOW_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIME_CANVAS_WALL_SIGN = BLOCKS.registerBlock("lime_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.LIME), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(LIME_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> PINK_CANVAS_WALL_SIGN = BLOCKS.registerBlock("pink_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.PINK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(PINK_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> GRAY_CANVAS_WALL_SIGN = BLOCKS.registerBlock("gray_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(GRAY_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIGHT_GRAY_CANVAS_WALL_SIGN = BLOCKS.registerBlock("light_gray_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.LIGHT_GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(LIGHT_GRAY_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> CYAN_CANVAS_WALL_SIGN = BLOCKS.registerBlock("cyan_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.CYAN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(CYAN_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> PURPLE_CANVAS_WALL_SIGN = BLOCKS.registerBlock("purple_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.PURPLE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(PURPLE_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BLUE_CANVAS_WALL_SIGN = BLOCKS.registerBlock("blue_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(BLUE_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BROWN_CANVAS_WALL_SIGN = BLOCKS.registerBlock("brown_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.BROWN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(BROWN_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> GREEN_CANVAS_WALL_SIGN = BLOCKS.registerBlock("green_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.GREEN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(GREEN_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> RED_CANVAS_WALL_SIGN = BLOCKS.registerBlock("red_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.RED), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(RED_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BLACK_CANVAS_WALL_SIGN = BLOCKS.registerBlock("black_canvas_wall_sign",
-		props -> new WallCanvasSignBlock(props, DyeColor.BLACK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SIGN).overrideLootTable(BLACK_CANVAS_SIGN.get().getLootTable()));
+	public static final Supplier<Block> CANVAS_WALL_SIGN = BLOCKS.register("canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("canvas_wall_sign")), null));
+	public static final Supplier<Block> WHITE_CANVAS_WALL_SIGN = BLOCKS.register("white_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("white_canvas_wall_sign")), DyeColor.WHITE));
+	public static final Supplier<Block> ORANGE_CANVAS_WALL_SIGN = BLOCKS.register("orange_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("orange_canvas_wall_sign")), DyeColor.ORANGE));
+	public static final Supplier<Block> MAGENTA_CANVAS_WALL_SIGN = BLOCKS.register("magenta_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("magenta_canvas_wall_sign")), DyeColor.MAGENTA));
+	public static final Supplier<Block> LIGHT_BLUE_CANVAS_WALL_SIGN = BLOCKS.register("light_blue_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("light_blue_canvas_wall_sign")), DyeColor.LIGHT_BLUE));
+	public static final Supplier<Block> YELLOW_CANVAS_WALL_SIGN = BLOCKS.register("yellow_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("yellow_canvas_wall_sign")), DyeColor.YELLOW));
+	public static final Supplier<Block> LIME_CANVAS_WALL_SIGN = BLOCKS.register("lime_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("lime_canvas_wall_sign")), DyeColor.LIME));
+	public static final Supplier<Block> PINK_CANVAS_WALL_SIGN = BLOCKS.register("pink_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("pink_canvas_wall_sign")), DyeColor.PINK));
+	public static final Supplier<Block> GRAY_CANVAS_WALL_SIGN = BLOCKS.register("gray_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("gray_canvas_wall_sign")), DyeColor.GRAY));
+	public static final Supplier<Block> LIGHT_GRAY_CANVAS_WALL_SIGN = BLOCKS.register("light_gray_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("light_gray_canvas_wall_sign")), DyeColor.LIGHT_GRAY));
+	public static final Supplier<Block> CYAN_CANVAS_WALL_SIGN = BLOCKS.register("cyan_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("cyan_canvas_wall_sign")), DyeColor.CYAN));
+	public static final Supplier<Block> PURPLE_CANVAS_WALL_SIGN = BLOCKS.register("purple_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("purple_canvas_wall_sign")), DyeColor.PURPLE));
+	public static final Supplier<Block> BLUE_CANVAS_WALL_SIGN = BLOCKS.register("blue_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("blue_canvas_wall_sign")), DyeColor.BLUE));
+	public static final Supplier<Block> BROWN_CANVAS_WALL_SIGN = BLOCKS.register("brown_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("brown_canvas_wall_sign")), DyeColor.BROWN));
+	public static final Supplier<Block> GREEN_CANVAS_WALL_SIGN = BLOCKS.register("green_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("green_canvas_wall_sign")), DyeColor.GREEN));
+	public static final Supplier<Block> RED_CANVAS_WALL_SIGN = BLOCKS.register("red_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("red_canvas_wall_sign")), DyeColor.RED));
+	public static final Supplier<Block> BLACK_CANVAS_WALL_SIGN = BLOCKS.register("black_canvas_wall_sign",
+			() -> new WallCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_SIGN).setId(blockKey("black_canvas_wall_sign")), DyeColor.BLACK));
 
-	public static final DeferredBlock<Block> HANGING_CANVAS_SIGN = BLOCKS.registerBlock("hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, null), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> WHITE_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("white_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.WHITE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> ORANGE_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("orange_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.ORANGE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> MAGENTA_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("magenta_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.MAGENTA), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> LIGHT_BLUE_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("light_blue_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.LIGHT_BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> YELLOW_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("yellow_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.YELLOW), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> LIME_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("lime_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.LIME), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> PINK_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("pink_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.PINK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> GRAY_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("gray_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> LIGHT_GRAY_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("light_gray_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.LIGHT_GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> CYAN_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("cyan_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.CYAN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> PURPLE_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("purple_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.PURPLE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> BLUE_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("blue_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> BROWN_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("brown_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.BROWN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> GREEN_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("green_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.GREEN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> RED_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("red_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.RED), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
-	public static final DeferredBlock<Block> BLACK_HANGING_CANVAS_SIGN = BLOCKS.registerBlock("black_hanging_canvas_sign",
-		props -> new CeilingHangingCanvasSignBlock(props, DyeColor.BLACK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN));
+	public static final Supplier<Block> HANGING_CANVAS_SIGN = BLOCKS.register("hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("hanging_canvas_sign")), null));
+	public static final Supplier<Block> WHITE_HANGING_CANVAS_SIGN = BLOCKS.register("white_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("white_hanging_canvas_sign")), DyeColor.WHITE));
+	public static final Supplier<Block> ORANGE_HANGING_CANVAS_SIGN = BLOCKS.register("orange_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("orange_hanging_canvas_sign")), DyeColor.ORANGE));
+	public static final Supplier<Block> MAGENTA_HANGING_CANVAS_SIGN = BLOCKS.register("magenta_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("magenta_hanging_canvas_sign")), DyeColor.MAGENTA));
+	public static final Supplier<Block> LIGHT_BLUE_HANGING_CANVAS_SIGN = BLOCKS.register("light_blue_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("light_blue_hanging_canvas_sign")), DyeColor.LIGHT_BLUE));
+	public static final Supplier<Block> YELLOW_HANGING_CANVAS_SIGN = BLOCKS.register("yellow_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("yellow_hanging_canvas_sign")), DyeColor.YELLOW));
+	public static final Supplier<Block> LIME_HANGING_CANVAS_SIGN = BLOCKS.register("lime_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("lime_hanging_canvas_sign")), DyeColor.LIME));
+	public static final Supplier<Block> PINK_HANGING_CANVAS_SIGN = BLOCKS.register("pink_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("pink_hanging_canvas_sign")), DyeColor.PINK));
+	public static final Supplier<Block> GRAY_HANGING_CANVAS_SIGN = BLOCKS.register("gray_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("gray_hanging_canvas_sign")), DyeColor.GRAY));
+	public static final Supplier<Block> LIGHT_GRAY_HANGING_CANVAS_SIGN = BLOCKS.register("light_gray_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("light_gray_hanging_canvas_sign")), DyeColor.LIGHT_GRAY));
+	public static final Supplier<Block> CYAN_HANGING_CANVAS_SIGN = BLOCKS.register("cyan_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("cyan_hanging_canvas_sign")), DyeColor.CYAN));
+	public static final Supplier<Block> PURPLE_HANGING_CANVAS_SIGN = BLOCKS.register("purple_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("purple_hanging_canvas_sign")), DyeColor.PURPLE));
+	public static final Supplier<Block> BLUE_HANGING_CANVAS_SIGN = BLOCKS.register("blue_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("blue_hanging_canvas_sign")), DyeColor.BLUE));
+	public static final Supplier<Block> BROWN_HANGING_CANVAS_SIGN = BLOCKS.register("brown_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("brown_hanging_canvas_sign")), DyeColor.BROWN));
+	public static final Supplier<Block> GREEN_HANGING_CANVAS_SIGN = BLOCKS.register("green_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("green_hanging_canvas_sign")), DyeColor.GREEN));
+	public static final Supplier<Block> RED_HANGING_CANVAS_SIGN = BLOCKS.register("red_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("red_hanging_canvas_sign")), DyeColor.RED));
+	public static final Supplier<Block> BLACK_HANGING_CANVAS_SIGN = BLOCKS.register("black_hanging_canvas_sign",
+			() -> new CeilingHangingCanvasSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_HANGING_SIGN).setId(blockKey("black_hanging_canvas_sign")), DyeColor.BLACK));
 
-	public static final DeferredBlock<Block> HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, null), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> WHITE_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("white_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.WHITE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(WHITE_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> ORANGE_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("orange_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.ORANGE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(ORANGE_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> MAGENTA_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("magenta_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.MAGENTA), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(MAGENTA_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIGHT_BLUE_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("light_blue_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.LIGHT_BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(LIGHT_BLUE_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> YELLOW_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("yellow_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.YELLOW), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(YELLOW_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIME_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("lime_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.LIME), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(LIME_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> PINK_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("pink_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.PINK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(PINK_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> GRAY_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("gray_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(GRAY_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> LIGHT_GRAY_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("light_gray_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.LIGHT_GRAY), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(LIGHT_GRAY_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> CYAN_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("cyan_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.CYAN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(CYAN_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> PURPLE_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("purple_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.PURPLE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(PURPLE_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BLUE_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("blue_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.BLUE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(BLUE_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BROWN_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("brown_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.BROWN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(BROWN_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> GREEN_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("green_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.GREEN), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(GREEN_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> RED_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("red_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.RED), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(RED_HANGING_CANVAS_SIGN.get().getLootTable()));
-	public static final DeferredBlock<Block> BLACK_HANGING_CANVAS_WALL_SIGN = BLOCKS.registerBlock("black_wall_hanging_canvas_sign",
-		props -> new WallHangingCanvasSignBlock(props, DyeColor.BLACK), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).overrideLootTable(BLACK_HANGING_CANVAS_SIGN.get().getLootTable()));
+	public static final Supplier<Block> HANGING_CANVAS_WALL_SIGN = BLOCKS.register("wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("wall_hanging_canvas_sign")), null));
+	public static final Supplier<Block> WHITE_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("white_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("white_wall_hanging_canvas_sign")), DyeColor.WHITE));
+	public static final Supplier<Block> ORANGE_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("orange_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("orange_wall_hanging_canvas_sign")), DyeColor.ORANGE));
+	public static final Supplier<Block> MAGENTA_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("magenta_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("magenta_wall_hanging_canvas_sign")), DyeColor.MAGENTA));
+	public static final Supplier<Block> LIGHT_BLUE_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("light_blue_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("light_blue_wall_hanging_canvas_sign")), DyeColor.LIGHT_BLUE));
+	public static final Supplier<Block> YELLOW_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("yellow_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("yellow_wall_hanging_canvas_sign")), DyeColor.YELLOW));
+	public static final Supplier<Block> LIME_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("lime_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("lime_wall_hanging_canvas_sign")), DyeColor.LIME));
+	public static final Supplier<Block> PINK_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("pink_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("pink_wall_hanging_canvas_sign")), DyeColor.PINK));
+	public static final Supplier<Block> GRAY_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("gray_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("gray_wall_hanging_canvas_sign")), DyeColor.GRAY));
+	public static final Supplier<Block> LIGHT_GRAY_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("light_gray_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("light_gray_wall_hanging_canvas_sign")), DyeColor.LIGHT_GRAY));
+	public static final Supplier<Block> CYAN_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("cyan_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("cyan_wall_hanging_canvas_sign")), DyeColor.CYAN));
+	public static final Supplier<Block> PURPLE_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("purple_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("purple_wall_hanging_canvas_sign")), DyeColor.PURPLE));
+	public static final Supplier<Block> BLUE_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("blue_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("blue_wall_hanging_canvas_sign")), DyeColor.BLUE));
+	public static final Supplier<Block> BROWN_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("brown_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("brown_wall_hanging_canvas_sign")), DyeColor.BROWN));
+	public static final Supplier<Block> GREEN_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("green_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("green_wall_hanging_canvas_sign")), DyeColor.GREEN));
+	public static final Supplier<Block> RED_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("red_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("red_wall_hanging_canvas_sign")), DyeColor.RED));
+	public static final Supplier<Block> BLACK_HANGING_CANVAS_WALL_SIGN = BLOCKS.register("black_wall_hanging_canvas_sign",
+			() -> new WallHangingCanvasSignBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SPRUCE_WALL_HANGING_SIGN).setId(blockKey("black_wall_hanging_canvas_sign")), DyeColor.BLACK));
 
 	// Composting
-	public static final DeferredBlock<Block> BROWN_MUSHROOM_COLONY = BLOCKS.registerBlock("brown_mushroom_colony",
-		props -> new MushroomColonyBlock(Items.BROWN_MUSHROOM.builtInRegistryHolder(), props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_MUSHROOM));
-	public static final DeferredBlock<Block> RED_MUSHROOM_COLONY = BLOCKS.registerBlock("red_mushroom_colony",
-		props -> new MushroomColonyBlock(Items.RED_MUSHROOM.builtInRegistryHolder(), props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.RED_MUSHROOM));
-	public static final DeferredBlock<Block> ORGANIC_COMPOST = BLOCKS.registerBlock("organic_compost",
-		OrganicCompostBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).strength(1.2F).sound(SoundType.CROP));
-	public static final DeferredBlock<Block> RICH_SOIL = BLOCKS.registerBlock("rich_soil",
-		RichSoilBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).randomTicks());
-	public static final DeferredBlock<Block> RICH_SOIL_FARMLAND = BLOCKS.registerBlock("rich_soil_farmland",
-		RichSoilFarmlandBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.FARMLAND));
+	public static final Supplier<Block> BROWN_MUSHROOM_COLONY = BLOCKS.register("brown_mushroom_colony",
+			() -> new MushroomColonyBlock(Items.BROWN_MUSHROOM.builtInRegistryHolder(), BlockBehaviour.Properties.ofLegacyCopy(Blocks.BROWN_MUSHROOM).setId(blockKey("brown_mushroom_colony"))));
+	public static final Supplier<Block> RED_MUSHROOM_COLONY = BLOCKS.register("red_mushroom_colony",
+			() -> new MushroomColonyBlock(Items.RED_MUSHROOM.builtInRegistryHolder(), BlockBehaviour.Properties.ofLegacyCopy(Blocks.RED_MUSHROOM).setId(blockKey("red_mushroom_colony"))));
+	public static final Supplier<Block> ORGANIC_COMPOST = BLOCKS.register("organic_compost",
+			() -> new OrganicCompostBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DIRT).strength(1.2F).sound(SoundType.CROP).setId(blockKey("organic_compost"))));
+	public static final Supplier<Block> RICH_SOIL = BLOCKS.register("rich_soil",
+			() -> new RichSoilBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DIRT).randomTicks().setId(blockKey("rich_soil"))));
+	public static final Supplier<Block> RICH_SOIL_FARMLAND = BLOCKS.register("rich_soil_farmland",
+			() -> new RichSoilFarmlandBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.FARMLAND).setId(blockKey("rich_soil_farmland"))));
 
 	// Pastries
-	public static final DeferredBlock<Block> APPLE_PIE = BLOCKS.registerBlock("apple_pie",
-		props -> new PieBlock(props, ModItems.APPLE_PIE_SLICE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> SWEET_BERRY_CHEESECAKE = BLOCKS.registerBlock("sweet_berry_cheesecake",
-		props -> new PieBlock(props, ModItems.SWEET_BERRY_CHEESECAKE_SLICE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> CHOCOLATE_PIE = BLOCKS.registerBlock("chocolate_pie",
-		props -> new PieBlock(props, ModItems.CHOCOLATE_PIE_SLICE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> PUMPKIN_PIE = BLOCKS.registerBlock("pumpkin_pie",
-		props -> new PieBlock(props, ModItems.PUMPKIN_PIE_SLICE)
-		{
-			@Override
-			public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
-				return new ItemStack(Items.PUMPKIN_PIE);
-			}
-		}, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
+	public static final Supplier<Block> APPLE_PIE = BLOCKS.register("apple_pie",
+			() -> new PieBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("apple_pie")), ModItems.APPLE_PIE_SLICE));
+	public static final Supplier<Block> SWEET_BERRY_CHEESECAKE = BLOCKS.register("sweet_berry_cheesecake",
+			() -> new PieBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("sweet_berry_cheesecake")), ModItems.SWEET_BERRY_CHEESECAKE_SLICE));
+	public static final Supplier<Block> CHOCOLATE_PIE = BLOCKS.register("chocolate_pie",
+			() -> new PieBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("chocolate_pie")), ModItems.CHOCOLATE_PIE_SLICE));
+	public static final Supplier<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
+			() -> new PieBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("pumpkin_pie")), ModItems.PUMPKIN_PIE_SLICE)
+			{
+				@Override
+				@SuppressWarnings("deprecation")
+				protected @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+					return new ItemStack(Items.PUMPKIN_PIE);
+				}
+			});
 
 	// Wild Crops
-	public static final DeferredBlock<Block> SANDY_SHRUB = BLOCKS.registerBlock("sandy_shrub",
-		SandyShrubBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
+	public static final Supplier<Block> SANDY_SHRUB = BLOCKS.register("sandy_shrub",
+			() -> new SandyShrubBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("sandy_shrub"))));
 
-	public static final DeferredBlock<Block> WILD_CABBAGES = BLOCKS.registerBlock("wild_cabbages",
-		props -> new WildCropBlock(MobEffects.STRENGTH, 6, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_ONIONS = BLOCKS.registerBlock("wild_onions",
-		props -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_TOMATOES = BLOCKS.registerBlock("wild_tomatoes",
-		props -> new WildCropBlock(MobEffects.POISON, 10, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_CARROTS = BLOCKS.registerBlock("wild_carrots",
-		props -> new WildCropBlock(MobEffects.MINING_FATIGUE, 6, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_POTATOES = BLOCKS.registerBlock("wild_potatoes",
-		props -> new WildCropBlock(MobEffects.NAUSEA, 8, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_BEETROOTS = BLOCKS.registerBlock("wild_beetroots",
-		props -> new WildCropBlock(MobEffects.WATER_BREATHING, 8, props), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-	public static final DeferredBlock<Block> WILD_RICE = BLOCKS.registerBlock("wild_rice",
-		WildRiceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
+	public static final Supplier<Block> WILD_CABBAGES = BLOCKS.register("wild_cabbages",
+			() -> new WildCropBlock(MobEffects.STRENGTH, 6, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_cabbages"))));
+	public static final Supplier<Block> WILD_ONIONS = BLOCKS.register("wild_onions",
+			() -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_onions"))));
+	public static final Supplier<Block> WILD_TOMATOES = BLOCKS.register("wild_tomatoes",
+			() -> new WildCropBlock(MobEffects.POISON, 10, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_tomatoes"))));
+	public static final Supplier<Block> WILD_CARROTS = BLOCKS.register("wild_carrots",
+			() -> new WildCropBlock(MobEffects.MINING_FATIGUE, 6, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_carrots"))));
+	public static final Supplier<Block> WILD_POTATOES = BLOCKS.register("wild_potatoes",
+			() -> new WildCropBlock(MobEffects.NAUSEA, 8, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_potatoes"))));
+	public static final Supplier<Block> WILD_BEETROOTS = BLOCKS.register("wild_beetroots",
+			() -> new WildCropBlock(MobEffects.WATER_BREATHING, 8, BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_beetroots"))));
+	public static final Supplier<Block> WILD_RICE = BLOCKS.register("wild_rice",
+			() -> new WildRiceBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.TALL_GRASS).setId(blockKey("wild_rice"))));
 
 	// Crops
-	public static final DeferredBlock<Block> CABBAGE_CROP = BLOCKS.registerBlock("cabbages", CabbageBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP));
-	public static final DeferredBlock<Block> ONION_CROP = BLOCKS.registerBlock("onions", OnionBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP));
-	public static final DeferredBlock<Block> BUDDING_TOMATO_CROP = BLOCKS.registerBlock("budding_tomatoes", BuddingTomatoBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP));
-	public static final DeferredBlock<Block> TOMATO_CROP = BLOCKS.registerBlock("tomatoes", TomatoBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP));
-	public static final DeferredBlock<Block> TOMATO_CROP_ON_ROPE = BLOCKS.registerBlock("tomatoes_on_rope", HangingTomatoBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(ModBlocks.TOMATO_CROP.get()).pushReaction(PushReaction.NORMAL));
-	public static final DeferredBlock<Block> RICE_CROP = BLOCKS.registerBlock("rice", RiceBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().strength(0.2F).sound(SoundType.CROP));
-	public static final DeferredBlock<Block> RICE_CROP_PANICLES = BLOCKS.registerBlock("rice_panicles", RicePaniclesBlock::new, () -> BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP));
+	public static final Supplier<Block> CABBAGE_CROP = BLOCKS.register("cabbages",
+			() -> new CabbageBlock(cropProperties("cabbages")));
+	public static final Supplier<Block> ONION_CROP = BLOCKS.register("onions",
+			() -> new OnionBlock(cropProperties("onions")));
+	public static final Supplier<Block> BUDDING_TOMATO_CROP = BLOCKS.register("budding_tomatoes",
+			() -> new BuddingTomatoBlock(cropProperties("budding_tomatoes")));
+	public static final DeferredHolder<Block, TomatoBlock> TOMATO_CROP = BLOCKS.register("tomatoes",
+			() -> new TomatoBlock(BlockBehaviour.Properties.of().noCollision().randomTicks().instabreak().sound(SoundType.CROP).setId(blockKey("tomatoes"))));
+	public static final DeferredHolder<Block, HangingTomatoBlock> TOMATO_CROP_ON_ROPE = BLOCKS.register("tomatoes_on_rope",
+			() -> new HangingTomatoBlock(BlockBehaviour.Properties.ofLegacyCopy(ModBlocks.TOMATO_CROP.get()).pushReaction(PushReaction.NORMAL).setId(blockKey("tomatoes_on_rope"))));
+	public static final Supplier<Block> RICE_CROP = BLOCKS.register("rice",
+			() -> new RiceBlock(cropProperties("rice").strength(0.2F)));
+	public static final Supplier<Block> RICE_CROP_PANICLES = BLOCKS.register("rice_panicles",
+			() -> new RicePaniclesBlock(cropProperties("rice_panicles")));
 
 	// Feasts
-	public static final DeferredBlock<Block> ROAST_CHICKEN_BLOCK = BLOCKS.registerBlock("roast_chicken_block",
-		props -> new RotatedFeastBlock(props, ModItems.ROAST_CHICKEN, true, BlockShapes.ROAST_CHICKEN_SHAPES, BlockShapes.TRAY_SHAPE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> STUFFED_PUMPKIN_BLOCK = BLOCKS.registerBlock("stuffed_pumpkin_block",
-		props -> new FeastBlock(props, ModItems.STUFFED_PUMPKIN, false, true), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.PUMPKIN));
-	public static final DeferredBlock<Block> HONEY_GLAZED_HAM_BLOCK = BLOCKS.registerBlock("honey_glazed_ham_block",
-		props -> new RotatedFeastBlock(props, ModItems.HONEY_GLAZED_HAM, true, BlockShapes.HONEY_GLAZED_HAM_SHAPES, BlockShapes.TRAY_SHAPE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> SHEPHERDS_PIE_BLOCK = BLOCKS.registerBlock("shepherds_pie_block",
-		props -> new RotatedFeastBlock(props, ModItems.SHEPHERDS_PIE, true, BlockShapes.SHEPHERDS_PIE_SHAPES, BlockShapes.TRAY_SHAPE), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
-	public static final DeferredBlock<Block> GLEAMING_SALAD_BLOCK = BLOCKS.registerBlock("gleaming_salad_block",
-		props -> new GleamingSaladBlock(props, ModItems.GLEAMING_SALAD, true), () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).lightLevel(glowingFeastBlockEmission()));
-	public static final DeferredBlock<Block> RICE_ROLL_MEDLEY_BLOCK = BLOCKS.registerBlock("rice_roll_medley_block",
-		RiceRollMedleyBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE));
+	public static final Supplier<Block> ROAST_CHICKEN_BLOCK = BLOCKS.register("roast_chicken_block",
+			() -> new RotatedFeastBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("roast_chicken_block")), ModItems.ROAST_CHICKEN, true, BlockShapes.ROAST_CHICKEN_SHAPES, BlockShapes.TRAY_SHAPE));
+	public static final Supplier<Block> STUFFED_PUMPKIN_BLOCK = BLOCKS.register("stuffed_pumpkin_block",
+			() -> new FeastBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.PUMPKIN).setId(blockKey("stuffed_pumpkin_block")), ModItems.STUFFED_PUMPKIN, false, true));
+	public static final Supplier<Block> HONEY_GLAZED_HAM_BLOCK = BLOCKS.register("honey_glazed_ham_block",
+			() -> new RotatedFeastBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("honey_glazed_ham_block")), ModItems.HONEY_GLAZED_HAM, true, BlockShapes.HONEY_GLAZED_HAM_SHAPES, BlockShapes.TRAY_SHAPE));
+	public static final Supplier<Block> SHEPHERDS_PIE_BLOCK = BLOCKS.register("shepherds_pie_block",
+			() -> new RotatedFeastBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("shepherds_pie_block")), ModItems.SHEPHERDS_PIE, true, BlockShapes.SHEPHERDS_PIE_SHAPES, BlockShapes.TRAY_SHAPE));
+	public static final Supplier<Block> GLEAMING_SALAD_BLOCK = BLOCKS.register("gleaming_salad_block",
+			() -> new GleamingSaladBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).lightLevel(glowingFeastBlockEmission()).setId(blockKey("gleaming_salad_block")), ModItems.GLEAMING_SALAD, true));
+	public static final Supplier<Block> RICE_ROLL_MEDLEY_BLOCK = BLOCKS.register("rice_roll_medley_block",
+			() -> new RiceRollMedleyBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAKE).setId(blockKey("rice_roll_medley_block"))));
 }

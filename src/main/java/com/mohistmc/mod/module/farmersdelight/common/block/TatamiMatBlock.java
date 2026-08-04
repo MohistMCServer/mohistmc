@@ -52,26 +52,26 @@ public class TatamiMatBlock extends HorizontalDirectionalBlock
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
 	@Override
-	public RenderShape getRenderShape(BlockState state) {
+	protected RenderShape getRenderShape(BlockState state) {
 		return RenderShape.MODEL;
 	}
 
 	@Override
-	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
-		if (directionToNeighbour == getDirectionToOther(state.getValue(PART), state.getValue(FACING))) {
-			return state.canSurvive(level, pos) && neighbourState.is(this) && neighbourState.getValue(PART) != state.getValue(PART) ? state : Blocks.AIR.defaultBlockState();
+	protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos currentPos, Direction facing, BlockPos facingPos, BlockState facingState, RandomSource random) {
+		if (facing == getDirectionToOther(state.getValue(PART), state.getValue(FACING))) {
+			return state.canSurvive(level, currentPos) && facingState.is(this) && facingState.getValue(PART) != state.getValue(PART) ? state : Blocks.AIR.defaultBlockState();
 		} else {
-			return !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+			return !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, level, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
 		}
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		return !level.isEmptyBlock(pos.below());
 	}
 
@@ -98,7 +98,7 @@ public class TatamiMatBlock extends HorizontalDirectionalBlock
 		if (!level.isClientSide()) {
 			BlockPos facingPos = pos.relative(state.getValue(FACING));
 			level.setBlock(facingPos, state.setValue(PART, BedPart.HEAD), 3);
-			level.updateNeighborsAt(pos, Blocks.AIR);
+			level.updateNeighborsAt(pos, Blocks.AIR, null);
 			state.updateNeighbourShapes(level, pos, 3);
 		}
 	}

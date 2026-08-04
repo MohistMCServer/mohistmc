@@ -16,12 +16,12 @@ public class CanvasRugBlock extends Block
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state) {
+	protected boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 }

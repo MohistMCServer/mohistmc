@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "mohistmc:cooked_mutton_chops",
     "#c:crops/beetroot",
@@ -9,7 +8,6 @@
     "#c:crops/tomato"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:roasted_mutton_chops"
   }
 }

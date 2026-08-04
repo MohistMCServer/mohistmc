@@ -23,11 +23,6 @@ public class MilkBottleItem extends DrinkableItem
 		while (itr.hasNext()) {
 			MobEffectInstance effect = itr.next();
 			compatibleEffects.add(effect.getEffect());
-			// TODO: Effect cures were apparently removed. Check later if there's an alternative, or if the system was removed for good.
-
-//			if (effect.getCures().contains(EffectCures.MILK)) {
-//				compatibleEffects.add(effect.getEffect());
-//			}
 		}
 
 		if (!compatibleEffects.isEmpty()) {

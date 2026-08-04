@@ -1,0 +1,6 @@
+{
+  "type": "mohistmc:add_features_by_filter",
+  "allowed_biomes": "#c:is_mushroom",
+  "features": "mohistmc:patch_red_mushroom_colony",
+  "step": "vegetal_decoration"
+}

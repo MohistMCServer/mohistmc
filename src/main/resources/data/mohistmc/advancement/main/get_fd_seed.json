@@ -1,0 +1,65 @@
+{
+  "parent": "mohistmc:main/root",
+  "criteria": {
+    "cabbage_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:cabbage_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "onion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:onion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tomato_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:tomato_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.mohistmc.get_fd_seed.description"
+    },
+    "icon": {
+      "id": "mohistmc:wild_onions"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.get_fd_seed.title"
+    }
+  },
+  "requirements": [
+    [
+      "cabbage_seeds",
+      "tomato_seeds",
+      "onion",
+      "rice"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

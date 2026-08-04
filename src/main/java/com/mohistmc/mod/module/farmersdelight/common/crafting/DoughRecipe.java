@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.crafting;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeSerializers;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -11,14 +13,15 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.Tags;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 
 public class DoughRecipe extends CustomRecipe
 {
-	public static final DoughRecipe INSTANCE = new DoughRecipe();
-	public static final MapCodec<DoughRecipe> MAP_CODEC = MapCodec.unit(INSTANCE);
-	public static final StreamCodec<RegistryFriendlyByteBuf, DoughRecipe> STREAM_CODEC = StreamCodec.unit(INSTANCE);
-	public static final RecipeSerializer<DoughRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
+	public static final MapCodec<DoughRecipe> CODEC = MapCodec.unit(DoughRecipe::new);
+	public static final StreamCodec<RegistryFriendlyByteBuf, DoughRecipe> STREAM_CODEC = StreamCodec.of(
+			(buffer, recipe) -> {
+			},
+			buffer -> new DoughRecipe()
+	);
 
 	@Override
 	public boolean matches(CraftingInput container, Level level) {
@@ -62,13 +65,12 @@ public class DoughRecipe extends CustomRecipe
 		return remainders;
 	}
 
-//	@Override
-//	public boolean canCraftInDimensions(int width, int height) {
-//		return width >= 2 && height >= 2;
-//	}
+	public boolean canCraftInDimensions(int width, int height) {
+		return width >= 2 && height >= 2;
+	}
 
 	@Override
 	public RecipeSerializer<? extends CustomRecipe> getSerializer() {
-		return SERIALIZER;
+		return ModRecipeSerializers.DOUGH.get();
 	}
 }

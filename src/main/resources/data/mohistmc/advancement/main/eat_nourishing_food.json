@@ -1,0 +1,31 @@
+{
+  "parent": "mohistmc:main/place_cooking_pot",
+  "criteria": {
+    "nourishment": {
+      "conditions": {
+        "effects": {
+          "mohistmc:nourishment": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.mohistmc.eat_nourishing_food.description"
+    },
+    "icon": {
+      "id": "mohistmc:steak_and_potatoes"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.eat_nourishing_food.title"
+    }
+  },
+  "requirements": [
+    [
+      "nourishment"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

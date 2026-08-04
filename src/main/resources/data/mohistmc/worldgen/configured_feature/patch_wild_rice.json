@@ -1,0 +1,8 @@
+{
+  "type": "mohistmc:wild_rice",
+  "config": {
+    "tries": 96,
+    "xz_spread": 7,
+    "y_spread": 3
+  }
+}

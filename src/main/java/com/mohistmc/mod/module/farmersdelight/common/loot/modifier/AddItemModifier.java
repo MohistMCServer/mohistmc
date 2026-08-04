@@ -1,9 +1,11 @@
 package com.mohistmc.mod.module.farmersdelight.common.loot.modifier;
 
+import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
@@ -12,18 +14,17 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.common.loot.LootModifier;
-import org.jetbrains.annotations.NotNull;
 
 public class AddItemModifier extends LootModifier
 {
-	public static final MapCodec<AddItemModifier> CODEC =
-		RecordCodecBuilder.mapCodec(instance -> codecStart(instance).and(
-				instance.group(
-					BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter((m) -> m.addedItem),
-					Codec.INT.optionalFieldOf("count", 1).forGetter((m) -> m.count)
-				)
-			)
-			.apply(instance, AddItemModifier::new));
+	public static final Supplier<MapCodec<AddItemModifier>> CODEC = Suppliers.memoize(() ->
+			RecordCodecBuilder.mapCodec(inst -> codecStart(inst).and(
+							inst.group(
+									BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter((m) -> m.addedItem),
+									Codec.INT.optionalFieldOf("count", 1).forGetter((m) -> m.count)
+							)
+					)
+					.apply(inst, AddItemModifier::new)));
 
 	private final Item addedItem;
 	private final int count;
@@ -37,13 +38,9 @@ public class AddItemModifier extends LootModifier
 		this.count = count;
 	}
 
-	public AddItemModifier(LootItemCondition[] conditions, Item addedItem, int count) {
-		this(conditions, IGlobalLootModifier.DEFAULT_PRIORITY, addedItem, count);
-	}
-
 	@Nonnull
 	@Override
-	protected ObjectArrayList<ItemStack> doApply(@NotNull ObjectArrayList<ItemStack> generatedLoot, @NotNull LootContext context) {
+	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		ItemStack addedStack = new ItemStack(addedItem, count);
 
 		if (addedStack.getCount() < addedStack.getMaxStackSize()) {
@@ -63,7 +60,7 @@ public class AddItemModifier extends LootModifier
 	}
 
 	@Override
-	public @NotNull MapCodec<? extends IGlobalLootModifier> codec() {
-		return CODEC;
+	public MapCodec<? extends IGlobalLootModifier> codec() {
+		return CODEC.get();
 	}
 }

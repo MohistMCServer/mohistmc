@@ -5,8 +5,12 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.FuelValues;
+import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
+/**
+ * Deprecated - Fuel is now defined in a NeoForge datamap: {@link NeoForgeDataMaps#FURNACE_FUELS}.
+ */
+@Deprecated(forRemoval = true)
 public class FuelBlockItem extends BlockItem
 {
 	public final int burnTime;
@@ -21,9 +25,7 @@ public class FuelBlockItem extends BlockItem
 		this.burnTime = burnTime;
 	}
 
-	// TODO: Decide if this class is obsolete due to datamaps.
-	@Override
-	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType, FuelValues fuelValues) {
+	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
 		return this.burnTime;
 	}
 }

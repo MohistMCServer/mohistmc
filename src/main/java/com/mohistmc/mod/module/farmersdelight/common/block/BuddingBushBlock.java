@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,7 +25,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.event.EventHooks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 
 /**
  * A bush which grows, representing the earlier stage of another plant.
@@ -33,7 +33,7 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 @SuppressWarnings("deprecation")
 public class BuddingBushBlock extends BushBlock
 {
-	public static final MapCodec<BushBlock> CODEC = simpleCodec(BuddingBushBlock::new);
+	public static final MapCodec<BuddingBushBlock> CODEC = simpleCodec(BuddingBushBlock::new);
 
 	public static final int MAX_AGE = 3;
 	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
@@ -49,12 +49,13 @@ public class BuddingBushBlock extends BushBlock
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public MapCodec<BushBlock> codec() {
-		return CODEC;
+		return (MapCodec<BushBlock>) (MapCodec<?>) CODEC;
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return SHAPE_BY_AGE[state.getValue(getAgeProperty())];
 	}
 
@@ -84,12 +85,12 @@ public class BuddingBushBlock extends BushBlock
 	}
 
 	@Override
-	public boolean isRandomlyTicking(BlockState state) {
+	protected boolean isRandomlyTicking(BlockState state) {
 		return canGrowPastMaxAge() || !isMaxAge(state);
 	}
 
 	@Override
-	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+	protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		if (!level.isAreaLoaded(pos, 1)) return;
 		if (level.getRawBrightness(pos, 0) >= 9) {
 			int age = getAge(state);
@@ -161,7 +162,7 @@ public class BuddingBushBlock extends BushBlock
 	}
 
 	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		TriState soilDecision = level.getBlockState(pos.below()).canSustainPlant(level, pos.below(), Direction.UP, state);
 		if (!soilDecision.isDefault()) {
 			return soilDecision.isTrue();
@@ -175,12 +176,12 @@ public class BuddingBushBlock extends BushBlock
 	}
 
 	@Override
-	public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isPrecise) {
-		if (level instanceof ServerLevel serverLevel && entity instanceof Ravager && EventHooks.canEntityGrief(serverLevel, entity)) {
+	protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isInside) {
+		if (entity instanceof Ravager && level instanceof ServerLevel serverLevel && EventHooks.canEntityGrief(serverLevel, entity)) {
 			level.destroyBlock(pos, true, entity);
 		}
 
-		super.entityInside(state, level, pos, entity, effectApplier, isPrecise);
+		super.entityInside(state, level, pos, entity, effectApplier, isInside);
 	}
 
 	protected ItemLike getBaseSeedId() {
@@ -188,7 +189,7 @@ public class BuddingBushBlock extends BushBlock
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+	protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
 		return new ItemStack(getBaseSeedId());
 	}
 

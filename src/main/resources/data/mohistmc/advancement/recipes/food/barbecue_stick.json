@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_onion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:onion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mohistmc:barbecue_stick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tomato": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:tomato"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tomato",
+      "has_onion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mohistmc:barbecue_stick"
+    ]
+  }
+}

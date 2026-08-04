@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:dried_kelp",
     "R": "mohistmc:cooked_rice",
@@ -11,7 +10,6 @@
     "###"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:kelp_roll"
   }
 }

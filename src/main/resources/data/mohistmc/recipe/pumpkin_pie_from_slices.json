@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fd_pumpkin_pie",
   "key": {
     "#": "mohistmc:pumpkin_pie_slice"
@@ -10,7 +9,6 @@
     "##"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:pumpkin_pie"
   }
 }

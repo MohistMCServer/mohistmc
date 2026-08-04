@@ -1,115 +1,125 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.BasketBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CabinetBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CanvasSignBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.HangingCanvasSignBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.SkilletBlockEntity;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.StoveBlockEntity;
+import java.util.Set;
 import java.util.function.Supplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import org.jspecify.annotations.NullMarked;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.*;
 
-@NullMarked
 public class ModBlockEntityTypes
 {
 	public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, FarmersDelight.MODID);
 
+	@SafeVarargs
+	private static <T extends BlockEntity> BlockEntityType<T> create(BlockEntityType.BlockEntitySupplier<? extends T> supplier, Block... blocks) {
+		return new BlockEntityType<>(supplier, Set.of(blocks));
+	}
+
 	public static final Supplier<BlockEntityType<StoveBlockEntity>> STOVE = TILES.register("stove",
-		() -> new BlockEntityType<>(StoveBlockEntity::new, ModBlocks.STOVE.get()));
+			() -> create(StoveBlockEntity::new, ModBlocks.STOVE.get()));
 	public static final Supplier<BlockEntityType<CookingPotBlockEntity>> COOKING_POT = TILES.register("cooking_pot",
-		() -> new BlockEntityType<>(CookingPotBlockEntity::new, ModBlocks.COOKING_POT.get()));
+			() -> create(CookingPotBlockEntity::new, ModBlocks.COOKING_POT.get()));
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BasketBlockEntity>> BASKET = TILES.register("basket",
-		() -> new BlockEntityType<>(BasketBlockEntity::new, ModBlocks.WOODEN_BASKET.get(), ModBlocks.BAMBOO_BASKET.get()));
+			() -> create(BasketBlockEntity::new, ModBlocks.WOODEN_BASKET.get(), ModBlocks.BAMBOO_BASKET.get()));
 	public static final Supplier<BlockEntityType<CuttingBoardBlockEntity>> CUTTING_BOARD = TILES.register("cutting_board",
-		() -> new BlockEntityType<>(CuttingBoardBlockEntity::new, ModBlocks.CUTTING_BOARD.get()));
+			() -> create(CuttingBoardBlockEntity::new, ModBlocks.CUTTING_BOARD.get()));
 	public static final Supplier<BlockEntityType<SkilletBlockEntity>> SKILLET = TILES.register("skillet",
-		() -> new BlockEntityType<>(SkilletBlockEntity::new, ModBlocks.SKILLET.get()));
+			() -> create(SkilletBlockEntity::new, ModBlocks.SKILLET.get()));
 	public static final Supplier<BlockEntityType<CabinetBlockEntity>> CABINET = TILES.register("cabinet",
-		() -> new BlockEntityType<>(CabinetBlockEntity::new,
-			ModBlocks.OAK_CABINET.get(),
-			ModBlocks.BIRCH_CABINET.get(),
-			ModBlocks.SPRUCE_CABINET.get(),
-			ModBlocks.JUNGLE_CABINET.get(),
-			ModBlocks.ACACIA_CABINET.get(),
-			ModBlocks.DARK_OAK_CABINET.get(),
-			ModBlocks.MANGROVE_CABINET.get(),
-			ModBlocks.BAMBOO_CABINET.get(),
-			ModBlocks.CHERRY_CABINET.get(),
-			ModBlocks.CRIMSON_CABINET.get(),
-			ModBlocks.WARPED_CABINET.get())
-	);
+			() -> create(CabinetBlockEntity::new,
+							ModBlocks.OAK_CABINET.get(),
+							ModBlocks.BIRCH_CABINET.get(),
+							ModBlocks.SPRUCE_CABINET.get(),
+							ModBlocks.JUNGLE_CABINET.get(),
+							ModBlocks.ACACIA_CABINET.get(),
+							ModBlocks.DARK_OAK_CABINET.get(),
+							ModBlocks.MANGROVE_CABINET.get(),
+							ModBlocks.BAMBOO_CABINET.get(),
+							ModBlocks.CHERRY_CABINET.get(),
+							ModBlocks.CRIMSON_CABINET.get(),
+							ModBlocks.WARPED_CABINET.get()));
 	public static final Supplier<BlockEntityType<CanvasSignBlockEntity>> CANVAS_SIGN = TILES.register("canvas_sign",
-		() -> new BlockEntityType<>(CanvasSignBlockEntity::new,
-			ModBlocks.CANVAS_SIGN.get(),
-			ModBlocks.WHITE_CANVAS_SIGN.get(),
-			ModBlocks.ORANGE_CANVAS_SIGN.get(),
-			ModBlocks.MAGENTA_CANVAS_SIGN.get(),
-			ModBlocks.LIGHT_BLUE_CANVAS_SIGN.get(),
-			ModBlocks.YELLOW_CANVAS_SIGN.get(),
-			ModBlocks.LIME_CANVAS_SIGN.get(),
-			ModBlocks.PINK_CANVAS_SIGN.get(),
-			ModBlocks.GRAY_CANVAS_SIGN.get(),
-			ModBlocks.LIGHT_GRAY_CANVAS_SIGN.get(),
-			ModBlocks.CYAN_CANVAS_SIGN.get(),
-			ModBlocks.PURPLE_CANVAS_SIGN.get(),
-			ModBlocks.BLUE_CANVAS_SIGN.get(),
-			ModBlocks.BROWN_CANVAS_SIGN.get(),
-			ModBlocks.GREEN_CANVAS_SIGN.get(),
-			ModBlocks.RED_CANVAS_SIGN.get(),
-			ModBlocks.BLACK_CANVAS_SIGN.get(),
-			ModBlocks.CANVAS_WALL_SIGN.get(),
-			ModBlocks.WHITE_CANVAS_WALL_SIGN.get(),
-			ModBlocks.ORANGE_CANVAS_WALL_SIGN.get(),
-			ModBlocks.MAGENTA_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIGHT_BLUE_CANVAS_WALL_SIGN.get(),
-			ModBlocks.YELLOW_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIME_CANVAS_WALL_SIGN.get(),
-			ModBlocks.PINK_CANVAS_WALL_SIGN.get(),
-			ModBlocks.GRAY_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIGHT_GRAY_CANVAS_WALL_SIGN.get(),
-			ModBlocks.CYAN_CANVAS_WALL_SIGN.get(),
-			ModBlocks.PURPLE_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BLUE_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BROWN_CANVAS_WALL_SIGN.get(),
-			ModBlocks.GREEN_CANVAS_WALL_SIGN.get(),
-			ModBlocks.RED_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BLACK_CANVAS_WALL_SIGN.get())
-	);
+			() -> create(CanvasSignBlockEntity::new,
+							ModBlocks.CANVAS_SIGN.get(),
+							ModBlocks.WHITE_CANVAS_SIGN.get(),
+							ModBlocks.ORANGE_CANVAS_SIGN.get(),
+							ModBlocks.MAGENTA_CANVAS_SIGN.get(),
+							ModBlocks.LIGHT_BLUE_CANVAS_SIGN.get(),
+							ModBlocks.YELLOW_CANVAS_SIGN.get(),
+							ModBlocks.LIME_CANVAS_SIGN.get(),
+							ModBlocks.PINK_CANVAS_SIGN.get(),
+							ModBlocks.GRAY_CANVAS_SIGN.get(),
+							ModBlocks.LIGHT_GRAY_CANVAS_SIGN.get(),
+							ModBlocks.CYAN_CANVAS_SIGN.get(),
+							ModBlocks.PURPLE_CANVAS_SIGN.get(),
+							ModBlocks.BLUE_CANVAS_SIGN.get(),
+							ModBlocks.BROWN_CANVAS_SIGN.get(),
+							ModBlocks.GREEN_CANVAS_SIGN.get(),
+							ModBlocks.RED_CANVAS_SIGN.get(),
+							ModBlocks.BLACK_CANVAS_SIGN.get(),
+							ModBlocks.CANVAS_WALL_SIGN.get(),
+							ModBlocks.WHITE_CANVAS_WALL_SIGN.get(),
+							ModBlocks.ORANGE_CANVAS_WALL_SIGN.get(),
+							ModBlocks.MAGENTA_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIGHT_BLUE_CANVAS_WALL_SIGN.get(),
+							ModBlocks.YELLOW_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIME_CANVAS_WALL_SIGN.get(),
+							ModBlocks.PINK_CANVAS_WALL_SIGN.get(),
+							ModBlocks.GRAY_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIGHT_GRAY_CANVAS_WALL_SIGN.get(),
+							ModBlocks.CYAN_CANVAS_WALL_SIGN.get(),
+							ModBlocks.PURPLE_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BLUE_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BROWN_CANVAS_WALL_SIGN.get(),
+							ModBlocks.GREEN_CANVAS_WALL_SIGN.get(),
+							ModBlocks.RED_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BLACK_CANVAS_WALL_SIGN.get()));
 	public static final Supplier<BlockEntityType<HangingCanvasSignBlockEntity>> HANGING_CANVAS_SIGN = TILES.register("hanging_canvas_sign",
-		() -> new BlockEntityType<>(HangingCanvasSignBlockEntity::new,
-			ModBlocks.HANGING_CANVAS_SIGN.get(),
-			ModBlocks.WHITE_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.ORANGE_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.MAGENTA_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.LIGHT_BLUE_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.YELLOW_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.LIME_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.PINK_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.GRAY_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.LIGHT_GRAY_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.CYAN_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.PURPLE_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.BLUE_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.BROWN_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.GREEN_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.RED_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.BLACK_HANGING_CANVAS_SIGN.get(),
-			ModBlocks.HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.WHITE_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.ORANGE_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.MAGENTA_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIGHT_BLUE_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.YELLOW_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIME_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.PINK_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.GRAY_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.LIGHT_GRAY_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.CYAN_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.PURPLE_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BLUE_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BROWN_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.GREEN_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.RED_HANGING_CANVAS_WALL_SIGN.get(),
-			ModBlocks.BLACK_HANGING_CANVAS_WALL_SIGN.get())
-	);
+			() -> create(HangingCanvasSignBlockEntity::new,
+							ModBlocks.HANGING_CANVAS_SIGN.get(),
+							ModBlocks.WHITE_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.ORANGE_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.MAGENTA_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.LIGHT_BLUE_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.YELLOW_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.LIME_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.PINK_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.GRAY_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.LIGHT_GRAY_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.CYAN_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.PURPLE_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.BLUE_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.BROWN_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.GREEN_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.RED_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.BLACK_HANGING_CANVAS_SIGN.get(),
+							ModBlocks.HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.WHITE_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.ORANGE_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.MAGENTA_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIGHT_BLUE_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.YELLOW_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIME_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.PINK_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.GRAY_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.LIGHT_GRAY_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.CYAN_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.PURPLE_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BLUE_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BROWN_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.GREEN_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.RED_HANGING_CANVAS_WALL_SIGN.get(),
+							ModBlocks.BLACK_HANGING_CANVAS_WALL_SIGN.get()));
 }

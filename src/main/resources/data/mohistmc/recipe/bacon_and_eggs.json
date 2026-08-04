@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "#c:foods/cooked_bacon",
     "#c:foods/cooked_bacon",
@@ -9,7 +8,6 @@
     "#c:foods/cooked_egg"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:bacon_and_eggs"
   }
 }

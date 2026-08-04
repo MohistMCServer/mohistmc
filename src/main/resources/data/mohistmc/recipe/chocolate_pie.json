@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fd_chocolate_pie",
   "key": {
     "O": "mohistmc:pie_crust",
@@ -14,7 +13,6 @@
     "xOx"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:chocolate_pie"
   }
 }

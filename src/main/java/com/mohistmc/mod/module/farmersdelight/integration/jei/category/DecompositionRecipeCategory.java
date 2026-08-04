@@ -1,6 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.integration.jei.category;
 
-
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
+import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
+import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
+import com.mohistmc.mod.module.farmersdelight.integration.jei.FDRecipeTypes;
+import com.mohistmc.mod.module.farmersdelight.integration.jei.resource.DecompositionDummy;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -12,26 +19,18 @@ import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import mezz.jei.api.recipe.types.IRecipeType;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
-import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.farmersdelight.integration.jei.FDRecipeTypes;
-import com.mohistmc.mod.module.farmersdelight.integration.jei.resource.DecompositionDummy;
 
 @ParametersAreNonnullByDefault
 public class DecompositionRecipeCategory implements IRecipeCategory<DecompositionDummy>
 {
-//	public static final Identifier UID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "decomposition");
+	public static final Identifier UID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "decomposition");
 	private static final int slotSize = 22;
 
 	private final Component title;
@@ -52,7 +51,7 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 	}
 
 	@Override
-	public IRecipeType<DecompositionDummy> getRecipeType() {
+	public RecipeType<DecompositionDummy> getRecipeType() {
 		return FDRecipeTypes.DECOMPOSITION;
 	}
 
@@ -61,10 +60,9 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 		return this.title;
 	}
 
-//	@Override
-//	public IDrawable getBackground() {
-//		return null;
-//	}
+	public IDrawable getBackground() {
+		return null;
+	}
 
 	@Override
 	public int getWidth() {
@@ -84,7 +82,7 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, DecompositionDummy recipe, IFocusGroup focusGroup) {
 		List<ItemStack> accelerators = new ArrayList<>();
-		BuiltInRegistries.BLOCK.get(ModTags.Blocks.COMPOST_ACTIVATORS).ifPresent(s -> s.forEach(f -> accelerators.add(new ItemStack(f.value()))));
+		BuiltInRegistries.BLOCK.getTagOrEmpty(ModTags.Blocks.COMPOST_ACTIVATORS).forEach(f -> accelerators.add(new ItemStack(f.value())));
 
 		builder.addSlot(RecipeIngredientRole.INPUT, 9, 26).add(organicCompost);
 		builder.addSlot(RecipeIngredientRole.OUTPUT, 93, 26).add(richSoil);

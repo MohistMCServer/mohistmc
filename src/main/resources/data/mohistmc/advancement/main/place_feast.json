@@ -1,0 +1,93 @@
+{
+  "parent": "mohistmc:main/eat_nourishing_food",
+  "criteria": {
+    "gleaming_salad": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:gleaming_salad_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "honey_glazed_ham": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:honey_glazed_ham_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "rice_roll_medley": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:rice_roll_medley_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "roast_chicken": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:roast_chicken_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "shepherds_pie": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:shepherds_pie_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "stuffed_pumpkin": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:stuffed_pumpkin_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.mohistmc.place_feast.description"
+    },
+    "icon": {
+      "id": "mohistmc:roast_chicken_block"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.place_feast.title"
+    }
+  },
+  "requirements": [
+    [
+      "roast_chicken",
+      "stuffed_pumpkin",
+      "honey_glazed_ham",
+      "shepherds_pie",
+      "gleaming_salad",
+      "rice_roll_medley"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

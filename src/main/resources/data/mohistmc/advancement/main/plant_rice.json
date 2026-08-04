@@ -1,0 +1,34 @@
+{
+  "parent": "mohistmc:main/get_fd_seed",
+  "criteria": {
+    "plant_rice": {
+      "conditions": {
+        "location": [
+          {
+            "block": "mohistmc:rice",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.mohistmc.plant_rice.description"
+    },
+    "icon": {
+      "id": "mohistmc:rice"
+    },
+    "title": {
+      "translate": "advancements.mohistmc.plant_rice.title"
+    }
+  },
+  "requirements": [
+    [
+      "plant_rice"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

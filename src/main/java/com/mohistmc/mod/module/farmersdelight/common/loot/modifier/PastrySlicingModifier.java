@@ -1,6 +1,7 @@
 package com.mohistmc.mod.module.farmersdelight.common.loot.modifier;
 
 import com.google.common.base.Suppliers;
+import com.mohistmc.mod.module.farmersdelight.common.block.PieBlock;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -17,7 +18,6 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.common.loot.LootModifier;
-import com.mohistmc.mod.module.farmersdelight.common.block.PieBlock;
 
 public class PastrySlicingModifier extends LootModifier
 {
@@ -39,10 +39,6 @@ public class PastrySlicingModifier extends LootModifier
 	public PastrySlicingModifier(LootItemCondition[] conditions, int priority, Item pastrySlice) {
 		super(conditions, priority);
 		this.pastrySlice = pastrySlice;
-	}
-
-	public PastrySlicingModifier(LootItemCondition[] conditions, Item pastrySlice) {
-		this(conditions, IGlobalLootModifier.DEFAULT_PRIORITY, pastrySlice);
 	}
 
 	@Nonnull

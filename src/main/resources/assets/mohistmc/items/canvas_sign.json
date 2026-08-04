@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mohistmc:block/canvas_sign"
+    "model": "mohistmc:item/canvas_sign"
   }
 }

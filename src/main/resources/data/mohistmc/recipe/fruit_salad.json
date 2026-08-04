@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:apple",
     "minecraft:melon_slice",
@@ -11,7 +10,6 @@
     "minecraft:bowl"
   ],
   "result": {
-    "count": 1,
     "id": "mohistmc:fruit_salad"
   }
 }

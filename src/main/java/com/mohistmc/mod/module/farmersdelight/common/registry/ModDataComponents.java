@@ -1,20 +1,17 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.item.component.ItemStackWrapper;
+import com.mohistmc.mod.module.farmersdelight.common.utility.RegistryUtils;
 import com.mojang.serialization.Codec;
 import java.util.List;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
-import net.minecraft.util.context.ContextKeySet;
 import net.minecraft.world.item.enchantment.ConditionalEffect;
 import net.minecraft.world.item.enchantment.effects.EnchantmentValueEffect;
-import net.minecraft.world.level.storage.loot.Validatable;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.item.component.ItemStackWrapper;
-import com.mohistmc.mod.module.farmersdelight.common.utility.RegistryUtils;
 
 public class ModDataComponents
 {
@@ -48,10 +45,6 @@ public class ModDataComponents
 
 	// Enchantment Effects
 	public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<ConditionalEffect<EnchantmentValueEffect>>>> BACKSTABBING = ENCHANTMENT_EFFECT_COMPONENTS.registerComponentType(
-			"backstabbing", builder -> builder.persistent(validatedListCodec(ConditionalEffect.codec(EnchantmentValueEffect.CODEC), LootContextParamSets.ENCHANTED_DAMAGE)
+			"backstabbing", builder -> builder.persistent(ConditionalEffect.codec(EnchantmentValueEffect.CODEC).listOf()
 			));
-
-	private static <T extends Validatable> Codec<List<T>> validatedListCodec(Codec<T> elementCodec, ContextKeySet paramSet) {
-		return elementCodec.listOf().validate(Validatable.listValidatorForContext(paramSet));
-	}
 }
