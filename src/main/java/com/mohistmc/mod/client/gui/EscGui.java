@@ -6,6 +6,7 @@ import com.mohistmc.mod.api.gui.IconButton;
 import com.mohistmc.mod.api.gui.ImageWidget;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.SimpleLabel;
+import com.mohistmc.mod.module.shop.common.network.payload.BalanceRequestPayload;
 import com.mohistmc.mod.utils.ProcessWorkingSetUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -17,6 +18,7 @@ import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.client.gui.ModListScreen;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -55,6 +57,9 @@ public class EscGui extends EnhancedScreen {
     private static final int COLS = 4;
     /** 网格间距 */
     private static final int GAP = 4;
+
+    /** 金币行余额文本（收到服务端余额同步后更新） */
+    private SimpleLabel balanceValue;
 
     public EscGui() {
         super(Component.translatable("narrator.screen.title"), null);
@@ -175,13 +180,26 @@ public class EscGui extends EnhancedScreen {
         card.addChild(new ExpBarWidget(8, y + fh + 2, cw - 16, 3, xpPct));
         y += fh + 2 + 3 + gap;
 
-        // ── 图标+数值行（延迟、金币等） ──
+        // ── 图标+数值行（延迟、余额等） ──
         // 每行：[icon 10x10] + 数值，按 X 往后排列
         int statX = 8;
         statX = addStatRow(card, statX, y, "ping_logo.png", getCurrentPing() + " ms", rowH, fh, cardTextScale);
-        addStatRow(card, statX, y, "jinbi.png", "114514", rowH, fh, cardTextScale);
+        // 余额行：初始 "..."，收到服务端 BalanceSyncPayload 后刷新真实余额
+        int iconSize = 10;
+        card.addChild(new ImageWidget(statX, y + (rowH - iconSize) / 2, iconSize, iconSize)
+                .setTexture(tex("jinbi.png"))
+                .setTextureSrcSize(32));
+        balanceValue = new SimpleLabel(statX + iconSize + 4, y + (rowH - fh) / 2,
+                Component.literal("..."), 0xFFFFFFFF)
+                .setTextScale(cardTextScale);
+        card.addChild(balanceValue);
 
         addWidget(card);
+
+        // 请求服务端同步余额（单机/联机均走网络路径）
+        if (minecraft.getConnection() != null) {
+            ClientPacketDistributor.sendToServer(new BalanceRequestPayload());
+        }
 
         // ---- 图标网格区域背景（深灰，区别于信息卡的深蓝黑） ----
         addWidget(new Panel(cx, cardH, cw, guiH - cardH, Identifier.fromNamespaceAndPath("mohistmc", "textures/ui/bg1.png")));
@@ -250,6 +268,13 @@ public class EscGui extends EnhancedScreen {
                 .setHoverBgColor(0x55FFFFFF)
                 .setTooltip(tip)
                 .onClick(action));
+    }
+
+    /** 服务端余额同步：刷新货币行数值（金币图标由行首 ImageWidget 展示） */
+    public void updateBalance(int balance) {
+        if (balanceValue != null) {
+            balanceValue.setText(Component.literal(String.valueOf(balance)));
+        }
     }
 
     private static int getCurrentPing() {

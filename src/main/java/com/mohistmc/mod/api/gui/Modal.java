@@ -96,7 +96,7 @@ public class Modal extends PositionedWidget {
 
     public Modal setBackdropColor(int color) { this.backdropColor = color; return this; }
     public Modal setDialogBgColor(int color) { this.dialogBgColor = color; return this; }
-    public Modal setDialogWidth(int width) { this.dialogWidth = Math.max(160, width); return this; }
+    public Modal setDialogWidth(int width) { this.dialogWidth = Math.max(140, width); return this; }
     public Modal setTitleColor(int color) { this.titleColor = color; return this; }
     public Modal setMessageColor(int color) { this.messageColor = color; return this; }
     public Modal setBorderColor(int color) { this.borderColor = color; return this; }
@@ -153,19 +153,20 @@ public class Modal extends PositionedWidget {
                 return true;
             }
 
-            // 底部按钮（从右往左排）
+            // 底部按钮（整体居中，从左往右排）
             int btnAreaY = dy + dh - padding - buttonHeight;
-            int curX = dx + dialogWidth - padding;
-            for (int i = buttons.size() - 1; i >= 0; i--) {
-                var btn = buttons.get(i);
+            int totalW = 0;
+            for (var btn : buttons) totalW += font().width(btn.text) + 16;
+            totalW += Math.max(0, buttons.size() - 1) * buttonGap;
+            int curX = dx + (dialogWidth - totalW) / 2;
+            for (var btn : buttons) {
                 int bw = font().width(btn.text) + 16;
-                curX -= bw;
                 if (mx >= curX && mx < curX + bw && my >= btnAreaY && my < btnAreaY + buttonHeight) {
                     if (btn.action != null) btn.action.run();
                     hide();
                     return true;
                 }
-                curX -= buttonGap;
+                curX += bw + buttonGap;
             }
 
             return true; // 点击对话框内部但不作任何操作也消费事件
@@ -206,9 +207,9 @@ public class Modal extends PositionedWidget {
 
         var font = font();
 
-        // 3) 标题
+        // 3) 标题（左右居中）
         int titleY = dy + (titleBarHeight - font.lineHeight) / 2;
-        graphics.text(font, title, dx + padding, titleY, applyAlpha(titleColor));
+        graphics.text(font, title, dx + (dialogWidth - font.width(title)) / 2, titleY, applyAlpha(titleColor));
 
         // 3a) 关闭按钮 ×
         int cs = closeBtnSize();
@@ -225,27 +226,33 @@ public class Modal extends PositionedWidget {
         int sepY = dy + titleBarHeight;
         graphics.fill(dx + 1, sepY, dx + dialogWidth - 1, sepY + 1, applyAlpha(separatorColor));
 
-        // 5) 内容文字
+        // 5) 内容文字（多行每行左右居中）
         int textY = dy + titleBarHeight + padding;
-        graphics.text(font, message, dx + padding, textY, applyAlpha(messageColor));
+        var msgLines = font.split(message, dialogWidth - padding * 2);
+        for (int i = 0; i < msgLines.size(); i++) {
+            var line = msgLines.get(i);
+            graphics.text(font, line, dx + (dialogWidth - font.width(line)) / 2,
+                    textY + i * font.lineHeight, applyAlpha(messageColor));
+        }
 
         // 6) 底部按钮分隔线
         int btnSepY = dy + dh - padding - buttonHeight - padding / 2;
         graphics.fill(dx + 1, btnSepY, dx + dialogWidth - 1, btnSepY + 1, applyAlpha(separatorColor));
 
-        // 7) 底部按钮（从右往左排列）
+        // 7) 底部按钮（整体居中，从左往右排）
         int btnAreaY = dy + dh - padding - buttonHeight;
-        int curX = dx + dialogWidth - padding;
-        for (int i = buttons.size() - 1; i >= 0; i--) {
-            var btn = buttons.get(i);
+        int totalW = 0;
+        for (var btn : buttons) totalW += font.width(btn.text) + 16;
+        totalW += Math.max(0, buttons.size() - 1) * buttonGap;
+        int curX = dx + (dialogWidth - totalW) / 2;
+        for (var btn : buttons) {
             int bw = font.width(btn.text) + 16;
-            curX -= bw;
             boolean btnHover = mouseX >= curX && mouseX < curX + bw && mouseY >= btnAreaY && mouseY < btnAreaY + buttonHeight;
             int btnBg = applyAlpha(btnHover ? btn.hoverColor : btn.bgColor);
             graphics.fill(curX, btnAreaY, curX + bw, btnAreaY + buttonHeight, btnBg);
             graphics.text(font, btn.text, curX + (bw - font.width(btn.text)) / 2,
                     btnAreaY + (buttonHeight - font.lineHeight) / 2, applyAlpha(btn.textColor));
-            curX -= buttonGap;
+            curX += bw + buttonGap;
         }
     }
 
@@ -256,7 +263,7 @@ public class Modal extends PositionedWidget {
     }
 
     private int getDialogY() {
-        return screenTop + Math.max(20, (contentHeight - getDialogHeight()) / 3);
+        return screenTop + Math.max(20, (contentHeight - getDialogHeight()) / 2);
     }
 
     private int getDialogHeight() {

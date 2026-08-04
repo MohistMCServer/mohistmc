@@ -21,6 +21,8 @@ public class ImageWidget extends PositionedWidget {
     @Nullable
     private Identifier texture;
     private int tintColor = 0xFFFFFFFF; // ARGB 染色，默认白色（原样显示）
+    /** 贴图源边长（>0 时按组件尺寸等比缩放显示完整贴图；<=0 时采样=输出） */
+    private int srcSize;
 
     public ImageWidget(int relX, int relY, int width, int height) {
         super(relX, relY, width, height);
@@ -43,6 +45,15 @@ public class ImageWidget extends PositionedWidget {
      */
     public ImageWidget setTint(int argb) {
         this.tintColor = argb;
+        return this;
+    }
+
+    /**
+     * 设置贴图源边长（方形贴图）：>0 时完整贴图按组件尺寸等比缩放显示（如 32px 图标缩小到 16px 组件），
+     * 否则默认采样=输出（显示贴图左上角对应区域）。
+     */
+    public ImageWidget setTextureSrcSize(int srcSize) {
+        this.srcSize = Math.max(0, srcSize);
         return this;
     }
 
@@ -88,7 +99,18 @@ public class ImageWidget extends PositionedWidget {
         }
 
         // 渲染纹理（Minecraft blit 不支持直接 alpha 混合，靠 blend mode 处理）
-        graphics.blit(RenderPipelines.GUI_TEXTURED, texture,
-                x, y, 0, 0, width, height, width, height);
+        if (srcSize > 0 && srcSize != width) {
+            // 完整贴图按组件尺寸等比缩放（pose 缩放：平移到目标原点 → 缩放 → 回退）
+            var pose = graphics.pose();
+            pose.pushMatrix();
+            pose.translate(x, y);
+            pose.scale(width / (float) srcSize, height / (float) srcSize);
+            pose.translate(-x, -y);
+            graphics.blit(RenderPipelines.GUI_TEXTURED, texture, x, y, 0, 0, srcSize, srcSize, srcSize, srcSize);
+            pose.popMatrix();
+        } else {
+            graphics.blit(RenderPipelines.GUI_TEXTURED, texture,
+                    x, y, 0, 0, width, height, width, height);
+        }
     }
 }

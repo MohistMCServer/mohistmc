@@ -158,12 +158,12 @@ public abstract class EnhancedScreen extends Screen {
         for (var widget : widgets) {
             renderDropdownsOnTop(widget, graphics, wmx, wmy, partialTick);
         }
-        // 5) 绘制模态对话框（在一切之上，使用真实坐标）
+        // 5) 绘制标准组件（AbstractWidget 等，如 EditBox——先画，避免盖住模态对话框）
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
+        // 6) 绘制模态对话框（在一切之上，使用真实坐标）
         for (var modal : modals) {
             modal.render(graphics, mouseX, mouseY, partialTick);
         }
-        // 6) 绘制标准组件（AbstractWidget 等）
-        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
     }
 
     /** 递归查找并重新绘制所有展开的 DropdownMenu（确保菜单不会被遮挡） */
@@ -219,9 +219,11 @@ public abstract class EnhancedScreen extends Screen {
 
     private boolean dragScrollListRecursive(PositionedWidget w, int mx, int my) {
         if (w instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
+        if (w instanceof GridScrollList grid) { grid.handleDrag(mx, my); return true; }
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
                 if (child instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
+                if (child instanceof GridScrollList grid) { grid.handleDrag(mx, my); return true; }
             }
         }
         return false;
@@ -229,9 +231,11 @@ public abstract class EnhancedScreen extends Screen {
 
     private void releaseScrollListRecursive(PositionedWidget w) {
         if (w instanceof ScrollList sl) sl.handleRelease();
+        if (w instanceof GridScrollList grid) grid.handleRelease();
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
                 if (child instanceof ScrollList sl) sl.handleRelease();
+                if (child instanceof GridScrollList grid) grid.handleRelease();
             }
         }
     }
@@ -263,9 +267,11 @@ public abstract class EnhancedScreen extends Screen {
 
     private boolean scrollListRecursive(PositionedWidget w, double mx, double my, double delta) {
         if (w instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
+        if (w instanceof GridScrollList grid && grid.handleScroll(mx, my, delta)) return true;
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
                 if (child instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
+                if (child instanceof GridScrollList grid && grid.handleScroll(mx, my, delta)) return true;
             }
         }
         return false;
@@ -274,6 +280,9 @@ public abstract class EnhancedScreen extends Screen {
     /** 递归检查 widget 及其所有嵌套子组件的点击 */
     private boolean checkClickRecursive(PositionedWidget w, MouseButtonEvent event, boolean doubleClick) {
         if (w instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
+            return true;
+        }
+        if (w instanceof GridScrollList grid && grid.handleClick(event, doubleClick)) {
             return true;
         }
         if (w instanceof DropdownMenu<?> dm && dm.handleClick(event, doubleClick)) {
@@ -291,6 +300,9 @@ public abstract class EnhancedScreen extends Screen {
             }
             for (var child : panel.collectAllChildren()) {
                 if (child instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
+                    return true;
+                }
+                if (child instanceof GridScrollList grid && grid.handleClick(event, doubleClick)) {
                     return true;
                 }
                 if (child instanceof DropdownMenu<?> d && d.handleClick(event, doubleClick)) {

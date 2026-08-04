@@ -53,6 +53,7 @@ public class CustomButton extends PositionedWidget {
     }
 
     public CustomButton setText(Component t) { text = t; segments = null; return this; }
+    public CustomButton setNormalColor(int c) { normalColor = c; return this; }
     public CustomButton setHoverColor(int c) { hoverColor = c; return this; }
     public CustomButton setTextColor(int c) { textColor = c; return this; }
     public CustomButton setFont(@Nullable Font f) { customFont = f; return this; }
