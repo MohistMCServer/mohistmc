@@ -24,6 +24,13 @@ public abstract class ScrollListItem {
      */
     public boolean handleClick(int rx, int ry, int w) { return false; }
 
+    /**
+     * 是否允许 ScrollList 绘制悬停覆盖层（默认 true）。
+     * <p>覆盖为 false 时由子项自行渲染悬停效果（如带间距区的卡片，
+     * 可避免覆盖层把间距区也提亮）。
+     */
+    public boolean renderHoverOverlay() { return true; }
+
     /** 渲染当前项 */
     public abstract void render(GuiGraphicsExtractor g, int x, int y, int w, boolean hovered, int alpha);
 

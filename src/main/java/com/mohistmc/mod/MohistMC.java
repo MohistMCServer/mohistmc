@@ -5,6 +5,7 @@ import com.mohistmc.mod.client.gui.FakeMainGui;
 import com.mohistmc.mod.client.gui.YouerInventoryScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.mail.Mail;
 import com.mohistmc.mod.module.shop.Shop;
 import com.mohistmc.mod.register.BlockRegister;
 import com.mohistmc.mod.register.ItemRegister;
@@ -56,6 +57,7 @@ public class MohistMC {
         NeoForge.EVENT_BUS.register(this);
         new FarmersDelight(modEventBus, modContainer);
         new Shop(modEventBus, modContainer);
+        new Mail(modEventBus, modContainer);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

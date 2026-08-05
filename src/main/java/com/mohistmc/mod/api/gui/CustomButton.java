@@ -34,7 +34,7 @@ public class CustomButton extends PositionedWidget {
     private GradientDirection gradientDirection = GradientDirection.TOP_BOTTOM;
     private Runnable onClick;
     private SoundEvent clickSound, hoverSound;
-    private boolean wasHovered, enabled = true;
+    private boolean wasHovered, enabled = true, visible = true;
     @Nullable private Component tooltip;
     @Nullable private Font customFont;
     private boolean enableItemIcons;
@@ -72,6 +72,8 @@ public class CustomButton extends PositionedWidget {
     public CustomButton withDefaultHoverSound() { hoverSound = SoundEvents.UI_BUTTON_CLICK.value(); return this; }
     public CustomButton setEnabled(boolean e) { enabled = e; return this; }
     public boolean isEnabled() { return enabled; }
+    public CustomButton setVisible(boolean v) { visible = v; return this; }
+    public boolean isVisible() { return visible; }
     public CustomButton setTooltip(@Nullable Component t) { tooltip = t; return this; }
     @Nullable public Component getTooltip() { return tooltip; }
     public boolean hasTooltip() { return tooltip != null; }
@@ -82,7 +84,7 @@ public class CustomButton extends PositionedWidget {
     @Override public CustomButton setAlpha(float a) { super.setAlpha(a); return this; }
 
     boolean handleClick(MouseButtonEvent e, boolean dbl) {
-        if (!enabled) return false;
+        if (!enabled || !visible) return false;
         if (isMouseOver(e.x(), e.y())) {
             if (onClick != null) { playSound(clickSound); onClick.run(); }
             return true;
@@ -94,6 +96,7 @@ public class CustomButton extends PositionedWidget {
 
     @Override
     public void render(GuiGraphicsExtractor g, int mx, int my, float pt) {
+        if (!visible) return;
         int x = getAbsoluteX(), y = getAbsoluteY();
         boolean hovered = enabled && isMouseOver(mx, my);
         if (enabled && hovered && !wasHovered) playSound(hoverSound);

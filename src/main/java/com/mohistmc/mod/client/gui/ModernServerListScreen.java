@@ -58,7 +58,6 @@ public class ModernServerListScreen extends EnhancedScreen {
         int listTop = 30;
         int listBottom = sh - 52;
         serverList = new ScrollList(40, listTop, sw - 80, listBottom - listTop, 0x00000000);
-        serverList.setScrollbarColor(0x55FFFFFF);
         refreshServerCards();
         addWidget(serverList);
 

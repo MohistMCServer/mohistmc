@@ -6,11 +6,11 @@ import com.mohistmc.mod.api.gui.IconButton;
 import com.mohistmc.mod.api.gui.ImageWidget;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.SimpleLabel;
+import com.mohistmc.mod.module.mail.common.network.payload.OpenMailboxRequestPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BalanceRequestPayload;
 import com.mohistmc.mod.utils.ProcessWorkingSetUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.gui.screens.achievement.StatsScreen;
 import net.minecraft.client.gui.screens.advancements.AdvancementsScreen;
 import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
@@ -208,7 +208,7 @@ public class EscGui extends EnhancedScreen {
         record IconDef(String tex, Component tip, Runnable action) {}
         IconDef[] icons = {
                 new IconDef("0", Component.literal("邮件"), () ->
-                        minecraft.gui.setScreen(new StatsScreen(this, minecraft.player.getStats()))),
+                        ClientPacketDistributor.sendToServer(OpenMailboxRequestPayload.INSTANCE)),
                 new IconDef("1", Component.literal("活动"), () -> {
                     System.out.println("debug");
                 }),

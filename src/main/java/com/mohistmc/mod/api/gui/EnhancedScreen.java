@@ -218,24 +218,20 @@ public abstract class EnhancedScreen extends Screen {
     }
 
     private boolean dragScrollListRecursive(PositionedWidget w, int mx, int my) {
-        if (w instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
-        if (w instanceof GridScrollList grid) { grid.handleDrag(mx, my); return true; }
+        if (w instanceof ScrollableWidget scrollable) { scrollable.handleDrag(mx, my); return true; }
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
-                if (child instanceof ScrollList sl) { sl.handleDrag(mx, my); return true; }
-                if (child instanceof GridScrollList grid) { grid.handleDrag(mx, my); return true; }
+                if (child instanceof ScrollableWidget scrollable) { scrollable.handleDrag(mx, my); return true; }
             }
         }
         return false;
     }
 
     private void releaseScrollListRecursive(PositionedWidget w) {
-        if (w instanceof ScrollList sl) sl.handleRelease();
-        if (w instanceof GridScrollList grid) grid.handleRelease();
+        if (w instanceof ScrollableWidget scrollable) scrollable.handleRelease();
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
-                if (child instanceof ScrollList sl) sl.handleRelease();
-                if (child instanceof GridScrollList grid) grid.handleRelease();
+                if (child instanceof ScrollableWidget scrollable) scrollable.handleRelease();
             }
         }
     }
@@ -266,23 +262,18 @@ public abstract class EnhancedScreen extends Screen {
     }
 
     private boolean scrollListRecursive(PositionedWidget w, double mx, double my, double delta) {
-        if (w instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
-        if (w instanceof GridScrollList grid && grid.handleScroll(mx, my, delta)) return true;
+        if (w instanceof ScrollableWidget scrollable && scrollable.handleScroll(mx, my, delta)) return true;
         if (w instanceof Panel panel) {
             for (var child : panel.collectAllChildren()) {
-                if (child instanceof ScrollList sl && sl.handleScroll(mx, my, delta)) return true;
-                if (child instanceof GridScrollList grid && grid.handleScroll(mx, my, delta)) return true;
+                if (child instanceof ScrollableWidget scrollable && scrollable.handleScroll(mx, my, delta)) return true;
             }
         }
         return false;
     }
 
-    /** 递归检查 widget 及其所有嵌套子组件的点击 */
+    /** 递归检查 widget 及其所有嵌套子组件的点击（ScrollableWidget 统一接滚轮/点击/拖拽） */
     private boolean checkClickRecursive(PositionedWidget w, MouseButtonEvent event, boolean doubleClick) {
-        if (w instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
-            return true;
-        }
-        if (w instanceof GridScrollList grid && grid.handleClick(event, doubleClick)) {
+        if (w instanceof ScrollableWidget scrollable && scrollable.handleClick(event, doubleClick)) {
             return true;
         }
         if (w instanceof DropdownMenu<?> dm && dm.handleClick(event, doubleClick)) {
@@ -299,10 +290,7 @@ public abstract class EnhancedScreen extends Screen {
                 return true;
             }
             for (var child : panel.collectAllChildren()) {
-                if (child instanceof ScrollList sl && sl.handleClick(event, doubleClick)) {
-                    return true;
-                }
-                if (child instanceof GridScrollList grid && grid.handleClick(event, doubleClick)) {
+                if (child instanceof ScrollableWidget scrollable && scrollable.handleClick(event, doubleClick)) {
                     return true;
                 }
                 if (child instanceof DropdownMenu<?> d && d.handleClick(event, doubleClick)) {

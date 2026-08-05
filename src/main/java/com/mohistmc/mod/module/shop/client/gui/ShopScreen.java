@@ -172,10 +172,20 @@ public class ShopScreen extends EnhancedScreen {
         int cols = Math.max(2, Math.min(GRID_COLS, gridW / 28));
         grid = new GridScrollList(gridX, gridTop, gridW, gridH, 0x66000000);
         grid.setColumns(cols).setGap(3, 4).setSquareCells(true).setCellExtraHeight(13)
-                .setPadding(2).setScrollbarColor(0x55FFFFFF);
+                .setPadding(2);
         addWidget(grid);
 
+        // 重建（resize/重开）后按商品引用恢复选中，避免详情清空
+        ShopProduct prevSelected = selectedCard != null ? selectedCard.getProduct() : null;
         refreshGrid();
+        if (prevSelected != null) {
+            for (var item : grid.getItems()) {
+                if (item instanceof ShopCard card && card.getProduct() == prevSelected) {
+                    onCardSelected(card);
+                    break;
+                }
+            }
+        }
         refreshDetail();
     }
 
@@ -287,9 +297,9 @@ public class ShopScreen extends EnhancedScreen {
         } else {
             detailStock.setText(null);
         }
-        // 数量/按钮区：售罄时数量锁定 0、加减与购买禁用
+        // 数量/按钮区：售罄或无选中时数量锁定 0、加减与购买禁用
         boolean soldOut = isDetailSoldOut();
-        if (soldOut) {
+        if (soldOut || !has) {
             detailQty = 0;
             updatingQty = true;
             syncQtyInput();
