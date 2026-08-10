@@ -170,7 +170,7 @@ public class Panel extends PositionedWidget {
     // ======== 内部 ========
 
     @Override
-    void setScreenPos(int left, int top, int contentWidth, int contentHeight) {
+    public void setScreenPos(int left, int top, int contentWidth, int contentHeight) {
         super.setScreenPos(left, top, contentWidth, contentHeight);
         if (layoutDirection != LayoutDirection.FREE) {
             layoutChildren();

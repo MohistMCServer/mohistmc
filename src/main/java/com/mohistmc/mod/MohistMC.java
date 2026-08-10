@@ -7,6 +7,7 @@ import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.mail.Mail;
 import com.mohistmc.mod.module.shop.Shop;
+import com.mohistmc.mod.module.shop.common.data.ShopData;
 import com.mohistmc.mod.register.BlockRegister;
 import com.mohistmc.mod.register.ItemRegister;
 import com.mohistmc.mod.register.ModEntities;
@@ -20,6 +21,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.storage.LevelResource;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -66,6 +68,12 @@ public class MohistMC {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+        // 初始化商店数据文件路径
+        var server = event.getServer();
+        var serverDir = server.getWorldPath(LevelResource.ROOT);
+        ShopData.setDataFile(serverDir);
+        // 触发初始化（加载/创建数据）
+        ShopData.getAllShops();
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

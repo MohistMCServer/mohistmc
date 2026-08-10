@@ -70,7 +70,16 @@ public abstract class PositionedWidget {
 
     // ======== 内部 ========
 
-    void setScreenPos(int left, int top, int contentWidth, int contentHeight) {
+    /** 直接更新布局位置和尺寸（用于动态调整已存在的 widget） */
+    public void updateLayout(int relX, int relY, int width, int height) {
+        this.relativeX = relX;
+        this.relativeY = relY;
+        this.width = width;
+        this.height = height;
+        updateAbsolutePosition();
+    }
+
+    public void setScreenPos(int left, int top, int contentWidth, int contentHeight) {
         this.screenLeft = left;
         this.screenTop = top;
         this.contentWidth = contentWidth;

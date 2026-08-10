@@ -62,8 +62,12 @@ public class GridScrollList extends ScrollableWidget {
     public GridScrollList setSquareCells(boolean square) { this.squareCells = square; return this; }
     /** 单元格附加高度（卡片下方附加区，如徽章行；仅正方形模式生效） */
     public GridScrollList setCellExtraHeight(int height) { this.cellExtraHeight = Math.max(0, height); return this; }
-    /** 内容内边距（卡片与背景框边缘的间距） */
-    public GridScrollList setPadding(int padding) { this.padding = Math.max(0, padding); return this; }
+    /** 内容内边距（卡片与背景框边缘的间距）；同步设置基类 contentPadding 以统一 scissor 与滚动量 */
+    public GridScrollList setPadding(int padding) {
+        this.padding = Math.max(0, padding);
+        setContentPadding(this.padding);
+        return this;
+    }
 
     public List<ScrollListItem> getItems() { return slotItems; }
 

@@ -26,7 +26,8 @@ public class MapTooltipComponent implements ClientTooltipComponent, TooltipCompo
     private static final Identifier MAP_SPRITE = Identifier.withDefaultNamespace("textures/map/map_background.png");
 
     public MapTooltipComponent(ItemStack item) {
-        this.id = item.get(DataComponents.MAP_ID).id();
+        var mapId = item.get(DataComponents.MAP_ID);
+        this.id = mapId != null ? mapId.id() : null;
     }
 
     public void extractImage(@NotNull Font font, int x, int y, int w, int h, @NotNull GuiGraphicsExtractor graphics) {

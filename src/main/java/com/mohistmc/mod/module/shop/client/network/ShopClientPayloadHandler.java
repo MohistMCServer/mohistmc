@@ -1,10 +1,13 @@
 package com.mohistmc.mod.module.shop.client.network;
 
 import com.mohistmc.mod.client.gui.EscGui;
+import com.mohistmc.mod.module.shop.client.gui.ShopAdminScreen;
 import com.mohistmc.mod.module.shop.client.gui.ShopScreen;
 import com.mohistmc.mod.module.shop.common.network.payload.BalanceSyncPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyResultPayload;
+import com.mohistmc.mod.module.shop.common.network.payload.OpenShopAdminPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.OpenShopPayload;
+import com.mohistmc.mod.module.shop.common.network.payload.ShopDataSyncPayload;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -27,6 +30,11 @@ public final class ShopClientPayloadHandler {
         context.enqueueWork(() -> Minecraft.getInstance().gui.setScreen(new ShopScreen(payload.balance())));
     }
 
+    /** 服务端请求打开商店管理后台（管理员编辑商品） */
+    public static void handleOpenShopAdmin(OpenShopAdminPayload payload, IPayloadContext context) {
+        context.enqueueWork(() -> Minecraft.getInstance().gui.setScreen(new ShopAdminScreen()));
+    }
+
     /** 余额同步：ESC 界面若在显示则刷新金币行 */
     public static void handleBalanceSync(BalanceSyncPayload payload, IPayloadContext context) {
         context.enqueueWork(() -> {
@@ -41,6 +49,20 @@ public final class ShopClientPayloadHandler {
         context.enqueueWork(() -> {
             if (Minecraft.getInstance().gui.screen() instanceof ShopScreen shopScreen) {
                 shopScreen.handleBuyResult(payload);
+            }
+        });
+    }
+
+    /** 商品目录同步：服务端编辑后广播，更新本地数据并刷新界面 */
+    public static void handleDataSync(ShopDataSyncPayload payload, IPayloadContext context) {
+        context.enqueueWork(() -> {
+            payload.applyToClient();
+            // 如果当前在商店界面或管理界面，刷新显示
+            var screen = Minecraft.getInstance().gui.screen();
+            if (screen instanceof ShopScreen shopScreen) {
+                shopScreen.rebuildWidgets();
+            } else if (screen instanceof ShopAdminScreen adminScreen) {
+                adminScreen.rebuildWidgets();
             }
         });
     }

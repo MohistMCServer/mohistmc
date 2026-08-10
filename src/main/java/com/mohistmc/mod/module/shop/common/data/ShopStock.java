@@ -27,8 +27,8 @@ public final class ShopStock {
     }
 
     private static final class StockState {
-        final int initialStock;
-        final RestockCycle restockCycle;
+        int initialStock;
+        RestockCycle restockCycle;
         int remaining;
         LocalDateTime lastReset;
 
@@ -41,9 +41,11 @@ public final class ShopStock {
 
     private static void ensureInit() {
         if (initialized) return;
-        for (var product : ShopData.PRODUCTS) {
-            if (product.stock() > 0) {
-                STATES.put(product.id(), new StockState(product.stock(), product.restockCycle()));
+        for (var shop : ShopData.getAllShops()) {
+            for (var product : shop.getProducts()) {
+                if (product.stock() > 0) {
+                    STATES.put(product.id(), new StockState(product.stock(), product.restockCycle()));
+                }
             }
         }
         initialized = true;
@@ -54,8 +56,8 @@ public final class ShopStock {
         if (state.restockCycle == RestockCycle.NONE) return;
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime resetPoint = switch (state.restockCycle) {
-            case DAILY -> LocalDateTime.of(now.toLocalDate(), RESET_TIME);                      // 今天 04:00
-            case WEEKLY -> LocalDateTime.of(now.toLocalDate().with(DayOfWeek.MONDAY), RESET_TIME); // 本周一 04:00
+            case DAILY -> LocalDateTime.of(now.toLocalDate(), RESET_TIME);
+            case WEEKLY -> LocalDateTime.of(now.toLocalDate().with(DayOfWeek.MONDAY), RESET_TIME);
             case NONE -> null;
         };
         if (state.lastReset == null || state.lastReset.isBefore(resetPoint)) {
@@ -86,5 +88,37 @@ public final class ShopStock {
         if (state == null) return;
         maybeRestock(state);
         state.remaining = Math.max(0, state.remaining - qty);
+    }
+
+    /**
+     * 更新商品库存配置（编辑/新增时调用）
+     * @param productId   商品 ID
+     * @param newStock    新库存（-1=无限，>0=有限）
+     * @param restockCycle 补货周期
+     */
+    public static void updateProduct(int productId, int newStock, RestockCycle restockCycle) {
+        ensureInit();
+        if (newStock <= 0) {
+            STATES.remove(productId);
+        } else {
+            StockState state = STATES.get(productId);
+            if (state == null) {
+                STATES.put(productId, new StockState(newStock, restockCycle));
+            } else {
+                state.initialStock = newStock;
+                state.remaining = newStock;
+                state.restockCycle = restockCycle;
+                state.lastReset = null;
+            }
+        }
+    }
+
+    /**
+     * 删除商品库存记录
+     * @param productId 商品 ID
+     */
+    public static void removeProduct(int productId) {
+        ensureInit();
+        STATES.remove(productId);
     }
 }

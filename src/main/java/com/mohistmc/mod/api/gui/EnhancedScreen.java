@@ -110,6 +110,14 @@ public abstract class EnhancedScreen extends Screen {
     /** 在这里添加你的组件 */
     protected abstract void buildWidgets();
 
+    /**
+     * 重建所有组件（公开，供外部类触发刷新）
+     */
+    public void rebuildWidgets() {
+        this.clearWidgets();
+        this.init();
+    }
+
     /** 添加一个可渲染、可点击的组件 */
     protected void addWidget(PositionedWidget widget) {
         widget.setScreenPos(leftPos, topPos, getImageWidth(), getImageHeight());
@@ -203,6 +211,14 @@ public abstract class EnhancedScreen extends Screen {
 
     @Override
     public boolean mouseDragged(MouseButtonEvent event, double dragX, double dragY) {
+        // 1) 模态对话框优先
+        for (var modal : modals) {
+            if (modal.isVisible()) {
+                modal.handleDrag(event.x(), event.y());
+                return true;
+            }
+        }
+        // 2) widgets
         for (var widget : widgets) {
             if (dragScrollListRecursive(widget, (int) event.x(), (int) event.y())) return true;
         }
@@ -211,6 +227,9 @@ public abstract class EnhancedScreen extends Screen {
 
     @Override
     public boolean mouseReleased(MouseButtonEvent event) {
+        for (var modal : modals) {
+            modal.handleRelease();
+        }
         for (var widget : widgets) {
             releaseScrollListRecursive(widget);
         }
@@ -255,6 +274,17 @@ public abstract class EnhancedScreen extends Screen {
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
+        // 1) 模态对话框内部的滚动优先处理
+        for (var modal : modals) {
+            if (modal.isVisible() && modal.handleScroll(mouseX, mouseY, scrollY)) {
+                return true;
+            }
+        }
+        // 2) 如果有任何模态可见，阻止底层滚动穿透
+        for (var modal : modals) {
+            if (modal.isVisible()) return true;
+        }
+        // 3) 底层 widgets 滚动
         for (var widget : widgets) {
             if (scrollListRecursive(widget, mouseX, mouseY, scrollY)) return true;
         }

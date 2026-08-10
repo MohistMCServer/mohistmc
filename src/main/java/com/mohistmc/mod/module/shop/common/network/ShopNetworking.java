@@ -4,6 +4,7 @@ import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.shop.client.network.ShopClientPayloadHandler;
 import com.mohistmc.mod.module.shop.common.ShopSession;
 import com.mohistmc.mod.module.shop.common.attachment.PlayerBalance;
+import com.mohistmc.mod.module.shop.common.data.RestockCycle;
 import com.mohistmc.mod.module.shop.common.data.ShopData;
 import com.mohistmc.mod.module.shop.common.data.ShopProduct;
 import com.mohistmc.mod.module.shop.common.data.ShopStock;
@@ -11,7 +12,14 @@ import com.mohistmc.mod.module.shop.common.network.payload.BalanceRequestPayload
 import com.mohistmc.mod.module.shop.common.network.payload.BalanceSyncPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyResultPayload;
+import com.mohistmc.mod.module.shop.common.network.payload.OpenShopAdminPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.OpenShopPayload;
+import com.mohistmc.mod.module.shop.common.network.payload.ShopDataSyncPayload;
+import com.mohistmc.mod.module.shop.common.network.payload.ShopEditPayload;
+import java.util.List;
+import net.minecraft.commands.Commands;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -19,6 +27,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 /**
@@ -34,10 +43,13 @@ public class ShopNetworking {
     public static void registerPayloadHandlers(RegisterPayloadHandlersEvent event) {
         final PayloadRegistrar registrar = event.registrar("1");
         registrar.playToClient(OpenShopPayload.TYPE, OpenShopPayload.STREAM_CODEC, ShopClientPayloadHandler::handleOpenShop);
+        registrar.playToClient(OpenShopAdminPayload.TYPE, OpenShopAdminPayload.STREAM_CODEC, ShopClientPayloadHandler::handleOpenShopAdmin);
         registrar.playToServer(BalanceRequestPayload.TYPE, BalanceRequestPayload.STREAM_CODEC, ServerPayloadHandler::handleBalanceRequest);
         registrar.playToClient(BalanceSyncPayload.TYPE, BalanceSyncPayload.STREAM_CODEC, ShopClientPayloadHandler::handleBalanceSync);
         registrar.playToServer(BuyPayload.TYPE, BuyPayload.STREAM_CODEC, ServerPayloadHandler::handleBuy);
         registrar.playToClient(BuyResultPayload.TYPE, BuyResultPayload.STREAM_CODEC, ShopClientPayloadHandler::handleBuyResult);
+        registrar.playToServer(ShopEditPayload.TYPE, ShopEditPayload.STREAM_CODEC, ServerPayloadHandler::handleEdit);
+        registrar.playToClient(ShopDataSyncPayload.TYPE, ShopDataSyncPayload.STREAM_CODEC, ShopClientPayloadHandler::handleDataSync);
     }
 
     public static class ServerPayloadHandler {
@@ -110,6 +122,69 @@ public class ShopNetworking {
                 }
             }
             return false;
+        }
+
+        /** 商店编辑（管理员操作）：修改/新增/删除商品 + 类别管理 + 商店管理 */
+        public static void handleEdit(ShopEditPayload payload, IPayloadContext context) {
+            Player player = context.player();
+            if (!Commands.LEVEL_GAMEMASTERS.check(player.permissions())) {
+                return; // 无权限直接忽略
+            }
+            context.enqueueWork(() -> {
+                switch (payload.action()) {
+                    // ———— 商品操作 ————
+                    case ShopEditPayload.ACTION_EDIT -> {
+                        ShopProduct updated = ShopData.modifyProduct(payload.shopId(), payload.itemId(),
+                                payload.price(), payload.stock(), payload.categoryId());
+                        if (updated != null) {
+                            ShopStock.updateProduct(payload.itemId(), payload.stock(), updated.restockCycle());
+                        }
+                    }
+                    case ShopEditPayload.ACTION_ADD -> {
+                        RestockCycle cycle = RestockCycle.values()[payload.restockCycle()];
+                        ShopProduct added = ShopData.addProduct(payload.shopId(), payload.stack(),
+                                payload.price(), payload.categoryId(), payload.stock(), cycle);
+                        if (added != null) {
+                            ShopStock.updateProduct(added.id(), payload.stock(), cycle);
+                        }
+                    }
+                    case ShopEditPayload.ACTION_DELETE -> {
+                        ShopData.removeProduct(payload.shopId(), payload.itemId());
+                        ShopStock.removeProduct(payload.itemId());
+                    }
+                    // ———— 类别操作 ————
+                    case ShopEditPayload.ACTION_ADD_CATEGORY -> {
+                        ShopData.addCategory(payload.shopId(), payload.name(), payload.langKey());
+                    }
+                    case ShopEditPayload.ACTION_EDIT_CATEGORY -> {
+                        ShopData.modifyCategory(payload.shopId(), payload.categoryId(), payload.name(), payload.langKey());
+                    }
+                    case ShopEditPayload.ACTION_DELETE_CATEGORY -> {
+                        ShopData.removeCategory(payload.shopId(), payload.categoryId());
+                    }
+                    // ———— 商店操作 ————
+                    case ShopEditPayload.ACTION_ADD_SHOP -> {
+                        // 单机模式下客户端乐观更新可能已创建，忽略重复
+                        try {
+                            ShopData.createShop(payload.shopId(), payload.name());
+                        } catch (IllegalArgumentException ignored) {
+                        }
+                    }
+                }
+                // 广播最新数据给所有在线玩家
+                if (player instanceof ServerPlayer sp) {
+                    broadcastShopDataSync(sp.level().getServer());
+                }
+            });
+        }
+
+        /** 广播商品目录同步给所有在线玩家 */
+        public static void broadcastShopDataSync(MinecraftServer server) {
+            if (server == null) return;
+            var payload = ShopDataSyncPayload.fromCurrentData();
+            for (ServerPlayer p : server.getPlayerList().getPlayers()) {
+                PacketDistributor.sendToPlayer(p, payload);
+            }
         }
     }
 }

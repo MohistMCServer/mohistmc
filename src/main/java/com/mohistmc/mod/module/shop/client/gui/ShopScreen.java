@@ -11,6 +11,7 @@ import com.mohistmc.mod.api.gui.SimpleLabel;
 import com.mohistmc.mod.module.shop.common.data.Currency;
 import com.mohistmc.mod.module.shop.common.data.RestockCycle;
 import com.mohistmc.mod.module.shop.common.data.RestockTimer;
+import com.mohistmc.mod.module.shop.common.data.Shop;
 import com.mohistmc.mod.module.shop.common.data.ShopCategory;
 import com.mohistmc.mod.module.shop.common.data.ShopData;
 import com.mohistmc.mod.module.shop.common.data.ShopProduct;
@@ -62,7 +63,7 @@ public class ShopScreen extends EnhancedScreen {
 
     // —— 分类 / 搜索 ——
     private final List<CustomButton> categoryTabs = new ArrayList<>();
-    private ShopCategory currentCategory = ShopCategory.ALL;
+    private int currentCategoryId = ShopCategory.ALL_ID;
     private String searchText = "";
     private GridScrollList grid;
 
@@ -110,11 +111,22 @@ public class ShopScreen extends EnhancedScreen {
 
         // —— 分类 Tab（左侧竖列） ——
         int tabY = top + 42;
-        for (var category : ShopCategory.values()) {
+        var defaultShop = ShopData.getDefaultShop();
+        var categories = defaultShop != null ? defaultShop.getCategories() : java.util.List.<ShopCategory>of();
+        // 添加"全部"Tab
+        var allTab = new CustomButton(left, tabY, tabColW, 18,
+                Component.translatable("gui.mohistmc.shop.cat.all"), 0xFF333344)
+                .setTextColor(0xFFFFFFFF).setBorderRadius(0)
+                .onClick(() -> selectCategory(ShopCategory.ALL_ID));
+        categoryTabs.add(allTab);
+        addWidget(allTab);
+        tabY += 18 + tabColGap;
+
+        for (var category : categories) {
             var tab = new CustomButton(left, tabY, tabColW, 18,
                     Component.translatable(category.getLangKey()), 0xFF333344)
                     .setTextColor(0xFFFFFFFF).setBorderRadius(0)
-                    .onClick(() -> selectCategory(category));
+                    .onClick(() -> selectCategory(category.getId()));
             categoryTabs.add(tab);
             addWidget(tab);
             tabY += 18 + tabColGap;
@@ -416,15 +428,25 @@ public class ShopScreen extends EnhancedScreen {
 
     // ======== 分类 / 搜索 ========
 
-    private void selectCategory(ShopCategory category) {
-        this.currentCategory = category;
+    private void selectCategory(int categoryId) {
+        this.currentCategoryId = categoryId;
         updateTabStyles();
         refreshGrid();
     }
 
-    /** 选中 Tab 绿色高亮，其余恢复深灰（categoryTabs 顺序即 ShopCategory.values() 顺序） */
+    /** 选中 Tab 绿色高亮，其余恢复深灰（categoryTabs[0] 为"全部"，其余对应 categories 列表顺序） */
     private void updateTabStyles() {
-        int selectedIndex = currentCategory.ordinal();
+        int selectedIndex = 0;
+        var defaultShop = ShopData.getDefaultShop();
+        var categories = defaultShop != null ? defaultShop.getCategories() : java.util.List.<ShopCategory>of();
+        if (currentCategoryId != ShopCategory.ALL_ID) {
+            for (int i = 0; i < categories.size(); i++) {
+                if (categories.get(i).getId() == currentCategoryId) {
+                    selectedIndex = i + 1;
+                    break;
+                }
+            }
+        }
         for (int i = 0; i < categoryTabs.size(); i++) {
             var tab = categoryTabs.get(i);
             if (i == selectedIndex) {
@@ -446,8 +468,10 @@ public class ShopScreen extends EnhancedScreen {
         }
         detailQty = 1;
         String query = searchText.toLowerCase(Locale.ROOT).trim();
-        for (var product : ShopData.PRODUCTS) {
-            if (currentCategory != ShopCategory.ALL && product.category() != currentCategory) {
+        var defaultShop = ShopData.getDefaultShop();
+        var products = defaultShop != null ? defaultShop.getProducts() : java.util.List.<ShopProduct>of();
+        for (var product : products) {
+            if (currentCategoryId != ShopCategory.ALL_ID && product.categoryId() != currentCategoryId) {
                 continue;
             }
             if (!query.isEmpty() && !matchesSearch(product, query)) {

@@ -49,7 +49,7 @@ public class Modal extends PositionedWidget {
     private final Component message;
 
     // 样式
-    private int backdropColor = 0x80000000;
+    protected int backdropColor = 0x80000000;
     private int dialogBgColor = 0xFF2D2D2D;
     private int borderColor = 0xFF888888;
     private int titleColor = 0xFFFFFFFF;
@@ -68,8 +68,8 @@ public class Modal extends PositionedWidget {
     private Runnable onClose;
 
     // 状态
-    private boolean visible = true;
-    private boolean closeOnBackdrop = true;
+    protected boolean visible = true;
+    protected boolean closeOnBackdrop = true;
     private boolean initialized;
 
     // 引用
@@ -129,6 +129,17 @@ public class Modal extends PositionedWidget {
     public void show() { visible = true; }
     public void hide() { visible = false; closeBtnHovered = 0; }
     public boolean isVisible() { return visible; }
+
+    // ======== 滚动/拖拽（子类可重写以路由到内部滚动组件） ========
+
+    /** 滚轮事件，返回 true 表示已消费 */
+    public boolean handleScroll(double mouseX, double mouseY, double delta) { return false; }
+
+    /** 拖拽事件 */
+    public void handleDrag(double mouseX, double mouseY) {}
+
+    /** 释放事件 */
+    public void handleRelease() {}
 
     // ======== 点击 ========
 
