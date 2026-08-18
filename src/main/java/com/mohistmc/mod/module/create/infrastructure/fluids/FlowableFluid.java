@@ -15,9 +15,17 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.WaterFluid;
+import net.neoforged.neoforge.fluids.FluidType;
 import org.jspecify.annotations.Nullable;
 
 public abstract class FlowableFluid extends WaterFluid {
+    public abstract FluidEntry getEntry();
+
+    @Override
+    public FluidType getFluidType() {
+        return getEntry().getFluidType();
+    }
+
     @Override
     public void animateTick(Level world, BlockPos pos, FluidState state, RandomSource random) {
     }

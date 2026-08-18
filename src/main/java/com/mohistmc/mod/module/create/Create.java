@@ -62,6 +62,7 @@ public class Create {
 
     public Create(IEventBus modEventBus, ModContainer modContainer) {
         AllConfigs.register();
+        AllFluidTypes.FLUID_TYPES.register(modEventBus);
         modEventBus.addListener(AllTransfer::registerCapabilities);
         modEventBus.addListener(AllCreativeModeTabs::register);
         modEventBus.addListener(Create::registerDataPackRegistries);

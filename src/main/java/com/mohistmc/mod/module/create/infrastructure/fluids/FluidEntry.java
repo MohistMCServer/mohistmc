@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.fluids;
 
+import java.util.function.Supplier;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -9,6 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
+import net.neoforged.neoforge.fluids.FluidType;
 import org.jspecify.annotations.Nullable;
 
 public class FluidEntry {
@@ -16,6 +18,19 @@ public class FluidEntry {
     public FlowableFluid still = new Still();
     public @Nullable BucketItem bucket;
     public @Nullable FluidBlock block;
+    private final Supplier<FluidType> type;
+    private FluidType fluidType;
+
+    public FluidEntry(Supplier<FluidType> type) {
+        this.type = type;
+    }
+
+    public FluidType getFluidType() {
+        if (fluidType == null) {
+            fluidType = type.get();
+        }
+        return fluidType;
+    }
 
     private class Flowing extends FlowableFluid {
         public FluidEntry getEntry() {
