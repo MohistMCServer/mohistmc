@@ -1,0 +1,62 @@
+package com.mohistmc.mod.module.create.client.compat.jei.widget;
+
+import com.mojang.datafixers.util.Either;
+import com.zurrtum.create.AllDataComponents;
+import com.zurrtum.create.AllFluids;
+import com.zurrtum.create.content.fluids.potion.PotionFluidHandler;
+import com.zurrtum.create.infrastructure.component.BottleType;
+import java.util.ArrayList;
+import java.util.List;
+import mezz.jei.api.gui.builder.ITooltipBuilder;
+import mezz.jei.api.gui.ingredient.IRecipeSlotRichTooltipCallback;
+import mezz.jei.api.gui.ingredient.IRecipeSlotView;
+import mezz.jei.api.neoforge.NeoForgeTypes;
+import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.FormattedText;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.level.ItemLike;
+
+public class PotionTooltip implements IRecipeSlotRichTooltipCallback {
+    @Override
+    public void onRichTooltip(IRecipeSlotView recipeSlotView, ITooltipBuilder tooltip) {
+        List<Either<FormattedText, TooltipComponent>> lines = tooltip.getLines();
+        if (!lines.isEmpty()) {
+            lines.removeFirst();
+        }
+        recipeSlotView.getDisplayedIngredient(NeoForgeTypes.FLUID_STACK).ifPresent(ingredient -> {
+            if (ingredient.typeHolder().is(AllFluids.POTION.builtInRegistryHolder())) {
+                DataComponentMap components = ingredient.getComponents();
+                PotionContents contents = components.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
+                BottleType bottleType = components.getOrDefault(
+                    AllDataComponents.POTION_FLUID_BOTTLE_TYPE,
+                    BottleType.REGULAR
+                );
+                ItemLike itemFromBottleType = PotionFluidHandler.itemFromBottleType(bottleType);
+                Component name = contents.getName(itemFromBottleType.asItem().getDescriptionId() + ".effect.");
+                List<Either<FormattedText, TooltipComponent>> list = new ArrayList<>();
+                list.add(Either.left(name));
+                Float scale = components.get(DataComponents.POTION_DURATION_SCALE);
+                if (scale == null) {
+                    if (bottleType == BottleType.LINGERING) {
+                        scale = Items.LINGERING_POTION.components()
+                            .getOrDefault(DataComponents.POTION_DURATION_SCALE, 1.0f);
+                    } else {
+                        scale = 1.0f;
+                    }
+                }
+                PotionContents.addPotionTooltip(
+                    contents.getAllEffects(),
+                    text -> list.add(Either.left(text)),
+                    scale,
+                    Item.TooltipContext.EMPTY.tickRate()
+                );
+                lines.addAll(0, list);
+            }
+        });
+    }
+}

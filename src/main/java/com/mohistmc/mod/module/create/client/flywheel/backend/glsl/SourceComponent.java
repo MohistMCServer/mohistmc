@@ -1,0 +1,11 @@
+package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
+
+import java.util.Collection;
+
+public interface SourceComponent {
+    Collection<? extends SourceComponent> included();
+
+    String source();
+
+    String name();
+}

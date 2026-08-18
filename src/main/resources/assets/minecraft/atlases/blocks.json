@@ -11,6 +11,18 @@
       "namespace": "mohistmc",
       "source": "entity/signs/hanging",
       "prefix": "entity/signs/hanging/"
+    },
+    {
+      "type": "single",
+      "resource": "create:entity/coupling"
+    },
+    {
+      "type": "single",
+      "resource": "create:entity/train_hat"
+    },
+    {
+      "type": "single",
+      "resource": "create:entity/logistics_hat"
     }
   ]
 }

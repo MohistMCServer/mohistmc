@@ -6,6 +6,7 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.recipebook.GhostSlots;
 import net.minecraft.client.gui.screens.recipebook.RecipeBookComponent;
 import net.minecraft.client.gui.screens.recipebook.RecipeCollection;
+import net.minecraft.client.gui.screens.recipebook.SearchRecipeBookCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.context.ContextMap;
@@ -16,6 +17,9 @@ import net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay;
 
 public class CookingPotRecipeBookComponent extends RecipeBookComponent<CookingPotMenu>
 {
+
+	private static final SearchRecipeBookCategory COOKING_SEARCH_CATEGORY = ModRecipeCategories.COOKING_SEARCH.get();
+
 	private static final WidgetSprites FILTER_SPRITES = new WidgetSprites(
 			Identifier.withDefaultNamespace("recipe_book/furnace_filter_enabled"),
 			Identifier.withDefaultNamespace("recipe_book/furnace_filter_disabled"),

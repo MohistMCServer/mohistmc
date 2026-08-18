@@ -1,0 +1,7 @@
+package com.mohistmc.mod.module.create.client.catnip.gui.element;
+
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+
+public interface ScreenElement {
+    void render(GuiGraphicsExtractor graphics, int x, int y);
+}
