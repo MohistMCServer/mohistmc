@@ -8,7 +8,6 @@ import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mohistmc.mod.module.create.api.registry.CreateRegisterPlugin;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
 import com.mohistmc.mod.module.create.api.stress.BlockStressValues;
-import com.mohistmc.mod.module.create.compat.CompatMod;
 import com.mohistmc.mod.module.create.content.decoration.encasing.EncasingRegistry;
 import com.mohistmc.mod.module.create.content.equipment.armor.AllArmorMaterials;
 import com.mohistmc.mod.module.create.content.equipment.armor.AllEquipmentAssetKeys;
@@ -238,6 +237,5 @@ public class Create {
         AllMountedDispenseItemBehaviors.register();
         AllBlockSpoutingBehaviours.register();
         AllDataComponentPredicates.register();
-        CompatMod.register();
     }
 }

@@ -22,7 +22,6 @@ import com.mohistmc.mod.module.create.client.foundation.gui.RemovedGuiUtils;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
 import com.mohistmc.mod.module.create.client.infrastructure.config.CClient;
-import com.mohistmc.mod.module.create.compat.Mods;
 import com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock;
 import com.mohistmc.mod.module.create.content.contraptions.piston.PistonExtensionPoleBlock;
 import com.mohistmc.mod.module.create.content.equipment.goggles.GogglesItem;
@@ -210,7 +209,7 @@ public class GoggleOverlayRenderer {
             colorBorderBot.scaleAlpha(fade);
         }
 
-        if (!Mods.MODERNUI.isLoaded()) {
+        if (true /*!Mods.MODERNUI.isLoaded()*/) {
             // default tooltip rendering when modernUI is not loaded
             RemovedGuiUtils.drawHoveringText(
                 guiGraphics,

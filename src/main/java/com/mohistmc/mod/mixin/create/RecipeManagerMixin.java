@@ -6,9 +6,11 @@ import com.llamalad7.mixinextras.sugar.Local;
 import com.mohistmc.mod.module.create.AllRecipeSets;
 import com.mohistmc.mod.module.create.content.kinetics.mixer.PotionRecipe;
 import com.mohistmc.mod.module.create.content.processing.sequenced.SequencedAssemblyRecipe;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.SortedMap;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -19,6 +21,9 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeManager.IngredientExtractor;
 import net.minecraft.world.item.crafting.RecipeMap;
 import net.minecraft.world.item.crafting.RecipePropertySet;
+import net.minecraft.world.item.crafting.RecipeType;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -26,6 +31,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(RecipeManager.class)
 public class RecipeManagerMixin {
+    private static final Logger LOGGER = LogManager.getLogger("mohistmc.recipes");
+
     @Inject(method = "prepare(Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)Lnet/minecraft/world/item/crafting/RecipeMap;", at = @At(value = "INVOKE", target = "Ljava/util/SortedMap;size()I"))
     private void addSequencedAssemblyRecipe(
         ResourceManager manager,
@@ -35,6 +42,10 @@ public class RecipeManagerMixin {
     ) {
         recipes.putAll(SequencedAssemblyRecipe.GENERATE_RECIPES);
         PotionRecipe.register(recipes);
+        // Diagnostic: log per-type recipe counts to verify server-side mod recipe loading.
+        Map<RecipeType<?>, Long> counts = recipes.values().stream()
+            .collect(Collectors.groupingBy(Recipe::getType, Collectors.counting()));
+        LOGGER.info("[MOHISTMC-RECIPE] prepare(): total={}, perType={}", recipes.size(), counts);
     }
 
     @WrapOperation(method = "finalizeRecipeLoading(Lnet/minecraft/world/flag/FeatureFlagSet;)V", at = @At(value = "INVOKE", target = "Ljava/util/Set;stream()Ljava/util/stream/Stream;"))

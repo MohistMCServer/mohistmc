@@ -3,7 +3,6 @@ package com.mohistmc.mod.module.create.content.redstone.nixieTube;
 import com.mohistmc.mod.module.create.*;
 import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
-import com.mohistmc.mod.module.create.compat.Mods;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
 import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement.ItemUseType;
@@ -311,17 +310,6 @@ public class NixieTubeBlock extends DoubleFaceAttachedBlock implements IBE<Nixie
     @Override
     public void onPlace(BlockState state, Level worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
         if (state.getBlock() == oldState.getBlock() || isMoving || oldState.getBlock() instanceof NixieTubeBlock) {
-            return;
-        }
-        if (Mods.COMPUTERCRAFT.isLoaded() && isInComputerControlledRow(worldIn, pos)) {
-            // The nixie tube has been placed in a computer-controlled row.
-            walkNixies(
-                worldIn, pos, true, (currentPos, rowPosition) -> {
-                    if (worldIn.getBlockEntity(currentPos) instanceof NixieTubeBlockEntity ntbe) {
-                        ntbe.displayEmptyText(rowPosition);
-                    }
-                }
-            );
             return;
         }
         updateDisplayedRedstoneValue(state, worldIn, pos);

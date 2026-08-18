@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.contraptions.data;
 
-import com.mohistmc.mod.module.create.compat.Mods;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.util.Util;
@@ -21,11 +20,6 @@ public class ContraptionSyncLimiting {
 
     // the actual limit to be used
     public static final int LIMIT = Util.make(() -> {
-        // the smallest limit needs to be used, as we can't guarantee that all mixins are applied if multiple are present.
-        if (Mods.PACKETFIXER.isLoaded()) {
-            return PACKET_FIXER_LIMIT;
-        }
-
         // none are present, use vanilla default
         return SIZE_LIMIT;
     }) - BUFFER;

@@ -12,6 +12,7 @@ import net.minecraft.world.Containers;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.ItemAbility;
@@ -80,7 +81,8 @@ public class ItemUtils
 		if (stack.isEmpty()) {
 			return ItemStack.EMPTY;
 		}
-		return stack.getItem().getCraftingRemainder().create();
+		ItemStackTemplate craftingRemainder = stack.getItem().getCraftingRemainder();
+		return craftingRemainder != null ? craftingRemainder.create() : ItemStack.EMPTY;
 	}
 
 	public static boolean hasCraftingRemainingItem(ItemStack stack) {

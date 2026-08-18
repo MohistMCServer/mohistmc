@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.create.client;
 
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
-import com.mohistmc.mod.module.create.client.compat.CompatMod;
 import com.mohistmc.mod.module.create.client.content.contraptions.glue.SuperGlueSelectionHandler;
 import com.mohistmc.mod.module.create.client.content.equipment.bell.SoulPulseEffectHandler;
 import com.mohistmc.mod.module.create.client.content.equipment.potatoCannon.PotatoCannonRenderHandler;
@@ -74,7 +73,6 @@ public class Create {
         AllPotatoProjectileTransforms.register();
         CameraAngleAnimationService.register();
         PonderIndex.addPlugin(new CreatePonderPlugin());
-        CompatMod.register();
     }
 
     public static Identifier asResource(String path) {

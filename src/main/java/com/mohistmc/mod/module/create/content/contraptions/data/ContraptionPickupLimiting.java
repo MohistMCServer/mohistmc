@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.contraptions.data;
 
-import com.mohistmc.mod.module.create.compat.Mods;
 import io.netty.buffer.Unpooled;
 import net.minecraft.nbt.NbtAccounter;
 import net.minecraft.nbt.Tag;
@@ -20,11 +19,6 @@ public class ContraptionPickupLimiting {
 
     // the actual limit to be used
     public static final int LIMIT = Util.make(() -> {
-        // the smallest limit needs to be used, as we can't guarantee that all mixins are applied if multiple are present.
-        if (Mods.PACKETFIXER.isLoaded()) {
-            return PACKET_FIXER_LIMIT;
-        }
-
         // none are present, use vanilla default
         return NBT_LIMIT;
     }) - BUFFER;

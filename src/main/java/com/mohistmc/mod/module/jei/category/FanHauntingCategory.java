@@ -1,0 +1,88 @@
+package com.mohistmc.mod.module.jei.category;
+
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.TwoIconRenderer;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.render.FanRenderState;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.HauntingRecipe;
+import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
+import java.util.List;
+import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.recipe.IFocusGroup;
+import mezz.jei.api.recipe.types.IRecipeType;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeMap;
+import net.minecraft.world.level.block.Blocks;
+import org.joml.Matrix3x2f;
+
+public class FanHauntingCategory extends CreateCategory<RecipeHolder<HauntingRecipe>> {
+    public static List<RecipeHolder<HauntingRecipe>> getRecipes(RecipeMap preparedRecipes) {
+        return preparedRecipes.byType(AllRecipeTypes.HAUNTING.get()).stream().toList();
+    }
+
+    @Override
+    public IRecipeType<RecipeHolder<HauntingRecipe>> getRecipeType() {
+        return JeiClientPlugin.FAN_HAUNTING;
+    }
+
+    @Override
+    public Component getTitle() {
+        return CreateLang.translateDirect("recipe.fan_haunting");
+    }
+
+    @Override
+    public IDrawable getIcon() {
+        return new TwoIconRenderer(AllItems.PROPELLER, Items.SOUL_CAMPFIRE);
+    }
+
+    @Override
+    public int getHeight() {
+        return 72;
+    }
+
+    @Override
+    public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<HauntingRecipe> entry, IFocusGroup focuses) {
+        HauntingRecipe recipe = entry.value();
+        List<ProcessingOutput> results = recipe.results();
+        int outputSize = results.size();
+        if (outputSize == 1) {
+            builder.addInputSlot(21, 48).setBackground(SLOT, -1, -1).add(recipe.ingredient());
+            addChanceSlot(builder, 141, 48, results.getFirst());
+        } else {
+            int xOffsetAmount = 1 - Math.min(3, outputSize);
+            builder.addInputSlot(21 + xOffsetAmount * 5, 48).setBackground(SLOT, -1, -1).add(recipe.ingredient());
+            for (int i = 0, left = 141 + xOffsetAmount * 9, top = outputSize <= 9 ? 48 : 57; i < outputSize; i++) {
+                addChanceSlot(builder, left + i % 3 * 19, top + i / 3 * -19, results.get(i));
+            }
+        }
+    }
+
+    @Override
+    public void draw(
+        RecipeHolder<HauntingRecipe> entry,
+        IRecipeSlotsView recipeSlotsView,
+        GuiGraphicsExtractor graphics,
+        double mouseX,
+        double mouseY
+    ) {
+        int xOffsetAmount = 1 - Math.min(3, entry.value().results().size());
+        AllGuiTextures.JEI_SHADOW.render(graphics, 46, 27);
+        AllGuiTextures.JEI_LIGHT.render(graphics, 65, 39);
+        AllGuiTextures.JEI_LONG_ARROW.render(graphics, 54 + 7 * xOffsetAmount, 51);
+        graphics.guiRenderState.addPicturesInPictureState(new FanRenderState(
+            new Matrix3x2f(graphics.pose()),
+            56,
+            4,
+            Blocks.SOUL_FIRE.defaultBlockState()
+        ));
+    }
+}

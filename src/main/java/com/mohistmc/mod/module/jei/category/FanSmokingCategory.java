@@ -1,0 +1,77 @@
+package com.mohistmc.mod.module.jei.category;
+
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.TwoIconRenderer;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.render.FanRenderState;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import java.util.List;
+import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.recipe.IFocusGroup;
+import mezz.jei.api.recipe.types.IRecipeType;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeMap;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SmokingRecipe;
+import net.minecraft.world.level.block.Blocks;
+import org.joml.Matrix3x2f;
+
+public class FanSmokingCategory extends CreateCategory<RecipeHolder<SmokingRecipe>> {
+    public static List<RecipeHolder<SmokingRecipe>> getRecipes(RecipeMap preparedRecipes) {
+        return preparedRecipes.byType(RecipeType.SMOKING).stream().filter(AllRecipeTypes.CAN_BE_AUTOMATED).toList();
+    }
+
+    @Override
+    public IRecipeType<RecipeHolder<SmokingRecipe>> getRecipeType() {
+        return JeiClientPlugin.FAN_SMOKING;
+    }
+
+    @Override
+    public Component getTitle() {
+        return CreateLang.translateDirect("recipe.fan_smoking");
+    }
+
+    @Override
+    public IDrawable getIcon() {
+        return new TwoIconRenderer(AllItems.PROPELLER, Items.CAMPFIRE);
+    }
+
+    @Override
+    public int getHeight() {
+        return 72;
+    }
+
+    @Override
+    public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<SmokingRecipe> entry, IFocusGroup focuses) {
+        SmokingRecipe recipe = entry.value();
+        builder.addInputSlot(21, 48).setBackground(SLOT, -1, -1).add(recipe.input());
+        builder.addOutputSlot(141, 48).setBackground(SLOT, -1, -1).add(recipe.result());
+    }
+
+    @Override
+    public void draw(
+        RecipeHolder<SmokingRecipe> entry,
+        IRecipeSlotsView recipeSlotsView,
+        GuiGraphicsExtractor graphics,
+        double mouseX,
+        double mouseY
+    ) {
+        AllGuiTextures.JEI_SHADOW.render(graphics, 46, 27);
+        AllGuiTextures.JEI_LIGHT.render(graphics, 65, 39);
+        AllGuiTextures.JEI_LONG_ARROW.render(graphics, 54, 51);
+        graphics.guiRenderState.addPicturesInPictureState(new FanRenderState(
+            new Matrix3x2f(graphics.pose()),
+            56,
+            4,
+            Blocks.FIRE.defaultBlockState()
+        ));
+    }
+}
