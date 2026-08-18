@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.api.registry;
 
-import com.mojang.serialization.Lifecycle;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.api.behaviour.display.DisplaySource;
 import com.mohistmc.mod.module.create.api.behaviour.display.DisplayTarget;
 import com.mohistmc.mod.module.create.api.contraption.ContraptionType;
@@ -15,6 +13,8 @@ import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmInteract
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
 import com.mohistmc.mod.module.create.content.logistics.packagePort.PackagePortTargetType;
 import com.mohistmc.mod.module.create.foundation.gui.menu.MenuType;
+import com.mojang.serialization.Lifecycle;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.RegistrationInfo;
 import net.minecraft.core.Registry;

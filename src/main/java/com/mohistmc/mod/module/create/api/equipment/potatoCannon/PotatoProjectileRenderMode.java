@@ -1,9 +1,8 @@
 package com.mohistmc.mod.module.create.api.equipment.potatoCannon;
 
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
-
 import java.util.function.Function;
 
 // TODO: 1.21.7 - Move into api package

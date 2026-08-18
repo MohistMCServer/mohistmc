@@ -1,8 +1,8 @@
 package com.mohistmc.mod.mixin.create.client;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import com.mojang.blaze3d.vertex.QuadInstance;
 import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mojang.blaze3d.vertex.QuadInstance;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.BlockModelLighter;
 import net.minecraft.client.renderer.block.BlockModelLighter.AdjacencyInfo;

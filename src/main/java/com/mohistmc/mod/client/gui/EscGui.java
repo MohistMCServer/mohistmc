@@ -1,9 +1,9 @@
 package com.mohistmc.mod.client.gui;
 
 import com.mohistmc.mod.MohistMC;
-import com.mohistmc.mod.api.gui.LabelBadge;
 import com.mohistmc.mod.api.gui.EnhancedScreen;
 import com.mohistmc.mod.api.gui.IconButton;
+import com.mohistmc.mod.api.gui.LabelBadge;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.module.mail.common.network.payload.OpenMailboxRequestPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BalanceRequestPayload;

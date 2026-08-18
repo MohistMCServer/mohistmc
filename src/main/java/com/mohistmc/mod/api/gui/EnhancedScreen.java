@@ -1,5 +1,6 @@
 package com.mohistmc.mod.api.gui;
 
+import com.mohistmc.mod.api.gui.editor.GuiEditorManager;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -13,7 +14,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import com.mohistmc.mod.api.gui.editor.GuiEditorManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

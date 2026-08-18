@@ -13,12 +13,14 @@ import com.mohistmc.mod.api.gui.TextInputWidget;
 import com.mohistmc.mod.module.shop.common.data.Currency;
 import com.mohistmc.mod.module.shop.common.data.RestockCycle;
 import com.mohistmc.mod.module.shop.common.data.RestockTimer;
-import com.mohistmc.mod.module.shop.common.data.Shop;
 import com.mohistmc.mod.module.shop.common.data.ShopCategory;
 import com.mohistmc.mod.module.shop.common.data.ShopData;
 import com.mohistmc.mod.module.shop.common.data.ShopProduct;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyResultPayload;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
@@ -30,10 +32,6 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * 系统商店全屏界面（由服务端 OpenShopPayload 打开）

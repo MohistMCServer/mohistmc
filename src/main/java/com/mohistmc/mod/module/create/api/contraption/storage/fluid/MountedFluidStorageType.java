@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.fluid;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

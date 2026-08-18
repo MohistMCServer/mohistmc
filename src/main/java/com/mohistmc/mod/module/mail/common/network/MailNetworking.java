@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.mail.common.network;
 
 import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.mail.client.network.MailClientPayloadHandler;
-import com.mohistmc.mod.module.mail.common.MailEntry;
 import com.mohistmc.mod.module.mail.common.Mailbox;
 import com.mohistmc.mod.module.mail.common.network.payload.AttachmentSelection;
 import com.mohistmc.mod.module.mail.common.network.payload.ClaimAllMailPayload;

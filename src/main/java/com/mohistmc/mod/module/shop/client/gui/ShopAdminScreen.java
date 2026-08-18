@@ -4,7 +4,6 @@ import com.mohistmc.mod.api.gui.CustomButton;
 import com.mohistmc.mod.api.gui.DropdownMenu;
 import com.mohistmc.mod.api.gui.EnhancedScreen;
 import com.mohistmc.mod.api.gui.ItemPickerModal;
-import com.mohistmc.mod.api.gui.Modal;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.ScrollList;
 import com.mohistmc.mod.api.gui.ScrollListItem;
@@ -15,21 +14,17 @@ import com.mohistmc.mod.module.shop.common.data.ShopCategory;
 import com.mohistmc.mod.module.shop.common.data.ShopData;
 import com.mohistmc.mod.module.shop.common.data.ShopProduct;
 import com.mohistmc.mod.module.shop.common.network.payload.ShopEditPayload;
+import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.input.CharacterEvent;
 import net.minecraft.client.input.KeyEvent;
-import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
-
-import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 /**
  * 商店管理后台界面（管理员编辑商品/类别/商店）

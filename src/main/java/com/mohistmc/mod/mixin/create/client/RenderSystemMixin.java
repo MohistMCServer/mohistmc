@@ -1,9 +1,9 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mojang.blaze3d.buffers.GpuBufferSlice;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.FogUniforms;
 import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlCompat;
+import com.mojang.blaze3d.buffers.GpuBufferSlice;
+import com.mojang.blaze3d.systems.RenderSystem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

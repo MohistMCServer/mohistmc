@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.fluid;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mojang.serialization.Codec;
 import java.util.Objects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.NbtOps;

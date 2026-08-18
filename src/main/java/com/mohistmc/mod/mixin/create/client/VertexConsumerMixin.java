@@ -1,9 +1,9 @@
 package com.mohistmc.mod.mixin.create.client;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import com.mohistmc.mod.module.create.client.model.NormalsBakedQuad;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mohistmc.mod.module.create.client.model.NormalsBakedQuad;
 import net.minecraft.client.resources.model.geometry.BakedQuad;
 import org.joml.Vector3f;
 import org.joml.Vector3fc;

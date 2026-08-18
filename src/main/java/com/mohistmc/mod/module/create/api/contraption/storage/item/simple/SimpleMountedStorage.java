@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.item.simple;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockTags;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorageType;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
+import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import java.util.function.Function;
 import net.minecraft.core.BlockPos;

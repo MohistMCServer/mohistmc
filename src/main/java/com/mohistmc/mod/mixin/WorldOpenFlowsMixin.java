@@ -1,11 +1,11 @@
 package com.mohistmc.mod.mixin;
 
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import com.mojang.serialization.Lifecycle;
 import net.minecraft.client.gui.screens.worldselection.WorldOpenFlows;
-import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Debug;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Debug(export = true)
 @Mixin({ WorldOpenFlows.class })

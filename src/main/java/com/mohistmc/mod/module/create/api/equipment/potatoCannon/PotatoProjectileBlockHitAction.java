@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.equipment.potatoCannon;
 
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import java.util.function.Function;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;

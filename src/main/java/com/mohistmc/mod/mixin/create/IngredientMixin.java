@@ -1,12 +1,12 @@
 package com.mohistmc.mod.mixin.create;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.mohistmc.mod.module.create.foundation.recipe.ComponentsIngredient;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.MapLike;
-import com.mohistmc.mod.module.create.foundation.recipe.ComponentsIngredient;
 import java.util.Optional;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

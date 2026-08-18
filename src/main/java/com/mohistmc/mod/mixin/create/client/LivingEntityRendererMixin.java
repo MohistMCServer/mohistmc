@@ -1,6 +1,5 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllSynchedDatas;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -13,6 +12,7 @@ import com.mohistmc.mod.module.create.content.contraptions.actors.seat.SeatEntit
 import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerBlock;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.List;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;

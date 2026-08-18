@@ -1,7 +1,7 @@
 package com.mohistmc.mod.mixin.create;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.foundation.recipe.IngredientTextContent;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.network.chat.ComponentContents;
 import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.util.ExtraCodecs;

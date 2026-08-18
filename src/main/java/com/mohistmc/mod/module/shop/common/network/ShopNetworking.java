@@ -16,7 +16,6 @@ import com.mohistmc.mod.module.shop.common.network.payload.OpenShopAdminPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.OpenShopPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.ShopDataSyncPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.ShopEditPayload;
-import java.util.List;
 import net.minecraft.commands.Commands;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
@@ -25,9 +24,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 /**
