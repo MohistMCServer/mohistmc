@@ -36,11 +36,11 @@ public record CuttingRecipe(int time, List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<CuttingRecipe> getSerializer() {
-        return AllRecipeSerializers.CUTTING;
+        return AllRecipeSerializers.CUTTING.get();
     }
 
     @Override
     public RecipeType<CuttingRecipe> getType() {
-        return AllRecipeTypes.CUTTING;
+        return AllRecipeTypes.CUTTING.get();
     }
 }

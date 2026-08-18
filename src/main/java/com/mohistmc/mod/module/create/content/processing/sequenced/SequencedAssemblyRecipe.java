@@ -84,7 +84,7 @@ public record SequencedAssemblyRecipe(Ingredient ingredient, ItemStackTemplate t
 
     @Override
     public RecipeType<SequencedAssemblyRecipe> getType() {
-        return AllRecipeTypes.SEQUENCED_ASSEMBLY;
+        return AllRecipeTypes.SEQUENCED_ASSEMBLY.get();
     }
 
     @Override
@@ -99,7 +99,7 @@ public record SequencedAssemblyRecipe(Ingredient ingredient, ItemStackTemplate t
 
     @Override
     public RecipeSerializer<? extends Recipe<SingleRecipeInput>> getSerializer() {
-        return AllRecipeSerializers.SEQUENCED_ASSEMBLY;
+        return AllRecipeSerializers.SEQUENCED_ASSEMBLY.get();
     }
 
     private static class SequencedAssemblyRecipeMapCodec extends MapCodec<SequencedAssemblyRecipe> {
@@ -215,7 +215,7 @@ public record SequencedAssemblyRecipe(Ingredient ingredient, ItemStackTemplate t
                     new ItemStackTemplate(result.item(), result.count(), result.components())
                 ).getOrThrow();
 
-                Identifier id = Identifier.parse(AllRecipeTypes.SEQUENCED_ASSEMBLY.toString())
+                Identifier id = Identifier.parse(AllRecipeTypes.SEQUENCED_ASSEMBLY.get().toString())
                     .withSuffix("_" + idGenerator.incrementAndGet() + "_" + BuiltInRegistries.ITEM.getKey(result.item()
                         .value()).getPath() + "_");
                 List<Recipe<?>> sequence = new ArrayList<>(size);

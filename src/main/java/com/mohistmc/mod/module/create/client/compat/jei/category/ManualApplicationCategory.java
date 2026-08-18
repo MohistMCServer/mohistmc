@@ -28,7 +28,7 @@ import org.joml.Matrix3x2f;
 
 public class ManualApplicationCategory extends CreateCategory<RecipeHolder<ManualApplicationRecipe>> {
     public static List<RecipeHolder<ManualApplicationRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.ITEM_APPLICATION).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.ITEM_APPLICATION.get()).stream().toList();
     }
 
     @Override

@@ -4,7 +4,7 @@ license="${mod_license}"
     modId="${mod_id}" #mandatory
     version="${mod_version}" #mandatory
     displayName="${mod_name}" #mandatory
-    logoFile="mohistmc.png" #optional
+    iconFile="mohistmc.png" #optional
     # The description text for the mod (multi line!) (#mandatory)
     description="MohistMC专用，整合了很多大型mod，以便实现更多的兼容和联动"
     enumExtensions="META-INF/enumextensions.json"

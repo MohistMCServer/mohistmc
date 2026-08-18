@@ -279,6 +279,10 @@ public class AllItems {
         AllBlocks.WEIGHTED_EJECTOR,
         EjectorItem::new
     );
+    public static final BlockItem ROPE = (BlockItem) registerBlock(
+        AllBlockItemIds.ROPE,
+        AllBlocks.ROPE
+    );
     public static final BlockItem ROPE_PULLEY = (BlockItem) registerBlock(
         AllBlockItemIds.ROPE_PULLEY,
         AllBlocks.ROPE_PULLEY

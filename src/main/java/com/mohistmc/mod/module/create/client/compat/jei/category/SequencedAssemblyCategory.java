@@ -70,9 +70,9 @@ public class SequencedAssemblyCategory extends CreateCategory<RecipeHolder<Seque
     public static Map<RecipeType<?>, SequencedRenderer<?>> RENDER = new IdentityHashMap<>();
 
     static {
-        registerRenderer(AllRecipeTypes.PRESSING, new PressingRenderer());
-        registerRenderer(AllRecipeTypes.DEPLOYING, new DeployingRenderer());
-        registerRenderer(AllRecipeTypes.FILLING, new FillingRenderer());
+        registerRenderer(AllRecipeTypes.PRESSING.get(), new PressingRenderer());
+        registerRenderer(AllRecipeTypes.DEPLOYING.get(), new DeployingRenderer());
+        registerRenderer(AllRecipeTypes.FILLING.get(), new FillingRenderer());
     }
 
     @SuppressWarnings("unchecked")
@@ -85,7 +85,7 @@ public class SequencedAssemblyCategory extends CreateCategory<RecipeHolder<Seque
     }
 
     public static List<RecipeHolder<SequencedAssemblyRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.SEQUENCED_ASSEMBLY).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.SEQUENCED_ASSEMBLY.get()).stream().toList();
     }
 
     @Override

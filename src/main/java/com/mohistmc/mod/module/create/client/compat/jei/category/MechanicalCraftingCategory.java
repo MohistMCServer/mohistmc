@@ -28,7 +28,7 @@ import org.joml.Matrix3x2f;
 
 public class MechanicalCraftingCategory extends CreateCategory<RecipeHolder<MechanicalCraftingRecipe>> {
     public static List<RecipeHolder<MechanicalCraftingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.MECHANICAL_CRAFTING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.MECHANICAL_CRAFTING.get()).stream().toList();
     }
 
     @Override

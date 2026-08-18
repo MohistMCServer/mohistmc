@@ -36,11 +36,11 @@ public record CrushingRecipe(int time, List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<CrushingRecipe> getSerializer() {
-        return AllRecipeSerializers.CRUSHING;
+        return AllRecipeSerializers.CRUSHING.get();
     }
 
     @Override
     public RecipeType<CrushingRecipe> getType() {
-        return AllRecipeTypes.CRUSHING;
+        return AllRecipeTypes.CRUSHING.get();
     }
 }

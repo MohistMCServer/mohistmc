@@ -190,12 +190,12 @@ public record PotionRecipe(FluidStack result, FluidIngredient fluidIngredient,
 
     @Override
     public RecipeSerializer<PotionRecipe> getSerializer() {
-        return AllRecipeSerializers.POTION;
+        return AllRecipeSerializers.POTION.get();
     }
 
     @Override
     public RecipeType<PotionRecipe> getType() {
-        return AllRecipeTypes.POTION;
+        return AllRecipeTypes.POTION.get();
     }
 
     public record ReloadData(HolderLookup.Provider registries, FeatureFlagSet enabledFeatures) {

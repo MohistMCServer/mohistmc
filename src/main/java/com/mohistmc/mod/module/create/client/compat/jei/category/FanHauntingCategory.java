@@ -26,7 +26,7 @@ import org.joml.Matrix3x2f;
 
 public class FanHauntingCategory extends CreateCategory<RecipeHolder<HauntingRecipe>> {
     public static List<RecipeHolder<HauntingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.HAUNTING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.HAUNTING.get()).stream().toList();
     }
 
     @Override

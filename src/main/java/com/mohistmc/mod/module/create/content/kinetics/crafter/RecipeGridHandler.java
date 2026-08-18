@@ -174,7 +174,7 @@ public class RecipeGridHandler {
                 .orElse(null);
         }
         if (result == null) {
-            result = recipeManager.getRecipeFor(AllRecipeTypes.MECHANICAL_CRAFTING, craftingInput, world)
+            result = recipeManager.getRecipeFor(AllRecipeTypes.MECHANICAL_CRAFTING.get(), craftingInput, world)
                 .map(r -> r.value().assemble(craftingInput)).orElse(null);
         }
         return result;

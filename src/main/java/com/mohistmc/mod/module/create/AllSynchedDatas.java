@@ -43,6 +43,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.util.TriConsumer;
 import org.jspecify.annotations.Nullable;
+import net.minecraft.resources.Identifier;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import net.neoforged.neoforge.registries.RegisterEvent;
+
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllSynchedDatas {
     private static final Map<Class<?>, SynchedData> ALL = new IdentityHashMap<>();
@@ -161,6 +166,16 @@ public class AllSynchedDatas {
     }
 
     public static void register() {
+    }
+
+    public static void registerSerializers(RegisterEvent event) {
+        int[] index = {0};
+        event.register(
+            NeoForgeRegistries.ENTITY_DATA_SERIALIZERS.key(),
+            helper -> HANDLERS.forEach(handler ->
+                helper.register(Identifier.fromNamespaceAndPath(MOD_ID, "data_serializer_" + index[0]++), handler)
+            )
+        );
     }
 
     public static class SynchedData {

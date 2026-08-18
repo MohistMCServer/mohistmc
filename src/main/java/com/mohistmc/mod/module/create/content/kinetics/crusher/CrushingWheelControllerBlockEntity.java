@@ -323,12 +323,12 @@ public class CrushingWheelControllerBlockEntity extends SmartBlockEntity impleme
         RecipeManager recipeManager = ((ServerLevel) level).recipeAccess();
         SingleRecipeInput input = new SingleRecipeInput(inventory.getItem(0));
         CreateSingleStackRollableRecipe crushingRecipe = recipeManager.getRecipeFor(
-            AllRecipeTypes.CRUSHING,
+            AllRecipeTypes.CRUSHING.get(),
             input,
             level
         ).map(RecipeHolder::value).orElse(null);
         if (crushingRecipe == null) {
-            crushingRecipe = recipeManager.getRecipeFor(AllRecipeTypes.MILLING, input, level).map(RecipeHolder::value)
+            crushingRecipe = recipeManager.getRecipeFor(AllRecipeTypes.MILLING.get(), input, level).map(RecipeHolder::value)
                 .orElse(null);
         }
         return crushingRecipe;

@@ -24,7 +24,7 @@ import org.joml.Matrix3x2f;
 
 public class SandpaperPolishingCategory extends CreateCategory<RecipeHolder<SandPaperPolishingRecipe>> {
     public static List<RecipeHolder<SandPaperPolishingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.SANDPAPER_POLISHING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.SANDPAPER_POLISHING.get()).stream().toList();
     }
 
     @Override

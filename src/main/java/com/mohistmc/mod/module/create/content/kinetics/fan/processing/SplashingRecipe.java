@@ -31,11 +31,11 @@ public record SplashingRecipe(List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<SplashingRecipe> getSerializer() {
-        return AllRecipeSerializers.SPLASHING;
+        return AllRecipeSerializers.SPLASHING.get();
     }
 
     @Override
     public RecipeType<SplashingRecipe> getType() {
-        return AllRecipeTypes.SPLASHING;
+        return AllRecipeTypes.SPLASHING.get();
     }
 }

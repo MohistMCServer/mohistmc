@@ -36,11 +36,11 @@ public record MillingRecipe(int time, List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<MillingRecipe> getSerializer() {
-        return AllRecipeSerializers.MILLING;
+        return AllRecipeSerializers.MILLING.get();
     }
 
     @Override
     public RecipeType<MillingRecipe> getType() {
-        return AllRecipeTypes.MILLING;
+        return AllRecipeTypes.MILLING.get();
     }
 }

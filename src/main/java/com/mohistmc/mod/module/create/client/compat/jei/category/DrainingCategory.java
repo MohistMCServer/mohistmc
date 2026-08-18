@@ -44,7 +44,7 @@ public class DrainingCategory extends CreateCategory<RecipeHolder<EmptyingRecipe
         RecipeMap preparedRecipes,
         Stream<ItemStack> itemStream
     ) {
-        List<RecipeHolder<EmptyingRecipe>> recipes = new ArrayList<>(preparedRecipes.byType(AllRecipeTypes.EMPTYING));
+        List<RecipeHolder<EmptyingRecipe>> recipes = new ArrayList<>(preparedRecipes.byType(AllRecipeTypes.EMPTYING.get()));
         MutableInt i = new MutableInt();
         itemStream.forEach(stack -> {
             if (PotionFluidHandler.isPotionItem(stack)) {

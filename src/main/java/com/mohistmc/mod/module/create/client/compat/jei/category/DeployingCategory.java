@@ -38,14 +38,14 @@ import org.joml.Matrix3x2f;
 public class DeployingCategory extends CreateCategory<RecipeHolder<? extends ItemApplicationRecipe>> {
     public static List<RecipeHolder<? extends ItemApplicationRecipe>> getRecipes(RecipeMap preparedRecipes) {
         List<RecipeHolder<? extends ItemApplicationRecipe>> recipes = new ArrayList<>();
-        recipes.addAll(preparedRecipes.byType(AllRecipeTypes.DEPLOYING));
-        recipes.addAll(preparedRecipes.byType(AllRecipeTypes.ITEM_APPLICATION));
+        recipes.addAll(preparedRecipes.byType(AllRecipeTypes.DEPLOYING.get()));
+        recipes.addAll(preparedRecipes.byType(AllRecipeTypes.ITEM_APPLICATION.get()));
         List<Holder<Item>> sandpaperList = new ArrayList<>();
         for (Holder<Item> entry : BuiltInRegistries.ITEM.getTagOrEmpty(AllItemTags.SANDPAPER)) {
             sandpaperList.add(entry);
         }
         Ingredient ingredient = Ingredient.of(HolderSet.direct(sandpaperList));
-        for (RecipeHolder<SandPaperPolishingRecipe> entry : preparedRecipes.byType(AllRecipeTypes.SANDPAPER_POLISHING)) {
+        for (RecipeHolder<SandPaperPolishingRecipe> entry : preparedRecipes.byType(AllRecipeTypes.SANDPAPER_POLISHING.get())) {
             SandPaperPolishingRecipe recipe = entry.value();
             ItemStackTemplate result = recipe.result();
             recipes.add(new RecipeHolder<>(

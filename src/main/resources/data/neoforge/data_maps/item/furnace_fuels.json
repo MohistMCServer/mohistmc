@@ -3,8 +3,7 @@
     "mohistmc:crimson_cabinet",
     "mohistmc:warped_cabinet"
   ],
-  "values": [
-    {
+  "values": {
       "#mohistmc:cabinets/wooden": {
         "burn_time": 300
       },
@@ -83,6 +82,5 @@
       "mohistmc:creative_blaze_cake": {
         "burn_time": 2147483647
       }
-    }
-  ]
+  }
 }

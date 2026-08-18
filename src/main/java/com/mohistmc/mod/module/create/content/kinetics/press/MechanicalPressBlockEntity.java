@@ -199,7 +199,7 @@ public class MechanicalPressBlockEntity extends BasinOperatingBlockEntity implem
     }
 
     public Optional<RecipeHolder<PressingRecipe>> getRecipe(SingleRecipeInput input) {
-        return ((ServerLevel) level).recipeAccess().getRecipeFor(AllRecipeTypes.PRESSING, input, level);
+        return ((ServerLevel) level).recipeAccess().getRecipeFor(AllRecipeTypes.PRESSING.get(), input, level);
     }
 
     public static boolean canCompress(Recipe<?> recipe) {
@@ -239,7 +239,7 @@ public class MechanicalPressBlockEntity extends BasinOperatingBlockEntity implem
     @Override
     protected boolean matchStaticFilters(RecipeHolder<? extends Recipe<?>> recipe) {
         Recipe<?> value = recipe.value();
-        return value instanceof CraftingRecipe && canCompress(value) && !AllRecipeTypes.shouldIgnoreInAutomation(recipe) || value.getType() == AllRecipeTypes.COMPACTING;
+        return value instanceof CraftingRecipe && canCompress(value) && !AllRecipeTypes.shouldIgnoreInAutomation(recipe) || value.getType() == AllRecipeTypes.COMPACTING.get();
     }
 
     @Override

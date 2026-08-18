@@ -106,11 +106,11 @@ public record CompactingRecipe(List<ProcessingOutput> results, HeatCondition hea
 
     @Override
     public RecipeSerializer<CompactingRecipe> getSerializer() {
-        return AllRecipeSerializers.COMPACTING;
+        return AllRecipeSerializers.COMPACTING.get();
     }
 
     @Override
     public RecipeType<CompactingRecipe> getType() {
-        return AllRecipeTypes.COMPACTING;
+        return AllRecipeTypes.COMPACTING.get();
     }
 }

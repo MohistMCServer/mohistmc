@@ -53,12 +53,12 @@ public record FillingRecipe(ItemStackTemplate result, Ingredient ingredient,
 
     @Override
     public RecipeSerializer<FillingRecipe> getSerializer() {
-        return AllRecipeSerializers.FILLING;
+        return AllRecipeSerializers.FILLING.get();
     }
 
     @Override
     public RecipeType<FillingRecipe> getType() {
-        return AllRecipeTypes.FILLING;
+        return AllRecipeTypes.FILLING.get();
     }
 
     public static Component getDescriptionForAssembly(DynamicOps<JsonElement> ops, JsonObject object) {

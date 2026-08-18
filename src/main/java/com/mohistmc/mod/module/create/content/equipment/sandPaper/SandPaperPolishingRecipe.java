@@ -34,11 +34,11 @@ public record SandPaperPolishingRecipe(ItemStackTemplate result,
 
     @Override
     public RecipeSerializer<? extends Recipe<SingleRecipeInput>> getSerializer() {
-        return AllRecipeSerializers.SANDPAPER_POLISHING;
+        return AllRecipeSerializers.SANDPAPER_POLISHING.get();
     }
 
     @Override
     public RecipeType<? extends Recipe<SingleRecipeInput>> getType() {
-        return AllRecipeTypes.SANDPAPER_POLISHING;
+        return AllRecipeTypes.SANDPAPER_POLISHING.get();
     }
 }

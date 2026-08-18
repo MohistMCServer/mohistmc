@@ -31,11 +31,11 @@ public record HauntingRecipe(List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<HauntingRecipe> getSerializer() {
-        return AllRecipeSerializers.HAUNTING;
+        return AllRecipeSerializers.HAUNTING.get();
     }
 
     @Override
     public RecipeType<HauntingRecipe> getType() {
-        return AllRecipeTypes.HAUNTING;
+        return AllRecipeTypes.HAUNTING.get();
     }
 }

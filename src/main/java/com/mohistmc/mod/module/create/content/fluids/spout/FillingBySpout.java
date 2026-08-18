@@ -23,7 +23,7 @@ public class FillingBySpout {
     public static int getRequiredAmountForItem(ServerLevel world, ItemStack stack, FluidStack availableFluid) {
         FillingInput input = new FillingInput(stack, availableFluid);
         Optional<RecipeHolder<FillingRecipe>> findRecipe = world.recipeAccess()
-            .getRecipeFor(AllRecipeTypes.FILLING, input, world);
+            .getRecipeFor(AllRecipeTypes.FILLING.get(), input, world);
         return findRecipe.map(fillingRecipeRecipeEntry -> fillingRecipeRecipeEntry.value().fluidIngredient().amount())
             .orElseGet(() -> GenericItemFilling.getRequiredAmountForItem(world, stack, availableFluid));
     }
@@ -38,7 +38,7 @@ public class FillingBySpout {
         toFill.setAmount(requiredAmount);
         FillingInput input = new FillingInput(stack, toFill);
         Optional<RecipeHolder<FillingRecipe>> findRecipe = world.recipeAccess()
-            .getRecipeFor(AllRecipeTypes.FILLING, input, world);
+            .getRecipeFor(AllRecipeTypes.FILLING.get(), input, world);
         if (findRecipe.isPresent()) {
             FillingRecipe recipe = findRecipe.get().value();
             ItemStack result = recipe.assemble(input);

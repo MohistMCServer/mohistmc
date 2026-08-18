@@ -24,11 +24,11 @@ public record ManualApplicationRecipe(List<ProcessingOutput> results, boolean ke
 
     @Override
     public RecipeSerializer<ManualApplicationRecipe> getSerializer() {
-        return AllRecipeSerializers.ITEM_APPLICATION;
+        return AllRecipeSerializers.ITEM_APPLICATION.get();
     }
 
     @Override
     public RecipeType<ManualApplicationRecipe> getType() {
-        return AllRecipeTypes.ITEM_APPLICATION;
+        return AllRecipeTypes.ITEM_APPLICATION.get();
     }
 }

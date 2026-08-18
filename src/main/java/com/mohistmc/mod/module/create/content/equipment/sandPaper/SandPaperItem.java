@@ -146,7 +146,7 @@ public class SandPaperItem extends Item {
         }
 
         SingleRecipeInput input = new SingleRecipeInput(toPolish);
-        ((ServerLevel) world).recipeAccess().getRecipeFor(AllRecipeTypes.SANDPAPER_POLISHING, input, world)
+        ((ServerLevel) world).recipeAccess().getRecipeFor(AllRecipeTypes.SANDPAPER_POLISHING.get(), input, world)
             .ifPresent(recipe -> {
                 ItemStack polished = recipe.value().assemble(input);
                 Inventory playerInv = player.getInventory();

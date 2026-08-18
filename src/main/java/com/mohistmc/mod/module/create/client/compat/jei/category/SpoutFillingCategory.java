@@ -56,7 +56,7 @@ public class SpoutFillingCategory extends CreateCategory<RecipeHolder<FillingRec
         Stream<ItemStack> itemStream,
         Stream<net.neoforged.neoforge.fluids.FluidStack> fluidStream
     ) {
-        List<RecipeHolder<FillingRecipe>> recipes = new ArrayList<>(preparedRecipes.byType(AllRecipeTypes.FILLING));
+        List<RecipeHolder<FillingRecipe>> recipes = new ArrayList<>(preparedRecipes.byType(AllRecipeTypes.FILLING.get()));
         List<FluidStack> fluids = fluidStream.map(fluidStack -> new FluidStack(
             fluidStack.getFluid(),
             fluidStack.amount(),

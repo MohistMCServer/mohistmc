@@ -122,11 +122,11 @@ public record MixingRecipe(int time, List<ProcessingOutput> results, List<FluidS
 
     @Override
     public RecipeSerializer<MixingRecipe> getSerializer() {
-        return AllRecipeSerializers.MIXING;
+        return AllRecipeSerializers.MIXING.get();
     }
 
     @Override
     public RecipeType<MixingRecipe> getType() {
-        return AllRecipeTypes.MIXING;
+        return AllRecipeTypes.MIXING.get();
     }
 }

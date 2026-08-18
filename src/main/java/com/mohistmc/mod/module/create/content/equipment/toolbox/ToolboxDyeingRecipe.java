@@ -81,7 +81,7 @@ public class ToolboxDyeingRecipe extends CustomRecipe {
 
     @Override
     public RecipeSerializer<ToolboxDyeingRecipe> getSerializer() {
-        return AllRecipeSerializers.TOOLBOX_DYEING;
+        return AllRecipeSerializers.TOOLBOX_DYEING.get();
     }
 
 }

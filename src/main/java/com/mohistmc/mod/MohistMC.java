@@ -51,7 +51,7 @@ public class MohistMC {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
      public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOHISTMC_TAB = CREATIVE_MODE_TABS.register("mohistmc_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.mohistmc")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> ItemRegister.LOGO.get().getDefaultInstance()).displayItems((parameters, output) -> {
-        ItemRegister.ALL_ITEMS.forEach(itemSupplier -> output.accept(itemSupplier.get()));
+        ItemRegister.ITEMS.getEntries().forEach(itemSupplier -> output.accept(itemSupplier.get()));
     }).build());
 
     public MohistMC(IEventBus modEventBus, ModContainer modContainer) {

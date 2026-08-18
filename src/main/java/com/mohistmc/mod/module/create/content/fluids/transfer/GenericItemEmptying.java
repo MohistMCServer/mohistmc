@@ -25,7 +25,7 @@ public class GenericItemEmptying {
 
         if (world.isClientSide() ? world.recipeAccess().propertySet(AllRecipeSets.EMPTYING).test(stack) :
             ((ServerLevel) world).recipeAccess()
-                .getRecipeFor(AllRecipeTypes.EMPTYING, new SingleRecipeInput(stack), world).isPresent()) {
+                .getRecipeFor(AllRecipeTypes.EMPTYING.get(), new SingleRecipeInput(stack), world).isPresent()) {
             return true;
         }
 
@@ -45,7 +45,7 @@ public class GenericItemEmptying {
         //TODO client check recipe
         if (level instanceof ServerLevel serverLevel) {
             Optional<RecipeHolder<EmptyingRecipe>> recipe = serverLevel.recipeAccess()
-                .getRecipeFor(AllRecipeTypes.EMPTYING, new SingleRecipeInput(stack), serverLevel);
+                .getRecipeFor(AllRecipeTypes.EMPTYING.get(), new SingleRecipeInput(stack), serverLevel);
             if (recipe.isPresent()) {
                 if (!simulate) {
                     stack.shrink(1);

@@ -31,11 +31,11 @@ public record PressingRecipe(List<ProcessingOutput> results,
 
     @Override
     public RecipeSerializer<PressingRecipe> getSerializer() {
-        return AllRecipeSerializers.PRESSING;
+        return AllRecipeSerializers.PRESSING.get();
     }
 
     @Override
     public RecipeType<PressingRecipe> getType() {
-        return AllRecipeTypes.PRESSING;
+        return AllRecipeTypes.PRESSING.get();
     }
 }

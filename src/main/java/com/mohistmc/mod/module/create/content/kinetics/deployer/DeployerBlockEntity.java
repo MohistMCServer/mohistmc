@@ -539,14 +539,14 @@ public class DeployerBlockEntity extends KineticBlockEntity implements Clearable
         RecipeMap preparedRecipes = ((ServerLevel) level).recipeAccess().recipes;
         if (heldItemMainhand.getItem() instanceof SandPaperItem) {
             return preparedRecipes.getRecipesFor(
-                AllRecipeTypes.SANDPAPER_POLISHING,
+                AllRecipeTypes.SANDPAPER_POLISHING.get(),
                 new SingleRecipeInput(stack),
                 level
             ).filter(AllRecipeTypes.CAN_BE_AUTOMATED).map(RecipeHolder::value).findFirst().orElse(null);
         }
 
         ItemApplicationInput input = new ItemApplicationInput(stack, heldItemMainhand);
-        return AllRecipeTypes.DEPLOYER_RECIPES.stream()
+        return AllRecipeTypes.deployerRecipes().stream()
             .flatMap(type -> preparedRecipes.getRecipesFor(type, input, level)).filter(AllRecipeTypes.CAN_BE_AUTOMATED)
             .map(RecipeHolder::value).findFirst().orElse(null);
     }

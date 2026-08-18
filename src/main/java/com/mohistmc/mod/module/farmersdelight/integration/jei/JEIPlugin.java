@@ -24,19 +24,23 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.IRecipeTransferRegistration;
+import mezz.jei.common.Internal;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeMap;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
 @SuppressWarnings("unused")
 public class JEIPlugin implements IModPlugin
 {
-	private static final Identifier ID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "jei_plugin");
+	// Unique UID: the Create JEI plugin already uses "mohistmc:jei_plugin".
+	private static final Identifier ID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "jei_plugin_fd");
 
 	@Override
 	public void registerCategories(IRecipeCategoryRegistration registry) {
+		FarmersDelight.LOGGER.info("[FD-JEI] registerCategories invoked, plugin UID={}", ID);
 		registry.addRecipeCategories(new CookingRecipeCategory(registry.getJeiHelpers().getGuiHelper()));
 		registry.addRecipeCategories(new CuttingRecipeCategory(registry.getJeiHelpers().getGuiHelper()));
 		registry.addRecipeCategories(new DecompositionRecipeCategory(registry.getJeiHelpers().getGuiHelper()));
@@ -44,9 +48,13 @@ public class JEIPlugin implements IModPlugin
 
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
-		FDRecipes modRecipes = new FDRecipes();
-		registration.addRecipes(FDRecipeTypes.COOKING, modRecipes.getCookingPotRecipes());
-		registration.addRecipes(FDRecipeTypes.CUTTING, modRecipes.getCuttingBoardRecipes());
+		// Same data source as the Create JEI plugin: the server-synced RecipeMap.
+		RecipeMap preparedRecipes = Internal.getClientSyncedRecipes();
+		int compacting = preparedRecipes.byType(com.mohistmc.mod.module.create.AllRecipeTypes.COMPACTING.get()).size();
+		FarmersDelight.LOGGER.info("[FD-JEI] registerRecipes invoked, total prepared recipes={}, create compacting={}",
+				preparedRecipes.values().size(), compacting);
+		registration.addRecipes(FDRecipeTypes.COOKING, FDRecipes.getCookingPotRecipes(preparedRecipes));
+		registration.addRecipes(FDRecipeTypes.CUTTING, FDRecipes.getCuttingBoardRecipes(preparedRecipes));
 		registration.addRecipes(FDRecipeTypes.DECOMPOSITION, ImmutableList.of(new DecompositionDummy()));
 
 		registration.addRecipes(RecipeTypes.CRAFTING, DoughRecipeMaker.createRecipe());

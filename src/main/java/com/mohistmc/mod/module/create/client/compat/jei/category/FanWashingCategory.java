@@ -26,7 +26,7 @@ import org.joml.Matrix3x2f;
 
 public class FanWashingCategory extends CreateCategory<RecipeHolder<SplashingRecipe>> {
     public static List<RecipeHolder<SplashingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.SPLASHING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.SPLASHING.get()).stream().toList();
     }
 
     @Override

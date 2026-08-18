@@ -60,7 +60,7 @@ public class ManualApplicationHelper {
 
         ItemApplicationInput input = new ItemApplicationInput(block, heldItem);
         Optional<RecipeHolder<ManualApplicationRecipe>> foundRecipe = ((ServerLevel) level).recipeAccess()
-            .getRecipeFor(AllRecipeTypes.ITEM_APPLICATION, input, level);
+            .getRecipeFor(AllRecipeTypes.ITEM_APPLICATION.get(), input, level);
         if (foundRecipe.isEmpty()) {
             return null;
         }

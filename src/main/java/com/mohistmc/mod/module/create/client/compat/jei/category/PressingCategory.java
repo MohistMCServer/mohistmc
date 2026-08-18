@@ -24,7 +24,7 @@ import org.joml.Matrix3x2f;
 
 public class PressingCategory extends CreateCategory<RecipeHolder<PressingRecipe>> {
     public static List<RecipeHolder<PressingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.PRESSING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.PRESSING.get()).stream().toList();
     }
 
     @Override

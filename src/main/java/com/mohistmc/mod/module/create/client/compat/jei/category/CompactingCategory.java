@@ -22,7 +22,7 @@ import org.joml.Matrix3x2f;
 
 public class CompactingCategory extends BasinCategory<CompactingRecipe> {
     public static List<RecipeHolder<CompactingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.COMPACTING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.COMPACTING.get()).stream().toList();
     }
 
     @Override

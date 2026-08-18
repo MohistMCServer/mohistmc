@@ -228,7 +228,7 @@ public class AllFanProcessingTypes {
         public List<ItemStack> process(ItemStack stack, Level level) {
             SingleRecipeInput input = new SingleRecipeInput(stack);
             Optional<RecipeHolder<HauntingRecipe>> recipe = ((ServerLevel) level).recipeAccess()
-                .getRecipeFor(AllRecipeTypes.HAUNTING, input, level);
+                .getRecipeFor(AllRecipeTypes.HAUNTING.get(), input, level);
             return recipe.map(entry -> RecipeApplier.applyRecipeOn(
                 level.getRandom(),
                 stack.getCount(),
@@ -439,7 +439,7 @@ public class AllFanProcessingTypes {
         @Nullable
         public List<ItemStack> process(ItemStack stack, Level level) {
             SingleRecipeInput input = new SingleRecipeInput(stack);
-            return ((ServerLevel) level).recipeAccess().getRecipeFor(AllRecipeTypes.SPLASHING, input, level)
+            return ((ServerLevel) level).recipeAccess().getRecipeFor(AllRecipeTypes.SPLASHING.get(), input, level)
                 .map(entry -> RecipeApplier.applyRecipeOn(level.getRandom(), stack.getCount(), input, entry.value()))
                 .orElse(null);
         }

@@ -42,8 +42,6 @@ public class ItemRegister {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MohistMC.MODID);
 
-    public static final Set<Supplier<Item>> ALL_ITEMS = new LinkedHashSet<>();
-
     public static final DeferredItem<Item> LOGO = registerItem("logo", Item::new, Item.Properties::new);
     // 谷物类作物
     public static final DeferredItem<Item> FAN_SHU = registerItem("fan_shu", FanShuItem::new, () -> new Item.Properties().food(new FoodProperties.Builder().alwaysEdible().nutrition(1).saturationModifier(2f).build()));
@@ -107,14 +105,10 @@ public class ItemRegister {
     public static DeferredItem<BlockItem> YU_LOU = cao_yao(BlockRegister.YU_LOU);
 
     private static DeferredItem<Item> registerItem(String name, java.util.function.Function<Item.Properties, Item> factory, java.util.function.Supplier<Item.Properties> properties) {
-        DeferredItem<Item> item = ITEMS.registerItem(name, factory, properties);
-        ALL_ITEMS.add(item);
-        return item;
+        return ITEMS.registerItem(name, factory, properties);
     }
 
     private static DeferredItem<BlockItem> cao_yao(DeferredBlock<Block> block) {
-        DeferredItem<BlockItem> item = ITEMS.registerSimpleBlockItem(block.getId().getPath(), block, Item.Properties::new);
-        ALL_ITEMS.add((Supplier<Item>) (Supplier<?>) item);
-        return item;
+        return ITEMS.registerSimpleBlockItem(block.getId().getPath(), block, Item.Properties::new);
     }
 }

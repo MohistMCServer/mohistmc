@@ -23,7 +23,7 @@ import org.joml.Matrix3x2f;
 
 public class MixingCategory extends BasinCategory<MixingRecipe> {
     public static List<RecipeHolder<MixingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.MIXING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.MIXING.get()).stream().toList();
     }
 
     @Override

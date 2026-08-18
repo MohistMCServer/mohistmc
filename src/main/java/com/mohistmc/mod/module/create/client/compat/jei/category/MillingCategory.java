@@ -24,7 +24,7 @@ import org.joml.Matrix3x2f;
 
 public class MillingCategory extends CreateCategory<RecipeHolder<MillingRecipe>> {
     public static List<RecipeHolder<MillingRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.MILLING).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.MILLING.get()).stream().toList();
     }
 
     @Override

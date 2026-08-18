@@ -29,12 +29,12 @@ public record DeployerApplicationRecipe(List<ProcessingOutput> results, boolean 
 
     @Override
     public RecipeSerializer<DeployerApplicationRecipe> getSerializer() {
-        return AllRecipeSerializers.DEPLOYING;
+        return AllRecipeSerializers.DEPLOYING.get();
     }
 
     @Override
     public RecipeType<DeployerApplicationRecipe> getType() {
-        return AllRecipeTypes.DEPLOYING;
+        return AllRecipeTypes.DEPLOYING.get();
     }
 
     public static Component getDescriptionForAssembly(DynamicOps<JsonElement> ops, JsonObject object) {

@@ -27,7 +27,7 @@ import org.joml.Matrix3x2f;
 
 public class PotionCategory extends CreateCategory<RecipeHolder<PotionRecipe>> {
     public static List<RecipeHolder<PotionRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        return preparedRecipes.byType(AllRecipeTypes.POTION).stream().toList();
+        return preparedRecipes.byType(AllRecipeTypes.POTION.get()).stream().toList();
     }
 
     @Override

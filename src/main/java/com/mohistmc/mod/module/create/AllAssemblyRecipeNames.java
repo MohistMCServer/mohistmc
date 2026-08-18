@@ -35,7 +35,7 @@ public class AllAssemblyRecipeNames {
     }
 
     public static void register() {
-        register(AllRecipeTypes.DEPLOYING, DeployerApplicationRecipe::getDescriptionForAssembly);
-        register(AllRecipeTypes.FILLING, FillingRecipe::getDescriptionForAssembly);
+        register(AllRecipeTypes.DEPLOYING.get(), DeployerApplicationRecipe::getDescriptionForAssembly);
+        register(AllRecipeTypes.FILLING.get(), FillingRecipe::getDescriptionForAssembly);
     }
 }

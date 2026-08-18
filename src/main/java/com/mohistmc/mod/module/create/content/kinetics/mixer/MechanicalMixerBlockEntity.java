@@ -193,10 +193,10 @@ public class MechanicalMixerBlockEntity extends BasinOperatingBlockEntity {
             return true;
         }
         RecipeType<?> type = r.getType();
-        if (type == AllRecipeTypes.POTION && AllConfigs.server().recipes.allowBrewingInMixer.get()) {
+        if (type == AllRecipeTypes.POTION.get() && AllConfigs.server().recipes.allowBrewingInMixer.get()) {
             return true;
         }
-        return type == AllRecipeTypes.MIXING;
+        return type == AllRecipeTypes.MIXING.get();
     }
 
     @Override

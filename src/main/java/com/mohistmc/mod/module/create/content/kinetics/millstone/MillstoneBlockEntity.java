@@ -91,7 +91,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements Clearabl
         SingleRecipeInput input = new SingleRecipeInput(stack);
         if (lastRecipe == null || !lastRecipe.matches(input, level)) {
             Optional<RecipeHolder<MillingRecipe>> recipe = ((ServerLevel) level).recipeAccess()
-                .getRecipeFor(AllRecipeTypes.MILLING, input, level);
+                .getRecipeFor(AllRecipeTypes.MILLING.get(), input, level);
             if (recipe.isEmpty()) {
                 timer = 100;
                 sendData();
@@ -124,7 +124,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements Clearabl
 
         if (lastRecipe == null || !lastRecipe.matches(input, level)) {
             Optional<RecipeHolder<MillingRecipe>> recipe = ((ServerLevel) level).recipeAccess()
-                .getRecipeFor(AllRecipeTypes.MILLING, input, level);
+                .getRecipeFor(AllRecipeTypes.MILLING.get(), input, level);
             if (recipe.isEmpty()) {
                 return;
             }
@@ -196,7 +196,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements Clearabl
             return true;
         }
         Optional<RecipeHolder<MillingRecipe>> recipe = ((ServerLevel) level).recipeAccess()
-            .getRecipeFor(AllRecipeTypes.MILLING, input, level);
+            .getRecipeFor(AllRecipeTypes.MILLING.get(), input, level);
         if (recipe.isEmpty()) {
             return false;
         }

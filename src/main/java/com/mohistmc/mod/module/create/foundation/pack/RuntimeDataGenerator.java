@@ -55,8 +55,8 @@ public class RuntimeDataGenerator {
         .put(Mods.DD.asResource("blooming"), Mods.DD.asResource("bloom")).build();
 
     public static void insertIntoPack(DynamicPack dynamicPack) {
-        Identifier cuttingId = BuiltInRegistries.RECIPE_TYPE.getKey(AllRecipeTypes.CUTTING);
-        Identifier splashingId = BuiltInRegistries.RECIPE_TYPE.getKey(AllRecipeTypes.SPLASHING);
+        Identifier cuttingId = BuiltInRegistries.RECIPE_TYPE.getKey(AllRecipeTypes.CUTTING.get());
+        Identifier splashingId = BuiltInRegistries.RECIPE_TYPE.getKey(AllRecipeTypes.SPLASHING.get());
         assert cuttingId != null;
         assert splashingId != null;
         for (Identifier itemId : BuiltInRegistries.ITEM.keySet()) {

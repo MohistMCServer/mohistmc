@@ -371,12 +371,12 @@ public class SawBlockEntity extends BlockBreakingKineticBlockEntity implements C
     }
 
     private static boolean matchCuttingRecipe(RecipeHolder<? extends Recipe<?>> entry) {
-        return entry.value().getType() == AllRecipeTypes.CUTTING && !AllRecipeTypes.shouldIgnoreInAutomation(entry);
+        return entry.value().getType() == AllRecipeTypes.CUTTING.get() && !AllRecipeTypes.shouldIgnoreInAutomation(entry);
     }
 
     private static boolean matchAllRecipe(RecipeHolder<? extends Recipe<?>> entry) {
         RecipeType<? extends Recipe<?>> type = entry.value().getType();
-        return (type == AllRecipeTypes.CUTTING || type == RecipeType.STONECUTTING) && !AllRecipeTypes.shouldIgnoreInAutomation(
+        return (type == AllRecipeTypes.CUTTING.get() || type == RecipeType.STONECUTTING) && !AllRecipeTypes.shouldIgnoreInAutomation(
             entry);
     }
 

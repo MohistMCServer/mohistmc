@@ -91,11 +91,11 @@ public record MechanicalCraftingRecipe(ShapedRecipePattern raw, ItemStackTemplat
 
     @Override
     public RecipeType<MechanicalCraftingRecipe> getType() {
-        return AllRecipeTypes.MECHANICAL_CRAFTING;
+        return AllRecipeTypes.MECHANICAL_CRAFTING.get();
     }
 
     @Override
     public RecipeSerializer<MechanicalCraftingRecipe> getSerializer() {
-        return AllRecipeSerializers.MECHANICAL_CRAFTING;
+        return AllRecipeSerializers.MECHANICAL_CRAFTING.get();
     }
 }

@@ -30,9 +30,9 @@ import org.joml.Matrix3x2f;
 
 public class CrushingCategory extends CreateCategory<RecipeHolder<? extends CreateSingleStackRollableRecipe>> {
     public static List<RecipeHolder<? extends CreateSingleStackRollableRecipe>> getRecipes(RecipeMap preparedRecipes) {
-        Collection<RecipeHolder<CrushingRecipe>> crushingRecipes = preparedRecipes.byType(AllRecipeTypes.CRUSHING);
+        Collection<RecipeHolder<CrushingRecipe>> crushingRecipes = preparedRecipes.byType(AllRecipeTypes.CRUSHING.get());
         List<RecipeHolder<? extends CreateSingleStackRollableRecipe>> recipes = new ArrayList<>(crushingRecipes);
-        for (RecipeHolder<MillingRecipe> entry : preparedRecipes.byType(AllRecipeTypes.MILLING)) {
+        for (RecipeHolder<MillingRecipe> entry : preparedRecipes.byType(AllRecipeTypes.MILLING.get())) {
             MillingRecipe recipe = entry.value();
             Ingredient ingredient = recipe.ingredient();
             ItemStack firstInput = ingredient.values.stream().findFirst().map(item -> item.value().getDefaultInstance())

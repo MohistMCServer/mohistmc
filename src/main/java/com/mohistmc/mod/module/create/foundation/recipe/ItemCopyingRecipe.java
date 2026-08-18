@@ -117,6 +117,6 @@ public class ItemCopyingRecipe extends CustomRecipe {
 
     @Override
     public RecipeSerializer<ItemCopyingRecipe> getSerializer() {
-        return AllRecipeSerializers.ITEM_COPYING;
+        return AllRecipeSerializers.ITEM_COPYING.get();
     }
 }

@@ -33,11 +33,11 @@ public record EmptyingRecipe(ItemStackTemplate result, FluidStack fluidResult,
 
     @Override
     public RecipeSerializer<EmptyingRecipe> getSerializer() {
-        return AllRecipeSerializers.EMPTYING;
+        return AllRecipeSerializers.EMPTYING.get();
     }
 
     @Override
     public RecipeType<EmptyingRecipe> getType() {
-        return AllRecipeTypes.EMPTYING;
+        return AllRecipeTypes.EMPTYING.get();
     }
 }
