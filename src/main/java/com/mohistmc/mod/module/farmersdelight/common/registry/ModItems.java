@@ -179,7 +179,7 @@ public class ModItems
 			() -> new BlockItem(ModBlocks.RICH_SOIL.get(), basicItem()));
 	public static final Supplier<Item> RICH_SOIL_FARMLAND = registerWithTab("rich_soil_farmland",
 			() -> new BlockItem(ModBlocks.RICH_SOIL_FARMLAND.get(), basicItem()));
-	public static final Supplier<Item> ROPE = registerWithTab("rope1",
+	public static final Supplier<Item> ROPE = registerWithTab("rope_fd",
 			() -> new RopeItem(ModBlocks.ROPE.get(), basicItem()));
 
 	// Canvas Signs...

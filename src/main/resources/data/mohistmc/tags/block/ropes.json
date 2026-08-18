@@ -1,6 +1,7 @@
 {
   "values": [
     "mohistmc:rope",
+    "mohistmc:rope_fd",
     {
       "id": "quark:rope",
       "required": false

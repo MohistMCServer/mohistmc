@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "create:block/rope_pulley/rope"
+      "model": "mohistmc:block/rope_pulley/rope"
     }
   }
 }

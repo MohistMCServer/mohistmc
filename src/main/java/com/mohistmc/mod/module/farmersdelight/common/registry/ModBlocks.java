@@ -132,8 +132,8 @@ public class ModBlocks
 			() -> new StrawBaleBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.HAY_BLOCK).setId(blockKey("straw_bale"))));
 
 	// Building
-	public static final Supplier<Block> ROPE = BLOCKS.register("rope1",
-			() -> new RopeBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.brown()).noCollision().noOcclusion().strength(0.2F).sound(SoundType.WOOL).setId(blockKey("rope1"))));
+	public static final Supplier<Block> ROPE = BLOCKS.register("rope_fd",
+			() -> new RopeBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.brown()).noCollision().noOcclusion().strength(0.2F).sound(SoundType.WOOL).setId(blockKey("rope_fd"))));
 	public static final Supplier<Block> SAFETY_NET = BLOCKS.register("safety_net",
 			() -> new SafetyNetBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CARPET.brown()).strength(0.2F).sound(SoundType.WOOL).setId(blockKey("safety_net"))));
 	public static final Supplier<Block> ROPE_FENCE = BLOCKS.register("rope_fence",
