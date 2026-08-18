@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mohistmc:block/smart_chute/block",
+	"textures": {
+		"8": "mohistmc:block/funnel/funnel_closed",
+		"7": "mohistmc:block/chute_smart_powered",
+		"particle": "mohistmc:block/chute_smart_powered"
+	}
+}

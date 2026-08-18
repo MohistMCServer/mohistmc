@@ -2,7 +2,7 @@
   "values": [
     "minecraft:hopper",
     {
-      "id": "create:chute",
+      "id": "mohistmc:chute",
       "required": false
     }
   ]

@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.catnip.gui;
 
 import com.mojang.blaze3d.platform.Window;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.animation.LerpedFloat.Chaser;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.element.BoxElement;
-import com.zurrtum.create.client.catnip.gui.widget.BoxWidget;
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.ponder.enums.PonderGuiTextures;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.BoxElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.BoxWidget;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.ponder.enums.PonderGuiTextures;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

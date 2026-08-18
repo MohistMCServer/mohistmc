@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.decoration;
 
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.foundation.block.ScaffoldingControlBlock;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.foundation.block.ScaffoldingControlBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

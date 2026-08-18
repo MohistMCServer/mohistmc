@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:mixing",
+  "ingredients": ["minecraft:andesite", "#c:nuggets/zinc"],
+  "results": [
+    {
+      "id": "mohistmc:andesite_alloy"
+    }
+  ]
+}
+

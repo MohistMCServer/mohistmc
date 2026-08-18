@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.infrastructure.config;
 
-import com.zurrtum.create.api.stress.BlockStressValues;
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
-import com.zurrtum.create.infrastructure.packet.s2c.ServerConfigPacket;
+import com.mohistmc.mod.module.create.api.stress.BlockStressValues;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ServerConfigPacket;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllConfigs {
     private static CCommon common;

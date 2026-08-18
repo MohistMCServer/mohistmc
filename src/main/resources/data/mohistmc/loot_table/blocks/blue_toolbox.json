@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "mohistmc:toolbox_uuid",
+                "mohistmc:toolbox_inventory"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "mohistmc:blue_toolbox"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "mohistmc:blocks/blue_toolbox"
+}

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorageType;
-import com.zurrtum.create.api.registry.CreateRegistryKeys;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorageType;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllMountedItemStorageTypeTags {
     public static final TagKey<MountedItemStorageType<?>> INTERNAL = create("internal");

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.SidedFluidInventory;
-import com.zurrtum.create.infrastructure.transfer.NeoFluidResourceHandler;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.SidedFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.transfer.NeoFluidResourceHandler;
 import java.util.function.Function;
 import net.minecraft.core.Direction;
 import net.neoforged.neoforge.transfer.ResourceHandler;

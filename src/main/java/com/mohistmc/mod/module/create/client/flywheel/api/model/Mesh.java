@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.model;
 
-import com.zurrtum.create.client.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
 import org.joml.Vector4fc;
 
 /**

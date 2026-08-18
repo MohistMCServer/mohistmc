@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.gui.widget;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.TickableGuiEventListener;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.TickableGuiEventListener;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.BiConsumer;

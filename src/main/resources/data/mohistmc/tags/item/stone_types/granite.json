@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_granite",
+    "mohistmc:cut_granite_stairs",
+    "mohistmc:cut_granite_wall",
+    "mohistmc:polished_cut_granite",
+    "mohistmc:polished_cut_granite_stairs",
+    "mohistmc:polished_cut_granite_wall",
+    "mohistmc:cut_granite_bricks",
+    "mohistmc:cut_granite_brick_stairs",
+    "mohistmc:cut_granite_brick_wall",
+    "mohistmc:small_granite_bricks",
+    "mohistmc:small_granite_brick_stairs",
+    "mohistmc:small_granite_brick_wall",
+    "mohistmc:layered_granite",
+    "mohistmc:granite_pillar",
+    "minecraft:granite"
+  ]
+}

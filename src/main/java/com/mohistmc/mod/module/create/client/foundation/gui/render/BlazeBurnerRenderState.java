@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.render;
 
-import com.zurrtum.create.content.processing.burner.BlazeBurnerBlock;
+import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState;
 import net.minecraft.world.level.Level;

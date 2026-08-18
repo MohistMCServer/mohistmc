@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.indirect;
 
-import com.zurrtum.create.client.flywheel.backend.gl.buffer.GlBufferType;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBufferType;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 import org.lwjgl.system.MemoryUtil;
 import org.lwjgl.system.Pointer;
 

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.glue;
 
-import com.zurrtum.create.api.contraption.BlockMovementChecks;
-import com.zurrtum.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.api.contraption.BlockMovementChecks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

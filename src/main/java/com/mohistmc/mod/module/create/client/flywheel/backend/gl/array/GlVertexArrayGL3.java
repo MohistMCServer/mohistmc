@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.array;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlCompat;
-import com.zurrtum.create.client.flywheel.backend.gl.buffer.GlBufferType;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlCompat;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBufferType;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
-import com.zurrtum.create.AllFluids;
-import com.zurrtum.create.client.AllFluidConfigs;
-import com.zurrtum.create.infrastructure.particle.FluidParticleData;
+import com.mohistmc.mod.module.create.AllFluids;
+import com.mohistmc.mod.module.create.client.AllFluidConfigs;
+import com.mohistmc.mod.module.create.infrastructure.particle.FluidParticleData;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "mohistmc:weathered_copper_tiles",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:weathered_copper_tile_stairs"
+  }
+}

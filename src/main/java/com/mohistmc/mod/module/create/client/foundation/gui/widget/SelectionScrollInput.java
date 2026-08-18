@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.widget;
 
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.ChatFormatting;

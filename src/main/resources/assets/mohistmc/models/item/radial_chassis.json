@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mohistmc:block/radial_chassis_end",
+    "side": "mohistmc:block/radial_chassis_side"
+  }
+}

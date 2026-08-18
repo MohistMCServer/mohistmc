@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.fluid;
 
 import com.google.common.collect.ImmutableMap;
-import com.zurrtum.create.infrastructure.fluids.CombinedTankWrapper;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.CombinedTankWrapper;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
 import net.minecraft.core.BlockPos;
 
 /**

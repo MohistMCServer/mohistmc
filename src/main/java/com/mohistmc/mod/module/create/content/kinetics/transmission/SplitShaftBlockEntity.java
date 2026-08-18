@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.transmission;
 
-import com.zurrtum.create.content.kinetics.base.DirectionalShaftHalvesBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalShaftHalvesBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntityType;

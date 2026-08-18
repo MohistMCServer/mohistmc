@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.equipment.toolbox;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.*;
-import com.zurrtum.create.api.entity.FakePlayerHandler;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.item.ItemHelper;
-import com.zurrtum.create.foundation.utility.BlockHelper;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.api.entity.FakePlayerHandler;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

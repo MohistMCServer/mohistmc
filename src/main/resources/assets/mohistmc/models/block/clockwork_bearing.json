@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/bearing/block",
+  "textures": {
+    "back": "mohistmc:block/brass_gearbox",
+    "side": "mohistmc:block/clockwork_bearing_side"
+  }
+}

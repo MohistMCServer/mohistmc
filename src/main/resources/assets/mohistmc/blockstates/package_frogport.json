@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mohistmc:block/package_frogport/block"
+    }
+  }
+}

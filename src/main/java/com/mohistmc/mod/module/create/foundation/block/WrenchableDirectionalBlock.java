@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.block;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;

@@ -2,10 +2,10 @@ package com.mohistmc.mod.module.create.content.kinetics.belt.transport;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
-import com.zurrtum.create.content.kinetics.fan.processing.FanProcessingType;
-import com.zurrtum.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.FanProcessingType;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import java.util.Optional;
 import java.util.Random;
 import net.minecraft.core.Direction;

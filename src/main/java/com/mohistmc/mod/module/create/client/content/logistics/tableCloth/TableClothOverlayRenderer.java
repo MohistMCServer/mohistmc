@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.logistics.tableCloth;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.content.equipment.blueprint.BlueprintOverlayRenderer;
-import com.zurrtum.create.content.logistics.stockTicker.StockTickerBlockEntity;
-import com.zurrtum.create.content.logistics.stockTicker.StockTickerInteractionHandler;
-import com.zurrtum.create.content.logistics.tableCloth.ShoppingListItem;
-import com.zurrtum.create.content.logistics.tableCloth.TableClothBlockEntity;
-import com.zurrtum.create.infrastructure.component.ShoppingList;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.content.equipment.blueprint.BlueprintOverlayRenderer;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerInteractionHandler;
+import com.mohistmc.mod.module.create.content.logistics.tableCloth.ShoppingListItem;
+import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.component.ShoppingList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;

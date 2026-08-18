@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/track/obj_track",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/track/diag_2.obj"
+}

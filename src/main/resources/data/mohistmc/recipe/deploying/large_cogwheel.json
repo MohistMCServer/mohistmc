@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:deploying",
+  "target": "mohistmc:cogwheel",
+  "ingredient": "#minecraft:planks",
+  "results": [
+    {
+      "id": "mohistmc:large_cogwheel"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.levelWrappers.WrappedLevel;
-import com.zurrtum.create.content.kinetics.base.DirectionalKineticBlock;
-import com.zurrtum.create.content.logistics.chute.AbstractChuteBlock;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.WrappedLevel;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalKineticBlock;
+import com.mohistmc.mod.module.create.content.logistics.chute.AbstractChuteBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

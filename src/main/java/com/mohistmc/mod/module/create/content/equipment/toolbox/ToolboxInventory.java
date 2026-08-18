@@ -2,12 +2,12 @@ package com.mohistmc.mod.module.create.content.equipment.toolbox;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
-import com.zurrtum.create.foundation.item.ItemSlots;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.foundation.item.ItemSlots;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;

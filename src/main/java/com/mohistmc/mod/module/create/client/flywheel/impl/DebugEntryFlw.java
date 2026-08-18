@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl;
 
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationManager;
-import com.zurrtum.create.client.flywheel.lib.memory.FlwMemoryTracker;
-import com.zurrtum.create.client.flywheel.lib.util.StringUtil;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.FlwMemoryTracker;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.StringUtil;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.LevelChunk;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.flywheel.impl.Flywheel.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel.MOD_ID;
 
 public class DebugEntryFlw implements DebugScreenEntry {
     private static final Identifier GROUP = Identifier.fromNamespaceAndPath(MOD_ID, "group");

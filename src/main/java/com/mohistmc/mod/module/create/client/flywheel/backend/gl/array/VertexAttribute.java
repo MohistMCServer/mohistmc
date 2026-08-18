@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.array;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlNumericType;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlNumericType;
 
 public sealed interface VertexAttribute {
     int byteWidth();

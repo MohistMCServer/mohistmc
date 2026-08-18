@@ -1,0 +1,11 @@
+{
+  "remove": [
+    "mohistmc:copper_diving_boots",
+    "mohistmc:copper_backtank",
+    "mohistmc:copper_diving_helmet",
+    "mohistmc:netherite_diving_boots",
+    "mohistmc:netherite_backtank",
+    "mohistmc:netherite_diving_helmet"
+  ],
+  "values": []
+}

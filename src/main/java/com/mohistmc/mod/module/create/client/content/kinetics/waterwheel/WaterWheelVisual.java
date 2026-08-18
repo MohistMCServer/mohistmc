@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.waterwheel;
 
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.content.kinetics.base.RotatingInstance;
-import com.zurrtum.create.client.content.kinetics.waterwheel.WaterWheelRenderer.Variant;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.model.Model;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.model.ModelUtil;
-import com.zurrtum.create.client.flywheel.lib.model.baked.BakedModelBuilder;
-import com.zurrtum.create.client.flywheel.lib.util.RendererReloadCache;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.kinetics.waterwheel.WaterWheelBlockEntity;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
+import com.mohistmc.mod.module.create.client.content.kinetics.waterwheel.WaterWheelRenderer.Variant;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.ModelUtil;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BakedModelBuilder;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.kinetics.waterwheel.WaterWheelBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
 import net.minecraft.world.level.block.state.BlockState;

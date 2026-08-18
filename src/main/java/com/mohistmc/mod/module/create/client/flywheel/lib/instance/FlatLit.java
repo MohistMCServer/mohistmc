@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.instance;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractEntityVisual;
 import java.util.Iterator;
 import java.util.stream.Stream;
 import net.minecraft.util.LightCoordsUtil;

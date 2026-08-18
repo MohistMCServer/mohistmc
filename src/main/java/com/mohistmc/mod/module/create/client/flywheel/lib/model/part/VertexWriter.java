@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model.part;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.client.flywheel.lib.math.DataPacker;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
-import com.zurrtum.create.client.flywheel.lib.vertex.PosTexNormalVertexView;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.DataPacker;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.lib.vertex.PosTexNormalVertexView;
 import org.lwjgl.system.MemoryUtil;
 
 public class VertexWriter implements VertexConsumer {

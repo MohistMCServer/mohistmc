@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.config;
 
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.catnip.config.DoubleRawValue;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.catnip.config.DoubleRawValue;
 import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
 import it.unimi.dsi.fastutil.objects.Object2DoubleOpenHashMap;
 import java.util.HashMap;

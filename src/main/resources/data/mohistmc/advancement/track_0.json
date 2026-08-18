@@ -1,0 +1,36 @@
+{
+  "parent": "mohistmc:sturdy_sheet",
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mohistmc:tracks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.track_0.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:track"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.track_0"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

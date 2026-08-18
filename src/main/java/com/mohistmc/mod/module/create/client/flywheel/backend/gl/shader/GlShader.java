@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlObject;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlObject;
 import org.lwjgl.opengl.GL20;
 
 public class GlShader extends GlObject {

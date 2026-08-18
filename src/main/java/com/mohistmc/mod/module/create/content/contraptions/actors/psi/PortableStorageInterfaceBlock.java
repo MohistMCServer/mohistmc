@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.psi;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.foundation.advancement.AdvancementBehaviour;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidInventoryProvider;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviour;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventoryProvider;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;

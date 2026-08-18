@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.behaviour;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.List;
 import java.util.function.Function;
 import net.minecraft.world.item.ItemStack;

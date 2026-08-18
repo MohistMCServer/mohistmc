@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.content.decoration.girder;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.content.decoration.girder.GirderWrenchBehavior;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.content.decoration.girder.GirderWrenchBehavior;
 import java.util.Arrays;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;

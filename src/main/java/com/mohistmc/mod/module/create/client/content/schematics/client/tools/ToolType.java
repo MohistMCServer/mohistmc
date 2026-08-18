@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client.tools;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

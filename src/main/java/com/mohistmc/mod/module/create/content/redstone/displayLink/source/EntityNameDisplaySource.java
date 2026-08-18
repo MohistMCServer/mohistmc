@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.content.contraptions.actors.seat.SeatEntity;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.content.contraptions.actors.seat.SeatEntity;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

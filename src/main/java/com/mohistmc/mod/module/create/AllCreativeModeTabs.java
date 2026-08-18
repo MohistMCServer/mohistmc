@@ -12,7 +12,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ColorCollection;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllCreativeModeTabs {
     public static final ResourceKey<CreativeModeTab> BASE_GROUP = ResourceKey.create(

@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/diodes/pulse_repeater",
+  "textures": {
+    "top": "mohistmc:block/diodes/pulse_repeater/powered"
+  }
+}

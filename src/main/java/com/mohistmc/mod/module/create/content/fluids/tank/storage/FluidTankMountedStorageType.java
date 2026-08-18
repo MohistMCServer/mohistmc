@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.fluids.tank.storage;
 
-import com.zurrtum.create.api.contraption.storage.fluid.MountedFluidStorageType;
-import com.zurrtum.create.content.fluids.tank.FluidTankBlockEntity;
+import com.mohistmc.mod.module.create.api.contraption.storage.fluid.MountedFluidStorageType;
+import com.mohistmc.mod.module.create.content.fluids.tank.FluidTankBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;

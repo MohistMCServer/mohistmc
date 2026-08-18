@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.element;
 
-import com.zurrtum.create.client.ponder.api.element.PonderElement;
+import com.mohistmc.mod.module.create.client.ponder.api.element.PonderElement;
 
 public abstract class PonderElementBase implements PonderElement {
 

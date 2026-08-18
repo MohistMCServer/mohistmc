@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization;
 
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;

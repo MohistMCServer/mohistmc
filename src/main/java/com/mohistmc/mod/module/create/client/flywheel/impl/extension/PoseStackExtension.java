@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.extension;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.flywheel.lib.transform.PoseTransformStack;
+import com.mohistmc.mod.module.create.client.flywheel.lib.transform.PoseTransformStack;
 
 /**
  * An extension interface for {@link PoseStack} that provides a {@link PoseTransformStack} wrapper.

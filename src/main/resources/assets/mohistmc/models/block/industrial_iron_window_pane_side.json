@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/connected_glass_pane/side",
+  "textures": {
+    "edge": "mohistmc:block/palettes/industrial_iron_window_pane_top",
+    "pane": "mohistmc:block/palettes/industrial_iron_window"
+  }
+}

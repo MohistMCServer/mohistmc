@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.infrastructure.fluids.FlowableFluid;
-import com.zurrtum.create.infrastructure.fluids.FluidBlock;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FlowableFluid;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidBlock;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

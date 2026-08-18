@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.gui.element;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.render.BoxRenderState;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.render.BoxRenderState;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import org.joml.Matrix3x2f;
 

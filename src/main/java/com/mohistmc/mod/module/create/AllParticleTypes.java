@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.infrastructure.particle.*;
+import com.mohistmc.mod.module.create.infrastructure.particle.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
@@ -11,7 +11,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllParticleTypes {
     public static final ParticleType<RotationIndicatorParticleData> ROTATION_INDICATOR = register(

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.mounted;
 
-import com.zurrtum.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllBlocks;
 import java.util.Locale;
 import java.util.function.Supplier;
 import net.minecraft.util.StringRepresentable;

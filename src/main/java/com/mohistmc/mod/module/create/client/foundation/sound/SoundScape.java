@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.sound;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.foundation.sound.SoundScapes.AmbienceGroup;
-import com.zurrtum.create.client.foundation.sound.SoundScapes.PitchGroup;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes.AmbienceGroup;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes.PitchGroup;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

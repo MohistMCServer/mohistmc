@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.content.kinetics.gauge.StressGaugeBlockEntity;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.trains.display.FlapDisplayBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.StressGaugeBlockEntity;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlockEntity;
 import java.text.NumberFormat;
 import java.util.Locale;
 import net.minecraft.network.chat.Component;

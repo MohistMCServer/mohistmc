@@ -1,27 +1,27 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.crafter;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.content.kinetics.base.SingleAxisRotatingVisual;
-import com.zurrtum.create.client.content.processing.burner.ScrollInstance;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.InstancerProvider;
-import com.zurrtum.create.client.flywheel.api.visual.TickableVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.OrientedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlock;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlockEntity;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.Phase;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleAxisRotatingVisual;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.TickableVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.OrientedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlock;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.Phase;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
+import static com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
 
 public class MechanicalCrafterVisual extends SingleAxisRotatingVisual<MechanicalCrafterBlockEntity> {
     private final OrientedInstance lid;

@@ -15,7 +15,7 @@ import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Util;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 @SuppressWarnings("deprecation")
 public class CreateRenderTypes {

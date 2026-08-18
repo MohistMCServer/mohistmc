@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.psi;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.contraptions.Contraption;
-import com.zurrtum.create.infrastructure.items.CombinedInvWrapper;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
-import com.zurrtum.create.infrastructure.transfer.SlotRangeCache;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.infrastructure.items.CombinedInvWrapper;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.transfer.SlotRangeCache;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;

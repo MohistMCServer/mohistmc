@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.audio;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.content.kinetics.crank.HandCrankBlockEntity;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.content.kinetics.crank.HandCrankBlockEntity;
 
 public class HandCrankAudioBehaviour extends KineticAudioBehaviour<HandCrankBlockEntity> {
     public HandCrankAudioBehaviour(HandCrankBlockEntity be) {

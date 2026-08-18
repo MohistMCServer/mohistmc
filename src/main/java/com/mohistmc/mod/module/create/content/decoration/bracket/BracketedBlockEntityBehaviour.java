@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.decoration.bracket;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.contraptions.StructureTransform;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.function.Predicate;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

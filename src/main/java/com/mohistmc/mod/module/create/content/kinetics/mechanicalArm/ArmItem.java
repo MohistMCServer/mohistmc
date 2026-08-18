@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.mechanicalArm;
 
-import com.zurrtum.create.infrastructure.packet.s2c.ArmPlacementRequestPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ArmPlacementRequestPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;

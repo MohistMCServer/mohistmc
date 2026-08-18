@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllPackets;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllPackets;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;

@@ -1,20 +1,20 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.client.content.kinetics.chainConveyor.ChainConveyorClientBehaviour;
-import com.zurrtum.create.client.content.logistics.factoryBoard.FactoryPanelBehaviour;
-import com.zurrtum.create.client.content.logistics.tableCloth.TableClothFilteringBehaviour;
-import com.zurrtum.create.client.content.redstone.link.LinkBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.animation.CuckooClockAnimationBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.animation.MechanicalMixerAnimationBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.animation.WhistleAnimationBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.audio.*;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.filtering.SidedFilteringBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.scrollValue.*;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.tooltip.*;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.client.content.kinetics.chainConveyor.ChainConveyorClientBehaviour;
+import com.mohistmc.mod.module.create.client.content.logistics.factoryBoard.FactoryPanelBehaviour;
+import com.mohistmc.mod.module.create.client.content.logistics.tableCloth.TableClothFilteringBehaviour;
+import com.mohistmc.mod.module.create.client.content.redstone.link.LinkBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation.CuckooClockAnimationBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation.MechanicalMixerAnimationBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation.WhistleAnimationBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.audio.*;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.SidedFilteringBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue.*;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip.*;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.function.Function;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 
 public class TrackGraphLocation {
 

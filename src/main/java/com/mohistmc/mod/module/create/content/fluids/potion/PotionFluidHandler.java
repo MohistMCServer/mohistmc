@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.content.fluids.potion;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllFluids;
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.foundation.fluid.FluidIngredient;
-import com.zurrtum.create.foundation.fluid.FluidStackIngredient;
-import com.zurrtum.create.infrastructure.component.BottleType;
-import com.zurrtum.create.infrastructure.fluids.BottleFluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllFluids;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidIngredient;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidStackIngredient;
+import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BottleFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponents;

@@ -9,7 +9,7 @@ import java.util.Map;
 import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.UnmodifiableView;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllBogeySizes {
     private static final Map<Identifier, BogeySize> BOGEY_SIZES = new HashMap<>();

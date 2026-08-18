@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.gearbox;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.content.kinetics.gearbox.GearboxBlockEntity;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.kinetics.gearbox.GearboxBlockEntity;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
 
 public class GearboxRenderer implements BlockEntityRenderer<GearboxBlockEntity, GearboxRenderer.GearboxRenderState> {
     public GearboxRenderer(Context context) {

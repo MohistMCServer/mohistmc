@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client.tools;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.outliner.LineOutline;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.outliner.LineOutline;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.world.phys.AABB;

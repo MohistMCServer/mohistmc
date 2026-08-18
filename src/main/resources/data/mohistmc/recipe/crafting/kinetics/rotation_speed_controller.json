@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "mohistmc:precision_mechanism",
+    "C": "mohistmc:brass_casing"
+  },
+  "pattern": [
+    "B",
+    "C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:rotation_speed_controller"
+  }
+}

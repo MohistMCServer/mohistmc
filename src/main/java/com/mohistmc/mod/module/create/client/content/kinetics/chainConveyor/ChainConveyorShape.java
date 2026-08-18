@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.chainConveyor;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.core.BlockPos;

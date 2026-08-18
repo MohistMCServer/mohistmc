@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model.baked;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.flywheel.lib.model.SimpleModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.SimpleModel;
 import java.util.Iterator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;

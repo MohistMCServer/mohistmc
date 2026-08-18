@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/connected_glass_pane/post",
+  "textures": {
+    "edge": "minecraft:block/acacia_planks",
+    "pane": "mohistmc:block/palettes/acacia_window"
+  }
+}

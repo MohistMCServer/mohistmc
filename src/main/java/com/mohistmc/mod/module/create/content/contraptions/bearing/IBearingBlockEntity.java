@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.bearing;
 
-import com.zurrtum.create.content.contraptions.IControlContraption;
+import com.mohistmc.mod.module.create.content.contraptions.IControlContraption;
 
 public interface IBearingBlockEntity extends IControlContraption {
 

@@ -1,0 +1,12 @@
+{
+  "type": "mohistmc:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": ["#c:cobblestones"],
+  "fluid_results": [
+    {
+      "amount": 4050,
+      "id": "minecraft:lava"
+    }
+  ]
+}
+

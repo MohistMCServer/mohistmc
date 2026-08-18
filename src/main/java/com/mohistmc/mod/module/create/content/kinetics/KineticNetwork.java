@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics;
 
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 
 import java.util.HashMap;
 import java.util.Iterator;

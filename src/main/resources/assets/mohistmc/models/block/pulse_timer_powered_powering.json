@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/pulse_timer_powering",
+  "textures": {
+    "top": "mohistmc:block/diodes/pulse_timer/powered_powering"
+  }
+}

@@ -73,8 +73,8 @@ public class Swap extends Panel {
 
     @Override
     boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
         int x = getAbsoluteX();
         int y = getAbsoluteY();
 

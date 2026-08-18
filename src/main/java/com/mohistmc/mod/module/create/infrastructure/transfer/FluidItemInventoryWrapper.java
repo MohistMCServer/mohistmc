@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.transfer;
 
-import com.zurrtum.create.infrastructure.fluids.FluidItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidItemInventory;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.transfer.access.ItemAccess;

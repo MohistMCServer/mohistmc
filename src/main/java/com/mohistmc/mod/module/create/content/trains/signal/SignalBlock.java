@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.WeakPowerControlBlock;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.WeakPowerControlBlock;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

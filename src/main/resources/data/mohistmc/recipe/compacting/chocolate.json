@@ -1,0 +1,16 @@
+{
+  "type": "mohistmc:compacting",
+  "fluid_ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 20250,
+      "fluid": "mohistmc:chocolate"
+    }
+  ],
+  "results": [
+    {
+      "id": "mohistmc:bar_of_chocolate"
+    }
+  ]
+}
+

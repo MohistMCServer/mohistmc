@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.flywheel.backend.gl;
 
 import com.mojang.blaze3d.opengl.GlConst;
 import com.mojang.blaze3d.opengl.GlStateManager;
-import com.zurrtum.create.client.flywheel.backend.gl.buffer.GlBufferType;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBufferType;
 
 /**
  * Tracks bound buffers/vbos because GlStateManager doesn't do that for us.

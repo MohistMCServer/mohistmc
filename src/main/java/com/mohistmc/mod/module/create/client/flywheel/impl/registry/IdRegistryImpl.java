@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.registry;
 
-import com.zurrtum.create.client.flywheel.api.registry.IdRegistry;
+import com.mohistmc.mod.module.create.client.flywheel.api.registry.IdRegistry;
 import it.unimi.dsi.fastutil.objects.Object2ReferenceMap;
 import it.unimi.dsi.fastutil.objects.Object2ReferenceMaps;
 import it.unimi.dsi.fastutil.objects.Object2ReferenceOpenHashMap;

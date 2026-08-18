@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client;
 
-import com.zurrtum.create.Create;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.foundation.utility.CreatePaths;
-import com.zurrtum.create.foundation.utility.FilesHelper;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.packet.c2s.SchematicUploadPacket;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
+import com.mohistmc.mod.module.create.foundation.utility.FilesHelper;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.SchematicUploadPacket;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

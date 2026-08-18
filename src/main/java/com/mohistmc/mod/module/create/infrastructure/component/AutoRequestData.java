@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.infrastructure.component;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllDataComponents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;

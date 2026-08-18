@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/table_cloth/item",
+  "textures": {
+    "0": "mohistmc:block/table_cloth/green"
+  }
+}

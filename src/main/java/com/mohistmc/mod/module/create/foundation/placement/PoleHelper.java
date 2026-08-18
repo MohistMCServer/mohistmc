@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.foundation.placement;
 
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
-import com.zurrtum.create.catnip.placement.PlacementOffset;
-import com.zurrtum.create.content.equipment.extendoGrip.ExtendoGripItem;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;
+import com.mohistmc.mod.module.create.content.equipment.extendoGrip.ExtendoGripItem;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:railway_casing",
+    "mohistmc:electron_tube"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mohistmc:track_signal"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "mohistmc:model/normal",
+    "model": "mohistmc:block/red_valve_handle"
+  }
+}

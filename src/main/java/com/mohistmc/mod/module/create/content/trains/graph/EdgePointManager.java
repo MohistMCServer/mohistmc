@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.trains.signal.TrackEdgePoint;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import net.minecraft.server.MinecraftServer;
 
 public class EdgePointManager {

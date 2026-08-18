@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.client.content.equipment.zapper;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.client.catnip.gui.AbstractSimiScreen;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.widget.ElementWidget;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.gui.widget.IconButton;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.equipment.zapper.ConfigureZapperPacket;
-import com.zurrtum.create.infrastructure.component.PlacementPatterns;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.equipment.zapper.ConfigureZapperPacket;
+import com.mohistmc.mod.module.create.infrastructure.component.PlacementPatterns;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

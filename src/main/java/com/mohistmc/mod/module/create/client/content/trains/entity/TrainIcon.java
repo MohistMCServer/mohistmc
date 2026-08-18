@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.content.trains.entity;
 
-import com.zurrtum.create.content.trains.entity.TrainIconType;
+import com.mohistmc.mod.module.create.content.trains.entity.TrainIconType;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public record TrainIcon(TrainIconType type, Identifier sheet, int x, int y) {
     public static final Identifier ASSEMBLE = Identifier.fromNamespaceAndPath(MOD_ID, "textures/gui/assemble.png");

@@ -90,13 +90,21 @@ public class ShopCard extends ScrollListItem {
 
         var stack = product.stack();
 
-        // 图标 16×16（卡片区域内水平垂直居中）
-        int iconX = x + (s - 16) / 2;
-        int iconY = y + (s - 16) / 2;
-        g.item(stack, iconX, iconY);
+        // 图标随格子大小自适应（16×16 源图，最大占格子约 2/3，至少 16px）
+        int iconSize = Math.clamp(s * 2 / 3, 16, 48);
+        float scale = iconSize / 16f;
+        int iconX = x + (s - iconSize) / 2;
+        int iconY = y + (s - iconSize) / 2;
+        var pose = g.pose();
+        pose.pushMatrix();
+        pose.translate(iconX + iconSize / 2f, iconY + iconSize / 2f);
+        pose.scale(scale, scale);
+        pose.translate(-(iconX + iconSize / 2f), -(iconY + iconSize / 2f));
+        g.item(stack, iconX + (iconSize - 16) / 2, iconY + (iconSize - 16) / 2);
+        pose.popMatrix();
 
-        // 价格徽章（卡片下方独立一行，与卡片同宽 + 边框）：售罄显示红字，否则货币图标 4px + 数字
-        int badgeH = 9;
+        // 价格徽章（卡片下方独立一行，与卡片同宽 + 边框）：售罄显示红字，否则货币图标 8px + 数字
+        int badgeH = 12;
         Component badgeText;
         int badgeTextColor;
         if (soldOut) {
@@ -116,7 +124,7 @@ public class ShopCard extends ScrollListItem {
             badgeTextColor = 0xFFFFFFFF;
         }
         Badge.render(g, x, y + s + 2, s, badgeH,
-                soldOut ? null : Currency.iconTexture(), 4, Currency.iconSize(),
+                soldOut ? null : Currency.iconTexture(), 8, Currency.iconSize(),
                 badgeText, soldOut ? 0xCC1A1A22 : 0xCC222222, badgeTextColor, alpha, 0, 0xFF444466, 1);
     }
 }

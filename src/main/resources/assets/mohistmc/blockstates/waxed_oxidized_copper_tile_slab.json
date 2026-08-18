@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mohistmc:block/waxed_oxidized_copper_tile_slab"
+    },
+    "type=double": {
+      "model": "mohistmc:block/oxidized_copper_tiles"
+    },
+    "type=top": {
+      "model": "mohistmc:block/waxed_oxidized_copper_tile_slab_top"
+    }
+  }
+}

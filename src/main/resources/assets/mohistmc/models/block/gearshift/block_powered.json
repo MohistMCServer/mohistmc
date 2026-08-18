@@ -1,0 +1,7 @@
+{
+	"parent": "mohistmc:block/gearshift/block",
+    "textures": {
+        "0": "mohistmc:block/gearshift_on",
+		"particle": "mohistmc:block/gearshift_on"
+    }
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/chain_conveyor/textures",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/chain_conveyor/conveyor_shaft.obj"
+}

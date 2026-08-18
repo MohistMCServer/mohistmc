@@ -1,0 +1,12 @@
+{
+  "values": [
+    "mohistmc:stove",
+    "mohistmc:blaze_burner",
+    "mohistmc:lit_blaze_burner",
+    "minecraft:magma_block",
+    "minecraft:lava",
+    "#minecraft:campfires",
+    "#minecraft:fire"
+  ]
+}
+

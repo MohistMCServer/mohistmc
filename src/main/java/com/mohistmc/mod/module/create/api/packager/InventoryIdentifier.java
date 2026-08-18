@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.packager;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.catnip.math.BlockFace;
-import com.zurrtum.create.content.logistics.packager.AllInventoryIdentifiers;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.catnip.math.BlockFace;
+import com.mohistmc.mod.module.create.content.logistics.packager.AllInventoryIdentifiers;
 import java.util.Set;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

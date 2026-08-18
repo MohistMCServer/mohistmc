@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.equipment.armor;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.Create;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.Create;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;

@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
-import com.zurrtum.create.client.flywheel.backend.glsl.ShaderSources;
-import com.zurrtum.create.client.flywheel.backend.glsl.SourceComponent;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.ShaderSources;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.SourceComponent;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 import java.util.List;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.ResourceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.zurrtum.create.client.flywheel.impl.Flywheel.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel.MOD_ID;
 
 public final class FlwPrograms {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID + "/backend/shaders");

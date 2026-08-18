@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.compat.jei.renderer;
 
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import java.util.List;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

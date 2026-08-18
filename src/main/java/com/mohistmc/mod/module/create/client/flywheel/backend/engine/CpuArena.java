@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine;
 
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 
 public class CpuArena extends AbstractArena {
 

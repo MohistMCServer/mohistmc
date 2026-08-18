@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.catnip.gui.element;
 
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.UIRenderHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 public class DelegatedStencilElement extends AbstractRenderElement implements StencilElement {

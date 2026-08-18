@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.decoration;
 
-import com.zurrtum.create.content.decoration.slidingDoor.SlidingDoorBlock;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.decoration.slidingDoor.SlidingDoorBlock;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

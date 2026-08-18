@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "#c:flours/wheat",
+  "results": [
+    {
+      "id": "mohistmc:dough"
+    }
+  ]
+}
+

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.client.ponder.api.registration.SharedTextRegistrationHelper;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.SharedTextRegistrationHelper;
 import net.minecraft.resources.Identifier;
 
 public class DefaultSharedTextRegistrationHelper implements SharedTextRegistrationHelper {

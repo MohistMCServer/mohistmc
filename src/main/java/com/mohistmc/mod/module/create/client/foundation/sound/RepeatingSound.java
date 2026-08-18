@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.sound;
 
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.sounds.SoundEvent;

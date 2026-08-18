@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.logistics.depot;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

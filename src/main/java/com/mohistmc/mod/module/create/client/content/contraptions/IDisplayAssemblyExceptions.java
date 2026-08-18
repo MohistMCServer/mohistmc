@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.contraptions;
 
-import com.zurrtum.create.client.catnip.lang.FontHelper.Palette;
-import com.zurrtum.create.client.foundation.item.TooltipHelper;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.contraptions.AssemblyException;
+import com.mohistmc.mod.module.create.client.catnip.lang.FontHelper.Palette;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipHelper;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.contraptions.AssemblyException;
 import java.util.Arrays;
 import java.util.List;
 import net.minecraft.ChatFormatting;

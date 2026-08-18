@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour;
 
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsBoard;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsBoard;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;

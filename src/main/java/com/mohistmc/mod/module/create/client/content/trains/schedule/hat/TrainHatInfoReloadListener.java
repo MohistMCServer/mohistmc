@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.client.content.trains.schedule.hat;
 
 import com.google.gson.JsonObject;
 import com.mojang.serialization.JsonOps;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.Map;

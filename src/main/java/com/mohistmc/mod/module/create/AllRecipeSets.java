@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.equipment.sandPaper.SandPaperPolishingRecipe;
-import com.zurrtum.create.content.fluids.transfer.EmptyingRecipe;
-import com.zurrtum.create.content.fluids.transfer.FillingRecipe;
-import com.zurrtum.create.content.kinetics.crusher.CrushingRecipe;
-import com.zurrtum.create.content.kinetics.deployer.ManualApplicationRecipe;
-import com.zurrtum.create.content.kinetics.fan.processing.HauntingRecipe;
-import com.zurrtum.create.content.kinetics.fan.processing.SplashingRecipe;
-import com.zurrtum.create.content.kinetics.millstone.MillingRecipe;
+import com.mohistmc.mod.module.create.content.equipment.sandPaper.SandPaperPolishingRecipe;
+import com.mohistmc.mod.module.create.content.fluids.transfer.EmptyingRecipe;
+import com.mohistmc.mod.module.create.content.fluids.transfer.FillingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.ManualApplicationRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.HauntingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.SplashingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.millstone.MillingRecipe;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -19,7 +19,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipePropertySet;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllRecipeSets {
     public static final Map<ResourceKey<RecipePropertySet>, RecipeManager.IngredientExtractor> ALL = new IdentityHashMap<>();

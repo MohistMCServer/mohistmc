@@ -1,23 +1,23 @@
 package com.mohistmc.mod.module.create.client.content.schematics.table;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.Create;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.widget.ElementWidget;
-import com.zurrtum.create.client.content.schematics.client.ClientSchematicLoader;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
-import com.zurrtum.create.client.foundation.gui.widget.IconButton;
-import com.zurrtum.create.client.foundation.gui.widget.Label;
-import com.zurrtum.create.client.foundation.gui.widget.ScrollInput;
-import com.zurrtum.create.client.foundation.gui.widget.SelectionScrollInput;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.schematics.table.SchematicTableBlockEntity;
-import com.zurrtum.create.content.schematics.table.SchematicTableMenu;
-import com.zurrtum.create.foundation.gui.menu.MenuType;
-import com.zurrtum.create.foundation.utility.CreatePaths;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.Create;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
+import com.mohistmc.mod.module.create.client.content.schematics.client.ClientSchematicLoader;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.Label;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.SelectionScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.schematics.table.SchematicTableBlockEntity;
+import com.mohistmc.mod.module.create.content.schematics.table.SchematicTableMenu;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuType;
+import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
 import java.util.Collections;
 import java.util.List;
 import net.minecraft.client.Minecraft;
@@ -35,9 +35,9 @@ import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.storage.ValueInput;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.LOGGER;
-import static com.zurrtum.create.client.foundation.gui.AllGuiTextures.PLAYER_INVENTORY;
-import static com.zurrtum.create.client.foundation.gui.AllGuiTextures.SCHEMATIC_TABLE_PROGRESS;
+import static com.mohistmc.mod.module.create.Create.LOGGER;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.PLAYER_INVENTORY;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.SCHEMATIC_TABLE_PROGRESS;
 
 public class SchematicTableScreen extends AbstractSimiContainerScreen<SchematicTableMenu> {
 

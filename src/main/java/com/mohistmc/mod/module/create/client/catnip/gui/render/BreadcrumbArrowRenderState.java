@@ -2,14 +2,14 @@ package com.mohistmc.mod.module.create.client.catnip.gui.render;
 
 import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import net.minecraft.client.renderer.state.gui.GuiElementRenderState;
 import org.joml.Matrix3x2f;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.catnip.render.PonderRenderPipelines.POSITION_COLOR_TRIANGLES;
+import static com.mohistmc.mod.module.create.client.catnip.render.PonderRenderPipelines.POSITION_COLOR_TRIANGLES;
 
 public record BreadcrumbArrowRenderState(Matrix3x2f pose, float x0, float x1, float x2, float x3, float y0, float y1,
                                          float y2, int fc1Color, int fc2Color, int fc3Color, int fc4Color,

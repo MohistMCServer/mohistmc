@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:andesite_alloy_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "mohistmc:andesite_alloy"
+  }
+}

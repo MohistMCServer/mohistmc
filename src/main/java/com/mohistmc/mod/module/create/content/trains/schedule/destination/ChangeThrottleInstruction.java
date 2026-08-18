@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.trains.schedule.destination;
 
-import com.zurrtum.create.content.trains.graph.DiscoveredPath;
-import com.zurrtum.create.content.trains.schedule.ScheduleRuntime;
-import com.zurrtum.create.content.trains.schedule.ScheduleRuntime.State;
+import com.mohistmc.mod.module.create.content.trains.graph.DiscoveredPath;
+import com.mohistmc.mod.module.create.content.trains.schedule.ScheduleRuntime;
+import com.mohistmc.mod.module.create.content.trains.schedule.ScheduleRuntime.State;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.Level;
 import org.jspecify.annotations.Nullable;

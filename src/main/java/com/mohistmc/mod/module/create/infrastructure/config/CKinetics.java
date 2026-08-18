@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.config;
 
-import com.zurrtum.create.api.contraption.ContraptionMovementSetting;
-import com.zurrtum.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.api.contraption.ContraptionMovementSetting;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
 
 public class CKinetics extends ConfigBase {
 

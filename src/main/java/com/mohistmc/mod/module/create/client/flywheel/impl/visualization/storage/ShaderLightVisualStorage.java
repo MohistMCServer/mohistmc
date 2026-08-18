@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization.storage;
 
-import com.zurrtum.create.client.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;

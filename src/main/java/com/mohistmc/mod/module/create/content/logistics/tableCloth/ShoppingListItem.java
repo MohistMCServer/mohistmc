@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.logistics.tableCloth;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.logistics.BigItemStack;
-import com.zurrtum.create.content.logistics.packager.InventorySummary;
-import com.zurrtum.create.foundation.item.TooltipWorldContext;
-import com.zurrtum.create.infrastructure.component.ShoppingList;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.packager.InventorySummary;
+import com.mohistmc.mod.module.create.foundation.item.TooltipWorldContext;
+import com.mohistmc.mod.module.create.infrastructure.component.ShoppingList;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.mechanicalArm;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

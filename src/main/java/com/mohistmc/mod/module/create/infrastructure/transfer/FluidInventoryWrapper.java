@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.transfer;
 
 import com.google.common.collect.MapMaker;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.Map;
 import java.util.function.Predicate;
 import net.neoforged.neoforge.transfer.ResourceHandler;

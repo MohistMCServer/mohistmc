@@ -95,6 +95,13 @@ public class Panel extends PositionedWidget {
         return this;
     }
 
+    /** 设置编辑器标识 */
+    @Override
+    public Panel setEditorId(String id) {
+        super.setEditorId(id);
+        return this;
+    }
+
     /** 设置布局模式
      * @param direction 排列方向
      * @param gap       子组件间距（px）
@@ -156,7 +163,7 @@ public class Panel extends PositionedWidget {
     /**
      * 递归查找所有子组件（含孙子辈）中的可渲染组件
      */
-    List<PositionedWidget> collectAllChildren() {
+    public List<PositionedWidget> collectAllChildren() {
         List<PositionedWidget> all = new ArrayList<>();
         for (var child : children) {
             all.add(child);
@@ -272,7 +279,7 @@ public class Panel extends PositionedWidget {
 
     /** 检查是否被点击，触发回调 */
     boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
-        if (isMouseOver(event.x(), event.y()) && clickHandler != null) {
+        if (isMouseOver(logicalX(event), logicalY(event)) && clickHandler != null) {
             clickHandler.accept(this);
             return true;
         }

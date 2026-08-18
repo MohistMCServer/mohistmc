@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.logistics;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.content.trains.schedule.DestinationSuggestions;
-import com.zurrtum.create.client.foundation.gui.widget.ScrollInput;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.content.trains.schedule.DestinationSuggestions;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;

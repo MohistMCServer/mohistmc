@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.client.content.logistics.chute;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.content.logistics.box.PackageItem;
-import com.zurrtum.create.content.logistics.chute.ChuteBlock;
-import com.zurrtum.create.content.logistics.chute.ChuteBlock.Shape;
-import com.zurrtum.create.content.logistics.chute.ChuteBlockEntity;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.create.content.logistics.chute.ChuteBlock;
+import com.mohistmc.mod.module.create.content.logistics.chute.ChuteBlock.Shape;
+import com.mohistmc.mod.module.create.content.logistics.chute.ChuteBlockEntity;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;

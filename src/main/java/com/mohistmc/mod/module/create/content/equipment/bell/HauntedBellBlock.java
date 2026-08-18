@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.equipment.bell;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;

@@ -1,0 +1,37 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "mohistmc:block/metal_girder_encased_shaft/block"
+      },
+      "when": {
+        "axis": "z"
+      }
+    },
+    {
+      "apply": {
+        "model": "mohistmc:block/metal_girder_encased_shaft/block",
+        "y": 90
+      },
+      "when": {
+        "axis": "x"
+      }
+    },
+    {
+      "apply": {
+        "model": "mohistmc:block/metal_girder_encased_shaft/block_top"
+      },
+      "when": {
+        "top": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mohistmc:block/metal_girder_encased_shaft/block_bottom"
+      },
+      "when": {
+        "bottom": "true"
+      }
+    }
+  ]
+}

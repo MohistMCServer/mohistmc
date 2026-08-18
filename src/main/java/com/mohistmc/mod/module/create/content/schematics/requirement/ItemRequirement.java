@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.schematics.requirement;
 
-import com.zurrtum.create.api.schematic.requirement.SchematicRequirementRegistries;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockEntityItemRequirement;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockItemRequirement;
-import com.zurrtum.create.api.schematic.requirement.SpecialEntityItemRequirement;
-import com.zurrtum.create.catnip.components.ComponentProcessors;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SchematicRequirementRegistries;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockEntityItemRequirement;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialEntityItemRequirement;
+import com.mohistmc.mod.module.create.catnip.components.ComponentProcessors;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -154,7 +154,7 @@ public class ItemRequirement {
         }
 
         if (entity instanceof ItemFrame itemFrame) {
-            ItemStack frame = ((com.zurrtum.create.mixin.ItemFrameAccessor) itemFrame)
+            ItemStack frame = ((com.mohistmc.mod.mixin.create.ItemFrameAccessor) itemFrame)
                 .create$invokeGetFrameItemStack();
             ItemStack displayedItem = ComponentProcessors.withUnsafeComponentsDiscarded(itemFrame.getItem());
             if (displayedItem.isEmpty()) {

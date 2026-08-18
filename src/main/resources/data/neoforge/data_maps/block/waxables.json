@@ -1,76 +1,76 @@
 {
   "values": {
-    "create:copper_shingle_slab": {
-      "waxed": "create:waxed_copper_shingle_slab"
+    "mohistmc:copper_shingle_slab": {
+      "waxed": "mohistmc:waxed_copper_shingle_slab"
     },
-    "create:copper_shingle_stairs": {
-      "waxed": "create:waxed_copper_shingle_stairs"
+    "mohistmc:copper_shingle_stairs": {
+      "waxed": "mohistmc:waxed_copper_shingle_stairs"
     },
-    "create:copper_shingles": {
-      "waxed": "create:waxed_copper_shingles"
+    "mohistmc:copper_shingles": {
+      "waxed": "mohistmc:waxed_copper_shingles"
     },
-    "create:copper_tile_slab": {
-      "waxed": "create:waxed_copper_tile_slab"
+    "mohistmc:copper_tile_slab": {
+      "waxed": "mohistmc:waxed_copper_tile_slab"
     },
-    "create:copper_tile_stairs": {
-      "waxed": "create:waxed_copper_tile_stairs"
+    "mohistmc:copper_tile_stairs": {
+      "waxed": "mohistmc:waxed_copper_tile_stairs"
     },
-    "create:copper_tiles": {
-      "waxed": "create:waxed_copper_tiles"
+    "mohistmc:copper_tiles": {
+      "waxed": "mohistmc:waxed_copper_tiles"
     },
-    "create:exposed_copper_shingle_slab": {
-      "waxed": "create:waxed_exposed_copper_shingle_slab"
+    "mohistmc:exposed_copper_shingle_slab": {
+      "waxed": "mohistmc:waxed_exposed_copper_shingle_slab"
     },
-    "create:exposed_copper_shingle_stairs": {
-      "waxed": "create:waxed_exposed_copper_shingle_stairs"
+    "mohistmc:exposed_copper_shingle_stairs": {
+      "waxed": "mohistmc:waxed_exposed_copper_shingle_stairs"
     },
-    "create:exposed_copper_shingles": {
-      "waxed": "create:waxed_exposed_copper_shingles"
+    "mohistmc:exposed_copper_shingles": {
+      "waxed": "mohistmc:waxed_exposed_copper_shingles"
     },
-    "create:exposed_copper_tile_slab": {
-      "waxed": "create:waxed_exposed_copper_tile_slab"
+    "mohistmc:exposed_copper_tile_slab": {
+      "waxed": "mohistmc:waxed_exposed_copper_tile_slab"
     },
-    "create:exposed_copper_tile_stairs": {
-      "waxed": "create:waxed_exposed_copper_tile_stairs"
+    "mohistmc:exposed_copper_tile_stairs": {
+      "waxed": "mohistmc:waxed_exposed_copper_tile_stairs"
     },
-    "create:exposed_copper_tiles": {
-      "waxed": "create:waxed_exposed_copper_tiles"
+    "mohistmc:exposed_copper_tiles": {
+      "waxed": "mohistmc:waxed_exposed_copper_tiles"
     },
-    "create:oxidized_copper_shingle_slab": {
-      "waxed": "create:waxed_oxidized_copper_shingle_slab"
+    "mohistmc:oxidized_copper_shingle_slab": {
+      "waxed": "mohistmc:waxed_oxidized_copper_shingle_slab"
     },
-    "create:oxidized_copper_shingle_stairs": {
-      "waxed": "create:waxed_oxidized_copper_shingle_stairs"
+    "mohistmc:oxidized_copper_shingle_stairs": {
+      "waxed": "mohistmc:waxed_oxidized_copper_shingle_stairs"
     },
-    "create:oxidized_copper_shingles": {
-      "waxed": "create:waxed_oxidized_copper_shingles"
+    "mohistmc:oxidized_copper_shingles": {
+      "waxed": "mohistmc:waxed_oxidized_copper_shingles"
     },
-    "create:oxidized_copper_tile_slab": {
-      "waxed": "create:waxed_oxidized_copper_tile_slab"
+    "mohistmc:oxidized_copper_tile_slab": {
+      "waxed": "mohistmc:waxed_oxidized_copper_tile_slab"
     },
-    "create:oxidized_copper_tile_stairs": {
-      "waxed": "create:waxed_oxidized_copper_tile_stairs"
+    "mohistmc:oxidized_copper_tile_stairs": {
+      "waxed": "mohistmc:waxed_oxidized_copper_tile_stairs"
     },
-    "create:oxidized_copper_tiles": {
-      "waxed": "create:waxed_oxidized_copper_tiles"
+    "mohistmc:oxidized_copper_tiles": {
+      "waxed": "mohistmc:waxed_oxidized_copper_tiles"
     },
-    "create:weathered_copper_shingle_slab": {
-      "waxed": "create:waxed_weathered_copper_shingle_slab"
+    "mohistmc:weathered_copper_shingle_slab": {
+      "waxed": "mohistmc:waxed_weathered_copper_shingle_slab"
     },
-    "create:weathered_copper_shingle_stairs": {
-      "waxed": "create:waxed_weathered_copper_shingle_stairs"
+    "mohistmc:weathered_copper_shingle_stairs": {
+      "waxed": "mohistmc:waxed_weathered_copper_shingle_stairs"
     },
-    "create:weathered_copper_shingles": {
-      "waxed": "create:waxed_weathered_copper_shingles"
+    "mohistmc:weathered_copper_shingles": {
+      "waxed": "mohistmc:waxed_weathered_copper_shingles"
     },
-    "create:weathered_copper_tile_slab": {
-      "waxed": "create:waxed_weathered_copper_tile_slab"
+    "mohistmc:weathered_copper_tile_slab": {
+      "waxed": "mohistmc:waxed_weathered_copper_tile_slab"
     },
-    "create:weathered_copper_tile_stairs": {
-      "waxed": "create:waxed_weathered_copper_tile_stairs"
+    "mohistmc:weathered_copper_tile_stairs": {
+      "waxed": "mohistmc:waxed_weathered_copper_tile_stairs"
     },
-    "create:weathered_copper_tiles": {
-      "waxed": "create:waxed_weathered_copper_tiles"
+    "mohistmc:weathered_copper_tiles": {
+      "waxed": "mohistmc:waxed_weathered_copper_tiles"
     }
   }
 }

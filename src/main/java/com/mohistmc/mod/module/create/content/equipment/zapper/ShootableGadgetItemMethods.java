@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper;
 
-import com.zurrtum.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllDataComponents;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import net.minecraft.network.protocol.Packet;

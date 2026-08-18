@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.infrastructure.fluids.FluidEntry;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidEntry;
 
 public class AllFluidEntries {
     public static final FluidEntry POTION = new FluidEntry();

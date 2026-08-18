@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.zurrtum.create.AllHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipLargerStreamCodecs;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.content.logistics.factoryBoard.FactoryPanelPosition;
+import com.mohistmc.mod.module.create.AllHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipLargerStreamCodecs;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelPosition;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

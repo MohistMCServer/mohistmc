@@ -1,0 +1,11 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"axis": "mohistmc:block/axis",
+		"axis_top": "mohistmc:block/axis_top",
+		"conveyor_casing": "mohistmc:block/conveyor_casing",
+		"conveyor_port": "mohistmc:block/conveyor_port",
+		"bullwheel": "mohistmc:block/bullwheel",
+		"particle": "mohistmc:block/andesite_casing"
+	}
+}

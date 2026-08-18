@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.menu;
 
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.gui.TickableGuiEventListener;
-import com.zurrtum.create.client.catnip.gui.widget.AbstractSimiWidget;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.gui.TickableGuiEventListener;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.AbstractSimiWidget;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;

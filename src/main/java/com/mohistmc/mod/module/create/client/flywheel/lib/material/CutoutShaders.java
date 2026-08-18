@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.material;
 
-import com.zurrtum.create.client.flywheel.api.material.CutoutShader;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.CutoutShader;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 
 public final class CutoutShaders {
     /**

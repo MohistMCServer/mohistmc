@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client.tools;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.content.schematics.client.SchematicTransformation;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicTransformation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.world.phys.Vec3;

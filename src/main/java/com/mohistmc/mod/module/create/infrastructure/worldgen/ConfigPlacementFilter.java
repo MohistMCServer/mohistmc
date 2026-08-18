@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.worldgen;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.placement.PlacementContext;

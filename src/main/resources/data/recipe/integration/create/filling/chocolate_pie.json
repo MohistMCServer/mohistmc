@@ -5,7 +5,7 @@
       "modid": "create"
     }
   ],
-  "type": "create:filling",
+  "type": "mohistmc:filling",
   "ingredients": [
     {
       "item": "mohistmc:pie_crust"

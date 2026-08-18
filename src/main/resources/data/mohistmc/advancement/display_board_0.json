@@ -1,0 +1,28 @@
+{
+  "parent": "mohistmc:track_signal",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:display_board_0_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.display_board_0.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:display_board"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.display_board_0"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

@@ -77,8 +77,8 @@ public class ScrollList extends ScrollableWidget {
 
     @Override
     protected boolean handleContentClick(MouseButtonEvent event, int bx, int by, int vw, int vh) {
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
         int relY = my - by + scrollOffset - getContentPadding();
         int accY = 0;
         for (int i = 0; i < slotItems.size(); i++) {

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper;
 
-import com.zurrtum.create.infrastructure.component.TerrainTools;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainTools;
 import java.util.Collection;
 import java.util.List;
 import net.minecraft.core.BlockPos;

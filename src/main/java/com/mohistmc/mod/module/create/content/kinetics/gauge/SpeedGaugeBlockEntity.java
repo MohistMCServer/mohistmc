@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.kinetics.gauge;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.content.kinetics.base.IRotate.SpeedLevel;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.SpeedLevel;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockState;

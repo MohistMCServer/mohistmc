@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecs;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

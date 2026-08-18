@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.api.goggles.IHaveGoggleInformation;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.tunnel.BrassTunnelBlockEntity;
+import com.mohistmc.mod.module.create.client.api.goggles.IHaveGoggleInformation;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/basin/block"
+    },
+    "facing=east": {
+      "model": "mohistmc:block/basin/block_directional",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "mohistmc:block/basin/block_directional",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "mohistmc:block/basin/block_directional"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/basin/block_directional",
+      "y": 90
+    }
+  }
+}

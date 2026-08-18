@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.stress.BlockStressValues;
-import com.zurrtum.create.client.api.goggles.IHaveGoggleInformation;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.fluids.tank.BoilerData;
-import com.zurrtum.create.content.fluids.tank.FluidTankBlockEntity;
-import com.zurrtum.create.foundation.fluid.FluidHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.stress.BlockStressValues;
+import com.mohistmc.mod.module.create.client.api.goggles.IHaveGoggleInformation;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.fluids.tank.BoilerData;
+import com.mohistmc.mod.module.create.content.fluids.tank.FluidTankBlockEntity;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;

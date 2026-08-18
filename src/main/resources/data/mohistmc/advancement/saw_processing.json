@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:fan_processing",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:saw_processing_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.saw_processing.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:mechanical_saw"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.saw_processing"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

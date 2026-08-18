@@ -1,0 +1,36 @@
+{
+  "parent": "mohistmc:mechanical_mixer",
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:cardboard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.cardboard.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:cardboard"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.cardboard"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

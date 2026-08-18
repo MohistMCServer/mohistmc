@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.animatedContainer;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
-import com.zurrtum.create.foundation.gui.menu.MenuBase;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuBase;
 import java.util.function.Consumer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;

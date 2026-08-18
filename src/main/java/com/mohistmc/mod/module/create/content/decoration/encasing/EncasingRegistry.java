@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.decoration.encasing;
 
-import com.zurrtum.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllBlocks;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.client.ponder.api.registration.TagBuilder;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.TagBuilder;
 import java.util.function.Consumer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;

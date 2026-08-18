@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.equipment.clipboard;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.infrastructure.component.ClipboardContent;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
 import java.util.List;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;

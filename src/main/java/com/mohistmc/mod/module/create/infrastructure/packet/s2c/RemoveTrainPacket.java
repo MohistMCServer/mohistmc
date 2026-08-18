@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
 import io.netty.buffer.ByteBuf;
 import java.util.UUID;
 import net.minecraft.core.UUIDUtil;

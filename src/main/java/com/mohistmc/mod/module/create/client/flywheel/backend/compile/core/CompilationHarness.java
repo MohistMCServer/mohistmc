@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile.core;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlObject;
-import com.zurrtum.create.client.flywheel.backend.gl.shader.GlProgram;
-import com.zurrtum.create.client.flywheel.backend.glsl.ShaderSources;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlObject;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader.GlProgram;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.ShaderSources;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -6,7 +6,7 @@ import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.Iterator;
 import java.util.UUID;
 import net.minecraft.core.UUIDUtil;

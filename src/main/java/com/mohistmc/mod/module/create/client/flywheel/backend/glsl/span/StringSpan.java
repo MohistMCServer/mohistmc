@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl.span;
 
-import com.zurrtum.create.client.flywheel.backend.glsl.SourceLines;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.SourceLines;
 
 public class StringSpan extends Span {
     public StringSpan(SourceLines in, int start, int end) {

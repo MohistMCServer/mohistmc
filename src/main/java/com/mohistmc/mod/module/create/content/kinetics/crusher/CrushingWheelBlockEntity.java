@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.crusher;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

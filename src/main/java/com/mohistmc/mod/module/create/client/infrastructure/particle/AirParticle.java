@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.infrastructure.particle.AirParticleData;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.infrastructure.particle.AirParticleData;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;

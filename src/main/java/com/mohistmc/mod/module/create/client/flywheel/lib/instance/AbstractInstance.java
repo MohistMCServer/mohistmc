@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.instance;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceHandle;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
 
 public abstract class AbstractInstance implements Instance {
     protected final InstanceType<?> type;

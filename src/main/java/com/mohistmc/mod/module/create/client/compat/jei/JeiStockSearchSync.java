@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.client.content.logistics.stockTicker.StockSearchSync;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.StockSearchSync;
 import mezz.jei.api.runtime.IIngredientFilter;
 import mezz.jei.api.runtime.IIngredientListOverlay;
 import org.jspecify.annotations.Nullable;

@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "#c:ingots/iron",
+  "results": [
+    {
+      "id": "mohistmc:iron_sheet"
+    }
+  ]
+}
+

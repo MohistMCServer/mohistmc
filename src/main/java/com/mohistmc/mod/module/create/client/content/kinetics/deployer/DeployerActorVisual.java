@@ -1,21 +1,21 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.deployer;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.content.contraptions.render.ActorVisual;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.content.kinetics.base.RotatingInstance;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.client.foundation.virtualWorld.VirtualRenderWorld;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
-import com.zurrtum.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.content.contraptions.render.ActorVisual;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -24,8 +24,8 @@ import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fc;
 
-import static com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE;
-import static com.zurrtum.create.content.kinetics.base.DirectionalKineticBlock.FACING;
+import static com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE;
+import static com.mohistmc.mod.module.create.content.kinetics.base.DirectionalKineticBlock.FACING;
 
 public class DeployerActorVisual extends ActorVisual {
 

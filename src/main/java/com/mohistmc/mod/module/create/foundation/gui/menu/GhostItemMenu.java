@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.foundation.gui.menu;
 
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerInput;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.catnip.placement;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;

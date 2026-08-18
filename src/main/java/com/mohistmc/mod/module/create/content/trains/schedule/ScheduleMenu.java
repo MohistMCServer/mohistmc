@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.trains.schedule;
 
-import com.zurrtum.create.AllMenuTypes;
-import com.zurrtum.create.foundation.gui.menu.HeldItemGhostItemMenu;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.AllMenuTypes;
+import com.mohistmc.mod.module.create.foundation.gui.menu.HeldItemGhostItemMenu;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;

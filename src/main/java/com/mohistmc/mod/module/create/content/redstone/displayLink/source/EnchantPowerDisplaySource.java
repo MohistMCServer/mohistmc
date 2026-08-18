@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
 import com.google.common.base.Suppliers;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

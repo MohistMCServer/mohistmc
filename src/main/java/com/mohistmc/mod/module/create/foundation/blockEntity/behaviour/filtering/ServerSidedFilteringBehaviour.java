@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
 import java.util.Map;

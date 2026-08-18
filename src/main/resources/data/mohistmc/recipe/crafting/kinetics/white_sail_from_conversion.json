@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:sail_frame"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:white_sail"
+  }
+}

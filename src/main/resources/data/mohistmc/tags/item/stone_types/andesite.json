@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_andesite",
+    "mohistmc:cut_andesite_stairs",
+    "mohistmc:cut_andesite_wall",
+    "mohistmc:polished_cut_andesite",
+    "mohistmc:polished_cut_andesite_stairs",
+    "mohistmc:polished_cut_andesite_wall",
+    "mohistmc:cut_andesite_bricks",
+    "mohistmc:cut_andesite_brick_stairs",
+    "mohistmc:cut_andesite_brick_wall",
+    "mohistmc:small_andesite_bricks",
+    "mohistmc:small_andesite_brick_stairs",
+    "mohistmc:small_andesite_brick_wall",
+    "mohistmc:layered_andesite",
+    "mohistmc:andesite_pillar",
+    "minecraft:andesite"
+  ]
+}

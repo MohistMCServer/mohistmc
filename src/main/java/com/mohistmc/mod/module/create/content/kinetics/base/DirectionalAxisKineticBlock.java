@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.kinetics.base;
 
-import com.zurrtum.create.api.contraption.transformable.TransformableBlock;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlock;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

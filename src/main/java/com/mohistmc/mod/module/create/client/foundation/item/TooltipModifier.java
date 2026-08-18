@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.item;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;

@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:item_application",
+  "target": "mohistmc:brass_casing",
+  "ingredient": "#c:plates/obsidian",
+  "results": [
+    {
+      "id": "mohistmc:railway_casing"
+    }
+  ]
+}
+

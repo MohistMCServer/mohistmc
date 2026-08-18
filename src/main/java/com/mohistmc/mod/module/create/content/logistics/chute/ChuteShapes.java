@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.chute;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.content.logistics.chute.ChuteBlock.Shape;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.content.logistics.chute.ChuteBlock.Shape;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.core.Direction;

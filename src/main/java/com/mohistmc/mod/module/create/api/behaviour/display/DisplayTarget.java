@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.api.behaviour.display;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllDisplayTargets;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllDisplayTargets;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

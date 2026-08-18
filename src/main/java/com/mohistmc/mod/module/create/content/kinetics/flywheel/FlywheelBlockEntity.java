@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.kinetics.flywheel;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.animation.LerpedFloat.Chaser;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;

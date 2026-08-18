@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.content.kinetics.waterwheel.LargeWaterWheelBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.waterwheel.LargeWaterWheelBlockEntity;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;

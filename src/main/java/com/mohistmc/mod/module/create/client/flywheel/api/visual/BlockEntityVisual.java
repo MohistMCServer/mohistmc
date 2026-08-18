@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.visual;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
 import java.util.function.Consumer;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.jspecify.annotations.Nullable;

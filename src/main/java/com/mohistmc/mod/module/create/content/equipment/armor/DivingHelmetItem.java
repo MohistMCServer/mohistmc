@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllAdvancements;
 import java.util.List;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,7 +21,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingBreatheEvent;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 @EventBusSubscriber
 public class DivingHelmetItem extends Item {

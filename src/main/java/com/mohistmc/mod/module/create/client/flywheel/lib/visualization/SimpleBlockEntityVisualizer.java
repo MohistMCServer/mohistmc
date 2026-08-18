@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visualization;
 
-import com.zurrtum.create.client.flywheel.api.visual.BlockEntityVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.BlockEntityVisualizer;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizerRegistry;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.BlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.BlockEntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizerRegistry;
 import java.util.Objects;
 import java.util.function.Predicate;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

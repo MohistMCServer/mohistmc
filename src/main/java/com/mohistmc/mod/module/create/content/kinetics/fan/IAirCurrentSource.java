@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan;
 
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.config.CKinetics;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.CKinetics;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;

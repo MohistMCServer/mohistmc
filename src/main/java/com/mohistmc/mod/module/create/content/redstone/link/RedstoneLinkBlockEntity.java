@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.redstone.link;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.logistics.factoryBoard.FactoryPanelSupportBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelSupportBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

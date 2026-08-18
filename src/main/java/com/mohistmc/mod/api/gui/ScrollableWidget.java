@@ -140,8 +140,8 @@ public abstract class ScrollableWidget extends PositionedWidget {
     // ======== 点击 ========
 
     boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
         int bx = getAbsoluteX() + borderWidth;
         int by = getAbsoluteY() + borderWidth;
         int vw = getViewportWidth();

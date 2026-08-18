@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mohistmc:item/cardboard_leggings",
+    "layer1": "mohistmc:trims/items/card_leggings_trim_iron"
+  }
+}

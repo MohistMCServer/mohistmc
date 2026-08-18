@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.logistics.crate;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;

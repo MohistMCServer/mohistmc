@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.trains;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.content.trains.entity.CarriageContraptionEntity;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.Entity;
 

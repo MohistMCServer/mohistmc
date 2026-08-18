@@ -6,7 +6,7 @@ import java.util.Random;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class PackageStyles {
     public record PackageStyle(String namespace, String type, int width, int height, float riggingOffset,

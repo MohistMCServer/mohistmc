@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:potato_cannon",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:extendo_grip_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.extendo_grip.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:extendo_grip"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.extendo_grip"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

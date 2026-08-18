@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan.processing;
 
-import com.zurrtum.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;

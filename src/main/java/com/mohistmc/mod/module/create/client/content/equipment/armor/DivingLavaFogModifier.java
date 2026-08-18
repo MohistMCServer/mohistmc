@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.equipment.armor;
 
-import com.zurrtum.create.content.equipment.armor.DivingHelmetItem;
+import com.mohistmc.mod.module.create.content.equipment.armor.DivingHelmetItem;
 import net.minecraft.client.Camera;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.multiplayer.ClientLevel;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper;
 
-import com.zurrtum.create.infrastructure.component.PlacementOptions;
+import com.mohistmc.mod.module.create.infrastructure.component.PlacementOptions;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

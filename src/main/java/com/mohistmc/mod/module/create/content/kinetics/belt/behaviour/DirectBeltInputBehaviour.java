@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.behaviour;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.content.logistics.funnel.BeltFunnelBlock;
-import com.zurrtum.create.content.logistics.funnel.BeltFunnelBlock.Shape;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlock;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock;
+import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock.Shape;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlock;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

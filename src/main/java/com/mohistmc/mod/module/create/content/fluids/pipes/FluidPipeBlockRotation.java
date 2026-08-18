@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.fluids.pipes;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
 import java.util.Map;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Mirror;

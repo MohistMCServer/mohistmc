@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.contraptions.ControlledContraptionEntity;
-import com.zurrtum.create.content.contraptions.OrientedContraptionEntity;
-import com.zurrtum.create.content.contraptions.actors.seat.SeatEntity;
-import com.zurrtum.create.content.contraptions.gantry.GantryContraptionEntity;
-import com.zurrtum.create.content.contraptions.glue.SuperGlueEntity;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintEntity;
-import com.zurrtum.create.content.equipment.potatoCannon.PotatoProjectileEntity;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
-import com.zurrtum.create.content.logistics.depot.EjectorItemEntity;
-import com.zurrtum.create.content.trains.entity.CarriageContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.ControlledContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.OrientedContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.actors.seat.SeatEntity;
+import com.mohistmc.mod.module.create.content.contraptions.gantry.GantryContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.glue.SuperGlueEntity;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.PotatoProjectileEntity;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.content.logistics.depot.EjectorItemEntity;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
 import java.util.HashSet;
 import java.util.Set;
 import net.minecraft.core.Registry;
@@ -21,7 +21,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllEntityTypes {
     public static final Set<EntityType<?>> NOT_SEND_VELOCITY = new HashSet<>();

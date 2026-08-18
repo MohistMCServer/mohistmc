@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.catnip.math;
 
-import com.zurrtum.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

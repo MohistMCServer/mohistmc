@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:deploying",
+  "keep_held_item": true,
+  "target": "mohistmc:weathered_copper_shingles",
+  "ingredient": "#minecraft:axes",
+  "results": [
+    {
+      "id": "mohistmc:exposed_copper_shingles"
+    }
+  ]
+}

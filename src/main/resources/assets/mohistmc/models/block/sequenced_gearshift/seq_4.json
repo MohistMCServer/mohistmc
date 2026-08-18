@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/sequenced_gearshift/idle",
+	"textures": {
+		"4": "mohistmc:block/sequenced_gearshift_4"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_tuff",
+    "mohistmc:cut_tuff_stairs",
+    "mohistmc:cut_tuff_wall",
+    "mohistmc:polished_cut_tuff",
+    "mohistmc:polished_cut_tuff_stairs",
+    "mohistmc:polished_cut_tuff_wall",
+    "mohistmc:cut_tuff_bricks",
+    "mohistmc:cut_tuff_brick_stairs",
+    "mohistmc:cut_tuff_brick_wall",
+    "mohistmc:small_tuff_bricks",
+    "mohistmc:small_tuff_brick_stairs",
+    "mohistmc:small_tuff_brick_wall",
+    "mohistmc:layered_tuff",
+    "mohistmc:tuff_pillar",
+    "minecraft:tuff"
+  ]
+}

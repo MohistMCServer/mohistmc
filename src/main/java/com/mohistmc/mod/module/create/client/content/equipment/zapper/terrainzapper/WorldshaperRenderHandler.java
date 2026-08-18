@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.content.equipment.zapper.terrainzapper;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.AllSpecialTextures;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.content.equipment.zapper.terrainzapper.Brush;
-import com.zurrtum.create.infrastructure.component.PlacementOptions;
-import com.zurrtum.create.infrastructure.component.TerrainBrushes;
-import com.zurrtum.create.infrastructure.component.TerrainTools;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.AllSpecialTextures;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.Brush;
+import com.mohistmc.mod.module.create.infrastructure.component.PlacementOptions;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainBrushes;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainTools;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.Supplier;

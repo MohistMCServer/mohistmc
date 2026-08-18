@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dyes/yellow",
+    "#mohistmc:valve_handles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:yellow_valve_handle"
+  }
+}

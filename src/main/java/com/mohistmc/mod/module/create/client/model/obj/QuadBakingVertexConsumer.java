@@ -7,7 +7,7 @@ package com.mohistmc.mod.module.create.client.model.obj;
 
 import com.mojang.blaze3d.platform.Transparency;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import net.minecraft.client.model.geom.builders.UVPair;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;

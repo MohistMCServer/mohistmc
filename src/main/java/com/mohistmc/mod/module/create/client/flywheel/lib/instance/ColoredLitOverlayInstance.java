@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.instance;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceHandle;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 
 public abstract class ColoredLitOverlayInstance extends ColoredLitInstance {

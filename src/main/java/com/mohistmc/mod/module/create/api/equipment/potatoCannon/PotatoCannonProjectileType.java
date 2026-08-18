@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.api.equipment.potatoCannon;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileEntityHitAction.Type;
-import com.zurrtum.create.api.registry.CreateRegistryKeys;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.Billboard;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.TowardMotion;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.Tumble;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileEntityHitAction.Type;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.Billboard;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.TowardMotion;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.Tumble;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

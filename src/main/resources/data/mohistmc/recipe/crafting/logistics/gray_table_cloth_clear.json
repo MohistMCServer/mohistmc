@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:gray_table_cloth"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:gray_table_cloth"
+  }
+}

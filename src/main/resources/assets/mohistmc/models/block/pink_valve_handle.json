@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/valve_handle",
+  "textures": {
+    "3": "mohistmc:block/valve_handle/valve_handle_pink"
+  }
+}

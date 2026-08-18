@@ -1,0 +1,13 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"belt": "mohistmc:block/bogey/belt",
+		"bogey": "mohistmc:block/bogey/frame",
+		"bogey2": "mohistmc:block/bogey/frame2",
+		"piston": "mohistmc:block/bogey/piston",
+		"wheel": "mohistmc:block/bogey/wheel",
+		"axis": "mohistmc:block/axis",
+		"axis_top": "mohistmc:block/axis_top",
+		"particle": "#bogey"
+	}
+}

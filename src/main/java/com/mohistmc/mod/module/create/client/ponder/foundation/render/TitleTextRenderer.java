@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.client.ponder.foundation.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.client.catnip.gui.UIRenderHelper;
-import com.zurrtum.create.client.catnip.lang.ClientFontHelper;
+import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
+import com.mohistmc.mod.module.create.client.catnip.lang.ClientFontHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.render.pip.PictureInPictureRenderer;

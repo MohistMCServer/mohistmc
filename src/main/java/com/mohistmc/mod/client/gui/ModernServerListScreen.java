@@ -44,8 +44,8 @@ public class ModernServerListScreen extends EnhancedScreen {
 
     @Override
     protected void buildWidgets() {
-        int sw = width;
-        int sh = height;
+        int sw = getImageWidth();
+        int sh = getImageHeight();
 
         servers = new ServerList(minecraft);
         servers.load();

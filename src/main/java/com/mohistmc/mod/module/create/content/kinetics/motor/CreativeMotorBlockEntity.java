@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.motor;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.kinetics.base.GeneratingKineticBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerKineticScrollValueBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.base.GeneratingKineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerKineticScrollValueBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;

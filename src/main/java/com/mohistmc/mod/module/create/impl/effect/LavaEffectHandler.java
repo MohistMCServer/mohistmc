@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.impl.effect;
 
-import com.zurrtum.create.api.effect.OpenPipeEffectHandler;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.api.effect.OpenPipeEffectHandler;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.List;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;

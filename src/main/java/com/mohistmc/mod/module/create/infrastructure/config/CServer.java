@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.config;
 
 import com.google.gson.JsonObject;
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
 import org.jspecify.annotations.Nullable;
 
 public class CServer extends ConfigBase {

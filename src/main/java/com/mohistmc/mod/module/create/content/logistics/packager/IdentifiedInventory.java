@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.packager;
 
-import com.zurrtum.create.api.packager.InventoryIdentifier;
+import com.mohistmc.mod.module.create.api.packager.InventoryIdentifier;
 import net.minecraft.world.Container;
 import org.jspecify.annotations.Nullable;
 

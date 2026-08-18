@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.api.goggles.IHaveGoggleInformation;
-import com.zurrtum.create.content.kinetics.steamEngine.PoweredShaftBlockEntity;
-import com.zurrtum.create.content.kinetics.steamEngine.SteamEngineBlockEntity;
+import com.mohistmc.mod.module.create.client.api.goggles.IHaveGoggleInformation;
+import com.mohistmc.mod.module.create.content.kinetics.steamEngine.PoweredShaftBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.steamEngine.SteamEngineBlockEntity;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 

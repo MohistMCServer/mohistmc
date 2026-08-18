@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:redstone_requester"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:redstone_requester"
+  }
+}

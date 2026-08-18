@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.equipment.armor;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.animation.LerpedFloat.Chaser;
-import com.zurrtum.create.content.equipment.armor.CardboardArmorHandler;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;
+import com.mohistmc.mod.module.create.content.equipment.armor.CardboardArmorHandler;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

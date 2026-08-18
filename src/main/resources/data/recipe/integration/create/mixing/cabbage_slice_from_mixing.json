@@ -5,7 +5,7 @@
       "modid": "create"
     }
   ],
-  "type": "create:mixing",
+  "type": "mohistmc:mixing",
   "ingredients": [
     {
       "item": "mohistmc:cabbage"

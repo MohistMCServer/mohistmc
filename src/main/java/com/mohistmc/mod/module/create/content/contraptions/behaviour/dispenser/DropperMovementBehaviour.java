@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour.dispenser;
 
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
-import com.zurrtum.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.MountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorage;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.MountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorage;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.BlockPos;

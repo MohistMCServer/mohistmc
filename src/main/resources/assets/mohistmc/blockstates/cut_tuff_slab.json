@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mohistmc:block/cut_tuff_slab"
+    },
+    "type=double": {
+      "model": "mohistmc:block/cut_tuff"
+    },
+    "type=top": {
+      "model": "mohistmc:block/cut_tuff_slab_top"
+    }
+  }
+}

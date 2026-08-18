@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.chainConveyor;
 
 
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;
 import java.lang.ref.WeakReference;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.phys.Vec3;

@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.api.behaviour.display;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.catnip.nbt.NBTProcessors;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayBoardTarget;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
-import com.zurrtum.create.content.trains.display.FlapDisplayBlockEntity;
-import com.zurrtum.create.content.trains.display.FlapDisplayLayout;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTProcessors;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayBoardTarget;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlockEntity;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

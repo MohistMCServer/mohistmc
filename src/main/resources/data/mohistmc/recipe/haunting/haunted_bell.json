@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "mohistmc:peculiar_bell",
+  "results": [
+    {
+      "id": "mohistmc:haunted_bell"
+    }
+  ]
+}
+

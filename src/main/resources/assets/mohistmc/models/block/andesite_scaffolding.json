@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/scaffold/block",
+  "textures": {
+    "casing": "mohistmc:block/andesite_casing",
+    "inside": "mohistmc:block/scaffold/andesite_scaffold_inside",
+    "particle": "mohistmc:block/scaffold/andesite_scaffold",
+    "side": "mohistmc:block/scaffold/andesite_scaffold",
+    "top": "mohistmc:block/funnel/andesite_funnel_frame"
+  }
+}

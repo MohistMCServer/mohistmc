@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mohistmc:block/cardboard_block",
+      "y": 90
+    },
+    "axis=z": {
+      "model": "mohistmc:block/cardboard_block"
+    }
+  }
+}

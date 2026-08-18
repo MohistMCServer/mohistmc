@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.base;
 
-import com.zurrtum.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.world.item.context.BlockPlaceContext;

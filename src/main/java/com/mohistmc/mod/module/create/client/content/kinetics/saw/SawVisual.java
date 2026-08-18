@@ -1,21 +1,21 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.saw;
 
 import com.google.common.base.Suppliers;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.render.QuadRenderHelper;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.content.kinetics.base.RotatingInstance;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.InstancerProvider;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.OrientedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.kinetics.saw.SawBlockEntity;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.render.QuadRenderHelper;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.OrientedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.kinetics.saw.SawBlockEntity;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import net.minecraft.client.Minecraft;
@@ -26,7 +26,7 @@ import net.minecraft.core.Direction.Axis;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE;
+import static com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public class SawVisual extends KineticBlockEntityVisual<SawBlockEntity> implements SimpleDynamicVisual {

@@ -322,7 +322,7 @@ public class BlockTags extends BlockTagsProvider
 			.addTag(ModTags.Blocks.TRAY_HEAT_SOURCES);
 		tag(ModTags.Blocks.HEAT_CONDUCTORS).add(
 				key(Blocks.HOPPER))
-			.addOptional(ResourceKey.create(Registries.BLOCK, Identifier.parse("create:chute")));
+			.addOptional(ResourceKey.create(Registries.BLOCK, Identifier.parse("mohistmc:chute")));
 		tag(ModTags.Blocks.COMPOST_ACTIVATORS).add(
 				key(Blocks.BROWN_MUSHROOM),
 				key(Blocks.RED_MUSHROOM),

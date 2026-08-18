@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.processing.sequenced;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 

@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/seat",
+  "textures": {
+    "1": "mohistmc:block/seat/top_blue",
+    "2": "mohistmc:block/seat/side_blue"
+  }
+}

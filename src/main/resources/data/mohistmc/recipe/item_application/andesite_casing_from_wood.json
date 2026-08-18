@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:item_application",
+  "target": "#c:stripped_woods",
+  "ingredient": "mohistmc:andesite_alloy",
+  "results": [
+    {
+      "id": "mohistmc:andesite_casing"
+    }
+  ]
+}
+

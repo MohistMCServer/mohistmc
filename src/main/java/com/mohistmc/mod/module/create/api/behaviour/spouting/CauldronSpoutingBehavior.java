@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.behaviour.spouting;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.fluids.spout.SpoutBlockEntity;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.fluids.spout.SpoutBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Util;
 import net.minecraft.world.level.Level;

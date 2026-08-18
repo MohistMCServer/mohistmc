@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.chute;
 
-import com.zurrtum.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;

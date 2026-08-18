@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions;
 
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;

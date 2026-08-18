@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.processing.burner;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllEntityTags;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllEntityTags;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

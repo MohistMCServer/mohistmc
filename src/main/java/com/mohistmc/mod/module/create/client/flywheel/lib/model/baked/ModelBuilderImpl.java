@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model.baked;
 
-import com.zurrtum.create.client.flywheel.lib.model.SimpleModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.SimpleModel;
 import org.jetbrains.annotations.ApiStatus;
 
 @ApiStatus.Internal

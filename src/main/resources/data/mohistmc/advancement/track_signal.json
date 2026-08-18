@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:conductor",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:track_signal_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.track_signal.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:track_signal"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.track_signal"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

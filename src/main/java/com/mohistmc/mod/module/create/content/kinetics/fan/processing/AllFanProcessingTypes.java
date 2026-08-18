@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan.processing;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.content.processing.burner.BlazeBurnerBlock;
-import com.zurrtum.create.content.processing.burner.LitBlazeBurnerBlock;
-import com.zurrtum.create.foundation.item.ItemHelper;
-import com.zurrtum.create.foundation.recipe.RecipeApplier;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock;
+import com.mohistmc.mod.module.create.content.processing.burner.LitBlazeBurnerBlock;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.foundation.recipe.RecipeApplier;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -54,8 +54,8 @@ import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.LOGGER;
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.LOGGER;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllFanProcessingTypes {
     public static final BlastingType BLASTING = register("blasting", new BlastingType());

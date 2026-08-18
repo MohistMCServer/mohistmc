@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.foundation.block.connected;
 
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class CTType {
     public static final int UP_FLAG = 1;

@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.redstone.link.controller;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
-import com.zurrtum.create.foundation.gui.menu.MenuBase;
-import com.zurrtum.create.foundation.gui.menu.MenuProvider;
-import com.zurrtum.create.foundation.item.ItemHelper;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuBase;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuProvider;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.RegistryFriendlyByteBuf;

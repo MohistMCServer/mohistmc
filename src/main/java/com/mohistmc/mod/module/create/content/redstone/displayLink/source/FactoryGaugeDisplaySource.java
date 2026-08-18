@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.content.logistics.factoryBoard.FactoryPanelPosition;
-import com.zurrtum.create.content.logistics.factoryBoard.ServerFactoryPanelBehaviour;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelPosition;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.ServerFactoryPanelBehaviour;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;

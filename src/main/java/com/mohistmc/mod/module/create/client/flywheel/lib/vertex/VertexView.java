@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.vertex;
 
-import com.zurrtum.create.client.flywheel.api.vertex.MutableVertexList;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 import org.jspecify.annotations.Nullable;
 import org.lwjgl.system.MemoryUtil;
 

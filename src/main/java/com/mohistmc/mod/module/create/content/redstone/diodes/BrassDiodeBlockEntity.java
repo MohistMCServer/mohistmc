@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.equipment.clipboard.ClipboardCloneable;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerBrassDiodeScrollValueBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardCloneable;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerBrassDiodeScrollValueBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 
-import static com.zurrtum.create.content.redstone.diodes.BrassDiodeBlock.POWERING;
+import static com.mohistmc.mod.module.create.content.redstone.diodes.BrassDiodeBlock.POWERING;
 
 public abstract class BrassDiodeBlockEntity extends SmartBlockEntity implements ClipboardCloneable {
 

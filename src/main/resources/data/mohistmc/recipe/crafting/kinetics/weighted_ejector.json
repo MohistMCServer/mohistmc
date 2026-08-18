@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "#c:plates/gold",
+    "D": "mohistmc:depot",
+    "I": "mohistmc:cogwheel"
+  },
+  "pattern": [
+    "A",
+    "D",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:weighted_ejector"
+  }
+}

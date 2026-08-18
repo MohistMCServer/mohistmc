@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.turntable;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.turntable.TurntableBlockEntity;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.turntable.TurntableBlockEntity;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.infrastructure.ponder.scenes.highLogistics;
 
-import com.zurrtum.create.AllParticleTypes;
-import com.zurrtum.create.client.foundation.ponder.CreateSceneBuilder;
-import com.zurrtum.create.client.ponder.api.element.ElementLink;
-import com.zurrtum.create.client.ponder.api.element.EntityElement;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
-import com.zurrtum.create.content.logistics.packager.PackagerBlockEntity;
+import com.mohistmc.mod.module.create.AllParticleTypes;
+import com.mohistmc.mod.module.create.client.foundation.ponder.CreateSceneBuilder;
+import com.mohistmc.mod.module.create.client.ponder.api.element.ElementLink;
+import com.mohistmc.mod.module.create.client.ponder.api.element.EntityElement;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.content.logistics.packager.PackagerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;

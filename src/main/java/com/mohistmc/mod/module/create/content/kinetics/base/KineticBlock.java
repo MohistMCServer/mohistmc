@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.base;
 
-import com.zurrtum.create.foundation.advancement.AdvancementBehaviour;
+import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviour;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;

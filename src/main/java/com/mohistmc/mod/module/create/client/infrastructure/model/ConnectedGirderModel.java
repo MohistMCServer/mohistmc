@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.AllCTBehaviours;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.content.decoration.girder.GirderBlock;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.AllCTBehaviours;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.decoration.girder.GirderBlock;
 import java.util.List;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModelPart;

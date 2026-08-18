@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt;
 
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.math.VoxelShaper;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.math.VoxelShaper;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.core.Direction;

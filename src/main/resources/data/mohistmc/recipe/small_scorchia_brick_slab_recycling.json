@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:small_scorchia_brick_slab",
+    "mohistmc:small_scorchia_brick_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_scorchia_bricks"
+  }
+}

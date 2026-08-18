@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:super_glue",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:contraption_actors_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.contraption_actors.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:mechanical_harvester"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.contraption_actors"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

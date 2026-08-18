@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visual;
 
-import com.zurrtum.create.client.flywheel.lib.math.MoreMath;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.MoreMath;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Vec3i;
 import net.minecraft.util.Mth;
@@ -42,7 +42,7 @@ public class EntityVisibilityTester {
      * @return {@code true} if the Entity is visible, {@code false} otherwise.
      */
     public boolean check(FrustumIntersection frustum) {
-        AABB aabb = ((com.zurrtum.create.client.mixin.EntityRendererAccessor<Entity>)
+        AABB aabb = ((com.mohistmc.mod.mixin.create.client.EntityRendererAccessor<Entity>)
             (Object) Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(entity))
             .create$invokeGetBoundingBoxForCulling(entity);
 

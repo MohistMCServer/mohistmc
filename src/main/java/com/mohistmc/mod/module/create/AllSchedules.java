@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.content.trains.schedule.condition.*;
-import com.zurrtum.create.content.trains.schedule.destination.*;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.content.trains.schedule.condition.*;
+import com.mohistmc.mod.module.create.content.trains.schedule.destination.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import net.minecraft.resources.Identifier;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllSchedules {
     public static List<Pair<Identifier, Function<Identifier, ? extends ScheduleInstruction>>> INSTRUCTION_TYPES = new ArrayList<>();

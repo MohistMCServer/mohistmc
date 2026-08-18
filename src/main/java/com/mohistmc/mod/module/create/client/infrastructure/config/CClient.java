@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.config;
 
 
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.catnip.config.ui.ConfigAnnotations;
-import com.zurrtum.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.catnip.config.ui.ConfigAnnotations;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
 
 public class CClient extends ConfigBase {
 

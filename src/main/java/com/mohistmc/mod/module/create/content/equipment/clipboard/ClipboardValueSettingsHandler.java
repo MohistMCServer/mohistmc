@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.equipment.clipboard;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.infrastructure.component.ClipboardContent;
-import com.zurrtum.create.infrastructure.component.ClipboardEntry;
-import com.zurrtum.create.infrastructure.component.ClipboardType;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardEntry;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardType;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.ChatFormatting;
@@ -29,7 +29,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.LOGGER;
+import static com.mohistmc.mod.module.create.Create.LOGGER;
 
 public class ClipboardValueSettingsHandler {
     @Nullable

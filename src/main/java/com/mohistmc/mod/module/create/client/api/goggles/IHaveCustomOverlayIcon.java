@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.api.goggles;
 
-import com.zurrtum.create.AllItems;
+import com.mohistmc.mod.module.create.AllItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 

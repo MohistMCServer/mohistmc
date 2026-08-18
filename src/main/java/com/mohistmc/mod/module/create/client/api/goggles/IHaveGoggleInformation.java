@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.api.goggles;
 
-import com.zurrtum.create.client.catnip.lang.LangBuilder;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.client.catnip.lang.LangBuilder;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

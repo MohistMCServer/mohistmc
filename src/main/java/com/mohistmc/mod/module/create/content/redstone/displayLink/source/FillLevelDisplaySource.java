@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.thresholdSwitch.ThresholdSwitchBlockEntity;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.thresholdSwitch.ThresholdSwitchBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.jspecify.annotations.Nullable;
 

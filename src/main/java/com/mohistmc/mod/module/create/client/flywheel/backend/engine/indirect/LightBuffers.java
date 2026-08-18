@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.indirect;
 
-import com.zurrtum.create.client.flywheel.backend.engine.LightStorage;
+import com.mohistmc.mod.module.create.client.flywheel.backend.engine.LightStorage;
 import org.lwjgl.opengl.GL46;
 import org.lwjgl.system.MemoryUtil;
 

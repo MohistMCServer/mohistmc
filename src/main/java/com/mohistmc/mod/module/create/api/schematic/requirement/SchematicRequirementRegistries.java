@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.schematic.requirement;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Block;

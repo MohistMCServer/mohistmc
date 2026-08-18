@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine;
 
-import com.zurrtum.create.client.flywheel.impl.compat.CompatMod;
+import com.mohistmc.mod.module.create.client.flywheel.impl.compat.CompatMod;
 import it.unimi.dsi.fastutil.longs.Long2ObjectFunction;
 import java.util.BitSet;
 import java.util.Objects;
@@ -17,8 +17,8 @@ import net.minecraft.world.level.lighting.SkyLightSectionStorage;
 import org.jspecify.annotations.Nullable;
 import org.lwjgl.system.MemoryUtil;
 
-import static com.zurrtum.create.client.flywheel.backend.engine.LightStorage.BLOCKS_PER_SECTION;
-import static com.zurrtum.create.client.flywheel.backend.engine.LightStorage.SOLID_SIZE_BYTES;
+import static com.mohistmc.mod.module.create.client.flywheel.backend.engine.LightStorage.BLOCKS_PER_SECTION;
+import static com.mohistmc.mod.module.create.client.flywheel.backend.engine.LightStorage.SOLID_SIZE_BYTES;
 
 public abstract class LightDataCollector {
     private static final ConstantDataLayer ALWAYS_0 = new ConstantDataLayer(0);

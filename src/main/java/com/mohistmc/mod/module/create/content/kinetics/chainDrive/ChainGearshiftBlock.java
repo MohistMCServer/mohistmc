@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.chainDrive;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;

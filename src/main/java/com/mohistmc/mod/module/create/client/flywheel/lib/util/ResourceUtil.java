@@ -7,7 +7,7 @@ import net.minecraft.IdentifierException;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.client.flywheel.impl.Flywheel.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel.MOD_ID;
 
 public final class ResourceUtil {
     private static final SimpleCommandExceptionType ERROR_INVALID = new SimpleCommandExceptionType(Component.translatable(

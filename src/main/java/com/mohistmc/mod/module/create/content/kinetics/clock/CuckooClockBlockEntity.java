@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.kinetics.clock;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllDamageSources;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllDamageSources;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;

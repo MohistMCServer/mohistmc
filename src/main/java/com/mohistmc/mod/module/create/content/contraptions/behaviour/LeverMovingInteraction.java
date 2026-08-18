@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour;
 
-import com.zurrtum.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;

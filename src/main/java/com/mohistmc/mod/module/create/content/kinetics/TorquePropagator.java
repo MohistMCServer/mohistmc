@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.kinetics;
 
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.levelWrappers.WorldHelper;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.WorldHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.world.level.LevelAccessor;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.glue;
 
-import com.zurrtum.create.content.contraptions.chassis.AbstractChassisBlock;
+import com.mohistmc.mod.module.create.content.contraptions.chassis.AbstractChassisBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

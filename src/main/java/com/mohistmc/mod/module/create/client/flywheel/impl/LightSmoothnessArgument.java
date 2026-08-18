@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl;
 
-import com.zurrtum.create.client.flywheel.backend.compile.LightSmoothness;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.LightSmoothness;
 import net.minecraft.commands.arguments.StringRepresentableArgument;
 import net.minecraft.commands.synchronization.SingletonArgumentInfo;
 

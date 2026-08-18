@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "minecraft:red_mushroom",
+  "results": [
+    {
+      "id": "minecraft:crimson_fungus"
+    }
+  ]
+}
+

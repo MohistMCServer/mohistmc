@@ -3,14 +3,14 @@ package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
-import com.zurrtum.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllPotatoProjectileRenderModes {
     public static void register() {

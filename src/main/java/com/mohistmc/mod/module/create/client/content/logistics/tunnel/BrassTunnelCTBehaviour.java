@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.logistics.tunnel;
 
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.CTType;
-import com.zurrtum.create.client.foundation.block.connected.ConnectedTextureBehaviour;
-import com.zurrtum.create.content.logistics.tunnel.BrassTunnelBlockEntity;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTType;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

@@ -1,5 +1,7 @@
 {
   "values": [
-    "mohistmc:stove_burn"
+    "mohistmc:stove_burn",
+    "mohistmc:fan_fire",
+    "mohistmc:fan_lava"
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:ejector_maxed",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:pulley_maxed_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.pulley_maxed.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:rope_pulley"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.pulley_maxed"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

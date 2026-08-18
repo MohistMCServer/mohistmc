@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.stress;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import java.util.function.Consumer;
 import java.util.function.DoubleSupplier;
 import net.minecraft.world.level.block.Block;

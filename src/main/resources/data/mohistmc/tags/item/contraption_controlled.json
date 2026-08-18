@@ -1,0 +1,27 @@
+{
+  "values": [
+    "mohistmc:portable_fluid_interface",
+    "mohistmc:mechanical_drill",
+    "mohistmc:mechanical_saw",
+    "mohistmc:deployer",
+    "mohistmc:portable_storage_interface",
+    "mohistmc:redstone_contact",
+    "mohistmc:mechanical_harvester",
+    "mohistmc:mechanical_plough",
+    "mohistmc:mechanical_roller",
+    "mohistmc:andesite_funnel",
+    "mohistmc:brass_funnel",
+    "mohistmc:peculiar_bell",
+    "mohistmc:haunted_bell",
+    "mohistmc:andesite_door",
+    "mohistmc:brass_door",
+    "mohistmc:copper_door",
+    "mohistmc:train_door",
+    "mohistmc:framed_glass_door",
+    "minecraft:bell",
+    "minecraft:campfire",
+    "minecraft:soul_campfire",
+    "minecraft:dispenser",
+    "minecraft:dropper"
+  ]
+}

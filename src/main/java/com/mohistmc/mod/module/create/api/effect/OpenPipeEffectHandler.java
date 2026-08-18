@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.effect;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.AABB;

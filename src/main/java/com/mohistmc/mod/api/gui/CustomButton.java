@@ -29,6 +29,15 @@ public class CustomButton extends PositionedWidget {
     @Nullable private static Font defaultFont;
     private int borderWidth, borderColor, borderRadius, glowColor;
     private float hoverScale = 1.0f;
+    /** 字号缩放（12px 基准）。默认自动计算，setFontSize 后固定为手动值 */
+    private float fontScale = 2.5f;
+    /** 是否自动按按钮高度计算字号（未手动 setFontSize 时为 true） */
+    private boolean autoFontSize = true;
+    /** 是否允许文字过宽时自动扩展按钮宽度（固定尺寸按钮设为 false） */
+    private boolean autoFitWidth = true;
+    /** 自动适配时文字与按钮边缘的水平/垂直边距 */
+    private static final int AUTO_PAD = 16;
+    private static final int AUTO_PAD_V = 4;
     private boolean useGradient;
     private int gradientStart, gradientEnd;
     private GradientDirection gradientDirection = GradientDirection.TOP_BOTTOM;
@@ -62,6 +71,9 @@ public class CustomButton extends PositionedWidget {
     public CustomButton setBorderRadius(int r) { borderRadius = Math.max(0, r); return this; }
     public CustomButton setGlow(int c) { glowColor = c; return this; }
     public CustomButton setHoverScale(float s) { hoverScale = Math.max(1.0f, s); return this; }
+    public CustomButton setFontSize(int size) { fontScale = Math.max(0.1f, size / 12f); autoFontSize = false; return this; }
+    /** 关闭/开启自动扩展宽度（默认开启；固定尺寸小按钮设为 false 防止撑破布局） */
+    public CustomButton setAutoFit(boolean autoFit) { this.autoFitWidth = autoFit; return this; }
     public CustomButton setGradient(int s, int e, GradientDirection d) { useGradient = true; gradientStart = s; gradientEnd = e; gradientDirection = d; return this; }
     public CustomButton clearGradient() { useGradient = false; return this; }
     public CustomButton onClick(Runnable h) { this.onClick = h; return this; }
@@ -82,10 +94,11 @@ public class CustomButton extends PositionedWidget {
     @Override public CustomButton setBottomAnchored(boolean a) { super.setBottomAnchored(a); return this; }
     @Override public CustomButton setAlpha(int a) { super.setAlpha(a); return this; }
     @Override public CustomButton setAlpha(float a) { super.setAlpha(a); return this; }
+    @Override public CustomButton setEditorId(String id) { super.setEditorId(id); return this; }
 
     boolean handleClick(MouseButtonEvent e, boolean dbl) {
         if (!enabled || !visible) return false;
-        if (isMouseOver(e.x(), e.y())) {
+        if (isMouseOver(logicalX(e), logicalY(e))) {
             if (onClick != null) { playSound(clickSound); onClick.run(); }
             return true;
         }
@@ -97,6 +110,7 @@ public class CustomButton extends PositionedWidget {
     @Override
     public void render(GuiGraphicsExtractor g, int mx, int my, float pt) {
         if (!visible) return;
+        autoFit();
         int x = getAbsoluteX(), y = getAbsoluteY();
         boolean hovered = enabled && isMouseOver(mx, my);
         if (enabled && hovered && !wasHovered) playSound(hoverSound);
@@ -112,7 +126,37 @@ public class CustomButton extends PositionedWidget {
             if (r > 0) fillRoundRect(g, x, y, width, height, r, 0x80808080);
             else g.fill(x, y, x + width, y + height, 0x80808080);
         }
-        if (tooltip != null && hovered) g.setTooltipForNextFrame(tooltip, mx, my);
+        if (tooltip != null && hovered) {
+            // 将逻辑坐标转换为屏幕坐标，避免工具提示位置错位
+            int sx = GuiCoord.toScreenX(mx);
+            int sy = GuiCoord.toScreenY(my);
+            g.setTooltipForNextFrame(tooltip, sx + 5, sy + 5);
+        }
+    }
+
+    /** 自动适配：默认按按钮高度计算字号（铺满留边距）；文字过宽时扩展按钮宽度 */
+    private void autoFit() {
+        if (text == null) return;
+        Font font = customFont != null ? customFont : defaultFont != null ? defaultFont : Minecraft.getInstance().font;
+        if (autoFontSize) {
+            // 字号随按钮高度自动缩放：文字高度占满按钮并保留垂直边距
+            float byH = (height - AUTO_PAD_V * 2) / (float) font.lineHeight;
+            fontScale = Math.clamp(byH, 0.8f, 5.0f);
+        }
+        // 固定尺寸按钮：不自动扩展宽度
+        if (!autoFitWidth) return;
+        int contentW;
+        if (enableItemIcons) {
+            if (segments == null) parseSegments();
+            int iconSz = Math.min(height - 4, 12);
+            contentW = 0;
+            for (var seg : segments) contentW += seg.type == SegmentType.TEXT ? font.width(seg.content) : (iconSz + 2);
+        } else {
+            contentW = font.width(text);
+        }
+        // 文字过宽时按钮自动扩展宽度，保留水平边距
+        int neededW = (int) Math.ceil(contentW * fontScale) + AUTO_PAD * 2;
+        if (neededW > width) width = neededW;
     }
 
     private void renderContent(GuiGraphicsExtractor g, int x, int y, boolean hovered) {
@@ -140,8 +184,23 @@ public class CustomButton extends PositionedWidget {
         }
         Font font = customFont != null ? customFont : defaultFont != null ? defaultFont : Minecraft.getInstance().font;
         if (!enableItemIcons) {
-            int tx = x + (width - font.width(text)) / 2, ty = y + (height - font.lineHeight) / 2;
-            g.text(font, text, tx, ty, applyAlpha(textColor));
+            int tx, ty;
+            if (Float.compare(fontScale, 1.0f) == 0) {
+                tx = x + (width - font.width(text)) / 2;
+                ty = y + (height - font.lineHeight) / 2;
+                g.text(font, text, tx, ty, applyAlpha(textColor));
+            } else {
+                var pose = g.pose();
+                pose.pushMatrix();
+                float cx = x + width / 2f, cy = y + height / 2f;
+                pose.translate(cx, cy);
+                pose.scale(fontScale, fontScale);
+                pose.translate(-cx, -cy);
+                tx = x + (width - font.width(text)) / 2;
+                ty = y + (height - font.lineHeight) / 2;
+                g.text(font, text, tx, ty, applyAlpha(textColor));
+                pose.popMatrix();
+            }
         } else {
             renderTextWithIcons(g, font, x, y);
         }

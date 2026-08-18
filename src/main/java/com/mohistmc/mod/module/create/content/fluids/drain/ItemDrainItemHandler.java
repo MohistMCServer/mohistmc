@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.fluids.drain;
 
-import com.zurrtum.create.content.fluids.transfer.GenericItemEmptying;
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.content.fluids.transfer.GenericItemEmptying;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 

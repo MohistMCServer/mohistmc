@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/sticker/block",
+    "textures": {
+        "4": "mohistmc:block/sticker_side_powered"
+    }
+}

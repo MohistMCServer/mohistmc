@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.task.functional;
 
-import com.zurrtum.create.client.flywheel.api.task.Plan;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.Plan;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;

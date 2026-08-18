@@ -1,0 +1,19 @@
+{
+  "type": "mohistmc:mechanical_crafting",
+  "accept_mirrored": true,
+  "key": {
+    "C": "#c:ingots/copper",
+    "L": "mohistmc:andesite_alloy",
+    "R": "mohistmc:precision_mechanism",
+    "S": "mohistmc:fluid_pipe"
+  },
+  "pattern": [
+    "LRSSS",
+    "CC   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:potato_cannon"
+  }
+}
+

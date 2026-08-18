@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.catnip.lang.LangBuilder;
-import com.zurrtum.create.client.foundation.item.TooltipHelper;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.base.IRotate.StressImpact;
-import com.zurrtum.create.content.kinetics.gauge.StressGaugeBlockEntity;
-import com.zurrtum.create.infrastructure.packet.c2s.GaugeObservedPacket;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.catnip.lang.LangBuilder;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipHelper;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.StressImpact;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.StressGaugeBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.GaugeObservedPacket;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;

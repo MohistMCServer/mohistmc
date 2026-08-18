@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "ceiling=false": {
+      "model": "mohistmc:block/mechanical_arm/block"
+    },
+    "ceiling=true": {
+      "model": "mohistmc:block/mechanical_arm/block",
+      "x": 180
+    }
+  }
+}

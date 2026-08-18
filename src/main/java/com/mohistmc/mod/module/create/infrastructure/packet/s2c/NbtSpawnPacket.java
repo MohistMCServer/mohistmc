@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.content.contraptions.data.ContraptionSyncLimiting;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.content.contraptions.data.ContraptionSyncLimiting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtAccounter;
 import net.minecraft.nbt.Tag;

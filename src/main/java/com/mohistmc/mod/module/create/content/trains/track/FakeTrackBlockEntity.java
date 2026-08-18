@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.trains.track;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.foundation.blockEntity.SyncedBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SyncedBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 

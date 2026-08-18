@@ -1,0 +1,22 @@
+{
+  "values": [
+    "mohistmc:tiled_glass_pane",
+    "mohistmc:framed_glass_pane",
+    "mohistmc:horizontal_framed_glass_pane",
+    "mohistmc:vertical_framed_glass_pane",
+    "mohistmc:oak_window_pane",
+    "mohistmc:spruce_window_pane",
+    "mohistmc:birch_window_pane",
+    "mohistmc:jungle_window_pane",
+    "mohistmc:acacia_window_pane",
+    "mohistmc:dark_oak_window_pane",
+    "mohistmc:mangrove_window_pane",
+    "mohistmc:crimson_window_pane",
+    "mohistmc:warped_window_pane",
+    "mohistmc:cherry_window_pane",
+    "mohistmc:bamboo_window_pane",
+    "mohistmc:ornate_iron_window_pane",
+    "mohistmc:industrial_iron_window_pane",
+    "mohistmc:weathered_iron_window_pane"
+  ]
+}

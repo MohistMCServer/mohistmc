@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.base;
 
-import com.zurrtum.create.content.kinetics.KineticNetwork;
-import com.zurrtum.create.content.kinetics.base.IRotate.SpeedLevel;
+import com.mohistmc.mod.module.create.content.kinetics.KineticNetwork;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.SpeedLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;

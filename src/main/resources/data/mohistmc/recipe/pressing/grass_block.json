@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "minecraft:grass_block",
+  "results": [
+    {
+      "id": "minecraft:dirt_path"
+    }
+  ]
+}
+

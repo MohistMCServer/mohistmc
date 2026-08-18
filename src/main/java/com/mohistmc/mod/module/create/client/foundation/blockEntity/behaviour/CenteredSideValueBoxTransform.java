@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour;
 
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import java.util.function.BiPredicate;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;

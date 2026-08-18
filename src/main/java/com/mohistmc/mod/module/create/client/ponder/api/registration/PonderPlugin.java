@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.registration;
 
-import com.zurrtum.create.client.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.create.client.ponder.api.level.PonderLevel;
 import net.minecraft.resources.Identifier;
 
 public interface PonderPlugin {

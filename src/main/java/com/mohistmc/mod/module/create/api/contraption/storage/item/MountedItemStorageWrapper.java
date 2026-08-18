@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.item;
 
 import com.google.common.collect.ImmutableMap;
-import com.zurrtum.create.infrastructure.items.CombinedInvWrapper;
+import com.mohistmc.mod.module.create.infrastructure.items.CombinedInvWrapper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;
 

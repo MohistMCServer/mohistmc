@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/scaffold/block",
+  "textures": {
+    "casing": "mohistmc:block/copper_casing",
+    "inside": "mohistmc:block/scaffold/copper_scaffold_inside",
+    "particle": "mohistmc:block/scaffold/copper_scaffold",
+    "side": "mohistmc:block/scaffold/copper_scaffold",
+    "top": "mohistmc:block/funnel/copper_funnel_frame"
+  }
+}

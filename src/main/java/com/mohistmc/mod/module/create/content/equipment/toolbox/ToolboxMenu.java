@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.content.equipment.toolbox;
 
-import com.zurrtum.create.AllMenuTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.animatedContainer.AnimatedContainerBehaviour;
-import com.zurrtum.create.foundation.gui.menu.MenuBase;
+import com.mohistmc.mod.module.create.AllMenuTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.animatedContainer.AnimatedContainerBehaviour;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuBase;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
-import static com.zurrtum.create.content.equipment.toolbox.ToolboxInventory.STACKS_PER_COMPARTMENT;
+import static com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory.STACKS_PER_COMPARTMENT;
 
 public class ToolboxMenu extends MenuBase<ToolboxBlockEntity> {
     public ToolboxMenu(int id, Inventory inv, ToolboxBlockEntity be) {

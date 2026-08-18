@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.redstone.nixieTube;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockItemRequirement;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.compat.Mods;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement.ItemUseType;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.RedStoneConnectBlock;
-import com.zurrtum.create.infrastructure.component.ClipboardEntry;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.compat.Mods;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement.ItemUseType;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardEntry;
 import java.util.List;
 import java.util.function.BiConsumer;
 import net.minecraft.core.BlockPos;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.logistics.stockTicker;
 
-import com.zurrtum.create.content.logistics.BigItemStack;
-import com.zurrtum.create.content.logistics.stockTicker.PackageOrder;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.PackageOrder;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import it.unimi.dsi.fastutil.ints.IntListIterator;

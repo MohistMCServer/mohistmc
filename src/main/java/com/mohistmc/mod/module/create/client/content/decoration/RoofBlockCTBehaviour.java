@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.decoration;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.foundation.block.connected.*;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.*;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

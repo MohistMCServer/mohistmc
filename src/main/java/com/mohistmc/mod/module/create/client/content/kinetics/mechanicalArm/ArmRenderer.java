@@ -2,18 +2,18 @@ package com.mohistmc.mod.module.create.client.content.kinetics.mechanicalArm;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationManager;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlock;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity.Phase;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlock;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity.Phase;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -35,7 +35,7 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
 
 public class ArmRenderer implements BlockEntityRenderer<ArmBlockEntity, ArmRenderer.ArmRenderState> {
     protected ItemModelResolver itemModelManager;

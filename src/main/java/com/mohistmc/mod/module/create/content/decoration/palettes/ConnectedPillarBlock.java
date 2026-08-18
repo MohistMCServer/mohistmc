@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.decoration.palettes;
 
-import com.zurrtum.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt;
 
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.foundation.fluid.FluidHelper;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenHashMap;
 import java.util.Map;
 import net.minecraft.core.BlockPos;

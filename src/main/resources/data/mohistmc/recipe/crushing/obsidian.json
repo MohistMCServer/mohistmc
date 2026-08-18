@@ -1,0 +1,14 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "minecraft:obsidian",
+  "processing_time": 500,
+  "results": [
+    {
+      "id": "mohistmc:powdered_obsidian"
+    },
+    {
+      "chance": 0.75,
+      "id": "minecraft:obsidian"
+    }
+  ]
+}

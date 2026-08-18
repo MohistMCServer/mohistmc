@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "mohistmc:andesite_alloy",
+    "B": "#c:plates/brass"
+  },
+  "pattern": [
+    " A ",
+    "BBB",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:brass_hand"
+  }
+}

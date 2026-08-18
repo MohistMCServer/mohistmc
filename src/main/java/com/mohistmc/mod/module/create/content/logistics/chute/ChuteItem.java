@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.chute;
 
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;

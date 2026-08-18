@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:emptying",
+  "ingredient": "mohistmc:builders_tea",
+  "fluid_result": {
+    "amount": 27000,
+    "id": "mohistmc:tea"
+  },
+  "result": {
+    "id": "minecraft:glass_bottle"
+  }
+}

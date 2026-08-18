@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.utility;
 
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;

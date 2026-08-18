@@ -1,19 +1,19 @@
 package com.mohistmc.mod.module.create.client.content.logistics.funnel;
 
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.logistics.FlapStuffs;
-import com.zurrtum.create.client.content.logistics.FlapStuffs.Visual;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.visual.DynamicVisual;
-import com.zurrtum.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.content.logistics.funnel.BeltFunnelBlock;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlock;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlockEntity;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.logistics.FlapStuffs;
+import com.mohistmc.mod.module.create.client.content.logistics.FlapStuffs.Visual;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlock;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlockEntity;
 import java.util.function.Consumer;
 import org.jspecify.annotations.Nullable;
 

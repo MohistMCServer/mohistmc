@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
-import com.zurrtum.create.client.flywheel.backend.glsl.span.Span;
-import com.zurrtum.create.client.flywheel.backend.glsl.span.StringSpan;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.span.Span;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.span.StringSpan;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;

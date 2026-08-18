@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.harvester;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.foundation.blockEntity.CachedRenderBBBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.foundation.blockEntity.CachedRenderBBBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;

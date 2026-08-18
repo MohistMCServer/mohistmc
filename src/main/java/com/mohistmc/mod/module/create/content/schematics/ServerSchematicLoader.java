@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.content.schematics.SchematicExport.SchematicExportResult;
-import com.zurrtum.create.content.schematics.table.SchematicTableBlockEntity;
-import com.zurrtum.create.foundation.utility.CreatePaths;
-import com.zurrtum.create.foundation.utility.FilesHelper;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.config.CSchematics;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.content.schematics.SchematicExport.SchematicExportResult;
+import com.mohistmc.mod.module.create.content.schematics.table.SchematicTableBlockEntity;
+import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
+import com.mohistmc.mod.module.create.foundation.utility.FilesHelper;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.CSchematics;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.io.IOException;
 import java.io.OutputStream;

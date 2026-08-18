@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.blockEntity.ComparatorUtil;
-import com.zurrtum.create.infrastructure.particle.AirParticleData;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.blockEntity.ComparatorUtil;
+import com.mohistmc.mod.module.create.infrastructure.particle.AirParticleData;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction.Axis;

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkBlockEntity;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkBlockEntity;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.MutableComponent;

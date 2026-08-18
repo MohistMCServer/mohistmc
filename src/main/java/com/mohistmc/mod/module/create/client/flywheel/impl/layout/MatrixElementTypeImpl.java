@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.layout;
 
-import com.zurrtum.create.client.flywheel.api.layout.FloatRepr;
-import com.zurrtum.create.client.flywheel.api.layout.MatrixElementType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.MatrixElementType;
 import org.jetbrains.annotations.Range;
 
 record MatrixElementTypeImpl(FloatRepr repr, @Range(from = 2, to = 4) int rows, @Range(from = 2, to = 4) int columns,

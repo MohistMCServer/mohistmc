@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile.component;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.api.layout.Layout;
-import com.zurrtum.create.client.flywheel.backend.glsl.generate.*;
-import com.zurrtum.create.client.flywheel.lib.math.MoreMath;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.Layout;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.generate.*;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.MoreMath;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 
 import java.util.ArrayList;
 

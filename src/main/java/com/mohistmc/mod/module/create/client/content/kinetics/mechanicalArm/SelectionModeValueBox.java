@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.mechanicalArm;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.CenteredSideValueBoxTransform;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlock;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.CenteredSideValueBoxTransform;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.client.ponder.api.element.MinecartElement;
+import com.mohistmc.mod.module.create.client.ponder.api.element.MinecartElement;
 import net.minecraft.core.Direction;
 
 public class CreateMinecartInstruction extends FadeIntoSceneInstruction<MinecartElement> {

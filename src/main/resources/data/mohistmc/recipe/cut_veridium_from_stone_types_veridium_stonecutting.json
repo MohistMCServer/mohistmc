@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/veridium",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_veridium"
+  }
+}

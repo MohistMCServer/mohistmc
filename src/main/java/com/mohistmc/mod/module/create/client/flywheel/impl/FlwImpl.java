@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl;
 
-import com.zurrtum.create.client.flywheel.backend.FlwBackend;
-import com.zurrtum.create.client.flywheel.impl.registry.IdRegistryImpl;
+import com.mohistmc.mod.module.create.client.flywheel.backend.FlwBackend;
+import com.mohistmc.mod.module.create.client.flywheel.impl.registry.IdRegistryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.zurrtum.create.client.flywheel.impl.Flywheel.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel.MOD_ID;
 
 public final class FlwImpl {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);

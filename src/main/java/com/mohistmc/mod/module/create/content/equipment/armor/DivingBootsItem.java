@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;

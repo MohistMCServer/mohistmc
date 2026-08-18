@@ -1,17 +1,17 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.waterwheel;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.catnip.registry.RegisteredObjectsHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.render.*;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferCache.Compartment;
-import com.zurrtum.create.client.content.kinetics.base.SingleKineticRenderState;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.content.kinetics.waterwheel.LargeWaterWheelBlock;
-import com.zurrtum.create.content.kinetics.waterwheel.WaterWheelBlock;
-import com.zurrtum.create.content.kinetics.waterwheel.WaterWheelBlockEntity;
+import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.render.*;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache.Compartment;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleKineticRenderState;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.content.kinetics.waterwheel.LargeWaterWheelBlock;
+import com.mohistmc.mod.module.create.content.kinetics.waterwheel.WaterWheelBlock;
+import com.mohistmc.mod.module.create.content.kinetics.waterwheel.WaterWheelBlockEntity;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
 import java.util.List;
@@ -44,8 +44,8 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.UnknownNullability;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotateAngleWithoutBeOffset;
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotateAngleWithoutBeOffset;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
 
 public class WaterWheelRenderer implements BlockEntityRenderer<WaterWheelBlockEntity, SingleKineticRenderState> {
     public static final Compartment<ModelKey> WATER_WHEEL = new Compartment<>();

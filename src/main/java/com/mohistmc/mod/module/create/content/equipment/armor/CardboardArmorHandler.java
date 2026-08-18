@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllAdvancements;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;

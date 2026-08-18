@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/crushing_wheel/textures",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/crushing_wheel/crushing_wheel.obj"
+}

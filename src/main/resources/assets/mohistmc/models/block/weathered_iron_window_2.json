@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mohistmc:block/palettes/weathered_iron_window_2_end",
+    "side": "mohistmc:block/palettes/weathered_iron_window"
+  }
+}

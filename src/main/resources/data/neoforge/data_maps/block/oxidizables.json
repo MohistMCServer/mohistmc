@@ -1,58 +1,58 @@
 {
   "values": {
-    "create:copper_shingle_slab": {
-      "next_oxidation_stage": "create:exposed_copper_shingle_slab"
+    "mohistmc:copper_shingle_slab": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_shingle_slab"
     },
-    "create:copper_shingle_stairs": {
-      "next_oxidation_stage": "create:exposed_copper_shingle_stairs"
+    "mohistmc:copper_shingle_stairs": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_shingle_stairs"
     },
-    "create:copper_shingles": {
-      "next_oxidation_stage": "create:exposed_copper_shingles"
+    "mohistmc:copper_shingles": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_shingles"
     },
-    "create:copper_tile_slab": {
-      "next_oxidation_stage": "create:exposed_copper_tile_slab"
+    "mohistmc:copper_tile_slab": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_tile_slab"
     },
-    "create:copper_tile_stairs": {
-      "next_oxidation_stage": "create:exposed_copper_tile_stairs"
+    "mohistmc:copper_tile_stairs": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_tile_stairs"
     },
-    "create:copper_tiles": {
-      "next_oxidation_stage": "create:exposed_copper_tiles"
+    "mohistmc:copper_tiles": {
+      "next_oxidation_stage": "mohistmc:exposed_copper_tiles"
     },
-    "create:exposed_copper_shingle_slab": {
-      "next_oxidation_stage": "create:weathered_copper_shingle_slab"
+    "mohistmc:exposed_copper_shingle_slab": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_shingle_slab"
     },
-    "create:exposed_copper_shingle_stairs": {
-      "next_oxidation_stage": "create:weathered_copper_shingle_stairs"
+    "mohistmc:exposed_copper_shingle_stairs": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_shingle_stairs"
     },
-    "create:exposed_copper_shingles": {
-      "next_oxidation_stage": "create:weathered_copper_shingles"
+    "mohistmc:exposed_copper_shingles": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_shingles"
     },
-    "create:exposed_copper_tile_slab": {
-      "next_oxidation_stage": "create:weathered_copper_tile_slab"
+    "mohistmc:exposed_copper_tile_slab": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_tile_slab"
     },
-    "create:exposed_copper_tile_stairs": {
-      "next_oxidation_stage": "create:weathered_copper_tile_stairs"
+    "mohistmc:exposed_copper_tile_stairs": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_tile_stairs"
     },
-    "create:exposed_copper_tiles": {
-      "next_oxidation_stage": "create:weathered_copper_tiles"
+    "mohistmc:exposed_copper_tiles": {
+      "next_oxidation_stage": "mohistmc:weathered_copper_tiles"
     },
-    "create:weathered_copper_shingle_slab": {
-      "next_oxidation_stage": "create:oxidized_copper_shingle_slab"
+    "mohistmc:weathered_copper_shingle_slab": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_shingle_slab"
     },
-    "create:weathered_copper_shingle_stairs": {
-      "next_oxidation_stage": "create:oxidized_copper_shingle_stairs"
+    "mohistmc:weathered_copper_shingle_stairs": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_shingle_stairs"
     },
-    "create:weathered_copper_shingles": {
-      "next_oxidation_stage": "create:oxidized_copper_shingles"
+    "mohistmc:weathered_copper_shingles": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_shingles"
     },
-    "create:weathered_copper_tile_slab": {
-      "next_oxidation_stage": "create:oxidized_copper_tile_slab"
+    "mohistmc:weathered_copper_tile_slab": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_tile_slab"
     },
-    "create:weathered_copper_tile_stairs": {
-      "next_oxidation_stage": "create:oxidized_copper_tile_stairs"
+    "mohistmc:weathered_copper_tile_stairs": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_tile_stairs"
     },
-    "create:weathered_copper_tiles": {
-      "next_oxidation_stage": "create:oxidized_copper_tiles"
+    "mohistmc:weathered_copper_tiles": {
+      "next_oxidation_stage": "mohistmc:oxidized_copper_tiles"
     }
   }
 }

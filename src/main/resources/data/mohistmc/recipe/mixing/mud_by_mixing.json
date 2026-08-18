@@ -1,0 +1,19 @@
+{
+  "type": "mohistmc:mixing",
+  "ingredients": [
+    "#mohistmc:convertable_to_mud"
+  ],
+  "fluid_ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 20250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:mud"
+    }
+  ]
+}
+

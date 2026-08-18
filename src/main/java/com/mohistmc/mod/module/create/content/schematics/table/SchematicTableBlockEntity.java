@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.schematics.table;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.gui.menu.MenuProvider;
-import com.zurrtum.create.foundation.utility.IInteractionChecker;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuProvider;
+import com.mohistmc.mod.module.create.foundation.utility.IInteractionChecker;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import java.util.Iterator;
 import java.util.List;
 import net.minecraft.core.BlockPos;

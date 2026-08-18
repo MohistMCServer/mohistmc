@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.belt.item;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.content.kinetics.belt.item.BeltConnectorItem;
-import com.zurrtum.create.content.kinetics.simpleRelays.ShaftBlock;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.content.kinetics.belt.item.BeltConnectorItem;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ShaftBlock;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.LinkedList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

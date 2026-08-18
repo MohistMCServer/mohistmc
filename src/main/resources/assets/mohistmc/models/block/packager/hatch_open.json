@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/packager/hatch_closed",
+	"textures": {
+		"3": "mohistmc:block/packager_iris_open"
+	}
+}

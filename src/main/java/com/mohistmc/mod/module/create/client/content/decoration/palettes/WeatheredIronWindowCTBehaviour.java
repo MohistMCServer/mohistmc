@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.decoration.palettes;
 
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.foundation.block.connected.AllCTTypes;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.CTType;
-import com.zurrtum.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.AllCTTypes;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTType;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
 import java.util.List;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;

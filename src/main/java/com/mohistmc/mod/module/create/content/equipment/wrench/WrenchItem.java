@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.equipment.wrench;
 
-import com.zurrtum.create.AllBlockTags;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

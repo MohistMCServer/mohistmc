@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
 import java.util.Optional;
 import mezz.jei.api.gui.builder.IClickableIngredientFactory;
 import mezz.jei.api.gui.handlers.IGuiContainerHandler;

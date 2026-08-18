@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.recipe;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.infrastructure.component.SequencedAssemblyJunk;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.infrastructure.component.SequencedAssemblyJunk;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.PlacementInfo;
 import net.minecraft.world.item.crafting.Recipe;

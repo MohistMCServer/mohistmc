@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.client.content.redstone.link.controller;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.zurrtum.create.client.infrastructure.model.LinkedControllerModel;
-import com.zurrtum.create.content.redstone.link.controller.LecternControllerBlock;
-import com.zurrtum.create.content.redstone.link.controller.LecternControllerBlockEntity;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
+import com.mohistmc.mod.module.create.client.infrastructure.model.LinkedControllerModel;
+import com.mohistmc.mod.module.create.content.redstone.link.controller.LecternControllerBlock;
+import com.mohistmc.mod.module.create.content.redstone.link.controller.LecternControllerBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -24,7 +24,7 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class LecternControllerRenderer implements BlockEntityRenderer<LecternControllerBlockEntity, LecternControllerRenderer.LecternControllerRenderState> {
     Identifier MODEL_ID = Identifier.fromNamespaceAndPath(MOD_ID, "linked_controller");

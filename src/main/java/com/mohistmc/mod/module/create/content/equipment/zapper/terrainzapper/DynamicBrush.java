@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper;
 
 
-import com.zurrtum.create.foundation.utility.BlockHelper;
-import com.zurrtum.create.infrastructure.component.TerrainTools;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainTools;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.LinkedList;

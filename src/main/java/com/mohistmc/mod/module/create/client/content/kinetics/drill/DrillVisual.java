@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.drill;
 
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.kinetics.base.OrientedRotatingVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.content.kinetics.drill.DrillBlockEntity;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.OrientedRotatingVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.content.kinetics.drill.DrillBlockEntity;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 

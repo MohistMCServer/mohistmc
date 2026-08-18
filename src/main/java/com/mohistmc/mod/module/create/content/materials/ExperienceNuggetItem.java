@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.materials;
 
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper;
 
-import com.zurrtum.create.AllBlockTags;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import java.util.Objects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

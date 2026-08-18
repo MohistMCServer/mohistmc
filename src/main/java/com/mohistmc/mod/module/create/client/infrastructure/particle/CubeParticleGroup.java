@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
-import com.zurrtum.create.client.foundation.render.AllRenderPipelines;
-import com.zurrtum.create.client.ponder.enums.PonderSpecialTextures;
+import com.mohistmc.mod.module.create.client.foundation.render.AllRenderPipelines;
+import com.mohistmc.mod.module.create.client.ponder.enums.PonderSpecialTextures;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;
@@ -15,7 +15,7 @@ import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.state.level.ParticleGroupRenderState;
 
 public class CubeParticleGroup extends ParticleGroup<CubeParticle> {
-    public static final ParticleRenderType SHEET = new ParticleRenderType("create:cube", "CU");
+    public static final ParticleRenderType SHEET = new ParticleRenderType("mohistmc:cube", "CU");
     public static final Layer RENDER_TYPE = new Layer(
         false,
         PonderSpecialTextures.BLANK.getLocation(),

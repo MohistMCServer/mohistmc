@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.trains.bogey;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
-import com.zurrtum.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;

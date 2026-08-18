@@ -7,7 +7,7 @@ import net.minecraft.client.KeyMapping.Category;
 import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 
-import static com.zurrtum.create.client.ponder.Ponder.MOD_ID;
+import static com.mohistmc.mod.module.create.client.ponder.Ponder.MOD_ID;
 
 public class PonderKeybinds {
     public static final Category CATEGORY = Category.register(Identifier.fromNamespaceAndPath(MOD_ID, "binding"));

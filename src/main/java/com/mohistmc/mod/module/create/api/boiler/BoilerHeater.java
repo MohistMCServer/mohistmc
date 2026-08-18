@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.boiler;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.fluids.tank.BoilerHeaters;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.fluids.tank.BoilerHeaters;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -23,7 +23,7 @@ public interface BoilerHeater {
 
     /**
      * The heater used by common passively-heating blocks. Automatically provides
-     * heat for any block in the {@code create:passive_boiler_heaters} block tag.
+     * heat for any block in the {@code mohistmc:passive_boiler_heaters} block tag.
      */
     BoilerHeater PASSIVE = BoilerHeaters::passive;
     /**

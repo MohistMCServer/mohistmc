@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "minecraft:sugar_cane",
+  "results": [
+    {
+      "id": "minecraft:paper"
+    }
+  ]
+}
+

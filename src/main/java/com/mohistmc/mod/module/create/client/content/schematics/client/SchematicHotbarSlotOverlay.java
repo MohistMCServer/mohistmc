@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client;
 
 import com.mojang.blaze3d.platform.Window;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.world.item.ItemStack;

@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.kinetics.speedController;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
-import com.zurrtum.create.catnip.placement.PlacementHelpers;
-import com.zurrtum.create.catnip.placement.PlacementOffset;
-import com.zurrtum.create.content.kinetics.base.HorizontalAxisKineticBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.CogWheelBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.ICogWheel;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementHelpers;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;
+import com.mohistmc.mod.module.create.content.kinetics.base.HorizontalAxisKineticBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.CogWheelBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ICogWheel;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction.Axis;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.stockTicker;
 
-import com.zurrtum.create.AllMenuTypes;
-import com.zurrtum.create.content.logistics.filter.FilterItem;
-import com.zurrtum.create.foundation.gui.menu.MenuBase;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.AllMenuTypes;
+import com.mohistmc.mod.module.create.content.logistics.filter.FilterItem;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuBase;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Inventory;

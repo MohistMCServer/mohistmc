@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.client.content.logistics.depot;
 
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.kinetics.base.ShaftVisual;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.visual.DynamicVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.content.logistics.depot.EjectorBlockEntity;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.ShaftVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.content.logistics.depot.EjectorBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 

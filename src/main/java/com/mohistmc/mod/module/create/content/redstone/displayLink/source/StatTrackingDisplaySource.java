@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
 import java.util.stream.Stream;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

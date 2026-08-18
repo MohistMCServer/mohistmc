@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_deepslate",
+    "mohistmc:cut_deepslate_stairs",
+    "mohistmc:cut_deepslate_wall",
+    "mohistmc:polished_cut_deepslate",
+    "mohistmc:polished_cut_deepslate_stairs",
+    "mohistmc:polished_cut_deepslate_wall",
+    "mohistmc:cut_deepslate_bricks",
+    "mohistmc:cut_deepslate_brick_stairs",
+    "mohistmc:cut_deepslate_brick_wall",
+    "mohistmc:small_deepslate_bricks",
+    "mohistmc:small_deepslate_brick_stairs",
+    "mohistmc:small_deepslate_brick_wall",
+    "mohistmc:layered_deepslate",
+    "mohistmc:deepslate_pillar",
+    "minecraft:deepslate"
+  ]
+}

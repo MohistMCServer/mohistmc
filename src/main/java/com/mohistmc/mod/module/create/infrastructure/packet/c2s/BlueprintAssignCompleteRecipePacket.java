@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.zurrtum.create.AllHandle;
-import com.zurrtum.create.AllPackets;
+import com.mohistmc.mod.module.create.AllHandle;
+import com.mohistmc.mod.module.create.AllPackets;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:mechanical_pump_0",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:glass_pipe_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.glass_pipe.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:fluid_pipe"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.glass_pipe"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

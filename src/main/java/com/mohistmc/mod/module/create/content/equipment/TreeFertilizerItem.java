@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment;
 
-import com.zurrtum.create.AllBlockTags;
-import com.zurrtum.create.catnip.levelWrappers.PlacementSimulationServerLevel;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.PlacementSimulationServerLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;

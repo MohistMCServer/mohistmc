@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat.Chaser;
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
-import com.zurrtum.create.client.ponder.foundation.PonderScene.SceneTransform;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene.SceneTransform;
 
 public class RotateSceneInstruction extends PonderInstruction {
 

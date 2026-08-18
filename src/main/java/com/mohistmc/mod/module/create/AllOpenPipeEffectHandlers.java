@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.effect.OpenPipeEffectHandler;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.impl.effect.*;
+import com.mohistmc.mod.module.create.api.effect.OpenPipeEffectHandler;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.impl.effect.*;
 import net.minecraft.tags.FluidTags;
 
 public class AllOpenPipeEffectHandlers {

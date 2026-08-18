@@ -1,19 +1,19 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.clock;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.kinetics.base.OrientedRotatingVisual;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.InstancerProvider;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.animation.AnimationBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.animation.CuckooClockAnimationBehaviour;
-import com.zurrtum.create.content.kinetics.clock.CuckooClockBlockEntity;
-import com.zurrtum.create.content.kinetics.clock.CuckooClockBlockEntity.Animation;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.OrientedRotatingVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation.AnimationBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation.CuckooClockAnimationBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.clock.CuckooClockBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.clock.CuckooClockBlockEntity.Animation;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,8 +23,8 @@ import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.getEastRotateAngle;
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getEastRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
 
 public class CuckooClockVisual extends OrientedRotatingVisual<CuckooClockBlockEntity> implements SimpleDynamicVisual {
     private final TransformedInstance hourHand;

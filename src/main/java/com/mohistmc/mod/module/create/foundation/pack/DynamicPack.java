@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.pack;
 
 import com.google.gson.JsonElement;
-import com.zurrtum.create.Create;
+import com.mohistmc.mod.module.create.Create;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;

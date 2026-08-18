@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity;
 
-import com.zurrtum.create.foundation.fluid.FluidTank;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidTank;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntity;

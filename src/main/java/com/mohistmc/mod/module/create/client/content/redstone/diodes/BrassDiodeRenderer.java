@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.content.redstone.diodes;
 
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.ColoredOverlayBlockEntityRenderer;
-import com.zurrtum.create.content.redstone.diodes.BrassDiodeBlockEntity;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.ColoredOverlayBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.redstone.diodes.BrassDiodeBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
 
 public class BrassDiodeRenderer extends ColoredOverlayBlockEntityRenderer<BrassDiodeBlockEntity> {

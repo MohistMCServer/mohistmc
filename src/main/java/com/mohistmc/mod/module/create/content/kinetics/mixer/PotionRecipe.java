@@ -2,17 +2,17 @@ package com.mohistmc.mod.module.create.content.kinetics.mixer;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllRecipeSerializers;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.content.fluids.potion.PotionFluidHandler;
-import com.zurrtum.create.content.processing.basin.BasinInput;
-import com.zurrtum.create.content.processing.basin.BasinRecipe;
-import com.zurrtum.create.content.processing.recipe.HeatCondition;
-import com.zurrtum.create.content.processing.recipe.SizedIngredient;
-import com.zurrtum.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
-import com.zurrtum.create.foundation.fluid.FluidIngredient;
-import com.zurrtum.create.infrastructure.component.BottleType;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.AllRecipeSerializers;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.content.fluids.potion.PotionFluidHandler;
+import com.mohistmc.mod.module.create.content.processing.basin.BasinInput;
+import com.mohistmc.mod.module.create.content.processing.basin.BasinRecipe;
+import com.mohistmc.mod.module.create.content.processing.recipe.HeatCondition;
+import com.mohistmc.mod.module.create.content.processing.recipe.SizedIngredient;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidIngredient;
+import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -39,7 +39,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public record PotionRecipe(FluidStack result, FluidIngredient fluidIngredient,
                            Ingredient ingredient) implements BasinRecipe {

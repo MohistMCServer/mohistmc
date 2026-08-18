@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.contraptions.bearing;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
-import com.zurrtum.create.catnip.placement.PlacementHelpers;
-import com.zurrtum.create.catnip.placement.PlacementOffset;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementHelpers;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

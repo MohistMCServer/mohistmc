@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.client.ponder.api.scene.Selection;
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
-import com.zurrtum.create.client.ponder.foundation.element.OutlinerElement;
-import com.zurrtum.create.client.ponder.foundation.element.TextWindowElement;
+import com.mohistmc.mod.module.create.client.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.element.OutlinerElement;
+import com.mohistmc.mod.module.create.client.ponder.foundation.element.TextWindowElement;
 import org.jspecify.annotations.Nullable;
 
 public class TextInstruction extends FadeInOutInstruction {

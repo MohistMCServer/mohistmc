@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.audio;
 
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
 
 public class MechanicalMixerAudioBehaviour extends KineticAudioBehaviour<MechanicalMixerBlockEntity> {
     public MechanicalMixerAudioBehaviour(MechanicalMixerBlockEntity be) {

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.decoration.girder;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

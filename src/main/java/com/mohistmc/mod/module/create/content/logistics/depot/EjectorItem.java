@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.depot;
 
-import com.zurrtum.create.infrastructure.packet.s2c.EjectorPlacementRequestPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.EjectorPlacementRequestPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;

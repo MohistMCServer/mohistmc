@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.fluids.transfer;
 
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeInput;
 

@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.foundation.recipe.trie;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.zurrtum.create.foundation.recipe.RecipeFinder;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.foundation.recipe.RecipeFinder;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Predicate;

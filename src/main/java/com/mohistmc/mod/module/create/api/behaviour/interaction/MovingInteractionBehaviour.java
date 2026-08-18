@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.api.behaviour.interaction;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.contraptions.AbstractContraptionEntity;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;

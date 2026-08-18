@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
-import com.zurrtum.create.content.contraptions.Contraption;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorContraption;
-import com.zurrtum.create.content.equipment.bell.AbstractBellBlock;
-import com.zurrtum.create.content.redstone.deskBell.DeskBellBlock;
-import com.zurrtum.create.content.trains.entity.CarriageContraption;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorContraption;
+import com.mohistmc.mod.module.create.content.equipment.bell.AbstractBellBlock;
+import com.mohistmc.mod.module.create.content.redstone.deskBell.DeskBellBlock;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

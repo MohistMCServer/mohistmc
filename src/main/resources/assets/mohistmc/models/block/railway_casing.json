@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mohistmc:block/railway_casing",
+    "side": "mohistmc:block/railway_casing_side"
+  }
+}

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.content.contraptions.IDisplayAssemblyExceptions;
-import com.zurrtum.create.client.foundation.item.TooltipHelper;
-import com.zurrtum.create.content.contraptions.AssemblyException;
-import com.zurrtum.create.content.contraptions.bearing.BearingBlock;
-import com.zurrtum.create.content.contraptions.bearing.MechanicalBearingBlockEntity;
+import com.mohistmc.mod.module.create.client.content.contraptions.IDisplayAssemblyExceptions;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipHelper;
+import com.mohistmc.mod.module.create.content.contraptions.AssemblyException;
+import com.mohistmc.mod.module.create.content.contraptions.bearing.BearingBlock;
+import com.mohistmc.mod.module.create.content.contraptions.bearing.MechanicalBearingBlockEntity;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.state.BlockState;

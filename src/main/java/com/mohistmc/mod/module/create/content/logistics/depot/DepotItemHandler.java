@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.logistics.depot;
 
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import net.minecraft.world.item.ItemStack;
 
 public class DepotItemHandler implements ItemInventory {

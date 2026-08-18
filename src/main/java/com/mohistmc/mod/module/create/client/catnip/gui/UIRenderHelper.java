@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.catnip.gui;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.render.BreadcrumbArrowRenderState;
-import com.zurrtum.create.client.catnip.gui.render.GradientRectRenderState;
-import com.zurrtum.create.client.catnip.gui.render.RadialSectorRenderState;
-import com.zurrtum.create.client.catnip.gui.render.TexturedQuadRenderState;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.render.BreadcrumbArrowRenderState;
+import com.mohistmc.mod.module.create.client.catnip.gui.render.GradientRectRenderState;
+import com.mohistmc.mod.module.create.client.catnip.gui.render.RadialSectorRenderState;
+import com.mohistmc.mod.module.create.client.catnip.gui.render.TexturedQuadRenderState;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

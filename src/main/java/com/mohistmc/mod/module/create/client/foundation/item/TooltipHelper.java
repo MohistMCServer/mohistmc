@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.item;
 
 import com.google.common.base.Strings;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.client.catnip.lang.FontHelper;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.client.catnip.lang.FontHelper;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.LinkedList;

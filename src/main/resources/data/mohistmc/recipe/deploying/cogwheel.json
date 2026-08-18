@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:deploying",
+  "target": "mohistmc:shaft",
+  "ingredient": "#minecraft:planks",
+  "results": [
+    {
+      "id": "mohistmc:cogwheel"
+    }
+  ]
+}

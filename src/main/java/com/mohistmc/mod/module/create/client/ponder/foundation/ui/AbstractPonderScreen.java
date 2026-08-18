@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.ui;
 
-import com.zurrtum.create.client.catnip.gui.NavigatableSimiScreen;
-import com.zurrtum.create.client.catnip.gui.ScreenOpener;
-import com.zurrtum.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.create.client.catnip.gui.NavigatableSimiScreen;
+import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
+import com.mohistmc.mod.module.create.client.ponder.Ponder;
 import net.minecraft.network.chat.Component;
 
-import static com.zurrtum.create.client.ponder.foundation.registration.PonderLocalization.UI_PREFIX;
+import static com.mohistmc.mod.module.create.client.ponder.foundation.registration.PonderLocalization.UI_PREFIX;
 
 public abstract class AbstractPonderScreen extends NavigatableSimiScreen {
 

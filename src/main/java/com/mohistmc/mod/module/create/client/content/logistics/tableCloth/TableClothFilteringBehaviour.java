@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.logistics.tableCloth;
 
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsBoard;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsFormatter;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.tableCloth.ServerTableClothFilteringBehaviour;
-import com.zurrtum.create.content.logistics.tableCloth.TableClothBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsBoard;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsFormatter;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.tableCloth.ServerTableClothFilteringBehaviour;
+import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.player.Player;

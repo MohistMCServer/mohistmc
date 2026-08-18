@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.world.level.block.DiodeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 

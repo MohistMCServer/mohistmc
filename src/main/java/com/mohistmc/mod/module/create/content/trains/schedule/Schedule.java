@@ -5,7 +5,7 @@ import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

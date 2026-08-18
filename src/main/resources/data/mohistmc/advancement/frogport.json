@@ -1,0 +1,28 @@
+{
+  "parent": "mohistmc:stock_ticker",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:frogport_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.frogport.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:package_frogport"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.frogport"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

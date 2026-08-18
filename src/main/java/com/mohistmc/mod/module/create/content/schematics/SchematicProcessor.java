@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.catnip.nbt.NBTProcessors;
-import com.zurrtum.create.foundation.blockEntity.EntityControlStructureProcessor;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTProcessors;
+import com.mohistmc.mod.module.create.foundation.blockEntity.EntityControlStructureProcessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntitySpawnReason;

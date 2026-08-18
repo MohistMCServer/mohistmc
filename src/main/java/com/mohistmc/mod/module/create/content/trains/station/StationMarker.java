@@ -6,10 +6,10 @@ import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.RecordBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllMapDecorationTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.trains.track.TrackTargetingBehaviour;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllMapDecorationTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public class StationMarker {
         this.source = source;
         this.target = target;
         this.name = name;
-        id = "create:station-" + target.getX() + "," + target.getY() + "," + target.getZ();
+        id = "mohistmc:station-" + target.getX() + "," + target.getY() + "," + target.getZ();
     }
 
     @Nullable
@@ -101,7 +101,7 @@ public class StationMarker {
     }
 
     public record WrapperCodec(Codec<MapItemSavedData> codec) implements Codec<MapItemSavedData> {
-        private static final String STATION_MARKERS_KEY = "create:stations";
+        private static final String STATION_MARKERS_KEY = "mohistmc:stations";
         private static @Nullable WrapperCodec CODEC;
 
         public static WrapperCodec get(Codec<MapItemSavedData> codec) {

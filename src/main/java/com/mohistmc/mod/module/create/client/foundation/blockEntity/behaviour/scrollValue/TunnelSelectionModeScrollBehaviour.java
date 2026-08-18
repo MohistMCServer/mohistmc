@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.content.logistics.tunnel.BrassTunnelModeSlot;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.tunnel.BrassTunnelBlockEntity;
-import com.zurrtum.create.content.logistics.tunnel.BrassTunnelBlockEntity.SelectionMode;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.content.logistics.tunnel.BrassTunnelModeSlot;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity.SelectionMode;
 
 public class TunnelSelectionModeScrollBehaviour extends ScrollOptionBehaviour<SelectionMode> {
     public TunnelSelectionModeScrollBehaviour(BrassTunnelBlockEntity be) {

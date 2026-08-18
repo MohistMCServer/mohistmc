@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.kinetics.fan.processing.AllFanProcessingTypes;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttributeType;
-import com.zurrtum.create.content.logistics.item.filter.attribute.SingletonItemAttribute;
-import com.zurrtum.create.content.logistics.item.filter.attribute.attributes.*;
-import com.zurrtum.create.foundation.fluid.FluidHelper;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.AllFanProcessingTypes;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.SingletonItemAttribute;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes.*;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
@@ -25,7 +25,7 @@ import net.minecraft.world.item.equipment.Equippable;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.ComposterBlock;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllItemAttributeTypes {
     public static final ItemAttributeType PLACEABLE = singleton("placeable", s -> s.getItem() instanceof BlockItem);

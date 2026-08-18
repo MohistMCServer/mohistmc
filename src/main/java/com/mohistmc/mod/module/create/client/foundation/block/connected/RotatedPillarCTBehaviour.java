@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.block.connected;
 
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
-import com.zurrtum.create.content.decoration.palettes.ConnectedPillarBlock;
-import com.zurrtum.create.content.decoration.palettes.LayeredBlock;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.ConnectedPillarBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.LayeredBlock;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

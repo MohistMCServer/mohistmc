@@ -1,0 +1,16 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "#c:storage_blocks/raw_iron",
+  "processing_time": 400,
+  "results": [
+    {
+      "count": 9,
+      "id": "mohistmc:crushed_raw_iron"
+    },
+    {
+      "chance": 0.75,
+      "count": 9,
+      "id": "mohistmc:experience_nugget"
+    }
+  ]
+}

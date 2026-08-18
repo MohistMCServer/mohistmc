@@ -1,20 +1,20 @@
 package com.mohistmc.mod.module.create.client.foundation.render;
 
-import com.zurrtum.create.client.content.fluids.FluidInstance;
-import com.zurrtum.create.client.content.kinetics.base.RotatingInstance;
-import com.zurrtum.create.client.content.kinetics.base.RotatingPivotInstance;
-import com.zurrtum.create.client.content.processing.burner.ScrollInstance;
-import com.zurrtum.create.client.content.processing.burner.ScrollStepInstance;
-import com.zurrtum.create.client.content.processing.burner.ScrollTransformedInstance;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.api.layout.FloatRepr;
-import com.zurrtum.create.client.flywheel.api.layout.IntegerRepr;
-import com.zurrtum.create.client.flywheel.api.layout.LayoutBuilder;
-import com.zurrtum.create.client.flywheel.lib.instance.SimpleInstanceType;
-import com.zurrtum.create.client.flywheel.lib.util.ExtraMemoryOps;
+import com.mohistmc.mod.module.create.client.content.fluids.FluidInstance;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingPivotInstance;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollStepInstance;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollTransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.IntegerRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.LayoutBuilder;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.SimpleInstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ExtraMemoryOps;
 import org.lwjgl.system.MemoryUtil;
 
-import static com.zurrtum.create.client.Create.asResource;
+import static com.mohistmc.mod.module.create.client.Create.asResource;
 
 public class AllInstanceTypes {
     public static final InstanceType<RotatingInstance> ROTATING = SimpleInstanceType.builder(RotatingInstance::new)

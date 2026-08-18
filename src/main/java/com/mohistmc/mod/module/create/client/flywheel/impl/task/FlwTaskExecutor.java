@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.task;
 
-import com.zurrtum.create.client.flywheel.impl.FlwConfig;
+import com.mohistmc.mod.module.create.client.flywheel.impl.FlwConfig;
 import java.util.concurrent.atomic.AtomicReference;
 import net.minecraft.util.Mth;
 

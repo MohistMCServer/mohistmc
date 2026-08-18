@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:small_veridium_brick_slab",
+    "mohistmc:small_veridium_brick_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_veridium_bricks"
+  }
+}

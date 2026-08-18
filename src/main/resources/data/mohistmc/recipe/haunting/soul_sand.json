@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "#minecraft:sand",
+  "results": [
+    {
+      "id": "minecraft:soul_sand"
+    }
+  ]
+}
+

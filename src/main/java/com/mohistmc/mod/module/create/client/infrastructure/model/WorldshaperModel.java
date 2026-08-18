@@ -6,11 +6,11 @@ import com.mojang.blaze3d.platform.Lighting.Entry;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.client.Create;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.client.foundation.render.CreateRenderTypes;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.client.Create;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.client.foundation.render.CreateRenderTypes;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -48,9 +48,9 @@ import org.joml.Matrix4fc;
 import org.joml.Vector3fc;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
-import static com.zurrtum.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitCustomLayerWithLightTint;
-import static com.zurrtum.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitCustomLayerWithLightTint;
+import static com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
 
 public class WorldshaperModel implements ItemModel {
     public static final Identifier ID = Identifier.fromNamespaceAndPath(MOD_ID, "model/handheld_worldshaper");

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.factoryBoard;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

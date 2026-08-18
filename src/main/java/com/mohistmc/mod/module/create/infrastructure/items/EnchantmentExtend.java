@@ -7,7 +7,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DataResult.Success;
 import com.mojang.serialization.DynamicOps;
-import com.zurrtum.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItemTags;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

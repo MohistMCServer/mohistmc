@@ -4,6 +4,8 @@ import com.mohistmc.mod.client.gui.EscGui;
 import com.mohistmc.mod.client.gui.FakeMainGui;
 import com.mohistmc.mod.client.gui.YouerInventoryScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
+import com.mohistmc.mod.module.AttributeFixMod;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.mail.Mail;
 import com.mohistmc.mod.module.shop.Shop;
@@ -30,6 +32,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
@@ -37,9 +40,11 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
 import org.slf4j.Logger;
 
 @Mod(MohistMC.MODID)
+@EventBusSubscriber(modid = MohistMC.MODID)
 public class MohistMC {
     public static final String MODID = "mohistmc";
     public static final Logger LOGGER = LogUtils.getLogger();
@@ -56,18 +61,23 @@ public class MohistMC {
         ItemRegister.ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
-        NeoForge.EVENT_BUS.register(this);
         new FarmersDelight(modEventBus, modContainer);
         new Shop(modEventBus, modContainer);
         new Mail(modEventBus, modContainer);
+        new Create(modEventBus, modContainer);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
+    @SubscribeEvent
+    public static void onLoadComplete(final FMLLoadCompleteEvent event) {
+        // AttributeFixMod.getInstance().init();
+    }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
+    public static void onServerStarting(ServerStartingEvent event) {
         // 初始化商店数据文件路径
         var server = event.getServer();
         var serverDir = server.getWorldPath(LevelResource.ROOT);
@@ -81,6 +91,7 @@ public class MohistMC {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            // IME 输入法上下文在 GLFW 窗口焦点变化时由 GLFW 内部管理，无需额外处理
         }
 
         @SubscribeEvent // on the mod event bus only on the physical client

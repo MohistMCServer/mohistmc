@@ -6,7 +6,7 @@ import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllBlockTags {
     public static final TagKey<Block> CASING = AllBlockItemTags.CASING.block();

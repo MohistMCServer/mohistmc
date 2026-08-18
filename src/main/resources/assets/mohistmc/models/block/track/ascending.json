@@ -1,0 +1,10 @@
+{
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/track/ascending.obj",
+	"textures": {
+		"0": "mohistmc:block/standard_track",
+		"1": "mohistmc:block/standard_track_mip",
+		"particle": "mohistmc:block/palettes/stone_types/polished/andesite_cut_polished"
+	}
+}

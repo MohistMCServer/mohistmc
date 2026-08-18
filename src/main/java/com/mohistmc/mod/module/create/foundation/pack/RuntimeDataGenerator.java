@@ -5,12 +5,12 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
 import com.google.gson.JsonElement;
 import com.mojang.serialization.JsonOps;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.content.kinetics.fan.processing.SplashingRecipe;
-import com.zurrtum.create.content.kinetics.saw.CuttingRecipe;
-import com.zurrtum.create.content.processing.recipe.ProcessingOutput;
-import com.zurrtum.create.foundation.data.recipe.Mods;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.SplashingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.saw.CuttingRecipe;
+import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
+import com.mohistmc.mod.module.create.foundation.data.recipe.Mods;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -31,7 +31,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ConcretePowderBlock;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class RuntimeDataGenerator {
     private static final Set<String> IGNORES = Set.of(Identifier.DEFAULT_NAMESPACE, MOD_ID);

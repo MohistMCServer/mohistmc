@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.logistics.funnel;
 
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
-import com.zurrtum.create.content.logistics.filter.FilterItemStack;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.content.logistics.filter.FilterItemStack;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

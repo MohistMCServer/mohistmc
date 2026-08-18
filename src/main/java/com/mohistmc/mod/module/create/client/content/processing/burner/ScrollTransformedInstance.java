@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.processing.burner;
 
-import com.zurrtum.create.client.catnip.render.SpriteShiftEntry;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceHandle;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
 
 public class ScrollTransformedInstance extends TransformedInstance {
     public float speedU;

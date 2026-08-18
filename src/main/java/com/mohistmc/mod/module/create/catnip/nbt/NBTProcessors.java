@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.catnip.nbt;
 
-import com.zurrtum.create.catnip.codecs.CatnipCodecUtils;
-import com.zurrtum.create.catnip.components.ComponentProcessors;
+import com.mohistmc.mod.module.create.catnip.codecs.CatnipCodecUtils;
+import com.mohistmc.mod.module.create.catnip.components.ComponentProcessors;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;

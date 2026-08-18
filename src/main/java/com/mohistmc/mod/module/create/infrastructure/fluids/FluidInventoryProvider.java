@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.fluids;
 
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;

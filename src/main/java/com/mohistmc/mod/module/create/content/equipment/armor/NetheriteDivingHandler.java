@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;

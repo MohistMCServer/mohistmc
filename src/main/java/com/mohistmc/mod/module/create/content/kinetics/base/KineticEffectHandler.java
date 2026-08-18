@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.kinetics.base;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.base.IRotate.SpeedLevel;
-import com.zurrtum.create.infrastructure.particle.RotationIndicatorParticleData;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.SpeedLevel;
+import com.mohistmc.mod.module.create.infrastructure.particle.RotationIndicatorParticleData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.particles.ParticleOptions;

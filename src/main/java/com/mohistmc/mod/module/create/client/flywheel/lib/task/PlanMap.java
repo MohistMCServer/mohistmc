@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.task;
 
-import com.zurrtum.create.client.flywheel.api.task.Plan;
-import com.zurrtum.create.client.flywheel.api.task.TaskExecutor;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.Plan;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.TaskExecutor;
 
 import java.util.ArrayList;
 import java.util.List;

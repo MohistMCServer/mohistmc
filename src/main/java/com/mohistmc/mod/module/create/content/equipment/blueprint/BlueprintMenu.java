@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.blueprint;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllMenuTypes;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintEntity.BlueprintSection;
-import com.zurrtum.create.foundation.gui.menu.GhostItemMenu;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllMenuTypes;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity.BlueprintSection;
+import com.mohistmc.mod.module.create.foundation.gui.menu.GhostItemMenu;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import java.util.Optional;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerLevel;

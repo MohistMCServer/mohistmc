@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#c:dyes/red",
+    "#mohistmc:postboxes"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:red_postbox"
+  }
+}

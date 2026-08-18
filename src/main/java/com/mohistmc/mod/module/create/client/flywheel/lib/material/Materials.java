@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.material;
 
-import com.zurrtum.create.client.flywheel.api.material.*;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.*;
 import net.minecraft.client.renderer.feature.ItemFeatureRenderer;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 

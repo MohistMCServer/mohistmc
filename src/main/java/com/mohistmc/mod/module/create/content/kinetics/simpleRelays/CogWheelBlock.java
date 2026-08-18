@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.simpleRelays;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.decoration.encasing.EncasableBlock;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.content.kinetics.speedController.SpeedControllerBlock;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.decoration.encasing.EncasableBlock;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.speedController.SpeedControllerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

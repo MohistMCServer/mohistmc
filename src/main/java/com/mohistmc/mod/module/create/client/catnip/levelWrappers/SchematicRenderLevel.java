@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.catnip.levelWrappers;
 
-import com.zurrtum.create.catnip.levelWrappers.SchematicLevel;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.SchematicLevel;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.CardinalLighting;

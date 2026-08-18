@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/dripstone",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_dripstone_brick_stairs"
+  }
+}

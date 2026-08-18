@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:belt",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:funnel_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.funnel.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:andesite_funnel"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.funnel"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.trains.schedule.condition;
 
-import com.zurrtum.create.content.trains.entity.Train;
-import com.zurrtum.create.content.trains.station.GlobalStation;
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;

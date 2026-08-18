@@ -1,0 +1,14 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "#c:raw_materials/zinc",
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "mohistmc:crushed_raw_zinc"
+    },
+    {
+      "chance": 0.75,
+      "id": "mohistmc:experience_nugget"
+    }
+  ]
+}

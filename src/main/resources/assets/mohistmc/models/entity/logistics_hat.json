@@ -1,0 +1,7 @@
+{
+	"parent": "mohistmc:entity/train_hat",
+	"textures": {
+		"0": "mohistmc:entity/logistics_hat",
+		"particle": "mohistmc:entity/logistics_hat"
+	}
+}

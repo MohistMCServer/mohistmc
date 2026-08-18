@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model.part;
 
-import com.zurrtum.create.client.flywheel.api.material.Material;
-import com.zurrtum.create.client.flywheel.api.model.Mesh;
-import com.zurrtum.create.client.flywheel.api.model.Model;
-import com.zurrtum.create.client.flywheel.lib.model.RetexturedMesh;
-import com.zurrtum.create.client.flywheel.lib.model.SingleMeshModel;
-import com.zurrtum.create.client.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.Material;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.RetexturedMesh;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.SingleMeshModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

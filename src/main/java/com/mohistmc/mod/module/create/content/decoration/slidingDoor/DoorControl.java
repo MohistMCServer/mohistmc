@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.decoration.slidingDoor;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import io.netty.buffer.ByteBuf;
 import java.util.Locale;
 import net.minecraft.core.Direction;

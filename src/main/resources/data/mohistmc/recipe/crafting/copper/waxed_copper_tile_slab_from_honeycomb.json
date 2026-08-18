@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:copper_tile_slab",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:waxed_copper_tile_slab"
+  }
+}

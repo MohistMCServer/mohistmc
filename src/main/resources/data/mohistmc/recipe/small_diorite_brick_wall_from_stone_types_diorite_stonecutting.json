@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/diorite",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_diorite_brick_wall"
+  }
+}

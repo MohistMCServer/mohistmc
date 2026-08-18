@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.item.menu;
 
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import net.minecraft.world.Container;

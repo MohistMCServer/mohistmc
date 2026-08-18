@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#c:dyes/magenta",
+    "#mohistmc:dyed_table_cloths"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:magenta_table_cloth"
+  }
+}

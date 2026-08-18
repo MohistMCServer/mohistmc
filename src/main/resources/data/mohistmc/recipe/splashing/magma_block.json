@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "minecraft:magma_block",
+  "results": [
+    {
+      "id": "minecraft:obsidian"
+    }
+  ]
+}
+

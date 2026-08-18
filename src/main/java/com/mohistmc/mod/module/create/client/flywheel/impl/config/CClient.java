@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.config;
 
-import com.zurrtum.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
 
 public class CClient extends ConfigBase {
     public final ConfigString backend = s("DEFAULT", "backend", Comments.backend, Comments.backend_allowed);

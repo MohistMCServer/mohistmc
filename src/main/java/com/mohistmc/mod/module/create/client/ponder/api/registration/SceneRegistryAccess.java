@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.registration;
 
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;

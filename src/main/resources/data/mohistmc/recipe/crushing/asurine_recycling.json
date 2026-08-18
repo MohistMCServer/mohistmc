@@ -1,0 +1,15 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "#mohistmc:stone_types/asurine",
+  "processing_time": 250,
+  "results": [
+    {
+      "chance": 0.3,
+      "id": "mohistmc:crushed_raw_zinc"
+    },
+    {
+      "chance": 0.3,
+      "id": "mohistmc:zinc_nugget"
+    }
+  ]
+}

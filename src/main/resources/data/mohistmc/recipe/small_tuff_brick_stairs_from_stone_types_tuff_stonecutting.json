@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/tuff",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_tuff_brick_stairs"
+  }
+}

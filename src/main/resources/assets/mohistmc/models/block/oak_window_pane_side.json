@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/connected_glass_pane/side",
+  "textures": {
+    "edge": "minecraft:block/oak_planks",
+    "pane": "mohistmc:block/palettes/oak_window"
+  }
+}

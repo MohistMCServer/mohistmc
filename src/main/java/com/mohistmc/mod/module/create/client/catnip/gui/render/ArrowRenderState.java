@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.state.gui.GuiElementRenderState;
 import org.joml.Matrix3x2f;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.catnip.render.PonderRenderPipelines.TRIANGLE_FAN;
+import static com.mohistmc.mod.module.create.client.catnip.render.PonderRenderPipelines.TRIANGLE_FAN;
 
 public record ArrowRenderState(Matrix3x2f pose, float r, float g, float b, float a, float length,
                                ScreenRectangle bounds) implements GuiElementRenderState {

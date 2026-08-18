@@ -1,0 +1,10 @@
+{
+	"parent": "block/block",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/blaze_burner/blaze_rods_small.obj",
+	"textures": {
+		"0": "mohistmc:block/blaze_active",
+		"particle": "#0"
+	}
+}

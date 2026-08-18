@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.display;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.api.behaviour.display.DisplayHolder;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.foundation.utility.DynamicComponent;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplayHolder;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.utility.DynamicComponent;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

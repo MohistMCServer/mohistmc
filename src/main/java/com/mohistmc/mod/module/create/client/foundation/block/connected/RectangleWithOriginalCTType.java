@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.foundation.block.connected;
 
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
-import static com.zurrtum.create.client.foundation.block.connected.RectangleCTType.MAP;
-import static com.zurrtum.create.client.foundation.block.connected.RectangleCTType.SIZE;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.client.foundation.block.connected.RectangleCTType.MAP;
+import static com.mohistmc.mod.module.create.client.foundation.block.connected.RectangleCTType.SIZE;
 
 public class RectangleWithOriginalCTType extends CTType {
     public RectangleWithOriginalCTType() {

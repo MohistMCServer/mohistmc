@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "mohistmc:block/palettes/stone_types/brick/scorchia_cut_brick",
+    "side": "mohistmc:block/palettes/stone_types/brick/scorchia_cut_brick",
+    "top": "mohistmc:block/palettes/stone_types/brick/scorchia_cut_brick"
+  }
+}

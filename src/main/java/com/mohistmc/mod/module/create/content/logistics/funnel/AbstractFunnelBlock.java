@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.logistics.funnel;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.NeighborUpdateListeningBlock;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
-import com.zurrtum.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

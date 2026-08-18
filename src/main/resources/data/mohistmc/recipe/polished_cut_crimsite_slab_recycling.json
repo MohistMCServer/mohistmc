@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:polished_cut_crimsite_slab",
+    "mohistmc:polished_cut_crimsite_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:polished_cut_crimsite"
+  }
+}

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.zurrtum.create.AllHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.infrastructure.component.ClipboardContent;
+import com.mohistmc.mod.module.create.AllHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

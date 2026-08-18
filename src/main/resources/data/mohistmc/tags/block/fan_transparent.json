@@ -1,0 +1,34 @@
+{
+  "values": [
+    "mohistmc:safety_net",
+    "mohistmc:blaze_burner",
+    "mohistmc:lit_blaze_burner",
+    "mohistmc:sail_frame",
+    "mohistmc:andesite_bars",
+    "mohistmc:brass_bars",
+    "mohistmc:copper_bars",
+    "mohistmc:copycat_base",
+    "minecraft:iron_bars",
+    "minecraft:mangrove_roots",
+    "minecraft:copper_grate",
+    "minecraft:exposed_copper_grate",
+    "minecraft:weathered_copper_grate",
+    "minecraft:oxidized_copper_grate",
+    "minecraft:waxed_copper_grate",
+    "minecraft:waxed_exposed_copper_grate",
+    "minecraft:waxed_weathered_copper_grate",
+    "minecraft:waxed_oxidized_copper_grate",
+    "minecraft:copper_bars",
+    "minecraft:exposed_copper_bars",
+    "minecraft:weathered_copper_bars",
+    "minecraft:oxidized_copper_bars",
+    "minecraft:waxed_copper_bars",
+    "minecraft:waxed_exposed_copper_bars",
+    "minecraft:waxed_weathered_copper_bars",
+    "minecraft:waxed_oxidized_copper_bars",
+    "#minecraft:campfires",
+    "#minecraft:fences",
+    "#minecraft:leaves"
+  ]
+}
+

@@ -3,19 +3,19 @@ package com.mohistmc.mod.module.create.client.content.equipment.blueprint;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.widget.ElementWidget;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
-import com.zurrtum.create.client.foundation.gui.widget.IconButton;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintEntity;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintEntity.BlueprintSection;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintMenu;
-import com.zurrtum.create.foundation.gui.menu.MenuType;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity.BlueprintSection;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintMenu;
+import com.mohistmc.mod.module.create.foundation.gui.menu.MenuType;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,7 +29,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.foundation.gui.AllGuiTextures.PLAYER_INVENTORY;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.PLAYER_INVENTORY;
 
 public class BlueprintScreen extends AbstractSimiContainerScreen<BlueprintMenu> {
 

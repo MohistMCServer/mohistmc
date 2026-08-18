@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.fluids;
 
-import com.zurrtum.create.AllFluids;
+import com.mohistmc.mod.module.create.AllFluids;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

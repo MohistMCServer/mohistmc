@@ -2,19 +2,19 @@ package com.mohistmc.mod.module.create.client.content.equipment.toolbox;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.platform.Window;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.AllKeys;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.gui.AbstractSimiScreen;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.equipment.toolbox.ToolboxBlockEntity;
-import com.zurrtum.create.content.equipment.toolbox.ToolboxInventory;
-import com.zurrtum.create.infrastructure.packet.c2s.ToolboxDisposeAllPacket;
-import com.zurrtum.create.infrastructure.packet.c2s.ToolboxEquipPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.AllKeys;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlockEntity;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ToolboxDisposeAllPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ToolboxEquipPacket;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
@@ -28,7 +28,7 @@ import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix3x2fStack;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.equipment.toolbox.ToolboxInventory.STACKS_PER_COMPARTMENT;
+import static com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory.STACKS_PER_COMPARTMENT;
 
 public class RadialToolboxMenu extends AbstractSimiScreen {
 

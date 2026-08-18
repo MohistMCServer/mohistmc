@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
-import com.zurrtum.create.client.flywheel.backend.NoiseTextures;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.client.flywheel.backend.NoiseTextures;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import net.minecraft.server.packs.resources.ResourceManager;
 
 public final class FlwProgramsReloader extends CreateResourceReloader {

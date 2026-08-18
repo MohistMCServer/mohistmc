@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.content.trains.schedule;
 
 import com.mojang.brigadier.context.StringRange;
 import com.mojang.brigadier.suggestion.Suggestion;
-import com.zurrtum.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

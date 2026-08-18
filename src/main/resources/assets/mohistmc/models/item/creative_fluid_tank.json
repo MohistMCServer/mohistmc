@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/fluid_tank/block_single_window",
+  "textures": {
+    "0": "mohistmc:block/creative_casing",
+    "1": "mohistmc:block/creative_fluid_tank",
+    "4": "mohistmc:block/creative_casing",
+    "5": "mohistmc:block/creative_fluid_tank_window_single",
+    "particle": "mohistmc:block/creative_fluid_tank"
+  }
+}

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.fluid;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.List;
 import java.util.function.Predicate;
 import net.minecraft.network.RegistryFriendlyByteBuf;

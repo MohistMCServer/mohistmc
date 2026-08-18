@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.gauge;
 
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;

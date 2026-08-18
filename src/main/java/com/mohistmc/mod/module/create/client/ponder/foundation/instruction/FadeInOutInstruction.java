@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
 
 public abstract class FadeInOutInstruction extends TickingInstruction {
 

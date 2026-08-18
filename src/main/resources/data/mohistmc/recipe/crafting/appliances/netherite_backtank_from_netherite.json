@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mohistmc:copper_backtank",
+  "base": "minecraft:netherite_chestplate",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:netherite_backtank"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

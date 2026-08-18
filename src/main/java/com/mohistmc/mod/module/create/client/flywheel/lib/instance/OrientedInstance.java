@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.instance;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceHandle;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.lib.transform.Rotate;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.lib.transform.Rotate;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Quaternionf;

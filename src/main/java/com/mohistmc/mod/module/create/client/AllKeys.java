@@ -7,7 +7,7 @@ import net.minecraft.client.KeyMapping.Category;
 import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllKeys {
     public static final List<KeyMapping> ALL = new ArrayList<>();

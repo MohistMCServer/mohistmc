@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 
 public class ServerScrollOptionBehaviour<E extends Enum<E>> extends ServerScrollValueBehaviour {
     public E[] options;

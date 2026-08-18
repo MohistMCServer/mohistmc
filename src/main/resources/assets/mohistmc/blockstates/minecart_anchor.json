@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mohistmc:block/cart_assembler/minecart_anchor"
+    }
+  }
+}

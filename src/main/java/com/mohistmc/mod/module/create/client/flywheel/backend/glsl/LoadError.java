@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
 
 import com.mojang.datafixers.util.Pair;
-import com.zurrtum.create.client.flywheel.backend.glsl.error.ErrorBuilder;
-import com.zurrtum.create.client.flywheel.backend.glsl.span.Span;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.error.ErrorBuilder;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.span.Span;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation;
 
-import com.zurrtum.create.client.catnip.outliner.Outline.OutlineParams;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.client.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outline.OutlineParams;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.client.ponder.api.scene.Selection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;

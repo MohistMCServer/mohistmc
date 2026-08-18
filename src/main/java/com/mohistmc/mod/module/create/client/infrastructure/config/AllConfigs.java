@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.infrastructure.config;
 
-import com.zurrtum.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllConfigs {
     private static CClient client;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.actors.trainControls;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import com.zurrtum.create.client.foundation.utility.ControlsUtil;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.contraptions.AbstractContraptionEntity;
-import com.zurrtum.create.infrastructure.packet.c2s.ControlsInputPacket;
+import com.mohistmc.mod.module.create.client.foundation.utility.ControlsUtil;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ControlsInputPacket;
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.HashSet;

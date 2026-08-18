@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.worldgen;
 
-import com.zurrtum.create.infrastructure.worldgen.LayerPattern.Layer;
+import com.mohistmc.mod.module.create.infrastructure.worldgen.LayerPattern.Layer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

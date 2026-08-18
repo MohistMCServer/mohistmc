@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl;
 
-import com.zurrtum.create.client.flywheel.backend.engine.uniform.DebugMode;
+import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.DebugMode;
 import net.minecraft.commands.arguments.StringRepresentableArgument;
 import net.minecraft.commands.synchronization.SingletonArgumentInfo;
 

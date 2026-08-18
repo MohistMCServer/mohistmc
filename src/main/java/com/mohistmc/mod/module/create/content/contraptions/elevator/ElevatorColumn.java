@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.content.contraptions.elevator;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.catnip.data.WorldAttached;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.catnip.data.WorldAttached;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;

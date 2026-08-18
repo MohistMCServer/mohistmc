@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.packager.repackager;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.logistics.packager.PackagerBlock;
-import com.zurrtum.create.content.logistics.packager.PackagerBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.logistics.packager.PackagerBlock;
+import com.mohistmc.mod.module.create.content.logistics.packager.PackagerBlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;

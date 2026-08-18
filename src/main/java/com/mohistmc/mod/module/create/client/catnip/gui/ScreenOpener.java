@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.catnip.gui;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;

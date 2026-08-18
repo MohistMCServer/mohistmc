@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.catnip.lang;
 
 import com.google.common.base.Strings;
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.LinkedList;

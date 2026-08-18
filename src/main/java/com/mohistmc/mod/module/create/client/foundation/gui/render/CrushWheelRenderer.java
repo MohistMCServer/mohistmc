@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.world.level.block.Blocks;
 

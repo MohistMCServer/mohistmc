@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.api.behaviour;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.ConcurrentModificationException;
 import java.util.function.Function;
 import net.minecraft.core.BlockPos;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.items;
 
 import com.google.common.collect.MapMaker;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.Map;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

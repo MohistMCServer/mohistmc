@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.trains.track.TrackMaterial;
+import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllTrackMaterials {
     public static final TrackMaterial ANDESITE = new TrackMaterial(

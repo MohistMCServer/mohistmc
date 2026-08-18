@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink;
 
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import net.minecraft.world.level.block.Block;
 
 public class DisplayLinkBlockItem extends ClickToLinkBlockItem {

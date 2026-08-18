@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_postbox": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mohistmc:dyed_table_cloths"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mohistmc:crafting/logistics/purple_table_cloth_from_other_table_cloth"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_postbox"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mohistmc:crafting/logistics/purple_table_cloth_from_other_table_cloth"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.foundation.recipe;
 
-import com.zurrtum.create.content.processing.recipe.ProcessingOutput;
+import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.util.RandomSource;

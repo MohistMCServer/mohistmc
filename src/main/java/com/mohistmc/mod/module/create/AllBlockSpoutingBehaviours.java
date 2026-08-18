@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.behaviour.spouting.BlockSpoutingBehaviour;
-import com.zurrtum.create.api.behaviour.spouting.CauldronSpoutingBehavior;
-import com.zurrtum.create.api.behaviour.spouting.StateChangingBehavior;
+import com.mohistmc.mod.module.create.api.behaviour.spouting.BlockSpoutingBehaviour;
+import com.mohistmc.mod.module.create.api.behaviour.spouting.CauldronSpoutingBehavior;
+import com.mohistmc.mod.module.create.api.behaviour.spouting.StateChangingBehavior;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.LayeredCauldronBlock;

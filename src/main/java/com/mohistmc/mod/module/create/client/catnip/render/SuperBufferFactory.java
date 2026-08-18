@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.render;
 
 import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.zurrtum.create.client.flywheel.lib.model.baked.EmptyVirtualBlockGetter;
-import com.zurrtum.create.client.flywheel.lib.model.baked.ModelRenderHelper;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.EmptyVirtualBlockGetter;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ModelRenderHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
 import net.minecraft.core.BlockPos;

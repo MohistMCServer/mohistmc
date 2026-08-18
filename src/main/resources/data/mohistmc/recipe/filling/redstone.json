@@ -1,0 +1,19 @@
+{
+  "type": "mohistmc:filling",
+  "ingredient": "mohistmc:cinder_flour",
+  "fluid_ingredient": {
+    "type": "fluid_stack",
+    "amount": 2700,
+    "components": {
+      "mohistmc:potion_fluid_bottle_type": "regular",
+      "minecraft:potion_contents": {
+        "potion": "minecraft:strength"
+      }
+    },
+    "fluid": "mohistmc:potion"
+  },
+  "result": {
+    "id": "minecraft:redstone"
+  }
+}
+

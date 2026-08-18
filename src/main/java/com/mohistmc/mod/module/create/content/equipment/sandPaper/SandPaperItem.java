@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.equipment.sandPaper;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllRecipeSets;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.infrastructure.component.SandPaperItemComponent;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllRecipeSets;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.infrastructure.component.SandPaperItemComponent;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;

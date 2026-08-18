@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.vanillin.config;
 
-import com.zurrtum.create.client.flywheel.api.visualization.BlockEntityVisualizer;
-import com.zurrtum.create.client.flywheel.api.visualization.EntityVisualizer;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizerRegistry;
-import com.zurrtum.create.client.vanillin.Vanillin;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.BlockEntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.EntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizerRegistry;
+import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;

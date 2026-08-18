@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlTextureUnit;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlTextureUnit;
 
 public class Samplers {
     public static final GlTextureUnit DIFFUSE = GlTextureUnit.T0;

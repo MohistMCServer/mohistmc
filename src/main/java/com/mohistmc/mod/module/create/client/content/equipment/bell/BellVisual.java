@@ -1,18 +1,18 @@
 package com.mohistmc.mod.module.create.client.content.equipment.bell;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.model.Model;
-import com.zurrtum.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.client.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
-import com.zurrtum.create.content.equipment.bell.AbstractBellBlockEntity;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
+import com.mohistmc.mod.module.create.content.equipment.bell.AbstractBellBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.BellBlock;
@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.state.properties.BellAttachType;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
 
 public class BellVisual<T extends AbstractBellBlockEntity> extends AbstractBlockEntityVisual<T> implements SimpleDynamicVisual, ShaderLightVisual {
     private final TransformedInstance bell;

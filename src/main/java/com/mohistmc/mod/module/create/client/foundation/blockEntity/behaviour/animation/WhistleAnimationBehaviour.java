@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.content.decoration.steamWhistle.WhistleBlockEntity;
-import com.zurrtum.create.content.fluids.tank.FluidTankBlockEntity;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.content.decoration.steamWhistle.WhistleBlockEntity;
+import com.mohistmc.mod.module.create.content.fluids.tank.FluidTankBlockEntity;
 
 public class WhistleAnimationBehaviour extends AnimationBehaviour<WhistleBlockEntity> {
     public LerpedFloat animation = LerpedFloat.linear();

@@ -3,11 +3,13 @@ package com.mohistmc.mod.module.shop.client.gui;
 import com.mohistmc.mod.api.gui.CustomButton;
 import com.mohistmc.mod.api.gui.EnhancedScreen;
 import com.mohistmc.mod.api.gui.GridScrollList;
+import com.mohistmc.mod.api.gui.GuiCoord;
 import com.mohistmc.mod.api.gui.ImageWidget;
 import com.mohistmc.mod.api.gui.Modal;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.api.gui.PositionedWidget;
 import com.mohistmc.mod.api.gui.SimpleLabel;
+import com.mohistmc.mod.api.gui.TextInputWidget;
 import com.mohistmc.mod.module.shop.common.data.Currency;
 import com.mohistmc.mod.module.shop.common.data.RestockCycle;
 import com.mohistmc.mod.module.shop.common.data.RestockTimer;
@@ -19,11 +21,11 @@ import com.mohistmc.mod.module.shop.common.network.payload.BuyPayload;
 import com.mohistmc.mod.module.shop.common.network.payload.BuyResultPayload;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -35,9 +37,10 @@ import java.util.Locale;
 
 /**
  * 系统商店全屏界面（由服务端 OpenShopPayload 打开）
- * <p>布局：标题 + 余额 + 分类 Tab/搜索框（同行自适应）+ 左侧 8 列商品格子网格（高度占满）
+ * <p>布局：标题 + 余额 + 分类 Tab/搜索框（同行自适应）+ 左侧商品格子网格（高度占满）
  * + 右侧详情面板（数量/购买）+ 关闭按钮；
  * 购买走确认 Modal 后发 BuyPayload，结果由服务端 BuyResultPayload 回传后刷新。
+ * 输入框使用自定义 {@link TextInputWidget}（适配画布缩放），替代原版 EditBox。
  *
  * @author Mgazul
  * @date 2026/8/5
@@ -46,11 +49,23 @@ import java.util.Locale;
 public class ShopScreen extends EnhancedScreen {
 
     /** 网格列数上限 */
-    private static final int GRID_COLS = 14;
-    /** 右侧详情面板宽度 */
-    private static final int DETAIL_W = 100;
+    private static final int GRID_COLS = 13;
+    /** 右侧详情面板宽度（与背包栏对齐，整体放大） */
+    private static final int DETAIL_W = 180;
     /** 左栏（网格）与右栏（详情）间距 */
-    private static final int SIDE_GAP = 6;
+    private static final int SIDE_GAP = 10;
+
+    // ======== 布局常量 ========
+    /** 分类 Tab 竖列宽度/高度 */
+    private static final int TAB_W = 72;
+    private static final int TAB_H = 26;
+    private static final int TAB_GAP = 6;
+    /** 商店名卡片宽度 */
+    private static final int SHOP_CARD_W = 130;
+    /** 顶部行高度（商店名/搜索/补货） */
+    private static final int TOP_H = 24;
+    /** 搜索框宽度 */
+    private static final int SEARCH_W = 220;
 
     /** 搜索框右侧余额卡片 */
     private SimpleLabel balanceLabel;
@@ -70,19 +85,19 @@ public class ShopScreen extends EnhancedScreen {
     // —— 选中商品 / 右侧详情面板 ——
     private ShopCard selectedCard;
     private int detailQty = 1;
-    /** 详情面板高度（极矮窗口时面板被压缩，隐藏顶部信息区） */
+    /** 详情面板高度（重建时记录，供操作区布局使用） */
     private int detailPanelH = 150;
     private DetailIconWidget detailIcon;
     private CenteredLabel detailHint;
     private CenteredLabel detailName;
     private CenteredLabel detailPrice;
     private CenteredLabel detailStock;
-    private EditBox detailQtyEdit;
+    private TextInputWidget detailQtyEdit;
     private CenteredLabel detailTotal;
     private CustomButton detailDec;
     private CustomButton detailInc;
     private CustomButton detailBuy;
-    /** 防止 setValue 触发 responder 的递归更新 */
+    /** 防止 setText 触发 onChange 的递归更新 */
     private boolean updatingQty;
 
     public ShopScreen(int balance) {
@@ -94,97 +109,108 @@ public class ShopScreen extends EnhancedScreen {
     protected void buildWidgets() {
         int sw = getImageWidth();
         int sh = getImageHeight();
-        // 响应式内容区宽度：目标为窗口 55%（上限 560），但绝不超出窗口（左右各留 8px）
-        int guiW = Math.min(Math.max(sw * 65 / 100, 320), Math.min(640, sw - 16));
-        int guiH = sh - 20;
+        // 更大的响应式内容区：宽占逻辑宽 72%（上限 880），高近全屏
+        int guiW = Math.clamp(sw * 72 / 100, 480, Math.min(880, sw - 16));
+        int guiH = sh - 12;
         int left = (sw - guiW) / 2;
-        // 内容区垂直居中：上边距与下边距保持一致
-        int top = Math.max(8, (sh - guiH) / 2);
+        int top = 6;
 
         // 布局列：左侧分类 Tab 竖列 → 网格；顶部一行：商店名 | 搜索框 | 补货卡片；右侧列：补货/余额/操作区
-        int tabColW = 44;
-        int tabColGap = 4;
-        int shopCardW = 100;
-        int gridX = left + tabColW + 8;
-        int balanceX = left + guiW - DETAIL_W; // 右侧列 X（与操作区同宽对齐）
+        int gridX = left + TAB_W + 12;
+
+        // 网格与详情面板位置均不动（DETAIL_W 右对齐）；背包从详情面板左边缘延伸到屏幕最右侧，平分9格
+        int balanceX = left + guiW - DETAIL_W;
         int gridW = balanceX - gridX - SIDE_GAP;
+        int cols = Math.max(2, Math.min(GRID_COLS, (gridW - 8) / 36));
+        // 背包宽度 = 从详情面板左边缘到窗口最右侧，平分9格
+        int invW = sw - balanceX;
+
+        int topRowY = top + 28;
+        // 顶部行与网格贴紧（仅留4px间距）
+        int gridTop = topRowY + TOP_H + 4;
 
         // —— 分类 Tab（左侧竖列） ——
-        int tabY = top + 42;
+        int tabY = gridTop;
         var defaultShop = ShopData.getDefaultShop();
         var categories = defaultShop != null ? defaultShop.getCategories() : java.util.List.<ShopCategory>of();
         // 添加"全部"Tab
-        var allTab = new CustomButton(left, tabY, tabColW, 18,
+        var allTab = new CustomButton(left, tabY, TAB_W, TAB_H,
                 Component.translatable("gui.mohistmc.shop.cat.all"), 0xFF333344)
                 .setTextColor(0xFFFFFFFF).setBorderRadius(0)
+                .setAutoFit(false) // 固定竖列宽度，防止文字过长向右撑破网格
                 .onClick(() -> selectCategory(ShopCategory.ALL_ID));
         categoryTabs.add(allTab);
         addWidget(allTab);
-        tabY += 18 + tabColGap;
+        tabY += TAB_H + TAB_GAP;
 
         for (var category : categories) {
-            var tab = new CustomButton(left, tabY, tabColW, 18,
+            var tab = new CustomButton(left, tabY, TAB_W, TAB_H,
                     Component.translatable(category.getLangKey()), 0xFF333344)
                     .setTextColor(0xFFFFFFFF).setBorderRadius(0)
+                    .setAutoFit(false)
                     .onClick(() -> selectCategory(category.getId()));
             categoryTabs.add(tab);
             addWidget(tab);
-            tabY += 18 + tabColGap;
+            tabY += TAB_H + TAB_GAP;
         }
         updateTabStyles();
 
         // 商店名字卡片（左上角）
-        var shopCard = new Panel(left, top + 18, shopCardW, 18, 0x66000000);
-        var shopNameLabel = new CenteredLabel(0, (18 - 9) / 2, shopCardW, 0xFFFFFFFF);
+        var shopCard = new Panel(left, topRowY, SHOP_CARD_W, TOP_H, 0x66000000);
+        var shopNameLabel = new CenteredLabel(0, (TOP_H - 11) / 2, SHOP_CARD_W, 0xFFFFFFFF);
         shopNameLabel.setText(Component.translatable("gui.mohistmc.shop.title"));
         shopCard.addChild(shopNameLabel);
         addWidget(shopCard);
 
-        // 搜索框（商店名卡片与补货卡片之间，填补横向空白）
-        int searchX = left + shopCardW + 8;
-        var searchBox = new EditBox(minecraft.font, searchX, top + 18, balanceX - searchX - 8, 18,
-                Component.translatable("gui.mohistmc.shop.search"));
-        searchBox.setMaxLength(32);
-        searchBox.setResponder(text -> {
-            searchText = text;
-            refreshGrid();
-        });
-        addWidget(searchBox);
+        // 搜索框（自定义输入框，宽度适中，不与补货卡片重叠）
+        int searchX = left + SHOP_CARD_W + 10;
+        var searchInput = new TextInputWidget(searchX, topRowY, SEARCH_W, TOP_H)
+                .setPlaceholder(Component.translatable("gui.mohistmc.shop.search").getString())
+                .setMaxLength(32)
+                .setFontSize(14)
+                .setOnChange(text -> {
+                    searchText = text;
+                    refreshGrid();
+                });
+        addWidget(searchInput);
 
         // 补货时间卡片（右上，与商店名/搜索框同行水平对齐，秒级动态刷新）
-        var restockCard = new Panel(balanceX, top + 18, DETAIL_W, 18, 0x66000000);
-        restockLabel = new CenteredLabel(0, (18 - 9) / 2, DETAIL_W, 0xFFFFD700);
+        var restockCard = new Panel(balanceX, topRowY, DETAIL_W, TOP_H, 0x66000000);
+        restockLabel = new CenteredLabel(0, (TOP_H - Math.round(11 * 1.4f)) / 2, DETAIL_W, 0xFFFFD700)
+                .setTextScale(1.4f);
         updateRestockLabel();
         restockCard.addChild(restockLabel);
         addWidget(restockCard);
 
-        // 余额卡片（补货卡片正下方；图标与文字按卡片高度垂直居中）
-        var balanceCard = new Panel(balanceX, top + 42, DETAIL_W, 18, 0x66000000);
-        balanceCard.addChild(new ImageWidget(6, (18 - 8) / 2, 8, 8)
+        // —— 右侧列底部：玩家背包栏（热键栏）+ 物品栏，平分9格填满到屏幕最右侧 ——
+        var invWidget = new PlayerInventoryWidget(balanceX, 0, invW);
+        int invY = guiH - 8 - invWidget.height; // 底部对齐
+        invWidget.setRelativeY(invY);
+        addWidget(invWidget);
+
+        // 余额卡片（背包正上方，无背景；图标与文字自动放大，保持4px内边距）
+        int balanceY = invY - 4 - TOP_H;
+        int iconSize = TOP_H - 8; // 4px上下内边距
+        addWidget(new ImageWidget(balanceX + 4, balanceY + 4, iconSize, iconSize)
                 .setTexture(Currency.iconTexture())
                 .setTextureSrcSize(Currency.iconSize()));
-        balanceLabel = new SimpleLabel(16, (18 - Math.round(9 * 1.3f)) / 2,
+        float textScale = (TOP_H - 8f) / 11f; // 文字高度填满内容区
+        int textY = balanceY + (int)((TOP_H - 11 * textScale) / 2);
+        balanceLabel = new SimpleLabel(balanceX + 4 + iconSize + 4, textY,
                 Component.literal(String.valueOf(balance)), 0xFFFFD700)
-                .setTextScale(1.3f);
-        balanceCard.addChild(balanceLabel);
-        addWidget(balanceCard);
+                .setTextScale(textScale);
+        addWidget(balanceLabel);
 
-        // —— 右侧详情面板（选中商品后操作数量/购买；从余额卡片下方开始，避免与其重叠） ——
-        int gridTop = top + 42;
-        int detailTop = top + 66;
-        // 操作区高度：130 下限保证内容完整，屏幕底部约束防溢出
-        int detailH = Math.max(130, guiH - (detailTop - top) - 40);
-        detailH = Math.min(detailH, sh - detailTop - 8);
-        buildDetailPanel(balanceX, detailTop, detailH);
+        // —— 商品格子网格（位置/高度保持原样占满到底部，不动） ——
+        int gridH = Math.min(guiH - gridTop - 8, sh - gridTop - 8);
 
-        // —— 商品格子网格（Tab 竖列右侧；列数随可用宽度自适应：每格最小 ~32px，最多 12 列） ——
-        // 高度与右侧列（余额卡片 + 操作区）底部对齐，任意窗口高度下两侧齐平
-        int gridH = (detailTop + detailH) - gridTop;
-        gridH = Math.min(gridH, sh - gridTop - 8);
-        int cols = Math.max(2, Math.min(GRID_COLS, gridW / 28));
+        // —— 右侧详情面板（压缩高度贴合内容，位于背包上方，宽度固定不变） ——
+        int detailTop = gridTop;
+        int detailH = Math.max(150, Math.min(guiH - 8 - detailTop, 230));
+        buildDetailPanel(balanceX, detailTop, DETAIL_W, detailH);
         grid = new GridScrollList(gridX, gridTop, gridW, gridH, 0x66000000);
-        grid.setColumns(cols).setGap(3, 4).setSquareCells(true).setCellExtraHeight(13)
-                .setPadding(2);
+        grid.setColumns(cols).setGap(4, 5).setSquareCells(true).setCellExtraHeight(14)
+                .setPadding(4);
         addWidget(grid);
 
         // 重建（resize/重开）后按商品引用恢复选中，避免详情清空
@@ -203,47 +229,52 @@ public class ShopScreen extends EnhancedScreen {
 
     // ======== 右侧详情面板 ========
 
-    private void buildDetailPanel(int panelX, int panelY, int panelH) {
+    private void buildDetailPanel(int panelX, int panelY, int panelW, int panelH) {
         detailPanelH = panelH;
-        // 压缩模式：信息区紧凑显示；阈值 166 保证按钮区（数量+总价+购买）完整容纳不重叠
-        boolean compact = panelH < 166;
-        var panel = new Panel(panelX, panelY, DETAIL_W, panelH, 0x66000000);
+        // 压缩模式：信息区紧凑显示；阈值 210 保证操作区（数量+总价+购买）完整容纳不重叠
+        boolean compact = panelH < 210;
+        var panel = new Panel(panelX, panelY, panelW, panelH, 0x66000000);
 
-        // —— 上部：商品信息（压缩模式下紧凑显示，不隐藏） ——
-        int iconSize = compact ? 16 : 32;
-        int iconY = compact ? 6 : 12;
-        int nameY = compact ? 24 : 52;
-        int priceY = compact ? 34 : 64;
-        int stockY = compact ? 44 : 76;
-        detailIcon = new DetailIconWidget((DETAIL_W - iconSize) / 2, iconY, iconSize);
+        // —— 上部：商品信息（压缩模式下紧凑显示，文字仍放大） ——
+        float labelScale = compact ? 1.3f : 1.6f; // 详情文字放大倍数
+        int iconSize = compact ? 20 : 44;
+        int iconY = compact ? 8 : 16;
+        int nameY = compact ? 28 : 72;
+        int priceY = compact ? 44 : 90;
+        int stockY = compact ? 60 : 108;
+        detailIcon = new DetailIconWidget((panelW - iconSize) / 2, iconY, iconSize);
         panel.addChild(detailIcon);
 
-        detailName = new CenteredLabel(0, nameY, DETAIL_W, 0xFFFFFFFF);
+        detailName = new CenteredLabel(0, nameY, panelW, 0xFFFFFFFF).setTextScale(labelScale);
         panel.addChild(detailName);
 
-        detailPrice = new CenteredLabel(0, priceY, DETAIL_W, 0xFFFFD700);
+        detailPrice = new CenteredLabel(0, priceY, panelW, 0xFFFFD700).setTextScale(labelScale);
         panel.addChild(detailPrice);
 
         // 库存行（剩余数量；售罄红色）
-        detailStock = new CenteredLabel(0, stockY, DETAIL_W, 0xFFFFFFFF);
+        detailStock = new CenteredLabel(0, stockY, panelW, 0xFFFFFFFF).setTextScale(labelScale);
         panel.addChild(detailStock);
 
         // 未选中提示（复用名称位置，与详情信息不会同时显示）
-        detailHint = new CenteredLabel(0, nameY, DETAIL_W, 0xFF888888);
+        detailHint = new CenteredLabel(0, nameY, panelW, 0xFF888888).setTextScale(labelScale);
         panel.addChild(detailHint);
 
-        // —— 下部：操作区（从购买按钮向上排：总价贴按钮上方 5px、数量行贴总价上方 5px，最小不低于信息区） ——
-        int qtyH = 14;                          // 数量行组件高度（[-] 输入框 [+]）
-        int buyY = panelH - 12 - 20;           // 购买按钮（距底 12）
-        int totalY = Math.max(compact ? 60 : 105, buyY - 14); // 总价（购买按钮上方 5px，不低于信息区）
-        int qtyY = Math.max(compact ? 53 : 90, totalY - 5 - qtyH); // 数量行（总价上方 5px，不低于信息区）
+        // —— 下部：操作区（从底部向上排：购买按钮贴底、总价在其上方、数量行再上方，确保不越界） ——
+        int qtyH = 20;                       // 数量行组件高度（[-] 输入框 [+]）
+        int buyH = 24;                       // 购买按钮高度
+        int buyY = panelH - 12 - buyH;       // 购买按钮（距底 12）
+        int totalH = (int) (11 * labelScale); // 总价文字高（随缩放）
+        int totalY = buyY - 6 - totalH;      // 总价（购买按钮上方 6px）
+        int qtyY = Math.max(stockY + 14, totalY - 6 - qtyH); // 数量行（总价上方 6px，且不低于信息区）
 
         // 数量行（居中）：[-] [输入框] [+]
-        int qtyEditW = 26;
-        int qtyRowW = 20 + 3 + qtyEditW + 3 + 20; // 72
-        int qtyStartX = (DETAIL_W - qtyRowW) / 2;
-        detailDec = new CustomButton(qtyStartX, qtyY, 20, qtyH, Component.literal("-"), 0xFF555555)
+        int qtyEditW = 34;
+        int qtyBtnW = 24;
+        int qtyRowW = qtyBtnW + 4 + qtyEditW + 4 + qtyBtnW;
+        int qtyStartX = (panelW - qtyRowW) / 2;
+        detailDec = new CustomButton(qtyStartX, qtyY, qtyBtnW, qtyH, Component.literal("-"), 0xFF555555)
                 .setTextColor(0xFFFFFFFF).setBorderRadius(3)
+                .setAutoFit(false).setFontSize(18) // 固定尺寸按钮，字号固定防止过小
                 .onClick(() -> {
                     detailQty = Math.max(1, detailQty - 1);
                     syncQtyInput();
@@ -251,16 +282,16 @@ public class ShopScreen extends EnhancedScreen {
                 });
         panel.addChild(detailDec);
 
-        // 数量输入框（Screen 级组件，便于键盘输入；与按钮行对齐）
-        detailQtyEdit = new EditBox(minecraft.font,
-                panelX + qtyStartX + 20 + 3, panelY + qtyY, qtyEditW, qtyH,
-                Component.literal(""));
-        detailQtyEdit.setMaxLength(4);
-        detailQtyEdit.setResponder(this::onQtyTyped);
-        addWidget(detailQtyEdit);
+        // 数量输入框（自定义，Panel 内定位）
+        detailQtyEdit = new TextInputWidget(qtyStartX + qtyBtnW + 4, qtyY, qtyEditW, qtyH)
+                .setFontSize(14)
+                .setMaxLength(4)
+                .setOnChange(this::onQtyTyped);
+        panel.addChild(detailQtyEdit);
 
-        detailInc = new CustomButton(qtyStartX + 20 + 3 + qtyEditW + 3, qtyY, 20, qtyH, Component.literal("+"), 0xFF555555)
+        detailInc = new CustomButton(qtyStartX + qtyBtnW + 4 + qtyEditW + 4, qtyY, qtyBtnW, qtyH, Component.literal("+"), 0xFF555555)
                 .setTextColor(0xFFFFFFFF).setBorderRadius(3)
+                .setAutoFit(false).setFontSize(18)
                 .onClick(() -> {
                     detailQty = Math.min(maxQtyFor(selectedCard.getProduct()), detailQty + 1);
                     syncQtyInput();
@@ -268,12 +299,12 @@ public class ShopScreen extends EnhancedScreen {
                 });
         panel.addChild(detailInc);
 
-        detailTotal = new CenteredLabel(0, totalY, DETAIL_W, 0xFFFFFFFF);
+        detailTotal = new CenteredLabel(0, totalY, panelW, 0xFFFFFFFF).setTextScale(labelScale);
         panel.addChild(detailTotal);
 
-        detailBuy = new CustomButton(8, buyY, DETAIL_W - 16, 20,
+        detailBuy = new CustomButton(10, buyY, panelW - 20, buyH,
                 Component.translatable("gui.mohistmc.shop.buy"), 0xFF4CAF50)
-                .setTextColor(0xFFFFFFFF).setBorderRadius(4)
+                .setTextColor(0xFFFFFFFF).setBorderRadius(4).setFontSize(18)
                 .onClick(() -> {
                     if (selectedCard != null) confirmBuy(selectedCard.getProduct(), detailQty);
                 });
@@ -405,13 +436,13 @@ public class ShopScreen extends EnhancedScreen {
         refreshDetail();
     }
 
-    /** 输入框文本与 detailQty 同步（值相同不 setValue，避免触发 responder 递归） */
+    /** 输入框文本与 detailQty 同步（值相同不 setText，避免触发 onChange 递归） */
     private void syncQtyInput() {
         if (detailQtyEdit != null) {
-            String current = detailQtyEdit.getValue();
+            String current = detailQtyEdit.getText();
             String next = String.valueOf(detailQty);
             if (!current.equals(next)) {
-                detailQtyEdit.setValue(next);
+                detailQtyEdit.setText(next);
             }
         }
     }
@@ -510,7 +541,7 @@ public class ShopScreen extends EnhancedScreen {
         var modal = new Modal(
                 Component.translatable("gui.mohistmc.shop.confirm_title"),
                 Component.translatable("gui.mohistmc.shop.confirm_message", product.stack().getHoverName(), qty, total))
-                .setDialogWidth(140);
+                .setDialogWidth(160);
         modal.addConfirmButton(() -> ClientPacketDistributor.sendToServer(new BuyPayload(product.id(), qty)));
         modal.addCancelButton(() -> {});
         showModal(modal);
@@ -528,7 +559,7 @@ public class ShopScreen extends EnhancedScreen {
             var modal = new Modal(
                     Component.translatable("gui.mohistmc.shop.fail"),
                     Component.translatable(payload.message()))
-                    .setDialogWidth(140)
+                    .setDialogWidth(160)
                     .setMessageColor(0xFFFF5555); // 失败原因红色提示
             modal.addConfirmButton(() -> {});
             showModal(modal);
@@ -544,7 +575,90 @@ public class ShopScreen extends EnhancedScreen {
         modal.show();
     }
 
-    /** 详情面板商品图标（按尺寸缩放 16×16 源图；常规 32px、紧凑 16px） */
+    /** 右侧列底部玩家背包预览：物品栏 27 格（9×3）+ 热键栏 9 格，格子尺寸按宽度自适应 */
+    private static class PlayerInventoryWidget extends PositionedWidget {
+        private static final int GAP = 2;
+        private static final int PAD = 4;
+        private final Inventory inv;
+        private final int cell; // 基础格子边长（随宽度自适应放大）
+        private final int rem;  // 平分余数：前 rem 列宽 cell+1，使右边缘精确对齐组件右缘
+
+        PlayerInventoryWidget(int x, int y, int width) {
+            super(x, y, width, calcHeight(width));
+            int w = width - PAD * 2 - GAP * 8;
+            this.cell = Math.max(12, w / 9);
+            this.rem = Math.max(0, w - cell * 9);
+            var mc = Minecraft.getInstance();
+            this.inv = mc.player != null ? mc.player.getInventory() : null;
+        }
+
+        private static int calcHeight(int width) {
+            int cell = Math.max(12, (width - PAD * 2 - GAP * 8) / 9);
+            return 3 * (cell + GAP) - GAP + 8 + cell + PAD * 2;
+        }
+
+        @Override
+        public void render(GuiGraphicsExtractor g, int mouseX, int mouseY, float partialTick) {
+            if (inv == null) return;
+            int ax = getAbsoluteX();
+            int ay = getAbsoluteY();
+            int gridX = ax + PAD;
+            int gridY = ay + PAD;
+
+            // 物品栏（27 格 9×3：inv 槽位 9..35）
+            renderSlots(g, inv, 9, 3, gridX, gridY, mouseX, mouseY);
+            // 热键栏（9 格：inv 槽位 0..8），上方分隔亮条
+            int barY = gridY + 3 * (cell + GAP) + 8;
+            int rowW = 9 * cell + 8 * GAP + rem; // 9 列精确总宽
+            g.fill(gridX, barY - 6, gridX + rowW, barY - 5, 0x44FFFFFF);
+            renderSlots(g, inv, 0, 1, gridX, barY, mouseX, mouseY);
+        }
+
+        /** 渲染若干行格子（每行 9 格），hover 时显示物品名 */
+        private void renderSlots(GuiGraphicsExtractor g, Inventory inv, int startIndex,
+                                 int rows, int x, int y, int mx, int my) {
+            var font = Minecraft.getInstance().font;
+            int size = inv.getContainerSize();
+            Component tip = null;
+            int tipX = 0, tipY = 0;
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < 9; col++) {
+                    int idx = startIndex + row * 9 + col;
+                    int effCell = cell + (col < rem ? 1 : 0); // 前 rem 列略宽，精确填满
+                    int sx = x + col * (cell + GAP) + Math.min(col, rem);
+                    int sy = y + row * (cell + GAP);
+                    int iconOff = (effCell - 16) / 2;
+                    // 格子背景 + 边框
+                    g.fill(sx, sy, sx + effCell, sy + effCell, 0x33222222);
+                    g.fill(sx, sy, sx + effCell, sy + 1, 0x55444466);
+                    g.fill(sx, sy + effCell - 1, sx + effCell, sy + effCell, 0x55444466);
+                    g.fill(sx, sy, sx + 1, sy + effCell, 0x55444466);
+                    g.fill(sx + effCell - 1, sy, sx + effCell, sy + effCell, 0x55444466);
+
+                    if (idx < 0 || idx >= size) continue;
+                    var stack = inv.getItem(idx);
+                    if (stack.isEmpty()) continue;
+                    g.item(stack, sx + iconOff, sy + iconOff);
+                    // 数量
+                    if (stack.getCount() > 1) {
+                        String cnt = String.valueOf(stack.getCount());
+                        g.text(font, cnt, sx + effCell - font.width(cnt) - 1, sy + effCell - font.lineHeight, 0xFFFFFFFF);
+                    }
+                    // hover 物品名
+                    if (mx >= sx && mx < sx + effCell && my >= sy && my < sy + effCell) {
+                        tip = stack.getHoverName();
+                        tipX = mx;
+                        tipY = my;
+                    }
+                }
+            }
+            if (tip != null) {
+                g.setTooltipForNextFrame(tip, GuiCoord.toScreenX(tipX), GuiCoord.toScreenY(tipY));
+            }
+        }
+    }
+
+    /** 详情面板商品图标（按尺寸缩放 16×16 源图；常规 44px、紧凑 20px） */
     private static class DetailIconWidget extends PositionedWidget {
         private final float scale;
         private ItemStack stack = ItemStack.EMPTY;
@@ -578,10 +692,17 @@ public class ShopScreen extends EnhancedScreen {
         private int color;
         private Component text;
         private Identifier texture;
+        private float textScale = 1.0f;
 
         CenteredLabel(int x, int y, int width, int color) {
-            super(x, y, width, 9);
+            super(x, y, width, 11);
             this.color = color;
+        }
+
+        CenteredLabel setTextScale(float scale) {
+            this.textScale = Math.max(0.5f, scale);
+            this.height = (int) (11 * this.textScale);
+            return this;
         }
 
         void setText(Component text) {
@@ -600,23 +721,33 @@ public class ShopScreen extends EnhancedScreen {
         public void render(GuiGraphicsExtractor g, int mouseX, int mouseY, float partialTick) {
             if (text == null) return;
             int ax = getAbsoluteX();
+            int ay = getAbsoluteY();
             var font = Minecraft.getInstance().font;
-            int iconW = texture == null ? 0 : 16 + 4;
-            int startX = ax + (width - (font.width(text) + iconW)) / 2;
+            int textW = (int) (font.width(text) * textScale);
+            int iconSz = (int) (16 * textScale);
+            int iconW = texture == null ? 0 : iconSz + 4;
+            int startX = ax + (width - (textW + iconW)) / 2;
             if (texture != null) {
-                // 完整贴图缩放显示为 16px（pose 缩放：平移到目标原点 → 缩放 → 回退）
+                // 完整贴图缩放显示（跟随文字缩放）
                 int srcSize = Currency.iconSize();
                 var pose = g.pose();
                 pose.pushMatrix();
-                pose.translate(startX, getAbsoluteY() - 3);
-                pose.scale(16f / srcSize, 16f / srcSize);
-                pose.translate(-startX, -(getAbsoluteY() - 3));
-                g.blit(RenderPipelines.GUI_TEXTURED, texture, startX, getAbsoluteY() - 3,
+                pose.translate(startX, ay - 3);
+                pose.scale(iconSz / (float) srcSize, iconSz / (float) srcSize);
+                pose.translate(-startX, -(ay - 3));
+                g.blit(RenderPipelines.GUI_TEXTURED, texture, startX, ay - 3,
                         0, 0, srcSize, srcSize, srcSize, srcSize);
                 pose.popMatrix();
                 startX += iconW;
             }
-            g.text(font, text, startX, getAbsoluteY(), color);
+            // 文字缩放渲染
+            var pose = g.pose();
+            pose.pushMatrix();
+            pose.translate(startX, ay);
+            pose.scale(textScale, textScale);
+            pose.translate(-startX, -ay);
+            g.text(font, text, startX, ay, color);
+            pose.popMatrix();
         }
     }
 }

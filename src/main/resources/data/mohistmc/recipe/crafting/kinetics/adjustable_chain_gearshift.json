@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:encased_chain_drive",
+    "mohistmc:electron_tube"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:adjustable_chain_gearshift"
+  }
+}

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.vertex;
 
-import com.zurrtum.create.client.flywheel.lib.math.DataPacker;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.DataPacker;
 import org.lwjgl.system.MemoryUtil;
 
 public class NoOverlayVertexView extends AbstractVertexView implements DefaultVertexList {

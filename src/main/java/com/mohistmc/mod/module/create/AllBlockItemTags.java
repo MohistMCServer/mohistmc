@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockItemTagId;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllBlockItemTags {
     public static final BlockItemTagId CASING = create("casing");

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.ponder.api.scene;
 
-import com.zurrtum.create.catnip.math.Pointing;
-import com.zurrtum.create.client.ponder.api.PonderPalette;
-import com.zurrtum.create.client.ponder.api.element.InputElementBuilder;
-import com.zurrtum.create.client.ponder.api.element.TextElementBuilder;
+import com.mohistmc.mod.module.create.catnip.math.Pointing;
+import com.mohistmc.mod.module.create.client.ponder.api.PonderPalette;
+import com.mohistmc.mod.module.create.client.ponder.api.element.InputElementBuilder;
+import com.mohistmc.mod.module.create.client.ponder.api.element.TextElementBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.AABB;

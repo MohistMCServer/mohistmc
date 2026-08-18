@@ -1,0 +1,10 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"conveyor_casing": "mohistmc:block/conveyor_casing",
+		"particle": "mohistmc:block/andesite_casing"
+	},
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/chain_conveyor/conveyor_casing.obj"
+}

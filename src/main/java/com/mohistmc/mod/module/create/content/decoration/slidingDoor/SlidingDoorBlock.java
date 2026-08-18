@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.decoration.slidingDoor;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -38,7 +38,7 @@ import org.jspecify.annotations.Nullable;
 public class SlidingDoorBlock extends DoorBlock implements IWrenchable, IBE<SlidingDoorBlockEntity> {
 
     public static final Supplier<BlockSetType> TRAIN_SET_TYPE = () -> new BlockSetType(
-        "create:train",
+        "mohistmc:train",
         true,
         true,
         true,
@@ -55,7 +55,7 @@ public class SlidingDoorBlock extends DoorBlock implements IWrenchable, IBE<Slid
     );
 
     public static final Supplier<BlockSetType> GLASS_SET_TYPE = () -> new BlockSetType(
-        "create:glass",
+        "mohistmc:glass",
         true,
         true,
         true,
@@ -71,7 +71,7 @@ public class SlidingDoorBlock extends DoorBlock implements IWrenchable, IBE<Slid
         SoundEvents.STONE_BUTTON_CLICK_ON
     );
     public static final Supplier<BlockSetType> STONE_SET_TYPE = () -> new BlockSetType(
-        "create:stone",
+        "mohistmc:stone",
         true,
         true,
         true,

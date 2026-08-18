@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:copper",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:copper_casing_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.copper_casing.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:copper_casing"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.copper_casing"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

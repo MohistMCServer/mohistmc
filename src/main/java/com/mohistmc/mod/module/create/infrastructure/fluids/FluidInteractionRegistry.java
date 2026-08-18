@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.fluids;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllFluids;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllFluids;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:windmill",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:shifting_gears_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.shifting_gears.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:cogwheel"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.shifting_gears"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

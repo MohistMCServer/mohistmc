@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.block.connected;
 
-import com.zurrtum.create.client.catnip.render.StitchedSprite;
+import com.mohistmc.mod.module.create.client.catnip.render.StitchedSprite;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.resources.Identifier;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.vanillin;
 
-import com.zurrtum.create.client.vanillin.compose.VisualElement;
-import com.zurrtum.create.client.vanillin.elements.FireElement;
-import com.zurrtum.create.client.vanillin.elements.HitboxElement;
-import com.zurrtum.create.client.vanillin.elements.ShadowElement;
-import com.zurrtum.create.client.vanillin.visuals.*;
+import com.mohistmc.mod.module.create.client.vanillin.compose.VisualElement;
+import com.mohistmc.mod.module.create.client.vanillin.elements.FireElement;
+import com.mohistmc.mod.module.create.client.vanillin.elements.HitboxElement;
+import com.mohistmc.mod.module.create.client.vanillin.elements.ShadowElement;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.*;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.world.entity.Display;
 import net.minecraft.world.entity.Entity;

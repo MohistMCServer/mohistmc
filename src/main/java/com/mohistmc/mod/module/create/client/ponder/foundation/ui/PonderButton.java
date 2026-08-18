@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.ui;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.gui.UIRenderHelper;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.widget.BoxWidget;
-import com.zurrtum.create.client.ponder.foundation.PonderTag;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.BoxWidget;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderTag;
 import java.util.Locale;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

@@ -2,12 +2,12 @@ package com.mohistmc.mod.module.create.content.kinetics.mechanicalArm;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.catnip.nbt.NBTHelper;
-import com.zurrtum.create.content.contraptions.StructureTransform;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import io.netty.buffer.ByteBuf;
 import java.util.Locale;
 import java.util.function.Supplier;

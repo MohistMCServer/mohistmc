@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.api.contraption.dispenser;
 
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorage;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
-import com.zurrtum.create.impl.contraption.dispenser.DispenserBehaviorConverter;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorage;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.impl.contraption.dispenser.DispenserBehaviorConverter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.dispenser.DispenseItemBehavior;

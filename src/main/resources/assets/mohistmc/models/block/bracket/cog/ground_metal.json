@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/bracket/cog/ground",
+  "textures": {
+    "bracket": "mohistmc:block/bracket_metal",
+    "plate": "mohistmc:block/bracket_plate_metal"
+  }
+}

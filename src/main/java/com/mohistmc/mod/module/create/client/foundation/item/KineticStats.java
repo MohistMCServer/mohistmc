@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.foundation.item;
 
-import com.zurrtum.create.api.stress.BlockStressValues;
-import com.zurrtum.create.api.stress.BlockStressValues.GeneratedRpm;
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.catnip.lang.LangBuilder;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.equipment.goggles.GogglesItem;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.content.kinetics.base.IRotate.StressImpact;
-import com.zurrtum.create.content.kinetics.steamEngine.SteamEngineBlock;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.config.CKinetics;
+import com.mohistmc.mod.module.create.api.stress.BlockStressValues;
+import com.mohistmc.mod.module.create.api.stress.BlockStressValues.GeneratedRpm;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.catnip.lang.LangBuilder;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.equipment.goggles.GogglesItem;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.StressImpact;
+import com.mohistmc.mod.module.create.content.kinetics.steamEngine.SteamEngineBlock;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.CKinetics;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.network.chat.CommonComponents;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.sound;
 
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;

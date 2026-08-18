@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.api.behaviour.movement;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.core.BlockPos;
 

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization.storage;
 
-import com.zurrtum.create.client.flywheel.api.visual.EntityVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.visualization.VisualizationHelper;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.EntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.VisualizationHelper;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import org.jspecify.annotations.Nullable;

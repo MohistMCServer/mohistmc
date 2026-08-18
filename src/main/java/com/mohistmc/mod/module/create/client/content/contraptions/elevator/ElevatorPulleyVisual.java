@@ -1,21 +1,22 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.elevator;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.content.contraptions.pulley.PulleyRenderer;
-import com.zurrtum.create.client.content.kinetics.base.ShaftVisual;
-import com.zurrtum.create.client.content.processing.burner.ScrollInstance;
-import com.zurrtum.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.util.InstanceRecycler;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorPulleyBlock;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorPulleyBlockEntity;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.content.contraptions.pulley.PulleyRenderer;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.ShaftVisual;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.util.InstanceRecycler;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorPulleyBlock;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorPulleyBlockEntity;
 import it.unimi.dsi.fastutil.longs.LongArraySet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import net.minecraft.core.SectionPos;
@@ -96,7 +97,7 @@ public class ElevatorPulleyVisual extends ShaftVisual<ElevatorPulleyBlockEntity>
     }
 
     @Override
-    public void beginFrame(Context ctx) {
+    public void beginFrame(DynamicVisual.Context ctx) {
         animate(PulleyRenderer.getBlockEntityOffset(ctx.partialTick(), blockEntity));
     }
 

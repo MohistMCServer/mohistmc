@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.embed;
 
-import com.zurrtum.create.client.flywheel.backend.engine.CpuArena;
+import com.mohistmc.mod.module.create.client.flywheel.backend.engine.CpuArena;
 import it.unimi.dsi.fastutil.objects.ReferenceLinkedOpenHashSet;
 import it.unimi.dsi.fastutil.objects.ReferenceSet;
 

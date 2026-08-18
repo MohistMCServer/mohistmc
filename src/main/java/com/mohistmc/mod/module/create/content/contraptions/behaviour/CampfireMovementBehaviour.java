@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour;
 
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.CampfireBlock;

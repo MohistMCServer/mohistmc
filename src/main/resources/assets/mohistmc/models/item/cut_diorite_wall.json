@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "mohistmc:block/palettes/stone_types/cut/diorite_cut"
+  }
+}

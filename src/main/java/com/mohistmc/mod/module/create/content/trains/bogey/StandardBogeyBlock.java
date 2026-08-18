@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.trains.bogey;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBogeyStyles;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllTrackMaterials;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockItemRequirement;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllTrackMaterials;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;

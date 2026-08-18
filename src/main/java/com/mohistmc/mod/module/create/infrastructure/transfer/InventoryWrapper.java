@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.transfer;
 
 import com.google.common.collect.MapMaker;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import java.util.Map;
 import java.util.function.Predicate;
 import net.minecraft.world.item.ItemStack;

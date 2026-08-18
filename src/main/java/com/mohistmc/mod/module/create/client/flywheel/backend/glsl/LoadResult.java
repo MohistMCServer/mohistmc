@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
 
-import com.zurrtum.create.client.flywheel.backend.compile.core.ShaderException;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.core.ShaderException;
 
 public sealed interface LoadResult {
     SourceFile unwrap();

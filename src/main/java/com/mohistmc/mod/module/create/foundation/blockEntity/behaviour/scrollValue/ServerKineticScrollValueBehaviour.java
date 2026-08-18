@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import net.minecraft.world.entity.player.Player;
 
 public class ServerKineticScrollValueBehaviour extends ServerScrollValueBehaviour {

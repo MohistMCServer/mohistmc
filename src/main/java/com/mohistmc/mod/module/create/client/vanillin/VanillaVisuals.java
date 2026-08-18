@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.vanillin;
 
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.client.vanillin.compose.*;
-import com.zurrtum.create.client.vanillin.config.*;
-import com.zurrtum.create.client.vanillin.elements.ShadowElement;
-import com.zurrtum.create.client.vanillin.visuals.*;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.client.vanillin.compose.*;
+import com.mohistmc.mod.module.create.client.vanillin.config.*;
+import com.mohistmc.mod.module.create.client.vanillin.elements.ShadowElement;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

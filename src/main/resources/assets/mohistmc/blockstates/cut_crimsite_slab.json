@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mohistmc:block/cut_crimsite_slab"
+    },
+    "type=double": {
+      "model": "mohistmc:block/cut_crimsite"
+    },
+    "type=top": {
+      "model": "mohistmc:block/cut_crimsite_slab_top"
+    }
+  }
+}

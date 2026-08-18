@@ -1,0 +1,8 @@
+{
+  "parent": "mohistmc:block/bars/cap",
+  "textures": {
+    "bars": "mohistmc:block/bars/copper_bars",
+    "edge": "mohistmc:block/bars/copper_bars_edge",
+    "particle": "mohistmc:block/bars/copper_bars"
+  }
+}

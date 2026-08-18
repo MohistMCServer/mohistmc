@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.behaviour.movement;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;

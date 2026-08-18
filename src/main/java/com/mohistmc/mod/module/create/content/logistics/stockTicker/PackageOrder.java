@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.content.logistics.stockTicker;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import java.util.Collections;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;

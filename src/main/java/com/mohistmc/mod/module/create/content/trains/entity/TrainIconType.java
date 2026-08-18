@@ -7,7 +7,7 @@ import java.util.Map;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public record TrainIconType(Identifier id) {
     public static final Codec<TrainIconType> CODEC = Identifier.CODEC.xmap(TrainIconType::byId, TrainIconType::id);

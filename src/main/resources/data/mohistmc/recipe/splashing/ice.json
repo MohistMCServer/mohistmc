@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "minecraft:ice",
+  "results": [
+    {
+      "id": "minecraft:packed_ice"
+    }
+  ]
+}
+

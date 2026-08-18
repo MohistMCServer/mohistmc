@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.behaviour.interaction.MovingInteractionBehaviour;
-import com.zurrtum.create.content.contraptions.AbstractContraptionEntity;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
-import com.zurrtum.create.content.contraptions.mounted.MountedContraption;
-import com.zurrtum.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.behaviour.interaction.MovingInteractionBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.content.contraptions.mounted.MountedContraption;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.UUIDUtil;
@@ -27,7 +27,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import org.apache.commons.lang3.tuple.MutablePair;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.LOGGER;
+import static com.mohistmc.mod.module.create.Create.LOGGER;
 
 public class DeployerMovingInteraction extends MovingInteractionBehaviour {
 

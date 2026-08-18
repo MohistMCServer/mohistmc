@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visual;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstancerProvider;
-import com.zurrtum.create.client.flywheel.api.visual.Visual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.Visual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.Level;
 

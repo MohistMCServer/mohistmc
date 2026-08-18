@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.compat;
 
-import com.zurrtum.create.client.flywheel.impl.FlwImplXplat;
+import com.mohistmc.mod.module.create.client.flywheel.impl.FlwImplXplat;
 
 public enum CompatMod {
     IRIS("iris"), SODIUM("sodium"), SCALABLELUX("scalablelux");

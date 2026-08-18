@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/flywheel/flywheel",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/flywheel/flywheel_shaftless.obj"
+}

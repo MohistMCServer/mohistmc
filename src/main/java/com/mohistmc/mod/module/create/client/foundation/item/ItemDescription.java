@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.item;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.client.catnip.lang.FontHelper.Palette;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.client.catnip.lang.FontHelper.Palette;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.IdentityHashMap;

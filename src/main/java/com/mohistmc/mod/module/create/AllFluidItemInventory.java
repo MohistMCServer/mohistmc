@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.infrastructure.fluids.BucketFluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidItemInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidItemInventoryWrapper;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BucketFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidItemInventoryWrapper;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectArrayMap;
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
 import java.util.List;
 import mezz.jei.api.gui.handlers.IGuiContainerHandler;
 import net.minecraft.client.renderer.Rect2i;

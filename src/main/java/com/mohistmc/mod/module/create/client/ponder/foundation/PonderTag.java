@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation;
 
 import com.google.common.base.Suppliers;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement.GuiItemRenderBuilder;
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
-import com.zurrtum.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement.GuiItemRenderBuilder;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.client.ponder.Ponder;
 import java.util.function.Supplier;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;

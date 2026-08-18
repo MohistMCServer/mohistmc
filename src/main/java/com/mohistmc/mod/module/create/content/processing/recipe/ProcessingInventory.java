@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.processing.recipe;
 
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
-import com.zurrtum.create.infrastructure.transfer.SlotRangeCache;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.transfer.SlotRangeCache;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;

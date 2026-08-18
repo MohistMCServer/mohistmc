@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.foundation;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.catnip.codecs.CatnipCodecUtils;
-import com.zurrtum.create.catnip.nbt.NBTProcessors;
-import com.zurrtum.create.infrastructure.component.ClipboardContent;
-import com.zurrtum.create.infrastructure.component.ClipboardEntry;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.catnip.codecs.CatnipCodecUtils;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTProcessors;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
+import com.mohistmc.mod.module.create.infrastructure.component.ClipboardEntry;
 import java.util.List;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.registries.BuiltInRegistries;

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_table_cloth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:red_table_cloth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mohistmc:crafting/logistics/red_table_cloth_clear"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_table_cloth"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mohistmc:crafting/logistics/red_table_cloth_clear"
+    ]
+  }
+}

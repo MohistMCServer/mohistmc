@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:lever",
+    "C": "mohistmc:railway_casing",
+    "I": "mohistmc:precision_mechanism"
+  },
+  "pattern": [
+    "B",
+    "C",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:controls"
+  }
+}

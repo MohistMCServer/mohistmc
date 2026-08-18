@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllFluids;
-import com.zurrtum.create.client.content.equipment.armor.DivingLavaFogModifier;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.client.infrastructure.fluid.FluidFogModifier;
-import com.zurrtum.create.client.infrastructure.fluid.FluidTintSource;
-import com.zurrtum.create.client.infrastructure.fluid.FogDistanceSupplier;
-import com.zurrtum.create.infrastructure.fluids.FlowableFluid;
+import com.mohistmc.mod.module.create.AllFluids;
+import com.mohistmc.mod.module.create.client.content.equipment.armor.DivingLavaFogModifier;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.client.infrastructure.fluid.FluidFogModifier;
+import com.mohistmc.mod.module.create.client.infrastructure.fluid.FluidTintSource;
+import com.mohistmc.mod.module.create.client.infrastructure.fluid.FogDistanceSupplier;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FlowableFluid;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import java.util.IdentityHashMap;

@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:windmill_maxed",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:ejector_maxed_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.ejector_maxed.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:weighted_ejector"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.ejector_maxed"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

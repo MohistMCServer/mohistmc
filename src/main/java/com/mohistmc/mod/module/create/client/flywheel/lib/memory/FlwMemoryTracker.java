@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.memory;
 
-import com.zurrtum.create.client.flywheel.lib.util.StringUtil;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.StringUtil;
 import java.util.concurrent.atomic.AtomicLong;
 import org.lwjgl.system.MemoryUtil;
 

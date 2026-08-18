@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.chainConveyor;
 
-import com.zurrtum.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

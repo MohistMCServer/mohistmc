@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.logistics.vault;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.connectivity.ConnectivityHandler;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.item.ItemHelper;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.connectivity.ConnectivityHandler;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

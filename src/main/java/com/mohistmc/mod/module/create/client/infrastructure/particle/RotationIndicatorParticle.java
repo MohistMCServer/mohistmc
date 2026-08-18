@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.content.equipment.goggles.GogglesItem;
-import com.zurrtum.create.infrastructure.particle.RotationIndicatorParticleData;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.content.equipment.goggles.GogglesItem;
+import com.mohistmc.mod.module.create.infrastructure.particle.RotationIndicatorParticleData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;

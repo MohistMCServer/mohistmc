@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.catnip.nbt.NBTProcessors;
-import com.zurrtum.create.foundation.item.SwingControlItem;
-import com.zurrtum.create.foundation.utility.BlockHelper;
-import com.zurrtum.create.infrastructure.packet.s2c.ZapperBeamPacket;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTProcessors;
+import com.mohistmc.mod.module.create.foundation.item.SwingControlItem;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ZapperBeamPacket;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;

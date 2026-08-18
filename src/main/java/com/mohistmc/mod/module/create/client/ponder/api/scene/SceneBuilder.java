@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.api.scene;
 
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
-import com.zurrtum.create.client.ponder.foundation.instruction.PonderInstruction;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.instruction.PonderInstruction;
 
 import java.util.function.Consumer;
 

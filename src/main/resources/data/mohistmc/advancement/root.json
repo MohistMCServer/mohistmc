@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "mohistmc:gui/advancements",
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:brass_hand"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.mohistmc.root"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

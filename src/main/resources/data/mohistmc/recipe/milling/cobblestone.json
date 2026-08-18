@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:milling",
+  "ingredient": "minecraft:cobblestone",
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "minecraft:gravel"
+    }
+  ]
+}
+

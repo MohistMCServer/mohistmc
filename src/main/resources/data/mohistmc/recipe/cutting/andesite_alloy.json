@@ -1,0 +1,12 @@
+{
+  "type": "mohistmc:mechanical_cutting",
+  "ingredient": "mohistmc:andesite_alloy",
+  "processing_time": 200,
+  "results": [
+    {
+      "count": 6,
+      "id": "mohistmc:shaft"
+    }
+  ]
+}
+

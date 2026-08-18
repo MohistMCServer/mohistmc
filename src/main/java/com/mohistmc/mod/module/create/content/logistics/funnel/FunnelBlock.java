@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.logistics.funnel;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
-import com.zurrtum.create.foundation.advancement.AdvancementBehaviour;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
-import com.zurrtum.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviour;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.AxisDirection;

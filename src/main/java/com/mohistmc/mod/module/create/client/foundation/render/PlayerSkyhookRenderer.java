@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.render;
 
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;

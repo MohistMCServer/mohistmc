@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "#c:ingots/copper",
+  "results": [
+    {
+      "id": "mohistmc:copper_sheet"
+    }
+  ]
+}
+

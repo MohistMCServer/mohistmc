@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.behaviour.display.DisplayTarget;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayBoardTarget;
-import com.zurrtum.create.content.redstone.displayLink.target.LecternDisplayTarget;
-import com.zurrtum.create.content.redstone.displayLink.target.NixieTubeDisplayTarget;
-import com.zurrtum.create.content.redstone.displayLink.target.SignDisplayTarget;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplayTarget;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayBoardTarget;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.LecternDisplayTarget;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.NixieTubeDisplayTarget;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.SignDisplayTarget;
 import java.util.function.Supplier;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.BlockEntityTypes;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllDisplayTargets {
     public static final SignDisplayTarget SIGN = register("sign", SignDisplayTarget::new);

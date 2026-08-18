@@ -1,0 +1,13 @@
+{
+  "type": "mohistmc:filling",
+  "ingredient": "mohistmc:blaze_cake_base",
+  "fluid_ingredient": {
+    "type": "fluid_stack",
+    "amount": 20250,
+    "fluid": "minecraft:lava"
+  },
+  "result": {
+    "id": "mohistmc:blaze_cake"
+  }
+}
+

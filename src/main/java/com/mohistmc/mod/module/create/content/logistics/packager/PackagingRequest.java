@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.packager;
 
-import com.zurrtum.create.infrastructure.component.PackageOrderWithCrafts;
+import com.mohistmc.mod.module.create.infrastructure.component.PackageOrderWithCrafts;
 import net.minecraft.world.item.ItemStack;
 import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.apache.commons.lang3.mutable.MutableInt;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visual;
 
-import com.zurrtum.create.client.flywheel.api.visual.DistanceUpdateLimiter;
-import com.zurrtum.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DistanceUpdateLimiter;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import org.joml.FrustumIntersection;
 

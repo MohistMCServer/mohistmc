@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption.dispenser;
 
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;

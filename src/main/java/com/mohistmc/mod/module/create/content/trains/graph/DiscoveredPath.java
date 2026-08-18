@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.trains.station.GlobalStation;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
 
 import java.util.List;
 

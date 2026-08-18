@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.seat;
 
-import com.zurrtum.create.AllEntityTypes;
-import com.zurrtum.create.api.entity.FakePlayerHandler;
-import com.zurrtum.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.AllEntityTypes;
+import com.mohistmc.mod.module.create.api.entity.FakePlayerHandler;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;

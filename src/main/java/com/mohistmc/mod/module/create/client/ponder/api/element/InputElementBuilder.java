@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.element;
 
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
 import net.minecraft.world.item.ItemStack;
 
 public interface InputElementBuilder {

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.crate;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllMountedStorageTypes;
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorage;
+import com.mohistmc.mod.module.create.AllMountedStorageTypes;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;

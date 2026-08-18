@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.infrastructure.debugInfo.DebugInformation;
-import com.zurrtum.create.infrastructure.debugInfo.element.DebugInfoSection;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.DebugInformation;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.element.DebugInfoSection;
 import io.netty.buffer.ByteBuf;
 import java.util.List;
 import net.minecraft.network.codec.ByteBufCodecs;

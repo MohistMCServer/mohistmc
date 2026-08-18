@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:stock_link"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:stock_link"
+  }
+}

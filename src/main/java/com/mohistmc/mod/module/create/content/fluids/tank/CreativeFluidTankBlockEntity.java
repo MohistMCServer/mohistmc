@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.content.fluids.tank;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.foundation.fluid.FluidTank;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidTank;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.ExtraCodecs;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.render;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState;
 import org.joml.Matrix3x2f;

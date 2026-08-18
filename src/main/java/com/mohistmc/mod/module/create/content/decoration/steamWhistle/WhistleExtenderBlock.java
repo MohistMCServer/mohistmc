@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.decoration.steamWhistle;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.content.decoration.steamWhistle.WhistleBlock.WhistleSize;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.content.decoration.steamWhistle.WhistleBlock.WhistleSize;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

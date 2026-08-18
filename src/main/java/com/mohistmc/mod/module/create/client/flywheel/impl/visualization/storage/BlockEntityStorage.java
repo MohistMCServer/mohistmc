@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization.storage;
 
-import com.zurrtum.create.client.flywheel.api.visual.BlockEntityVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.visualization.VisualizationHelper;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.BlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.VisualizationHelper;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.minecraft.core.BlockPos;

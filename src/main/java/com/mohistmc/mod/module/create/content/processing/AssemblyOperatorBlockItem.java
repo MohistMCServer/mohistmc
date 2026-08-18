@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.processing;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.content.kinetics.belt.BeltBlock;
-import com.zurrtum.create.content.kinetics.belt.BeltSlope;
-import com.zurrtum.create.content.processing.basin.BasinBlock;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltSlope;
+import com.mohistmc.mod.module.create.content.processing.basin.BasinBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;

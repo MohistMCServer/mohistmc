@@ -239,8 +239,8 @@ public class ItemPickerModal extends Modal {
     @Override
     public boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
         if (!visible) return false;
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
 
         // 点击对话框内部
         if (mx >= dialogX && mx < dialogX + DIALOG_W && my >= dialogY && my < dialogY + DIALOG_H) {

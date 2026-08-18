@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform;
 
-import com.zurrtum.create.client.flywheel.backend.gl.buffer.GlBuffer;
-import com.zurrtum.create.client.flywheel.backend.gl.buffer.GlBufferUsage;
-import com.zurrtum.create.client.flywheel.lib.math.MoreMath;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBuffer;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBufferUsage;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.MoreMath;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 import org.jspecify.annotations.Nullable;
 import org.lwjgl.opengl.GL32;
 

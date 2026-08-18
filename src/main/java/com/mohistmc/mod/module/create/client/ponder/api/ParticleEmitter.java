@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api;
 
-import com.zurrtum.create.client.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.create.client.ponder.api.level.PonderLevel;
 
 @FunctionalInterface
 public interface ParticleEmitter {

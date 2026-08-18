@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.ponder.enums;
 
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.client.ponder.config.CClient;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.client.ponder.config.CClient;
 
-import static com.zurrtum.create.client.ponder.Ponder.MOD_ID;
+import static com.mohistmc.mod.module.create.client.ponder.Ponder.MOD_ID;
 
 public class PonderConfig {
     private static CClient client;

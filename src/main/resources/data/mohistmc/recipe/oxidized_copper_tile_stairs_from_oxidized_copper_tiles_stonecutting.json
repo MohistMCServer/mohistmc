@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "mohistmc:oxidized_copper_tiles",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:oxidized_copper_tile_stairs"
+  }
+}

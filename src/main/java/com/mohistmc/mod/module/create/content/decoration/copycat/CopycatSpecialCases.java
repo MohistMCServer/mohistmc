@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.decoration.copycat;
 
-import com.zurrtum.create.content.decoration.palettes.GlassPaneBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.GlassPaneBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.IronBarsBlock;

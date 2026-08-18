@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.redstone.contact;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorColumn;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorColumn.ColumnCoords;
-import com.zurrtum.create.foundation.block.RedStoneConnectBlock;
-import com.zurrtum.create.foundation.block.WeakPowerControlBlock;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorColumn;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorColumn.ColumnCoords;
+import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
+import com.mohistmc.mod.module.create.foundation.block.WeakPowerControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
-import com.zurrtum.create.content.redstone.diodes.BrassDiodeBlock;
-import com.zurrtum.create.foundation.block.WeakPowerControlBlock;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.redstone.diodes.BrassDiodeBlock;
+import com.mohistmc.mod.module.create.foundation.block.WeakPowerControlBlock;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour;
 
-import com.zurrtum.create.content.contraptions.Contraption;
-import com.zurrtum.create.content.decoration.slidingDoor.SlidingDoorBlock;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.bearing;
 
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.world.item.ItemStack;
 import org.jspecify.annotations.Nullable;
 

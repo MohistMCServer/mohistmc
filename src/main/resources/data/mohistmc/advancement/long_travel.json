@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:long_train",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:long_travel_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.long_travel.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:green_seat"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.long_travel"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

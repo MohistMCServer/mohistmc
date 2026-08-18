@@ -3,8 +3,8 @@ package com.mohistmc.mod.module.create;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mojang.serialization.DynamicOps;
-import com.zurrtum.create.content.fluids.transfer.FillingRecipe;
-import com.zurrtum.create.content.kinetics.deployer.DeployerApplicationRecipe;
+import com.mohistmc.mod.module.create.content.fluids.transfer.FillingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerApplicationRecipe;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
@@ -22,8 +22,8 @@ public class AllAssemblyRecipeNames {
             return factory.apply(ops, object);
         }
         String name;
-        if (type.startsWith("create:")) {
-            name = type.replaceFirst("create:", "");
+        if (type.startsWith("mohistmc:")) {
+            name = type.replaceFirst("mohistmc:", "");
         } else {
             name = type.replaceFirst(":", ".");
         }

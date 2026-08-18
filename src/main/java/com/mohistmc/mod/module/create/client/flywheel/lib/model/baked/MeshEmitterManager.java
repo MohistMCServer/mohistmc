@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.flywheel.lib.model.baked;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.BufferBuilder;
-import com.zurrtum.create.client.flywheel.api.material.Material;
-import com.zurrtum.create.client.flywheel.api.model.Model;
-import com.zurrtum.create.client.flywheel.lib.model.SimpleModel;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.Material;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.SimpleModel;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceArrayMap;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceMap;
 import java.util.function.Function;

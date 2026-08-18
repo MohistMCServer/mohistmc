@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.foundation.item.TooltipHelper;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.base.IRotate.StressImpact;
-import com.zurrtum.create.content.kinetics.deployer.DeployerBlockEntity;
-import com.zurrtum.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipHelper;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.StressImpact;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;

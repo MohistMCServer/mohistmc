@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.foundation.gui.menu;
 
-import com.zurrtum.create.foundation.utility.IInteractionChecker;
+import com.mohistmc.mod.module.create.foundation.utility.IInteractionChecker;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;

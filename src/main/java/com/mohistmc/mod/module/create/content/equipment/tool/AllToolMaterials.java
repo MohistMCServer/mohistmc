@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.tool;
 
-import com.zurrtum.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItemTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;

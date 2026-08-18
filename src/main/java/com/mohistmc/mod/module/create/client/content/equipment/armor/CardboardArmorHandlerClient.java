@@ -2,12 +2,12 @@ package com.mohistmc.mod.module.create.client.content.equipment.armor;
 
 import com.google.common.cache.Cache;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.content.logistics.box.PackageRenderer;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.content.equipment.armor.CardboardArmorHandler;
-import com.zurrtum.create.foundation.utility.TickBasedCache;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.content.logistics.box.PackageRenderer;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.content.equipment.armor.CardboardArmorHandler;
+import com.mohistmc.mod.module.create.foundation.utility.TickBasedCache;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import net.minecraft.client.player.AbstractClientPlayer;

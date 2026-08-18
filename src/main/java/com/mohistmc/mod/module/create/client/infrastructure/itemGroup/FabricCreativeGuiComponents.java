@@ -16,7 +16,7 @@
 
 package com.mohistmc.mod.module.create.client.infrastructure.itemGroup;
 
-import com.zurrtum.create.infrastructure.itemGroup.FabricItemGroupImpl;
+import com.mohistmc.mod.module.create.infrastructure.itemGroup.FabricItemGroupImpl;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Predicate;

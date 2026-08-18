@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.collision;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.foundation.collision.CollisionList.Populate;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.foundation.collision.CollisionList.Populate;
 import net.minecraft.world.phys.Vec3;
 
 import static java.lang.Math.abs;

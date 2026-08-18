@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.trains.bogey.AllBogeySizes;
-import com.zurrtum.create.content.trains.bogey.BogeyStyle;
+import com.mohistmc.mod.module.create.content.trains.bogey.AllBogeySizes;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllBogeyStyles {
     public static final Map<Identifier, BogeyStyle> BOGEY_STYLES = new HashMap<>();

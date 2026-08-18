@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.crusher;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.*;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

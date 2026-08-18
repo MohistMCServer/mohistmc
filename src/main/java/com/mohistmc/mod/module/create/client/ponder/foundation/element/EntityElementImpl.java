@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.element;
 
-import com.zurrtum.create.client.ponder.api.element.EntityElement;
+import com.mohistmc.mod.module.create.client.ponder.api.element.EntityElement;
 import net.minecraft.world.entity.Entity;
 
 public class EntityElementImpl extends TrackedElementBase<Entity> implements EntityElement {

@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.content.kinetics.transmission.sequencer;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.catnip.nbt.NBTHelper;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import java.util.List;
 import java.util.Vector;
 import net.minecraft.nbt.CompoundTag;

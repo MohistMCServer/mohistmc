@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.decoration.encasing;
 
-import com.zurrtum.create.content.equipment.wrench.IWrenchable;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;

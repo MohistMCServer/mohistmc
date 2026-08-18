@@ -1,6 +1,7 @@
 package com.mohistmc.mod.api.gui;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.input.MouseButtonEvent;
 
 public abstract class PositionedWidget {
     protected int relativeX, relativeY;
@@ -11,6 +12,8 @@ public abstract class PositionedWidget {
     protected boolean anchorRight, anchorBottom; // 是否锚定右下
     protected int alpha = 255; // 自身透明度 0-255，默认不透明
     protected int flexGrow = 0; // 弹性增长因子，0=固定大小，>0 在布局中按比例占据剩余空间
+    /** GUI 编辑器标识（用于保存/加载布局时匹配组件） */
+    protected String editorId;
 
     public PositionedWidget(int relX, int relY, int width, int height) {
         this.relativeX = relX;
@@ -46,6 +49,53 @@ public abstract class PositionedWidget {
         this.alpha = (int) (alpha * 255) & 0xFF;
         return this;
     }
+
+    /** 设置 GUI 编辑器标识（用于保存/加载布局时组件匹配） */
+    public PositionedWidget setEditorId(String id) {
+        this.editorId = id;
+        return this;
+    }
+
+    /** 获取编辑器标识 */
+    public String getEditorId() {
+        return editorId;
+    }
+
+    /** 获取相对 X 坐标 */
+    public int getRelativeX() { return relativeX; }
+
+    /** 获取相对 Y 坐标 */
+    public int getRelativeY() { return relativeY; }
+
+    /** 是否右锚定 */
+    public boolean isAnchorRight() { return anchorRight; }
+
+    /** 是否底锚定 */
+    public boolean isAnchorBottom() { return anchorBottom; }
+
+    /** 设置相对 X 坐标 */
+    public void setRelativeX(int x) { this.relativeX = x; }
+
+    /** 设置相对 Y 坐标 */
+    public void setRelativeY(int y) { this.relativeY = y; }
+
+    /** 设置右锚定 */
+    public void setAnchorRight(boolean v) { this.anchorRight = v; }
+
+    /** 设置底锚定 */
+    public void setAnchorBottom(boolean v) { this.anchorBottom = v; }
+
+    /** 获取内容区域宽度（用于锚点坐标转换） */
+    public int getContentWidth() { return contentWidth; }
+
+    /** 获取内容区域高度（用于锚点坐标转换） */
+    public int getContentHeight() { return contentHeight; }
+
+    /** 获取父容器左上角绝对 X（根级组件为 0），用于绝对坐标→相对坐标转换 */
+    public int getScreenLeft() { return screenLeft; }
+
+    /** 获取父容器左上角绝对 Y（根级组件为 0），用于绝对坐标→相对坐标转换 */
+    public int getScreenTop() { return screenTop; }
 
     /** 设置弹性增长因子（仅在有布局管理的父容器中生效） */
     public PositionedWidget setFlexGrow(int grow) {
@@ -109,6 +159,18 @@ public abstract class PositionedWidget {
         int x = getAbsoluteX();
         int y = getAbsoluteY();
         return mouseX >= x && mouseX < x + width && mouseY >= y && mouseY < y + height;
+    }
+
+    // ======== 坐标转换便捷方法 ========
+
+    /** 将鼠标事件的屏幕 X 坐标转为逻辑坐标 */
+    protected static int logicalX(MouseButtonEvent event) {
+        return GuiCoord.toLogicalX(event.x());
+    }
+
+    /** 将鼠标事件的屏幕 Y 坐标转为逻辑坐标 */
+    protected static int logicalY(MouseButtonEvent event) {
+        return GuiCoord.toLogicalY(event.y());
     }
 
     public abstract void render(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick);

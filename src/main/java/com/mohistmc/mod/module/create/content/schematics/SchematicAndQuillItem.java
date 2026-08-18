@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
-import com.zurrtum.create.AllEntityTypes;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.nbt.NBTHelper;
-import com.zurrtum.create.catnip.registry.RegisteredObjectsHelper;
-import com.zurrtum.create.content.contraptions.glue.SuperGlueEntity;
+import com.mohistmc.mod.module.create.AllEntityTypes;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
+import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
+import com.mohistmc.mod.module.create.content.contraptions.glue.SuperGlueEntity;
 import java.util.Iterator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

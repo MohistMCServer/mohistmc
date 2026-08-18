@@ -5,18 +5,18 @@ import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.zurrtum.create.AllBogeyStyles;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.trains.bogey.AbstractBogeyBlock;
-import com.zurrtum.create.content.trains.bogey.BogeySize;
-import com.zurrtum.create.content.trains.bogey.BogeyStyle;
-import com.zurrtum.create.content.trains.graph.DimensionPalette;
-import com.zurrtum.create.content.trains.graph.TrackGraph;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlock;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeySize;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import java.util.Iterator;
 import java.util.Optional;
 import java.util.Random;
@@ -34,8 +34,8 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.trains.bogey.AbstractBogeyBlockEntity.BOGEY_DATA_KEY;
-import static com.zurrtum.create.content.trains.bogey.AbstractBogeyBlockEntity.BOGEY_STYLE_KEY;
+import static com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity.BOGEY_DATA_KEY;
+import static com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity.BOGEY_STYLE_KEY;
 
 public class CarriageBogey {
     public static final StreamCodec<RegistryFriendlyByteBuf, CarriageBogey> STREAM_CODEC = StreamCodec.composite(

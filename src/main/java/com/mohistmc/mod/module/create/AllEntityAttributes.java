@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.function.Supplier;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.decoration.encasing;
 
-import com.zurrtum.create.client.AllCasings;
-import com.zurrtum.create.client.AllCasings.Entry;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.client.AllCasings;
+import com.mohistmc.mod.module.create.client.AllCasings.Entry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.task;
 
-import com.zurrtum.create.client.flywheel.api.task.Plan;
-import com.zurrtum.create.client.flywheel.api.task.TaskExecutor;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.Plan;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.TaskExecutor;
 
 public final class UnitPlan<C> implements Plan<C> {
     private static final UnitPlan<?> INSTANCE = new UnitPlan<>();

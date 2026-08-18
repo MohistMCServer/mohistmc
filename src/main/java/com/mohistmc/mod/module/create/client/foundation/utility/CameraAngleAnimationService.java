@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.utility;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import java.util.Locale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

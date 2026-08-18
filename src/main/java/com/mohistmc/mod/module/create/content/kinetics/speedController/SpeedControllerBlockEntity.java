@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.content.kinetics.speedController;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.kinetics.RotationPropagator;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.content.kinetics.simpleRelays.CogWheelBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.ICogWheel;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerKineticScrollValueBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.RotationPropagator;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.CogWheelBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ICogWheel;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerKineticScrollValueBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;

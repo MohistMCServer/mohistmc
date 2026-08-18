@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "mohistmc:block/linear_chassis_end_sticky",
+    "side": "mohistmc:block/secondary_linear_chassis_side",
+    "top": "mohistmc:block/linear_chassis_end_sticky"
+  }
+}

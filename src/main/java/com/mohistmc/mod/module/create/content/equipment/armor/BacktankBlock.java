@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllEnchantments;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.api.entity.FakePlayerHandler;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockItemRequirement;
-import com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement.ItemUseType;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllEnchantments;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.api.entity.FakePlayerHandler;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
+import com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement.ItemUseType;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

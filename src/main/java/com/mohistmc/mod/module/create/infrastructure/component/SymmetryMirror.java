@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.infrastructure.component;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.content.equipment.symmetryWand.mirror.CrossPlaneMirror;
-import com.zurrtum.create.content.equipment.symmetryWand.mirror.EmptyMirror;
-import com.zurrtum.create.content.equipment.symmetryWand.mirror.PlaneMirror;
-import com.zurrtum.create.content.equipment.symmetryWand.mirror.TriplePlaneMirror;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.CrossPlaneMirror;
+import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.EmptyMirror;
+import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.PlaneMirror;
+import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.TriplePlaneMirror;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

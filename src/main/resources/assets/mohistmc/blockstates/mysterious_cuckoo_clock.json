@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mohistmc:block/cuckoo_clock/block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mohistmc:block/cuckoo_clock/block"
+    },
+    "facing=south": {
+      "model": "mohistmc:block/cuckoo_clock/block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mohistmc:block/cuckoo_clock/block",
+      "y": 270
+    }
+  }
+}

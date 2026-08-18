@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.decoration.steamWhistle;
 
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.content.decoration.steamWhistle.WhistleBlock.WhistleSize;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.content.decoration.steamWhistle.WhistleBlock.WhistleSize;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.BlockPos;

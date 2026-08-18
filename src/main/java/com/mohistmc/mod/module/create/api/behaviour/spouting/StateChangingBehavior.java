@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.behaviour.spouting;
 
-import com.zurrtum.create.content.fluids.spout.SpoutBlockEntity;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.content.fluids.spout.SpoutBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import net.minecraft.core.BlockPos;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions;
 
-import com.zurrtum.create.catnip.levelWrappers.WrappedLevel;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.WrappedLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;

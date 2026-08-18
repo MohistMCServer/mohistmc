@@ -1,0 +1,8 @@
+{
+	"parent": "mohistmc:block/belt_cover/andesite_belt_cover_x",
+	"textures": {
+		"0": "mohistmc:block/funnel/brass_funnel_frame",
+		"1": "mohistmc:block/brass_belt_cover",
+		"particle": "#0"
+	}
+}

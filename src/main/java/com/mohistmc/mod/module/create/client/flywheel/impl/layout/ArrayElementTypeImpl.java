@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.layout;
 
-import com.zurrtum.create.client.flywheel.api.layout.ArrayElementType;
-import com.zurrtum.create.client.flywheel.api.layout.ElementType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.ArrayElementType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.ElementType;
 import org.jetbrains.annotations.Range;
 
 record ArrayElementTypeImpl(ElementType innerType, @Range(from = 1, to = 256) int length, int byteSize,

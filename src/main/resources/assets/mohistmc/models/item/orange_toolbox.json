@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/toolbox/item",
+  "textures": {
+    "0": "mohistmc:block/toolbox/orange"
+  }
+}

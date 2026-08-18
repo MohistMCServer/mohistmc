@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.processing.recipe;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;
 import io.netty.buffer.ByteBuf;
 import java.util.Locale;
 import net.minecraft.network.codec.StreamCodec;

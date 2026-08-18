@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:water_supply",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:hose_pulley_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.hose_pulley.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:hose_pulley"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.hose_pulley"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

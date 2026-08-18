@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.logistics.factoryBoard;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.logistics.packager.PackagerBlockEntity;
-import com.zurrtum.create.content.logistics.packager.repackager.RepackagerBlockEntity;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.logistics.packager.PackagerBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.packager.repackager.RepackagerBlockEntity;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.UUID;

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "mohistmc:andesite_alloy",
+    "C": "mohistmc:brass_casing",
+    "I": "mohistmc:precision_mechanism",
+    "L": "#c:plates/brass"
+  },
+  "pattern": [
+    "LLA",
+    "L  ",
+    "IC "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:mechanical_arm"
+  }
+}

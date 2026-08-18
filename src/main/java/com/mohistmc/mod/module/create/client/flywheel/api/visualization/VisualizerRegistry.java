@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.visualization;
 
-import com.zurrtum.create.client.flywheel.api.internal.FlwApiLink;
+import com.mohistmc.mod.module.create.client.flywheel.api.internal.FlwApiLink;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.entity.BlockEntity;

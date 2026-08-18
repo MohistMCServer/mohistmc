@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.content.trains.schedule.condition;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.client.content.trains.schedule.IScheduleInput;
-import com.zurrtum.create.client.foundation.gui.ModularGuiLineBuilder;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
-import com.zurrtum.create.content.trains.schedule.condition.RedstoneLinkCondition;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.client.content.trains.schedule.IScheduleInput;
+import com.mohistmc.mod.module.create.client.foundation.gui.ModularGuiLineBuilder;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
+import com.mohistmc.mod.module.create.content.trains.schedule.condition.RedstoneLinkCondition;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

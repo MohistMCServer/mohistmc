@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.Create;
+import com.mohistmc.mod.module.create.Create;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.UUID;

@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllEntityTypes;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.equipment.armor.BacktankUtil;
-import com.zurrtum.create.content.equipment.zapper.ShootableGadgetItemMethods;
-import com.zurrtum.create.foundation.item.SwingControlItem;
-import com.zurrtum.create.foundation.utility.GlobalRegistryAccess;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.packet.s2c.PotatoCannonPacket;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllEntityTypes;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.equipment.armor.BacktankUtil;
+import com.mohistmc.mod.module.create.content.equipment.zapper.ShootableGadgetItemMethods;
+import com.mohistmc.mod.module.create.foundation.item.SwingControlItem;
+import com.mohistmc.mod.module.create.foundation.utility.GlobalRegistryAccess;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.PotatoCannonPacket;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;

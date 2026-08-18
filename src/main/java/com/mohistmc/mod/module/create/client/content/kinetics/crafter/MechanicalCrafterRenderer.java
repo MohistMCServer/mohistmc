@@ -2,20 +2,20 @@ package com.mohistmc.mod.module.create.client.content.kinetics.crafter;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationManager;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlock;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlockEntity;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.Phase;
-import com.zurrtum.create.content.kinetics.crafter.RecipeGridHandler.GroupedItems;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlock;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.Phase;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.RecipeGridHandler.GroupedItems;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -41,8 +41,8 @@ import org.joml.Quaternionf;
 import org.joml.Quaternionfc;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
-import static com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
 
 public class MechanicalCrafterRenderer implements BlockEntityRenderer<MechanicalCrafterBlockEntity, MechanicalCrafterRenderer.MechanicalCrafterRenderState> {
     protected static final int CRAFTING_PHASE_ORDINAL = Phase.CRAFTING.ordinal();

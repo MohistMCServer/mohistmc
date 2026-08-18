@@ -1,0 +1,15 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "mohistmc:crushed_raw_zinc",
+  "results": [
+    {
+      "count": 9,
+      "id": "mohistmc:zinc_nugget"
+    },
+    {
+      "chance": 0.25,
+      "id": "minecraft:gunpowder"
+    }
+  ]
+}
+

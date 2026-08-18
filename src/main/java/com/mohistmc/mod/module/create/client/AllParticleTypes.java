@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.infrastructure.particle.*;
+import com.mohistmc.mod.module.create.client.infrastructure.particle.*;
 import net.minecraft.client.particle.ParticleResources;
 
-import static com.zurrtum.create.AllParticleTypes.*;
+import static com.mohistmc.mod.module.create.AllParticleTypes.*;
 
 public class AllParticleTypes {
     public static void register(ParticleResources particle) {

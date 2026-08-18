@@ -1,6 +1,14 @@
 {
   "values": [
     "mohistmc:rope",
-    "mohistmc:tomatoes_on_rope"
+    "mohistmc:tomatoes_on_rope",
+    "mohistmc:rope",
+    "mohistmc:pulley_magnet",
+    "mohistmc:andesite_ladder",
+    "mohistmc:brass_ladder",
+    "mohistmc:copper_ladder",
+    "mohistmc:andesite_scaffolding",
+    "mohistmc:brass_scaffolding",
+    "mohistmc:copper_scaffolding"
   ]
 }

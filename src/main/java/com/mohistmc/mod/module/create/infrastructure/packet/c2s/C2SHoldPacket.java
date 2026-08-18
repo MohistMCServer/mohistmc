@@ -10,7 +10,7 @@ import net.minecraft.network.protocol.game.ServerGamePacketListener;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public record C2SHoldPacket(PacketType<Packet<ServerGamePacketListener>> id,
                             Consumer<ServerGamePacketListenerImpl> consumer) implements Packet<ServerGamePacketListener> {

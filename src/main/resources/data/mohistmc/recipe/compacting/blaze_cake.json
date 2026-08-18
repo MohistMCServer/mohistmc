@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:compacting",
+  "ingredients": ["#c:eggs", "minecraft:sugar", "mohistmc:cinder_flour"],
+  "results": [
+    {
+      "id": "mohistmc:blaze_cake_base"
+    }
+  ]
+}
+

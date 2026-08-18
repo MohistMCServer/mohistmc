@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.util;
 
-import com.zurrtum.create.client.flywheel.lib.internal.FlwLibLink;
+import com.mohistmc.mod.module.create.client.flywheel.lib.internal.FlwLibLink;
 
 public final class ShadersModHelper {
     public static final boolean IS_IRIS_LOADED = FlwLibLink.INSTANCE.isIrisLoaded();

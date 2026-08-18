@@ -1,0 +1,11 @@
+{
+  "type": "mohistmc:deploying",
+  "keep_held_item": true,
+  "target": "mohistmc:copper_tile_stairs",
+  "ingredient": "minecraft:honeycomb_block",
+  "results": [
+    {
+      "id": "mohistmc:waxed_copper_tile_stairs"
+    }
+  ]
+}

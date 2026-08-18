@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.model.IndexSequence;
-import com.zurrtum.create.client.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.IndexSequence;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Mesh;
 
 public interface QuadMesh extends Mesh {
     @Override

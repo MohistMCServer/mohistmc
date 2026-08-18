@@ -4,11 +4,11 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileEntityHitAction;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.catnip.data.WorldAttached;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
-import com.zurrtum.create.infrastructure.player.FakePlayerEntity;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileEntityHitAction;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.catnip.data.WorldAttached;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.infrastructure.player.FakePlayerEntity;
 import java.util.UUID;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -40,7 +40,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllPotatoProjectileEntityHitActions {
     public static void register() {

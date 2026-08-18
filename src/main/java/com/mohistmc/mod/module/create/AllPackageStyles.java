@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.logistics.box.PackageStyles.PackageStyle;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageStyles.PackageStyle;
 
 import java.util.ArrayList;
 import java.util.List;

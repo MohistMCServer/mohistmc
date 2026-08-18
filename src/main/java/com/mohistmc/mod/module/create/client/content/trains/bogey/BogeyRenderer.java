@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.trains.bogey;
 
-import com.zurrtum.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
+import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.CardinalLighting;
 import org.jspecify.annotations.Nullable;

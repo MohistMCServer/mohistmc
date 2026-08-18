@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.schematic.state;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;

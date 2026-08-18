@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.simpleRelays;
 
-import com.zurrtum.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.logistics.packager;
 
-import com.zurrtum.create.content.logistics.box.PackageItem;
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import org.jspecify.annotations.Nullable;

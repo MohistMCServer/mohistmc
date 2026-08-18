@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.contraptions.bearing.ClockworkBearingBlockEntity.ClockHands;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.contraptions.bearing.ClockworkBearingBlockEntity.ClockHands;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 
 public class ClockHandsScrollBehaviour extends ScrollOptionBehaviour<ClockHands> {
     public ClockHandsScrollBehaviour(SmartBlockEntity be) {

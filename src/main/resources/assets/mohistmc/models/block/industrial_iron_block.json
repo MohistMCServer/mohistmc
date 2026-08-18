@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mohistmc:block/industrial_iron_block_top",
+    "side": "mohistmc:block/industrial_iron_block"
+  }
+}

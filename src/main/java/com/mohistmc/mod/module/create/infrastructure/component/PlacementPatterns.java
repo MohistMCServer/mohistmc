@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.infrastructure.component;
 
 import com.google.common.base.Predicates;
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import io.netty.buffer.ByteBuf;
 import java.util.List;
 import java.util.Locale;

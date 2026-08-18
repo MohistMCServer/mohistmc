@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.transfer;
 
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
-import com.zurrtum.create.infrastructure.fluids.SidedFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.infrastructure.fluids.SidedFluidInventory;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.Direction;

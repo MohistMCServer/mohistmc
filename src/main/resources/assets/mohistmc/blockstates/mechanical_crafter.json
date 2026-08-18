@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,pointing=down": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 90
+    },
+    "facing=east,pointing=left": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 90
+    },
+    "facing=east,pointing=right": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 90
+    },
+    "facing=east,pointing=up": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 90
+    },
+    "facing=north,pointing=down": {
+      "model": "mohistmc:block/mechanical_crafter/block"
+    },
+    "facing=north,pointing=left": {
+      "model": "mohistmc:block/mechanical_crafter/block"
+    },
+    "facing=north,pointing=right": {
+      "model": "mohistmc:block/mechanical_crafter/block"
+    },
+    "facing=north,pointing=up": {
+      "model": "mohistmc:block/mechanical_crafter/block"
+    },
+    "facing=south,pointing=down": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 180
+    },
+    "facing=south,pointing=left": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 180
+    },
+    "facing=south,pointing=right": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 180
+    },
+    "facing=south,pointing=up": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 180
+    },
+    "facing=west,pointing=down": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 270
+    },
+    "facing=west,pointing=left": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 270
+    },
+    "facing=west,pointing=right": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 270
+    },
+    "facing=west,pointing=up": {
+      "model": "mohistmc:block/mechanical_crafter/block",
+      "y": 270
+    }
+  }
+}

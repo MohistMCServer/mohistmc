@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.task;
 
-import com.zurrtum.create.client.flywheel.api.task.TaskExecutor;
-import com.zurrtum.create.client.flywheel.lib.task.functional.ConsumerWithContext;
-import com.zurrtum.create.client.flywheel.lib.task.functional.SupplierWithContext;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.TaskExecutor;
+import com.mohistmc.mod.module.create.client.flywheel.lib.task.functional.ConsumerWithContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.task.functional.SupplierWithContext;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.deskBell;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

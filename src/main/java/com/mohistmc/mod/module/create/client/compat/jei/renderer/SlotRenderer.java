@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.compat.jei.renderer;
 
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import mezz.jei.api.gui.drawable.IDrawable;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import org.jspecify.annotations.Nullable;

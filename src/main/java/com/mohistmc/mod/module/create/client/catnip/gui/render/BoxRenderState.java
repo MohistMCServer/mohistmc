@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.catnip.gui.render;
 
 import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import net.minecraft.client.renderer.RenderPipelines;

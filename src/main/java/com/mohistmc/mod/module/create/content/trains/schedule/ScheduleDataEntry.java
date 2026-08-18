@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.trains.schedule;
 
-import com.zurrtum.create.Create;
+import com.mohistmc.mod.module.create.Create;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;

@@ -1,22 +1,22 @@
 package com.mohistmc.mod.module.create.client.content.logistics.factoryBoard;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.catnip.gui.AbstractSimiScreen;
-import com.zurrtum.create.client.catnip.gui.element.GuiGameElement;
-import com.zurrtum.create.client.catnip.gui.widget.ElementWidget;
-import com.zurrtum.create.client.content.logistics.AddressEditBox;
-import com.zurrtum.create.client.content.trains.station.NoShadowFontWrapper;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.gui.widget.IconButton;
-import com.zurrtum.create.client.foundation.gui.widget.ScrollInput;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.BigItemStack;
-import com.zurrtum.create.content.logistics.box.PackageStyles;
-import com.zurrtum.create.content.logistics.factoryBoard.FactoryPanelConnection;
-import com.zurrtum.create.content.logistics.factoryBoard.FactoryPanelPosition;
-import com.zurrtum.create.content.logistics.factoryBoard.ServerFactoryPanelBehaviour;
-import com.zurrtum.create.infrastructure.packet.c2s.FactoryPanelConfigurationPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
+import com.mohistmc.mod.module.create.client.content.logistics.AddressEditBox;
+import com.mohistmc.mod.module.create.client.content.trains.station.NoShadowFontWrapper;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageStyles;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelConnection;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelPosition;
+import com.mohistmc.mod.module.create.content.logistics.factoryBoard.ServerFactoryPanelBehaviour;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.FactoryPanelConfigurationPacket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +35,7 @@ import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix3x2fStack;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.foundation.gui.AllGuiTextures.*;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.*;
 
 public class FactoryPanelScreen extends AbstractSimiScreen {
     private ElementWidget renderedBlock;

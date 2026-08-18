@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.kinetics.simpleRelays;
 
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.content.kinetics.base.RotatedPillarKineticBlock;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.base.RotatedPillarKineticBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

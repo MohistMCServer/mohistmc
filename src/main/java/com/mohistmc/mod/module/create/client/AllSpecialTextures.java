@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.catnip.render.BindableTexture;
+import com.mohistmc.mod.module.create.client.catnip.render.BindableTexture;
 import net.minecraft.resources.Identifier;
 
 public enum AllSpecialTextures implements BindableTexture {

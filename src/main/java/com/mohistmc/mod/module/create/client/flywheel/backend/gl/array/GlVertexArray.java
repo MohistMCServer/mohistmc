@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.array;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlObject;
-import com.zurrtum.create.client.flywheel.backend.gl.GlStateTracker;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlObject;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlStateTracker;
 import java.util.List;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.opengl.GL32;

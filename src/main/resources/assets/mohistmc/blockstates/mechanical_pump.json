@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/mechanical_pump/block",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mohistmc:block/mechanical_pump/block",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mohistmc:block/mechanical_pump/block",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mohistmc:block/mechanical_pump/block",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "mohistmc:block/mechanical_pump/block"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/mechanical_pump/block",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.wrench;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.AllKeys;
-import com.zurrtum.create.client.catnip.gui.ScreenOpener;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.AllKeys;
+import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.player.LocalPlayer;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.impl.registry;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import java.util.function.Function;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;

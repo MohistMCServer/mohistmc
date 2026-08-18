@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption.storage;
 
-import com.zurrtum.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import net.minecraft.core.BlockPos;
 
 /**

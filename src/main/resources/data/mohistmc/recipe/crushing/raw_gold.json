@@ -1,0 +1,15 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "#c:raw_materials/gold",
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "mohistmc:crushed_raw_gold"
+    },
+    {
+      "chance": 0.75,
+      "count": 2,
+      "id": "mohistmc:experience_nugget"
+    }
+  ]
+}

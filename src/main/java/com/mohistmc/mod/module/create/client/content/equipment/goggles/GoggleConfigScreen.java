@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.equipment.goggles;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.catnip.gui.AbstractSimiScreen;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.client.infrastructure.config.CClient;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.client.infrastructure.config.CClient;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

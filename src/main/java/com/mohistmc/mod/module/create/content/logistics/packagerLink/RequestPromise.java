@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.content.logistics.packagerLink;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 
 import java.util.Comparator;
 

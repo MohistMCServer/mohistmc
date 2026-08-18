@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.MountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.MountedProjectileDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.OptionalMountedDispenseBehavior;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.MountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.MountedProjectileDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.OptionalMountedDispenseBehavior;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

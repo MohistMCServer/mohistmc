@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.decoration.girder;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
-import com.zurrtum.create.catnip.placement.PlacementOffset;
-import com.zurrtum.create.content.equipment.extendoGrip.ExtendoGripItem;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;
+import com.mohistmc.mod.module.create.content.equipment.extendoGrip.ExtendoGripItem;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.List;
 import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;

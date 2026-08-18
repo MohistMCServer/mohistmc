@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.memory;
 
-import com.zurrtum.create.client.flywheel.lib.internal.FlwLibLink;
-import com.zurrtum.create.client.flywheel.lib.util.StringUtil;
+import com.mohistmc.mod.module.create.client.flywheel.lib.internal.FlwLibLink;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.StringUtil;
 
 import java.lang.ref.Cleaner;
 

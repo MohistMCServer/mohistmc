@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
 import com.mojang.authlib.GameProfile;
-import com.zurrtum.create.api.entity.FakePlayerHandler;
+import com.mohistmc.mod.module.create.api.entity.FakePlayerHandler;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

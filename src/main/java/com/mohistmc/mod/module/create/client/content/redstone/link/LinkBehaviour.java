@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.content.redstone.link;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.ValueBoxTransform;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler;
-import com.zurrtum.create.content.redstone.link.ServerLinkBehaviour;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.ValueBoxTransform;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler;
+import com.mohistmc.mod.module.create.content.redstone.link.ServerLinkBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;

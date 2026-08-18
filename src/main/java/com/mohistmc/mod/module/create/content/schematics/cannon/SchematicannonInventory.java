@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.schematics.cannon;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

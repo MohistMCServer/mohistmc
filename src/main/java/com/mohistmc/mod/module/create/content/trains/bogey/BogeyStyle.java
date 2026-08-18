@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.trains.bogey;
 
-import com.zurrtum.create.AllBogeyStyles;
-import com.zurrtum.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;

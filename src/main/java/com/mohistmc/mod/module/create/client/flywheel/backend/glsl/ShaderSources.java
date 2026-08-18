@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
 
-import com.zurrtum.create.client.flywheel.backend.compile.FlwPrograms;
-import com.zurrtum.create.client.flywheel.lib.util.StringUtil;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.FlwPrograms;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.StringUtil;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;

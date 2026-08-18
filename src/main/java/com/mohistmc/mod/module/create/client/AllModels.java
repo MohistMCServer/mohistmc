@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.client.infrastructure.model.*;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.client.infrastructure.model.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;

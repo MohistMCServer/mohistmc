@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.equipment.bell;
 
 import com.google.common.collect.Streams;
-import com.zurrtum.create.AllParticleTypes;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.AllParticleTypes;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

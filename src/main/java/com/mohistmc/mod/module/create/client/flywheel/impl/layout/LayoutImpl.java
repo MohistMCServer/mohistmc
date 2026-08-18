@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.layout;
 
-import com.zurrtum.create.client.flywheel.api.layout.ElementType;
-import com.zurrtum.create.client.flywheel.api.layout.Layout;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.ElementType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.Layout;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import java.util.Collections;
 import java.util.List;

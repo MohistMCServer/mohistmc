@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform;
 
-import com.zurrtum.create.client.flywheel.api.backend.RenderContext;
-import com.zurrtum.create.client.flywheel.backend.gl.shader.GlProgram;
+import com.mohistmc.mod.module.create.client.flywheel.api.backend.RenderContext;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader.GlProgram;
 
 public final class Uniforms {
     public static final int FRAME_INDEX = 0;

@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.catnip.gui.render;
 
 import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import java.util.List;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
@@ -12,7 +12,7 @@ import org.joml.Matrix3x2f;
 import org.joml.Vector2f;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.catnip.render.PonderRenderPipelines.POSITION_COLOR_STRIP;
+import static com.mohistmc.mod.module.create.client.catnip.render.PonderRenderPipelines.POSITION_COLOR_STRIP;
 
 public record RadialSectorRenderState(Matrix3x2f pose, List<Vec2> innerPoints, List<Vec2> outerPoints, int outerColor,
                                       int innerColor, ScreenRectangle bounds) implements GuiElementRenderState {

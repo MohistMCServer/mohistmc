@@ -1,0 +1,21 @@
+{
+  "type": "mohistmc:mechanical_crafting",
+  "key": {
+    "H": "mohistmc:brass_hand",
+    "L": "#c:ingots/brass",
+    "R": "mohistmc:precision_mechanism",
+    "S": "#c:rods/wooden"
+  },
+  "pattern": [
+    " L ",
+    " R ",
+    "SSS",
+    "SSS",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:extendo_grip"
+  }
+}
+

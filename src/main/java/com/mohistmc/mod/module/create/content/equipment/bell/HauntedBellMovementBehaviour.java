@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.bell;
 
-import com.zurrtum.create.content.contraptions.behaviour.BellMovementBehaviour;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.BellMovementBehaviour;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 

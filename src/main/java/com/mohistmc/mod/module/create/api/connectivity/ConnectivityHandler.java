@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.api.connectivity;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.fluids.tank.CreativeFluidTankBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.IMultiBlockEntityContainer;
-import com.zurrtum.create.foundation.fluid.FluidTank;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.fluids.tank.CreativeFluidTankBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.IMultiBlockEntityContainer;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidTank;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.gui.menu;
 
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.infrastructure.packet.s2c.OpenScreenPacket;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.OpenScreenPacket;
 import io.netty.buffer.Unpooled;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.RegistryFriendlyByteBuf;

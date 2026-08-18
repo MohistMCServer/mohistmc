@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.enums;
 
-import com.zurrtum.create.client.catnip.render.BindableTexture;
-import com.zurrtum.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.create.client.catnip.render.BindableTexture;
+import com.mohistmc.mod.module.create.client.ponder.Ponder;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.render.TextureSetup;
 import net.minecraft.client.renderer.texture.AbstractTexture;

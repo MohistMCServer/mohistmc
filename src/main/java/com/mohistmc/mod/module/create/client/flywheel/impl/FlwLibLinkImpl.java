@@ -2,10 +2,10 @@ package com.mohistmc.mod.module.create.client.flywheel.impl;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.client.flywheel.impl.compat.IrisCompat;
-import com.zurrtum.create.client.flywheel.impl.extension.PoseStackExtension;
-import com.zurrtum.create.client.flywheel.lib.internal.FlwLibLink;
-import com.zurrtum.create.client.flywheel.lib.transform.PoseTransformStack;
+import com.mohistmc.mod.module.create.client.flywheel.impl.compat.IrisCompat;
+import com.mohistmc.mod.module.create.client.flywheel.impl.extension.PoseStackExtension;
+import com.mohistmc.mod.module.create.client.flywheel.lib.internal.FlwLibLink;
+import com.mohistmc.mod.module.create.client.flywheel.lib.transform.PoseTransformStack;
 import java.util.List;
 import java.util.Map;
 import net.minecraft.client.model.geom.ModelPart;

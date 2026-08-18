@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.ScreenOpener;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.ValueSettingsBehaviour;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.ValueSettingsInputHandler;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
-import com.zurrtum.create.infrastructure.packet.c2s.ValueSettingsPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.ValueSettingsBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.ValueSettingsInputHandler;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ValueSettingsPacket;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

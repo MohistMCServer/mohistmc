@@ -10,7 +10,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.saveddata.SavedDataType;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class LogisticsNetworkSavedData extends SavedData {
     public static final Codec<LogisticsNetworkSavedData> CODEC = Codec.list(LogisticsNetwork.CODEC)

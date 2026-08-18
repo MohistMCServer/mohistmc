@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine;
 
-import com.zurrtum.create.client.flywheel.api.material.*;
-import com.zurrtum.create.client.flywheel.backend.MaterialShaderIndices;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.*;
+import com.mohistmc.mod.module.create.client.flywheel.backend.MaterialShaderIndices;
 import net.minecraft.util.Mth;
 
 // Materials are unpacked in "flywheel:flywheel/internal/packed_material.glsl"

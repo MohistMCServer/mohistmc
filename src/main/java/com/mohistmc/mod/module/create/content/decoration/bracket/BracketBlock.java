@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.decoration.bracket;
 
-import com.zurrtum.create.content.fluids.FluidPropagator;
-import com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock;
-import com.zurrtum.create.content.kinetics.base.RotatedPillarKineticBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.AbstractSimpleShaftBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.CogWheelBlock;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.content.fluids.FluidPropagator;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;
+import com.mohistmc.mod.module.create.content.kinetics.base.RotatedPillarKineticBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.AbstractSimpleShaftBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.CogWheelBlock;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import java.util.Locale;
 import java.util.Optional;
 import net.minecraft.core.Direction;

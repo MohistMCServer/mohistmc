@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:chute",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:mechanical_mixer_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.mechanical_mixer.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:mechanical_mixer"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.mechanical_mixer"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

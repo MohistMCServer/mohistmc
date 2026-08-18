@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.embed;
 
-import com.zurrtum.create.client.flywheel.backend.compile.ContextShader;
-import com.zurrtum.create.client.flywheel.backend.gl.shader.GlProgram;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.ContextShader;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader.GlProgram;
 
 public interface Environment {
     ContextShader contextShader();

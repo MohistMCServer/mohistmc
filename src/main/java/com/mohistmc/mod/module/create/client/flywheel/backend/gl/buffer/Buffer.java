@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlCompat;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlCompat;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL45C;
 import org.lwjgl.system.Checks;

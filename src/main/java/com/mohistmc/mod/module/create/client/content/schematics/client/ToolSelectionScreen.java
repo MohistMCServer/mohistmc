@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client;
 
 import com.mojang.blaze3d.platform.Window;
-import com.zurrtum.create.client.AllKeys;
-import com.zurrtum.create.client.content.schematics.client.tools.ToolType;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.client.AllKeys;
+import com.mohistmc.mod.module.create.client.content.schematics.client.tools.ToolType;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;

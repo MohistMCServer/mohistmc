@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.redstone.link;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.infrastructure.packet.c2s.LinkSettingsPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.LinkSettingsPacket;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.mojang.serialization.JsonOps;
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import java.util.List;
 import java.util.function.Consumer;
 import joptsimple.internal.Strings;

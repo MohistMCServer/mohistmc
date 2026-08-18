@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:copper_shingles",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:waxed_copper_shingles"
+  }
+}

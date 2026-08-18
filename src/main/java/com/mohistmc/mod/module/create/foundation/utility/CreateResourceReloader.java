@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create.foundation.utility;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public abstract class CreateResourceReloader implements ResourceManagerReloadListener {
     private final Identifier id;

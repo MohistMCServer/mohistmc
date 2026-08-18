@@ -1,0 +1,8 @@
+{
+  "type": "mohistmc:sandpaper_polishing",
+  "ingredient": "mohistmc:rose_quartz",
+  "result": {
+    "id": "mohistmc:polished_rose_quartz"
+  }
+}
+

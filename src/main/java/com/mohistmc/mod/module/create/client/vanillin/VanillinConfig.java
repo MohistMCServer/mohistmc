@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.vanillin;
 
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.client.vanillin.config.*;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.client.vanillin.config.*;
 
 import java.util.List;
 import java.util.Map;
 
-import static com.zurrtum.create.client.vanillin.Vanillin.MOD_ID;
+import static com.mohistmc.mod.module.create.client.vanillin.Vanillin.MOD_ID;
 
 
 public class VanillinConfig {

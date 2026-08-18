@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.content.equipment.bell;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.infrastructure.packet.s2c.SoulPulseEffectPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.SoulPulseEffectPacket;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;

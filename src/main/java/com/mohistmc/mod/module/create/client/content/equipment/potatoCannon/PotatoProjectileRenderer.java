@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.equipment.potatoCannon;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
-import com.zurrtum.create.client.AllPotatoProjectileTransforms;
-import com.zurrtum.create.content.equipment.potatoCannon.PotatoProjectileEntity;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
+import com.mohistmc.mod.module.create.client.AllPotatoProjectileTransforms;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.PotatoProjectileEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;

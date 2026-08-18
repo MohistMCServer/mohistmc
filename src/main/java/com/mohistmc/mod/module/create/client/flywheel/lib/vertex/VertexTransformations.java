@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.vertex;
 
-import com.zurrtum.create.client.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 
 public final class VertexTransformations {

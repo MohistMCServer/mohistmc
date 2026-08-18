@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.animation;
 
-import com.zurrtum.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
 
 public class MechanicalMixerAnimationBehaviour extends AnimationBehaviour<MechanicalMixerBlockEntity> {
     private float offset;

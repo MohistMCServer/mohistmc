@@ -1,27 +1,27 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.catnip.render.SuperByteBufferCache;
-import com.zurrtum.create.client.compat.CompatMod;
-import com.zurrtum.create.client.content.contraptions.glue.SuperGlueSelectionHandler;
-import com.zurrtum.create.client.content.equipment.bell.SoulPulseEffectHandler;
-import com.zurrtum.create.client.content.equipment.potatoCannon.PotatoCannonRenderHandler;
-import com.zurrtum.create.client.content.equipment.zapper.ZapperRenderHandler;
-import com.zurrtum.create.client.content.schematics.client.ClientSchematicLoader;
-import com.zurrtum.create.client.content.schematics.client.SchematicAndQuillHandler;
-import com.zurrtum.create.client.content.schematics.client.SchematicHandler;
-import com.zurrtum.create.client.flywheel.impl.Flywheel;
-import com.zurrtum.create.client.foundation.ClientResourceReloadListener;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsClient;
-import com.zurrtum.create.client.foundation.ponder.CreatePonderPlugin;
-import com.zurrtum.create.client.foundation.utility.CameraAngleAnimationService;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.client.ponder.Ponder;
-import com.zurrtum.create.client.ponder.foundation.PonderIndex;
-import com.zurrtum.create.client.vanillin.Vanillin;
-import com.zurrtum.create.content.trains.GlobalRailwayManager;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
+import com.mohistmc.mod.module.create.client.compat.CompatMod;
+import com.mohistmc.mod.module.create.client.content.contraptions.glue.SuperGlueSelectionHandler;
+import com.mohistmc.mod.module.create.client.content.equipment.bell.SoulPulseEffectHandler;
+import com.mohistmc.mod.module.create.client.content.equipment.potatoCannon.PotatoCannonRenderHandler;
+import com.mohistmc.mod.module.create.client.content.equipment.zapper.ZapperRenderHandler;
+import com.mohistmc.mod.module.create.client.content.schematics.client.ClientSchematicLoader;
+import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicAndQuillHandler;
+import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicHandler;
+import com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel;
+import com.mohistmc.mod.module.create.client.foundation.ClientResourceReloadListener;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsClient;
+import com.mohistmc.mod.module.create.client.foundation.ponder.CreatePonderPlugin;
+import com.mohistmc.mod.module.create.client.foundation.utility.CameraAngleAnimationService;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderIndex;
+import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
+import com.mohistmc.mod.module.create.content.trains.GlobalRailwayManager;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class Create {
     public static SoulPulseEffectHandler SOUL_PULSE_EFFECT_HANDLER;

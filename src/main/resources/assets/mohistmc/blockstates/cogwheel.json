@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mohistmc:block/cogwheel",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mohistmc:block/cogwheel"
+    },
+    "axis=z": {
+      "model": "mohistmc:block/cogwheel",
+      "x": 90,
+      "y": 180
+    }
+  }
+}

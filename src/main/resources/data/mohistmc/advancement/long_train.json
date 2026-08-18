@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:track_crafting_factory",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:long_train_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.long_train.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:minecart"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.long_train"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

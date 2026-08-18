@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
-import com.zurrtum.create.content.decoration.copycat.CopycatPanelBlock;
-import com.zurrtum.create.content.decoration.copycat.CopycatSpecialCases;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatPanelBlock;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatSpecialCases;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import java.util.List;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;

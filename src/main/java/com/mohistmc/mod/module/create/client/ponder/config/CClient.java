@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.config;
 
-import com.zurrtum.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
 
 public class CClient extends ConfigBase {
 

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.contraptions.piston;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.content.contraptions.piston.MechanicalPistonBlock.PistonState;
-import com.zurrtum.create.foundation.block.WrenchableDirectionalBlock;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.PistonState;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -27,7 +27,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import static com.zurrtum.create.content.contraptions.piston.MechanicalPistonBlock.isExtensionPole;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isExtensionPole;
 
 public class MechanicalPistonHeadBlock extends WrenchableDirectionalBlock implements SimpleWaterloggedBlock {
 

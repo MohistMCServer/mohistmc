@@ -1,19 +1,19 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
-import com.zurrtum.create.content.kinetics.belt.transport.*;
-import com.zurrtum.create.content.kinetics.belt.transport.BeltMovementHandler.TransportedEntityInfo;
-import com.zurrtum.create.content.logistics.tunnel.BrassTunnelBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.inventory.VersionedInventoryTrackerBehaviour;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.*;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltMovementHandler.TransportedEntityInfo;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.inventory.VersionedInventoryTrackerBehaviour;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,8 +42,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.belt.BeltPart.MIDDLE;
-import static com.zurrtum.create.content.kinetics.belt.BeltSlope.HORIZONTAL;
+import static com.mohistmc.mod.module.create.content.kinetics.belt.BeltPart.MIDDLE;
+import static com.mohistmc.mod.module.create.content.kinetics.belt.BeltSlope.HORIZONTAL;
 import static net.minecraft.core.Direction.AxisDirection.NEGATIVE;
 import static net.minecraft.core.Direction.AxisDirection.POSITIVE;
 

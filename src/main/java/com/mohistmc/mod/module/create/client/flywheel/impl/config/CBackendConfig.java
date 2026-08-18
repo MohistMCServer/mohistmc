@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.config;
 
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.client.flywheel.backend.BackendConfig;
-import com.zurrtum.create.client.flywheel.backend.compile.LightSmoothness;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.client.flywheel.backend.BackendConfig;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.LightSmoothness;
 
 public class CBackendConfig extends ConfigBase implements BackendConfig {
     public final ConfigEnum<LightSmoothness> lightSmoothness = e(

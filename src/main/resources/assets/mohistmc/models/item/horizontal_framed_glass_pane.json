@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mohistmc:block/palettes/horizontal_framed_glass_item"
+  }
+}

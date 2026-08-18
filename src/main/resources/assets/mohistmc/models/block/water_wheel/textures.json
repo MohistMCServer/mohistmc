@@ -1,0 +1,12 @@
+{
+	"parent": "mohistmc:block/large_wheels",
+	"textures": {
+		"axis": "mohistmc:block/axis",
+		"gearbox": "mohistmc:block/gearbox",
+		"axis_top": "mohistmc:block/axis_top",
+		"metal": "mohistmc:block/waterwheel_metal",
+		"log": "block/oak_log",
+		"planks": "block/oak_planks",
+		"particle": "#planks"
+	}
+}

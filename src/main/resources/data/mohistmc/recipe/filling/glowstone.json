@@ -1,0 +1,19 @@
+{
+  "type": "mohistmc:filling",
+  "ingredient": "mohistmc:cinder_flour",
+  "fluid_ingredient": {
+    "type": "fluid_stack",
+    "amount": 2700,
+    "components": {
+      "mohistmc:potion_fluid_bottle_type": "regular",
+      "minecraft:potion_contents": {
+        "potion": "minecraft:night_vision"
+      }
+    },
+    "fluid": "mohistmc:potion"
+  },
+  "result": {
+    "id": "minecraft:glowstone_dust"
+  }
+}
+

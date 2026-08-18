@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/radial_chassis/side_y",
+  "textures": {
+    "side": "mohistmc:block/radial_chassis_side_sticky",
+    "particle": "mohistmc:block/radial_chassis_side_sticky"
+  }
+}

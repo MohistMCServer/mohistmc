@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_dripstone",
+    "mohistmc:cut_dripstone_stairs",
+    "mohistmc:cut_dripstone_wall",
+    "mohistmc:polished_cut_dripstone",
+    "mohistmc:polished_cut_dripstone_stairs",
+    "mohistmc:polished_cut_dripstone_wall",
+    "mohistmc:cut_dripstone_bricks",
+    "mohistmc:cut_dripstone_brick_stairs",
+    "mohistmc:cut_dripstone_brick_wall",
+    "mohistmc:small_dripstone_bricks",
+    "mohistmc:small_dripstone_brick_stairs",
+    "mohistmc:small_dripstone_brick_wall",
+    "mohistmc:layered_dripstone",
+    "mohistmc:dripstone_pillar",
+    "minecraft:dripstone_block"
+  ]
+}

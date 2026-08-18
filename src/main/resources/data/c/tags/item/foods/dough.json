@@ -1,5 +1,6 @@
 {
   "values": [
-    "#c:foods/dough/wheat"
+    "#c:foods/dough/wheat",
+    "mohistmc:dough"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cut_scorchia_slab",
+  "key": {
+    "X": "mohistmc:cut_scorchia"
+  },
+  "pattern": [
+    "XXX"
+  ],
+  "result": {
+    "count": 6,
+    "id": "mohistmc:cut_scorchia_slab"
+  }
+}

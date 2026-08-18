@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
-import com.zurrtum.create.client.flywheel.backend.Samplers;
-import com.zurrtum.create.client.flywheel.backend.compile.core.Compilation;
-import com.zurrtum.create.client.flywheel.backend.gl.shader.GlProgram;
+import com.mohistmc.mod.module.create.client.flywheel.backend.Samplers;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.core.Compilation;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader.GlProgram;
 import java.util.Locale;
 import java.util.function.Consumer;
 import org.jspecify.annotations.Nullable;

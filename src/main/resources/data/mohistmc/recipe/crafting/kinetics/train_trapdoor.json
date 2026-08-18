@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#minecraft:wooden_trapdoors",
+    "mohistmc:railway_casing"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:train_trapdoor"
+  }
+}

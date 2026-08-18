@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.event;
 
-import com.zurrtum.create.client.catnip.lang.LangNumberFormat;
-import com.zurrtum.create.client.ponder.Ponder;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.client.catnip.lang.LangNumberFormat;
+import com.mohistmc.mod.module.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import net.minecraft.server.packs.resources.ResourceManager;
 
 public class ClientResourceReloadListener extends CreateResourceReloader {

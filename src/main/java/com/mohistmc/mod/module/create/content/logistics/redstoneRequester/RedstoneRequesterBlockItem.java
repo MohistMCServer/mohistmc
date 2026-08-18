@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.logistics.redstoneRequester;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.content.logistics.packagerLink.LogisticallyLinkedBlockItem;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.content.logistics.packagerLink.LogisticallyLinkedBlockItem;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

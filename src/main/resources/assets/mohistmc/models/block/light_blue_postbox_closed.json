@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/package_postbox/block_closed",
+  "textures": {
+    "0": "mohistmc:block/post_box/post_box_light_blue",
+    "1": "mohistmc:block/post_box/post_box_light_blue_closed"
+  }
+}

@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileBlockHitAction;
-import com.zurrtum.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileBlockHitAction;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllPotatoProjectileBlockHitActions {
     public static void register() {

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.transport;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.content.equipment.armor.CardboardArmorHandler;
-import com.zurrtum.create.content.kinetics.belt.BeltBlock;
-import com.zurrtum.create.content.kinetics.belt.BeltBlockEntity;
-import com.zurrtum.create.content.kinetics.belt.BeltPart;
-import com.zurrtum.create.content.kinetics.belt.BeltSlope;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.content.equipment.armor.CardboardArmorHandler;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltPart;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltSlope;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

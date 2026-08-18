@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.catnip.animation;
 
-import com.zurrtum.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;

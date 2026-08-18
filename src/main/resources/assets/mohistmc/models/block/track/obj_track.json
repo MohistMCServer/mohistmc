@@ -1,0 +1,8 @@
+{
+	"textures": {
+		"0": "mohistmc:block/standard_track",
+		"1": "mohistmc:block/standard_track_mip",
+		"2": "mohistmc:block/standard_track_crossing",
+		"particle": "mohistmc:block/palettes/stone_types/polished/andesite_cut_polished"
+	}
+}

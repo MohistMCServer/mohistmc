@@ -25,6 +25,9 @@ public class SimpleLabel extends PositionedWidget {
     @Nullable private Font customFont;
     private boolean enableItemIcons;
     private List<Segment> segments;
+    private Align align = Align.LEFT;
+
+    public enum Align { LEFT, CENTER, RIGHT }
 
     public SimpleLabel(int relX, int relY, Component text, int color) {
         super(relX, relY, 0, 0);
@@ -36,7 +39,18 @@ public class SimpleLabel extends PositionedWidget {
     public SimpleLabel setFont(@Nullable Font f) { customFont = f; return this; }
     public float getTextScale() { return textScale; }
     public SimpleLabel setTextScale(float s) { textScale = Math.max(0.1f, s); return this; }
+    public SimpleLabel setFontSize(int size) { textScale = Math.max(0.1f, size / 12f); return this; }
+    public SimpleLabel setAlign(Align a) { align = a; return this; }
+
+    public SimpleLabel setLabelWidth(int w) { this.width = w; return this; }
+    public SimpleLabel setLabelHeight(int h) { this.height = h; return this; }
+
     public SimpleLabel setEnableItemIcons(boolean v) { enableItemIcons = v; segments = null; autoSize(); return this; }
+
+    public SimpleLabel setEditorId(String id) {
+        super.setEditorId(id);
+        return this;
+    }
 
     public SimpleLabel setText(Component t) {
         text = t; segments = null; autoSize();
@@ -50,7 +64,11 @@ public class SimpleLabel extends PositionedWidget {
 
         if (!enableItemIcons) {
             if (Float.compare(textScale, 1.0f) == 0) {
-                graphics.text(font, text, getAbsoluteX(), getAbsoluteY(), color);
+                int x = getAbsoluteX();
+                int y = getAbsoluteY();
+                if (align == Align.CENTER) x += (width - font.width(text)) / 2;
+                else if (align == Align.RIGHT) x += width - font.width(text);
+                graphics.text(font, text, x, y, color);
             } else { renderScaled(font, graphics); }
             return;
         }

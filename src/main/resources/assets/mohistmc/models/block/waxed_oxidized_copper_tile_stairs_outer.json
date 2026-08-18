@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "mohistmc:block/copper/oxidized_copper_roof_top",
+    "side": "mohistmc:block/copper/oxidized_copper_tiles",
+    "top": "mohistmc:block/copper/oxidized_copper_roof_top"
+  }
+}

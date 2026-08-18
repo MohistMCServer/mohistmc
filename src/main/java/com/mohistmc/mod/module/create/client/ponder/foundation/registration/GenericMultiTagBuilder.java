@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.client.ponder.api.registration.MultiTagBuilder;
-import com.zurrtum.create.client.ponder.api.registration.PonderTagRegistrationHelper;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.MultiTagBuilder;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.PonderTagRegistrationHelper;
 import net.minecraft.resources.Identifier;
 
 public class GenericMultiTagBuilder<T> implements MultiTagBuilder {

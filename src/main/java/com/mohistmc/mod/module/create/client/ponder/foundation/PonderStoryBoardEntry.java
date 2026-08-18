@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation;
 
-import com.zurrtum.create.client.ponder.api.registration.StoryBoardEntry;
-import com.zurrtum.create.client.ponder.api.scene.PonderStoryBoard;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.StoryBoardEntry;
+import com.mohistmc.mod.module.create.client.ponder.api.scene.PonderStoryBoard;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

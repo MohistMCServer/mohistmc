@@ -110,7 +110,7 @@ public interface Basket extends Container
 	default boolean collectItem(ItemEntity itemEntity) {
 		boolean flag = false;
 		ItemStack entityItemStack = itemEntity.getItem().copy();
-		ItemStack remainderStack = insert(entityItemStack);
+		ItemStack remainderStack = insert1(entityItemStack);
 		if (remainderStack.isEmpty()) {
 			flag = true;
 			itemEntity.discard();
@@ -125,7 +125,7 @@ public interface Basket extends Container
 	 * @param stack the {@link ItemStack} to insert.
 	 * @return the remainder after the insertion.
 	 */
-	default ItemStack insert(ItemStack stack) {
+	default ItemStack insert1(ItemStack stack) {
 		int size = this.getContainerSize();
 		for (int slot = 0; slot < size && !stack.isEmpty(); ++slot) {
 			stack = this.insert(slot, stack);

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.s2c;
 
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.content.logistics.depot.EjectorBlockEntity;
-import com.zurrtum.create.content.logistics.depot.EjectorItemEntity;
-import com.zurrtum.create.content.logistics.depot.EntityLauncher;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.content.logistics.depot.EjectorBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.depot.EjectorItemEntity;
+import com.mohistmc.mod.module.create.content.logistics.depot.EntityLauncher;
 import net.minecraft.core.Direction;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

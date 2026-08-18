@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.compat.jei.category;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.client.compat.jei.CreateCategory;
-import com.zurrtum.create.client.compat.jei.JeiClientPlugin;
-import com.zurrtum.create.client.compat.jei.renderer.TwoIconRenderer;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.gui.render.BasinBlazeBurnerRenderState;
-import com.zurrtum.create.client.foundation.gui.render.MixingBasinRenderState;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.mixer.PotionRecipe;
-import com.zurrtum.create.content.processing.recipe.HeatCondition;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.client.compat.jei.CreateCategory;
+import com.mohistmc.mod.module.create.client.compat.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.create.client.compat.jei.renderer.TwoIconRenderer;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.gui.render.BasinBlazeBurnerRenderState;
+import com.mohistmc.mod.module.create.client.foundation.gui.render.MixingBasinRenderState;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.PotionRecipe;
+import com.mohistmc.mod.module.create.content.processing.recipe.HeatCondition;
 import java.util.List;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;

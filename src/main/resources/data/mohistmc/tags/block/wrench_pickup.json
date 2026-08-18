@@ -1,0 +1,27 @@
+{
+  "values": [
+    "mohistmc:andesite_bars",
+    "mohistmc:brass_bars",
+    "mohistmc:copper_bars",
+    "mohistmc:industrial_iron_block",
+    "mohistmc:weathered_iron_block",
+    "minecraft:redstone_wire",
+    "minecraft:redstone_torch",
+    "minecraft:repeater",
+    "minecraft:lever",
+    "minecraft:redstone_lamp",
+    "minecraft:comparator",
+    "minecraft:observer",
+    "minecraft:redstone_wall_torch",
+    "minecraft:piston",
+    "minecraft:sticky_piston",
+    "minecraft:tripwire",
+    "minecraft:tripwire_hook",
+    "minecraft:daylight_detector",
+    "minecraft:target",
+    "minecraft:hopper",
+    "#minecraft:buttons",
+    "#minecraft:pressure_plates",
+    "#minecraft:rails"
+  ]
+}

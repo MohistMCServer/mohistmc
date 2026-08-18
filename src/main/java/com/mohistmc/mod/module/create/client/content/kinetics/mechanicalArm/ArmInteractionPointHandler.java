@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.mechanicalArm;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmInteractionPoint;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmInteractionPoint.Mode;
-import com.zurrtum.create.infrastructure.packet.c2s.ArmPlacementPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmInteractionPoint;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmInteractionPoint.Mode;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ArmPlacementPacket;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;

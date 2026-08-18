@@ -72,6 +72,11 @@ public class IconButton extends PositionedWidget {
         return this;
     }
 
+    public IconButton setEditorId(String id) {
+        super.setEditorId(id);
+        return this;
+    }
+
     public boolean hasTooltip() {
         return tooltip != null;
     }
@@ -93,9 +98,11 @@ public class IconButton extends PositionedWidget {
             graphics.blit(RenderPipelines.GUI_TEXTURED, texture, x, y, 0, 0, width, height, width, height);
         }
 
-        // tooltip
+        // tooltip（将逻辑坐标转换为屏幕坐标，避免工具提示位置错位）
         if (tooltip != null && hovered) {
-            graphics.setTooltipForNextFrame(tooltip, mouseX, mouseY);
+            int sx = GuiCoord.toScreenX(mouseX);
+            int sy = GuiCoord.toScreenY(mouseY);
+            graphics.setTooltipForNextFrame(tooltip, sx + 5, sy + 5);
         }
 
         wasHovered = hovered;
@@ -103,7 +110,7 @@ public class IconButton extends PositionedWidget {
 
     boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
         if (!enabled) return false;
-        if (isMouseOver(event.x(), event.y())) {
+        if (isMouseOver(logicalX(event), logicalY(event))) {
             if (onClick != null) {
                 onClick.run();
                 return true;

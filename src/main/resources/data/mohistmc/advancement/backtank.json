@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:steam_whistle",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:backtank_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.backtank.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:copper_backtank"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.backtank"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/creative_motor/block_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mohistmc:block/creative_motor/block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "mohistmc:block/creative_motor/block",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "mohistmc:block/creative_motor/block"
+    },
+    "facing=up": {
+      "model": "mohistmc:block/creative_motor/block_vertical"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/creative_motor/block",
+      "y": 90
+    }
+  }
+}

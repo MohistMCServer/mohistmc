@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
 import com.google.common.collect.Maps;
-import com.zurrtum.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItemTags;
 import java.util.Map;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;

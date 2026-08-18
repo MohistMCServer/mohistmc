@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/bearing/block",
+  "textures": {
+    "back": "mohistmc:block/gearbox",
+    "side": "mohistmc:block/windmill_bearing_side"
+  }
+}

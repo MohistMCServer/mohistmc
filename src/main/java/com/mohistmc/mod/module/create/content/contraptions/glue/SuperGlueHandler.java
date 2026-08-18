@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.contraptions.glue;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.api.contraption.BlockMovementChecks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.levelWrappers.RayTraceLevel;
-import com.zurrtum.create.infrastructure.packet.s2c.GlueEffectPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.api.contraption.BlockMovementChecks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.RayTraceLevel;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.GlueEffectPacket;
 import java.util.HashSet;
 import java.util.Set;
 import net.minecraft.core.BlockPos;

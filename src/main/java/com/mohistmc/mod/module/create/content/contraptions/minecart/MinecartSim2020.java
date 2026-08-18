@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.minecart;
 
-import com.zurrtum.create.AllSynchedDatas;
-import com.zurrtum.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.vehicle.minecart.AbstractMinecart;
 import net.minecraft.world.entity.vehicle.minecart.MinecartFurnace;

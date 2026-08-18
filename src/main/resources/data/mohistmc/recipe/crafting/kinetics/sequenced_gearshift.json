@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:brass_casing",
+    "mohistmc:cogwheel",
+    "mohistmc:electron_tube"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:sequenced_gearshift"
+  }
+}

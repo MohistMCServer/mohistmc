@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.content.schematics.SchematicProcessor;
+import com.mohistmc.mod.module.create.content.schematics.SchematicProcessor;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllStructureProcessorTypes {
     public static final Identifier SCHEMATIC = register("schematic", SchematicProcessor.MAP_CODEC);

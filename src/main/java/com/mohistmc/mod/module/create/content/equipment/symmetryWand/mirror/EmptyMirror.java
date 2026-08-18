@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror;
 
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.infrastructure.component.SymmetryMirror;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.infrastructure.component.SymmetryMirror;
 import java.util.Map;
 import java.util.Set;
 import net.minecraft.core.BlockPos;

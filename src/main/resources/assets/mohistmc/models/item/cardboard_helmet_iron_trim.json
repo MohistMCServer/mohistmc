@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mohistmc:item/cardboard_helmet",
+    "layer1": "mohistmc:trims/items/card_helmet_trim_iron"
+  }
+}

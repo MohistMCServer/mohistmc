@@ -1,0 +1,30 @@
+{
+  "type": "mohistmc:sequenced_assembly",
+  "ingredient": "#mohistmc:sleepers",
+  "transitional_item": {
+    "id": "mohistmc:incomplete_track"
+  },
+  "result": {
+    "id": "mohistmc:track"
+  },
+  "sequence": [
+    {
+      "type": "mohistmc:deploying",
+      "target": "$ingredient",
+      "ingredient": "#mohistmc:track_nuggets",
+      "results": ["$result"]
+    },
+    {
+      "type": "mohistmc:deploying",
+      "target": "$ingredient",
+      "ingredient": "#mohistmc:track_nuggets",
+      "results": ["$result"]
+    },
+    {
+      "type": "mohistmc:pressing",
+      "ingredient": "$ingredient",
+      "results": ["$result"]
+    }
+  ]
+}
+

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.item;
 
-import com.zurrtum.create.AllTransfer;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.AllTransfer;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import java.util.function.BiPredicate;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;

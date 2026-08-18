@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mohistmc:cardboard"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mohistmc:cardboard"
+      }
+    ]
+  }
+}

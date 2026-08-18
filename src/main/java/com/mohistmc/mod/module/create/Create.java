@@ -2,39 +2,40 @@ package com.mohistmc.mod.module.create;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mohistmc.mod.MohistMC;
 import com.mojang.logging.LogUtils;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.api.registry.CreateRegistryKeys;
-import com.zurrtum.create.api.stress.BlockStressValues;
-import com.zurrtum.create.compat.CompatMod;
-import com.zurrtum.create.content.decoration.encasing.EncasingRegistry;
-import com.zurrtum.create.content.equipment.armor.AllArmorMaterials;
-import com.zurrtum.create.content.equipment.armor.AllEquipmentAssetKeys;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileBlockHitActions;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileEntityHitActions;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes;
-import com.zurrtum.create.content.equipment.tool.AllToolMaterials;
-import com.zurrtum.create.content.fluids.AllFlowCollision;
-import com.zurrtum.create.content.fluids.tank.BoilerHeaters;
-import com.zurrtum.create.content.kinetics.TorquePropagator;
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
-import com.zurrtum.create.content.kinetics.fan.processing.AllFanProcessingTypes;
-import com.zurrtum.create.content.kinetics.mechanicalArm.AllArmInteractionPointTypes;
-import com.zurrtum.create.content.logistics.packagePort.AllPackagePortTargetTypes;
-import com.zurrtum.create.content.logistics.packagerLink.GlobalLogisticsManager;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler;
-import com.zurrtum.create.content.schematics.ServerSchematicLoader;
-import com.zurrtum.create.content.trains.GlobalRailwayManager;
-import com.zurrtum.create.content.trains.bogey.AllBogeySizes;
-import com.zurrtum.create.content.trains.entity.CarriageEntityHandler;
-import com.zurrtum.create.content.trains.track.AllPortalTracks;
-import com.zurrtum.create.foundation.CreateNBTProcessors;
-import com.zurrtum.create.foundation.recipe.RecipeFinder;
-import com.zurrtum.create.foundation.recipe.trie.RecipeTrieFinder;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.worldgen.AllConfiguredFeatures;
-import com.zurrtum.create.infrastructure.worldgen.AllFeatures;
-import com.zurrtum.create.infrastructure.worldgen.AllPlacementModifiers;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
+import com.mohistmc.mod.module.create.api.stress.BlockStressValues;
+import com.mohistmc.mod.module.create.compat.CompatMod;
+import com.mohistmc.mod.module.create.content.decoration.encasing.EncasingRegistry;
+import com.mohistmc.mod.module.create.content.equipment.armor.AllArmorMaterials;
+import com.mohistmc.mod.module.create.content.equipment.armor.AllEquipmentAssetKeys;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileBlockHitActions;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileEntityHitActions;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes;
+import com.mohistmc.mod.module.create.content.equipment.tool.AllToolMaterials;
+import com.mohistmc.mod.module.create.content.fluids.AllFlowCollision;
+import com.mohistmc.mod.module.create.content.fluids.tank.BoilerHeaters;
+import com.mohistmc.mod.module.create.content.kinetics.TorquePropagator;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.AllFanProcessingTypes;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.AllArmInteractionPointTypes;
+import com.mohistmc.mod.module.create.content.logistics.packagePort.AllPackagePortTargetTypes;
+import com.mohistmc.mod.module.create.content.logistics.packagerLink.GlobalLogisticsManager;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler;
+import com.mohistmc.mod.module.create.content.schematics.ServerSchematicLoader;
+import com.mohistmc.mod.module.create.content.trains.GlobalRailwayManager;
+import com.mohistmc.mod.module.create.content.trains.bogey.AllBogeySizes;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageEntityHandler;
+import com.mohistmc.mod.module.create.content.trains.track.AllPortalTracks;
+import com.mohistmc.mod.module.create.foundation.CreateNBTProcessors;
+import com.mohistmc.mod.module.create.foundation.recipe.RecipeFinder;
+import com.mohistmc.mod.module.create.foundation.recipe.trie.RecipeTrieFinder;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.worldgen.AllConfiguredFeatures;
+import com.mohistmc.mod.module.create.infrastructure.worldgen.AllFeatures;
+import com.mohistmc.mod.module.create.infrastructure.worldgen.AllPlacementModifiers;
 import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -45,9 +46,8 @@ import net.neoforged.neoforge.event.entity.EntityEvent;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 import org.slf4j.Logger;
 
-@Mod(Create.MOD_ID)
 public class Create {
-    public static final String MOD_ID = "create";
+    public static final String MOD_ID = MohistMC.MODID;
     public static final String NAME = "Create";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final String VERSION = "6.0.10-port.1";
@@ -72,8 +72,8 @@ public class Create {
     private static void registerDataPackRegistries(DataPackRegistryEvent.NewRegistry event) {
         event.dataPackRegistry(
             CreateRegistryKeys.POTATO_PROJECTILE_TYPE,
-            com.zurrtum.create.api.equipment.potatoCannon.PotatoCannonProjectileType.CODEC,
-            com.zurrtum.create.api.equipment.potatoCannon.PotatoCannonProjectileType.CODEC
+            com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType.CODEC,
+            com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType.CODEC
         );
     }
 

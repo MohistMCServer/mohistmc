@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.content.kinetics.mechanicalArm.SelectionModeValueBox;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity.SelectionMode;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.content.kinetics.mechanicalArm.SelectionModeValueBox;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity.SelectionMode;
 
 public class ArmSelectionModeScrollBehaviour extends ScrollOptionBehaviour<SelectionMode> {
     public ArmSelectionModeScrollBehaviour(ArmBlockEntity be) {

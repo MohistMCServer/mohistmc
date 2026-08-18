@@ -1,0 +1,13 @@
+{
+  "type": "mohistmc:filling",
+  "ingredient": "minecraft:glass_bottle",
+  "fluid_ingredient": {
+    "type": "fluid_stack",
+    "amount": 27000,
+    "fluid": "mohistmc:tea"
+  },
+  "result": {
+    "id": "mohistmc:builders_tea"
+  }
+}
+

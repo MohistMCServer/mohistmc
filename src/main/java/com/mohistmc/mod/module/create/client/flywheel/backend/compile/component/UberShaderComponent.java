@@ -2,11 +2,11 @@ package com.mohistmc.mod.module.create.client.flywheel.backend.compile.component
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.zurrtum.create.client.flywheel.backend.glsl.ShaderSources;
-import com.zurrtum.create.client.flywheel.backend.glsl.SourceComponent;
-import com.zurrtum.create.client.flywheel.backend.glsl.SourceFile;
-import com.zurrtum.create.client.flywheel.backend.glsl.generate.*;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.ShaderSources;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.SourceComponent;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.SourceFile;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.generate.*;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

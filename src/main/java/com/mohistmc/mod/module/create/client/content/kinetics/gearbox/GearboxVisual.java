@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.gearbox;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.zurrtum.create.client.content.kinetics.base.RotatingInstance;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.AbstractInstance;
-import com.zurrtum.create.client.flywheel.lib.instance.FlatLit;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.kinetics.gearbox.GearboxBlockEntity;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.AbstractInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.FlatLit;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.kinetics.gearbox.GearboxBlockEntity;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Consumer;

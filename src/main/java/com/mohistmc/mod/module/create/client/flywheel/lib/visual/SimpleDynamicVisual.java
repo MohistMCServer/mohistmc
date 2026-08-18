@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visual;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.Instancer;
-import com.zurrtum.create.client.flywheel.api.task.Plan;
-import com.zurrtum.create.client.flywheel.api.visual.DynamicVisual;
-import com.zurrtum.create.client.flywheel.lib.task.RunnablePlan;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instancer;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.Plan;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.task.RunnablePlan;
 
 public interface SimpleDynamicVisual extends DynamicVisual {
     /**

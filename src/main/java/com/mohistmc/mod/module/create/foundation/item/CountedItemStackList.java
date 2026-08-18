@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.item;
 
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;

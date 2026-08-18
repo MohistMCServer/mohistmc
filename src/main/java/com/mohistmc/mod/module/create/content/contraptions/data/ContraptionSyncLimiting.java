@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.data;
 
-import com.zurrtum.create.compat.Mods;
+import com.mohistmc.mod.module.create.compat.Mods;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.util.Util;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend;
 
-import com.zurrtum.create.client.flywheel.api.material.CutoutShader;
-import com.zurrtum.create.client.flywheel.api.material.FogShader;
-import com.zurrtum.create.client.flywheel.backend.compile.PipelineCompiler;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.CutoutShader;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.FogShader;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.PipelineCompiler;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;

@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.placement.IPlacementHelper;
-import com.zurrtum.create.catnip.placement.PlacementHelpers;
-import com.zurrtum.create.catnip.placement.PlacementOffset;
-import com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock;
-import com.zurrtum.create.content.processing.AssemblyOperatorUseContext;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementHelpers;
+import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;
+import com.mohistmc.mod.module.create.content.processing.AssemblyOperatorUseContext;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import java.util.List;
 import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;

@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.logistics.depot;
 
-import com.zurrtum.create.AllEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlock;
-import com.zurrtum.create.foundation.item.EntityItem;
-import com.zurrtum.create.infrastructure.packet.s2c.EjectorItemSpawnPacket;
+import com.mohistmc.mod.module.create.AllEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlock;
+import com.mohistmc.mod.module.create.foundation.item.EntityItem;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.EjectorItemSpawnPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.protocol.Packet;

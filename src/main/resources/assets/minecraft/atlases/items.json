@@ -3,10 +3,10 @@
     {
       "type": "paletted_permutations",
       "textures": [
-        "create:trims/items/card_leggings_trim",
-        "create:trims/items/card_chestplate_trim",
-        "create:trims/items/card_helmet_trim",
-        "create:trims/items/card_boots_trim"
+        "mohistmc:trims/items/card_leggings_trim",
+        "mohistmc:trims/items/card_chestplate_trim",
+        "mohistmc:trims/items/card_helmet_trim",
+        "mohistmc:trims/items/card_boots_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {

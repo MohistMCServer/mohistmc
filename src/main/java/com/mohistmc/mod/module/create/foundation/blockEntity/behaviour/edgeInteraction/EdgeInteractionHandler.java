@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.edgeInteraction;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.BlockPos;

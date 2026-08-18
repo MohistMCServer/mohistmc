@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.contraptions;
 
-import com.zurrtum.create.AllEntityTypes;
-import com.zurrtum.create.api.behaviour.movement.MovementBehaviour;
-import com.zurrtum.create.catnip.math.AngleHelper;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.contraptions.bearing.BearingContraption;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.AllEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
+import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.contraptions.bearing.BearingContraption;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

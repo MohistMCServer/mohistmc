@@ -3,8 +3,8 @@ package com.mohistmc.mod.module.create.client.infrastructure.model;
 import com.google.common.base.Suppliers;
 import com.mojang.math.Axis;
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.scrollValue.ScrollValueHandler;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue.ScrollValueHandler;
 import java.util.List;
 import java.util.function.Supplier;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -28,8 +28,8 @@ import org.joml.Quaternionf;
 import org.joml.Vector3fc;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
-import static com.zurrtum.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
 
 public class WrenchModel implements ItemModel {
     public static final Identifier ID = Identifier.fromNamespaceAndPath(MOD_ID, "model/wrench");

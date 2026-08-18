@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllRecipeSerializers;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.content.processing.recipe.ProcessingOutput;
+import com.mohistmc.mod.module.create.AllRecipeSerializers;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

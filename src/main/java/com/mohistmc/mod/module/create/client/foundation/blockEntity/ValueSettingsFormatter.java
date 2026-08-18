@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity;
 
-import com.zurrtum.create.client.foundation.blockEntity.behaviour.scrollValue.INamedIconOptions;
-import com.zurrtum.create.client.foundation.gui.AllIcons;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue.INamedIconOptions;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import java.util.function.Function;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

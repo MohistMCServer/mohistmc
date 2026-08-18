@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 import static net.minecraft.sounds.SoundSource.BLOCKS;
 import static net.minecraft.sounds.SoundSource.NEUTRAL;
 import static net.minecraft.sounds.SoundSource.PLAYERS;

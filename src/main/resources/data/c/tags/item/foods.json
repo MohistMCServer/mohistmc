@@ -12,6 +12,11 @@
     "#c:foods/leafy_green",
     "#c:foods/dough",
     "#c:foods/pasta",
-    "#c:foods/cooked_egg"
+    "#c:foods/cooked_egg",
+    "mohistmc:bar_of_chocolate",
+    "mohistmc:sweet_roll",
+    "mohistmc:chocolate_glazed_berries",
+    "mohistmc:honeyed_apple",
+    "mohistmc:builders_tea"
   ]
 }

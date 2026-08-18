@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.infrastructure.packet.c2s.*;
-import com.zurrtum.create.infrastructure.packet.s2c.*;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.*;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -16,7 +16,7 @@ import net.minecraft.network.protocol.game.ServerGamePacketListener;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllPackets {
     public static final Map<PacketType<Packet<ServerGamePacketListener>>, StreamCodec<? super RegistryFriendlyByteBuf, Packet<ServerGamePacketListener>>> C2S = new LinkedHashMap<>();

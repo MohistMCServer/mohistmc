@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.content.fluids.pipes.EncasedPipeBlock;
-import com.zurrtum.create.content.kinetics.gearbox.GearboxBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.encased.EncasedShaftBlock;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.content.fluids.pipes.EncasedPipeBlock;
+import com.mohistmc.mod.module.create.content.kinetics.gearbox.GearboxBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.encased.EncasedShaftBlock;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.function.BiPredicate;

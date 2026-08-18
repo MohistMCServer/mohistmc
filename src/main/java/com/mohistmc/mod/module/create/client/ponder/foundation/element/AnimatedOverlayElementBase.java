@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.element;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.client.ponder.api.element.AnimatedOverlayElement;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.client.ponder.api.element.AnimatedOverlayElement;
 
 public abstract class AnimatedOverlayElementBase extends PonderElementBase implements AnimatedOverlayElement {
 

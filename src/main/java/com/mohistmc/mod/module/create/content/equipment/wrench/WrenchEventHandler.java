@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.wrench;
 
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.AllItems;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

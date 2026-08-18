@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "#c:glass_blocks",
+  "results": [
+    {
+      "id": "minecraft:glass"
+    }
+  ]
+}
+

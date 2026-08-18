@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;

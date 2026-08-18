@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api;
 
-import com.zurrtum.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 
 public enum PonderPalette {
 

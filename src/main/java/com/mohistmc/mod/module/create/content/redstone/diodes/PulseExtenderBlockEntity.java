@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
-import com.zurrtum.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 
-import static com.zurrtum.create.content.redstone.diodes.BrassDiodeBlock.POWERING;
+import static com.mohistmc.mod.module.create.content.redstone.diodes.BrassDiodeBlock.POWERING;
 
 public class PulseExtenderBlockEntity extends BrassDiodeBlockEntity {
 

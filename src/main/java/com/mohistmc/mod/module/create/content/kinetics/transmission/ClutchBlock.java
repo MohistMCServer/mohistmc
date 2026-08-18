@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.transmission;
 
-import com.zurrtum.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

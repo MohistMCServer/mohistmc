@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:item_application",
+  "target": "mohistmc:cardboard_block",
+  "ingredient": "#c:strings",
+  "results": [
+    {
+      "id": "mohistmc:bound_cardboard_block"
+    }
+  ]
+}

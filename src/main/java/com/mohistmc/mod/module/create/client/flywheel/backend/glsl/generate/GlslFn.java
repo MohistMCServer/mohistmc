@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl.generate;
 
-import com.zurrtum.create.client.flywheel.lib.util.StringUtil;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.StringUtil;
 
 import java.util.function.Consumer;
 

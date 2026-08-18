@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:exposed_copper_tiles",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:waxed_exposed_copper_tiles"
+  }
+}

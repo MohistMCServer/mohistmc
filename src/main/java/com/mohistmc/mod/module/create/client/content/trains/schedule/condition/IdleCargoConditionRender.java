@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.trains.schedule.condition;
 
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.trains.schedule.condition.IdleCargoCondition;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.trains.schedule.condition.IdleCargoCondition;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 

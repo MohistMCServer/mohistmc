@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.tunnel;
 
-import com.zurrtum.create.catnip.math.VoxelShaper;
+import com.mohistmc.mod.module.create.catnip.math.VoxelShaper;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.world.level.block.Block;

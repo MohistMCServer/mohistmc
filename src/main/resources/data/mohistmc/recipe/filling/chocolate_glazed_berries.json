@@ -1,0 +1,13 @@
+{
+  "type": "mohistmc:filling",
+  "ingredient": "minecraft:sweet_berries",
+  "fluid_ingredient": {
+    "type": "fluid_stack",
+    "amount": 20250,
+    "fluid": "mohistmc:chocolate"
+  },
+  "result": {
+    "id": "mohistmc:chocolate_glazed_berries"
+  }
+}
+

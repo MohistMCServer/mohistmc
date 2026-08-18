@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation;
 
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;

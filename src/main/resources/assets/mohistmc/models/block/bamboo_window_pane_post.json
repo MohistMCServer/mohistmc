@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/connected_glass_pane/post",
+  "textures": {
+    "edge": "minecraft:block/bamboo_planks",
+    "pane": "mohistmc:block/palettes/bamboo_window"
+  }
+}

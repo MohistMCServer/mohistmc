@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.catnip.gui;
 
-import com.zurrtum.create.client.catnip.render.BindableTexture;
+import com.mohistmc.mod.module.create.client.catnip.render.BindableTexture;
 
 public interface TextureSheetSegment extends BindableTexture {
 

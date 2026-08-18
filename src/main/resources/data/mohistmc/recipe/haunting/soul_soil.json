@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "#minecraft:dirt",
+  "results": [
+    {
+      "id": "minecraft:soul_soil"
+    }
+  ]
+}
+

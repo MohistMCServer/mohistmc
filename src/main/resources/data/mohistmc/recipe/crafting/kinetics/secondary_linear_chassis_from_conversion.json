@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:linear_chassis"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:secondary_linear_chassis"
+  }
+}

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone.analogLever;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.Map;
 import java.util.function.Function;
 import net.minecraft.core.BlockPos;

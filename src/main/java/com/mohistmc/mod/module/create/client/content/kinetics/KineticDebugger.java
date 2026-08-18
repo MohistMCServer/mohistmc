@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.kinetics;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferCache;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.multiplayer.ClientLevel;

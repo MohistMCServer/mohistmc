@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.redstone.link;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.levelWrappers.WorldHelper;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.WorldHelper;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Iterator;

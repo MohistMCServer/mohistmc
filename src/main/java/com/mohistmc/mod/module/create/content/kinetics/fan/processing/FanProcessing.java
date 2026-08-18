@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan.processing;
 
-import com.zurrtum.create.AllSynchedDatas;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
-import com.zurrtum.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.resources.Identifier;

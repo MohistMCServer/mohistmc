@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#c:dyes/red",
+    "#mohistmc:seats"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:red_seat"
+  }
+}

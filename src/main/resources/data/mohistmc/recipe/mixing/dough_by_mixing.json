@@ -1,0 +1,17 @@
+{
+  "type": "mohistmc:mixing",
+  "ingredients": ["#c:flours/wheat"],
+  "fluid_ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 81000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "mohistmc:dough"
+    }
+  ]
+}
+

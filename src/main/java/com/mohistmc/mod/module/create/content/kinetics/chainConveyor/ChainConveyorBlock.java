@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.chainConveyor;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.content.kinetics.base.KineticBlock;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

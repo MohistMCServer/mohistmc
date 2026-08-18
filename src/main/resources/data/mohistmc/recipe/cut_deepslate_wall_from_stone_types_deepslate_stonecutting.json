@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/deepslate",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_deepslate_wall"
+  }
+}

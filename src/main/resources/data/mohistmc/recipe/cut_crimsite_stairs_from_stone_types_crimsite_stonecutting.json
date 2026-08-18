@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/crimsite",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_crimsite_stairs"
+  }
+}

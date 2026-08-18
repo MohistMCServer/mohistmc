@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.backend;
 
-import com.zurrtum.create.client.flywheel.api.internal.FlwApiLink;
-import com.zurrtum.create.client.flywheel.api.registry.IdRegistry;
+import com.mohistmc.mod.module.create.client.flywheel.api.internal.FlwApiLink;
+import com.mohistmc.mod.module.create.client.flywheel.api.registry.IdRegistry;
 import net.minecraft.world.level.LevelAccessor;
 
 @BackendImplemented

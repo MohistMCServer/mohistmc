@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.impl.contraption.dispenser;
 
-import com.zurrtum.create.AllItemTags;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.MountedDispenseBehavior;
-import com.zurrtum.create.api.contraption.dispenser.MountedProjectileDispenseBehavior;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.DefaultMountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.MountedDispenseBehavior;
+import com.mohistmc.mod.module.create.api.contraption.dispenser.MountedProjectileDispenseBehavior;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.dispenser.BlockSource;
@@ -33,7 +33,7 @@ public enum DispenserBehaviorConverter implements SimpleRegistry.Provider<Item, 
     @Nullable
     @SuppressWarnings("deprecation")
     public MountedDispenseBehavior get(Item item, Level world) {
-        DispenseItemBehavior vanilla = ((com.zurrtum.create.mixin.DispenserBlockAccessor) Blocks.DISPENSER)
+        DispenseItemBehavior vanilla = ((com.mohistmc.mod.mixin.create.DispenserBlockAccessor) Blocks.DISPENSER)
             .create$invokeGetDispenseMethod(
             world,
             item.getDefaultInstance()

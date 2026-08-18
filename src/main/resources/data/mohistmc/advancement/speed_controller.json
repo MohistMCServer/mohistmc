@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:precision_mechanism",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:speed_controller_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.speed_controller.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:rotation_speed_controller"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.speed_controller"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation;
 
-import com.zurrtum.create.client.Create;
-import com.zurrtum.create.client.foundation.sound.SoundScapes;
-import com.zurrtum.create.client.infrastructure.model.TableClothModel;
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.client.Create;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes;
+import com.mohistmc.mod.module.create.client.infrastructure.model.TableClothModel;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import net.minecraft.server.packs.resources.ResourceManager;
 
 public class ClientResourceReloadListener extends CreateResourceReloader {

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper;
 
-import com.zurrtum.create.infrastructure.component.TerrainTools;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainTools;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

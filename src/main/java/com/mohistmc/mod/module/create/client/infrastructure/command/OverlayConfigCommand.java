@@ -2,10 +2,10 @@ package com.mohistmc.mod.module.create.client.infrastructure.command;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.zurrtum.create.client.catnip.gui.ScreenOpener;
-import com.zurrtum.create.client.content.equipment.goggles.GoggleConfigScreen;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.client.infrastructure.config.CClient;
+import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
+import com.mohistmc.mod.module.create.client.content.equipment.goggles.GoggleConfigScreen;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.client.infrastructure.config.CClient;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 import net.minecraft.network.chat.Component;
 

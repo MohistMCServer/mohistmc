@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.content.trains.entity.TrainIcon;
-import com.zurrtum.create.content.trains.entity.TrainIconType;
+import com.mohistmc.mod.module.create.client.content.trains.entity.TrainIcon;
+import com.mohistmc.mod.module.create.content.trains.entity.TrainIconType;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import net.minecraft.resources.Identifier;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.trains;
 
-import com.zurrtum.create.client.Create;
-import com.zurrtum.create.client.content.kinetics.KineticDebugger;
-import com.zurrtum.create.client.content.trains.graph.TrackGraphVisualizer;
-import com.zurrtum.create.client.infrastructure.config.AllConfigs;
-import com.zurrtum.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.client.Create;
+import com.mohistmc.mod.module.create.client.content.kinetics.KineticDebugger;
+import com.mohistmc.mod.module.create.client.content.trains.graph.TrackGraphVisualizer;
+import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
 import net.minecraft.client.Minecraft;
 
 public class GlobalRailwayManagerClient {

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.extension;
 
-import com.zurrtum.create.client.flywheel.api.visualization.BlockEntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.BlockEntityVisualizer;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.jspecify.annotations.Nullable;
 

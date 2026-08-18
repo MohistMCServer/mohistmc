@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.foundation.gui;
 
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.gui.TextureSheetSegment;
-import com.zurrtum.create.client.catnip.gui.UIRenderHelper;
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.gui.TextureSheetSegment;
+import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public enum AllGuiTextures implements ScreenElement, TextureSheetSegment {
 

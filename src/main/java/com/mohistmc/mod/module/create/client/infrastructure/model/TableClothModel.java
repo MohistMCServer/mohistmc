@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

@@ -1,0 +1,36 @@
+{
+  "parent": "mohistmc:brass_casing",
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mohistmc:polished_rose_quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.rose_quartz.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:polished_rose_quartz"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.rose_quartz"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

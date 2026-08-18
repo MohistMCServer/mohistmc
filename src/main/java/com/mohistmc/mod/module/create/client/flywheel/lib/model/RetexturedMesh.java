@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.model.IndexSequence;
-import com.zurrtum.create.client.flywheel.api.model.Mesh;
-import com.zurrtum.create.client.flywheel.api.vertex.MutableVertexList;
-import com.zurrtum.create.client.flywheel.lib.vertex.VertexTransformations;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.IndexSequence;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.create.client.flywheel.lib.vertex.VertexTransformations;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import org.joml.Vector4fc;
 

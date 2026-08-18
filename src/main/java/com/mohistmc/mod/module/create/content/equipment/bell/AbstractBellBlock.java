@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.equipment.bell;
 
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.stats.Stats;

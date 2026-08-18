@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.transport;
 
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
-import com.zurrtum.create.content.kinetics.crusher.CrushingWheelControllerBlock;
-import com.zurrtum.create.content.kinetics.crusher.CrushingWheelControllerBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingWheelControllerBlock;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingWheelControllerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;

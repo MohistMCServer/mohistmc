@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl;
 
-import com.zurrtum.create.catnip.config.Builder;
-import com.zurrtum.create.client.flywheel.api.backend.Backend;
-import com.zurrtum.create.client.flywheel.api.backend.BackendManager;
-import com.zurrtum.create.client.flywheel.backend.BackendConfig;
-import com.zurrtum.create.client.flywheel.impl.config.CClient;
+import com.mohistmc.mod.module.create.catnip.config.Builder;
+import com.mohistmc.mod.module.create.client.flywheel.api.backend.Backend;
+import com.mohistmc.mod.module.create.client.flywheel.api.backend.BackendManager;
+import com.mohistmc.mod.module.create.client.flywheel.backend.BackendConfig;
+import com.mohistmc.mod.module.create.client.flywheel.impl.config.CClient;
 import net.minecraft.IdentifierException;
 import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.UnknownNullability;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.flywheel.impl.Flywheel.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.impl.Flywheel.MOD_ID;
 
 public class FabricFlwConfig implements FlwConfig {
     public static final FabricFlwConfig INSTANCE = new FabricFlwConfig();

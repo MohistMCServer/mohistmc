@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cut_deepslate_brick_stairs",
+  "key": {
+    "X": "mohistmc:cut_deepslate_bricks"
+  },
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mohistmc:cut_deepslate_brick_stairs"
+  }
+}

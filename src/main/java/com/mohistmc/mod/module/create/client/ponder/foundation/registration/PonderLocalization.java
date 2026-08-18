@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.client.ponder.api.registration.LangRegistryAccess;
-import com.zurrtum.create.client.ponder.foundation.PonderIndex;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.LangRegistryAccess;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderIndex;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.client.resources.language.I18n;

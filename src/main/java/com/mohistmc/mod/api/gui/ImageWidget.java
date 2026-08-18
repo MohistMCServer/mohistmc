@@ -82,6 +82,12 @@ public class ImageWidget extends PositionedWidget {
     }
 
     @Override
+    public ImageWidget setEditorId(String id) {
+        super.setEditorId(id);
+        return this;
+    }
+
+    @Override
     public void render(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
         if (texture == null) return;
 

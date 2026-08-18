@@ -1,0 +1,30 @@
+{
+  "parent": "mohistmc:backtank",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:pipe_organ_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.pipe_organ.desc"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:steam_whistle"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.pipe_organ"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

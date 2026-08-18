@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/encased_chain_drive/item",
+  "textures": {
+    "side": "mohistmc:block/adjustable_chain_gearshift"
+  }
+}

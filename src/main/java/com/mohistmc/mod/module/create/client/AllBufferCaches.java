@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.catnip.render.SuperByteBufferCache;
-import com.zurrtum.create.client.content.contraptions.render.ContraptionEntityRenderer;
-import com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.zurrtum.create.client.content.kinetics.waterwheel.WaterWheelRenderer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
+import com.mohistmc.mod.module.create.client.content.contraptions.render.ContraptionEntityRenderer;
+import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
+import com.mohistmc.mod.module.create.client.content.kinetics.waterwheel.WaterWheelRenderer;
 
 public class AllBufferCaches {
     public static void register(SuperByteBufferCache bc) {

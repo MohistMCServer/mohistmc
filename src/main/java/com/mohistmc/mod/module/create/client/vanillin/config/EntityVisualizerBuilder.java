@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.vanillin.config;
 
-import com.zurrtum.create.client.flywheel.lib.visualization.SimpleEntityVisualizer;
-import com.zurrtum.create.client.flywheel.lib.visualization.SimpleEntityVisualizer.Factory;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleEntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleEntityVisualizer.Factory;
 import java.util.Objects;
 import java.util.function.Predicate;
 import net.minecraft.client.renderer.entity.EntityRenderer;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.roller;
 
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

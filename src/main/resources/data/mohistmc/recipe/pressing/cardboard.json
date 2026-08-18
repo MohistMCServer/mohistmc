@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "mohistmc:pulp",
+  "results": [
+    {
+      "id": "mohistmc:cardboard"
+    }
+  ]
+}
+

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.redstone.displayLink.source;
 
-import com.zurrtum.create.api.behaviour.display.DisplaySource;
-import com.zurrtum.create.client.api.behaviour.display.DisplaySourceRender;
-import com.zurrtum.create.client.foundation.gui.ModularGuiLineBuilder;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplaySource;
+import com.mohistmc.mod.module.create.client.api.behaviour.display.DisplaySourceRender;
+import com.mohistmc.mod.module.create.client.foundation.gui.ModularGuiLineBuilder;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
 
 public class ValueListDisplaySourceRender implements DisplaySourceRender {
     @Override

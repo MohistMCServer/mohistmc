@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "mohistmc:waxed_oxidized_copper_shingles",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:waxed_oxidized_copper_shingle_stairs"
+  }
+}

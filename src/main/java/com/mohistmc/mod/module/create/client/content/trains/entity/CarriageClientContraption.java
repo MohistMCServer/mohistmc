@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.trains.entity;
 
-import com.zurrtum.create.client.content.contraptions.render.ClientContraption;
-import com.zurrtum.create.content.trains.bogey.AbstractBogeyBlock;
-import com.zurrtum.create.content.trains.entity.CarriageContraption;
+import com.mohistmc.mod.module.create.client.content.contraptions.render.ClientContraption;
+import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlock;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.Map;

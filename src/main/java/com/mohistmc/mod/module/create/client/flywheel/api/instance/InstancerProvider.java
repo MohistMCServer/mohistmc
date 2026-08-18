@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.instance;
 
-import com.zurrtum.create.client.flywheel.api.backend.BackendImplemented;
-import com.zurrtum.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.api.backend.BackendImplemented;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
 
 @BackendImplemented
 public interface InstancerProvider {

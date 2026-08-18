@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.schedule.condition;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
-import com.zurrtum.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

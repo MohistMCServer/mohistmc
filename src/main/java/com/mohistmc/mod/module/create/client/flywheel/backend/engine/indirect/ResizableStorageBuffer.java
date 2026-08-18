@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.indirect;
 
-import com.zurrtum.create.client.flywheel.backend.gl.GlObject;
-import com.zurrtum.create.client.flywheel.lib.memory.FlwMemoryTracker;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlObject;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.FlwMemoryTracker;
 
 import static org.lwjgl.opengl.GL15.glDeleteBuffers;
 import static org.lwjgl.opengl.GL45.glCopyNamedBufferSubData;

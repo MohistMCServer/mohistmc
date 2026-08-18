@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.widget;
 
-import com.zurrtum.create.client.catnip.gui.widget.AbstractSimiWidget;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.AbstractSimiWidget;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;

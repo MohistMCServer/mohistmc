@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.client.catnip.animation.PhysicalFloat;
+import com.mohistmc.mod.module.create.client.catnip.animation.PhysicalFloat;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 

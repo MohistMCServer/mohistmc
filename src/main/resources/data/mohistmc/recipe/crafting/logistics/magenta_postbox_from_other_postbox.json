@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#c:dyes/magenta",
+    "#mohistmc:postboxes"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:magenta_postbox"
+  }
+}

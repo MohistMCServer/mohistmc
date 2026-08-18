@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.client.ponder.api.registration.IndexExclusionHelper;
-import com.zurrtum.create.client.ponder.api.registration.PonderPlugin;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.IndexExclusionHelper;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.PonderPlugin;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import net.minecraft.world.item.BlockItem;

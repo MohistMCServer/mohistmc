@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.ponder;
 
 import com.mojang.logging.LogUtils;
-import com.zurrtum.create.client.catnip.event.ClientResourceReloadListener;
-import com.zurrtum.create.client.catnip.lang.LangBuilder;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBuffer;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferCache;
-import com.zurrtum.create.client.ponder.enums.PonderConfig;
-import com.zurrtum.create.client.ponder.enums.PonderKeybinds;
-import com.zurrtum.create.client.ponder.foundation.element.WorldSectionElementImpl;
+import com.mohistmc.mod.module.create.client.catnip.event.ClientResourceReloadListener;
+import com.mohistmc.mod.module.create.client.catnip.lang.LangBuilder;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
+import com.mohistmc.mod.module.create.client.ponder.enums.PonderConfig;
+import com.mohistmc.mod.module.create.client.ponder.enums.PonderKeybinds;
+import com.mohistmc.mod.module.create.client.ponder.foundation.element.WorldSectionElementImpl;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 

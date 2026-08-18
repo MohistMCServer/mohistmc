@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.gauge;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.content.kinetics.base.IRotate.StressImpact;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate.StressImpact;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;

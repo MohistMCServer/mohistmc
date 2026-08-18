@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "mohistmc:andesite_alloy",
+    "C": "#minecraft:planks"
+  },
+  "pattern": [
+    "CCC",
+    "  A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:hand_crank"
+  }
+}

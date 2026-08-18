@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.registry;
 
-import com.zurrtum.create.impl.registry.SimpleRegistryImpl;
-import com.zurrtum.create.impl.registry.TagProviderImpl;
+import com.mohistmc.mod.module.create.impl.registry.SimpleRegistryImpl;
+import com.mohistmc.mod.module.create.impl.registry.TagProviderImpl;
 import java.util.List;
 import java.util.function.Function;
 import net.minecraft.core.Holder;

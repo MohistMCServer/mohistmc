@@ -2,10 +2,10 @@ package com.mohistmc.mod.module.create.client.content.equipment.hats;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.content.trains.schedule.hat.TrainHatInfo;
-import com.zurrtum.create.client.content.trains.schedule.hat.TrainHatInfoReloadListener;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.content.trains.schedule.hat.TrainHatInfo;
+import com.mohistmc.mod.module.create.client.content.trains.schedule.hat.TrainHatInfoReloadListener;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
 import java.util.List;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HeadedModel;

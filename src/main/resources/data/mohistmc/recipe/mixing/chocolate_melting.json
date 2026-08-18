@@ -1,0 +1,13 @@
+{
+  "type": "mohistmc:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    "mohistmc:bar_of_chocolate"
+  ],
+  "fluid_results": [
+    {
+      "amount": 20250,
+      "id": "mohistmc:chocolate"
+    }
+  ]
+}

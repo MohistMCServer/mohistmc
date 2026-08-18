@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllItemAttributeTypes;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecs;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttribute;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttributeType;
-import com.zurrtum.create.foundation.fluid.FluidHelper;
-import com.zurrtum.create.infrastructure.fluids.FluidItemInventory;
+import com.mohistmc.mod.module.create.AllItemAttributeTypes;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttribute;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidItemInventory;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.registries.BuiltInRegistries;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.contraptions.bearing;
 
-import com.zurrtum.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllBlocks;
 import java.util.Map;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

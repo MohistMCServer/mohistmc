@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mohistmc:block/blaze_burner/block"
+    }
+  }
+}

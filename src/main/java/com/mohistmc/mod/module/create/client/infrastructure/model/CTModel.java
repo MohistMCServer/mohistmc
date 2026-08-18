@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.CTType;
-import com.zurrtum.create.client.foundation.block.connected.ConnectedTextureBehaviour;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTType;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.util.List;
 import java.util.function.BiFunction;

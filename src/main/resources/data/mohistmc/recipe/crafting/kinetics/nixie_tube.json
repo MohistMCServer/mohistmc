@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:electron_tube",
+    "mohistmc:electron_tube"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mohistmc:nixie_tube"
+  }
+}

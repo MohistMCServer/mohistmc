@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.content.logistics.tunnel;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.content.logistics.FlapStuffs;
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.content.logistics.tunnel.BeltTunnelBlockEntity;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.content.logistics.FlapStuffs;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.content.logistics.tunnel.BeltTunnelBlockEntity;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Consumer;

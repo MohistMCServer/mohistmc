@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.infrastructure.component;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttribute;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttribute;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

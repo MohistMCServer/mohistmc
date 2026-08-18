@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.api.goggles.IHaveHoveringInformation;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.BigItemStack;
-import com.zurrtum.create.content.logistics.packager.InventorySummary;
-import com.zurrtum.create.content.logistics.stockTicker.StockTickerBlockEntity;
-import com.zurrtum.create.content.logistics.stockTicker.StockTickerBlockEntity.StockTickerInventory;
+import com.mohistmc.mod.module.create.client.api.goggles.IHaveHoveringInformation;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.packager.InventorySummary;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerBlockEntity.StockTickerInventory;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;

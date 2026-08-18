@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/belt_tunnel/item",
+  "textures": {
+    "direction": "mohistmc:block/funnel/brass_funnel_neutral",
+    "frame": "mohistmc:block/funnel/brass_funnel_frame",
+    "particle": "mohistmc:block/brass_block",
+    "top": "mohistmc:block/tunnel/brass_tunnel_top_item",
+    "tunnel": "mohistmc:block/tunnel/brass_tunnel"
+  }
+}

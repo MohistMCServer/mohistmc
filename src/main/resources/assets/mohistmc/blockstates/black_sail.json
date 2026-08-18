@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/black_sail",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mohistmc:block/black_sail",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mohistmc:block/black_sail",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mohistmc:block/black_sail",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "mohistmc:block/black_sail"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/black_sail",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

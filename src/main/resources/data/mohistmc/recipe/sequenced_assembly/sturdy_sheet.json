@@ -1,0 +1,33 @@
+{
+  "type": "mohistmc:sequenced_assembly",
+  "ingredient": "#c:dusts/obsidian",
+  "transitional_item": {
+    "id": "mohistmc:unprocessed_obsidian_sheet"
+  },
+  "result": {
+    "id": "mohistmc:sturdy_sheet"
+  },
+  "sequence": [
+    {
+      "type": "mohistmc:filling",
+      "ingredient": "$ingredient",
+      "fluid_ingredient": {
+        "type": "fluid_stack",
+        "amount": 40500,
+        "fluid": "minecraft:lava"
+      },
+      "result": "$result"
+    },
+    {
+      "type": "mohistmc:pressing",
+      "ingredient": "$ingredient",
+      "results": ["$result"]
+    },
+    {
+      "type": "mohistmc:pressing",
+      "ingredient": "$ingredient",
+      "results": ["$result"]
+    }
+  ]
+}
+

@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:item/package/custom_12x10",
+  "textures": {
+    "2": "mohistmc:block/package/rare_evan"
+  }
+}

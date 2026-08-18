@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.vanillin.compose;
 
-import com.zurrtum.create.client.flywheel.api.visual.DynamicVisual;
-import com.zurrtum.create.client.flywheel.api.visual.EntityVisual;
-import com.zurrtum.create.client.flywheel.api.visual.TickableVisual;
-import com.zurrtum.create.client.flywheel.api.visual.Visual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.visual.AbstractVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.zurrtum.create.client.flywheel.lib.visual.SimpleTickableVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.EntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.TickableVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.Visual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleTickableVisual;
 import net.minecraft.world.entity.Entity;
 import org.jspecify.annotations.Nullable;
 

@@ -1,0 +1,12 @@
+{
+  "type": "mohistmc:emptying",
+  "ingredient": "minecraft:honey_bottle",
+  "fluid_result": {
+    "amount": 27000,
+    "id": "mohistmc:honey"
+  },
+  "result": {
+    "id": "minecraft:glass_bottle"
+  }
+}
+

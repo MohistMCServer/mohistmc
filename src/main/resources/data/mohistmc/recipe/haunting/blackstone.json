@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "#c:cobblestones",
+  "results": [
+    {
+      "id": "minecraft:blackstone"
+    }
+  ]
+}
+

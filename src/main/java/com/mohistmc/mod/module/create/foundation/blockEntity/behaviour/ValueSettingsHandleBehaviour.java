@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.equipment.clipboard.ClipboardCloneable;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardCloneable;
 import java.util.Optional;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;

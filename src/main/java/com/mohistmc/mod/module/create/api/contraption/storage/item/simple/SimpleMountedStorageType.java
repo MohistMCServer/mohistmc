@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.item.simple;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorageType;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorageType;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;

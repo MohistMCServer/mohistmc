@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.backend;
 
-import com.zurrtum.create.client.flywheel.api.internal.FlwApiLink;
+import com.mohistmc.mod.module.create.client.flywheel.api.internal.FlwApiLink;
 
 public final class BackendManager {
     private BackendManager() {

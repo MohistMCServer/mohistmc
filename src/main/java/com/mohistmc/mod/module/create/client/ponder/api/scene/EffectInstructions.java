@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.scene;
 
-import com.zurrtum.create.client.ponder.api.ParticleEmitter;
+import com.mohistmc.mod.module.create.client.ponder.api.ParticleEmitter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.world.phys.Vec3;

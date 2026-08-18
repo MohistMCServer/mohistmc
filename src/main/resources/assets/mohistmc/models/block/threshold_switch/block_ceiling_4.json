@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/threshold_switch/block_ceiling",
+  "textures": {
+    "level": "mohistmc:block/threshold_switch/level_4"
+  }
+}

@@ -4,11 +4,11 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import com.mojang.math.Axis;
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.content.equipment.extendoGrip.ExtendoGripRenderHandler;
-import com.zurrtum.create.client.flywheel.lib.model.baked.ItemModelRenderHelper;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.content.equipment.extendoGrip.ExtendoGripRenderHandler;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -38,8 +38,8 @@ import org.joml.Quaternionf;
 import org.joml.Vector3fc;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
-import static com.zurrtum.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
 
 public class ExtendoGripModel implements ItemModel {
     public static final Identifier ID = Identifier.fromNamespaceAndPath(MOD_ID, "model/extendo_grip");

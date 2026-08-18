@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.audio;
 
-import com.zurrtum.create.client.foundation.sound.SoundScapes;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.content.kinetics.gearbox.GearboxBlock;
-import com.zurrtum.create.content.kinetics.simpleRelays.ICogWheel;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.gearbox.GearboxBlock;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ICogWheel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.Block;
 

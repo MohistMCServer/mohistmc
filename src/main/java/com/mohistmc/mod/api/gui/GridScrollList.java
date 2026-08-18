@@ -125,8 +125,8 @@ public class GridScrollList extends ScrollableWidget {
 
     @Override
     protected boolean handleContentClick(MouseButtonEvent event, int bx, int by, int vw, int vh) {
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
         int cardW = getCardWidth();
         int cardH = getCardHeight();
         if (cardW <= 0 || cardH <= 0) return true;

@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.content.logistics.packager;
 
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.content.logistics.BigItemStack;
-import com.zurrtum.create.infrastructure.packet.s2c.LogisticalStockResponsePacket;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.LogisticalStockResponsePacket;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.IdentityHashMap;

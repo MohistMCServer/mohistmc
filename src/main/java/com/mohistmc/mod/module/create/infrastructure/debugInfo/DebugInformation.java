@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.infrastructure.debugInfo;
 
 import com.google.common.collect.ImmutableMap;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.infrastructure.debugInfo.element.DebugInfoSection;
-import com.zurrtum.create.infrastructure.debugInfo.element.InfoElement;
-import com.zurrtum.create.infrastructure.debugInfo.element.InfoEntry;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.element.DebugInfoSection;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.element.InfoElement;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.element.InfoEntry;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

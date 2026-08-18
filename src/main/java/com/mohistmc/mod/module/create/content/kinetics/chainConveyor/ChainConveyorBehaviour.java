@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.chainConveyor;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 
 public abstract class ChainConveyorBehaviour extends BlockEntityBehaviour<ChainConveyorBlockEntity> {
     public static final BehaviourType<ChainConveyorBehaviour> TYPE = new BehaviourType<>();

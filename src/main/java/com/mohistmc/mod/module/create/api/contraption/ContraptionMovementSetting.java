@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import java.util.Collection;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;

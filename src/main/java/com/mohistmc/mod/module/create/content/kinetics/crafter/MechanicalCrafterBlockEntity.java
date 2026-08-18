@@ -1,21 +1,21 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.api.contraption.transformable.TransformableBlockEntity;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.BlockFace;
-import com.zurrtum.create.catnip.math.Pointing;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.contraptions.StructureTransform;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
-import com.zurrtum.create.content.kinetics.crafter.ConnectedInputHandler.ConnectedInput;
-import com.zurrtum.create.content.kinetics.crafter.RecipeGridHandler.GroupedItems;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.blockEntity.behaviour.edgeInteraction.EdgeInteractionBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlockEntity;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.BlockFace;
+import com.mohistmc.mod.module.create.catnip.math.Pointing;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.ConnectedInputHandler.ConnectedInput;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.RecipeGridHandler.GroupedItems;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.edgeInteraction.EdgeInteractionBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,7 +41,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
+import static com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
 
 public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements TransformableBlockEntity {
 

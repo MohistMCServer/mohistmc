@@ -1,34 +1,34 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.content.equipment.sandPaper.SandPaperPolishingRecipe;
-import com.zurrtum.create.content.equipment.toolbox.ToolboxDyeingRecipe;
-import com.zurrtum.create.content.fluids.transfer.EmptyingRecipe;
-import com.zurrtum.create.content.fluids.transfer.FillingRecipe;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCraftingRecipe;
-import com.zurrtum.create.content.kinetics.crusher.CrushingRecipe;
-import com.zurrtum.create.content.kinetics.deployer.DeployerApplicationRecipe;
-import com.zurrtum.create.content.kinetics.deployer.ManualApplicationRecipe;
-import com.zurrtum.create.content.kinetics.fan.processing.HauntingRecipe;
-import com.zurrtum.create.content.kinetics.fan.processing.SplashingRecipe;
-import com.zurrtum.create.content.kinetics.millstone.MillingRecipe;
-import com.zurrtum.create.content.kinetics.mixer.CompactingRecipe;
-import com.zurrtum.create.content.kinetics.mixer.MixingRecipe;
-import com.zurrtum.create.content.kinetics.mixer.PotionRecipe;
-import com.zurrtum.create.content.kinetics.press.PressingRecipe;
-import com.zurrtum.create.content.kinetics.saw.CuttingRecipe;
-import com.zurrtum.create.content.processing.sequenced.SequencedAssemblyRecipe;
-import com.zurrtum.create.foundation.recipe.ItemCopyingRecipe;
+import com.mohistmc.mod.module.create.content.equipment.sandPaper.SandPaperPolishingRecipe;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxDyeingRecipe;
+import com.mohistmc.mod.module.create.content.fluids.transfer.EmptyingRecipe;
+import com.mohistmc.mod.module.create.content.fluids.transfer.FillingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCraftingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerApplicationRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.deployer.ManualApplicationRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.HauntingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.SplashingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.millstone.MillingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.CompactingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.MixingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.mixer.PotionRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.press.PressingRecipe;
+import com.mohistmc.mod.module.create.content.kinetics.saw.CuttingRecipe;
+import com.mohistmc.mod.module.create.content.processing.sequenced.SequencedAssemblyRecipe;
+import com.mohistmc.mod.module.create.foundation.recipe.ItemCopyingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllRecipeSerializers {
     public static final RecipeSerializer<CrushingRecipe> CRUSHING = register("crushing", CrushingRecipe.SERIALIZER);
-    public static final RecipeSerializer<CuttingRecipe> CUTTING = register("cutting", CuttingRecipe.SERIALIZER);
+    public static final RecipeSerializer<CuttingRecipe> CUTTING = register("mechanical_cutting", CuttingRecipe.SERIALIZER);
     public static final RecipeSerializer<MillingRecipe> MILLING = register("milling", MillingRecipe.SERIALIZER);
     public static final RecipeSerializer<MixingRecipe> MIXING = register("mixing", MixingRecipe.SERIALIZER);
     public static final RecipeSerializer<CompactingRecipe> COMPACTING = register(

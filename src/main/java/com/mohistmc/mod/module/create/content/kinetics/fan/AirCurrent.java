@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlockTags;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
-import com.zurrtum.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
-import com.zurrtum.create.content.kinetics.fan.processing.FanProcessing;
-import com.zurrtum.create.content.kinetics.fan.processing.FanProcessingType;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.FanProcessing;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.FanProcessingType;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

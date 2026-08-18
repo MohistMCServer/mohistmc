@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.gauge;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.catnip.render.CachedBuffers;
-import com.zurrtum.create.client.catnip.render.SuperByteBufferRenderState;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.zurrtum.create.content.kinetics.gauge.GaugeBlock;
-import com.zurrtum.create.content.kinetics.gauge.GaugeBlock.Type;
-import com.zurrtum.create.content.kinetics.gauge.GaugeBlockEntity;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
+import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlock;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlock.Type;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlockEntity;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -30,7 +30,7 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
 
 public class GaugeRenderer implements BlockEntityRenderer<GaugeBlockEntity, GaugeRenderer.GaugeRenderState> {
     private final PartialModel model;

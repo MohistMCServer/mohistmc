@@ -1,0 +1,22 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "minecraft:emerald_ore",
+  "processing_time": 350,
+  "results": [
+    {
+      "id": "minecraft:emerald"
+    },
+    {
+      "chance": 0.75,
+      "id": "minecraft:emerald"
+    },
+    {
+      "chance": 0.75,
+      "id": "mohistmc:experience_nugget"
+    },
+    {
+      "chance": 0.125,
+      "id": "minecraft:cobblestone"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "mohistmc:crushing",
+  "ingredient": "minecraft:iron_ore",
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "mohistmc:crushed_raw_iron"
+    },
+    {
+      "chance": 0.75,
+      "id": "mohistmc:crushed_raw_iron"
+    },
+    {
+      "chance": 0.75,
+      "id": "mohistmc:experience_nugget"
+    },
+    {
+      "chance": 0.125,
+      "id": "minecraft:cobblestone"
+    }
+  ]
+}

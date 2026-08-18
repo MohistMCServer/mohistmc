@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.contraptions.bearing;
 
-import com.zurrtum.create.AllContraptionTypes;
-import com.zurrtum.create.api.contraption.ContraptionType;
-import com.zurrtum.create.content.contraptions.AssemblyException;
-import com.zurrtum.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.AllContraptionTypes;
+import com.mohistmc.mod.module.create.api.contraption.ContraptionType;
+import com.mohistmc.mod.module.create.content.contraptions.AssemblyException;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;

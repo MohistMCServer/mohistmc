@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.behaviour.display.DisplaySource;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.redstone.displayLink.source.*;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplaySource;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.source.*;
 import java.util.function.Supplier;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ColorCollection;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllDisplaySources {
     public static final ItemNameDisplaySource ITEM_NAMES = register("item_names", ItemNameDisplaySource::new);

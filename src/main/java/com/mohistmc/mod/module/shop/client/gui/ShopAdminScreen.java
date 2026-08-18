@@ -194,7 +194,6 @@ public class ShopAdminScreen extends EnhancedScreen {
         if (itemPicker == null) {
             itemPicker = new ItemPickerModal(this::onItemSelected, this::onItemPickerClosed);
         }
-        itemPicker.setScreenPos(leftPos, topPos, getImageWidth(), getImageHeight());
         addModal(itemPicker);
 
         if (currentPage == AdminPage.PRODUCTS) {
@@ -724,6 +723,10 @@ public class ShopAdminScreen extends EnhancedScreen {
 
     @Override
     public boolean keyPressed(KeyEvent event) {
+        // 允许 F8 快捷键通过（GUI编辑器）
+        if (event.key() == 0x129) {
+            return super.keyPressed(event);
+        }
         // 物品选择器搜索框的键盘事件
         if (itemPicker != null && itemPicker.isVisible()) {
             var searchBox = itemPicker.getSearchBox();

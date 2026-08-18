@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.content.logistics.depot;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.depot.EjectorBlockEntity;
-import com.zurrtum.create.content.logistics.depot.EntityLauncher;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.packet.c2s.EjectorPlacementPacket;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.depot.EjectorBlockEntity;
+import com.mohistmc.mod.module.create.content.logistics.depot.EntityLauncher;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.EjectorPlacementPacket;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;

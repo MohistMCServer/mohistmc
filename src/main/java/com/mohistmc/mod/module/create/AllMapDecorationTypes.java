@@ -8,7 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.saveddata.maps.MapDecorationType;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllMapDecorationTypes {
     public static final Holder<MapDecorationType> STATION_MAP_DECORATION = register("station", true, -1, true, false);

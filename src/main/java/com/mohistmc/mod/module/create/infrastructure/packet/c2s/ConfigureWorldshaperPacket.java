@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.zurrtum.create.AllHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipLargerStreamCodecs;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecs;
-import com.zurrtum.create.content.equipment.zapper.ConfigureZapperPacket;
-import com.zurrtum.create.content.equipment.zapper.terrainzapper.WorldshaperItem;
-import com.zurrtum.create.infrastructure.component.PlacementOptions;
-import com.zurrtum.create.infrastructure.component.PlacementPatterns;
-import com.zurrtum.create.infrastructure.component.TerrainBrushes;
-import com.zurrtum.create.infrastructure.component.TerrainTools;
+import com.mohistmc.mod.module.create.AllHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipLargerStreamCodecs;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
+import com.mohistmc.mod.module.create.content.equipment.zapper.ConfigureZapperPacket;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.WorldshaperItem;
+import com.mohistmc.mod.module.create.infrastructure.component.PlacementOptions;
+import com.mohistmc.mod.module.create.infrastructure.component.PlacementPatterns;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainBrushes;
+import com.mohistmc.mod.module.create.infrastructure.component.TerrainTools;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

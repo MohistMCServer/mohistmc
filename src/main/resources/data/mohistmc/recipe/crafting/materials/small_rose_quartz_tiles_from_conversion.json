@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:rose_quartz_tiles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_rose_quartz_tiles"
+  }
+}

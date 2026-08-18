@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
-import com.zurrtum.create.content.decoration.copycat.CopycatStepBlock;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatStepBlock;
 import java.util.List;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModelPart;

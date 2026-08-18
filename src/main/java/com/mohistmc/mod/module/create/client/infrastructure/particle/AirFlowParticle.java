@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.fan.AirCurrent;
-import com.zurrtum.create.content.kinetics.fan.IAirCurrentSource;
-import com.zurrtum.create.content.kinetics.fan.processing.FanProcessingType;
-import com.zurrtum.create.infrastructure.particle.AirFlowParticleData;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.fan.AirCurrent;
+import com.mohistmc.mod.module.create.content.kinetics.fan.IAirCurrentSource;
+import com.mohistmc.mod.module.create.content.kinetics.fan.processing.FanProcessingType;
+import com.mohistmc.mod.module.create.infrastructure.particle.AirFlowParticleData;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;

@@ -2,8 +2,8 @@ package com.mohistmc.mod.module.create.foundation.recipe;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.zurrtum.create.Create;
-import com.zurrtum.create.foundation.utility.CreateResourceReloader;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

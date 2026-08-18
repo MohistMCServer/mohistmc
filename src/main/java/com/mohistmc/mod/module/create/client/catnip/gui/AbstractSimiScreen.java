@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.gui;
 
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.client.catnip.animation.AnimationTickHolder;
-import com.zurrtum.create.client.catnip.gui.widget.AbstractSimiWidget;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.AbstractSimiWidget;
 import java.util.Collection;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

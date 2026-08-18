@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.trains.schedule.condition;
 
-import com.zurrtum.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

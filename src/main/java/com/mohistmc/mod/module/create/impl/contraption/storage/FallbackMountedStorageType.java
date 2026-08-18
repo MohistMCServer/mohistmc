@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.impl.contraption.storage;
 
-import com.zurrtum.create.api.contraption.storage.item.simple.SimpleMountedStorageType;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.simple.SimpleMountedStorageType;
 import net.minecraft.world.Container;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;

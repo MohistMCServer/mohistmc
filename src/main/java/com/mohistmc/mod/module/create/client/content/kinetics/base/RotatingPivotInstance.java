@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.base;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceHandle;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Vector3fc;

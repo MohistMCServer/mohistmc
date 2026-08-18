@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.instance;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.api.layout.FloatRepr;
-import com.zurrtum.create.client.flywheel.api.layout.IntegerRepr;
-import com.zurrtum.create.client.flywheel.api.layout.LayoutBuilder;
-import com.zurrtum.create.client.flywheel.lib.util.ExtraMemoryOps;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.IntegerRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.LayoutBuilder;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ExtraMemoryOps;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 import org.lwjgl.system.MemoryUtil;
 
 public final class InstanceTypes {

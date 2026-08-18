@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.infrastructure.debugInfo.element;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.infrastructure.debugInfo.DebugInformation;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.DebugInformation;
 import java.util.Collection;
 import java.util.function.Consumer;
 import java.util.function.Supplier;

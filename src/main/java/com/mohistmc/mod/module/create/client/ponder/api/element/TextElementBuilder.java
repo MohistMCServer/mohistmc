@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.element;
 
-import com.zurrtum.create.client.ponder.api.PonderPalette;
+import com.mohistmc.mod.module.create.client.ponder.api.PonderPalette;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.phys.Vec3;
 

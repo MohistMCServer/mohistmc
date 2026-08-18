@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mohistmc:block/veridium_natural_0"
+      },
+      {
+        "model": "mohistmc:block/veridium_natural_1"
+      },
+      {
+        "model": "mohistmc:block/veridium_natural_2"
+      },
+      {
+        "model": "mohistmc:block/veridium_natural_3"
+      }
+    ]
+  }
+}

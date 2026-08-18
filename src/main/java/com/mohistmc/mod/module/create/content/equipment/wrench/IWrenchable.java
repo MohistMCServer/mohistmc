@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.equipment.wrench;
 
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.catnip.math.VoxelShaper;
-import com.zurrtum.create.content.kinetics.base.*;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.catnip.math.VoxelShaper;
+import com.mohistmc.mod.module.create.content.kinetics.base.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

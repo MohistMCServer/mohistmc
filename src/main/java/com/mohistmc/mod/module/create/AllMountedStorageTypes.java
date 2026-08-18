@@ -1,20 +1,20 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.contraption.storage.fluid.MountedFluidStorageType;
-import com.zurrtum.create.api.contraption.storage.item.MountedItemStorageType;
-import com.zurrtum.create.api.contraption.storage.item.chest.ChestMountedStorageType;
-import com.zurrtum.create.api.contraption.storage.item.simple.SimpleMountedStorage;
-import com.zurrtum.create.api.contraption.storage.item.simple.SimpleMountedStorageType;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.api.registry.CreateRegistryKeys;
-import com.zurrtum.create.content.contraptions.behaviour.dispenser.storage.DispenserMountedStorageType;
-import com.zurrtum.create.content.equipment.toolbox.ToolboxMountedStorageType;
-import com.zurrtum.create.content.fluids.tank.storage.FluidTankMountedStorageType;
-import com.zurrtum.create.content.fluids.tank.storage.creative.CreativeFluidTankMountedStorageType;
-import com.zurrtum.create.content.logistics.crate.CreativeCrateMountedStorageType;
-import com.zurrtum.create.content.logistics.depot.storage.DepotMountedStorageType;
-import com.zurrtum.create.content.logistics.vault.ItemVaultMountedStorageType;
-import com.zurrtum.create.impl.contraption.storage.FallbackMountedStorageType;
+import com.mohistmc.mod.module.create.api.contraption.storage.fluid.MountedFluidStorageType;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorageType;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.chest.ChestMountedStorageType;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.simple.SimpleMountedStorage;
+import com.mohistmc.mod.module.create.api.contraption.storage.item.simple.SimpleMountedStorageType;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
+import com.mohistmc.mod.module.create.content.contraptions.behaviour.dispenser.storage.DispenserMountedStorageType;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxMountedStorageType;
+import com.mohistmc.mod.module.create.content.fluids.tank.storage.FluidTankMountedStorageType;
+import com.mohistmc.mod.module.create.content.fluids.tank.storage.creative.CreativeFluidTankMountedStorageType;
+import com.mohistmc.mod.module.create.content.logistics.crate.CreativeCrateMountedStorageType;
+import com.mohistmc.mod.module.create.content.logistics.depot.storage.DepotMountedStorageType;
+import com.mohistmc.mod.module.create.content.logistics.vault.ItemVaultMountedStorageType;
+import com.mohistmc.mod.module.create.impl.contraption.storage.FallbackMountedStorageType;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ColorCollection;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllMountedStorageTypes {
     public static final DepotMountedStorageType DEPOT = register("depot", new DepotMountedStorageType());

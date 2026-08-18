@@ -1,51 +1,7 @@
 {
-  "multipart": [
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_post"
-      }
-    },
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_bell_tie"
-      },
-      "when": {
-        "tied_to_bell": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_side"
-      },
-      "when": {
-        "north": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_side",
-        "y": 90
-      },
-      "when": {
-        "east": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_side_alt"
-      },
-      "when": {
-        "south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "mohistmc:block/rope_side_alt",
-        "y": 90
-      },
-      "when": {
-        "west": "true"
-      }
+  "variants": {
+    "": {
+      "model": "create:block/rope_pulley/rope"
     }
-  ]
+  }
 }

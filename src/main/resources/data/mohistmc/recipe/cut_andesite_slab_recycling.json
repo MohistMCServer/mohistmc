@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mohistmc:cut_andesite_slab",
+    "mohistmc:cut_andesite_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_andesite"
+  }
+}

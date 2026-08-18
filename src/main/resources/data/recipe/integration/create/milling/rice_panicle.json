@@ -5,7 +5,7 @@
       "modid": "create"
     }
   ],
-  "type": "create:milling",
+  "type": "mohistmc:milling",
   "ingredients": [
     {
       "item": "mohistmc:rice_panicle"

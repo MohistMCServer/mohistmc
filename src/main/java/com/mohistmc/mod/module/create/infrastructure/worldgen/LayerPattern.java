@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create.infrastructure.worldgen;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;

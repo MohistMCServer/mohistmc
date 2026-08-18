@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.catnip.render.SpriteShiftEntry;
-import com.zurrtum.create.client.foundation.model.BakedModelHelper;
-import com.zurrtum.create.content.kinetics.belt.BeltBlock;
-import com.zurrtum.create.content.kinetics.belt.BeltBlockEntity;
-import com.zurrtum.create.content.kinetics.belt.BeltBlockEntity.CasingType;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity.CasingType;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.util.List;
 import net.minecraft.client.model.geom.builders.UVPair;

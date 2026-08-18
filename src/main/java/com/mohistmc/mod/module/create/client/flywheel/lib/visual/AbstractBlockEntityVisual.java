@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visual;
 
-import com.zurrtum.create.client.flywheel.api.visual.*;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualManager;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.FlatLit;
-import com.zurrtum.create.client.flywheel.lib.math.MoreMath;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.*;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualManager;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.FlatLit;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.MoreMath;
 import it.unimi.dsi.fastutil.longs.LongArraySet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import java.util.Iterator;

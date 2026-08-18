@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.instance;
 
-import com.zurrtum.create.client.flywheel.api.layout.Layout;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.Layout;
 import net.minecraft.resources.Identifier;
 
 /**

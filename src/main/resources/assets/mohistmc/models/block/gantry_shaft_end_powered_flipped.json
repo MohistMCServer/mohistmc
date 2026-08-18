@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/gantry_shaft/block_end",
+  "textures": {
+    "2": "mohistmc:block/gantry_shaft_powered_flipped"
+  }
+}

@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.transport;
 
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
-import com.zurrtum.create.content.logistics.funnel.BeltFunnelBlock;
-import com.zurrtum.create.content.logistics.funnel.BeltFunnelBlock.Shape;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
-import com.zurrtum.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
-import com.zurrtum.create.foundation.item.ItemHelper.ExtractionCountMode;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock;
+import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock.Shape;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.inventory.InvManipulationBehaviour;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper.ExtractionCountMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mohistmc:item/cardboard_chestplate",
+    "layer1": "mohistmc:trims/items/card_chestplate_trim_diamond"
+  }
+}

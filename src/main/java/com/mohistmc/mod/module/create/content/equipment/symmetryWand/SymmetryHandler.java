@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.symmetryWand;
 
-import com.zurrtum.create.AllItems;
+import com.mohistmc.mod.module.create.AllItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

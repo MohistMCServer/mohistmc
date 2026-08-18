@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.logistics.stockTicker;
 
-import com.zurrtum.create.content.logistics.BigItemStack;
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.transmission;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.kinetics.RotationPropagator;
-import com.zurrtum.create.content.kinetics.base.AbstractEncasedShaftBlock;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.kinetics.RotationPropagator;
+import com.mohistmc.mod.module.create.content.kinetics.base.AbstractEncasedShaftBlock;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;

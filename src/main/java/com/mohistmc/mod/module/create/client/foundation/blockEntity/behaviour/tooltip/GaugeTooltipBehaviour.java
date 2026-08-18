@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.gauge.GaugeBlockEntity;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlockEntity;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 

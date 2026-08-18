@@ -5,8 +5,8 @@
 
 package com.mohistmc.mod.module.create.client.model.obj;
 
-import com.zurrtum.create.client.model.AbstractUnbakedModel;
-import com.zurrtum.create.client.model.StandardModelParameters;
+import com.mohistmc.mod.module.create.client.model.AbstractUnbakedModel;
+import com.mohistmc.mod.module.create.client.model.StandardModelParameters;
 import net.minecraft.client.resources.model.geometry.UnbakedGeometry;
 import net.minecraft.resources.Identifier;
 

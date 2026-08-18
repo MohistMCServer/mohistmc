@@ -1,0 +1,7 @@
+{
+  "parent": "mohistmc:block/connected_glass_pane/noside",
+  "textures": {
+    "edge": "mohistmc:block/palettes/framed_glass_pane_top",
+    "pane": "mohistmc:block/palettes/framed_glass"
+  }
+}

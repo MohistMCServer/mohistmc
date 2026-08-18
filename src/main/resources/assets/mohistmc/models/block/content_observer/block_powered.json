@@ -1,0 +1,8 @@
+{
+	"parent": "mohistmc:block/content_observer/block",
+	"textures": {
+		"0": "mohistmc:block/smart_observer_powered",
+		"7": "mohistmc:block/smart_observer_side_powered",
+		"particle": "mohistmc:block/smart_observer_powered"
+	}
+}

@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.a
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllItemAttributeTypes;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttribute;
-import com.zurrtum.create.content.logistics.item.filter.attribute.ItemAttributeType;
+import com.mohistmc.mod.module.create.AllItemAttributeTypes;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttribute;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
 import io.netty.buffer.ByteBuf;
 import java.util.ArrayList;
 import java.util.List;

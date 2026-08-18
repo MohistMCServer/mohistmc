@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllPackageStyles;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.flywheel.lib.model.baked.PartialModel;
-import com.zurrtum.create.content.fluids.FluidTransportBehaviour;
-import com.zurrtum.create.content.kinetics.gantry.GantryShaftBlock;
-import com.zurrtum.create.content.logistics.box.PackageStyles.PackageStyle;
+import com.mohistmc.mod.module.create.AllPackageStyles;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.create.content.fluids.FluidTransportBehaviour;
+import com.mohistmc.mod.module.create.content.kinetics.gantry.GantryShaftBlock;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageStyles.PackageStyle;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashMap;

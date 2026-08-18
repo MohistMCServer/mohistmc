@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.decoration.bracket;
 
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

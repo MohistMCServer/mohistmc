@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
 import java.util.List;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.block.BlockTintSource;

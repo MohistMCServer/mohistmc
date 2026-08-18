@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.visualization;
 
-import com.zurrtum.create.client.flywheel.api.visual.EntityVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.EntityVisual;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.Entity;
 

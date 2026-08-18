@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.logistics.chute;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.logistics.funnel.FunnelBlock;
-import com.zurrtum.create.foundation.block.ProperWaterloggedBlock;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.logistics.funnel.FunnelBlock;
+import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;

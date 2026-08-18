@@ -5,7 +5,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.material.Fluid;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllFluidTags {
     public static final TagKey<Fluid> BOTTOMLESS_ALLOW = create("bottomless/allow");

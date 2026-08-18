@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "mohistmc:item_vault",
+    "C": "mohistmc:transmitter"
+  },
+  "pattern": [
+    "C",
+    "B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:stock_link"
+  }
+}

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.glsl;
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.client.flywheel.backend.glsl.span.CharPos;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.span.CharPos;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import it.unimi.dsi.fastutil.ints.IntLists;

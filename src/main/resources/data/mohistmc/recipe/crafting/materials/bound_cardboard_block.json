@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:cardboard_block",
+    "#c:strings"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:bound_cardboard_block"
+  }
+}

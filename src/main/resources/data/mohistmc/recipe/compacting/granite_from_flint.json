@@ -1,0 +1,17 @@
+{
+  "type": "mohistmc:compacting",
+  "ingredients": ["minecraft:flint", "minecraft:flint", "minecraft:red_sand"],
+  "fluid_ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 8100,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:granite"
+    }
+  ]
+}
+

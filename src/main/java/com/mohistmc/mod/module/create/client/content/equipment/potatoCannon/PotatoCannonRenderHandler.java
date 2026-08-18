@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.equipment.potatoCannon;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.content.equipment.zapper.ShootableGadgetRenderHandler;
-import com.zurrtum.create.client.flywheel.lib.transform.TransformStack;
-import com.zurrtum.create.content.equipment.potatoCannon.PotatoCannonItem;
-import com.zurrtum.create.content.equipment.potatoCannon.PotatoProjectileEntity;
-import com.zurrtum.create.infrastructure.particle.AirParticleData;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.content.equipment.zapper.ShootableGadgetRenderHandler;
+import com.mohistmc.mod.module.create.client.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.PotatoCannonItem;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.PotatoProjectileEntity;
+import com.mohistmc.mod.module.create.infrastructure.particle.AirParticleData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ItemParticleOption;

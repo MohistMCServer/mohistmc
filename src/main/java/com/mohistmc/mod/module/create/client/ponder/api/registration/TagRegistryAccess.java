@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.registration;
 
-import com.zurrtum.create.client.ponder.foundation.PonderTag;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderTag;
 import java.util.List;
 import java.util.Set;
 import net.minecraft.resources.Identifier;

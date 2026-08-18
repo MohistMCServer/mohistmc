@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/funnel/block_horizontal",
+  "textures": {
+    "base": "mohistmc:block/funnel/brass_funnel",
+    "block": "mohistmc:block/brass_block",
+    "direction": "mohistmc:block/funnel/brass_funnel_push",
+    "particle": "mohistmc:block/brass_block",
+    "redstone": "mohistmc:block/funnel/brass_funnel_unpowered"
+  }
+}

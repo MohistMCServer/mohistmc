@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.waterwheel;
 
-import com.zurrtum.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllClientHandle;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;

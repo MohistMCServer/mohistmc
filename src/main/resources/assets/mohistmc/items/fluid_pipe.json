@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "mohistmc:block/fluid_pipe/item"
+  }
+}

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.zurrtum.create.AllHandle;
-import com.zurrtum.create.AllPackets;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecs;
-import com.zurrtum.create.infrastructure.component.SymmetryMirror;
+import com.mohistmc.mod.module.create.AllHandle;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
+import com.mohistmc.mod.module.create.infrastructure.component.SymmetryMirror;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.Packet;

@@ -1,0 +1,22 @@
+{
+  "values": [
+    "mohistmc:sail_frame",
+    "mohistmc:white_sail",
+    "mohistmc:orange_sail",
+    "mohistmc:magenta_sail",
+    "mohistmc:light_blue_sail",
+    "mohistmc:yellow_sail",
+    "mohistmc:lime_sail",
+    "mohistmc:pink_sail",
+    "mohistmc:gray_sail",
+    "mohistmc:light_gray_sail",
+    "mohistmc:cyan_sail",
+    "mohistmc:purple_sail",
+    "mohistmc:blue_sail",
+    "mohistmc:brown_sail",
+    "mohistmc:green_sail",
+    "mohistmc:red_sail",
+    "mohistmc:black_sail",
+    "#minecraft:wool"
+  ]
+}

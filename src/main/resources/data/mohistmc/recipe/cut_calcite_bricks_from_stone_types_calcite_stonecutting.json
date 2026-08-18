@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/calcite",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_calcite_bricks"
+  }
+}

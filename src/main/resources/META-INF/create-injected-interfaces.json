@@ -1,0 +1,8 @@
+{
+  "net/minecraft/world/Container": [
+    "com/mohistmc/mod/module/create/infrastructure/items/CreateContainerExtension"
+  ],
+  "net/minecraft/world/WorldlyContainer": [
+    "com/mohistmc/mod/module/create/infrastructure/items/WorldlyContainerExtension"
+  ]
+}

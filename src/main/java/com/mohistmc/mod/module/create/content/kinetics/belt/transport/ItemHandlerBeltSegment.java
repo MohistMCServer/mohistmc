@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt.transport;
 
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 

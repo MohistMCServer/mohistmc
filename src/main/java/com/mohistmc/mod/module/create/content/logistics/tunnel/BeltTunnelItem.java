@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.tunnel;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.content.kinetics.belt.BeltBlockEntity;
-import com.zurrtum.create.content.kinetics.belt.BeltBlockEntity.CasingType;
-import com.zurrtum.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity.CasingType;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.link.controller;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.api.schematic.requirement.SpecialBlockItemRequirement;
-import com.zurrtum.create.content.schematics.requirement.ItemRequirement;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
+import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.ArrayList;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

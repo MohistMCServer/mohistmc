@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "mohistmc:copper_tiles",
+  "result": {
+    "count": 2,
+    "id": "mohistmc:copper_tile_slab"
+  }
+}

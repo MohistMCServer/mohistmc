@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mohistmc:block/track_overlay/station",
+	"textures": {
+		"1": "mohistmc:block/track_signal_indicator"
+	}
+}

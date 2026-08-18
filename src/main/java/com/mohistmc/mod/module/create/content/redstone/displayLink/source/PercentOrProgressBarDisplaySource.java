@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
-import com.zurrtum.create.content.trains.display.FlapDisplayBlockEntity;
-import com.zurrtum.create.content.trains.display.FlapDisplaySection;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlockEntity;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplaySection;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.util.Mth;

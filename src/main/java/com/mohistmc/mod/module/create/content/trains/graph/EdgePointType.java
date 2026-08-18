@@ -1,17 +1,17 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.content.trains.observer.TrackObserver;
-import com.zurrtum.create.content.trains.signal.SignalBoundary;
-import com.zurrtum.create.content.trains.signal.TrackEdgePoint;
-import com.zurrtum.create.content.trains.station.GlobalStation;
+import com.mohistmc.mod.module.create.content.trains.observer.TrackObserver;
+import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
+import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
+import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class EdgePointType<T extends TrackEdgePoint> {
     public static final Map<Identifier, EdgePointType<?>> TYPES = new HashMap<>();

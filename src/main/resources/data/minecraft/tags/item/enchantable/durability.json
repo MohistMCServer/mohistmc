@@ -1,6 +1,10 @@
 {
   "values": [
     "#mohistmc:tools/knives",
-    "mohistmc:skillet"
+    "mohistmc:skillet",
+    "mohistmc:super_glue",
+    "mohistmc:potato_cannon",
+    "mohistmc:extendo_grip",
+    "#mohistmc:sandpaper"
   ]
 }

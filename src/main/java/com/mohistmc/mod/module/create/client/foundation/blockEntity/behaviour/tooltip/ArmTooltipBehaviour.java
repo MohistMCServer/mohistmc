@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.tooltip;
 
-import com.zurrtum.create.client.foundation.item.TooltipHelper;
-import com.zurrtum.create.content.kinetics.mechanicalArm.ArmBlockEntity;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipHelper;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 

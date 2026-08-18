@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
-import com.zurrtum.create.client.flywheel.backend.Samplers;
-import com.zurrtum.create.client.flywheel.backend.compile.component.BufferTextureInstanceComponent;
-import com.zurrtum.create.client.flywheel.backend.compile.component.SsboInstanceComponent;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.backend.Samplers;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.component.BufferTextureInstanceComponent;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.component.SsboInstanceComponent;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 
 public final class Pipelines {
     public static final Pipeline INSTANCING = Pipeline.builder().compilerMarker("instancing")

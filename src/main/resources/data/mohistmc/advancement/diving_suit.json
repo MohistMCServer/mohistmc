@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:backtank",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:diving_suit_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.diving_suit.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:copper_diving_helmet"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.diving_suit"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

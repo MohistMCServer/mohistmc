@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.CrafterItemHandler;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
-import com.zurrtum.create.infrastructure.transfer.SlotRangeCache;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity.CrafterItemHandler;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.transfer.SlotRangeCache;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -28,7 +28,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
+import static com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
 
 public class ConnectedInputHandler {
 

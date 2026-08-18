@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
 import com.mojang.authlib.GameProfile;
-import com.zurrtum.create.infrastructure.player.FakePlayerEntity;
+import com.mohistmc.mod.module.create.infrastructure.player.FakePlayerEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;

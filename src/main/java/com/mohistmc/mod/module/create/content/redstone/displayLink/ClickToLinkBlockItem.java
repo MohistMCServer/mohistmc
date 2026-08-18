@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.infrastructure.component.ClickToLinkData;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.infrastructure.component.ClickToLinkData;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;

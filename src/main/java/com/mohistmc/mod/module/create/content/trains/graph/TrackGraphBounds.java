@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.zurrtum.create.content.trains.track.BezierConnection;
+import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

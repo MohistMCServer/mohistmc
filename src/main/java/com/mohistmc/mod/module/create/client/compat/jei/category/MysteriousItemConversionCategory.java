@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.compat.jei.category;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.compat.jei.CreateCategory;
-import com.zurrtum.create.client.compat.jei.JeiClientPlugin;
-import com.zurrtum.create.client.compat.jei.display.MysteriousItemConversionDisplay;
-import com.zurrtum.create.client.compat.jei.renderer.IconRenderer;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.compat.jei.CreateCategory;
+import com.mohistmc.mod.module.create.client.compat.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.create.client.compat.jei.display.MysteriousItemConversionDisplay;
+import com.mohistmc.mod.module.create.client.compat.jei.renderer.IconRenderer;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import java.util.List;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -17,7 +17,7 @@ import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class MysteriousItemConversionCategory extends CreateCategory<MysteriousItemConversionDisplay> {
     public static List<MysteriousItemConversionDisplay> getRecipes() {

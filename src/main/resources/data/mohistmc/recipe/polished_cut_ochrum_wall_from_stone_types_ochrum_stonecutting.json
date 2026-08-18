@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/ochrum",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:polished_cut_ochrum_wall"
+  }
+}

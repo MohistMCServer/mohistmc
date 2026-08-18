@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.debugInfo.element;
 
-import com.zurrtum.create.infrastructure.debugInfo.DebugInformation;
+import com.mohistmc.mod.module.create.infrastructure.debugInfo.DebugInformation;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

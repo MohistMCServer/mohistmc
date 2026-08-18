@@ -1,17 +1,17 @@
 package com.mohistmc.mod.module.create.client.content.fluids.hosePulley;
 
-import com.zurrtum.create.client.AllPartialModels;
-import com.zurrtum.create.client.AllSpriteShifts;
-import com.zurrtum.create.client.catnip.render.SpriteShiftEntry;
-import com.zurrtum.create.client.content.contraptions.pulley.AbstractPulleyVisual;
-import com.zurrtum.create.client.content.processing.burner.ScrollInstance;
-import com.zurrtum.create.client.flywheel.api.instance.Instancer;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.client.flywheel.lib.instance.InstanceTypes;
-import com.zurrtum.create.client.flywheel.lib.instance.TransformedInstance;
-import com.zurrtum.create.client.flywheel.lib.model.Models;
-import com.zurrtum.create.client.foundation.render.AllInstanceTypes;
-import com.zurrtum.create.content.fluids.hosePulley.HosePulleyBlockEntity;
+import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.client.AllSpriteShifts;
+import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.content.contraptions.pulley.AbstractPulleyVisual;
+import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instancer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.content.fluids.hosePulley.HosePulleyBlockEntity;
 
 public class HosePulleyVisual extends AbstractPulleyVisual<HosePulleyBlockEntity> {
     public HosePulleyVisual(VisualizationContext dispatcher, HosePulleyBlockEntity blockEntity, float partialTick) {

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.util;
 
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 import org.jspecify.annotations.Nullable;
 
 public class MemoryBuffer {

@@ -1,0 +1,31 @@
+{
+  "values": [
+    "mohistmc:creative_motor",
+    "mohistmc:creative_fluid_tank",
+    "mohistmc:mechanical_piston",
+    "mohistmc:sticky_mechanical_piston",
+    "mohistmc:windmill_bearing",
+    "mohistmc:mechanical_bearing",
+    "mohistmc:clockwork_bearing",
+    "mohistmc:rope_pulley",
+    "mohistmc:cart_assembler",
+    "mohistmc:linear_chassis",
+    "mohistmc:secondary_linear_chassis",
+    "mohistmc:radial_chassis",
+    "mohistmc:sequenced_gearshift",
+    "mohistmc:rotation_speed_controller",
+    "mohistmc:andesite_funnel",
+    "mohistmc:andesite_belt_funnel",
+    "mohistmc:brass_funnel",
+    "mohistmc:brass_belt_funnel",
+    "mohistmc:redstone_link",
+    "mohistmc:analog_lever",
+    "mohistmc:placard",
+    "mohistmc:pulse_repeater",
+    "mohistmc:pulse_extender",
+    "mohistmc:pulse_timer",
+    "mohistmc:clipboard",
+    "#minecraft:banners",
+    "#minecraft:all_signs"
+  ]
+}

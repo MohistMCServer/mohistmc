@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
-import com.zurrtum.create.client.ponder.foundation.element.InputWindowElement;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.element.InputWindowElement;
 
 public class ShowInputInstruction extends FadeInOutInstruction {
 

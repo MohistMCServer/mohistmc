@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#mohistmc:valve_handles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:copper_valve_handle"
+  }
+}

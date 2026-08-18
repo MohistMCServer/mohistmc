@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.api.contraption;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.api.registry.CreateRegistries;
-import com.zurrtum.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import java.util.function.Supplier;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.TagKey;

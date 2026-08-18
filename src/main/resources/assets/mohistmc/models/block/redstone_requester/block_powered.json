@@ -1,0 +1,7 @@
+{
+	"parent": "mohistmc:block/redstone_requester/block",
+	"textures": {
+		"1": "mohistmc:block/redstone_requester_powered",
+		"particle": "mohistmc:block/redstone_requester_powered"
+	}
+}

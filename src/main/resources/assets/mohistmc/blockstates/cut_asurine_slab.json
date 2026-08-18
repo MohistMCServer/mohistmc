@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mohistmc:block/cut_asurine_slab"
+    },
+    "type=double": {
+      "model": "mohistmc:block/cut_asurine"
+    },
+    "type=top": {
+      "model": "mohistmc:block/cut_asurine_slab_top"
+    }
+  }
+}

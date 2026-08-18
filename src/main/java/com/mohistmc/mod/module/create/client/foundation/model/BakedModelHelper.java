@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.model;
 
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.client.model.NormalsBakedQuad;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.client.model.NormalsBakedQuad;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +30,8 @@ import net.minecraft.world.phys.Vec3;
 import org.joml.Vector3f;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.client.catnip.render.SpriteShiftEntry.getUnInterpolatedU;
-import static com.zurrtum.create.client.catnip.render.SpriteShiftEntry.getUnInterpolatedV;
+import static com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry.getUnInterpolatedU;
+import static com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry.getUnInterpolatedV;
 
 public class BakedModelHelper {
     private static long calcSpriteUv(

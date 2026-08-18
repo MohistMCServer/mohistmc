@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.symmetryWand;
 
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;

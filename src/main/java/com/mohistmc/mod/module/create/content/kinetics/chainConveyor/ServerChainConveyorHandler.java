@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.chainConveyor;
 
-import com.zurrtum.create.infrastructure.packet.s2c.ClientboundChainConveyorRidingPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ClientboundChainConveyorRidingPacket;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectIterator;

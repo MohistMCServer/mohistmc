@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption;
 
-import com.zurrtum.create.impl.contraption.BlockMovementChecksImpl;
+import com.mohistmc.mod.module.create.impl.contraption.BlockMovementChecksImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;

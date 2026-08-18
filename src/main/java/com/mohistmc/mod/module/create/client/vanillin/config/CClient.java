@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.vanillin.config;
 
-import com.zurrtum.create.catnip.config.ConfigBase;
-import com.zurrtum.create.client.vanillin.VanillaVisuals;
+import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
+import com.mohistmc.mod.module.create.client.vanillin.VanillaVisuals;
 
 import java.util.HashMap;
 import java.util.Map;

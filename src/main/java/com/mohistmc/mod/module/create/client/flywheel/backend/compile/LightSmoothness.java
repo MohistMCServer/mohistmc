@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.client.flywheel.backend.compile.core.Compilation;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.core.Compilation;
 import java.util.Locale;
 import net.minecraft.util.StringRepresentable;
 

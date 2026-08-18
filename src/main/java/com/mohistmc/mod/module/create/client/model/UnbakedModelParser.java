@@ -18,7 +18,7 @@ import com.google.gson.internal.bind.JsonTreeReader;
 import com.google.gson.internal.bind.TreeTypeAdapter;
 import com.google.gson.reflect.TypeToken;
 import com.mojang.math.Transformation;
-import com.zurrtum.create.client.model.obj.ObjLoader;
+import com.mohistmc.mod.module.create.client.model.obj.ObjLoader;
 import java.lang.reflect.Type;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.client.resources.model.cuboid.CuboidModel;

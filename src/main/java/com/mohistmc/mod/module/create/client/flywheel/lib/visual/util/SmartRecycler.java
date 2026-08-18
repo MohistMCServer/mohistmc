@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.visual.util;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
 
 import java.util.HashMap;
 import java.util.Map;

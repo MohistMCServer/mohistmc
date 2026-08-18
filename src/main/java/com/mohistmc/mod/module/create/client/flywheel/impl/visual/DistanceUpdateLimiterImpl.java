@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visual;
 
-import com.zurrtum.create.client.flywheel.api.visual.DistanceUpdateLimiter;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.DistanceUpdateLimiter;
 
 public interface DistanceUpdateLimiterImpl extends DistanceUpdateLimiter {
     /**

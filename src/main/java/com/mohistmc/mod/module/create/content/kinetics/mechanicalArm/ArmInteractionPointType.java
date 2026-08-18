@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.mechanicalArm;
 
-import com.zurrtum.create.api.registry.CreateRegistries;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList;
 import java.util.Collections;
 import java.util.List;

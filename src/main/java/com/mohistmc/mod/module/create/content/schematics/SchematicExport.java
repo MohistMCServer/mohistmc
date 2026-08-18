@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
-import com.zurrtum.create.Create;
-import com.zurrtum.create.foundation.utility.FilesHelper;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.foundation.utility.FilesHelper;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;

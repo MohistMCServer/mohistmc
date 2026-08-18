@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "predicate": "mohistmc:clipboard_type",
+    "value": "written",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "mohistmc:item/clipboard_1"
+    },
+    "on_false": {
+      "type": "minecraft:condition",
+      "predicate": "mohistmc:clipboard_type",
+      "value": "editing",
+      "on_true": {
+        "type": "minecraft:model",
+        "model": "mohistmc:item/clipboard_2"
+      },
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "mohistmc:item/clipboard_0"
+      },
+      "property": "minecraft:component"
+    },
+    "property": "minecraft:component"
+  }
+}

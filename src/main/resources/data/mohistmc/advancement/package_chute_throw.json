@@ -1,0 +1,30 @@
+{
+  "parent": "mohistmc:cardboard_armor",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:package_chute_throw_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.package_chute_throw.desc"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:cardboard_package_12x12"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.package_chute_throw"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

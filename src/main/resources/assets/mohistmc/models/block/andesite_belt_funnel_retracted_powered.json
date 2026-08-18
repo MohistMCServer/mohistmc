@@ -1,0 +1,10 @@
+{
+  "parent": "mohistmc:block/belt_funnel/block_retracted",
+  "textures": {
+    "base": "mohistmc:block/funnel/andesite_funnel",
+    "block": "mohistmc:block/andesite_block",
+    "direction": "mohistmc:block/funnel/andesite_funnel_neutral",
+    "particle": "mohistmc:block/andesite_block",
+    "redstone": "mohistmc:block/funnel/andesite_funnel_powered"
+  }
+}

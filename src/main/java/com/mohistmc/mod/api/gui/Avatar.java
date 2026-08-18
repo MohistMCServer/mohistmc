@@ -93,6 +93,7 @@ public class Avatar extends PositionedWidget {
 
     @Override public Avatar setRightAnchored(boolean a) { super.setRightAnchored(a); return this; }
     @Override public Avatar setBottomAnchored(boolean a) { super.setBottomAnchored(a); return this; }
+    @Override public Avatar setEditorId(String id) { super.setEditorId(id); return this; }
 
     // ======== 渲染 ========
 

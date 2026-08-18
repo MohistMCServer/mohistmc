@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mohistmc:block/track_station/block"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization.storage;
 
-import com.zurrtum.create.client.flywheel.api.visual.Effect;
-import com.zurrtum.create.client.flywheel.api.visual.EffectVisual;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.Effect;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.EffectVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
 
 public class EffectStorage extends Storage<Effect> {
     @Override

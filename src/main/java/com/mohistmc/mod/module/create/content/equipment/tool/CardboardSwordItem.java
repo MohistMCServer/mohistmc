@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.tool;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.foundation.item.CustomAttackSoundItem;
-import com.zurrtum.create.foundation.item.DamageControlItem;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.foundation.item.CustomAttackSoundItem;
+import com.mohistmc.mod.module.create.foundation.item.DamageControlItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
@@ -17,7 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class CardboardSwordItem extends Item implements DamageControlItem, CustomAttackSoundItem {
     public static final AttributeModifier KNOCKBACK_MODIFIER = new AttributeModifier(

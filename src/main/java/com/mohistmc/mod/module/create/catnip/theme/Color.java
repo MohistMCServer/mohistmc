@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.catnip.theme;
 
 import com.google.common.hash.Hashing;
-import com.zurrtum.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.function.UnaryOperator;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.Mth;

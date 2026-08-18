@@ -1,0 +1,11 @@
+{
+	"parent": "block/block",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/blaze_burner/campfire.obj",
+	"textures": {
+		"0": "mohistmc:block/blaze_heater_brazier",
+		"1": "block/campfire_fire",
+		"particle": "mohistmc:block/dark_metal_block"
+	}
+}

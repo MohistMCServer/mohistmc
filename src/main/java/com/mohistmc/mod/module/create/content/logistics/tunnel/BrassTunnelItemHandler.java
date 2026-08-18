@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.tunnel;
 
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 

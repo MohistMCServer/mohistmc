@@ -3,13 +3,13 @@ package com.mohistmc.mod.module.create.content.kinetics.crafter;
 import com.google.common.base.Predicates;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.catnip.math.Pointing;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.catnip.math.Pointing;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,7 +33,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
+import static com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock.HORIZONTAL_FACING;
 
 public class RecipeGridHandler {
     @Nullable

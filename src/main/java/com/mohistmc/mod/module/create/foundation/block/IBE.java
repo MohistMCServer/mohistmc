@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.block;
 
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntityTicker;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntityTicker;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;

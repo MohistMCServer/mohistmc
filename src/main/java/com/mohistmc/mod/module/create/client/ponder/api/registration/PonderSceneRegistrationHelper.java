@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.registration;
 
-import com.zurrtum.create.client.ponder.api.scene.PonderStoryBoard;
+import com.mohistmc.mod.module.create.client.ponder.api.scene.PonderStoryBoard;
 import java.util.function.Function;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.ColorCollection;

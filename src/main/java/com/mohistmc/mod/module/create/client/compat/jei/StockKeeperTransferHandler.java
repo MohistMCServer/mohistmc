@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.client.content.logistics.stockTicker.CraftableBigItemStack;
-import com.zurrtum.create.client.content.logistics.stockTicker.CraftableInput;
-import com.zurrtum.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.logistics.packager.InventorySummary;
-import com.zurrtum.create.content.logistics.stockTicker.StockKeeperRequestMenu;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.CraftableBigItemStack;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.CraftableInput;
+import com.mohistmc.mod.module.create.client.content.logistics.stockTicker.StockKeeperRequestScreen;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.logistics.packager.InventorySummary;
+import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockKeeperRequestMenu;
 import it.unimi.dsi.fastutil.ints.IntSet;
 import java.util.ArrayList;
 import java.util.List;

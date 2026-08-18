@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_diorite",
+    "mohistmc:cut_diorite_stairs",
+    "mohistmc:cut_diorite_wall",
+    "mohistmc:polished_cut_diorite",
+    "mohistmc:polished_cut_diorite_stairs",
+    "mohistmc:polished_cut_diorite_wall",
+    "mohistmc:cut_diorite_bricks",
+    "mohistmc:cut_diorite_brick_stairs",
+    "mohistmc:cut_diorite_brick_wall",
+    "mohistmc:small_diorite_bricks",
+    "mohistmc:small_diorite_brick_stairs",
+    "mohistmc:small_diorite_brick_wall",
+    "mohistmc:layered_diorite",
+    "mohistmc:diorite_pillar",
+    "minecraft:diorite"
+  ]
+}

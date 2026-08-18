@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.processing.basin;
 
-import com.zurrtum.create.infrastructure.items.ItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
 import java.util.List;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;

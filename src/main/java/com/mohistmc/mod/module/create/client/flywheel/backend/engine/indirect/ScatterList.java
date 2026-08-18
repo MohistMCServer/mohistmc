@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.indirect;
 
-import com.zurrtum.create.client.flywheel.backend.util.MemoryBuffer;
+import com.mohistmc.mod.module.create.client.flywheel.backend.util.MemoryBuffer;
 import org.lwjgl.system.MemoryUtil;
 
 public class ScatterList {

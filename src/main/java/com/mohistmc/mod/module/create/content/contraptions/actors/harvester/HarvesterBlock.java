@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.harvester;
 
 import com.mojang.serialization.MapCodec;
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.content.contraptions.actors.AttachedActorBlock;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.content.contraptions.actors.AttachedActorBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 

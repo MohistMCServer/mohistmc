@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
 import java.util.List;
 import org.joml.Vector4fc;
 

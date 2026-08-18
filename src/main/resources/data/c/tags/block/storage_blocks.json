@@ -8,6 +8,12 @@
     "#c:storage_blocks/onion",
     "#c:storage_blocks/rice",
     "#c:storage_blocks/rice_panicle",
-    "#c:storage_blocks/straw"
+    "#c:storage_blocks/straw",
+    "mohistmc:raw_zinc_block",
+    "mohistmc:zinc_block",
+    "mohistmc:andesite_alloy_block",
+    "mohistmc:brass_block",
+    "mohistmc:cardboard_block",
+    "mohistmc:experience_block"
   ]
 }

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.gui;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.Pair;
-import com.zurrtum.create.client.foundation.gui.widget.*;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.*;
 import java.util.function.BiConsumer;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.input.MouseButtonEvent;

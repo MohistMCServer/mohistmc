@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.redstone.link;
 
-import com.zurrtum.create.Create;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.equipment.clipboard.ClipboardCloneable;
-import com.zurrtum.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardCloneable;
+import com.mohistmc.mod.module.create.content.redstone.link.RedstoneLinkNetworkHandler.Frequency;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.Optional;
 import java.util.function.IntConsumer;
 import java.util.function.IntSupplier;

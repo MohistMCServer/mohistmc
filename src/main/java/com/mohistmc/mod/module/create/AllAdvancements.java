@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllAdvancements {
     public static final CreateTrigger ANDESITE_CASING = register("andesite_casing");

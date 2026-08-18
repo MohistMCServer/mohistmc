@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.items;
 
-import com.zurrtum.create.infrastructure.transfer.SlotRangeCache;
+import com.mohistmc.mod.module.create.infrastructure.transfer.SlotRangeCache;
 import java.util.Set;
 import java.util.function.Predicate;
 import net.minecraft.core.Direction;

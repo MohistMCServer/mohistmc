@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.trains.bogey;
 
-import com.zurrtum.create.AllBogeyStyles;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.foundation.blockEntity.CachedRenderBBBlockEntity;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.foundation.blockEntity.CachedRenderBBBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
@@ -14,7 +14,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.content.trains.entity.CarriageBogey.UPSIDE_DOWN_KEY;
+import static com.mohistmc.mod.module.create.content.trains.entity.CarriageBogey.UPSIDE_DOWN_KEY;
 
 public abstract class AbstractBogeyBlockEntity extends CachedRenderBBBlockEntity {
     public static final String BOGEY_STYLE_KEY = "BogeyStyle";

@@ -18,8 +18,6 @@ import net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay;
 public class CookingPotRecipeBookComponent extends RecipeBookComponent<CookingPotMenu>
 {
 
-	private static final SearchRecipeBookCategory COOKING_SEARCH_CATEGORY = ModRecipeCategories.COOKING_SEARCH.get();
-
 	private static final WidgetSprites FILTER_SPRITES = new WidgetSprites(
 			Identifier.withDefaultNamespace("recipe_book/furnace_filter_enabled"),
 			Identifier.withDefaultNamespace("recipe_book/furnace_filter_disabled"),

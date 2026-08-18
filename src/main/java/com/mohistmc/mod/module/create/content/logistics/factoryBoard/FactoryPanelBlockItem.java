@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.logistics.factoryBoard;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.content.logistics.packagerLink.LogisticallyLinkedBlockItem;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.codec.CreateCodecs;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.content.logistics.packagerLink.LogisticallyLinkedBlockItem;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.UUID;

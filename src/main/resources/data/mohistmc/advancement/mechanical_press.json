@@ -1,0 +1,28 @@
+{
+  "parent": "mohistmc:andesite_casing",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:mechanical_press_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.mechanical_press.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:mechanical_press"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.mechanical_press"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

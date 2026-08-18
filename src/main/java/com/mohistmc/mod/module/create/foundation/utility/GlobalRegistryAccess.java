@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.foundation.utility;
 
-import com.zurrtum.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllClientHandle;
 import java.util.function.Supplier;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.server.MinecraftServer;

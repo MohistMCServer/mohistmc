@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.gauge;
 
-import com.zurrtum.create.AllShapes;
-import com.zurrtum.create.catnip.math.VoxelShaper;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.catnip.math.VoxelShaper;
 import java.util.Arrays;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.Vec3;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.client.catnip.lang.FontHelper;
-import com.zurrtum.create.client.foundation.item.ItemDescription;
-import com.zurrtum.create.client.foundation.item.KineticStats;
-import com.zurrtum.create.client.foundation.item.TooltipModifier;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.client.catnip.lang.FontHelper;
+import com.mohistmc.mod.module.create.client.foundation.item.ItemDescription;
+import com.mohistmc.mod.module.create.client.foundation.item.KineticStats;
+import com.mohistmc.mod.module.create.client.foundation.item.TooltipModifier;
 import java.util.function.Supplier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.ColorCollection;

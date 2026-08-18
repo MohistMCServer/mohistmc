@@ -1,0 +1,9 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"0": "mohistmc:block/flywheel",
+		"1": "mohistmc:block/axis",
+		"2": "mohistmc:block/axis_top",
+		"particle": "mohistmc:block/flywheel"
+	}
+}

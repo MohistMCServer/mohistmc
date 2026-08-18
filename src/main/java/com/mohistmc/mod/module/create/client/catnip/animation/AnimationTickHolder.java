@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.animation;
 
-import com.zurrtum.create.client.catnip.levelWrappers.WrappedClientLevel;
-import com.zurrtum.create.client.ponder.api.level.PonderLevel;
-import com.zurrtum.create.client.ponder.foundation.ui.PonderUI;
+import com.mohistmc.mod.module.create.client.catnip.levelWrappers.WrappedClientLevel;
+import com.mohistmc.mod.module.create.client.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.create.client.ponder.foundation.ui.PonderUI;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.LevelAccessor;

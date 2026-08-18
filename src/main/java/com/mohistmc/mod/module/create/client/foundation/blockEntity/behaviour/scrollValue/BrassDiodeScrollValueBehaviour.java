@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.client.content.redstone.diodes.BrassDiodeScrollSlot;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsBoard;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsFormatter;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mohistmc.mod.module.create.client.content.redstone.diodes.BrassDiodeScrollSlot;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsBoard;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsFormatter;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.player.Player;

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "mohistmc:andesite_alloy",
+    "C": "mohistmc:andesite_casing",
+    "I": "#c:ingots/iron"
+  },
+  "pattern": [
+    " A ",
+    "AIA",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:mechanical_drill"
+  }
+}

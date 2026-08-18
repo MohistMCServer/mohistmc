@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.client.catnip.lang.Lang;
-import com.zurrtum.create.client.catnip.render.SpriteShiftEntry;
-import com.zurrtum.create.client.catnip.render.SpriteShifter;
-import com.zurrtum.create.client.foundation.block.connected.AllCTTypes;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShifter;
-import com.zurrtum.create.client.foundation.block.connected.CTType;
+import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
+import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.catnip.render.SpriteShifter;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.AllCTTypes;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShifter;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTType;
 import java.util.EnumMap;
 import java.util.IdentityHashMap;
 import java.util.Map;

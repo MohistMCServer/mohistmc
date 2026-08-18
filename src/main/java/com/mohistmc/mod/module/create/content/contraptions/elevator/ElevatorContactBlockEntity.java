@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.contraptions.elevator;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.content.contraptions.elevator.ElevatorColumn.ColumnCoords;
-import com.zurrtum.create.content.decoration.slidingDoor.DoorControlBehaviour;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkBlock;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.contraptions.elevator.ElevatorColumn.ColumnCoords;
+import com.mohistmc.mod.module.create.content.decoration.slidingDoor.DoorControlBehaviour;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkBlock;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

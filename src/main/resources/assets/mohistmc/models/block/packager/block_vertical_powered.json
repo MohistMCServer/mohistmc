@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/packager/block_vertical",
+	"textures": {
+		"5": "mohistmc:block/packager_vertical_powered"
+	}
+}

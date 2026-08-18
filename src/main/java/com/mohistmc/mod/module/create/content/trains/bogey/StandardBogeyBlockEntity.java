@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.trains.bogey;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 

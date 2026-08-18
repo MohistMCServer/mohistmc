@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.infrastructure.component.BottleType;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
 import java.util.List;
 import mezz.jei.api.ingredients.subtypes.ISubtypeInterpreter;
 import mezz.jei.api.ingredients.subtypes.UidContext;

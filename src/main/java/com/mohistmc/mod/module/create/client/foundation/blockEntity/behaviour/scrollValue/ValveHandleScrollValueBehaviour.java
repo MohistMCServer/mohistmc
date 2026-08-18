@@ -2,13 +2,13 @@ package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.s
 
 
 import com.google.common.collect.ImmutableList;
-import com.zurrtum.create.client.content.kinetics.crank.ValveHandleValueBox;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsBoard;
-import com.zurrtum.create.client.foundation.blockEntity.ValueSettingsFormatter;
-import com.zurrtum.create.client.foundation.utility.CreateLang;
-import com.zurrtum.create.content.kinetics.crank.ValveHandleBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
-import com.zurrtum.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mohistmc.mod.module.create.client.content.kinetics.crank.ValveHandleValueBox;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsBoard;
+import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsFormatter;
+import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.create.content.kinetics.crank.ValveHandleBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

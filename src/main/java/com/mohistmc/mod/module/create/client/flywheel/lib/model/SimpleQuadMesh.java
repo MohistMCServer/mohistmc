@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.vertex.MutableVertexList;
-import com.zurrtum.create.client.flywheel.api.vertex.VertexList;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.VertexList;
 import org.joml.Vector4f;
 import org.joml.Vector4fc;
 import org.jspecify.annotations.Nullable;

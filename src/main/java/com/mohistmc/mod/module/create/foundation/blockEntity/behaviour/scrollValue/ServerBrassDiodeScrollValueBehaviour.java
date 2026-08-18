@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue;
 
-import com.zurrtum.create.content.redstone.diodes.BrassDiodeBlock;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.foundation.blockEntity.behaviour.ValueSettings;
+import com.mohistmc.mod.module.create.content.redstone.diodes.BrassDiodeBlock;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;

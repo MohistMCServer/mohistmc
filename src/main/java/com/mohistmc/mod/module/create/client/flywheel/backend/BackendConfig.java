@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend;
 
-import com.zurrtum.create.client.flywheel.backend.compile.LightSmoothness;
+import com.mohistmc.mod.module.create.client.flywheel.backend.compile.LightSmoothness;
 
 public interface BackendConfig {
     BackendConfig INSTANCE = FlwBackend.config();

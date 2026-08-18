@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.foundation.fluid;
 
-import com.zurrtum.create.AllTransfer;
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidInventoryProvider;
+import com.mohistmc.mod.module.create.AllTransfer;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventoryProvider;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

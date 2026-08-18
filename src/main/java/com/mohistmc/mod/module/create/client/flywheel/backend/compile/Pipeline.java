@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.compile;
 
-import com.zurrtum.create.client.flywheel.api.instance.Instance;
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.backend.gl.shader.GlProgram;
-import com.zurrtum.create.client.flywheel.backend.glsl.SourceComponent;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.shader.GlProgram;
+import com.mohistmc.mod.module.create.client.flywheel.backend.glsl.SourceComponent;
 import java.util.Objects;
 import java.util.function.Consumer;
 import net.minecraft.resources.Identifier;

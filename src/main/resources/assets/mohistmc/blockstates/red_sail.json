@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/red_sail",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mohistmc:block/red_sail",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mohistmc:block/red_sail",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mohistmc:block/red_sail",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "mohistmc:block/red_sail"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/red_sail",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

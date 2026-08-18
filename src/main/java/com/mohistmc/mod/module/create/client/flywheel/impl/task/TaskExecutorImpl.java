@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.task;
 
-import com.zurrtum.create.client.flywheel.api.task.TaskExecutor;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.TaskExecutor;
 
 import java.util.function.BooleanSupplier;
 

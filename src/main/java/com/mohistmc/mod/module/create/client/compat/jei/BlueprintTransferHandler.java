@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.content.equipment.blueprint.BlueprintMenu;
-import com.zurrtum.create.content.logistics.item.filter.attribute.attributes.InTagAttribute;
-import com.zurrtum.create.infrastructure.component.AttributeFilterWhitelistMode;
-import com.zurrtum.create.infrastructure.component.ItemAttributeEntry;
-import com.zurrtum.create.infrastructure.packet.c2s.BlueprintAssignCompleteRecipePacket;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintMenu;
+import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes.InTagAttribute;
+import com.mohistmc.mod.module.create.infrastructure.component.AttributeFilterWhitelistMode;
+import com.mohistmc.mod.module.create.infrastructure.component.ItemAttributeEntry;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.BlueprintAssignCompleteRecipePacket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

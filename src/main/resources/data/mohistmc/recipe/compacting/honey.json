@@ -1,0 +1,16 @@
+{
+  "type": "mohistmc:compacting",
+  "fluid_ingredients": [
+    {
+      "type": "fluid_tag",
+      "amount": 81000,
+      "fluid_tag": "#c:honey"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:honey_block"
+    }
+  ]
+}
+

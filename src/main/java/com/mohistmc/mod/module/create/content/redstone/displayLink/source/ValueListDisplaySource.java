@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink.source;
 
-import com.zurrtum.create.api.behaviour.display.DisplaySource;
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.catnip.data.IntAttached;
-import com.zurrtum.create.content.redstone.displayLink.DisplayLinkContext;
-import com.zurrtum.create.content.redstone.displayLink.target.DisplayTargetStats;
-import com.zurrtum.create.content.trains.display.FlapDisplayBlockEntity;
-import com.zurrtum.create.content.trains.display.FlapDisplayLayout;
-import com.zurrtum.create.content.trains.display.FlapDisplaySection;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplaySource;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.target.DisplayTargetStats;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlockEntity;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayLayout;
+import com.mohistmc.mod.module.create.content.trains.display.FlapDisplaySection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +17,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.level.block.entity.LecternBlockEntity;
 import org.apache.commons.lang3.mutable.MutableInt;
 
-import static com.zurrtum.create.content.trains.display.FlapDisplaySection.MONOSPACE;
+import static com.mohistmc.mod.module.create.content.trains.display.FlapDisplaySection.MONOSPACE;
 
 public abstract class ValueListDisplaySource extends DisplaySource {
 

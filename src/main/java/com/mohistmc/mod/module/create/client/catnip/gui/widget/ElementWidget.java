@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.catnip.gui.widget;
 
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.client.catnip.gui.element.AbstractRenderElement;
-import com.zurrtum.create.client.catnip.gui.element.RenderElement;
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.AbstractRenderElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.RenderElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

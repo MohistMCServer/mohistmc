@@ -45,26 +45,27 @@ public class Modal extends PositionedWidget {
 
     // ======== 字段 ========
 
-    private final Component title;
     private final Component message;
 
     // 样式
     protected int backdropColor = 0x80000000;
-    private int dialogBgColor = 0xFF2D2D2D;
-    private int borderColor = 0xFF888888;
-    private int titleColor = 0xFFFFFFFF;
-    private int messageColor = 0xFFCCCCCC;
-    private int separatorColor = 0xFF555555;
+    protected int dialogBgColor = 0xFF2D2D2D;
+    protected int borderColor = 0xFF888888;
+    protected int titleColor = 0xFFFFFFFF;
+    protected int messageColor = 0xFFCCCCCC;
+    protected int separatorColor = 0xFF555555;
 
     // 尺寸
-    private int dialogWidth = 280;
-    private int titleBarHeight = 22;
-    private int buttonHeight = 20;
-    private int padding = 12;
-    private int buttonGap = 8;
+    protected int dialogWidth = 280;
+    protected int titleBarHeight = 22;
+    protected int buttonHeight = 20;
+    protected int padding = 12;
+    protected int buttonGap = 8;
+    /** 对话框标题（子类可访问） */
+    protected final Component title;
 
     // 按钮
-    private final List<ModalButton> buttons = new ArrayList<>();
+    protected final List<ModalButton> buttons = new ArrayList<>();
     private Runnable onClose;
 
     // 状态
@@ -146,8 +147,8 @@ public class Modal extends PositionedWidget {
     /** 返回 true 表示消费了此次点击（阻止底层组件响应） */
     boolean handleClick(MouseButtonEvent event, boolean doubleClick) {
         if (!visible) return false;
-        int mx = (int) event.x();
-        int my = (int) event.y();
+        int mx = logicalX(event);
+        int my = logicalY(event);
 
         int dx = getDialogX();
         int dy = getDialogY();
@@ -269,11 +270,11 @@ public class Modal extends PositionedWidget {
 
     // ======== 内部计算 ========
 
-    private int getDialogX() {
+    protected int getDialogX() {
         return screenLeft + (contentWidth - dialogWidth) / 2;
     }
 
-    private int getDialogY() {
+    protected int getDialogY() {
         return screenTop + Math.max(20, (contentHeight - getDialogHeight()) / 2);
     }
 
@@ -285,7 +286,7 @@ public class Modal extends PositionedWidget {
     private int closeBtnSize() { return 10; }
 
     private Minecraft mc() { return Minecraft.getInstance(); }
-    private net.minecraft.client.gui.Font font() { return mc().font; }
+    protected net.minecraft.client.gui.Font font() { return mc().font; }
 
     @Override
     public int applyAlpha(int argb) {

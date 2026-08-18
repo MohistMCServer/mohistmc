@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client;
 
-import com.zurrtum.create.AllBogeyStyles;
-import com.zurrtum.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
-import com.zurrtum.create.client.content.trains.bogey.BogeyVisual;
-import com.zurrtum.create.client.content.trains.bogey.SizeRenderer;
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
-import com.zurrtum.create.content.trains.bogey.BogeySize;
-import com.zurrtum.create.content.trains.bogey.BogeyStyle;
+import com.mohistmc.mod.module.create.AllBogeyStyles;
+import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
+import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyVisual;
+import com.mohistmc.mod.module.create.client.content.trains.bogey.SizeRenderer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeySize;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Map;

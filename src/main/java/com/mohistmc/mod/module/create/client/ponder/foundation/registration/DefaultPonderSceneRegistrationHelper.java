@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.registration;
 
-import com.zurrtum.create.client.ponder.api.registration.MultiSceneBuilder;
-import com.zurrtum.create.client.ponder.api.registration.PonderSceneRegistrationHelper;
-import com.zurrtum.create.client.ponder.api.registration.StoryBoardEntry;
-import com.zurrtum.create.client.ponder.api.scene.PonderStoryBoard;
-import com.zurrtum.create.client.ponder.foundation.PonderStoryBoardEntry;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.MultiSceneBuilder;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.PonderSceneRegistrationHelper;
+import com.mohistmc.mod.module.create.client.ponder.api.registration.StoryBoardEntry;
+import com.mohistmc.mod.module.create.client.ponder.api.scene.PonderStoryBoard;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderStoryBoardEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

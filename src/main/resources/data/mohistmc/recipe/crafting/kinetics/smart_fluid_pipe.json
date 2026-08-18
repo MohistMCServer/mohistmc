@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "#c:plates/brass",
+    "P": "mohistmc:electron_tube",
+    "S": "mohistmc:fluid_pipe"
+  },
+  "pattern": [
+    "I",
+    "S",
+    "P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:smart_fluid_pipe"
+  }
+}

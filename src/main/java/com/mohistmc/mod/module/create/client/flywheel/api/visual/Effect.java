@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.visual;
 
-import com.zurrtum.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
 import net.minecraft.world.level.LevelAccessor;
 
 /**

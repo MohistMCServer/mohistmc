@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.api.connectivity.ConnectivityHandler;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.client.AllCTBehaviours;
-import com.zurrtum.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.api.connectivity.ConnectivityHandler;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.client.AllCTBehaviours;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.util.List;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;

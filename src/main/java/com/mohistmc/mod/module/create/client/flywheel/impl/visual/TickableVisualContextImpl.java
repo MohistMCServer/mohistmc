@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visual;
 
-import com.zurrtum.create.client.flywheel.api.visual.TickableVisual;
+import com.mohistmc.mod.module.create.client.flywheel.api.visual.TickableVisual;
 
 public enum TickableVisualContextImpl implements TickableVisual.Context {
     INSTANCE

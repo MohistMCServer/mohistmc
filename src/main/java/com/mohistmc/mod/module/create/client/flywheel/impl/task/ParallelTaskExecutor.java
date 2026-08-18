@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.task;
 
-import com.zurrtum.create.client.flywheel.impl.FlwImpl;
+import com.mohistmc.mod.module.create.client.flywheel.impl.FlwImpl;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;

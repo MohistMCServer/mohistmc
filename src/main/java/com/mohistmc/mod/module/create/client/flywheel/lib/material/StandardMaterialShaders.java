@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.material;
 
-import com.zurrtum.create.client.flywheel.api.material.MaterialShaders;
-import com.zurrtum.create.client.flywheel.lib.util.ResourceUtil;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.MaterialShaders;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ResourceUtil;
 
 public final class StandardMaterialShaders {
     public static final MaterialShaders DEFAULT = new SimpleMaterialShaders(

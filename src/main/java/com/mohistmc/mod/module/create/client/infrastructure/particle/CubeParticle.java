@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
-import com.zurrtum.create.infrastructure.particle.CubeParticleData;
+import com.mohistmc.mod.module.create.infrastructure.particle.CubeParticleData;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;

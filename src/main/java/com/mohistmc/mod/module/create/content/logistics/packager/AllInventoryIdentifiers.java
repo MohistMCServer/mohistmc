@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.logistics.packager;
 
-import com.zurrtum.create.AllBlockTags;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.api.packager.InventoryIdentifier;
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.math.BlockFace;
-import com.zurrtum.create.content.logistics.vault.ItemVaultBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.api.packager.InventoryIdentifier;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.math.BlockFace;
+import com.mohistmc.mod.module.create.content.logistics.vault.ItemVaultBlockEntity;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.EnumSet;

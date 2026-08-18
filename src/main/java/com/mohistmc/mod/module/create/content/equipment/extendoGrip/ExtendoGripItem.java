@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.extendoGrip;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.content.equipment.armor.BacktankUtil;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.content.equipment.armor.BacktankUtil;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
@@ -21,7 +21,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import org.jspecify.annotations.Nullable;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class ExtendoGripItem extends Item {
     public static final AttributeModifier singleRangeAttributeModifier = new AttributeModifier(

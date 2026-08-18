@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
-import com.zurrtum.create.content.kinetics.crafter.ConnectedInputHandler.ConnectedInput;
+import com.mohistmc.mod.module.create.content.kinetics.crafter.ConnectedInputHandler.ConnectedInput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockAndLightGetter;
 import net.minecraft.world.level.block.entity.BlockEntity;

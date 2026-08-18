@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.content.contraptions;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.CommonComponents;

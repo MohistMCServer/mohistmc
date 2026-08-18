@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.kinetics.gearbox;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
 import java.util.Map;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

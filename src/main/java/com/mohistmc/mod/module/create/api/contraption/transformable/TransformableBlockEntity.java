@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption.transformable;
 
-import com.zurrtum.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 public interface TransformableBlockEntity {

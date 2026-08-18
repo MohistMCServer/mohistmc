@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.utility;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.infrastructure.fluids.BucketFluidInventory;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BucketFluidInventory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 

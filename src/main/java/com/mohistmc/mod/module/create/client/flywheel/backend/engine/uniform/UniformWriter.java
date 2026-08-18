@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform;
 
-import com.zurrtum.create.client.flywheel.lib.util.ExtraMemoryOps;
+import com.mohistmc.mod.module.create.client.flywheel.lib.util.ExtraMemoryOps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.Level;

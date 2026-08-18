@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer;
 
 import com.mojang.blaze3d.opengl.GlStateManager;
-import com.zurrtum.create.client.flywheel.backend.gl.GlObject;
-import com.zurrtum.create.client.flywheel.lib.memory.FlwMemoryTracker;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlObject;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.FlwMemoryTracker;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
 
 public class GlBuffer extends GlObject {
     protected final GlBufferUsage usage;

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:packager"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:repackager"
+  }
+}

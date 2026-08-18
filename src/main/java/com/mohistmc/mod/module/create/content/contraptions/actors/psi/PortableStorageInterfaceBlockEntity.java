@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.psi;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.catnip.animation.LerpedFloat;
-import com.zurrtum.create.content.contraptions.AbstractContraptionEntity;
-import com.zurrtum.create.content.contraptions.Contraption;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.blockEntity.SmartBlockEntity;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
+import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
+import com.mohistmc.mod.module.create.content.contraptions.Contraption;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;

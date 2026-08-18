@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mohistmc:gearbox"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mohistmc:vertical_gearbox"
+  }
+}

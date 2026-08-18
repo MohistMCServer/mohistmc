@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.redstone.thresholdSwitch;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.content.redstone.DirectedDirectionalBlock;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.RedStoneConnectBlock;
-import com.zurrtum.create.foundation.fluid.FluidHelper;
-import com.zurrtum.create.foundation.item.ItemHelper;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.content.redstone.DirectedDirectionalBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
+import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
+import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

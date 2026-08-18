@@ -1,0 +1,30 @@
+{
+  "parent": "mohistmc:backtank",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:chained_drain_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.chained_drain.desc"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:item_drain"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.chained_drain"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

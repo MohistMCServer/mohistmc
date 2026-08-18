@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.ponder.foundation.instruction;
 
-import com.zurrtum.create.client.ponder.api.ParticleEmitter;
-import com.zurrtum.create.client.ponder.api.level.PonderLevel;
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.api.ParticleEmitter;
+import com.mohistmc.mod.module.create.client.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.Vec3;
 

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.visualization;
 
-import com.zurrtum.create.client.flywheel.api.visualization.BlockEntityVisualizer;
-import com.zurrtum.create.client.flywheel.api.visualization.EntityVisualizer;
-import com.zurrtum.create.client.flywheel.impl.extension.BlockEntityTypeExtension;
-import com.zurrtum.create.client.flywheel.impl.extension.EntityTypeExtension;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.BlockEntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.api.visualization.EntityVisualizer;
+import com.mohistmc.mod.module.create.client.flywheel.impl.extension.BlockEntityTypeExtension;
+import com.mohistmc.mod.module.create.client.flywheel.impl.extension.EntityTypeExtension;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.entity.BlockEntity;

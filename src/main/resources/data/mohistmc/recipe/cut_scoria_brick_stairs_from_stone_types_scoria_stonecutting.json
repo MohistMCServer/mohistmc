@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/scoria",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:cut_scoria_brick_stairs"
+  }
+}

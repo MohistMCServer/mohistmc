@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.behaviour;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
-import com.zurrtum.create.foundation.blockEntity.behaviour.BehaviourType;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import java.util.function.Function;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;

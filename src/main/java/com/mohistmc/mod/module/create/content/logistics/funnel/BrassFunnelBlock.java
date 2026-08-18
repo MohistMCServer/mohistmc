@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.content.logistics.funnel;
 
-import com.zurrtum.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.audio;
 
-import com.zurrtum.create.client.foundation.sound.SoundScapes;
-import com.zurrtum.create.client.foundation.sound.SoundScapes.AmbienceGroup;
-import com.zurrtum.create.content.kinetics.crusher.CrushingWheelControllerBlockEntity;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes;
+import com.mohistmc.mod.module.create.client.foundation.sound.SoundScapes.AmbienceGroup;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingWheelControllerBlockEntity;
 import net.minecraft.util.Mth;
 
 public class CrushingWheelControllerAudioBehaviour extends AudioBehaviour<CrushingWheelControllerBlockEntity> {

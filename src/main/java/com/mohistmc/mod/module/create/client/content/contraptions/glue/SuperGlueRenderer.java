@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.glue;
 
-import com.zurrtum.create.content.contraptions.glue.SuperGlueEntity;
+import com.mohistmc.mod.module.create.content.contraptions.glue.SuperGlueEntity;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

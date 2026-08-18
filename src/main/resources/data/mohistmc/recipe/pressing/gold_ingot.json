@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:pressing",
+  "ingredient": "#c:ingots/gold",
+  "results": [
+    {
+      "id": "mohistmc:golden_sheet"
+    }
+  ]
+}
+

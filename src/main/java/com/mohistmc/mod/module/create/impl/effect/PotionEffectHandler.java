@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.impl.effect;
 
-import com.zurrtum.create.api.effect.OpenPipeEffectHandler;
-import com.zurrtum.create.content.fluids.potion.PotionFluidHandler;
-import com.zurrtum.create.infrastructure.fluids.BottleFluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.api.effect.OpenPipeEffectHandler;
+import com.mohistmc.mod.module.create.content.fluids.potion.PotionFluidHandler;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BottleFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import java.util.List;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;

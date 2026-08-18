@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.fluid;
 
-import com.zurrtum.create.infrastructure.fluids.FluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 
 /**
  * Partial implementation of a MountedFluidStorage that wraps a fluid handler.

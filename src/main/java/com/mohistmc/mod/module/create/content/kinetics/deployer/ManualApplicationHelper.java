@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.zurrtum.create.AllAdvancements;
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.AllRecipeSets;
-import com.zurrtum.create.AllRecipeTypes;
-import com.zurrtum.create.foundation.advancement.CreateTrigger;
-import com.zurrtum.create.foundation.utility.BlockHelper;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllRecipeSets;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

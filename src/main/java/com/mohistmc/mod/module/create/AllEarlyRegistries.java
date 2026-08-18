@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create;
 
-import com.zurrtum.create.api.registry.CreateRegisterPlugin;
+import com.mohistmc.mod.module.create.api.registry.CreateRegisterPlugin;
 
 public class AllEarlyRegistries implements CreateRegisterPlugin {
     @Override

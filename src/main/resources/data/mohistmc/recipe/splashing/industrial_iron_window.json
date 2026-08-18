@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:splashing",
+  "ingredient": "mohistmc:industrial_iron_window",
+  "results": [
+    {
+      "id": "mohistmc:weathered_iron_window"
+    }
+  ]
+}
+

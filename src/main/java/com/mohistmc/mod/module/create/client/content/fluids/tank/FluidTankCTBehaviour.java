@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.fluids.tank;
 
-import com.zurrtum.create.api.connectivity.ConnectivityHandler;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.client.foundation.block.connected.HorizontalCTBehaviour;
+import com.mohistmc.mod.module.create.api.connectivity.ConnectivityHandler;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.HorizontalCTBehaviour;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

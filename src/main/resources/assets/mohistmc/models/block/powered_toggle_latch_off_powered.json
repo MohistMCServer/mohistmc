@@ -1,0 +1,6 @@
+{
+  "parent": "mohistmc:block/diodes/latch_off",
+  "textures": {
+    "top": "mohistmc:block/diodes/powered_toggle_latch/powered"
+  }
+}

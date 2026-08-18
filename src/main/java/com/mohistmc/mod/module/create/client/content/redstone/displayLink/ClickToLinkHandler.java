@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.redstone.displayLink;
 
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.api.behaviour.display.ClickToLinkSelection;
-import com.zurrtum.create.api.behaviour.display.DisplayTarget;
-import com.zurrtum.create.client.catnip.outliner.Outliner;
-import com.zurrtum.create.content.redstone.displayLink.ClickToLinkBlockItem;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.api.behaviour.display.ClickToLinkSelection;
+import com.mohistmc.mod.module.create.api.behaviour.display.DisplayTarget;
+import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
+import com.mohistmc.mod.module.create.content.redstone.displayLink.ClickToLinkBlockItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;

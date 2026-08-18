@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.widget;
 
-import com.zurrtum.create.client.catnip.gui.element.ScreenElement;
-import com.zurrtum.create.client.catnip.gui.widget.AbstractSimiWidget;
-import com.zurrtum.create.client.foundation.gui.AllGuiTextures;
+import com.mohistmc.mod.module.create.client.catnip.gui.element.ScreenElement;
+import com.mohistmc.mod.module.create.client.catnip.gui.widget.AbstractSimiWidget;
+import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.renderer.RenderPipelines;

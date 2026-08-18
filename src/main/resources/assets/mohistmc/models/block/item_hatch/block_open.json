@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mohistmc:block/item_hatch/block_closed",
+	"textures": {
+		"1": "mohistmc:block/hatch_open",
+		"particle": "mohistmc:block/industrial_iron_block"
+	}
+}

@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
-import com.zurrtum.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
-import com.zurrtum.create.api.registry.CreateRegistryKeys;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.StuckToEntity;
-import com.zurrtum.create.infrastructure.packet.s2c.NbtSpawnPacket;
-import com.zurrtum.create.infrastructure.particle.AirParticleData;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.equipment.potatoCannon.AllPotatoProjectileRenderModes.StuckToEntity;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.NbtSpawnPacket;
+import com.mohistmc.mod.module.create.infrastructure.particle.AirParticleData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;

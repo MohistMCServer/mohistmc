@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend.engine.indirect;
 
-import com.zurrtum.create.client.flywheel.lib.math.MoreMath;
+import com.mohistmc.mod.module.create.client.flywheel.lib.math.MoreMath;
 
 /**
  * A buffer that is aware of its content's stride with some control over how it grows.

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.fluids.pipes;
 
-import com.zurrtum.create.AllFluids;
-import com.zurrtum.create.infrastructure.fluids.BottleFluidInventory;
-import com.zurrtum.create.infrastructure.fluids.BucketFluidInventory;
-import com.zurrtum.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.create.AllFluids;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BottleFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.BucketFluidInventory;
+import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

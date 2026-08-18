@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.factoryBoard;
 
-import com.zurrtum.create.AllMenuTypes;
-import com.zurrtum.create.AllSoundEvents;
-import com.zurrtum.create.foundation.gui.menu.GhostItemMenu;
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.AllMenuTypes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.foundation.gui.menu.GhostItemMenu;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

@@ -1,0 +1,6 @@
+{
+	"parent": "mohistmc:block/large_water_wheel/textures",
+	"loader": "neoforge:obj",
+	"flip_v": true,
+	"model": "mohistmc:models/block/large_water_wheel/waterwheel_large_extension.obj"
+}

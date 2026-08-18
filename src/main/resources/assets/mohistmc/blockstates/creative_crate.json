@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mohistmc:block/crate/creative/single"
+    },
+    "facing=east": {
+      "model": "mohistmc:block/crate/creative/single"
+    },
+    "facing=north": {
+      "model": "mohistmc:block/crate/creative/single"
+    },
+    "facing=south": {
+      "model": "mohistmc:block/crate/creative/single"
+    },
+    "facing=up": {
+      "model": "mohistmc:block/crate/creative/single"
+    },
+    "facing=west": {
+      "model": "mohistmc:block/crate/creative/single"
+    }
+  }
+}

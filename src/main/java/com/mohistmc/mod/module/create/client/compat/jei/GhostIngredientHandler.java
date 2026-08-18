@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.compat.jei;
 
-import com.zurrtum.create.client.content.logistics.filter.AttributeFilterScreen;
-import com.zurrtum.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
-import com.zurrtum.create.foundation.gui.menu.GhostItemMenu;
-import com.zurrtum.create.infrastructure.packet.c2s.GhostItemSubmitPacket;
+import com.mohistmc.mod.module.create.client.content.logistics.filter.AttributeFilterScreen;
+import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.mohistmc.mod.module.create.foundation.gui.menu.GhostItemMenu;
+import com.mohistmc.mod.module.create.infrastructure.packet.c2s.GhostItemSubmitPacket;
 import java.util.LinkedList;
 import java.util.List;
 import mezz.jei.api.constants.VanillaTypes;

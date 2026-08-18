@@ -1,15 +1,15 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.material.CardinalLightingMode;
-import com.zurrtum.create.client.flywheel.api.material.Material;
-import com.zurrtum.create.client.flywheel.api.model.Mesh;
-import com.zurrtum.create.client.flywheel.api.model.Model;
-import com.zurrtum.create.client.flywheel.api.vertex.VertexList;
-import com.zurrtum.create.client.flywheel.lib.material.LightShaders;
-import com.zurrtum.create.client.flywheel.lib.material.Materials;
-import com.zurrtum.create.client.flywheel.lib.material.SimpleMaterial;
-import com.zurrtum.create.client.flywheel.lib.memory.MemoryBlock;
-import com.zurrtum.create.client.flywheel.lib.vertex.PosVertexView;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.CardinalLightingMode;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.Material;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
+import com.mohistmc.mod.module.create.client.flywheel.api.vertex.VertexList;
+import com.mohistmc.mod.module.create.client.flywheel.lib.material.LightShaders;
+import com.mohistmc.mod.module.create.client.flywheel.lib.material.Materials;
+import com.mohistmc.mod.module.create.client.flywheel.lib.material.SimpleMaterial;
+import com.mohistmc.mod.module.create.client.flywheel.lib.memory.MemoryBlock;
+import com.mohistmc.mod.module.create.client.flywheel.lib.vertex.PosVertexView;
 import java.util.Collection;
 import java.util.IdentityHashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.zurrtum.create.infrastructure.items.SidedItemInventory;
-import com.zurrtum.create.infrastructure.transfer.SlotRangeCache;
+import com.mohistmc.mod.module.create.infrastructure.items.SidedItemInventory;
+import com.mohistmc.mod.module.create.infrastructure.transfer.SlotRangeCache;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionHand;

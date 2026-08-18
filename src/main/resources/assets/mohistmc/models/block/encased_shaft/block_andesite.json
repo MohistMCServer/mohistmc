@@ -1,0 +1,7 @@
+{
+	"parent": "mohistmc:block/encased_shaft/block",
+	"textures": {
+		"casing": "mohistmc:block/andesite_casing",
+		"opening": "mohistmc:block/gearbox"
+	}
+}

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.actors.seat;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.zurrtum.create.content.contraptions.actors.seat.SeatEntity;
+import com.mohistmc.mod.module.create.content.contraptions.actors.seat.SeatEntity;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;

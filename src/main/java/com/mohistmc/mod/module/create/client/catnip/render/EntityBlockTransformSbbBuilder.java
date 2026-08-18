@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create.client.catnip.render;
 import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mojang.blaze3d.vertex.QuadInstance;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zurrtum.create.client.flywheel.lib.model.baked.BufferPoseEmitter;
+import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BufferPoseEmitter;
 import net.minecraft.client.resources.model.geometry.BakedQuad;
 import net.minecraft.client.resources.model.geometry.BakedQuad.MaterialInfo;
 

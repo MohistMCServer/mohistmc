@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.equipment.armor;
 
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.AllSynchedDatas;
-import com.zurrtum.create.catnip.theme.Color;
-import com.zurrtum.create.content.equipment.armor.BacktankUtil;
-import com.zurrtum.create.content.equipment.armor.DivingHelmetItem;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mohistmc.mod.module.create.content.equipment.armor.BacktankUtil;
+import com.mohistmc.mod.module.create.content.equipment.armor.DivingHelmetItem;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

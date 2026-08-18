@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
-import com.zurrtum.create.AllBlocks;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlock;
-import com.zurrtum.create.content.decoration.copycat.CopycatBlockEntity;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
+import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlockEntity;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

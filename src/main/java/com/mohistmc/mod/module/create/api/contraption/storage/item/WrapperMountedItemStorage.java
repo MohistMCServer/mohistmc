@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.contraption.storage.item;
 
-import com.zurrtum.create.infrastructure.items.ItemStackHandler;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.model;
 
-import com.zurrtum.create.client.flywheel.api.model.IndexSequence;
+import com.mohistmc.mod.module.create.client.flywheel.api.model.IndexSequence;
 import org.lwjgl.system.MemoryUtil;
 
 public final class QuadIndexSequence implements IndexSequence {

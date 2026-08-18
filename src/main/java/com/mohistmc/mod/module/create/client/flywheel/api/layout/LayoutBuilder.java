@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.layout;
 
-import com.zurrtum.create.client.flywheel.api.internal.FlwApiLink;
+import com.mohistmc.mod.module.create.client.flywheel.api.internal.FlwApiLink;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Range;
 

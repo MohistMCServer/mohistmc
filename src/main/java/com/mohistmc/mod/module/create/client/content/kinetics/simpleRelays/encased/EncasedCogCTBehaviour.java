@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.simpleRelays.encased;
 
-import com.zurrtum.create.catnip.data.Couple;
-import com.zurrtum.create.client.content.decoration.encasing.EncasedCTBehaviour;
-import com.zurrtum.create.client.foundation.block.connected.CTSpriteShiftEntry;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.content.kinetics.simpleRelays.ICogWheel;
-import com.zurrtum.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.client.content.decoration.encasing.EncasedCTBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ICogWheel;
+import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.encased.EncasedCogwheelBlock;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "mohistmc:cut_calcite",
+    "mohistmc:cut_calcite_stairs",
+    "mohistmc:cut_calcite_wall",
+    "mohistmc:polished_cut_calcite",
+    "mohistmc:polished_cut_calcite_stairs",
+    "mohistmc:polished_cut_calcite_wall",
+    "mohistmc:cut_calcite_bricks",
+    "mohistmc:cut_calcite_brick_stairs",
+    "mohistmc:cut_calcite_brick_wall",
+    "mohistmc:small_calcite_bricks",
+    "mohistmc:small_calcite_brick_stairs",
+    "mohistmc:small_calcite_brick_wall",
+    "mohistmc:layered_calcite",
+    "mohistmc:calcite_pillar",
+    "minecraft:calcite"
+  ]
+}

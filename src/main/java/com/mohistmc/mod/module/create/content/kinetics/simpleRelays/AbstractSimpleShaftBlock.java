@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.simpleRelays;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.content.decoration.bracket.BracketedBlockEntityBehaviour;
-import com.zurrtum.create.content.equipment.wrench.IWrenchableWithBracket;
-import com.zurrtum.create.content.kinetics.base.KineticBlockEntity;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.decoration.bracket.BracketedBlockEntityBehaviour;
+import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchableWithBracket;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

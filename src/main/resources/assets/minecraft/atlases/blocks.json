@@ -14,15 +14,15 @@
     },
     {
       "type": "single",
-      "resource": "create:entity/coupling"
+      "resource": "mohistmc:entity/coupling"
     },
     {
       "type": "single",
-      "resource": "create:entity/train_hat"
+      "resource": "mohistmc:entity/train_hat"
     },
     {
       "type": "single",
-      "resource": "create:entity/logistics_hat"
+      "resource": "mohistmc:entity/logistics_hat"
     }
   ]
 }

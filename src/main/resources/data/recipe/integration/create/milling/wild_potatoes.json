@@ -5,7 +5,7 @@
       "modid": "create"
     }
   ],
-  "type": "create:milling",
+  "type": "mohistmc:milling",
   "ingredients": [
     {
       "item": "mohistmc:wild_potatoes"

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.foundation.block.connected;
 
-import com.zurrtum.create.foundation.block.AppearanceControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.AppearanceControlBlock;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.backend;
 
-import com.zurrtum.create.client.flywheel.api.layout.*;
-import com.zurrtum.create.client.flywheel.backend.gl.GlNumericType;
-import com.zurrtum.create.client.flywheel.backend.gl.array.VertexAttribute;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.*;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlNumericType;
+import com.mohistmc.mod.module.create.client.flywheel.backend.gl.array.VertexAttribute;
 
 import java.util.ArrayList;
 import java.util.List;

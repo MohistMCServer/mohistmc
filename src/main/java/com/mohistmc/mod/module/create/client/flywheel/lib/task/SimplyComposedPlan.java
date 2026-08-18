@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.flywheel.lib.task;
 
-import com.zurrtum.create.client.flywheel.api.task.Plan;
+import com.mohistmc.mod.module.create.client.flywheel.api.task.Plan;
 
 public interface SimplyComposedPlan<C> extends Plan<C> {
     @Override

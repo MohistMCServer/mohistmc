@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create;
 
 import com.mojang.serialization.Codec;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.zurrtum.create.catnip.codecs.stream.CatnipStreamCodecs;
-import com.zurrtum.create.content.equipment.toolbox.ToolboxInventory;
-import com.zurrtum.create.infrastructure.component.*;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory;
+import com.mohistmc.mod.module.create.infrastructure.component.*;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.UnaryOperator;
@@ -27,7 +27,7 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.ApiStatus;
 
-import static com.zurrtum.create.Create.MOD_ID;
+import static com.mohistmc.mod.module.create.Create.MOD_ID;
 
 public class AllDataComponents {
     public static final DataComponentType<Integer> FLUID_MAX_CAPACITY = register(

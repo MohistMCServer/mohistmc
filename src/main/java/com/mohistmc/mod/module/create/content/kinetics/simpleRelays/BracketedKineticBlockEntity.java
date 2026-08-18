@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.simpleRelays;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.api.behaviour.BlockEntityBehaviour;
-import com.zurrtum.create.api.contraption.transformable.TransformableBlockEntity;
-import com.zurrtum.create.content.contraptions.StructureTransform;
-import com.zurrtum.create.content.decoration.bracket.BracketedBlockEntityBehaviour;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlockEntity;
+import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
+import com.mohistmc.mod.module.create.content.decoration.bracket.BracketedBlockEntityBehaviour;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;

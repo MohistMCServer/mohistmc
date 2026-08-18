@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.crate;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.infrastructure.items.ItemInventoryProvider;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;

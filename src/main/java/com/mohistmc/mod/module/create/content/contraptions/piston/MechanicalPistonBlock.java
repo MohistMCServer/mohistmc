@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.contraptions.piston;
 
-import com.zurrtum.create.*;
-import com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock;
-import com.zurrtum.create.foundation.block.IBE;
-import com.zurrtum.create.foundation.block.NeighborUpdateListeningBlock;
-import com.zurrtum.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

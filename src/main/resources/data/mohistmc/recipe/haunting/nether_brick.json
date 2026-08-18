@@ -1,0 +1,10 @@
+{
+  "type": "mohistmc:haunting",
+  "ingredient": "minecraft:brick",
+  "results": [
+    {
+      "id": "minecraft:nether_brick"
+    }
+  ]
+}
+

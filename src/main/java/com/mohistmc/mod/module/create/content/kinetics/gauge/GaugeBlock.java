@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.gauge;
 
-import com.zurrtum.create.AllBlockEntityTypes;
-import com.zurrtum.create.catnip.data.Iterate;
-import com.zurrtum.create.catnip.levelWrappers.WrappedLevel;
-import com.zurrtum.create.catnip.math.VecHelper;
-import com.zurrtum.create.content.kinetics.base.DirectionalAxisKineticBlock;
-import com.zurrtum.create.content.kinetics.base.IRotate;
-import com.zurrtum.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.catnip.levelWrappers.WrappedLevel;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;
+import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

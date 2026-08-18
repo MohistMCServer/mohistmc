@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.foundation.utility;
 
-import com.zurrtum.create.infrastructure.config.AllConfigs;
-import com.zurrtum.create.infrastructure.packet.s2c.ServerSpeedPacket;
+import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ServerSpeedPacket;
 import net.minecraft.server.MinecraftServer;
 
 public class ServerSpeedProvider {

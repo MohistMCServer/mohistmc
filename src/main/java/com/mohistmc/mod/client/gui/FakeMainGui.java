@@ -21,77 +21,114 @@ public class FakeMainGui extends EnhancedScreen {
 
     private static final Identifier BG = Identifier.fromNamespaceAndPath(MohistMC.MODID, "textures/gui/bg1.png");
 
+    private static final int SIDEBAR_W = 220;
+    private static final int BTN_H = 40;
+    private static final int BTN_GAP = 8;
+
     public FakeMainGui() {
         super(Component.translatable("narrator.screen.title"), BG);
     }
 
     @Override
     protected void buildWidgets() {
-        int sw = getImageWidth();
-        int sh = getImageHeight();
-        int panelW = 100;
+        int sw = getImageWidth();  // 1280
+        int sh = getImageHeight(); // 窄屏时自动扩展填满屏幕
 
-        // ====== 右侧边栏：半透黑底 ======
-        var sidebar = new Panel(0, 0, panelW, sh, 0x77000000)
-                .setRightAnchored(true);
+        // ====== 右侧边栏 ======
+        var sidebar = new Panel(0, 0, SIDEBAR_W, sh, 0x77000000)
+                .setRightAnchored(true).setEditorId("sidebar");
 
-        var logo = new Avatar(18, 5, 64);
+        // Logo
+        int logoSize = 128;
+        var logo = new Avatar((SIDEBAR_W - logoSize) / 2, 32, logoSize);
+        logo.setEditorId("logo");
         logo.setTexture(Identifier.fromNamespaceAndPath(MohistMC.MODID, "textures/item/logo.png"));
         sidebar.addChild(logo);
 
-        int btnY = sh / 2 - 40;
+        // 标题
+        var title = new SimpleLabel(0, 32 + logoSize + 12,
+                Component.literal("MohistMC"), 0xFFFFFF);
+        title.setEditorId("title");
+        title.setLabelWidth(SIDEBAR_W).setAlign(SimpleLabel.Align.CENTER);
+        title.setFontSize(28);
+        sidebar.addChild(title);
 
-        var singleplayer = new CustomButton(5, btnY, 90, 20,
-                Component.translatable("menu.singleplayer"), 0xFF555555)
-                .setTextColor(0xFFFFFFFF).setBorderRadius(4)
+        var subtitle = new SimpleLabel(0, 32 + logoSize + 48,
+                Component.literal("Forge Hybrid Server"), 0xB0B0B0);
+        subtitle.setEditorId("subtitle");
+        subtitle.setLabelWidth(SIDEBAR_W).setAlign(SimpleLabel.Align.CENTER);
+        subtitle.setFontSize(14);
+        sidebar.addChild(subtitle);
+
+        // 按钮（垂直居中偏上，基于 sh）
+        int btnStartY = sh / 2 - 80;
+
+        var singleplayer = new CustomButton(20, btnStartY, SIDEBAR_W - 40, BTN_H,
+                Component.translatable("menu.singleplayer"), 0xFF336633)
+                .setEditorId("btn_singleplayer")
+                .setTextColor(0xFFFFFFFF).setBorderRadius(8)
                 .setTooltip(Component.translatable("menu.singleplayer"))
                 .onClick(() -> minecraft.gui.setScreen(new SelectWorldScreen(this)));
         sidebar.addChild(singleplayer);
 
-        var multiplayer = new CustomButton(5, btnY + 22, 90, 20,
-                Component.literal("多人游戏"), 0xFF555555)
-                .setTextColor(0xFFFFFFFF).setBorderRadius(4)
+        var multiplayer = new CustomButton(20, btnStartY + BTN_H + BTN_GAP, SIDEBAR_W - 40, BTN_H,
+                Component.translatable("menu.multiplayer"), 0xFF336666)
+                .setEditorId("btn_multiplayer")
+                .setTextColor(0xFFFFFFFF).setBorderRadius(8)
                 .setTooltip(Component.translatable("menu.multiplayer"))
                 .onClick(() -> minecraft.gui.setScreen(new JoinMultiplayerScreen(this)));
         sidebar.addChild(multiplayer);
 
-        var options = new CustomButton(5, btnY + 44, 90, 20,
-                Component.translatable("menu.options"), 0xFF555555)
-                .setTextColor(0xFFFFFFFF).setBorderRadius(4)
+        var options = new CustomButton(20, btnStartY + (BTN_H + BTN_GAP) * 2, SIDEBAR_W - 40, BTN_H,
+                Component.translatable("menu.options"), 0xFF333366)
+                .setEditorId("btn_options")
+                .setTextColor(0xFFFFFFFF).setBorderRadius(8)
                 .setTooltip(Component.translatable("menu.options"))
                 .onClick(() -> minecraft.gui.setScreen(new OptionsScreen(this, minecraft.options, false)));
         sidebar.addChild(options);
 
-        var demo = new CustomButton(5, btnY + 66, 90, 20,
+        var demo = new CustomButton(20, btnStartY + (BTN_H + BTN_GAP) * 3, SIDEBAR_W - 40, BTN_H,
                 Component.literal("🧪 演示界面"), 0xFF333333)
-                .setTextColor(0xFFFFFFFF).setBorderRadius(4)
+                .setEditorId("btn_demo")
+                .setTextColor(0xFFFFFFFF).setBorderRadius(8)
                 .setTooltip(Component.literal("打开组件演示界面"))
                 .onClick(() -> minecraft.gui.setScreen(new MyCustomScreen()));
         sidebar.addChild(demo);
 
-        int bottomY = sh - 25;
+        // 底部按钮（基于 sh）
+        int bottomY = sh - BTN_H - 24;
 
-        var language = new CustomButton(5, bottomY, 20, 20,
+        var language = new CustomButton(20, bottomY, BTN_H, BTN_H,
                 Component.literal("文"), 0xFF555555)
-                .setBorderRadius(4)
+                .setEditorId("btn_language")
+                .setBorderRadius(8)
                 .setTooltip(Component.translatable("narrator.button.language"))
                 .onClick(() -> minecraft.gui.setScreen(
                         new LanguageSelectScreen(this, minecraft.options, minecraft.getLanguageManager())));
         sidebar.addChild(language);
 
-        var quit = new CustomButton(panelW - 50, bottomY, 45, 20,
-                Component.literal("退出游戏"), 0xFF555555)
-                .setBorderRadius(4)
+        var quit = new CustomButton(20, bottomY, BTN_H, BTN_H,
+                Component.translatable("menu.quit"), 0xFF663333)
+                .setEditorId("btn_quit")
+                .setTextColor(0xFFFFFFFF).setBorderRadius(8)
                 .setTooltip(Component.translatable("menu.quit"))
+                .setRightAnchored(true) // 右锚定：文字过长时按钮向左扩展，不超出边栏
                 .onClick(minecraft::stop);
         sidebar.addChild(quit);
 
-        addWidget(new SimpleLabel(5, sh - 20,
-                Component.literal("不隶属于 MOJANG"), 0xFFAA00));
+        // 底部版权
+        var disclaimer = new SimpleLabel(138, 4,
+                Component.literal("不隶属于 MOJANG"), 0xFFAAAAAA);
+        disclaimer.setEditorId("disclaimer");
+        disclaimer.setBottomAnchored(true);
+        disclaimer.setFontSize(14);
+        addWidget(disclaimer);
 
-        var credits = new CustomButton(5, sh - 14, 152, 12,
+        var credits = new CustomButton(12, 3, 123, 29,
                 Component.literal("MohistMC 出品"), 0x00000000)
-                .setTextColor(0xFF00FF00).setHoverColor(0x3300FF00).setBorderRadius(0)
+                .setEditorId("credits")
+                .setTextColor(0xFF00CCFF).setHoverColor(0x3300CCFF).setBorderRadius(0)
+                .setBottomAnchored(true)
                 .onClick(() -> ConfirmLinkScreen.confirmLinkNow(this, "https://www.mohistmc.cn/"));
         addWidget(credits);
 

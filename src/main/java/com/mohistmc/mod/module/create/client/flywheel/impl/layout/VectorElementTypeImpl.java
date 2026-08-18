@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.flywheel.impl.layout;
 
-import com.zurrtum.create.client.flywheel.api.layout.ValueRepr;
-import com.zurrtum.create.client.flywheel.api.layout.VectorElementType;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.ValueRepr;
+import com.mohistmc.mod.module.create.client.flywheel.api.layout.VectorElementType;
 import org.jetbrains.annotations.Range;
 
 record VectorElementTypeImpl(ValueRepr repr, @Range(from = 2, to = 4) int size, int byteSize,

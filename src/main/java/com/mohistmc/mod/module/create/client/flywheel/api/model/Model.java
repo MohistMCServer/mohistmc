@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.flywheel.api.model;
 
-import com.zurrtum.create.client.flywheel.api.instance.InstanceType;
-import com.zurrtum.create.client.flywheel.api.instance.InstancerProvider;
-import com.zurrtum.create.client.flywheel.api.material.Material;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.create.client.flywheel.api.material.Material;
 import java.util.List;
 import org.joml.Vector4fc;
 

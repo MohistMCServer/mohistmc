@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.api.schematic.nbt;
 
-import com.zurrtum.create.api.registry.SimpleRegistry;
+import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;

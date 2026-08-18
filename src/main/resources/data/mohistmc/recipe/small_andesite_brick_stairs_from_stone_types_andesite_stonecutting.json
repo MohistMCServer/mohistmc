@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#mohistmc:stone_types/andesite",
+  "result": {
+    "count": 1,
+    "id": "mohistmc:small_andesite_brick_stairs"
+  }
+}

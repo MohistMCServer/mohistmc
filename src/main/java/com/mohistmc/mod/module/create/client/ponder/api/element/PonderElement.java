@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.ponder.api.element;
 
-import com.zurrtum.create.client.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
 
 public interface PonderElement {
     default void whileSkipping(PonderScene scene) {

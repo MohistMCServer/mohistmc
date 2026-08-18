@@ -1,0 +1,29 @@
+{
+  "parent": "mohistmc:encased_fan",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:fan_processing_builtin"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.fan_processing.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:propeller"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.fan_processing"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

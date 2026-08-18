@@ -1,0 +1,28 @@
+{
+  "parent": "mohistmc:haunted_bell",
+  "criteria": {
+    "0": {
+      "trigger": "mohistmc:clockwork_bearing_builtin"
+    }
+  },
+  "display": {
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.mohistmc.clockwork_bearing.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "mohistmc:clockwork_bearing"
+    },
+    "title": {
+      "translate": "advancement.mohistmc.clockwork_bearing"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

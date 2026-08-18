@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
 import com.mojang.logging.LogUtils;
-import com.zurrtum.create.AllClientHandle;
-import com.zurrtum.create.AllDataComponents;
-import com.zurrtum.create.AllItems;
-import com.zurrtum.create.foundation.utility.CreatePaths;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
