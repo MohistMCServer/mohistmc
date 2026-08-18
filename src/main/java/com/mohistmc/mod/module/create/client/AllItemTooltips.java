@@ -112,10 +112,10 @@ public class AllItemTooltips {
         register(AllItems.COPYCAT_STEP);
         register(AllItems.COPYCAT_PANEL);
         register(AllItems.RED_SAND_PAPER, AllItems.SAND_PAPER);
-        register(AllItems.CARDBOARD_HELMET, "item.create.cardboard_armor");
-        register(AllItems.CARDBOARD_CHESTPLATE, "item.create.cardboard_armor");
-        register(AllItems.CARDBOARD_LEGGINGS, "item.create.cardboard_armor");
-        register(AllItems.CARDBOARD_BOOTS, "item.create.cardboard_armor");
-        register(AllItems.TOOLBOX, "block.create.toolbox");
+        register(AllItems.CARDBOARD_HELMET, "item.mohistmc.cardboard_armor");
+        register(AllItems.CARDBOARD_CHESTPLATE, "item.mohistmc.cardboard_armor");
+        register(AllItems.CARDBOARD_LEGGINGS, "item.mohistmc.cardboard_armor");
+        register(AllItems.CARDBOARD_BOOTS, "item.mohistmc.cardboard_armor");
+        register(AllItems.TOOLBOX, "block.mohistmc.toolbox");
     }
 }

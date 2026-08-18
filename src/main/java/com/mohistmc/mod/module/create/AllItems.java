@@ -2161,72 +2161,72 @@ public class AllItems {
     public static final PackageItem CARDBOARD_PACKAGE_12X12 = (PackageItem) registerItem(
         AllItemIds.CARDBOARD_PACKAGE_12X12,
         PackageItem.styled(AllPackageStyles.CARDBOARD_12X12),
-        new Properties().stacksTo(1).overrideDescription("item.create.package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.package")
     );
     public static final PackageItem CARDBOARD_PACKAGE_10X12 = (PackageItem) registerItem(
         AllItemIds.CARDBOARD_PACKAGE_10X12,
         PackageItem.styled(AllPackageStyles.CARDBOARD_10X12),
-        new Properties().stacksTo(1).overrideDescription("item.create.package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.package")
     );
     public static final PackageItem CARDBOARD_PACKAGE_10X8 = (PackageItem) registerItem(
         AllItemIds.CARDBOARD_PACKAGE_10X8,
         PackageItem.styled(AllPackageStyles.CARDBOARD_10X8),
-        new Properties().stacksTo(1).overrideDescription("item.create.package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.package")
     );
     public static final PackageItem CARDBOARD_PACKAGE_12X10 = (PackageItem) registerItem(
         AllItemIds.CARDBOARD_PACKAGE_12X10,
         PackageItem.styled(AllPackageStyles.CARDBOARD_12X10),
-        new Properties().stacksTo(1).overrideDescription("item.create.package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.package")
     );
     public static final PackageItem RARE_CREEPER_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_CREEPER_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_CREEPER),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_DARCY_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_DARCY_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_DARCY),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_EVAN_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_EVAN_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_EVAN),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_JINX_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_JINX_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_JINX),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_KRYPPERS_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_KRYPPERS_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_KRYPPERS),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_SIMI_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_SIMI_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_SIMI),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_STARLOTTE_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_STARLOTTE_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_STARLOTTE),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_THUNDER_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_THUNDER_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_THUNDER),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_UP_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_UP_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_UP),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final PackageItem RARE_VECTOR_PACKAGE = (PackageItem) registerItem(
         AllItemIds.RARE_VECTOR_PACKAGE,
         PackageItem.styled(AllPackageStyles.RARE_VECTOR),
-        new Properties().stacksTo(1).overrideDescription("item.create.rare_package")
+        new Properties().stacksTo(1).overrideDescription("item.mohistmc.rare_package")
     );
     public static final ShoppingListItem SHOPPING_LIST = (ShoppingListItem) registerItem(
         AllItemIds.SHOPPING_LIST,
