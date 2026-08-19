@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.processing.burner;
 
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.ColoredLitOverlayInstance;
+import com.mohistmc.mod.module.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.flywheel.lib.instance.ColoredLitOverlayInstance;
 import net.minecraft.core.Vec3i;
 import org.joml.Quaternionf;
 import org.joml.Quaternionfc;

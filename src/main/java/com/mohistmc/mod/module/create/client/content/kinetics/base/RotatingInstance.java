@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.base;
 
 import com.mohistmc.mod.module.create.catnip.theme.Color;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceHandle;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.ColoredLitOverlayInstance;
+import com.mohistmc.mod.module.flywheel.api.instance.InstanceHandle;
+import com.mohistmc.mod.module.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.flywheel.lib.instance.ColoredLitOverlayInstance;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

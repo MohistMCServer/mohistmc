@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.catnip.render;
 
 import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache.Compartment;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import java.util.function.Function;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;

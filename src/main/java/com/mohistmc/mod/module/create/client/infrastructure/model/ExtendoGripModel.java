@@ -7,7 +7,7 @@ import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.content.equipment.extendoGrip.ExtendoGripRenderHandler;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.ItemModelRenderHelper;
 import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import java.util.List;
 import net.minecraft.client.Minecraft;
@@ -39,7 +39,7 @@ import org.joml.Vector3fc;
 import org.jspecify.annotations.Nullable;
 
 import static com.mohistmc.mod.module.create.Create.MOD_ID;
-import static com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
+import static com.mohistmc.mod.module.flywheel.lib.model.baked.ItemModelRenderHelper.submitQuads;
 
 public class ExtendoGripModel implements ItemModel {
     public static final Identifier ID = Identifier.fromNamespaceAndPath(MOD_ID, "model/extendo_grip");

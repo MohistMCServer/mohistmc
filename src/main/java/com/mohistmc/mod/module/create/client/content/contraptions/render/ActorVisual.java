@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.render;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.Visual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.flywheel.api.visual.Visual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.world.level.LightLayer;

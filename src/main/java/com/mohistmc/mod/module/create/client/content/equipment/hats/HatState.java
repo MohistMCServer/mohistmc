@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.equipment.hats;
 
 import com.mohistmc.mod.module.create.client.content.trains.schedule.hat.TrainHatInfo;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import net.minecraft.world.entity.Entity;
 import org.jspecify.annotations.Nullable;
 

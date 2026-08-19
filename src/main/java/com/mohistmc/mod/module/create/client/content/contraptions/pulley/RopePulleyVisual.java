@@ -4,11 +4,11 @@ import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.AllSpriteShifts;
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instancer;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.api.instance.Instancer;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
 import com.mohistmc.mod.module.create.content.contraptions.pulley.PulleyBlockEntity;
 

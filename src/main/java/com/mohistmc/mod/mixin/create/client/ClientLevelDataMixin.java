@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.GameTimeHolder;
+import com.mohistmc.mod.module.flywheel.backend.engine.uniform.GameTimeHolder;
 import net.minecraft.client.multiplayer.ClientLevel.ClientLevelData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

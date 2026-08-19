@@ -6,7 +6,7 @@ import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.render.*;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache.Compartment;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleKineticRenderState;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import com.mohistmc.mod.module.create.content.kinetics.waterwheel.LargeWaterWheelBlock;

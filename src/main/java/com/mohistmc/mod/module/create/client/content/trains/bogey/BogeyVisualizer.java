@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.trains.bogey;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 
 @FunctionalInterface
 public interface BogeyVisualizer {

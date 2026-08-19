@@ -38,11 +38,11 @@ import com.mohistmc.mod.module.create.client.foundation.gui.render.SawRenderStat
 import com.mohistmc.mod.module.create.client.foundation.gui.render.SawRenderer;
 import com.mohistmc.mod.module.create.client.foundation.gui.render.SpoutRenderState;
 import com.mohistmc.mod.module.create.client.foundation.gui.render.SpoutRenderer;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderKeybinds;
-import com.mohistmc.mod.module.create.client.ponder.foundation.render.SceneRenderState;
-import com.mohistmc.mod.module.create.client.ponder.foundation.render.SceneRenderer;
-import com.mohistmc.mod.module.create.client.ponder.foundation.render.TitleTextRenderState;
-import com.mohistmc.mod.module.create.client.ponder.foundation.render.TitleTextRenderer;
+import com.mohistmc.mod.module.ponder.enums.PonderKeybinds;
+import com.mohistmc.mod.module.ponder.foundation.render.SceneRenderState;
+import com.mohistmc.mod.module.ponder.foundation.render.SceneRenderer;
+import com.mohistmc.mod.module.ponder.foundation.render.TitleTextRenderState;
+import com.mohistmc.mod.module.ponder.foundation.render.TitleTextRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

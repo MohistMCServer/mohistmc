@@ -59,14 +59,20 @@ public class CuttingBoardRenderer implements BlockEntityRenderer<CuttingBoardBlo
 		int seed = Item.getId(stack.getItem()) + stack.getDamageValue();
 		this.random.setSeed(seed);
 
+		boolean carving = cuttingBoard.isItemCarvingBoard();
+		// MC 26.2: neither FIXED nor GROUND model transforms lay the item flat (they only contain
+		// translation/scale/Y-rotation), so flat-laying is done manually via an X 90° rotation below.
+		// FIXED is used here because GROUND additionally applies a 0.5 scale and [0,2,0] offset.
+		ItemDisplayContext displayContext = ItemDisplayContext.FIXED;
+
 		List<RenderedItem> items = new ArrayList<>(modelCount);
 		for (int i = 0; i < modelCount; ++i) {
 			float xOffset = modelCount == 1 ? 0.0F : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
 			float zOffset = modelCount == 1 ? 0.0F : (this.random.nextFloat() * 2.0F - 1.0F) * 0.15F * 0.5F;
 
 			ItemStackRenderState itemState = new ItemStackRenderState();
-			this.itemModelResolver.updateForTopItem(itemState, stack, ItemDisplayContext.FIXED, cuttingBoard.getLevel(), null, seed + i);
-			items.add(new RenderedItem(itemState, getPoseType(stack, cuttingBoard.isItemCarvingBoard()), xOffset, zOffset, getCarvedToolPoseAngle(stack)));
+			this.itemModelResolver.updateForTopItem(itemState, stack, displayContext, cuttingBoard.getLevel(), null, seed + i);
+			items.add(new RenderedItem(itemState, getPoseType(stack, carving), xOffset, zOffset, getCarvedToolPoseAngle(stack)));
 		}
 		state.items = items;
 	}
@@ -108,8 +114,10 @@ public class CuttingBoardRenderer implements BlockEntityRenderer<CuttingBoardBlo
 	}
 
 	private void applyBlockPose(PoseStack poseStack, Direction direction, float xOffset, int yIndex, float zOffset) {
-		poseStack.translate(0.5D + xOffset, 0.27D + 0.03D * (yIndex + 1), 0.5D + zOffset);
+		// Blocks lay flat too: same X 90° rotation, slightly larger and level with the board.
+		poseStack.translate(0.5D + xOffset, 0.10D + 0.03D * (yIndex + 1), 0.5D + zOffset);
 		poseStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));
+		poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
 		poseStack.scale(0.8F, 0.8F, 0.8F);
 	}
 

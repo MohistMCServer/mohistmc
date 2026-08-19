@@ -8,7 +8,7 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement.GuiPartialRenderBuilder;
 import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;

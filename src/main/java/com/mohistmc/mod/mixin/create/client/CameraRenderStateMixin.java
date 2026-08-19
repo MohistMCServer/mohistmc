@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.CameraInfoHolder;
+import com.mohistmc.mod.module.flywheel.backend.engine.uniform.CameraInfoHolder;
 import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import org.joml.Vector3f;

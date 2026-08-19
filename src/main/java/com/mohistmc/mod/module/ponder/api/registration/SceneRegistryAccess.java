@@ -1,0 +1,19 @@
+package com.mohistmc.mod.module.ponder.api.registration;
+
+import com.mohistmc.mod.module.ponder.foundation.PonderScene;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import net.minecraft.resources.Identifier;
+
+public interface SceneRegistryAccess {
+
+    boolean doScenesExistForId(Identifier id);
+
+    Collection<Map.Entry<Identifier, StoryBoardEntry>> getRegisteredEntries();
+
+    List<PonderScene> compile(Identifier id);
+
+    List<PonderScene> compile(Collection<StoryBoardEntry> entries);
+
+}

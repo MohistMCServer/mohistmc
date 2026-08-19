@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.VisualizationHelper;
+import com.mohistmc.mod.module.flywheel.lib.visualization.VisualizationHelper;
 import net.minecraft.client.renderer.chunk.SectionCompiler;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;

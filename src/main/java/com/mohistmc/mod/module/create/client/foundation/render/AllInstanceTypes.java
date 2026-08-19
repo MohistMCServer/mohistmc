@@ -6,12 +6,12 @@ import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingPivot
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollStepInstance;
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollTransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstanceType;
-import com.mohistmc.mod.module.create.client.flywheel.api.layout.FloatRepr;
-import com.mohistmc.mod.module.create.client.flywheel.api.layout.IntegerRepr;
-import com.mohistmc.mod.module.create.client.flywheel.api.layout.LayoutBuilder;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.SimpleInstanceType;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.ExtraMemoryOps;
+import com.mohistmc.mod.module.flywheel.api.instance.InstanceType;
+import com.mohistmc.mod.module.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.IntegerRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.LayoutBuilder;
+import com.mohistmc.mod.module.flywheel.lib.instance.SimpleInstanceType;
+import com.mohistmc.mod.module.flywheel.lib.util.ExtraMemoryOps;
 import org.lwjgl.system.MemoryUtil;
 
 import static com.mohistmc.mod.module.create.client.Create.asResource;

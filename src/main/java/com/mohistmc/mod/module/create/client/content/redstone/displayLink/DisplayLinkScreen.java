@@ -21,7 +21,7 @@ import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
 import com.mohistmc.mod.module.create.client.foundation.gui.widget.SelectionScrollInput;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.client.infrastructure.ponder.AllCreatePonderTags;
-import com.mohistmc.mod.module.create.client.ponder.foundation.ui.PonderTagScreen;
+import com.mohistmc.mod.module.ponder.foundation.ui.PonderTagScreen;
 import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkBlockEntity;
 import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkContext;
 import com.mohistmc.mod.module.create.content.redstone.displayLink.source.SingleLineDisplaySource;

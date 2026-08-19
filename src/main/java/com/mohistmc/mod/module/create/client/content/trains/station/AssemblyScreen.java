@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.trains.station;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;

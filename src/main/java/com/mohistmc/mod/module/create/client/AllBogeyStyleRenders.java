@@ -4,7 +4,7 @@ import com.mohistmc.mod.module.create.AllBogeyStyles;
 import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyBlockEntityRenderer.BogeyRenderState;
 import com.mohistmc.mod.module.create.client.content.trains.bogey.BogeyVisual;
 import com.mohistmc.mod.module.create.client.content.trains.bogey.SizeRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.create.content.trains.bogey.BogeySize;
 import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
 import java.util.HashMap;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.foundation.ponder.element;
 
 import com.mohistmc.mod.module.create.AllSynchedDatas;
-import com.mohistmc.mod.module.create.client.ponder.api.element.ParrotElement;
-import com.mohistmc.mod.module.create.client.ponder.api.element.ParrotPose;
-import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
-import com.mohistmc.mod.module.create.client.ponder.foundation.element.ParrotElementImpl;
+import com.mohistmc.mod.module.ponder.api.element.ParrotElement;
+import com.mohistmc.mod.module.ponder.api.element.ParrotPose;
+import com.mohistmc.mod.module.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.ponder.foundation.element.ParrotElementImpl;
 import java.util.function.Supplier;
 import net.minecraft.world.phys.Vec3;
 

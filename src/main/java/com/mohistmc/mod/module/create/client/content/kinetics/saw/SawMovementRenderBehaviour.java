@@ -12,8 +12,8 @@ import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRender
 import com.mohistmc.mod.module.create.client.content.contraptions.render.ActorVisual;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;

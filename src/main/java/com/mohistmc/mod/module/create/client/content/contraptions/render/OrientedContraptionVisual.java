@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
 import com.mohistmc.mod.module.create.content.contraptions.OrientedContraptionEntity;
 import net.minecraft.util.Mth;

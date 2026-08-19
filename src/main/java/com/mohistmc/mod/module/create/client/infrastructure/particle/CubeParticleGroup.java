@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
 import com.mohistmc.mod.module.create.client.foundation.render.AllRenderPipelines;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderSpecialTextures;
+import com.mohistmc.mod.module.ponder.enums.PonderSpecialTextures;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;

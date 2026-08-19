@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mohistmc.mod.module.create.client.foundation.item.TooltipModifier;
 import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
-import com.mohistmc.mod.module.create.client.ponder.foundation.PonderTooltipHandler;
+import com.mohistmc.mod.module.ponder.foundation.PonderTooltipHandler;
 import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;

@@ -2,14 +2,14 @@ package com.mohistmc.mod.module.create.client.content.contraptions.actors.roller
 
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.InstancerProvider;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.OrientedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.flywheel.api.instance.InstancerProvider;
+import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.OrientedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.create.content.contraptions.actors.roller.RollerBlock;
 import com.mohistmc.mod.module.create.content.contraptions.actors.roller.RollerBlockEntity;
 import java.util.function.Consumer;

@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.infrastructure.ponder.scenes.fluid;
 
 import com.mohistmc.mod.module.create.client.foundation.ponder.CreateSceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.PonderPalette;
-import com.mohistmc.mod.module.create.client.ponder.api.element.ElementLink;
-import com.mohistmc.mod.module.create.client.ponder.api.element.WorldSectionElement;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuildingUtil;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.ponder.api.PonderPalette;
+import com.mohistmc.mod.module.ponder.api.element.ElementLink;
+import com.mohistmc.mod.module.ponder.api.element.WorldSectionElement;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuilder;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuildingUtil;
+import com.mohistmc.mod.module.ponder.api.scene.Selection;
 import com.mohistmc.mod.module.create.content.fluids.hosePulley.HosePulleyBlockEntity;
 import com.mohistmc.mod.module.create.content.fluids.pump.PumpBlock;
 import com.mohistmc.mod.module.create.content.fluids.tank.FluidTankBlockEntity;

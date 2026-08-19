@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.impl.visualization.VisualizationManagerImpl;
+import com.mohistmc.mod.module.flywheel.impl.visualization.VisualizationManagerImpl;
 import net.minecraft.client.multiplayer.ClientChunkCache;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.SectionPos;

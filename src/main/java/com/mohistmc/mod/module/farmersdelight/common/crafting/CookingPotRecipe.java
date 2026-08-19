@@ -59,10 +59,6 @@ public class CookingPotRecipe implements Recipe<RecipeInput>
 	private final float experience;
 	private final int cookTime;
 
-	public CookingPotRecipe(String group, NonNullList<Ingredient> inputItems, ItemStack output, ItemStack container, float experience, int cookTime) {
-		this(group, inputItems, ItemStackTemplate.fromNonEmptyStack(output), stackToTemplate(container), experience, cookTime);
-	}
-
 	public CookingPotRecipe(String group, NonNullList<Ingredient> inputItems, ItemStackTemplate output, Optional<ItemStackTemplate> container, float experience, int cookTime) {
 		this.group = group;
 		this.inputItems = inputItems;
@@ -70,10 +66,6 @@ public class CookingPotRecipe implements Recipe<RecipeInput>
 		this.container = container.orElse(null);
 		this.experience = experience;
 		this.cookTime = cookTime;
-	}
-
-	private static Optional<ItemStackTemplate> stackToTemplate(ItemStack stack) {
-		return stack.isEmpty() ? Optional.empty() : Optional.of(ItemStackTemplate.fromNonEmptyStack(stack));
 	}
 
 	public String getGroup() {
@@ -89,12 +81,8 @@ public class CookingPotRecipe implements Recipe<RecipeInput>
 		return this.inputItems;
 	}
 
-	public ItemStack getResultItem(HolderLookup.Provider provider) {
-		return this.output.create();
-	}
-
 	public ItemStack getOutputContainer() {
-		return this.container.create();
+		return this.container != null ? this.container.create() : ItemStack.EMPTY;
 	}
 
 	public Optional<ItemStackTemplate> getContainerOverride() {
@@ -127,10 +115,6 @@ public class CookingPotRecipe implements Recipe<RecipeInput>
 			}
 		}
 		return i == this.inputItems.size() && RecipeMatcher.findMatches(inputs, this.inputItems) != null;
-	}
-
-	public boolean canCraftInDimensions(int width, int height) {
-		return width * height >= this.inputItems.size();
 	}
 
 	@Override
@@ -221,11 +205,6 @@ public class CookingPotRecipe implements Recipe<RecipeInput>
 			buffer.writeVarInt(recipe.cookTime);
 		}
 
-		// Network-sync ingredients as explicit item stacks. Using Ingredient.CONTENTS_STREAM_CODEC
-		// crashes on the client when decoding neoforge:compound / neoforge:difference custom
-		// ingredients (Ingredients can't be empty), so we expand them to concrete stacks instead.
-		// NOTE: 26.2 has no Ingredient.EMPTY / no-arg Ingredient.of() - an empty ingredient is
-		// simply skipped (Optional.empty), keeping encode/decode symmetric with writeIngredient.
 		private static Optional<Ingredient> readIngredient(RegistryFriendlyByteBuf buffer) {
 			int size = buffer.readVarInt();
 			if (size <= 0) {

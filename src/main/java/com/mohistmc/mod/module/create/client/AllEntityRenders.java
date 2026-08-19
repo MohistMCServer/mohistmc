@@ -11,7 +11,7 @@ import com.mohistmc.mod.module.create.client.content.logistics.box.PackageVisual
 import com.mohistmc.mod.module.create.client.content.logistics.depot.EjectorItemEntityRenderer;
 import com.mohistmc.mod.module.create.client.content.trains.entity.CarriageContraptionEntityRenderer;
 import com.mohistmc.mod.module.create.client.content.trains.entity.CarriageContraptionVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleEntityVisualizer;
+import com.mohistmc.mod.module.flywheel.lib.visualization.SimpleEntityVisualizer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.Entity;

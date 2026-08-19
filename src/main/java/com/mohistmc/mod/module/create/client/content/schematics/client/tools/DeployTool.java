@@ -6,7 +6,7 @@ import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.catnip.outliner.AABBOutline;
 import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicTransformation;
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.core.BlockPos;

@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create.client.content.kinetics.chainConveyor;
 import com.google.common.cache.Cache;
 import com.mohistmc.mod.module.create.catnip.data.WorldAttached;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBehaviour;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorPackage;

@@ -7,7 +7,7 @@ import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;

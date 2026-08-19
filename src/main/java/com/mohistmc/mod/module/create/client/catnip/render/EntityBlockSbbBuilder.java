@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.catnip.render;
 
 import com.mojang.blaze3d.vertex.QuadInstance;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BufferEmitter;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.BufferEmitter;
 import java.util.Arrays;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.resources.model.geometry.BakedQuad;

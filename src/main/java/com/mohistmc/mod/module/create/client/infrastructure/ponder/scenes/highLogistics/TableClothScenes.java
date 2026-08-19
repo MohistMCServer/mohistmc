@@ -3,11 +3,11 @@ package com.mohistmc.mod.module.create.client.infrastructure.ponder.scenes.highL
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.catnip.math.Pointing;
 import com.mohistmc.mod.module.create.client.foundation.ponder.CreateSceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.PonderPalette;
-import com.mohistmc.mod.module.create.client.ponder.api.element.ParrotPose.FacePointOfInterestPose;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuildingUtil;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.ponder.api.PonderPalette;
+import com.mohistmc.mod.module.ponder.api.element.ParrotPose.FacePointOfInterestPose;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuilder;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuildingUtil;
+import com.mohistmc.mod.module.ponder.api.scene.Selection;
 import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlock;

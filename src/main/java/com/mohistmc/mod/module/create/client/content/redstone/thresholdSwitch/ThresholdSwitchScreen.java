@@ -14,7 +14,7 @@ import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
 import com.mohistmc.mod.module.create.client.foundation.gui.widget.SelectionScrollInput;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.client.infrastructure.ponder.AllCreatePonderTags;
-import com.mohistmc.mod.module.create.client.ponder.foundation.ui.PonderTagScreen;
+import com.mohistmc.mod.module.ponder.foundation.ui.PonderTagScreen;
 import com.mohistmc.mod.module.create.content.redstone.thresholdSwitch.ThresholdSwitchBlockEntity;
 import com.mohistmc.mod.module.create.content.redstone.thresholdSwitch.ThresholdSwitchBlockEntity.ThresholdType;
 import com.mohistmc.mod.module.create.content.redstone.thresholdSwitch.ThresholdSwitchObservable;

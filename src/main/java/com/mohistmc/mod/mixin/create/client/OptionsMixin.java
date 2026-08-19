@@ -2,8 +2,8 @@ package com.mohistmc.mod.mixin.create.client;
 
 import com.google.common.collect.Lists;
 import com.mohistmc.mod.module.create.client.AllKeys;
-import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.OptionsUniforms;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderKeybinds;
+import com.mohistmc.mod.module.flywheel.backend.engine.uniform.OptionsUniforms;
+import com.mohistmc.mod.module.ponder.enums.PonderKeybinds;
 import java.io.File;
 import java.util.List;
 import net.minecraft.client.KeyMapping;

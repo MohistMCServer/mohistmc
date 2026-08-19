@@ -5,7 +5,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.content.logistics.box.PackageRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.equipment.armor.CardboardArmorHandler;
 import com.mohistmc.mod.module.create.foundation.utility.TickBasedCache;
 import java.util.Random;

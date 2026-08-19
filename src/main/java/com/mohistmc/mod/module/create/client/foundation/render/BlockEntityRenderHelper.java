@@ -5,7 +5,7 @@ import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.VisualizationHelper;
+import com.mohistmc.mod.module.flywheel.lib.visualization.VisualizationHelper;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
 import java.util.ArrayList;

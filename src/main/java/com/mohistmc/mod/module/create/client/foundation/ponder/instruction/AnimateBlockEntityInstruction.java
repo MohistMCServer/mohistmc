@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.foundation.ponder.instruction;
 
 import com.mohistmc.mod.module.create.client.content.kinetics.deployer.DeployerRenderer;
-import com.mohistmc.mod.module.create.client.ponder.api.level.PonderLevel;
-import com.mohistmc.mod.module.create.client.ponder.foundation.PonderScene;
-import com.mohistmc.mod.module.create.client.ponder.foundation.instruction.TickingInstruction;
+import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.ponder.foundation.instruction.TickingInstruction;
 import com.mohistmc.mod.module.create.content.contraptions.bearing.IBearingBlockEntity;
 import com.mohistmc.mod.module.create.content.contraptions.pulley.PulleyBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity;

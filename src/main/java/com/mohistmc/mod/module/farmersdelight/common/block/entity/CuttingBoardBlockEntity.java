@@ -133,10 +133,9 @@ public class CuttingBoardBlockEntity extends SyncedBlockEntity implements Cleara
 
 	private Optional<RecipeHolder<CuttingBoardRecipe>> getMatchingRecipe(ItemStack toolStack, @Nullable Player player) {
 		if (level == null) return Optional.empty();
+		if (!(level instanceof ServerLevel serverLevel)) return Optional.empty();
 
-		Optional<RecipeHolder<CuttingBoardRecipe>> recipe = level instanceof ServerLevel serverLevel
-				? quickCheck.getRecipeFor(new CuttingBoardRecipeInput(getStoredItem(), toolStack), serverLevel)
-				: Optional.empty();
+		Optional<RecipeHolder<CuttingBoardRecipe>> recipe = quickCheck.getRecipeFor(new CuttingBoardRecipeInput(getStoredItem(), toolStack), serverLevel);
 		if (recipe.isPresent()) {
 			if (recipe.get().value().getTool().test(toolStack)) {
 				return recipe;
@@ -180,15 +179,15 @@ public class CuttingBoardBlockEntity extends SyncedBlockEntity implements Cleara
 			return false;
 		}
 		Transaction transaction = Transaction.openRoot();
-		int amount = inventory.insert(ItemResource.of(addedStack.copy()), 0, transaction);
+		int amount = inventory.insert(ItemResource.of(addedStack.copy()), addedStack.getCount(), transaction);
 		transaction.close();
-		return amount != addedStack.getCount();
+		return amount > 0;
 	}
 
 	public ItemStack addItem(ItemStack addedStack) {
 		if (!isItemCarvingBoard) {
 			Transaction transaction = Transaction.openRoot();
-			int inserted = inventory.insert(ItemResource.of(addedStack.copy()), 0, transaction);
+			int inserted = inventory.insert(ItemResource.of(addedStack.copy()), addedStack.getCount(), transaction);
 			transaction.commit();
 			return addedStack.copyWithCount(addedStack.count() - inserted);
 		}

@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.VanillinMeshEmitterManager;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.VanillinMeshEmitterManager;
 import com.mohistmc.mod.module.create.client.infrastructure.model.WrapperBlockStateModel;
 import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatBlock;
 import java.util.List;

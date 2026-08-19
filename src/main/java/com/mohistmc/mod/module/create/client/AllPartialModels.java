@@ -4,7 +4,7 @@ import com.mohistmc.mod.module.create.AllPackageStyles;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.fluids.FluidTransportBehaviour;
 import com.mohistmc.mod.module.create.content.kinetics.gantry.GantryShaftBlock;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageStyles.PackageStyle;

@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.catnip.gui.element;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.catnip.gui.render.*;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import java.util.function.BiConsumer;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.util.Mth;

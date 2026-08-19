@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.vanillin.visuals;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
-import com.mohistmc.mod.module.create.client.flywheel.api.material.Material;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.SimpleMaterial;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.part.InstanceTree;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.part.ModelTrees;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.flywheel.api.material.Material;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.material.SimpleMaterial;
+import com.mohistmc.mod.module.flywheel.lib.model.part.InstanceTree;
+import com.mohistmc.mod.module.flywheel.lib.model.part.ModelTrees;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import java.util.function.Consumer;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.blockentity.BellRenderer;

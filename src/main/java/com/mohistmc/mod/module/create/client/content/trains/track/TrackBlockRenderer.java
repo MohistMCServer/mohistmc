@@ -1,6 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.Affine;
+import com.mohistmc.mod.module.flywheel.lib.transform.Affine;
 import com.mohistmc.mod.module.create.content.trains.station.StationBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour.RenderedTrackOverlayType;
 import com.mohistmc.mod.module.create.infrastructure.component.BezierTrackPointLocation;

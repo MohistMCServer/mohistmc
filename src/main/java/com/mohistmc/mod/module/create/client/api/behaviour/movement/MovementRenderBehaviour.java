@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.api.behaviour.movement;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.content.contraptions.render.ActorVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import net.minecraft.client.gui.Font;

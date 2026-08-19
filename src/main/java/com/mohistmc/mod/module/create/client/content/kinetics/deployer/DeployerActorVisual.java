@@ -7,11 +7,11 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.content.contraptions.render.ActorVisual;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.base;
 
 import com.mohistmc.mod.module.create.catnip.theme.Color;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ICogWheel;

@@ -1,6 +1,6 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.FogUniforms;
+import com.mohistmc.mod.module.flywheel.backend.engine.uniform.FogUniforms;
 import java.nio.ByteBuffer;
 import net.minecraft.client.renderer.fog.FogRenderer;
 import org.joml.Vector4f;

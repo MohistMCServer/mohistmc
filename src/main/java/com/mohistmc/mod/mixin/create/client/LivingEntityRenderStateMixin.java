@@ -3,7 +3,7 @@ package com.mohistmc.mod.mixin.create.client;
 import com.mohistmc.mod.module.create.client.content.equipment.hats.HatState;
 import com.mohistmc.mod.module.create.client.content.trains.schedule.hat.TrainHatInfo;
 import com.mohistmc.mod.module.create.client.content.trains.schedule.hat.TrainHatInfoReloadListener;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.world.entity.Entity;
 import org.jspecify.annotations.NonNull;

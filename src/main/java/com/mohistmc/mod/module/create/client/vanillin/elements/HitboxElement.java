@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.vanillin.elements;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.Visual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.LineModelBuilder;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.util.SmartRecycler;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import com.mohistmc.mod.module.flywheel.api.visual.Visual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.LineModelBuilder;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.util.SmartRecycler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.debug.DebugScreenEntries;
 import net.minecraft.util.LightCoordsUtil;

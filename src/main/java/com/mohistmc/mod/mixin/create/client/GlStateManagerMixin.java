@@ -1,7 +1,7 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.backend.gl.GlStateTracker;
-import com.mohistmc.mod.module.create.client.flywheel.backend.gl.buffer.GlBufferType;
+import com.mohistmc.mod.module.flywheel.backend.gl.GlStateTracker;
+import com.mohistmc.mod.module.flywheel.backend.gl.buffer.GlBufferType;
 import com.mojang.blaze3d.opengl.GlStateManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

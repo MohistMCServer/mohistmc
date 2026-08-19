@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.vanillin.visuals;
 
 import com.mojang.math.Transformation;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractEntityVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.component.ShadowComponent;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractEntityVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.component.ShadowComponent;
 import com.mohistmc.mod.module.create.client.vanillin.item.ItemModels;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.util.Mth;

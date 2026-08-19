@@ -10,7 +10,7 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
 import com.mohistmc.mod.module.create.client.content.decoration.slidingDoor.SlidingDoorRenderer;
 import com.mohistmc.mod.module.create.client.content.trains.entity.TrainIcon;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;

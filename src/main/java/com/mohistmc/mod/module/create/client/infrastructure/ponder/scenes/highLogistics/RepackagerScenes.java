@@ -2,10 +2,10 @@ package com.mohistmc.mod.module.create.client.infrastructure.ponder.scenes.highL
 
 import com.mohistmc.mod.module.create.catnip.math.Pointing;
 import com.mohistmc.mod.module.create.client.foundation.ponder.CreateSceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.PonderPalette;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuilder;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.SceneBuildingUtil;
-import com.mohistmc.mod.module.create.client.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.ponder.api.PonderPalette;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuilder;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuildingUtil;
+import com.mohistmc.mod.module.ponder.api.scene.Selection;
 import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCrafterBlockEntity;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import java.util.List;

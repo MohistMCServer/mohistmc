@@ -11,7 +11,7 @@ import com.mohistmc.mod.module.create.client.content.logistics.depot.DepotRender
 import com.mohistmc.mod.module.create.client.content.logistics.depot.DepotRenderer.DepotOutputItemState;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderState;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.logistics.depot.DepotBehaviour;
 import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;

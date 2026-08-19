@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.content.fluids;
 
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
-import com.mohistmc.mod.module.create.client.flywheel.api.material.CardinalLightingMode;
-import com.mohistmc.mod.module.create.client.flywheel.api.material.Transparency;
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
-import com.mohistmc.mod.module.create.client.flywheel.api.vertex.MutableVertexList;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.SimpleMaterial;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.QuadMesh;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.SingleMeshModel;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.flywheel.api.material.CardinalLightingMode;
+import com.mohistmc.mod.module.flywheel.api.material.Transparency;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import com.mohistmc.mod.module.flywheel.api.vertex.MutableVertexList;
+import com.mohistmc.mod.module.flywheel.lib.material.SimpleMaterial;
+import com.mohistmc.mod.module.flywheel.lib.model.QuadMesh;
+import com.mohistmc.mod.module.flywheel.lib.model.SingleMeshModel;
+import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;

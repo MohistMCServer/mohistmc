@@ -5,7 +5,7 @@ import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.AllTrackRenders;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderState;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringRenderer;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringRenderer.FilterRenderState;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;

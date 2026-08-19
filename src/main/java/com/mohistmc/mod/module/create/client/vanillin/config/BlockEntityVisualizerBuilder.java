@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.vanillin.config;
 
-import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visualization.SimpleBlockEntityVisualizer.Factory;
+import com.mohistmc.mod.module.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
+import com.mohistmc.mod.module.flywheel.lib.visualization.SimpleBlockEntityVisualizer.Factory;
 import java.util.Objects;
 import java.util.function.Predicate;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

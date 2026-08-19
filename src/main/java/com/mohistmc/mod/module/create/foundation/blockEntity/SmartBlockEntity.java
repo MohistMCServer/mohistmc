@@ -9,7 +9,7 @@ import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.BehaviourType;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.CachedInventoryBehaviour;
 import com.mohistmc.mod.module.create.foundation.utility.IInteractionChecker;
-import com.mohistmc.mod.module.create.ponder.api.VirtualBlockEntity;
+import com.mohistmc.mod.module.ponder.api.VirtualBlockEntity;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectArrayMap;
 import java.util.ArrayList;
 import java.util.Collection;

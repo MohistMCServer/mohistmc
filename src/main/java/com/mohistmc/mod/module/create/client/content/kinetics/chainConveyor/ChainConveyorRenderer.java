@@ -11,7 +11,7 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.foundation.render.CreateRenderTypes;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;

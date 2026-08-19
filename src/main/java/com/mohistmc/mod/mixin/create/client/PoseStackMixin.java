@@ -1,7 +1,7 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.create.client.flywheel.impl.extension.PoseStackExtension;
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.PoseTransformStack;
+import com.mohistmc.mod.module.flywheel.impl.extension.PoseStackExtension;
+import com.mohistmc.mod.module.flywheel.lib.transform.PoseTransformStack;
 import com.mojang.blaze3d.vertex.PoseStack;
 import org.jspecify.annotations.NonNull;
 import org.spongepowered.asm.mixin.Mixin;

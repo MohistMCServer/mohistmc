@@ -1,0 +1,25 @@
+package com.mohistmc.mod.module.flywheel.lib.model;
+
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import java.util.List;
+import org.joml.Vector4fc;
+
+public class SimpleModel implements Model {
+    private final List<ConfiguredMesh> meshes;
+    private final Vector4fc boundingSphere;
+
+    public SimpleModel(List<ConfiguredMesh> meshes) {
+        this.meshes = meshes;
+        boundingSphere = ModelUtil.computeBoundingSphere(meshes);
+    }
+
+    @Override
+    public List<ConfiguredMesh> meshes() {
+        return meshes;
+    }
+
+    @Override
+    public Vector4fc boundingSphere() {
+        return boundingSphere;
+    }
+}

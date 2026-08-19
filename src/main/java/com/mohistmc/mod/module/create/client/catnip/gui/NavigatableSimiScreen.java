@@ -8,7 +8,7 @@ import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.BoxElement;
 import com.mohistmc.mod.module.create.client.catnip.gui.widget.BoxWidget;
 import com.mohistmc.mod.module.create.client.catnip.lang.Lang;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderGuiTextures;
+import com.mohistmc.mod.module.ponder.enums.PonderGuiTextures;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

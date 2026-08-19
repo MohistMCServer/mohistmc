@@ -10,7 +10,7 @@ import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache.Compartment;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import com.mohistmc.mod.module.create.client.content.kinetics.KineticDebugger;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.kinetics.base.IRotate;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;

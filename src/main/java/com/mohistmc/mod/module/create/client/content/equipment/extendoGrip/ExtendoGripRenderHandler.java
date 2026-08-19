@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.content.equipment.extendoGrip;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllItems;
-import com.mohistmc.mod.module.create.client.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;

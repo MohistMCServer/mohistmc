@@ -1,0 +1,25 @@
+package com.mohistmc.mod.module.flywheel.backend.engine.embed;
+
+import com.mohistmc.mod.module.flywheel.backend.compile.ContextShader;
+import com.mohistmc.mod.module.flywheel.backend.gl.shader.GlProgram;
+
+public class GlobalEnvironment implements Environment {
+    public static final GlobalEnvironment INSTANCE = new GlobalEnvironment();
+
+    private GlobalEnvironment() {
+    }
+
+    @Override
+    public ContextShader contextShader() {
+        return ContextShader.DEFAULT;
+    }
+
+    @Override
+    public void setupDraw(GlProgram drawProgram) {
+    }
+
+    @Override
+    public int matrixIndex() {
+        return 0;
+    }
+}

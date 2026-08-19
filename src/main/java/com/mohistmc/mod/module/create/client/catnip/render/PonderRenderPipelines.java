@@ -13,7 +13,7 @@ import net.minecraft.client.renderer.BindGroupLayouts;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 
-import static com.mohistmc.mod.module.create.client.ponder.Ponder.MOD_ID;
+import static com.mohistmc.mod.module.ponder.Ponder.MOD_ID;
 
 public class PonderRenderPipelines {
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")

@@ -3,7 +3,7 @@ package com.mohistmc.mod.mixin.create.client;
 import com.mohistmc.mod.module.create.client.catnip.render.EntityBlockLayer;
 import com.mohistmc.mod.module.create.client.catnip.render.EntityBlockLightLayer;
 import com.mohistmc.mod.module.create.client.catnip.render.EntityBlockMultipleLayer;
-import com.mohistmc.mod.module.create.client.flywheel.impl.event.RenderContextHolder;
+import com.mohistmc.mod.module.flywheel.impl.event.RenderContextHolder;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GameRenderer;

@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.vanillin.item;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.material.Transparency;
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Mesh;
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.Materials;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.SimpleMaterial;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.ModelUtil;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.SimpleModel;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BakedItemModelBufferer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ItemChunkLayerSortedListBuilder;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.MeshHelper;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.flywheel.api.material.Transparency;
+import com.mohistmc.mod.module.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import com.mohistmc.mod.module.flywheel.lib.material.Materials;
+import com.mohistmc.mod.module.flywheel.lib.material.SimpleMaterial;
+import com.mohistmc.mod.module.flywheel.lib.model.ModelUtil;
+import com.mohistmc.mod.module.flywheel.lib.model.SimpleModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.BakedItemModelBufferer;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.ItemChunkLayerSortedListBuilder;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.MeshHelper;
+import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
 import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
 import it.unimi.dsi.fastutil.Hash;
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenCustomHashMap;

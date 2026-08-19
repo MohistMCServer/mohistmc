@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.foundation.render;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.material.CardinalLightingMode;
-import com.mohistmc.mod.module.create.client.flywheel.api.material.LightShader;
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.LightShaders;
-import com.mohistmc.mod.module.create.client.flywheel.lib.material.SimpleMaterial;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.ModelUtil;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BakedModelBuilder;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.flywheel.api.material.CardinalLightingMode;
+import com.mohistmc.mod.module.flywheel.api.material.LightShader;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import com.mohistmc.mod.module.flywheel.lib.material.LightShaders;
+import com.mohistmc.mod.module.flywheel.lib.material.SimpleMaterial;
+import com.mohistmc.mod.module.flywheel.lib.model.ModelUtil;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.BakedModelBuilder;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
 
 public class SpecialModels {
     private static final RendererReloadCache<Key, Model> FLAT = new RendererReloadCache<>(it -> new BakedModelBuilder(it.partial.get()).materialFunc(

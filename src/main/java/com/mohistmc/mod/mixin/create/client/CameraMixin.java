@@ -3,7 +3,7 @@ package com.mohistmc.mod.mixin.create.client;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mohistmc.mod.module.create.client.content.trains.CameraDistanceModifier;
-import com.mohistmc.mod.module.create.client.flywheel.backend.engine.uniform.CameraInfoHolder;
+import com.mohistmc.mod.module.flywheel.backend.engine.uniform.CameraInfoHolder;
 import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import org.spongepowered.asm.mixin.Mixin;

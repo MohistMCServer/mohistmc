@@ -6,9 +6,9 @@ import com.mohistmc.mod.module.create.client.catnip.levelWrappers.SchematicRende
 import com.mohistmc.mod.module.create.client.catnip.render.EntityBlockSbbBuilder;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ModelConsumer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.ModelRenderHelper;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.ModelConsumer;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.ModelRenderHelper;
 import com.mohistmc.mod.module.create.client.foundation.render.BlockEntityRenderHelper;
 import com.mohistmc.mod.module.create.client.foundation.render.BlockEntityRenderHelper.BlockEntityListRenderState;
 import java.util.ArrayList;

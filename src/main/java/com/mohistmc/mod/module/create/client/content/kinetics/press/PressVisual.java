@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.press;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
 import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.ShaftVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.OrientedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.OrientedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.create.content.kinetics.press.MechanicalPressBlock;
 import com.mohistmc.mod.module.create.content.kinetics.press.MechanicalPressBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.press.PressingBehaviour;

@@ -2,7 +2,7 @@ package com.mohistmc.mod.mixin.create.client;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderKeybinds;
+import com.mohistmc.mod.module.ponder.enums.PonderKeybinds;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import org.spongepowered.asm.mixin.Mixin;

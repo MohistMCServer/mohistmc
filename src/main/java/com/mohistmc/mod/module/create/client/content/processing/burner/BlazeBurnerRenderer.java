@@ -11,7 +11,7 @@ import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock;
 import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;

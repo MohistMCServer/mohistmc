@@ -3,7 +3,7 @@ package com.mohistmc.mod.module.create.client.infrastructure.ponder;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
 import com.mohistmc.mod.module.create.client.Create;
-import com.mohistmc.mod.module.create.client.ponder.api.registration.PonderTagRegistrationHelper;
+import com.mohistmc.mod.module.ponder.api.registration.PonderTagRegistrationHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;

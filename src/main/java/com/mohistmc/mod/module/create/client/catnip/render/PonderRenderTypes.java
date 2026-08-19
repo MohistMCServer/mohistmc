@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.catnip.render;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mohistmc.mod.module.create.client.ponder.enums.PonderSpecialTextures;
+import com.mohistmc.mod.module.ponder.enums.PonderSpecialTextures;
 import java.util.function.BiFunction;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.rendertype.LayeringTransform;
@@ -13,7 +13,7 @@ import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Util;
 
-import static com.mohistmc.mod.module.create.client.ponder.Ponder.MOD_ID;
+import static com.mohistmc.mod.module.ponder.Ponder.MOD_ID;
 
 public class PonderRenderTypes {
     @SuppressWarnings("deprecation")

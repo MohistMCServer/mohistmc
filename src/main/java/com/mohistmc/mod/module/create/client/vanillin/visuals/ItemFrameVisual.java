@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.client.vanillin.visuals;
 
-import com.mohistmc.mod.module.create.client.flywheel.api.model.Model;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.EntityVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.BakedModelBuilder;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.RendererReloadCache;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
+import com.mohistmc.mod.module.flywheel.api.visual.EntityVisual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.BakedModelBuilder;
+import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.create.client.vanillin.item.ItemModels;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;

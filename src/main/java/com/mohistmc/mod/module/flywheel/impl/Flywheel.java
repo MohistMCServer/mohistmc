@@ -1,0 +1,27 @@
+package com.mohistmc.mod.module.flywheel.impl;
+
+import net.minecraft.commands.synchronization.ArgumentTypeInfos;
+
+public final class Flywheel {
+    public static final String MOD_ID = "flywheel";
+    private static final String version = "1.0.6+create";
+
+    public void onInitializeClient() {
+        setupImpl();
+        FlwImpl.init();
+        DebugEntryFlw.register();
+    }
+
+    private static void setupImpl() {
+        // We can't use ArgumentTypeRegistry from Fabric API here as it also registers to BuiltInRegistries.COMMAND_ARGUMENT_TYPE.
+        // We can't register anything to BuiltInRegistries.COMMAND_ARGUMENT_TYPE because it is a synced registry but
+        // Flywheel is a client-side only mod.
+        ArgumentTypeInfos.BY_CLASS.put(BackendArgument.class, BackendArgument.INFO);
+        ArgumentTypeInfos.BY_CLASS.put(DebugModeArgument.class, DebugModeArgument.INFO);
+        ArgumentTypeInfos.BY_CLASS.put(LightSmoothnessArgument.class, LightSmoothnessArgument.INFO);
+    }
+
+    public static String version() {
+        return version;
+    }
+}

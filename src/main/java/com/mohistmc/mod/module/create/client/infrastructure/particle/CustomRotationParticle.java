@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.infrastructure.particle;
 
 import com.mojang.math.Axis;
-import com.mohistmc.mod.module.create.client.flywheel.lib.util.ShadersModHelper;
+import com.mohistmc.mod.module.flywheel.lib.util.ShadersModHelper;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.SimpleAnimatedParticle;

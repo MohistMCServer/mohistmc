@@ -6,7 +6,7 @@ import com.mohistmc.mod.module.create.client.AllSpriteShifts;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
 import com.mohistmc.mod.module.create.content.contraptions.pulley.PulleyBlock;
 import com.mohistmc.mod.module.create.content.contraptions.pulley.PulleyBlockEntity;

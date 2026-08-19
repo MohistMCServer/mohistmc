@@ -2,7 +2,7 @@ package com.mohistmc.mod.module.create.client.content.contraptions.render;
 
 import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferCache;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;

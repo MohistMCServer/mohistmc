@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.catnip.event;
 
 import com.mohistmc.mod.module.create.client.catnip.lang.LangNumberFormat;
-import com.mohistmc.mod.module.create.client.ponder.Ponder;
+import com.mohistmc.mod.module.ponder.Ponder;
 import com.mohistmc.mod.module.create.foundation.utility.CreateResourceReloader;
 import net.minecraft.server.packs.resources.ResourceManager;
 

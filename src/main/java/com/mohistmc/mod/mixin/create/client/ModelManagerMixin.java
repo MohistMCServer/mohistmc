@@ -1,7 +1,7 @@
 package com.mohistmc.mod.mixin.create.client;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.baked.PartialModelEventHandler;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModelEventHandler;
 import java.util.Map;
 import net.minecraft.client.resources.model.BlockStateModelLoader;
 import net.minecraft.client.resources.model.ClientItemInfoLoader;

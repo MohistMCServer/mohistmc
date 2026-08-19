@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.content.equipment.toolbox;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instance;
-import com.mohistmc.mod.module.create.client.flywheel.api.instance.Instancer;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.DynamicVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visual.ShaderLightVisual;
-import com.mohistmc.mod.module.create.client.flywheel.api.visualization.VisualizationContext;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.InstanceTypes;
-import com.mohistmc.mod.module.create.client.flywheel.lib.instance.TransformedInstance;
-import com.mohistmc.mod.module.create.client.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.mohistmc.mod.module.create.client.flywheel.lib.visual.SimpleDynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.instance.Instance;
+import com.mohistmc.mod.module.flywheel.api.instance.Instancer;
+import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
+import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
+import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
+import com.mohistmc.mod.module.flywheel.lib.model.Models;
+import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
+import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlock;
 import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlockEntity;
 import java.util.function.Consumer;
