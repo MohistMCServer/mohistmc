@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.advancements.triggers.Criterion;
+import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -28,7 +29,7 @@ public class CuttingBoardRecipeBuilder implements RecipeBuilder
 	private final NonNullList<ChanceResult> results = NonNullList.createWithCapacity(4);
 	private final Ingredient ingredient;
 	private final Ingredient tool;
-	private SoundEvent soundEvent;
+	private Holder<SoundEvent> soundEvent;
 	@Nullable
 	private String namespace;
 	private CuttingRecipeFolder folder;
@@ -80,7 +81,7 @@ public class CuttingBoardRecipeBuilder implements RecipeBuilder
 	}
 
 	public CuttingBoardRecipeBuilder addSound(SoundEvent soundEvent) {
-		this.soundEvent = soundEvent;
+		this.soundEvent = BuiltInRegistries.SOUND_EVENT.wrapAsHolder(soundEvent);
 		return this;
 	}
 
@@ -146,8 +147,7 @@ public class CuttingBoardRecipeBuilder implements RecipeBuilder
 
 	@Override
 	public ResourceKey<Recipe<?>> defaultId() {
-		Identifier defaultLocation = getDefaultRecipeId(getResult());
-		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(this.namespace != null ? namespace : defaultLocation.getNamespace(), defaultLocation.getPath()).withPrefix(folder.getSerializedName() + "/"));
+		return ResourceKey.create(Registries.RECIPE, getDefaultRecipeId(getResult()));
 	}
 
 	@Override

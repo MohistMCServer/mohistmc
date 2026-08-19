@@ -6,7 +6,6 @@
     "minecraft:apple",
     "minecraft:sugar"
   ],
-  "recipe_book_tab": "drinks",
   "result": {
     "id": "mohistmc:apple_cider"
   }

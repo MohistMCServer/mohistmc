@@ -102,7 +102,7 @@ public class SkilletBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 	@Override
 	protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean isMoving) {
 			if (level.getBlockEntity(pos) instanceof SkilletBlockEntity skillet) {
-				ItemUtils.dropItems(level, pos, skillet.getTransferInventory());
+				ItemUtils.dropItems(level, pos, skillet.getInventory());
 			}
 
 			super.affectNeighborsAfterRemoval(state, level, pos, isMoving);

@@ -6,7 +6,6 @@
     "#c:foods/pasta",
     "mohistmc:tomato_sauce"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:pasta_with_mutton_chop"
   }

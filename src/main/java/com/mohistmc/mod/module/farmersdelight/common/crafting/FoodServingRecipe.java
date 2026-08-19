@@ -16,12 +16,11 @@ import net.minecraft.world.level.Level;
 
 public class FoodServingRecipe extends CustomRecipe
 {
-	public static final MapCodec<FoodServingRecipe> CODEC = MapCodec.unit(FoodServingRecipe::new);
-	public static final StreamCodec<RegistryFriendlyByteBuf, FoodServingRecipe> STREAM_CODEC = StreamCodec.of(
-			(buffer, recipe) -> {
-			},
-			buffer -> new FoodServingRecipe()
-	);
+	public static final FoodServingRecipe INSTANCE = new FoodServingRecipe();
+	public static final MapCodec<FoodServingRecipe> MAP_CODEC = MapCodec.unit(INSTANCE);
+	public static final StreamCodec<RegistryFriendlyByteBuf, FoodServingRecipe> STREAM_CODEC = StreamCodec.unit(INSTANCE);
+	public static final RecipeSerializer<FoodServingRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
+
 
 	@Override
 	public boolean matches(CraftingInput input, Level level) {
@@ -91,6 +90,6 @@ public class FoodServingRecipe extends CustomRecipe
 
 	@Override
 	public RecipeSerializer<? extends CustomRecipe> getSerializer() {
-		return ModRecipeSerializers.FOOD_SERVING.get();
+		return SERIALIZER;
 	}
 }

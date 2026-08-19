@@ -6,53 +6,49 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.jei.farmersdelight.FDRecipeTypes;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
 import com.mohistmc.mod.module.jei.farmersdelight.resource.DecompositionDummy;
+import com.mohistmc.mod.module.jei.renderer.IconRenderer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
-import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.ITooltipBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
-import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
+// Mirrors the Create JEI category style: no-arg constructor, no IGuiHelper.
 @ParametersAreNonnullByDefault
 public class DecompositionRecipeCategory implements IRecipeCategory<DecompositionDummy>
 {
 	public static final Identifier UID = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "decomposition");
 	private static final int slotSize = 22;
+	private static final Identifier BACKGROUND_IMAGE =
+			Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/decomposition.png");
 
 	private final Component title;
-	private final IDrawable background;
-	private final IDrawable slotIcon;
-	private final IDrawable icon;
 	private final ItemStack organicCompost;
 	private final ItemStack richSoil;
 
-	public DecompositionRecipeCategory(IGuiHelper helper) {
+	public DecompositionRecipeCategory() {
 		title = TextUtils.JEI("decomposition");
-		Identifier backgroundImage = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/decomposition.png");
-		background = helper.createDrawable(backgroundImage, 0, 0, 118, 80);
 		organicCompost = new ItemStack(ModBlocks.ORGANIC_COMPOST.get());
 		richSoil = new ItemStack(ModItems.RICH_SOIL.get());
-		icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, richSoil);
-		slotIcon = helper.createDrawable(backgroundImage, 119, 0, slotSize, slotSize);
 	}
 
 	@Override
-	public RecipeType<DecompositionDummy> getRecipeType() {
-		return FDRecipeTypes.DECOMPOSITION;
+	public IRecipeType<DecompositionDummy> getRecipeType() {
+		return JeiClientPlugin.DECOMPOSITION;
 	}
 
 	@Override
@@ -72,7 +68,7 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 
 	@Override
 	public IDrawable getIcon() {
-		return this.icon;
+		return new IconRenderer(richSoil);
 	}
 
 	@Override
@@ -87,8 +83,8 @@ public class DecompositionRecipeCategory implements IRecipeCategory<Decompositio
 
 	@Override
 	public void draw(DecompositionDummy recipe, IRecipeSlotsView recipeSlotsView, GuiGraphicsExtractor guiGraphics, double mouseX, double mouseY) {
-		background.draw(guiGraphics, 0, 0);
-		slotIcon.draw(guiGraphics, 63, 53);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_IMAGE, 0, 0, 0, 0, 118, 80, 256, 256);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_IMAGE, 63, 53, 119, 0, slotSize, slotSize, 256, 256);
 	}
 
 	@Override

@@ -9,7 +9,6 @@
     "#c:crops/beetroot",
     "#c:crops/beetroot"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "minecraft:beetroot_soup"
   }

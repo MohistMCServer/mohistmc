@@ -1,59 +1,56 @@
 package com.mohistmc.mod.module.jei.farmersdelight.category;
 
+import com.google.common.base.Suppliers;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
 import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.jei.farmersdelight.FDRecipeTypes;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.IconRenderer;
+import java.util.List;
+import java.util.function.Supplier;
 import javax.annotation.ParametersAreNonnullByDefault;
-import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.ITooltipBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.gui.drawable.IDrawableAnimated;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
-import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import mezz.jei.api.recipe.types.IRecipeType;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeMap;
 
+// Mirrors the Create JEI category style: no-arg constructor, no IGuiHelper.
+// The background and UI icons are drawn directly in draw() via GuiGraphics.blit.
 @ParametersAreNonnullByDefault
 public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<CookingPotRecipe>>
 {
-	protected final IDrawable heatIndicator;
-	protected final IDrawable timeIcon;
-	protected final IDrawable expIcon;
-	protected final IDrawableAnimated arrow;
+	private static final Identifier WIDGET_BACKGROUND =
+			Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/cooking_pot.png");
+	private static final Identifier INTERFACE_IMAGE =
+			Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/cooking_pot.png");
 	private final Component title;
-	private final IDrawable background;
-	private final IDrawable icon;
 
-	public CookingRecipeCategory(IGuiHelper helper) {
+	public CookingRecipeCategory() {
 		title = TextUtils.JEI("cooking");
-		Identifier widgetBackgroundImage = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/cooking_pot.png");
-		Identifier interfaceImage = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/cooking_pot.png");
-		background = helper.createDrawable(widgetBackgroundImage, 0, 0, 116, 56);
-		icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.COOKING_POT.get()));
-		heatIndicator = helper.createDrawable(interfaceImage, 176, 0, 17, 15);
-		timeIcon = helper.createDrawable(interfaceImage, 176, 32, 8, 11);
-		expIcon = helper.createDrawable(interfaceImage, 176, 43, 9, 9);
-		arrow = helper.drawableBuilder(interfaceImage, 176, 15, 24, 17)
-				.buildAnimated(200, IDrawableAnimated.StartDirection.LEFT, false);
 	}
 
 	@Override
-	public RecipeType<RecipeHolder<CookingPotRecipe>> getRecipeType() {
-		return FDRecipeTypes.COOKING;
+	public IRecipeType<RecipeHolder<CookingPotRecipe>> getRecipeType() {
+		return JeiClientPlugin.COOKING;
 	}
 
 	@Override
@@ -73,23 +70,27 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 
 	@Override
 	public IDrawable getIcon() {
-		return this.icon;
+		return new IconRenderer(ModItems.COOKING_POT.get());
 	}
 
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<CookingPotRecipe> holder, IFocusGroup focusGroup) {
 		CookingPotRecipe recipe = holder.value();
 		NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
-		ItemStack resultStack = RecipeUtils.getResultItem(recipe);
+		ItemStack resultStack = recipe.assemble(null); // This is usually very bad, but CookingPotRecipe always
+		// has the same output, so it's fine to pass null in this case.
 		ItemStack containerStack = recipe.getOutputContainer();
 
+		// Use Create's getStacks + addItemStacks instead of .add(Ingredient): the latter triggers
+		// Ingredient.display(), which crashes on CompoundIngredient in MC 26.2 (stream reused).
+		Supplier<ContextMap> context = Suppliers.memoize(CreateCategory::createIngredientContext);
 		int borderSlotSize = 18;
 		for (int row = 0; row < 2; ++row) {
 			for (int column = 0; column < 3; ++column) {
 				int inputIndex = row * 3 + column;
 				if (inputIndex < recipeIngredients.size()) {
 					builder.addSlot(RecipeIngredientRole.INPUT, (column * borderSlotSize) + 1, (row * borderSlotSize) + 1)
-							.add(recipeIngredients.get(inputIndex));
+							.addItemStacks(CreateCategory.getStacks(recipeIngredients.get(inputIndex), context));
 				}
 			}
 		}
@@ -105,12 +106,12 @@ public class CookingRecipeCategory implements IRecipeCategory<RecipeHolder<Cooki
 
 	@Override
 	public void draw(RecipeHolder<CookingPotRecipe> holder, IRecipeSlotsView recipeSlotsView, GuiGraphicsExtractor guiGraphics, double mouseX, double mouseY) {
-		background.draw(guiGraphics, 0, 0);
-		arrow.draw(guiGraphics, 60, 9);
-		heatIndicator.draw(guiGraphics, 18, 39);
-		timeIcon.draw(guiGraphics, 64, 2);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, WIDGET_BACKGROUND, 0, 0, 0, 0, 116, 56, 256, 256);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, INTERFACE_IMAGE, 60, 9, 176, 15, 24, 17, 256, 256);    // arrow
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, INTERFACE_IMAGE, 18, 39, 176, 0, 17, 15, 256, 256);    // heat indicator
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, INTERFACE_IMAGE, 64, 2, 176, 32, 8, 11, 256, 256);     // time icon
 		if (holder.value().getExperience() > 0) {
-			expIcon.draw(guiGraphics, 63, 21);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, INTERFACE_IMAGE, 63, 21, 176, 43, 9, 9, 256, 256); // experience icon
 		}
 	}
 

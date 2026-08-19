@@ -7,7 +7,6 @@ import com.mohistmc.mod.module.farmersdelight.client.gui.HUDOverlays;
 import com.mohistmc.mod.module.farmersdelight.client.particle.SparkleParticle;
 import com.mohistmc.mod.module.farmersdelight.client.particle.StarParticle;
 import com.mohistmc.mod.module.farmersdelight.client.particle.SteamParticle;
-import com.mohistmc.mod.module.farmersdelight.client.recipebook.RecipeCategories;
 import com.mohistmc.mod.module.farmersdelight.client.renderer.CanvasSignRenderer;
 import com.mohistmc.mod.module.farmersdelight.client.renderer.CuttingBoardRenderer;
 import com.mohistmc.mod.module.farmersdelight.client.renderer.DefaultStoveRenderer;
@@ -18,14 +17,12 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityType
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModEntityTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModMenuTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModParticleTypes;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeBookCategories;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
@@ -37,15 +34,6 @@ import net.neoforged.neoforge.client.event.RegisterSpecialModelRendererEvent;
 @EventBusSubscriber(modid = FarmersDelight.MODID, value = Dist.CLIENT)
 public class ClientSetupEvents
 {
-	public static void init(final FMLClientSetupEvent event) {
-	}
-
-	public static void registerRecipeBookSearchCategories(RegisterRecipeBookSearchCategoriesEvent event) {
-		event.register(RecipeCategories.COOKING_SEARCH,
-				ModRecipeBookCategories.COOKING_MEALS.get(),
-				ModRecipeBookCategories.COOKING_DRINKS.get(),
-				ModRecipeBookCategories.COOKING_MISC.get());
-	}
 
 	@SubscribeEvent
 	public static void registerCustomTooltipRenderers(RegisterClientTooltipComponentFactoriesEvent event) {

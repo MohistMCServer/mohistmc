@@ -3,7 +3,6 @@ package com.mohistmc.mod.module.farmersdelight.common.block.entity;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.block.BasketBlock;
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory.BasketInvWrapper;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory.ItemHandlerResourceHandler;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.function.BooleanSupplier;
@@ -38,13 +37,11 @@ public class BasketBlockEntity extends RandomizableContainerBlockEntity implemen
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(Capabilities.Item.BLOCK, ModBlockEntityTypes.BASKET.get(), (basket, side) ->
-				new ItemHandlerResourceHandler(new BasketInvWrapper(basket), slot -> true, slot -> true, originalState -> {
-					if (originalState.stream().allMatch(ItemStack::isEmpty) && !basket.isEmpty() && !basket.isOnCustomCooldown()) {
-						basket.setCooldown(8);
-					}
-					basket.setChanged();
-				}));
+		event.registerBlockEntity(
+				Capabilities.Item.BLOCK,
+				ModBlockEntityTypes.BASKET.get(),
+				(blockEntity, _) -> new BasketInvWrapper(blockEntity)
+		);
 	}
 
 	@Override

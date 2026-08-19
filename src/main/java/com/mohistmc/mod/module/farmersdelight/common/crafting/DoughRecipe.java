@@ -16,12 +16,10 @@ import net.neoforged.neoforge.common.Tags;
 
 public class DoughRecipe extends CustomRecipe
 {
-	public static final MapCodec<DoughRecipe> CODEC = MapCodec.unit(DoughRecipe::new);
-	public static final StreamCodec<RegistryFriendlyByteBuf, DoughRecipe> STREAM_CODEC = StreamCodec.of(
-			(buffer, recipe) -> {
-			},
-			buffer -> new DoughRecipe()
-	);
+	public static final DoughRecipe INSTANCE = new DoughRecipe();
+	public static final MapCodec<DoughRecipe> MAP_CODEC = MapCodec.unit(INSTANCE);
+	public static final StreamCodec<RegistryFriendlyByteBuf, DoughRecipe> STREAM_CODEC = StreamCodec.unit(INSTANCE);
+	public static final RecipeSerializer<DoughRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
 
 	@Override
 	public boolean matches(CraftingInput container, Level level) {
@@ -71,6 +69,6 @@ public class DoughRecipe extends CustomRecipe
 
 	@Override
 	public RecipeSerializer<? extends CustomRecipe> getSerializer() {
-		return ModRecipeSerializers.DOUGH.get();
+		return SERIALIZER;
 	}
 }

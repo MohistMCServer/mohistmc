@@ -1,78 +1,53 @@
 package com.mohistmc.mod.module.jei.farmersdelight;
 
-import com.google.common.collect.Lists;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
-import com.mojang.serialization.JsonOps;
-import java.io.IOException;
+import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
 import java.util.List;
 import java.util.Optional;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.packs.resources.Resource;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.RecipeMap;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.level.ItemLike;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RecipesReceivedEvent;
+import org.jspecify.annotations.Nullable;
 
-// Reads Farmers Delight recipes directly from the client recipe manager (parsing the mod's own
-// recipe JSONs). This is the reliable data source for custom recipe types like farmersdelight:cooking,
-// which are not surfaced through JEI's server-synced RecipeMap.
+/**
+ * @author Mgazul
+ * @date 2026/8/19 07:58
+ */
+@EventBusSubscriber
 public class FDRecipes
 {
-	private static final FileToIdConverter RECIPE_LISTER = FileToIdConverter.registry(Registries.RECIPE);
-	private final ResourceManager resourceManager;
-	private final Optional<HolderLookup.Provider> registries;
+    private static @Nullable RecipeMap recipeMap;
 
-	public FDRecipes() {
-		Minecraft minecraft = Minecraft.getInstance();
-		ClientLevel level = minecraft.level;
-		this.resourceManager = minecraft.getResourceManager();
-		this.registries = level != null ? Optional.of(level.registryAccess()) : Optional.empty();
-	}
+    public FDRecipes() {
+        if (recipeMap == null) {
+            throw new NullPointerException("Minecraft level must not be null.");
+        }
+    }
 
-	public List<RecipeHolder<CookingPotRecipe>> getCookingPotRecipes() {
-		return getRecipes(ModRecipeTypes.COOKING.get(), CookingPotRecipe.class);
-	}
+    @SubscribeEvent
+    public static void receiveRecipes(RecipesReceivedEvent event) {
+        FDRecipes.recipeMap = event.getRecipeMap();
+    }
 
-	public List<RecipeHolder<CuttingBoardRecipe>> getCuttingBoardRecipes() {
-		return getRecipes(ModRecipeTypes.CUTTING.get(), CuttingBoardRecipe.class);
-	}
+    public List<RecipeHolder<CookingPotRecipe>> getCookingPotRecipes() {
+        return recipeMap.byType(ModRecipeTypes.COOKING.get()).stream().toList();
+    }
 
-	private <T extends Recipe<?>> List<RecipeHolder<T>> getRecipes(RecipeType<T> recipeType, Class<T> recipeClass) {
-		if (this.registries.isEmpty()) {
-			FarmersDelight.LOGGER.debug("Skipping JEI recipe population for {} before client registry access is available.", recipeType);
-			return List.of();
-		}
-
-		List<RecipeHolder<T>> recipes = Lists.newArrayList();
-		for (var entry : RECIPE_LISTER.listMatchingResourcesFromNamespace(this.resourceManager, FarmersDelight.MODID).entrySet()) {
-			ResourceKey<Recipe<?>> id = ResourceKey.create(Registries.RECIPE, RECIPE_LISTER.fileToId(entry.getKey()));
-			readRecipe(id, entry.getValue()).ifPresent(recipe -> {
-				if (recipeClass.isInstance(recipe) && recipe.getType() == recipeType) {
-					recipes.add(new RecipeHolder<>(id, recipeClass.cast(recipe)));
-				}
-			});
-		}
-		return recipes;
-	}
-
-	private Optional<Recipe<?>> readRecipe(ResourceKey<Recipe<?>> id, Resource resource) {
-		try (var reader = resource.openAsReader()) {
-			JsonElement json = JsonParser.parseReader(reader);
-			return Recipe.CODEC.parse(this.registries.get().createSerializationContext(JsonOps.INSTANCE), json)
-					.resultOrPartial(message -> FarmersDelight.LOGGER.debug("Skipping JEI recipe {}: {}", id.identifier(), message));
-		} catch (IOException | RuntimeException ex) {
-			FarmersDelight.LOGGER.debug("Skipping JEI recipe {} from {}.", id.identifier(), resource.sourcePackId());
-			return Optional.empty();
-		}
-	}
+    public List<RecipeHolder<CuttingBoardRecipe>> getCuttingBoardRecipes() {
+        return recipeMap.byType(ModRecipeTypes.CUTTING.get()).stream().toList();
+    }
 }

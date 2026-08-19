@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.data.builder;
 
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,6 +15,7 @@ import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.advancements.triggers.Criterion;
 import net.minecraft.advancements.triggers.InventoryChangeTrigger;
 import net.minecraft.advancements.triggers.RecipeUnlockedTrigger;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -35,44 +35,40 @@ import net.minecraft.world.level.ItemLike;
 @ParametersAreNonnullByDefault
 public class CookingPotRecipeBuilder implements RecipeBuilder
 {
-	private CookingPotRecipeBookTab tab;
+	private final HolderGetter<Item> items;
 	private final NonNullList<Ingredient> ingredients = NonNullList.create();
 	private final Item result;
 	private final ItemStackTemplate resultStack;
 	private final int cookingTime;
 	private final float experience;
-	private final Optional<ItemStackTemplate> container;
+	private final ItemStackTemplate container;
 	private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 	@Nullable
 	private String namespace;
 
-	public CookingPotRecipeBuilder(ItemLike result, int count, int cookingTime, float experience, @Nullable ItemLike container) {
-		this(result.asItem(), count, cookingTime, experience, container);
+	public CookingPotRecipeBuilder(HolderGetter<Item> items, ItemLike result, int count, int cookingTime, float experience, @Nullable ItemLike container) {
+		this(items, new ItemStackTemplate(result.asItem(), count), cookingTime, experience, container);
 	}
 
-	public CookingPotRecipeBuilder(ItemStack resultIn, int cookingTime, float experience, @Nullable ItemLike container) {
-		this(resultIn.getItem(), resultIn.getCount(), cookingTime, experience, container);
-	}
-
-	public CookingPotRecipeBuilder(Item resultIn, int count, int cookingTime, float experience, @Nullable ItemLike container) {
-		this.result = resultIn;
-		this.resultStack = new ItemStackTemplate(resultIn, count);
+	public CookingPotRecipeBuilder(HolderGetter<Item> items, ItemStackTemplate result, int cookingTime, float experience, @Nullable ItemLike container) {
+		this.items = items;
+		this.result = result.item().value();
+		this.resultStack = result;
 		this.cookingTime = cookingTime;
 		this.experience = experience;
-		this.container = container != null ? Optional.of(new ItemStackTemplate(container.asItem())) : Optional.empty();
-		this.tab = null;
+		this.container = container != null ? new ItemStackTemplate(container.asItem()) : null;
 	}
 
-	public static CookingPotRecipeBuilder cookingPotRecipe(ItemLike mainResult, int count, int cookingTime, float experience) {
-		return new CookingPotRecipeBuilder(mainResult, count, cookingTime, experience, null);
+	public static CookingPotRecipeBuilder cookingPotRecipe(HolderGetter<Item> items, ItemLike mainResult, int count, int cookingTime, float experience) {
+		return new CookingPotRecipeBuilder(items, mainResult, count, cookingTime, experience, null);
 	}
 
-	public static CookingPotRecipeBuilder cookingPotRecipe(ItemLike mainResult, int count, int cookingTime, float experience, ItemLike container) {
-		return new CookingPotRecipeBuilder(mainResult, count, cookingTime, experience, container);
+	public static CookingPotRecipeBuilder cookingPotRecipe(HolderGetter<Item> items, ItemLike mainResult, int count, int cookingTime, float experience, ItemLike container) {
+		return new CookingPotRecipeBuilder(items, mainResult, count, cookingTime, experience, container);
 	}
 
-	public CookingPotRecipeBuilder addIngredient(TagKey<Item> tagIn) {
-		return addIngredient(Ingredient.of(HolderSet.emptyNamed(BuiltInRegistries.ITEM, tagIn)));
+	public CookingPotRecipeBuilder addIngredient(TagKey<Item> tag) {
+		return addIngredient(Ingredient.of(items.getOrThrow(tag)));
 	}
 
 	public CookingPotRecipeBuilder addIngredient(ItemLike itemIn) {
@@ -98,13 +94,17 @@ public class CookingPotRecipeBuilder implements RecipeBuilder
 	}
 
 	@Override
-	public RecipeBuilder group(@org.jetbrains.annotations.Nullable String p_176495_) {
+	public RecipeBuilder group(@Nullable String p_176495_) {
 		return this;
 	}
 
-	public CookingPotRecipeBuilder setRecipeBookTab(CookingPotRecipeBookTab tab) {
-		this.tab = tab;
-		return this;
+	@Override
+	public ResourceKey<Recipe<?>> defaultId() {
+		return RecipeBuilder.getDefaultRecipeId(resultStack);
+	}
+
+	public Item getResult() {
+		return this.result;
 	}
 
 	@Override
@@ -117,8 +117,8 @@ public class CookingPotRecipeBuilder implements RecipeBuilder
 		return unlockedBy(criterionName, InventoryChangeTrigger.TriggerInstance.hasItems(items));
 	}
 
-	public CookingPotRecipeBuilder unlockedByAnyIngredient(ItemLike... items) {
-		this.criteria.put("has_any_ingredient", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, items).build()));
+	public CookingPotRecipeBuilder unlockedByAnyIngredient(ItemLike... itemCollection) {
+		this.criteria.put("has_any_ingredient", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(items, itemCollection).build()));
 		return this;
 	}
 
@@ -143,44 +143,42 @@ public class CookingPotRecipeBuilder implements RecipeBuilder
 
 	public void save(RecipeOutput output) {
 		Identifier defaultLocation = getDefaultRecipeId(result);
-		save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(this.namespace != null ? namespace : defaultLocation.getNamespace(), defaultLocation.getPath()).withPrefix("cooking/")));
+		save(output, Identifier.fromNamespaceAndPath(this.namespace != null ? namespace : defaultLocation.getNamespace(), defaultLocation.getPath()).withPrefix("cooking/"));
 	}
 
-	public void save(RecipeOutput output, Identifier id) {
+	public void build(RecipeOutput outputIn, String save) {
+		Identifier resourcelocation = BuiltInRegistries.ITEM.getKey(result);
+		if ((Identifier.parse(save)).equals(resourcelocation)) {
+			throw new IllegalStateException("Cooking Recipe " + save + " should remove its 'save' argument");
+		} else {
+			save(outputIn, Identifier.parse(save));
+		}
+	}
+
+	public void build(RecipeOutput output, Identifier id) {
 		save(output, ResourceKey.create(Registries.RECIPE, id));
 	}
 
-//	public void build(RecipeOutput outputIn, String save) {
-//		Identifier Identifier = BuiltInRegistries.ITEM.getKey(result);
-//		if ((Identifier.parse(save)).equals(Identifier)) {
-//			throw new IllegalStateException("Cooking Recipe " + save + " should remove its 'save' argument");
-//		} else {
-//			save(outputIn, Identifier.parse(save));
-//		}
-//	}
 
-	@Override
-	public ResourceKey<Recipe<?>> defaultId() {
-		Identifier defaultLocation = getDefaultRecipeId(result);
-		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(this.namespace != null ? namespace : defaultLocation.getNamespace(), defaultLocation.getPath()).withPrefix("cooking/"));
+	public void save(RecipeOutput output, Identifier id) {
+		build(output, id);
 	}
 
 	@Override
-	public void save(RecipeOutput output, ResourceKey<Recipe<?>> id) {
+	public void save(RecipeOutput output, ResourceKey<Recipe<?>> resourceKey) {
 		Advancement.Builder advancementBuilder = output.advancement()
-				.addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
-				.rewards(AdvancementRewards.Builder.recipe(id))
+				.addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceKey))
+				.rewards(AdvancementRewards.Builder.recipe(resourceKey))
 				.requirements(AdvancementRequirements.Strategy.OR);
 		this.criteria.forEach(advancementBuilder::addCriterion);
 		CookingPotRecipe recipe = new CookingPotRecipe(
 				"",
-				this.tab,
 				this.ingredients,
 				this.resultStack,
-				this.container,
+				Optional.ofNullable(this.container),
 				this.experience,
 				this.cookingTime
 		);
-		output.accept(id, recipe, advancementBuilder.build(id.identifier().withPrefix("recipes/")));
+		output.accept(resourceKey, recipe, advancementBuilder.build(resourceKey.identifier().withPrefix("recipes/")));
 	}
 }

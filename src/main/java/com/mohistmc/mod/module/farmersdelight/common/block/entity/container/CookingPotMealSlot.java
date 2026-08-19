@@ -3,14 +3,14 @@ package com.mohistmc.mod.module.farmersdelight.common.block.entity.container;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemStacksResourceHandler;
+import net.neoforged.neoforge.transfer.item.ResourceHandlerSlot;
 
 @ParametersAreNonnullByDefault
-public class CookingPotMealSlot extends SlotItemHandler
+public class CookingPotMealSlot extends ResourceHandlerSlot
 {
-	public CookingPotMealSlot(IItemHandler inventoryIn, int index, int xPosition, int yPosition) {
-		super(inventoryIn, index, xPosition, yPosition);
+	public CookingPotMealSlot(ItemStacksResourceHandler inventoryIn, int index, int xPosition, int yPosition) {
+		super(inventoryIn, inventoryIn::set, index, xPosition, yPosition);
 	}
 
 	@Override

@@ -8,6 +8,8 @@ import com.mohistmc.mod.module.farmersdelight.common.tag.CommonTags;
 import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
 import com.mohistmc.mod.module.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
@@ -26,7 +28,6 @@ import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 public class CuttingRecipes
 {
-	private static HolderGetter<Item> items;
 	public static Ingredient KNIVES;
 	public static Ingredient PICKAXES;
 	public static Ingredient AXES;
@@ -35,8 +36,7 @@ public class CuttingRecipes
 	public static Ingredient HOES;
 	public static Ingredient SHEARS;
 
-	public static void register(RecipeOutput output, HolderGetter<Item> itemLookup) {
-		items = itemLookup;
+	public static void register(HolderLookup.Provider registries, RecipeOutput output) {
 		KNIVES = matchesTool(KnifeItem.KNIFE_DIG, CommonTags.Items.TOOLS_KNIFE);
 		PICKAXES = matchesTool(ItemAbility.get("pickaxe_dig"), ItemTags.PICKAXES);
 		AXES = matchesTool(ItemAbility.get("axe_dig"), ItemTags.AXES);
@@ -122,7 +122,7 @@ public class CuttingRecipes
 	}
 
 	private static void cuttingFoods(RecipeOutput output) {
-		CuttingBoardRecipeBuilder.cuttingRecipe(ingredient(CommonTags.Items.FOODS_DOUGH), KNIVES, ModItems.RAW_PASTA.get(), 1)
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(BuiltInRegistries.ITEM.getOrThrow(CommonTags.Items.FOODS_DOUGH)), KNIVES, ModItems.RAW_PASTA.get(), 1)
 				.save(output, RecipeUtils.FDLocation("cutting/tag_dough"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ModItems.KELP_ROLL.get()), KNIVES, ModItems.KELP_ROLL_SLICE.get(), 3)
 				.saveToFD(output);
@@ -377,11 +377,11 @@ public class CuttingRecipes
 	}
 
 	private static Ingredient matchesTool(ItemAbility toolAction, TagKey<Item> fallbackTag) {
-		return CompoundIngredient.of(new ItemAbilityIngredient(toolAction).toVanilla(), ingredient(fallbackTag));
+		return CompoundIngredient.of(new ItemAbilityIngredient(toolAction).toVanilla(), matchesTool(fallbackTag));
 	}
 
-	private static Ingredient ingredient(TagKey<Item> tag) {
-		return Ingredient.of(items.getOrThrow(tag));
+	private static Ingredient matchesTool(TagKey<Item> fallbackTag) {
+		return Ingredient.of(BuiltInRegistries.ITEM.getOrThrow(fallbackTag));
 	}
 
 	private static Identifier salvagingRecipe(String name) {

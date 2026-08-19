@@ -1,52 +1,52 @@
 package com.mohistmc.mod.module.jei.farmersdelight.category;
 
+import com.google.common.base.Suppliers;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.ingredient.ChanceResult;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.jei.farmersdelight.FDRecipeTypes;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.IconRenderer;
+import java.util.List;
+import java.util.function.Supplier;
 import javax.annotation.ParametersAreNonnullByDefault;
-import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
-import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import mezz.jei.api.recipe.types.IRecipeType;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeMap;
 
+// Mirrors the Create JEI category style: no-arg constructor, no IGuiHelper.
 @ParametersAreNonnullByDefault
 public class CuttingRecipeCategory implements IRecipeCategory<RecipeHolder<CuttingBoardRecipe>>
 {
 	public static final int OUTPUT_GRID_X = 76;
 	public static final int OUTPUT_GRID_Y = 10;
-	private final IDrawable slot;
-	private final IDrawable slotChance;
+	private static final Identifier BACKGROUND_IMAGE =
+			Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/cutting_board.png");
 	private final Component title;
-	private final IDrawable background;
-	private final IDrawable icon;
 
-	public CuttingRecipeCategory(IGuiHelper helper) {
+	public CuttingRecipeCategory() {
 		title = TextUtils.JEI("cutting");
-		Identifier backgroundImage = Identifier.fromNamespaceAndPath(FarmersDelight.MODID, "textures/gui/jei/cutting_board.png");
-		slot = helper.createDrawable(backgroundImage, 0, 58, 18, 18);
-		slotChance = helper.createDrawable(backgroundImage, 18, 58, 18, 18);
-		background = helper.createDrawable(backgroundImage, 0, 0, 117, 57);
-		icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.CUTTING_BOARD.get()));
 	}
 
 	@Override
-	public RecipeType<RecipeHolder<CuttingBoardRecipe>> getRecipeType() {
-		return FDRecipeTypes.CUTTING;
+	public IRecipeType<RecipeHolder<CuttingBoardRecipe>> getRecipeType() {
+		return JeiClientPlugin.CUTTING;
 	}
 
 	@Override
@@ -66,14 +66,19 @@ public class CuttingRecipeCategory implements IRecipeCategory<RecipeHolder<Cutti
 
 	@Override
 	public IDrawable getIcon() {
-		return this.icon;
+		return new IconRenderer(ModItems.CUTTING_BOARD.get());
 	}
 
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<CuttingBoardRecipe> holder, IFocusGroup focusGroup) {
 		CuttingBoardRecipe recipe = holder.value();
-		builder.addSlot(RecipeIngredientRole.INPUT, 16, 8).add(recipe.getTool());
-		builder.addSlot(RecipeIngredientRole.INPUT, 16, 27).add(recipe.getIngredients().get(0));
+		// Use Create's getStacks + addItemStacks instead of .add(Ingredient): the latter triggers
+		// Ingredient.display(), which crashes on CompoundIngredient in MC 26.2 (stream reused).
+		Supplier<ContextMap> context = Suppliers.memoize(CreateCategory::createIngredientContext);
+		builder.addSlot(RecipeIngredientRole.INPUT, 16, 8)
+				.addItemStacks(CreateCategory.getStacks(recipe.getTool(), context));
+		builder.addSlot(RecipeIngredientRole.INPUT, 16, 27)
+				.addItemStacks(CreateCategory.getStacks(recipe.getIngredients().get(0), context));
 
 		NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
 
@@ -100,7 +105,7 @@ public class CuttingRecipeCategory implements IRecipeCategory<RecipeHolder<Cutti
 
 	@Override
 	public void draw(RecipeHolder<CuttingBoardRecipe> holder, IRecipeSlotsView recipeSlotsView, GuiGraphicsExtractor guiGraphics, double mouseX, double mouseY) {
-		background.draw(guiGraphics, 0, 0);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_IMAGE, 0, 0, 0, 0, 117, 57, 256, 256);
 		CuttingBoardRecipe recipe = holder.value();
 		NonNullList<ChanceResult> recipeOutputs = recipe.getRollableResults();
 
@@ -113,9 +118,9 @@ public class CuttingRecipeCategory implements IRecipeCategory<RecipeHolder<Cutti
 			int yOffset = centerY + ((i / 2) * 19);
 
 			if (recipeOutputs.get(i).chance() != 1) {
-				slotChance.draw(guiGraphics, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_IMAGE, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset, 18, 58, 18, 18, 256, 256);
 			} else {
-				slot.draw(guiGraphics, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_IMAGE, OUTPUT_GRID_X + xOffset, OUTPUT_GRID_Y + yOffset, 0, 58, 18, 18, 256, 256);
 			}
 		}
 	}

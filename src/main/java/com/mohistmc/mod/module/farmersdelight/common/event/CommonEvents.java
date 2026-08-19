@@ -4,6 +4,7 @@ import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import net.neoforged.neoforge.event.level.AlterGroundEvent;
 
@@ -28,6 +30,11 @@ public class CommonEvents
 			}
 			return originalProvider.getState(level, random, pos);
 		});
+	}
+
+	@SubscribeEvent
+	public static void sendSyncedRecipes(OnDatapackSyncEvent event) {
+		event.sendRecipes(ModRecipeTypes.COOKING.get(), ModRecipeTypes.CUTTING.get());
 	}
 
 	@SubscribeEvent

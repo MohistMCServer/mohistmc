@@ -27,9 +27,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import net.neoforged.neoforge.transfer.item.ItemStacksResourceHandler;
+import net.neoforged.neoforge.transfer.item.ResourceHandlerSlot;
 
 public class CookingPotMenu extends RecipeBookMenu
 {
@@ -40,7 +39,7 @@ public class CookingPotMenu extends RecipeBookMenu
 	public static final int INDEX_OUTPUT = 8;
 
 	public final CookingPotBlockEntity blockEntity;
-	public final ItemStackHandler inventory;
+	public final ItemStacksResourceHandler inventory;
 	private final ContainerData cookingPotData;
 	private final ContainerLevelAccess canInteractWithCallable;
 	protected final Level level;
@@ -65,7 +64,7 @@ public class CookingPotMenu extends RecipeBookMenu
 		int borderSlotSize = 18;
 		for (int row = 0; row < 2; ++row) {
 			for (int column = 0; column < 3; ++column) {
-				this.addSlot(new SlotItemHandler(inventory, (row * 3) + column,
+				this.addSlot(new ResourceHandlerSlot(inventory, inventory::set, (row * 3) + column,
 						inputStartX + (column * borderSlotSize),
 						inputStartY + (row * borderSlotSize)));
 			}
@@ -75,7 +74,7 @@ public class CookingPotMenu extends RecipeBookMenu
 		this.addSlot(new CookingPotMealSlot(inventory, 6, 124, 26));
 
 		// Bowl Input
-		this.addSlot(new SlotItemHandler(inventory, 7, 92, 55)
+		this.addSlot(new ResourceHandlerSlot(inventory, inventory::set, 7, 92, 55)
 		{
 			@Override
 			public Identifier getNoItemIcon() {
@@ -170,17 +169,8 @@ public class CookingPotMenu extends RecipeBookMenu
 
 	@Override
 	public void fillCraftSlotsStackedContents(StackedItemContents helper) {
-		for (int i = 0; i < INDEX_MEAL; i++) {
-			ItemStack stack = inventory.getStackInSlot(i);
-			if (!stack.isEmpty()) {
-				helper.accountStack(stack);
-			}
-		}
-	}
-
-	public void clearCraftingContent() {
-		for (int i = 0; i < 6; i++) {
-			this.inventory.setStackInSlot(i, ItemStack.EMPTY);
+		for (int i = 0; i < inventory.size(); i++) {
+			helper.accountSimpleStack(inventory.getResource(i).toStack(inventory.getAmountAsInt(i)));
 		}
 	}
 
@@ -207,25 +197,9 @@ public class CookingPotMenu extends RecipeBookMenu
 
 	@Override
 	public PostPlaceAction handlePlacement(boolean useMaxItems, boolean isCreative, RecipeHolder<?> recipe, ServerLevel level, Inventory inventory) {
-		RecipeHolder<CookingPotRecipe> typedRecipe = (RecipeHolder<CookingPotRecipe>) recipe;
-		List<Slot> inputSlots = this.slots.subList(0, INDEX_MEAL);
-		return ServerPlaceRecipe.placeRecipe(new ServerPlaceRecipe.CraftingMenuAccess<>()
-		{
-			@Override
-			public void fillCraftSlotsStackedContents(StackedItemContents stackedContents) {
-				CookingPotMenu.this.fillCraftSlotsStackedContents(stackedContents);
-			}
-
-			@Override
-			public void clearCraftingContent() {
-				CookingPotMenu.this.clearCraftingContent();
-			}
-
-			@Override
-			public boolean recipeMatches(RecipeHolder<CookingPotRecipe> recipe) {
-				return recipe.value().matches(new RecipeWrapper(CookingPotMenu.this.inventory), level);
-			}
-		}, getGridWidth(), getGridHeight(), inputSlots, inputSlots, inventory, typedRecipe, useMaxItems, isCreative);
+		//TODO this shouldn't be null but I'm handling it later
+		//     worth referencing the implementation in AbstractCraftingMenu, i think.
+		return null;
 	}
 
 	public boolean shouldMoveToInventory(int slot) {

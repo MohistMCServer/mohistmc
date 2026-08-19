@@ -7,7 +7,6 @@
     "#c:eggs",
     "#c:crops/tomato"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:baked_cod_stew"
   }

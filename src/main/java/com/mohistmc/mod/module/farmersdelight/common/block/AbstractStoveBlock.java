@@ -189,7 +189,7 @@ public abstract class AbstractStoveBlock extends BaseEntityBlock
 	@Override
 	public void destroy(LevelAccessor level, BlockPos pos, BlockState state) {
 		if (level.getBlockEntity(pos) instanceof AbstractStoveBlockEntity stoveEntity) {
-			ItemUtils.dropItems((Level) level, pos, stoveEntity.getTransferItems());
+			ItemUtils.dropItems((Level) level, pos, stoveEntity.getItems());
 		}
 		super.destroy(level, pos, state);
 	}

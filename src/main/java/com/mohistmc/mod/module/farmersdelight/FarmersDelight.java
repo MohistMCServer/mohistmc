@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight;
 
 import com.mohistmc.mod.MohistMC;
-import com.mohistmc.mod.module.farmersdelight.client.event.ClientSetupEvents;
 import com.mohistmc.mod.module.farmersdelight.common.CommonSetup;
 import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModAdvancements;
@@ -21,7 +20,6 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModLootModifiers;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModMenuTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModParticleTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModPlacementModifiers;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeBookCategories;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeSerializers;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
@@ -51,8 +49,6 @@ public class FarmersDelight
 	public FarmersDelight(IEventBus modEventBus, ModContainer modContainer) {
 		modEventBus.addListener(CommonSetup::init);
 		if (FMLEnvironment.getDist() == Dist.CLIENT) {
-			modEventBus.addListener(ClientSetupEvents::init);
-			modEventBus.addListener(ClientSetupEvents::registerRecipeBookSearchCategories);
 			modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 		}
 
@@ -71,7 +67,6 @@ public class FarmersDelight
 		ModMenuTypes.MENU_TYPES.register(modEventBus);
 		ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
 		ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
-		ModRecipeBookCategories.RECIPE_BOOK_CATEGORIES.register(modEventBus);
 		ModBiomeFeatures.FEATURES.register(modEventBus);
 		ModCreativeTabs.CREATIVE_TABS.register(modEventBus);
 		ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);

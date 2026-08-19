@@ -49,7 +49,9 @@ public abstract class CreateCategory<T> implements IRecipeCategory<T> {
     }
 
     public static List<ItemStack> getStacks(Ingredient ingredient, Supplier<ContextMap> context) {
-        return ingredient.values.stream().map(ItemStack::new).toList();
+        // Use items() (not values.stream()): custom ingredients (NeoForge compound/difference)
+        // hold an empty HolderSet in `values`, and items() expands them to their concrete items.
+        return ingredient.items().map(ItemStack::new).toList();
     }
 
     public static List<List<ItemStack>> condenseIngredients(List<Ingredient> ingredients) {

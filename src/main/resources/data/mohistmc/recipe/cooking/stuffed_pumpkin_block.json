@@ -17,7 +17,6 @@
       "subtracted": "minecraft:melon_slice"
     }
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:stuffed_pumpkin_block"
   }

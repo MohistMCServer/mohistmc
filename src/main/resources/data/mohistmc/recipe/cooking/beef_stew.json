@@ -6,7 +6,6 @@
     "#c:crops/carrot",
     "#c:crops/potato"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:beef_stew"
   }

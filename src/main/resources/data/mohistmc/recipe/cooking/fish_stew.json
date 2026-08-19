@@ -6,7 +6,6 @@
     "mohistmc:tomato_sauce",
     "#c:crops/onion"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:fish_stew"
   }

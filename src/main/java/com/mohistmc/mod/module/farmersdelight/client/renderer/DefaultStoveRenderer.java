@@ -1,12 +1,15 @@
 package com.mohistmc.mod.module.farmersdelight.client.renderer;
 
 import com.mohistmc.mod.module.farmersdelight.common.block.AbstractStoveBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.StoveBlock;
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.AbstractStoveBlockEntity;
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.StoveBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -24,8 +27,9 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-public class DefaultStoveRenderer implements BlockEntityRenderer<StoveBlockEntity, DefaultStoveRenderer.StoveRenderState>
+public class DefaultStoveRenderer<T extends AbstractStoveBlockEntity> implements BlockEntityRenderer<T, DefaultStoveRenderer.AbstractStoveRenderState>
 {
+	private static final float SIZE = 0.375F;
 	private final ItemModelResolver itemModelResolver;
 
 	public DefaultStoveRenderer(BlockEntityRendererProvider.Context context) {
@@ -33,50 +37,78 @@ public class DefaultStoveRenderer implements BlockEntityRenderer<StoveBlockEntit
 	}
 
 	@Override
-	public StoveRenderState createRenderState() {
-		return new StoveRenderState();
+	public AbstractStoveRenderState createRenderState() {
+		return new AbstractStoveRenderState();
 	}
 
 	@Override
-	public void extractRenderState(StoveBlockEntity stove, StoveRenderState state, float partialTicks, Vec3 cameraPosition,
-			ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
-		BlockEntityRenderer.super.extractRenderState(stove, state, partialTicks, cameraPosition, breakProgress);
-		state.direction = stove.getBlockState().getValue(AbstractStoveBlock.FACING).getOpposite();
+	public void submit(AbstractStoveRenderState state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState cameraRenderState) {
+		for (int i = 0; i < state.slotCount; ++i) {
+			ItemStackRenderState stackRenderState = state.itemRenderStates[i];
+			if (stackRenderState == null) continue;
 
-		Level level = stove.getLevel();
-		var inventory = stove.getItems();
-		List<RenderedItem> items = new ArrayList<>();
-		for (int i = 0; i < inventory.getSlots(); ++i) {
-			ItemStack stack = inventory.getStackInSlot(i);
-			if (stack.isEmpty()) {
-				continue;
-			}
-			ItemStackRenderState itemState = new ItemStackRenderState();
-			this.itemModelResolver.updateForTopItem(itemState, stack, ItemDisplayContext.FIXED, level, null, (int) stove.getBlockPos().asLong() + i);
-			items.add(new RenderedItem(itemState, stove.getStoveItemOffset(i)));
-		}
-		state.items = items.isEmpty() ? Collections.emptyList() : items;
-	}
-
-	@Override
-	public void submit(StoveRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
-		for (RenderedItem item : state.items) {
 			poseStack.pushPose();
+
+			// Center item above the stove
 			poseStack.translate(0.5D, 1.02D, 0.5D);
-			poseStack.mulPose(Axis.YP.rotationDegrees(-state.direction.toYRot()));
+
+			// Rotate item to face the stove's front side
+			float f = -state.direction.toYRot();
+			poseStack.mulPose(Axis.YP.rotationDegrees(f));
+
+			// Rotate item flat on the stove. Use X and Y from now on
 			poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
-			poseStack.translate(item.offset.x, item.offset.y, 0.0D);
-			poseStack.scale(0.375F, 0.375F, 0.375F);
-			item.itemState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
+
+			// Neatly align items according to their index
+			Vec2 itemOffset = state.offsets[i];
+			poseStack.translate(itemOffset.x, itemOffset.y, 0.0D);
+
+			// Resize the items
+			poseStack.scale(SIZE, SIZE, SIZE);
+
+			state.itemRenderStates[i].submit(poseStack, collector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
 			poseStack.popPose();
 		}
 	}
 
-	public static class StoveRenderState extends BlockEntityRenderState
-	{
-		public List<RenderedItem> items = Collections.emptyList();
-		public Direction direction = Direction.NORTH;
+	@Override
+	public void extractRenderState(T stove, AbstractStoveRenderState state, float partialTicks, Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
+		BlockEntityRenderer.super.extractRenderState(stove, state, partialTicks, cameraPosition, breakProgress);
+		state.direction = stove.getBlockState().getValue(StoveBlock.FACING).getOpposite();
+
+		// base extractRenderState gets the light coords for the stove's position, but we use the position above the stove
+		// state.lightCoords = LevelRenderer.getLightCoords(stove.getLevel(), stove.getBlockPos().above());
+
+		var items = stove.getItems();
+		state.slotCount = items.size();
+		state.offsets = new Vec2[state.slotCount];
+		state.itemRenderStates = new ItemStackRenderState[state.slotCount];
+
+		for (int i = 0; i < state.slotCount; i++) {
+			ItemStack stack = items.getResource(i).toStack(items.getAmountAsInt(i));
+			if (stack.isEmpty()) {
+				state.itemRenderStates[i] = null;
+				state.offsets[i] = null;
+				continue;
+			}
+
+			state.itemRenderStates[i] = new ItemStackRenderState();
+			this.itemModelResolver.updateForTopItem(
+					state.itemRenderStates[i],
+					stack,
+					ItemDisplayContext.FIXED,
+					stove.getLevel(),
+					null,
+					(int) stove.getBlockPos().asLong()
+			);
+			state.offsets[i] = stove.getStoveItemOffset(i);
+		}
 	}
 
-	public record RenderedItem(ItemStackRenderState itemState, Vec2 offset) {}
+	public static class AbstractStoveRenderState extends BlockEntityRenderState {
+		public Direction direction;
+		public int slotCount;
+		public Vec2[] offsets;
+		public ItemStackRenderState[] itemRenderStates;
+	}
 }

@@ -5,18 +5,18 @@ import com.mohistmc.mod.module.create.AllFluids;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.client.gui.CookingPotScreen;
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.container.CookingPotMenu;
+import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
+import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModMenuTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
-import com.mohistmc.mod.module.jei.farmersdelight.FDRecipeTypes;
 import com.mohistmc.mod.module.jei.farmersdelight.FDRecipes;
 import com.mohistmc.mod.module.jei.farmersdelight.category.CookingRecipeCategory;
 import com.mohistmc.mod.module.jei.farmersdelight.category.CuttingRecipeCategory;
 import com.mohistmc.mod.module.jei.farmersdelight.category.DecompositionRecipeCategory;
 import com.mohistmc.mod.module.jei.farmersdelight.resource.DecompositionDummy;
 import com.mohistmc.mod.module.jei.farmersdelight.resource.DoughRecipeMaker;
-import mezz.jei.api.helpers.IGuiHelper;
 import com.mohistmc.mod.module.create.AllItemTags;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.client.Create;
@@ -134,6 +134,10 @@ public class JeiClientPlugin implements IModPlugin {
         BlockCuttingDisplay.class
     );
 
+    public static final IRecipeType<RecipeHolder<CookingPotRecipe>> COOKING = createRecipeHolderType("cooking");
+    public static final IRecipeType<RecipeHolder<CuttingBoardRecipe>> CUTTING = createRecipeHolderType("cutting");
+    public static final IRecipeType<DecompositionDummy> DECOMPOSITION = IRecipeType.create(FarmersDelight.MODID, "decomposition", DecompositionDummy.class);
+
     @SuppressWarnings("unchecked")
     public static <T> IRecipeType<T> createRecipeHolderType(String path) {
         Identifier uid = Identifier.fromNamespaceAndPath(MOD_ID, path);
@@ -147,7 +151,6 @@ public class JeiClientPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
         registration.addRecipeCategories(
             new AutoCompactingCategory(),
             new CompactingCategory(),
@@ -171,9 +174,9 @@ public class JeiClientPlugin implements IModPlugin {
             new FanWashingCategory(),
             new PotionCategory(),
             new BlockCuttingCategory(),
-            new CookingRecipeCategory(guiHelper),
-            new CuttingRecipeCategory(guiHelper),
-            new DecompositionRecipeCategory(guiHelper)
+            new CookingRecipeCategory(),
+            new CuttingRecipeCategory(),
+            new DecompositionRecipeCategory()
         );
     }
 
@@ -199,11 +202,11 @@ public class JeiClientPlugin implements IModPlugin {
         registration.addCraftingStation(AUTOMATIC_BREWING, AllItems.MECHANICAL_MIXER, AllItems.BASIN);
         registration.addCraftingStation(BLOCK_CUTTING, AllItems.MECHANICAL_SAW);
 
-        registration.addCraftingStation(FDRecipeTypes.COOKING, new ItemStack(ModItems.COOKING_POT.get()));
-        registration.addCraftingStation(FDRecipeTypes.CUTTING, new ItemStack(ModItems.CUTTING_BOARD.get()));
+        registration.addCraftingStation(COOKING, new ItemStack(ModItems.COOKING_POT.get()));
+        registration.addCraftingStation(CUTTING, new ItemStack(ModItems.CUTTING_BOARD.get()));
         registration.addCraftingStation(RecipeTypes.CAMPFIRE_COOKING, new ItemStack(ModItems.STOVE.get()));
         registration.addCraftingStation(RecipeTypes.CAMPFIRE_COOKING, new ItemStack(ModItems.SKILLET.get()));
-        registration.addCraftingStation(FDRecipeTypes.DECOMPOSITION, new ItemStack(ModBlocks.ORGANIC_COMPOST.get()));
+        registration.addCraftingStation(DECOMPOSITION, new ItemStack(ModBlocks.ORGANIC_COMPOST.get()));
     }
 
     @Override
@@ -242,13 +245,10 @@ public class JeiClientPlugin implements IModPlugin {
         registerToolboxRecipes(registration);
         registration.addRecipes(BLOCK_CUTTING, BlockCuttingCategory.getRecipes(preparedRecipes));
 
-        // Farmers Delight recipes (merged from the old farmersdelight JEI plugin).
-        // Read directly from the client recipe manager; the server-synced RecipeMap does not
-        // surface farmersdelight:cooking / farmersdelight:cutting recipes.
         FDRecipes fdRecipes = new FDRecipes();
-        registration.addRecipes(FDRecipeTypes.COOKING, fdRecipes.getCookingPotRecipes());
-        registration.addRecipes(FDRecipeTypes.CUTTING, fdRecipes.getCuttingBoardRecipes());
-        registration.addRecipes(FDRecipeTypes.DECOMPOSITION, ImmutableList.of(new DecompositionDummy()));
+        registration.addRecipes(COOKING, fdRecipes.getCookingPotRecipes());
+        registration.addRecipes(CUTTING, fdRecipes.getCuttingBoardRecipes());
+        registration.addRecipes(DECOMPOSITION, ImmutableList.of(new DecompositionDummy()));
 
         registration.addRecipes(RecipeTypes.CRAFTING, DoughRecipeMaker.createRecipe());
 
@@ -322,14 +322,14 @@ public class JeiClientPlugin implements IModPlugin {
         registration.addGhostIngredientHandler(RedstoneRequesterScreen.class, new GhostIngredientHandler<>());
         registration.addGhostIngredientHandler(FactoryPanelSetItemScreen.class, new GhostIngredientHandler<>());
         registration.addGuiContainerHandler(StockKeeperRequestScreen.class, new StockKeeperGuiContainerHandler());
-        registration.addRecipeClickArea(CookingPotScreen.class, 89, 25, 24, 17, FDRecipeTypes.COOKING);
+        registration.addRecipeClickArea(CookingPotScreen.class, 89, 25, 24, 17, COOKING);
     }
 
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
         registration.addRecipeTransferHandler(new BlueprintTransferHandler(), RecipeTypes.CRAFTING);
         registration.addUniversalRecipeTransferHandler(new StockKeeperTransferHandler());
-        registration.addRecipeTransferHandler(CookingPotMenu.class, ModMenuTypes.COOKING_POT.get(), FDRecipeTypes.COOKING, 0, 6, 9, 36);
+        registration.addRecipeTransferHandler(CookingPotMenu.class, ModMenuTypes.COOKING_POT.get(), COOKING, 0, 6, 9, 36);
     }
 
     @Override

@@ -7,7 +7,6 @@
     "minecraft:dried_kelp",
     "#c:foods/raw_pork"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:noodle_soup"
   }

@@ -48,7 +48,7 @@ public class DataGenerators
 		event.addProvider(new EntityTags(output, lookupProvider));
 		event.addProvider(new DamageTypeTags(output, lookupProvider, FarmersDelight.MODID));
 		event.addProvider(new EnchantmentTags(output, lookupProvider));
-		event.addProvider(new Recipes(output, lookupProvider));
+		event.createProvider(Recipes.Runner::new);
 		event.addProvider(new LootModifiers(output, lookupProvider));
 		event.addProvider(new DataMaps(output, lookupProvider));
 		event.addProvider(new Advancements(output, lookupProvider));

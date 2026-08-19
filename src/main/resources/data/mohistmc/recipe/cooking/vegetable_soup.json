@@ -7,7 +7,6 @@
     "#c:crops/beetroot",
     "#c:foods/leafy_green"
   ],
-  "recipe_book_tab": "meals",
   "result": {
     "id": "mohistmc:vegetable_soup"
   }
