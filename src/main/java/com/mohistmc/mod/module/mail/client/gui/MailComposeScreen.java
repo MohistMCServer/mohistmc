@@ -26,7 +26,6 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class MailComposeScreen extends EnhancedScreen {
 
     private static final int HEADER_H = 70; // 标题 + 收件人 + 消息 + 发送者

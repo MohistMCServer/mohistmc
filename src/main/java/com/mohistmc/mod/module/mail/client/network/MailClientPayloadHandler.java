@@ -19,7 +19,6 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public final class MailClientPayloadHandler {
 
     private MailClientPayloadHandler() {

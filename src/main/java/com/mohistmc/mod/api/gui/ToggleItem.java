@@ -10,7 +10,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 切换项 — 点击循环切换预定义的选项列表
  */
-@OnlyIn(Dist.CLIENT)
 public class ToggleItem extends ScrollListItem {
     private final Component label;
     private final List<Component> optionLabels;

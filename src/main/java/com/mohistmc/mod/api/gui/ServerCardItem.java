@@ -17,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 /**
  * 服务器卡片项 — 用于 ScrollList 中展示单个服务器信息
  */
-@OnlyIn(Dist.CLIENT)
 public class ServerCardItem extends ScrollListItem {
 
     private static final Identifier FALLBACK_ICON = Identifier.withDefaultNamespace("textures/misc/unknown_server.png");

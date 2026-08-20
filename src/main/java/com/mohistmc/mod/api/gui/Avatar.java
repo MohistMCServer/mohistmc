@@ -21,7 +21,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  *   new Avatar(x, y, 16).setBackground(0xFF9d2933).setShape(Shape.CIRCLE);
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class Avatar extends PositionedWidget {
 
     /** 头像形状 */

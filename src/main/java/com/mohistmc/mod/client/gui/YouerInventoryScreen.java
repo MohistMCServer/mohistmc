@@ -26,7 +26,6 @@ import org.joml.Vector3f;
 /**
  * @author Mgazul
  */
-@OnlyIn(Dist.CLIENT)
 public class YouerInventoryScreen extends AbstractRecipeBookScreen<InventoryMenu> {
 
     // ==================== 常量 ====================

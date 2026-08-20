@@ -24,7 +24,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * </ul>
  * <p>继承 {@link Modal} 确保渲染在最顶层并阻挡底层交互。
  */
-@OnlyIn(Dist.CLIENT)
 public class ItemPickerModal extends Modal {
 
     private static final int DIALOG_W = 380;

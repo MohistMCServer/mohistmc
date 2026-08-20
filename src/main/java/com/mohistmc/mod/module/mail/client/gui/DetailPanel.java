@@ -26,7 +26,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class DetailPanel extends PositionedWidget {
 
     private static final int PAD = 10;

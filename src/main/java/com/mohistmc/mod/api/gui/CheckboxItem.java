@@ -9,7 +9,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 复选框项 — 文字 + 可切换的复选框
  */
-@OnlyIn(Dist.CLIENT)
 public class CheckboxItem extends ScrollListItem {
     private final Component label;
     private boolean checked;

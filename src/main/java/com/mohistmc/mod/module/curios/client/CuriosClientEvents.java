@@ -31,7 +31,6 @@ import com.mohistmc.mod.module.curios.api.client.ICurioRenderer;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mohistmc.mod.module.curios.api.type.capability.ICurioItem;
 import com.mohistmc.mod.module.curios.api.type.inventory.IDynamicStackHandler;
-import com.mohistmc.mod.module.curios.common.network.client.CPacketOpenCurios;
 import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -42,8 +41,6 @@ import java.util.Set;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.ClientAvatarEntity;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
@@ -61,8 +58,6 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.client.event.RenderArmEvent;
-import net.neoforged.neoforge.client.event.ScreenEvent;
-import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.common.util.AttributeUtil;
@@ -149,23 +144,6 @@ public class CuriosClientEvents {
                         }));
             }
             poseStack.popPose();
-        }
-    }
-
-    @SubscribeEvent
-    public void onScreenOpen(final ScreenEvent.Opening evt) {
-        // Pressing E opens the vanilla inventory — show the Curios screen instead, so the
-        // curio slots are visible directly in the inventory without any extra key/button.
-        Screen screen = evt.getNewScreen();
-
-        if (screen instanceof InventoryScreen) {
-            Minecraft mc = Minecraft.getInstance();
-
-            if (mc.player != null) {
-                evt.setCanceled(true);
-                ClientPacketDistributor.sendToServer(
-                        new CPacketOpenCurios(mc.player.containerMenu.getCarried()));
-            }
         }
     }
 

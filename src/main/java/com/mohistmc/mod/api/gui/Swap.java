@@ -20,7 +20,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  *   swap.setActiveIndex(0);
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class Swap extends Panel {
 
     private final List<PositionedWidget> pages = new ArrayList<>();

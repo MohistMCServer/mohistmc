@@ -6,6 +6,7 @@ import com.mohistmc.mod.api.gui.IconButton;
 import com.mohistmc.mod.api.gui.LabelBadge;
 import com.mohistmc.mod.api.gui.Panel;
 import com.mohistmc.mod.module.mail.common.network.payload.OpenMailboxRequestPayload;
+import com.mohistmc.mod.module.curios.common.network.client.CPacketOpenCurios;
 import com.mohistmc.mod.module.shop.common.network.payload.BalanceRequestPayload;
 import com.mohistmc.mod.utils.ProcessWorkingSetUtils;
 import net.minecraft.client.Minecraft;
@@ -14,8 +15,7 @@ import net.minecraft.client.gui.screens.advancements.AdvancementsScreen;
 import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.client.gui.modlist.ModListScreen;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import org.jetbrains.annotations.NotNull;
@@ -39,7 +39,6 @@ import org.jetbrains.annotations.NotNull;
  *   <li>{@code ping_logo.png} — 延迟图标</li>
  * </ul>
  */
-@OnlyIn(Dist.CLIENT)
 public class EscGui extends EnhancedScreen {
 
     private static Identifier tex(String name) {
@@ -238,7 +237,8 @@ public class EscGui extends EnhancedScreen {
                 new IconDef("2", Component.literal("好友"), () -> {
                     ProcessWorkingSetUtils.setProcessWorkingSetSize(50, 100);
                 }),
-                new IconDef("3", Component.literal("背包"), () -> {}),
+                new IconDef("3", Component.literal("背包"), () ->
+                        ClientPacketDistributor.sendToServer(new CPacketOpenCurios(ItemStack.EMPTY))),
                 new IconDef("4", Component.literal("百科"), () -> {}),
                 new IconDef("5", Component.literal("公告"), () -> {}),
         };

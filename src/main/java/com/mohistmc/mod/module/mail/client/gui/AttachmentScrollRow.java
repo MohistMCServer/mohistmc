@@ -23,7 +23,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class AttachmentScrollRow extends ScrollableWidget {
 
     private static final int ICON = 16;

@@ -24,7 +24,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 现代多人游戏服务器列表 — 卡片式布局，左侧服务器列表 + 底部操作栏
  */
-@OnlyIn(Dist.CLIENT)
 public class ModernServerListScreen extends EnhancedScreen {
 
     private final ServerStatusPinger pinger = new ServerStatusPinger();

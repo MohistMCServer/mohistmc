@@ -26,7 +26,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class MailCard extends ScrollListItem {
 
     /** 条目总高（含底部视距间隔） */

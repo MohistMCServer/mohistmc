@@ -23,7 +23,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class ShopCard extends ScrollListItem {
 
     /** 占位高度（GridScrollList 正方形模式下被忽略，实际高 = 列宽） */

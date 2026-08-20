@@ -34,7 +34,6 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
  * @author Mgazul
  * @date 2026/8/10
  */
-@OnlyIn(Dist.CLIENT)
 public class ShopAdminScreen extends EnhancedScreen {
 
     private static final int FORM_W = 160;

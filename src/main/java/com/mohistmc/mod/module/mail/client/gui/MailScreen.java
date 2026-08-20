@@ -27,7 +27,6 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class MailScreen extends EnhancedScreen {
 
     /** 详情面板底部附件区高度（与 DetailPanel.ATTACH_H 保持一致） */

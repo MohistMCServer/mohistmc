@@ -17,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
  * 文字始终在徽章内居中，也可通过 {@link #setFixedWidth(int)} 手动固定宽度，
  * 编辑器调整尺寸后文字仍保持居中。典型用途：玩家名、标签等。</p>
  */
-@OnlyIn(Dist.CLIENT)
 public class LabelBadge extends PositionedWidget {
 
     /** 文字对齐方式（组件内） */

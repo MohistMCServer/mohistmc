@@ -43,7 +43,6 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public class ShopScreen extends EnhancedScreen {
 
     /** 网格列数上限 */

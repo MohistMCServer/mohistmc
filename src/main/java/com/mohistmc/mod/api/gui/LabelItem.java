@@ -8,7 +8,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 纯文本标签
  */
-@OnlyIn(Dist.CLIENT)
 public class LabelItem extends ScrollListItem {
     private final Component text;
     private final int color;

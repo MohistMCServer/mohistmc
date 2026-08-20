@@ -9,7 +9,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 滑动条项 — 点击轨道设置 0~1 的数值
  */
-@OnlyIn(Dist.CLIENT)
 public class SliderItem extends ScrollListItem {
     private final Component label;
     private float value; // 0.0 ~ 1.0

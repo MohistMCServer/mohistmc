@@ -21,7 +21,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  *   modal.show();
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class Modal extends PositionedWidget {
 
     // ======== 内置按钮封装 ========

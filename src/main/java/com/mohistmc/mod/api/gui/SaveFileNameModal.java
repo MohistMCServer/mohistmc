@@ -12,7 +12,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * <p>由 GUI 编辑器在 Ctrl+Shift+S 时弹出，输入文件名后回车或点击「确定」保存，
  * Esc 或点击「取消」关闭。</p>
  */
-@OnlyIn(Dist.CLIENT)
 public class SaveFileNameModal extends Modal {
 
     private static final int INPUT_MARGIN_TOP = 14; // 输入框距标题分隔线

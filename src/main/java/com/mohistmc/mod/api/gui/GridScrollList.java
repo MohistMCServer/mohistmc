@@ -19,7 +19,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  *   grid.addItem(new ShopCard(...));
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class GridScrollList extends ScrollableWidget {
 
     // ======== 子项数据 ========

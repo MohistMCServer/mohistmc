@@ -9,7 +9,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * 滚动列表中的自定义子项基类 — 每个子项独立控制渲染和交互。
  * 子类：{@link LabelItem}、{@link CheckboxItem}、{@link ToggleItem}、{@link SliderItem}
  */
-@OnlyIn(Dist.CLIENT)
 public abstract class ScrollListItem {
     protected int height = 20;
     public int getHeight() { return height; }

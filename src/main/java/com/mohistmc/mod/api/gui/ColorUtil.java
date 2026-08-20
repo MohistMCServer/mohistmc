@@ -6,7 +6,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 颜色工具类，提供 hex → ARGB int 转换
  */
-@OnlyIn(Dist.CLIENT)
 public final class ColorUtil {
 
     private ColorUtil() {}

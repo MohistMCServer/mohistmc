@@ -19,7 +19,6 @@ import org.jetbrains.annotations.Nullable;
  *   Badge.render(g, x, y, w, h, iconTex, 4, priceText, 0xCC222222, 0xFFFFFFFF, alpha);
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class Badge extends PositionedWidget {
 
     @Nullable private Identifier iconTexture;

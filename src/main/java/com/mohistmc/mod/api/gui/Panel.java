@@ -14,7 +14,6 @@ import org.jetbrains.annotations.Nullable;
 /**
  * 面板组件 — 带背景色/背景图片的矩形区域，可包含子组件、响应点击
  */
-@OnlyIn(Dist.CLIENT)
 public class Panel extends PositionedWidget {
 
     /** 布局方向 */

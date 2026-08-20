@@ -16,7 +16,6 @@ import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FakeMainGui extends EnhancedScreen {
 
     private static final Identifier BG = Identifier.fromNamespaceAndPath(MohistMC.MODID, "textures/gui/bg1.png");

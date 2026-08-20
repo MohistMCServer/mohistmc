@@ -22,7 +22,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  * @author Mgazul
  * @date 2026/8/5
  */
-@OnlyIn(Dist.CLIENT)
 public abstract class ScrollableWidget extends PositionedWidget {
 
     /** 滚动方向 */

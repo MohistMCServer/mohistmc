@@ -17,7 +17,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class EnhancedScreen extends Screen {
     /** 基准分辨率 — 所有组件按此尺寸布局，通过矩阵变换等比缩放适配不同屏幕 */
     public static final int BASE_W = 1280;

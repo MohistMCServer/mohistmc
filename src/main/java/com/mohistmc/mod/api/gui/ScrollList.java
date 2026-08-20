@@ -21,7 +21,6 @@ import net.neoforged.api.distmarker.OnlyIn;
  *   list.addItem(new SliderItem(Component.literal("音量"), 0.8f).onChange(v -> {}));
  * </pre>
  */
-@OnlyIn(Dist.CLIENT)
 public class ScrollList extends ScrollableWidget {
 
     // ======== 子项数据 ========

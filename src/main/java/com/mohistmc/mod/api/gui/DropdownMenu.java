@@ -13,7 +13,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 /**
  * 下拉菜单组件 — 点击触发展开选项列表，支持链式配置
  */
-@OnlyIn(Dist.CLIENT)
 public class DropdownMenu<T> extends PositionedWidget {
 
     private Component label;
