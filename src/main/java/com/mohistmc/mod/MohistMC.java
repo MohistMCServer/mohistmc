@@ -6,6 +6,7 @@ import com.mohistmc.mod.client.gui.YouerInventoryScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
 import com.mohistmc.mod.module.AttributeFixMod;
 import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.curios.CuriosCommonMod;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.mail.Mail;
 import com.mohistmc.mod.module.shop.Shop;
@@ -65,6 +66,7 @@ public class MohistMC {
         new Shop(modEventBus, modContainer);
         new Mail(modEventBus, modContainer);
         new Create(modEventBus, modContainer);
+        new CuriosCommonMod(modEventBus, modContainer);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
