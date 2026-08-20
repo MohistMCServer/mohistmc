@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.curios.api.common.slot;
 
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -18,14 +17,12 @@ import net.minecraft.network.codec.StreamCodec;
  *
  * @param id                 A list of identifiers for slot types.
  * @param size               A range of sizes to compare against the default slot type size.
- * @param dropRule           The drop rule for the slot type(s).
  * @param hasCosmetic        Whether the slot type has cosmetics.
  * @param canToggleRendering Whether the slot type can toggle rendering.
  * @see ISlotType
  */
 public record SlotTypePredicate(List<String> id,
                                 MinMaxBounds.Ints size,
-                                Optional<DropRule> dropRule,
                                 Optional<Boolean> hasCosmetic,
                                 Optional<Boolean> canToggleRendering) {
 
@@ -39,9 +36,6 @@ public record SlotTypePredicate(List<String> id,
                             MinMaxBounds.Ints.CODEC
                                     .optionalFieldOf("size", MinMaxBounds.Ints.ANY)
                                     .forGetter(SlotTypePredicate::size),
-                            DropRule.CODEC
-                                    .optionalFieldOf("drop_rule")
-                                    .forGetter(SlotTypePredicate::dropRule),
                             Codec.BOOL
                                     .optionalFieldOf("add_cosmetic")
                                     .forGetter(SlotTypePredicate::hasCosmetic),
@@ -68,8 +62,6 @@ public record SlotTypePredicate(List<String> id,
                     SlotTypePredicate::id,
                     ByteBufCodecs.fromCodec(MinMaxBounds.Ints.CODEC),
                     SlotTypePredicate::size,
-                    DropRule.STREAM_CODEC.apply(ByteBufCodecs::optional),
-                    SlotTypePredicate::dropRule,
                     ByteBufCodecs.BOOL.apply(ByteBufCodecs::optional),
                     SlotTypePredicate::hasCosmetic,
                     ByteBufCodecs.BOOL.apply(ByteBufCodecs::optional),
@@ -116,7 +108,6 @@ public record SlotTypePredicate(List<String> id,
             }
         }
         return size().matches(slotType.getSize())
-                && dropRule().map(dr -> slotType.getDropRule() == dr).orElse(true)
                 && hasCosmetic().map(cs -> slotType.hasCosmetic() == cs).orElse(true)
                 && canToggleRendering().map(tr -> slotType.canToggleRendering() == tr).orElse(true);
     }
@@ -128,7 +119,6 @@ public record SlotTypePredicate(List<String> id,
 
         private final List<String> slots = new ArrayList<>();
         private MinMaxBounds.Ints size = MinMaxBounds.Ints.ANY;
-        private DropRule dropRule = null;
         private Boolean hasCosmetic = null;
         private Boolean canToggleRendering = null;
 
@@ -189,19 +179,6 @@ public record SlotTypePredicate(List<String> id,
         }
 
         /**
-         * Sets the {@link DropRule} for the slot type.
-         *
-         * <p>The predicate will match if the slot type is set to the same DropRule.
-         *
-         * @param dropRule The DropRule for the slot type.
-         * @return This builder instance.
-         */
-        public Builder withDropRule(DropRule dropRule) {
-            this.dropRule = dropRule;
-            return this;
-        }
-
-        /**
          * Sets the boolean value for whether the slot type can toggle rendering.
          *
          * <p>The predicate will match if whether the slot type can toggle rendering matches this value.
@@ -222,7 +199,6 @@ public record SlotTypePredicate(List<String> id,
         public SlotTypePredicate build() {
             return new SlotTypePredicate(this.slots,
                     this.size,
-                    Optional.ofNullable(this.dropRule),
                     Optional.ofNullable(this.hasCosmetic),
                     Optional.ofNullable(this.canToggleRendering));
         }

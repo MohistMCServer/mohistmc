@@ -50,7 +50,6 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddServerReloadListenersEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.resource.VanillaServerListeners;
 
 public class CuriosCommonMod {
 
@@ -134,8 +133,8 @@ public class CuriosCommonMod {
     }
 
     private void reload(final AddServerReloadListenersEvent evt) {
-        CuriosSlotResources.SERVER = new CuriosSlotResources(evt.getRegistryAccess());
-        evt.addListener(CuriosSlotResources.ID, CuriosSlotResources.SERVER);
-        evt.addDependency(VanillaServerListeners.LAST, CuriosSlotResources.ID);
+        // Slots are code-defined now — the CuriosSlotResources instance is just a data holder,
+        // no longer a datapack reload listener. populateData() is invoked on TagsUpdatedEvent.
+        CuriosSlotResources.SERVER = new CuriosSlotResources();
     }
 }

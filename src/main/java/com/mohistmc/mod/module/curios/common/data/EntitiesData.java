@@ -122,7 +122,6 @@ public class EntitiesData implements IEntitiesData {
                     old.useNativeGui(),
                     old.hasCosmetic(),
                     old.icon(),
-                    old.dropRule(),
                     old.renderToggle(),
                     old.conditions(),
                     old.validators(),

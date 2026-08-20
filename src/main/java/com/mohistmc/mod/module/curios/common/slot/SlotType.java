@@ -3,7 +3,6 @@ package com.mohistmc.mod.module.curios.common.slot;
 import com.google.common.collect.ImmutableSet;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.api.CuriosTags;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mohistmc.mod.module.curios.api.type.data.ISlotData;
 import com.mojang.datafixers.util.Either;
@@ -29,13 +28,12 @@ public final class SlotType implements ISlotType {
     private final boolean useNativeGui;
     private final boolean hasCosmetic;
     private final Identifier icon;
-    private final DropRule dropRule;
     private final boolean renderToggle;
     private final Set<Identifier> validators;
     private final Set<EntityType<?>> entities;
 
     public SlotType(String id, int order, int size, boolean useNativeGui, boolean hasCosmetic,
-                    Identifier icon, DropRule dropRule, boolean renderToggle,
+                    Identifier icon, boolean renderToggle,
                     Set<Identifier> validators, Set<EntityType<?>> entities) {
         this.id = id;
         this.order = order;
@@ -43,7 +41,6 @@ public final class SlotType implements ISlotType {
         this.useNativeGui = useNativeGui;
         this.hasCosmetic = hasCosmetic;
         this.icon = icon;
-        this.dropRule = dropRule;
         this.renderToggle = renderToggle;
         this.validators = validators;
         this.entities = entities;
@@ -90,11 +87,6 @@ public final class SlotType implements ISlotType {
     }
 
     @Override
-    public DropRule getDropRule() {
-        return this.dropRule;
-    }
-
-    @Override
     public Set<Identifier> getValidators() {
         return ImmutableSet.copyOf(this.validators);
     }
@@ -114,7 +106,6 @@ public final class SlotType implements ISlotType {
         private Boolean hasCosmetic = null;
         private Boolean renderToggle = null;
         private Identifier icon = null;
-        private DropRule dropRule = null;
         private Set<Identifier> validators = null;
         private Set<EntityType<?>> entityTypes = null;
 
@@ -148,7 +139,6 @@ public final class SlotType implements ISlotType {
             entry.hasCosmetic().ifPresent(hasCosmetic -> this.hasCosmetic =
                     replace || this.hasCosmetic == null ? hasCosmetic : this.hasCosmetic || hasCosmetic);
             this.icon = entry.icon().orElse(this.icon);
-            this.dropRule = entry.dropRule().orElse(this.dropRule);
 
             if (this.validators == null) {
                 this.validators = new HashSet<>();
@@ -217,10 +207,6 @@ public final class SlotType implements ISlotType {
             this.size += this.sizeMod;
             this.size = Math.max(this.size, 0);
 
-            if (this.dropRule == null) {
-                this.dropRule = DropRule.DEFAULT;
-            }
-
             if (this.useNativeGui == null) {
                 this.useNativeGui = true;
             }
@@ -247,7 +233,7 @@ public final class SlotType implements ISlotType {
                         });
             }
             return new SlotType(this.id, this.order, this.size, this.useNativeGui, this.hasCosmetic,
-                    this.icon, this.dropRule, this.renderToggle, this.validators,
+                    this.icon, this.renderToggle, this.validators,
                     this.entityTypes);
         }
     }

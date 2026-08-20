@@ -22,53 +22,28 @@ package com.mohistmc.mod.module.curios.common.data;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.google.gson.JsonElement;
 import com.mohistmc.mod.module.curios.CuriosConstants;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
-import com.mohistmc.mod.module.curios.api.CuriosTags;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
-import com.mohistmc.mod.module.curios.api.type.data.IEntitiesData;
-import com.mohistmc.mod.module.curios.api.type.data.ISlotData;
 import com.mohistmc.mod.module.curios.common.slot.SlotType;
-import com.mojang.datafixers.util.Either;
-import com.mojang.serialization.JsonOps;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
 import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
-import java.util.function.Function;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
-import net.minecraft.tags.TagKey;
-import net.minecraft.util.ExtraCodecs;
-import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityTypes;
 
-public class CuriosSlotResources extends SimpleJsonResourceReloadListener<JsonElement> {
+public class CuriosSlotResources {
 
     public static final Identifier ID = CuriosResources.resource("mohistmc_slots");
-    private static final String folder = "mohistmc";
     public static final StreamCodec<RegistryFriendlyByteBuf, CuriosSlotResources> STREAM_CODEC =
             StreamCodec.composite(
                     ByteBufCodecs.map(
@@ -106,25 +81,32 @@ public class CuriosSlotResources extends SimpleJsonResourceReloadListener<JsonEl
             );
     public static CuriosSlotResources SERVER;
     public static CuriosSlotResources CLIENT = new CuriosSlotResources();
-    private RegistryAccess registryAccess;
-    private Map<Identifier, JsonElement> pendingData = Map.of();
     private Map<String, ISlotType> slots = ImmutableMap.of();
     private Map<EntityType<?>, Map<String, ISlotType>> entitySlots = ImmutableMap.of();
     private Set<String> configSlots = ImmutableSet.of();
     private Map<String, Set<String>> idToMods = ImmutableMap.of();
 
-    public CuriosSlotResources() {
-        super(ExtraCodecs.JSON, FileToIdConverter.json(folder));
-    }
+    // Built-in slot definitions, constructed directly as objects — no datapack parsing involved.
+    // Players get every slot by default, each with size 1 (the entities mechanism is removed).
+    private static final List<ISlotType> BUILTIN_SLOTS = List.of(
+            new SlotType("back", 80, 1, true, false, Identifier.parse("mohistmc:slot/empty_back_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("belt", 180, 1, true, false, Identifier.parse("mohistmc:slot/empty_belt_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("body", 100, 1, true, false, Identifier.parse("mohistmc:slot/empty_body_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("bracelet", 120, 1, true, false, Identifier.parse("mohistmc:slot/empty_bracelet_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("charm", 200, 1, true, false, Identifier.parse("mohistmc:slot/empty_charm_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("curio", 20, 1, true, false, Identifier.parse("mohistmc:slot/empty_curio_slot"), true, Set.of(), Set.of()),
+            new SlotType("feet", 190, 1, true, false, Identifier.parse("mohistmc:slot/empty_feet_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("hands", 140, 1, true, false, Identifier.parse("mohistmc:slot/empty_hands_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("head", 40, 1, true, false, Identifier.parse("mohistmc:slot/empty_head_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("necklace", 60, 1, true, false, Identifier.parse("mohistmc:slot/empty_necklace_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of()),
+            new SlotType("ring", 160, 1, true, false, Identifier.parse("mohistmc:slot/empty_ring_slot"), true, Set.of(CuriosResources.resource("tag")), Set.of())
+    );
 
-    public CuriosSlotResources(RegistryAccess registryAccess) {
-        super(ExtraCodecs.JSON, FileToIdConverter.json(folder));
-        this.registryAccess = registryAccess;
+    public CuriosSlotResources() {
     }
 
     public CuriosSlotResources(Map<EntityType<?>, Set<String>> entitySlots,
                                Map<String, ISlotType> slots, Map<String, Set<String>> idToMods) {
-        super(ExtraCodecs.JSON, FileToIdConverter.json(folder));
         this.slots = slots;
         Map<EntityType<?>, Map<String, ISlotType>> newEntitySlots = new LinkedHashMap<>();
         entitySlots.forEach((k, v) -> {
@@ -141,229 +123,25 @@ public class CuriosSlotResources extends SimpleJsonResourceReloadListener<JsonEl
         this.idToMods = ImmutableMap.copyOf(idToMods);
     }
 
-    public static Set<String> fromConfig(Map<String, SlotType.Builder> map,
-                                         HolderLookup.Provider provider)
-            throws IllegalArgumentException {
-        List<Map<String, String>> parsed = new ArrayList<>();
-        List<? extends String> list = List.of();
-        Set<String> results = new HashSet<>();
-
-        for (String s : list) {
-            StringTokenizer tokenizer = new StringTokenizer(s, ";");
-            Map<String, String> subMap = new HashMap<>();
-
-            while (tokenizer.hasMoreTokens()) {
-                String token = tokenizer.nextToken();
-                String[] keyValue = token.split("=");
-                subMap.put(keyValue[0], keyValue[1]);
-            }
-
-            if (subMap.containsKey("id")) {
-                parsed.add(subMap);
-            } else {
-                throw new IllegalArgumentException(
-                        "Cannot load config entry " + s + " due to missing id field");
-            }
-        }
-
-        for (Map<String, String> entry : parsed) {
-            String id = entry.get("id");
-            ISlotData.Entry slotDataEntry = new SlotData.Entry(
-                    true,
-                    Optional.of(id),
-                    getValueOptionally(entry, "order", Integer::parseInt),
-                    getValueOptionally(entry, "size", Integer::parseInt),
-                    getValueOptionally(entry, "operation", String::toString),
-                    getValueOptionally(entry, "use_native_gui", Boolean::parseBoolean),
-                    getValueOptionally(entry, "add_cosmetic", Boolean::parseBoolean),
-                    getValueOptionally(entry, "icon", Identifier::tryParse),
-                    getValueOptionally(entry, "drop_rule", dropRule -> {
-                        for (DropRule value : DropRule.values()) {
-                            if (dropRule.equalsIgnoreCase(value.getSerializedName())) {
-                                return value;
-                            }
-                        }
-                        return DropRule.DEFAULT;
-                    }),
-                    getValueOptionally(entry, "toggle_render", Boolean::parseBoolean),
-                    List.of(),
-                    Optional.empty(),
-                    Optional.empty());
-            map.computeIfAbsent(id, SlotType.Builder::new).apply(slotDataEntry, provider);
-            results.add(id);
-        }
-        return results;
-    }
-
-    private static <T> Optional<T> getValueOptionally(Map<String, String> map, String key,
-                                                      Function<String, T> mapper) {
-        if (map.containsKey(key)) {
-            return Optional.of(mapper.apply(map.get(key)));
-        }
-        return Optional.empty();
-    }
-
-    protected void apply(Map<Identifier, JsonElement> object,
-                         @Nonnull ResourceManager resourceManager,
-                         @Nonnull ProfilerFiller profiler) {
-        Map<Identifier, JsonElement> sorted = new TreeMap<>((o1, o2) -> {
-            String s1 = o1.getNamespace();
-            String s2 = o2.getNamespace();
-
-            if (s1.equals(CuriosConstants.MOD_ID) && !s2.equals(CuriosConstants.MOD_ID)) {
-                return -1;
-            } else if (s2.equals(CuriosConstants.MOD_ID) && !s1.equals(CuriosConstants.MOD_ID)) {
-                return 1;
-            } else {
-                return o1.compareTo(o2);
-            }
-        });
-        sorted.putAll(object);
-        this.pendingData = sorted;
-    }
-
     public void populateData() {
-        Map<String, SlotType.Builder> slotMap = new HashMap<>();
-        Map<EntityType<?>, ImmutableSet.Builder<String>> entityMap = new HashMap<>();
+        // Slots are defined directly in code — no datapack/config parsing involved.
+        Map<String, ISlotType> slotTypes = new LinkedHashMap<>();
+        for (ISlotType slotType : BUILTIN_SLOTS) {
+            slotTypes.put(slotType.getId(), slotType);
+        }
+        this.slots = ImmutableMap.copyOf(slotTypes);
+
         Map<String, ImmutableSet.Builder<String>> modMap = new HashMap<>();
-        HolderLookup.RegistryLookup<EntityType<?>> registry =
-                this.registryAccess.lookupOrThrow(Registries.ENTITY_TYPE);
-
-        // First parse through the slot data files
-        for (Map.Entry<Identifier, JsonElement> entry : this.pendingData.entrySet()) {
-
-            if (!entry.getKey().getPath().startsWith("slots")) {
-                continue;
-            }
-            String namespace = entry.getKey().getNamespace();
-            String id = entry.getKey().getPath().substring("slots/".length());
-            ISlotData.Entry.CODEC.decode(
-                            this.registryAccess.createSerializationContext(JsonOps.INSTANCE), entry.getValue())
-                    .ifSuccess(pair -> {
-                        ISlotData.Entry slotDataEntry = pair.getFirst();
-                        slotDataEntry.entities().ifPresent(entities -> {
-                            List<EntityType<?>> list = getEntitiesFromEither(registry, entities);
-
-                            for (EntityType<?> entityType : list) {
-                                entityMap.computeIfAbsent(entityType, (k) -> ImmutableSet.builder())
-                                        .add(id);
-                            }
-                        });
-                        slotMap.computeIfAbsent(id, SlotType.Builder::new)
-                                .apply(slotDataEntry, this.registryAccess);
-                        modMap.computeIfAbsent(id, (k) -> ImmutableSet.builder())
-                                .add(namespace);
-                    });
+        for (String id : slotTypes.keySet()) {
+            modMap.computeIfAbsent(id, (k) -> ImmutableSet.builder()).add("mohistmc");
         }
-
-        // Secondly parse through the config slot data
-        try {
-            Set<String> configs = fromConfig(slotMap, this.registryAccess);
-            this.configSlots = ImmutableSet.copyOf(configs);
-
-            for (String id : configs) {
-                modMap.computeIfAbsent(id, (k) -> ImmutableSet.builder()).add("config");
-                // Assume player-like entities for config entries
-                registry.get(CuriosTags.PLAYER_LIKE).ifPresent(entries -> {
-
-                    for (Holder<EntityType<?>> entry : entries) {
-                        entityMap.computeIfAbsent(entry.value(), (k) -> ImmutableSet.builder()).add(id);
-                    }
-                });
-            }
-        } catch (IllegalArgumentException e) {
-            CuriosConstants.LOG.error("Config parsing error", e);
-        }
-
-        for (Map.Entry<Identifier, JsonElement> entry : this.pendingData.entrySet()) {
-
-            if (!entry.getKey().getPath().startsWith("entities")) {
-                continue;
-            }
-            Identifier resourcelocation = entry.getKey();
-            IEntitiesData.Entry.CODEC.decode(
-                            this.registryAccess.createSerializationContext(JsonOps.INSTANCE), entry.getValue())
-                    .ifSuccess(pair -> {
-                        IEntitiesData.Entry entityDataEntry = pair.getFirst();
-                        List<EntityType<?>> entities =
-                                getEntitiesFromEither(registry, entityDataEntry.entities());
-
-                        for (EntityType<?> entity : entities) {
-                            ImmutableSet.Builder<String> builder =
-                                    entityDataEntry.replace()
-                                            ? entityMap.computeIfPresent(entity, (k, v) -> ImmutableSet.builder())
-                                            : entityMap.computeIfAbsent(entity, k -> ImmutableSet.builder());
-                            List<Either<String, IEntitiesData.IEntitySlotEntry>> slots = entityDataEntry.slots();
-
-                            for (Either<String, IEntitiesData.IEntitySlotEntry> slot : slots) {
-                                IEntitiesData.IEntitySlotEntry slotEntry = slot.map(
-                                        str -> new EntitiesData.EntitySlotEntry(true, new SlotData(str, true).build()),
-                                        c -> c);
-                                String key = slotEntry.slot().id().orElse("");
-
-                                if (!key.isEmpty()) {
-                                    boolean create = slotEntry.create();
-                                    SlotType.Builder slotType = slotMap.get(key);
-
-                                    if (create && slotType == null) {
-                                        SlotType.Builder slotBuilder = new SlotType.Builder(key);
-                                        slotBuilder.apply(slotEntry.slot(), this.registryAccess);
-                                        slotType = slotBuilder;
-                                        slotMap.put(key, slotBuilder);
-                                    }
-
-                                    if (slotType != null) {
-                                        Objects.requireNonNull(builder).add(key);
-                                    }
-                                }
-                            }
-                        }
-                    });
-            modMap.computeIfAbsent(resourcelocation.getPath(), (k) -> ImmutableSet.builder())
-                    .add(resourcelocation.getNamespace());
-        }
-        this.slots = slotMap.entrySet().stream()
-                .collect(ImmutableMap.toImmutableMap(Map.Entry::getKey, entry -> entry.getValue().build()));
         this.idToMods = modMap.entrySet().stream()
                 .collect(ImmutableMap.toImmutableMap(Map.Entry::getKey, entry -> entry.getValue().build()));
-        Map<EntityType<?>, Map<String, ISlotType>> newEntitySlots = new LinkedHashMap<>();
 
-        for (Map.Entry<EntityType<?>, ImmutableSet.Builder<String>> entry : entityMap.entrySet()) {
-            Set<String> slots = entry.getValue().build();
-            Map<String, ISlotType> innerMap = new LinkedHashMap<>();
+        // Players get every slot by default (entities mechanism removed).
+        this.entitySlots = ImmutableMap.of(EntityTypes.PLAYER, this.slots);
 
-            for (String id : slots) {
-                ISlotType slotType = this.slots.get(id);
-
-                if (slotType != null) {
-                    innerMap.put(id, slotType);
-                }
-            }
-            newEntitySlots.put(entry.getKey(), innerMap);
-        }
-        this.entitySlots = ImmutableMap.copyOf(newEntitySlots);
-        CuriosConstants.LOG.info("Loaded {} curio slots", slotMap.size());
-        CuriosConstants.LOG.info("Loaded {} curio entities", entityMap.size());
-        this.pendingData.clear();
-    }
-
-    private List<EntityType<?>> getEntitiesFromEither(
-            HolderLookup.RegistryLookup<EntityType<?>> lookup,
-            List<Either<TagKey<EntityType<?>>, ResourceKey<EntityType<?>>>> resource) {
-        List<EntityType<?>> entities = new ArrayList<>();
-        for (Either<TagKey<EntityType<?>>, ResourceKey<EntityType<?>>> entry : resource) {
-            entry.ifRight(entity -> {
-                lookup.get(entity).ifPresent(val -> entities.add(val.value()));
-            });
-            entry.ifLeft(entityTag -> {
-                lookup.get(entityTag).ifPresent(val -> {
-                    for (Holder<EntityType<?>> entityTypeHolder : val) {
-                        entities.add(entityTypeHolder.value());
-                    }
-                });
-            });
-        }
-        return entities;
+        CuriosConstants.LOG.info("Loaded {} curio slots", this.slots.size());
     }
 
     public Map<EntityType<?>, Map<String, ISlotType>> getAllEntitySlots() {

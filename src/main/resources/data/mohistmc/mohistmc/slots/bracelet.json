@@ -1,5 +1,0 @@
-{
-  "order": 120,
-  "icon": "mohistmc:slot/empty_bracelet_slot",
-  "validators": ["mohistmc:tag"]
-}

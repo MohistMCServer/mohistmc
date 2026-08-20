@@ -23,7 +23,6 @@ package com.mohistmc.mod.module.curios.api.type;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.api.CuriosSlotTypes;
 import com.mohistmc.mod.module.curios.api.SlotContext;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.internal.CuriosServices;
 import com.mojang.serialization.Codec;
 import java.util.Set;
@@ -156,21 +155,6 @@ public interface ISlotType extends Comparable<ISlotType> {
      * @return true if the slot type can toggle rendering on entities, false otherwise.
      */
     boolean canToggleRendering();
-
-    /**
-     * Gets the {@link DropRule} for this slot type.
-     *
-     * <p>This drop rule is called when determining the drop behavior of this slot type. This can
-     * occur during player/entity death or when a game event forces an item to be dropped from the
-     * curios inventory.
-     *
-     * <p>This drop rule can be overridden by the item inside the slot through
-     * {@link DropRule} and globally through
-     * {@link com.mohistmc.mod.module.curios.api.event.DropRulesEvent}.
-     *
-     * @return the drop rule for this slot type.
-     */
-    DropRule getDropRule();
 
     /**
      * Gets the {@link Identifier} locations of validators to apply to this slot type.

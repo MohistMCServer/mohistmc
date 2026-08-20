@@ -22,7 +22,6 @@ package com.mohistmc.mod.module.curios.common.data;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.data.ISlotData;
 import com.mojang.datafixers.util.Either;
 import java.util.ArrayList;
@@ -49,7 +48,6 @@ public class SlotData implements ISlotData {
     private Boolean useNativeGui;
     private Boolean hasCosmetic;
     private Identifier icon;
-    private DropRule dropRule;
     private Boolean renderToggle;
     private Boolean replace;
     private List<ICondition> conditions;
@@ -106,12 +104,6 @@ public class SlotData implements ISlotData {
     @Override
     public ISlotData icon(Identifier icon) {
         this.icon = icon;
-        return this;
-    }
-
-    @Override
-    public ISlotData dropRule(DropRule dropRule) {
-        this.dropRule = dropRule;
         return this;
     }
 
@@ -177,7 +169,6 @@ public class SlotData implements ISlotData {
                 Optional.ofNullable(this.useNativeGui),
                 Optional.ofNullable(this.hasCosmetic),
                 Optional.ofNullable(this.icon),
-                Optional.ofNullable(this.dropRule),
                 Optional.ofNullable(this.renderToggle),
                 this.conditions != null ? this.conditions : List.of(),
                 Optional.ofNullable(this.validators),
@@ -216,10 +207,6 @@ public class SlotData implements ISlotData {
             jsonObject.addProperty("icon", this.icon.toString());
         }
 
-        if (this.dropRule != null) {
-            jsonObject.addProperty("drop_rule", this.dropRule.toString());
-        }
-
         if (this.renderToggle != null) {
             jsonObject.addProperty("render_toggle", this.renderToggle);
         }
@@ -247,7 +234,6 @@ public class SlotData implements ISlotData {
                         Optional<Boolean> useNativeGui,
                         Optional<Boolean> hasCosmetic,
                         Optional<Identifier> icon,
-                        Optional<DropRule> dropRule,
                         Optional<Boolean> renderToggle,
                         List<ICondition> conditions,
                         Optional<List<Identifier>> validators,

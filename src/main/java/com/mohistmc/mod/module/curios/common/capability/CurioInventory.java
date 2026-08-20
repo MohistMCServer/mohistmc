@@ -91,8 +91,7 @@ public class CurioInventory implements ValueIOSerializable {
             String id = entry.getKey();
             ISlotType slotType = entry.getValue();
             result.put(slotType, new CurioStacksHandler(this, id, slotType.getSize(),
-                    slotType.useNativeGui(), slotType.hasCosmetic(), slotType.canToggleRendering(),
-                    slotType.getDropRule()));
+                    slotType.useNativeGui(), slotType.hasCosmetic(), slotType.canToggleRendering()));
         }
         return result;
     }

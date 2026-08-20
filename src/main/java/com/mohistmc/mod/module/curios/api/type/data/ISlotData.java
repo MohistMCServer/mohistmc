@@ -21,7 +21,6 @@
 package com.mohistmc.mod.module.curios.api.type.data;
 
 import com.google.gson.JsonObject;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.internal.CuriosServices;
 import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.Codec;
@@ -55,8 +54,6 @@ public interface ISlotData {
     ISlotData renderToggle(boolean renderToggle);
 
     ISlotData icon(Identifier icon);
-
-    ISlotData dropRule(DropRule dropRule);
 
     ISlotData addCondition(ICondition... condition);
 
@@ -94,8 +91,6 @@ public interface ISlotData {
         Optional<Boolean> hasCosmetic();
 
         Optional<Identifier> icon();
-
-        Optional<DropRule> dropRule();
 
         Optional<Boolean> renderToggle();
 

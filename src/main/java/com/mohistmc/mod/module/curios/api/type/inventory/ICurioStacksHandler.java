@@ -20,7 +20,6 @@
 
 package com.mohistmc.mod.module.curios.api.type.inventory;
 
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -75,19 +74,6 @@ public interface ICurioStacksHandler extends ValueIOSerializable {
      */
     default boolean canToggleRendering() {
         return true;
-    }
-
-    /**
-     * Gets the drop rule that determines behavior for the contents upon death.
-     * See {@link DropRule} for possible values.
-     * <br>
-     * {@link DropRule#DEFAULT} will defer to the drop behavior defined by the Curios
-     * configuration.
-     *
-     * @return The {@link DropRule} to use for drop behavior
-     */
-    default DropRule getDropRule() {
-        return DropRule.DEFAULT;
     }
 
     /**

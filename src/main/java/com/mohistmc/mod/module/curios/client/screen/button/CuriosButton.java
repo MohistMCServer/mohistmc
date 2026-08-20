@@ -23,7 +23,6 @@ package com.mohistmc.mod.module.curios.client.screen.button;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.client.screen.CuriosScreen;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketOpenCurios;
-import com.mohistmc.mod.module.curios.common.network.client.CPacketOpenVanilla;
 import com.mojang.datafixers.util.Pair;
 import javax.annotation.Nonnull;
 import net.minecraft.client.Minecraft;
@@ -32,8 +31,6 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
-import net.minecraft.client.gui.screens.recipebook.RecipeBookComponent;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
@@ -57,28 +54,7 @@ public class CuriosButton extends ImageButton {
                     if (mc.player != null) {
                         ItemStack stack = mc.player.containerMenu.getCarried();
                         mc.player.containerMenu.setCarried(ItemStack.EMPTY);
-
-                        if (parentGui instanceof CuriosScreen curiosScreen) {
-                            mc.mouseHandler.mouseGrabbed = true;
-                            mc.player.clientSideCloseContainer();
-                            InventoryScreen inventoryScreen = new InventoryScreen(mc.player);
-                            mc.mouseHandler.mouseGrabbed = false;
-                            mc.gui.setScreen(inventoryScreen);
-                            inventoryScreen.xMouse = curiosScreen.oldMouseX;
-                            inventoryScreen.yMouse = curiosScreen.oldMouseY;
-                            mc.player.inventoryMenu.setCarried(stack);
-                            ClientPacketDistributor.sendToServer(new CPacketOpenVanilla(stack));
-                        } else {
-
-                            if (parentGui instanceof InventoryScreen inventory) {
-                                RecipeBookComponent<?> recipeBookGui = inventory.recipeBookComponent;
-
-                                if (recipeBookGui.isVisible()) {
-                                    recipeBookGui.toggleVisibility();
-                                }
-                            }
-                            ClientPacketDistributor.sendToServer(new CPacketOpenCurios(stack));
-                        }
+                        ClientPacketDistributor.sendToServer(new CPacketOpenCurios(stack));
                     }
                 });
         this.parentGui = parentGui;

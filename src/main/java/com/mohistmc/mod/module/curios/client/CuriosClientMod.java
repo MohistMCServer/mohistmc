@@ -31,7 +31,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.renderstate.RegisterRenderStateModifiersEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -47,16 +46,10 @@ public class CuriosClientMod {
             new ContextKey<>(CuriosResources.resource("handheld_render"));
 
     public CuriosClientMod(final IEventBus eventBus, final ModContainer modContainer) {
-        eventBus.addListener(this::registerKeys);
         eventBus.addListener(this::setupClient);
         eventBus.addListener(this::registerMenuScreens);
         eventBus.addListener(this::addEntityLayers);
         eventBus.addListener(this::registerRenderStateModifiers);
-    }
-
-    private void registerKeys(final RegisterKeyMappingsEvent evt) {
-        evt.registerCategory(CuriosKeyMappings.CURIOS_KEY_CATEGORY);
-        evt.register(CuriosKeyMappings.OPEN_CURIOS_INVENTORY);
     }
 
     private void setupClient(final FMLClientSetupEvent evt) {

@@ -5,7 +5,6 @@ import com.mohistmc.mod.module.curios.CuriosConstants;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.api.CuriosSlotTypes;
 import com.mohistmc.mod.module.curios.api.SlotAttribute;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.internal.services.ICuriosCodecs;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mohistmc.mod.module.curios.api.type.data.IEntitiesData;
@@ -61,9 +60,6 @@ public class CuriosCodecs implements ICuriosCodecs {
                                 Identifier.CODEC
                                         .optionalFieldOf("icon", ISlotType.GENERIC_ICON)
                                         .forGetter(ISlotType::getIcon),
-                                DropRule.CODEC
-                                        .optionalFieldOf("drop_rule", DropRule.DEFAULT)
-                                        .forGetter(ISlotType::getDropRule),
                                 Codec.BOOL
                                         .optionalFieldOf("render_toggle", true)
                                         .forGetter(ISlotType::canToggleRendering),
@@ -136,9 +132,6 @@ public class CuriosCodecs implements ICuriosCodecs {
                                 Identifier.CODEC
                                         .optionalFieldOf("icon")
                                         .forGetter(ISlotData.Entry::icon),
-                                DropRule.CODEC
-                                        .optionalFieldOf("drop_rule")
-                                        .forGetter(ISlotData.Entry::dropRule),
                                 Codec.BOOL
                                         .optionalFieldOf("render_toggle")
                                         .forGetter(ISlotData.Entry::renderToggle),
@@ -249,7 +242,6 @@ public class CuriosCodecs implements ICuriosCodecs {
                 boolean useNativeGui = ByteBufCodecs.BOOL.decode(buffer);
                 boolean hasCosmetic = ByteBufCodecs.BOOL.decode(buffer);
                 Identifier icon = Identifier.STREAM_CODEC.decode(buffer);
-                DropRule dropRule = DropRule.STREAM_CODEC.decode(buffer);
                 boolean renderToggle = ByteBufCodecs.BOOL.decode(buffer);
                 Set<EntityType<?>> entityTypes =
                         ByteBufCodecs.collection(HashSet::new, ByteBufCodecs.registry(Registries.ENTITY_TYPE),
@@ -257,7 +249,7 @@ public class CuriosCodecs implements ICuriosCodecs {
                 Set<Identifier> validators =
                         ByteBufCodecs.collection(HashSet::new, Identifier.STREAM_CODEC, 256)
                                 .decode(buffer);
-                return new SlotType(id, order, size, useNativeGui, hasCosmetic, icon, dropRule,
+                return new SlotType(id, order, size, useNativeGui, hasCosmetic, icon,
                         renderToggle, validators, entityTypes);
             }
 
@@ -269,7 +261,6 @@ public class CuriosCodecs implements ICuriosCodecs {
                 ByteBufCodecs.BOOL.encode(buffer, value.useNativeGui());
                 ByteBufCodecs.BOOL.encode(buffer, value.hasCosmetic());
                 Identifier.STREAM_CODEC.encode(buffer, value.getIcon());
-                DropRule.STREAM_CODEC.encode(buffer, value.getDropRule());
                 ByteBufCodecs.BOOL.encode(buffer, value.canToggleRendering());
                 ByteBufCodecs.collection(HashSet::new, ByteBufCodecs.registry(Registries.ENTITY_TYPE), 256)
                         .encode(buffer, new HashSet<>(value.getDefaultEntityTypes()));

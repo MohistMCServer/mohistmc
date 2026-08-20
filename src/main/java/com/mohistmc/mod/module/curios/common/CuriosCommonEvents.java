@@ -25,12 +25,8 @@ import com.google.common.collect.Multimap;
 import com.mohistmc.mod.module.curios.api.CuriosApi;
 import com.mohistmc.mod.module.curios.api.SlotAttribute;
 import com.mohistmc.mod.module.curios.api.SlotContext;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.event.CurioChangeEvent;
-import com.mohistmc.mod.module.curios.api.event.CurioDropsEvent;
-import com.mohistmc.mod.module.curios.api.event.DropRulesEvent;
 import com.mohistmc.mod.module.curios.api.type.ICuriosMenu;
-import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mohistmc.mod.module.curios.api.type.capability.ICurio;
 import com.mohistmc.mod.module.curios.api.type.capability.ICurioItem;
 import com.mohistmc.mod.module.curios.api.type.capability.ICuriosItemHandler;
@@ -45,26 +41,20 @@ import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncStac
 import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncStack.HandlerType;
 import com.mohistmc.mod.module.curios.impl.CuriosRegistry;
 import com.mojang.datafixers.util.Pair;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Predicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.players.PlayerList;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -73,14 +63,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.gamerules.GameRules;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -88,13 +75,12 @@ import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.entity.EntityEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.EnderManAngerEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.level.BlockDropsEvent;
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -102,61 +88,6 @@ import net.neoforged.neoforge.server.ServerLifecycleHooks;
 public class CuriosCommonEvents {
 
     static Map<UUID, Pair<Long, Boolean>> enderManMaskCache = new HashMap<>();
-
-    private static void handleDrops(String identifier, LivingEntity livingEntity,
-                                    List<Pair<Predicate<ItemStack>, DropRule>> dropRules,
-                                    NonNullList<Boolean> renders, IDynamicStackHandler stacks,
-                                    boolean cosmetic, Collection<ItemEntity> drops,
-                                    boolean keepInventory, LivingDropsEvent evt) {
-        for (int i = 0; i < stacks.getSlots(); i++) {
-            ItemStack stack = stacks.getStackInSlot(i);
-            SlotContext slotContext = new SlotContext(identifier, livingEntity, i, cosmetic,
-                    renders.size() > i && renders.get(i));
-
-            if (!stack.isEmpty()) {
-                DropRule dropRuleOverride = null;
-
-                for (Pair<Predicate<ItemStack>, DropRule> override : dropRules) {
-
-                    if (override.getFirst().test(stack)) {
-                        dropRuleOverride = override.getSecond();
-                    }
-                }
-                DropRule dropRule = dropRuleOverride != null ? dropRuleOverride : CuriosApi.getCurio(stack)
-                        .map(curio -> curio.getDropRule(slotContext, evt.getSource(), evt.isRecentlyHit()))
-                        .orElse(DropRule.DEFAULT);
-
-                if (dropRule == DropRule.DEFAULT) {
-                    ISlotType slotType = ISlotType.get(identifier);
-
-                    if (slotType != null) {
-                        dropRule = slotType.getDropRule();
-                    }
-                }
-
-                if ((dropRule == DropRule.DEFAULT && keepInventory) || dropRule == DropRule.ALWAYS_KEEP) {
-                    continue;
-                }
-
-                if (!EnchantmentHelper.has(stack, EnchantmentEffectComponents.PREVENT_EQUIPMENT_DROP) &&
-                        dropRule != DropRule.DESTROY) {
-                    drops.add(getDroppedItem(stack, livingEntity));
-                }
-                stacks.setStackInSlot(i, ItemStack.EMPTY);
-            }
-        }
-    }
-
-    private static ItemEntity getDroppedItem(ItemStack droppedItem, LivingEntity livingEntity) {
-        double d0 = livingEntity.getY() - 0.30000001192092896D + livingEntity.getEyeHeight();
-        ItemEntity entityitem = new ItemEntity(livingEntity.level(), livingEntity.getX(), d0,
-                livingEntity.getZ(), droppedItem);
-        entityitem.setPickUpDelay(40);
-        float f = livingEntity.level().getRandom().nextFloat() * 0.5F;
-        float f1 = livingEntity.level().getRandom().nextFloat() * ((float) Math.PI * 2F);
-        entityitem.setDeltaMovement((-Mth.sin(f1) * f), 0.20000000298023224D, (Mth.cos(f1) * f));
-        return entityitem;
-    }
 
     private static boolean handleMending(Player player, IDynamicStackHandler stacks,
                                          PlayerXpEvent.PickupXp evt) {
@@ -205,7 +136,10 @@ public class CuriosCommonEvents {
     }
 
     @SubscribeEvent
-    public void onTagsUpdated(final ServerAboutToStartEvent evt) {
+    public void onTagsUpdated(final TagsUpdatedEvent.ServerDataLoad evt) {
+        // Server-side only: fires after datapack reload so the built-in slots are populated once.
+        // Listening to the root TagsUpdatedEvent would also fire on the client (ClientPacketReceived)
+        // in singleplayer, re-running populateData and needlessly re-building the same data.
         CuriosSlotResources.SERVER.populateData();
     }
 
@@ -277,46 +211,6 @@ public class CuriosCommonEvents {
                     handler -> PacketDistributor.sendToPlayer(serverPlayer,
                             new SPacketSyncCurios(target.getId(),
                                     handler.getCurios())));
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void playerDrops(LivingDropsEvent evt) {
-        LivingEntity livingEntity = evt.getEntity();
-
-        if (!livingEntity.isSpectator()) {
-
-            CuriosApi.getCuriosInventory(livingEntity).ifPresent(handler -> {
-                Collection<ItemEntity> drops = evt.getDrops();
-                Collection<ItemEntity> curioDrops = new ArrayList<>();
-                Map<String, ICurioStacksHandler> curios = handler.getCurios();
-                // todo: Fix looting levels when NeoForge has a new API or figure a workaround
-                DropRulesEvent dropRulesEvent =
-                        new DropRulesEvent(livingEntity, handler, evt.getSource(), 0, evt.isRecentlyHit());
-                NeoForge.EVENT_BUS.post(dropRulesEvent);
-                List<Pair<Predicate<ItemStack>, DropRule>> dropRules = dropRulesEvent.getOverrides();
-                boolean keepInventory = false;
-
-                if (livingEntity instanceof Player
-                        && livingEntity.level() instanceof ServerLevel serverLevel) {
-                    keepInventory =
-                            serverLevel.getGameRules().get(GameRules.KEEP_INVENTORY);
-                }
-                boolean finalKeepInventory = keepInventory;
-                curios.forEach((id, stacksHandler) -> {
-                    handleDrops(id, livingEntity, dropRules, stacksHandler.getRenders(),
-                            stacksHandler.getStacks(), false, curioDrops, finalKeepInventory, evt);
-                    handleDrops(id, livingEntity, dropRules, stacksHandler.getRenders(),
-                            stacksHandler.getCosmeticStacks(), true, curioDrops, finalKeepInventory, evt);
-                });
-                CurioDropsEvent dropsEvent = NeoForge.EVENT_BUS.post(
-                        new CurioDropsEvent(livingEntity, handler, evt.getSource(), curioDrops, 0,
-                                evt.isRecentlyHit()));
-
-                if (!dropsEvent.isCanceled()) {
-                    drops.addAll(curioDrops);
-                }
-            });
         }
     }
 

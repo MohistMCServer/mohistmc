@@ -24,9 +24,7 @@ import com.mohistmc.mod.module.curios.CuriosConstants;
 import com.mohistmc.mod.module.curios.api.CuriosApi;
 import com.mohistmc.mod.module.curios.api.client.ICuriosScreen;
 import com.mohistmc.mod.module.curios.api.type.ICurioSlot;
-import com.mohistmc.mod.module.curios.client.CuriosKeyMappings;
 import com.mohistmc.mod.module.curios.client.screen.button.CosmeticButton;
-import com.mohistmc.mod.module.curios.client.screen.button.CuriosButton;
 import com.mohistmc.mod.module.curios.client.screen.button.ICuriosWidget;
 import com.mohistmc.mod.module.curios.client.screen.button.PageButton;
 import com.mohistmc.mod.module.curios.client.screen.button.RenderButton;
@@ -34,7 +32,6 @@ import com.mohistmc.mod.module.curios.common.inventory.CurioSlot;
 import com.mohistmc.mod.module.curios.common.inventory.container.CuriosMenu;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketPage;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketToggleRender;
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +73,6 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
     public int panelWidth = 0;
     public int oldMouseX = 0;
     public int oldMouseY = 0;
-    private CuriosButton buttonCurios;
     private CosmeticButton cosmeticButton;
     private PageButton nextPage;
     private PageButton prevPage;
@@ -109,17 +105,6 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
     public void init() {
         super.init();
         this.panelWidth = this.menu.panelWidth;
-        Pair<Integer, Integer> offsets = getButtonOffset(false);
-        this.buttonCurios =
-                new CuriosButton(
-                        this,
-                        this.getLeftPos() + offsets.getFirst() - 2,
-                        this.height / 2 + offsets.getSecond() - 2,
-                        10,
-                        10,
-                        CuriosButton.BIG);
-
-        this.addRenderableWidget(this.buttonCurios);
         this.updateRenderButtons();
     }
 
@@ -284,19 +269,7 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
 
     @Override
     public boolean keyPressed(@Nonnull KeyEvent event) {
-
-        if (super.keyPressed(event)) {
-            return true;
-        } else if (CuriosKeyMappings.OPEN_CURIOS_INVENTORY.isActiveAndMatches(
-                InputConstants.getKey(event))) {
-            LocalPlayer playerEntity = this.getMinecraft().player;
-
-            if (playerEntity != null) {
-                playerEntity.closeContainer();
-            }
-            return true;
-        }
-        return false;
+        return super.keyPressed(event);
     }
 
     @Override

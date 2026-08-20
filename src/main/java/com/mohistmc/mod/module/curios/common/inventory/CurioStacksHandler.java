@@ -26,7 +26,6 @@ import com.mohistmc.mod.module.curios.CuriosConstants;
 import com.mohistmc.mod.module.curios.api.CuriosApi;
 import com.mohistmc.mod.module.curios.api.SlotAttribute;
 import com.mohistmc.mod.module.curios.api.SlotContext;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.event.CurioChangeEvent;
 import com.mohistmc.mod.module.curios.api.event.SlotModifiersUpdatedEvent;
 import com.mohistmc.mod.module.curios.api.type.ICuriosMenu;
@@ -78,7 +77,6 @@ public class CurioStacksHandler implements ICurioStacksHandler {
     private boolean visible;
     private boolean cosmetic;
     private boolean canToggleRender;
-    private DropRule dropRule;
     private boolean update;
     private NonNullList<Boolean> renderHandler;
     private NonNullList<Boolean> activeStates;
@@ -87,7 +85,7 @@ public class CurioStacksHandler implements ICurioStacksHandler {
     private boolean dataLoaded = false;
 
     public CurioStacksHandler(CurioInventory curioInventory, String identifier) {
-        this(curioInventory, identifier, 1, true, false, true, DropRule.DEFAULT);
+        this(curioInventory, identifier, 1, true, false, true);
     }
 
     public CurioStacksHandler(
@@ -96,15 +94,13 @@ public class CurioStacksHandler implements ICurioStacksHandler {
             int size,
             boolean visible,
             boolean cosmetic,
-            boolean canToggleRender,
-            DropRule dropRule) {
+            boolean canToggleRender) {
         this.baseSize = size;
         this.visible = visible;
         this.cosmetic = cosmetic;
         this.curioInventory = curioInventory;
         this.identifier = identifier;
         this.canToggleRender = canToggleRender;
-        this.dropRule = dropRule;
         this.renderHandler = NonNullList.withSize(size, true);
         this.activeStates = NonNullList.withSize(size, true);
         this.previousActiveStates = NonNullList.withSize(size, true);
@@ -268,11 +264,6 @@ public class CurioStacksHandler implements ICurioStacksHandler {
     @Override
     public boolean canToggleRendering() {
         return this.canToggleRender;
-    }
-
-    @Override
-    public DropRule getDropRule() {
-        return this.dropRule;
     }
 
     @Override
@@ -616,7 +607,6 @@ public class CurioStacksHandler implements ICurioStacksHandler {
         output.putBoolean("Cosmetic", this.hasCosmetic());
         output.putBoolean("Visible", this.isVisible());
         output.putBoolean("ToggleRender", this.canToggleRendering());
-        output.store("DropRule", DropRule.CODEC, this.getDropRule());
         Set<AttributeModifier> permanentModifiers = this.getPermanentModifiers();
         output.store("PermanentModifiers", AttributeModifier.CODEC.listOf(),
                 new ArrayList<>(permanentModifiers));
@@ -644,7 +634,6 @@ public class CurioStacksHandler implements ICurioStacksHandler {
         this.cosmetic = input.getBooleanOr("Cosmetic", this.hasCosmetic());
         this.visible = input.getBooleanOr("Visible", this.isVisible());
         this.canToggleRender = input.getBooleanOr("ToggleRender", this.canToggleRendering());
-        this.dropRule = input.read("DropRule", DropRule.CODEC).orElse(this.getDropRule());
         List<AttributeModifier> permanentModifiers =
                 input.read("PermanentModifiers", AttributeModifier.CODEC.listOf()).orElse(List.of());
 

@@ -1,5 +1,0 @@
-{
-  "order": 180,
-  "icon": "mohistmc:slot/empty_belt_slot",
-  "validators": ["mohistmc:tag"]
-}

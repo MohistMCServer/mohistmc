@@ -23,7 +23,6 @@ package com.mohistmc.mod.module.curios.common.capability;
 import com.google.common.collect.Multimap;
 import com.mohistmc.mod.module.curios.api.CurioAttributeModifiers;
 import com.mohistmc.mod.module.curios.api.SlotContext;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.capability.ICurio;
 import com.mohistmc.mod.module.curios.api.type.capability.ICurioItem;
 import java.util.List;
@@ -95,12 +94,6 @@ public class ItemizedCurioCapability implements ICurio {
     @Override
     public void readSyncData(SlotContext slotContext, CompoundTag compound) {
         this.curioItem.readSyncData(slotContext, compound, this.getStack());
-    }
-
-    @Nonnull
-    @Override
-    public DropRule getDropRule(SlotContext slotContext, DamageSource source, boolean recentlyHit) {
-        return this.curioItem.getDropRule(slotContext, source, recentlyHit, this.getStack());
     }
 
     @Override

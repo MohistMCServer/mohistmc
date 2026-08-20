@@ -26,7 +26,6 @@ import com.mohistmc.mod.module.curios.api.CuriosApi;
 import com.mohistmc.mod.module.curios.api.CuriosDataComponents;
 import com.mohistmc.mod.module.curios.api.SlotContext;
 import com.mohistmc.mod.module.curios.api.common.CuriosCommonHooks;
-import com.mohistmc.mod.module.curios.api.common.DropRule;
 import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -289,22 +288,6 @@ public interface ICurioItem {
      */
     default void readSyncData(SlotContext slotContext, CompoundTag compound, ItemStack stack) {
         defaultInstance.readSyncData(slotContext, compound);
-    }
-
-    /**
-     * Determines if the ItemStack should drop on death and persist through respawn. This will persist
-     * the ItemStack in the curio slot to the respawned player if applicable.
-     *
-     * @param slotContext Context about the slot that the ItemStack is attempting to equip into
-     * @param source      The damage source that killed the wearer and triggered the drop
-     * @param recentlyHit Whether the wearer was recently hit
-     * @param stack       The ItemStack in question
-     * @return The {@link DropRule} that applies to this curio
-     */
-    @Nonnull
-    default DropRule getDropRule(SlotContext slotContext, DamageSource source, boolean recentlyHit,
-                                 ItemStack stack) {
-        return DropRule.DEFAULT;
     }
 
     /**
