@@ -67,8 +67,8 @@ import net.minecraft.world.entity.EntityTypes;
 
 public class CuriosSlotResources extends SimpleJsonResourceReloadListener<JsonElement> {
 
-    public static final Identifier ID = CuriosResources.resource("curios_slots");
-    private static final String folder = "curios";
+    public static final Identifier ID = CuriosResources.resource("mohistmc_slots");
+    private static final String folder = "mohistmc";
     public static final StreamCodec<RegistryFriendlyByteBuf, CuriosSlotResources> STREAM_CODEC =
             StreamCodec.composite(
                     ByteBufCodecs.map(

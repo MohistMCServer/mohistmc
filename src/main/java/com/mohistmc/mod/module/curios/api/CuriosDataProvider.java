@@ -63,9 +63,9 @@ public abstract class CuriosDataProvider implements DataProvider {
                               CompletableFuture<HolderLookup.Provider> registries) {
         this.modId = modId;
         this.entitiesPathProvider =
-                output.createPathProvider(PackOutput.Target.DATA_PACK, "curios/entities");
+                output.createPathProvider(PackOutput.Target.DATA_PACK, "mohistmc/entities");
         this.slotsPathProvider =
-                output.createPathProvider(PackOutput.Target.DATA_PACK, "curios/slots");
+                output.createPathProvider(PackOutput.Target.DATA_PACK, "mohistmc/slots");
         this.registries = registries;
         CuriosBlockTagsProvider blockTagsProvider =
                 new CuriosBlockTagsProvider(output, registries, modId);

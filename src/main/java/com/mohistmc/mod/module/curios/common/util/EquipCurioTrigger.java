@@ -90,7 +90,7 @@ public class EquipCurioTrigger extends SimpleCriterionTrigger<EquipCurioTrigger.
                                         .forGetter(TriggerInstance::item),
                                 LocationPredicate.CODEC.optionalFieldOf("location").forGetter(
                                         TriggerInstance::location),
-                                SlotPredicate.CODEC.optionalFieldOf("curios:slot")
+                                SlotPredicate.CODEC.optionalFieldOf("mohistmc:slot")
                                         .forGetter(TriggerInstance::slot)
                         )
                         .apply(instance, TriggerInstance::new)

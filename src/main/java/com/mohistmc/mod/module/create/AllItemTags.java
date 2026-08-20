@@ -78,7 +78,7 @@ public class AllItemTags {
     public static final TagKey<Item> LUMIERE = create("stone_types/galosphere/lumiere");
 
     public static final TagKey<Item> UA_CORAL = create("upgrade_aquatic/coral");
-    public static final TagKey<Item> CURIOS_HEAD = create("curios", "head");
+    public static final TagKey<Item> CURIOS_HEAD = create("mohistmc", "head");
 
     private static TagKey<Item> create(String name) {
         return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name));

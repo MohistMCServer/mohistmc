@@ -182,7 +182,7 @@ public interface ISlotType extends Comparable<ISlotType> {
      * and {@link com.mohistmc.mod.module.curios.api.event.CurioCanEquipEvent}.
      *
      * <p>If empty, the validator will be accepted as the result of a predicate that tests the
-     * ItemStack for the presence of a {{@code #curios:id}} item tag, where id is the returned value
+     * ItemStack for the presence of a {{@code #mohistmc:id}} item tag, where id is the returned value
      * from {@link #getId()}.
      *
      * <p>Locations are registered as predicates through

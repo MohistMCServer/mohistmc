@@ -1,5 +1,5 @@
 {
   "order": 190,
   "icon": "mohistmc:slot/empty_feet_slot",
-  "validators": ["curios:tag"]
+  "validators": ["mohistmc:tag"]
 }

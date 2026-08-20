@@ -54,13 +54,6 @@ import net.neoforged.fml.loading.FMLLoader;
 public final class CuriosApi {
 
     /**
-     * @deprecated Replaced by {@link CuriosResources#MOD_ID} instead, due to the future replacement
-     * of this class and its methods.
-     */
-    @Deprecated(forRemoval = true)
-    public static final String MODID = "curios";
-
-    /**
      * Registers a {@link ICurioItem} instance to an item.
      * <br>
      * This will override any existing {@link ICurioItem} interfaces implemented on an item, unless

@@ -20,6 +20,7 @@
 
 package com.mohistmc.mod.module.curios.impl;
 
+import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.curios.api.CurioAttributeModifiers;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.api.internal.services.ICuriosRegistry;
@@ -45,29 +46,29 @@ public class CuriosRegistry implements ICuriosRegistry {
 
     private static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES =
             DeferredRegister.create(
-                    NeoForgeRegistries.Keys.ATTACHMENT_TYPES, CuriosResources.MOD_ID);
+                    NeoForgeRegistries.Keys.ATTACHMENT_TYPES, MohistMC.MODID);
     public static final Supplier<AttachmentType<CurioInventory>> INVENTORY =
             ATTACHMENT_TYPES.register("inventory",
                     () -> AttachmentType.serializable(CurioInventory::new)
                             .copyOnDeath()
                             .build());
     private static final DeferredRegister<CriterionTrigger<?>> CRITERION_TRIGGERS =
-            DeferredRegister.create(Registries.TRIGGER_TYPE, CuriosResources.MOD_ID);
+            DeferredRegister.create(Registries.TRIGGER_TYPE, MohistMC.MODID);
     public static final Supplier<EquipCurioTrigger> EQUIP_TRIGGER =
             CRITERION_TRIGGERS.register("equip_curio", () -> EquipCurioTrigger.INSTANCE);
     private static final DeferredRegister<ArgumentTypeInfo<?, ?>> ARGUMENT_TYPES =
-            DeferredRegister.create(Registries.COMMAND_ARGUMENT_TYPE, CuriosResources.MOD_ID);
+            DeferredRegister.create(Registries.COMMAND_ARGUMENT_TYPE, MohistMC.MODID);
     public static final Supplier<ArgumentTypeInfo<?, ?>> CURIO_SLOT_ARGUMENT =
             ARGUMENT_TYPES.register("slot_type",
                     () -> ArgumentTypeInfos.registerByClass(CurioArgumentType.class,
                             SingletonArgumentInfo.contextFree(
                                     CurioArgumentType::slot)));
     private static final DeferredRegister<MenuType<?>> MENU_TYPES =
-            DeferredRegister.create(Registries.MENU, CuriosResources.MOD_ID);    public static final Supplier<MenuType<CuriosMenu>> CURIO_MENU =
+            DeferredRegister.create(Registries.MENU, MohistMC.MODID);    public static final Supplier<MenuType<CuriosMenu>> CURIO_MENU =
             MENU_TYPES.register("curios_container",
                     () -> IMenuTypeExtension.create(CuriosMenu::new));
     private static final DeferredRegister<DataComponentType<?>> DATA_COMPONENTS =
-            DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, CuriosResources.MOD_ID);
+            DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, MohistMC.MODID);
     public static final Supplier<DataComponentType<CurioAttributeModifiers>> ATTRIBUTE_MODIFIERS =
             DATA_COMPONENTS.register("attribute_modifiers",
                     () -> DataComponentType.<CurioAttributeModifiers>builder()

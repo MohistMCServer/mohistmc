@@ -42,7 +42,7 @@ import net.minecraft.world.item.ItemStack;
 public class CuriosSelectorOptions {
 
     public static void register() {
-        EntitySelectorOptions.register("curios", CuriosSelectorOptions::curioArgument,
+        EntitySelectorOptions.register("mohistmc", CuriosSelectorOptions::curioArgument,
                 entitySelectorParser -> true,
                 Component.translatable(
                         "argument.entity.options.curios.description"));

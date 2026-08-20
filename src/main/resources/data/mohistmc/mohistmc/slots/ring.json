@@ -1,5 +1,5 @@
 {
   "order": 160,
   "icon": "mohistmc:slot/empty_ring_slot",
-  "validators": ["curios:tag"]
+  "validators": ["mohistmc:tag"]
 }

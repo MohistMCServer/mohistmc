@@ -62,7 +62,7 @@ public class CuriosCommonMixinHooks {
                                                              Pair<String, TypeTemplate>[] original) {
     return ArrayUtils.add(original,
         Pair.of("neoforge:attachments",
-            DSL.optionalFields("curios:inventory",
+            DSL.optionalFields("mohistmc:inventory",
                 DSL.optionalFields("Curios",
                     DSL.list(
                         DSL.optionalFields("StacksHandler",

@@ -20,6 +20,7 @@
 
 package com.mohistmc.mod.module.curios.common.integration.jei;
 
+import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.client.screen.CuriosScreen;
 import mezz.jei.api.IModPlugin;
@@ -34,7 +35,7 @@ public class CuriosJeiPlugin implements IModPlugin {
     @Override
     @NonNull
     public Identifier getPluginUid() {
-        return CuriosResources.resource(CuriosResources.MOD_ID);
+        return CuriosResources.resource(MohistMC.MODID);
     }
 
     @Override

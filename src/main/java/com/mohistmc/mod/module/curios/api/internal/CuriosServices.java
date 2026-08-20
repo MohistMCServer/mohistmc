@@ -25,22 +25,19 @@ import com.mohistmc.mod.module.curios.api.internal.services.ICuriosExtensions;
 import com.mohistmc.mod.module.curios.api.internal.services.ICuriosNetwork;
 import com.mohistmc.mod.module.curios.api.internal.services.ICuriosRegistry;
 import com.mohistmc.mod.module.curios.api.internal.services.ICuriosSlots;
-import java.util.ServiceLoader;
+import com.mohistmc.mod.module.curios.impl.CuriosCodecs;
+import com.mohistmc.mod.module.curios.impl.CuriosExtensions;
+import com.mohistmc.mod.module.curios.impl.CuriosNetwork;
+import com.mohistmc.mod.module.curios.impl.CuriosRegistry;
+import com.mohistmc.mod.module.curios.impl.CuriosSlots;
 import org.jetbrains.annotations.ApiStatus;
 
 @ApiStatus.Internal
 public class CuriosServices {
 
-    public static final ICuriosCodecs CODECS = load(ICuriosCodecs.class);
-    public static final ICuriosSlots SLOTS = load(ICuriosSlots.class);
-    public static final ICuriosRegistry REGISTRY = load(ICuriosRegistry.class);
-    public static final ICuriosExtensions EXTENSIONS = load(ICuriosExtensions.class);
-    public static final ICuriosNetwork NETWORK = load(ICuriosNetwork.class);
-
-    public static <T> T load(Class<T> clazz) {
-        return ServiceLoader.load(clazz)
-                .findFirst()
-                .orElseThrow(
-                        () -> new NullPointerException("Failed to load service for " + clazz.getName()));
-    }
+    public static final ICuriosCodecs CODECS = new CuriosCodecs();
+    public static final ICuriosSlots SLOTS = new CuriosSlots();
+    public static final ICuriosRegistry REGISTRY = new CuriosRegistry();
+    public static final ICuriosExtensions EXTENSIONS = new CuriosExtensions();
+    public static final ICuriosNetwork NETWORK = new CuriosNetwork();
 }

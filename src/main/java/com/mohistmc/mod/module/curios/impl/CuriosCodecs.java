@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.curios.impl;
 
+import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.curios.CuriosConstants;
 import com.mohistmc.mod.module.curios.api.CuriosResources;
 import com.mohistmc.mod.module.curios.api.CuriosSlotTypes;
@@ -185,7 +186,7 @@ public class CuriosCodecs implements ICuriosCodecs {
     public Codec<Holder<Attribute>> slotAttributeCodec() {
         return Identifier.CODEC.xmap(
                 resourceLocation -> {
-                    if (resourceLocation.getNamespace().startsWith(CuriosResources.MOD_ID)) {
+                    if (resourceLocation.getNamespace().startsWith(MohistMC.MODID)) {
                         String key = resourceLocation.getPath();
                         ISlotType slotType = ISlotType.get(key);
 
