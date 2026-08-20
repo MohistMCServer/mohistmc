@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.flywheel.backend.engine;
 
-import com.mohistmc.mod.module.flywheel.api.material.*;
+import com.mohistmc.mod.module.flywheel.api.material.CardinalLightingMode;
+import com.mohistmc.mod.module.flywheel.api.material.DepthTest;
+import com.mohistmc.mod.module.flywheel.api.material.Material;
+import com.mohistmc.mod.module.flywheel.api.material.Transparency;
+import com.mohistmc.mod.module.flywheel.api.material.WriteMask;
 import com.mohistmc.mod.module.flywheel.backend.MaterialShaderIndices;
 import net.minecraft.util.Mth;
 

@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.flywheel.lib.visual;
 
-import com.mohistmc.mod.module.flywheel.api.visual.*;
+import com.mohistmc.mod.module.flywheel.api.visual.BlockEntityVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.LightUpdatedVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.TickableVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualManager;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.instance.FlatLit;

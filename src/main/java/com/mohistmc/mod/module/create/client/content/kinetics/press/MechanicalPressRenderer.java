@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.press;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.kinetics.press.MechanicalPressBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.press.PressingBehaviour;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -22,7 +22,11 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.KINETIC_BLOCK;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotateAngleWithoutBeOffset;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotationAxisOf;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.shaft;
 
 public class MechanicalPressRenderer implements BlockEntityRenderer<MechanicalPressBlockEntity, MechanicalPressRenderer.MechanicalPressRenderState> {
     public MechanicalPressRenderer(Context context) {

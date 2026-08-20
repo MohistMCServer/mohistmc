@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.trains.signal;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.AllTrackRenders;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
@@ -15,6 +14,7 @@ import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
 import com.mohistmc.mod.module.create.content.trains.track.ITrackBlock;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour.RenderedTrackOverlayType;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;

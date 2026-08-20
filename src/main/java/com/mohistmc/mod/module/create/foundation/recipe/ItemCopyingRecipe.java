@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.foundation.recipe;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
 import com.mohistmc.mod.module.create.catnip.data.IntAttached;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.RegistryFriendlyByteBuf;

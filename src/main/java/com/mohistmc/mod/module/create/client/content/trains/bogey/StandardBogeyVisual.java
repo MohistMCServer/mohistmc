@@ -1,17 +1,17 @@
 package com.mohistmc.mod.module.create.client.content.trains.bogey;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.AllSpriteShifts;
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollTransformedInstance;
+import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
+import com.mohistmc.mod.module.create.client.foundation.render.SpecialModels;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
 import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.client.foundation.render.AllInstanceTypes;
-import com.mohistmc.mod.module.create.client.foundation.render.SpecialModels;
+import com.mojang.blaze3d.vertex.PoseStack;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;

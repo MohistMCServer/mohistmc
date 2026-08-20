@@ -1,7 +1,7 @@
 package com.mohistmc.mod.mixin.create.client;
 
-import com.mohistmc.mod.module.flywheel.impl.visualization.VisualizationEventHandler;
 import com.mohistmc.mod.module.create.content.contraptions.minecart.capability.CapabilityMinecartController;
+import com.mohistmc.mod.module.flywheel.impl.visualization.VisualizationEventHandler;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.Entity;
 import org.spongepowered.asm.mixin.Final;

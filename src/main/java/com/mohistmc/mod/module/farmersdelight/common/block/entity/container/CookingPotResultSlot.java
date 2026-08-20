@@ -1,11 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity.container;
 
+import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import java.util.Optional;
-import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import net.neoforged.neoforge.transfer.item.ItemStacksResourceHandler;
 import net.neoforged.neoforge.transfer.item.ResourceHandlerSlot;
 

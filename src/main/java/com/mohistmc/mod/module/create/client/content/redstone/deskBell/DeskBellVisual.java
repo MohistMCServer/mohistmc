@@ -2,6 +2,8 @@ package com.mohistmc.mod.module.create.client.content.redstone.deskBell;
 
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.redstone.deskBell.DeskBellBlock;
+import com.mohistmc.mod.module.create.content.redstone.deskBell.DeskBellBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.instance.InstancerProvider;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
@@ -12,8 +14,6 @@ import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.redstone.deskBell.DeskBellBlock;
-import com.mohistmc.mod.module.create.content.redstone.deskBell.DeskBellBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

@@ -1,15 +1,21 @@
 package com.mohistmc.mod.module.create.content.trains.entity;
 
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.data.Pair;
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
+import com.mohistmc.mod.module.create.content.trains.graph.EdgeData;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackEdge;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraphLocation;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
+import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.Create;
-import com.mohistmc.mod.module.create.catnip.data.Couple;
-import com.mohistmc.mod.module.create.catnip.data.Pair;
-import com.mohistmc.mod.module.create.content.trains.graph.*;
-import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;

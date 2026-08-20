@@ -1,7 +1,12 @@
 package com.mohistmc.mod.module.create.content.trains.track;
 
 import com.google.common.base.Predicates;
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.AllTrackMaterials;
 import com.mohistmc.mod.module.create.api.contraption.train.PortalTrackProvider;
 import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;

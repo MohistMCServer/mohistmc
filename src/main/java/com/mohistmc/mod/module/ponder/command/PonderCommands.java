@@ -1,8 +1,5 @@
 package com.mohistmc.mod.module.ponder.command;
 
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.context.CommandContext;
 import com.mohistmc.mod.module.create.client.catnip.gui.NavigatableSimiScreen;
 import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
 import com.mohistmc.mod.module.create.client.infrastructure.command.ClientCommand;
@@ -11,6 +8,9 @@ import com.mohistmc.mod.module.ponder.foundation.PonderIndex;
 import com.mohistmc.mod.module.ponder.foundation.ui.PonderIndexScreen;
 import com.mohistmc.mod.module.ponder.foundation.ui.PonderTagIndexScreen;
 import com.mohistmc.mod.module.ponder.foundation.ui.PonderUI;
+import com.mojang.brigadier.Command;
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 import net.minecraft.commands.arguments.IdentifierArgument;
 import net.minecraft.resources.Identifier;

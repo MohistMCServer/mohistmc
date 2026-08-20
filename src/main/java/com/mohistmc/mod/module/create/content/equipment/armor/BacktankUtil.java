@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllEnchantments;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import java.util.ArrayList;

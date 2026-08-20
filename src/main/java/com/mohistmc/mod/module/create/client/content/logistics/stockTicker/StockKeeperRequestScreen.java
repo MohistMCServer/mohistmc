@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.logistics.stockTicker;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllItemTags;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.AllSoundEvents;
@@ -38,6 +37,7 @@ import com.mohistmc.mod.module.create.infrastructure.packet.c2s.LogisticalStockR
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.PackageOrderRequestPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.StockKeeperCategoryHidingPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.StockKeeperLockPacket;
+import com.mojang.blaze3d.platform.Window;
 import it.unimi.dsi.fastutil.ints.IntList;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import java.lang.ref.WeakReference;

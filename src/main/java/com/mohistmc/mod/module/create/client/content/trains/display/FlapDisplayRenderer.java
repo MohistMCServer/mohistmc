@@ -1,21 +1,21 @@
 package com.mohistmc.mod.module.create.client.content.trains.display;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
-import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.foundation.utility.DyeHelper;
 import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlock;
 import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.display.FlapDisplayLayout;
 import com.mohistmc.mod.module.create.content.trains.display.FlapDisplaySection;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import java.util.ArrayList;
 import java.util.IdentityHashMap;
 import java.util.List;
@@ -48,7 +48,9 @@ import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getProgress;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
 import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual.rotationOffset;
 
 public class FlapDisplayRenderer implements BlockEntityRenderer<FlapDisplayBlockEntity, FlapDisplayRenderer.FlapDisplayRenderState> {

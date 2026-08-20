@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.equipment.clipboard;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.client.Create;
@@ -12,6 +11,7 @@ import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
 import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;

@@ -35,7 +35,10 @@ import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix3x2fStack;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.*;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.FACTORY_GAUGE_BOTTOM;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.FACTORY_GAUGE_RECIPE;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.FACTORY_GAUGE_RESTOCK;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.FROGPORT_SLOT;
 
 public class FactoryPanelScreen extends AbstractSimiScreen {
     private ElementWidget renderedBlock;

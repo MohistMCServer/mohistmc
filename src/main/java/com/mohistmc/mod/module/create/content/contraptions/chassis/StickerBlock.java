@@ -2,7 +2,12 @@ package com.mohistmc.mod.module.create.content.contraptions.chassis;
 
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
-import com.mohistmc.mod.module.create.foundation.block.*;
+import com.mohistmc.mod.module.create.foundation.block.BouncinessControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mohistmc.mod.module.create.foundation.block.LandingEffectControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.RunningEffectControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.WeakPowerControlBlock;
+import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;

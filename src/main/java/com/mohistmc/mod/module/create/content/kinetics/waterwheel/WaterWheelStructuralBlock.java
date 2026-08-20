@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.waterwheel;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.api.equipment.goggles.IProxyHoveringInformation;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import com.mohistmc.mod.module.create.foundation.block.LandingEffectControlBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

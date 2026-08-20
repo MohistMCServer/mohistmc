@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.farmersdelight.common.network.payload;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.NotNull;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 
 public record RichSoilBoostParticlesPayload(BlockPos pos) implements CustomPacketPayload
 {

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.steamEngine;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
@@ -15,6 +14,7 @@ import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.ShaftBlock;
 import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviour;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mojang.serialization.MapCodec;
 import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

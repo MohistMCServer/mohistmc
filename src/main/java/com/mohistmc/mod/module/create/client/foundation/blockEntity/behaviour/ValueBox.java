@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.catnip.outliner.ChasingAABBOutline;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.ValueBoxTransform.Sided;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.scrollValue.INamedIconOptions;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.content.logistics.filter.FilterItem;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.Font.DisplayMode;

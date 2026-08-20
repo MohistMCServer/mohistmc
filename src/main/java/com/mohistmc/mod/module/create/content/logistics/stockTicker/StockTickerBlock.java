@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.stockTicker;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.content.logistics.stockTicker.StockTickerB
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.gui.menu.MenuProvider;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;

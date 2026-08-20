@@ -1,6 +1,8 @@
 package com.mohistmc.mod.module.create.client.content.equipment.toolbox;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlock;
+import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.instance.Instancer;
 import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
@@ -11,8 +13,6 @@ import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlock;
-import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;

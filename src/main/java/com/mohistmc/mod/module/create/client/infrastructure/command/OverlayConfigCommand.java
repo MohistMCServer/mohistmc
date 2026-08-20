@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.infrastructure.command;
 
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
 import com.mohistmc.mod.module.create.client.content.equipment.goggles.GoggleConfigScreen;
 import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
 import com.mohistmc.mod.module.create.client.infrastructure.config.CClient;
+import com.mojang.brigadier.Command;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 import net.minecraft.network.chat.Component;
 

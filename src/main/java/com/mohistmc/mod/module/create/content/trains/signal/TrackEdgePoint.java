@@ -1,15 +1,20 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
+import com.mohistmc.mod.module.create.Create;
+import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
+import com.mohistmc.mod.module.create.content.trains.graph.EdgePointType;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackEdge;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
+import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.Create;
-import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
-import com.mohistmc.mod.module.create.catnip.data.Couple;
-import com.mohistmc.mod.module.create.content.trains.graph.*;
-import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import java.util.Iterator;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;

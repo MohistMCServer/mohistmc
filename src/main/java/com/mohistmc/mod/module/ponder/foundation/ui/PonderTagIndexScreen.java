@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.ponder.foundation.ui;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
 import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.BoxElement;
@@ -13,6 +12,7 @@ import com.mohistmc.mod.module.ponder.Ponder;
 import com.mohistmc.mod.module.ponder.enums.PonderGuiTextures;
 import com.mohistmc.mod.module.ponder.foundation.PonderIndex;
 import com.mohistmc.mod.module.ponder.foundation.PonderTag;
+import com.mojang.blaze3d.platform.Window;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;

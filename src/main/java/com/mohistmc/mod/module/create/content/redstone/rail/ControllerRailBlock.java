@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.rail;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import com.mohistmc.mod.module.create.foundation.block.MinecartPassBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

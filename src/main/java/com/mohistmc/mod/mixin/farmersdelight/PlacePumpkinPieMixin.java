@@ -1,9 +1,7 @@
 package com.mohistmc.mod.mixin.farmersdelight;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
@@ -23,13 +21,6 @@ public class PlacePumpkinPieMixin
 		if (!context.getItemInHand().is(Items.PUMPKIN_PIE))
 			return;
 
-		if (Configuration.ENABLE_PUMPKIN_PIE_SNEAK_TO_PLACE.get()) {
-			Player player = context.getPlayer();
-			if (player != null && player.isSecondaryUseActive()) {
-				cir.setReturnValue(ModItems.DEBUG_PUMPKIN_PIE.get().useOn(context));
-			}
-		} else {
-			cir.setReturnValue(ModItems.DEBUG_PUMPKIN_PIE.get().useOn(context));
-		}
+		cir.setReturnValue(ModItems.DEBUG_PUMPKIN_PIE.get().useOn(context));
 	}
 }

@@ -2,12 +2,12 @@ package com.mohistmc.mod.module.jei.category;
 
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
-import com.mohistmc.mod.module.jei.CreateCategory;
-import com.mohistmc.mod.module.jei.JeiClientPlugin;
-import com.mohistmc.mod.module.jei.renderer.TwoIconRenderer;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.render.FanRenderState;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.TwoIconRenderer;
 import java.util.List;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;

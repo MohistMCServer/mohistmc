@@ -1,5 +1,6 @@
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
 import com.mojang.datafixers.schemas.Schema;
 import com.mojang.datafixers.types.templates.TypeTemplate;
 import com.mojang.datafixers.util.Pair;
@@ -12,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
 @Mixin(V1460.class)
 public class MixinV1460 {

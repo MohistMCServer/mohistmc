@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.jei.widget;
 
-import com.mojang.datafixers.util.Either;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllFluids;
 import com.mohistmc.mod.module.create.content.fluids.potion.PotionFluidHandler;
 import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
+import com.mojang.datafixers.util.Either;
 import java.util.ArrayList;
 import java.util.List;
 import mezz.jei.api.gui.builder.ITooltipBuilder;

@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.infrastructure.fluids;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllFluids;
 import com.mohistmc.mod.module.create.content.fluids.potion.PotionFluidHandler;
 import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.netty.handler.codec.DecoderException;
 import io.netty.handler.codec.EncoderException;
 import it.unimi.dsi.fastutil.objects.ObjectSet;

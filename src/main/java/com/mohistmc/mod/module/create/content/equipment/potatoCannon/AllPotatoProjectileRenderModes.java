@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
+import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
+import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
-import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;

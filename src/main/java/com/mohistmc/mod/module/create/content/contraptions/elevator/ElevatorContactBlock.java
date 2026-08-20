@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.contraptions.elevator;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -15,6 +14,7 @@ import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
 import com.mohistmc.mod.module.create.foundation.block.WeakPowerControlBlock;
 import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

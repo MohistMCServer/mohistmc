@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlockEntity;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.content.trains.graph.EdgePointType;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBlock.SignalType;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mojang.serialization.Codec;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;

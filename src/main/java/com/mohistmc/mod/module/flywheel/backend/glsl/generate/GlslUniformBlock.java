@@ -1,8 +1,7 @@
 package com.mohistmc.mod.module.flywheel.backend.glsl.generate;
 
-import com.mojang.datafixers.util.Pair;
 import com.mohistmc.mod.module.flywheel.lib.util.StringUtil;
-
+import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

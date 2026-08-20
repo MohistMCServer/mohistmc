@@ -18,24 +18,27 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.block.PowderSnowBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
-@Mixin(LivingEntity.class)
-public class MixinLivingEntity {
+@Mixin(PowderSnowBlock.class)
+public class MixinPowderSnowBlock {
 
-  @SuppressWarnings("ConstantConditions")
-  @Inject(at = @At("TAIL"), method = "canFreeze()Z", cancellable = true)
-  public void curio$canFreeze(CallbackInfoReturnable<Boolean> cir) {
+  @Inject(at = @At("RETURN"), method = "canEntityWalkOnPowderSnow", cancellable = true)
+  private static void curios$canEntityWalkOnPowderSnow(Entity entity,
+                                                       CallbackInfoReturnable<Boolean> cir) {
 
-    if (CuriosCommonMixinHooks.isFreezeImmune((LivingEntity) (Object) this)) {
-      cir.setReturnValue(false);
+    if (entity instanceof LivingEntity livingEntity &&
+        CuriosCommonMixinHooks.canWalkOnPowderSnow(livingEntity)) {
+      cir.setReturnValue(true);
     }
   }
 }

@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.content.fluids;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleAxisRotatingVisual;
+import com.mohistmc.mod.module.create.content.fluids.pump.PumpBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.content.fluids.pump.PumpBlockEntity;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 

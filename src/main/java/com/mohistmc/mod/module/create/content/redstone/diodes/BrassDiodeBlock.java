@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

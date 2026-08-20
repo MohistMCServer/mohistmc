@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.outliner;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.client.catnip.outliner.LineOutline.EndChasingLineOutline;
 import com.mohistmc.mod.module.create.client.catnip.outliner.Outline.OutlineParams;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;

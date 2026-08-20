@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.catnip.gui.render;
 
+import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mohistmc.mod.module.create.catnip.theme.Color;
 import java.util.List;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;

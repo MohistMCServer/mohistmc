@@ -1,9 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.observer;
 
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.content.logistics.filter.FilterItemStack;
@@ -14,6 +10,10 @@ import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalPropagator;
 import com.mohistmc.mod.module.create.content.trains.signal.SingleBlockEntityEdgePoint;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.UUID;
 import net.minecraft.core.UUIDUtil;
 import net.minecraft.server.MinecraftServer;

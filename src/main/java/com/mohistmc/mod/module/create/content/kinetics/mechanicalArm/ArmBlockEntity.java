@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.mechanicalArm;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -18,6 +16,8 @@ import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollOptionBehaviour;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;

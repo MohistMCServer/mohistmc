@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.content.trains.track.TrackPlacement;
+import com.mojang.blaze3d.platform.Window;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

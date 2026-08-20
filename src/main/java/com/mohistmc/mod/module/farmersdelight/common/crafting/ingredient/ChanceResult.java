@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.crafting.ingredient;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -29,7 +28,7 @@ public record ChanceResult(ItemStackTemplate stack, float chance)
 
 	public ItemStack rollOutput(RandomSource random, int fortuneLevel) {
 		int outputAmount = stack.count();
-		double fortuneBonus = Configuration.CUTTING_BOARD_FORTUNE_BONUS.get() * fortuneLevel;
+		double fortuneBonus = 0.1 * fortuneLevel;
 		for (int roll = 0; roll < stack.count(); roll++)
 			if (random.nextFloat() > chance + fortuneBonus)
 				outputAmount--;

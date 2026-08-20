@@ -6,9 +6,9 @@ import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.content.contraptions.pulley.AbstractPulleyRenderer;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.fluids.hosePulley.HosePulleyBlock;
 import com.mohistmc.mod.module.create.content.fluids.hosePulley.HosePulleyBlockEntity;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction.Axis;
 

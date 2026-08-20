@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.event;
 
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
@@ -42,16 +41,14 @@ public class CommonEvents
 		Item food = event.getItem().getItem();
 		LivingEntity entity = event.getEntity();
 
-		if (Configuration.ENABLE_RABBIT_STEW_BUFF.get() && food.equals(Items.RABBIT_STEW)) {
+		if (food.equals(Items.RABBIT_STEW)) {
 			return;
 		}
 
-		if (Configuration.ENABLE_VANILLA_SOUP_EXTRA_EFFECTS.get()) {
-			MobEffectInstance soupEffect = FoodValues.VANILLA_SOUP_EFFECTS.get(food);
+		MobEffectInstance soupEffect = FoodValues.VANILLA_SOUP_EFFECTS.get(food);
 
-			if (soupEffect != null) {
-				entity.addEffect(new MobEffectInstance(soupEffect));
-			}
+		if (soupEffect != null) {
+			entity.addEffect(new MobEffectInstance(soupEffect));
 		}
 	}
 

@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.flywheel.backend;
 
+import com.mohistmc.mod.module.flywheel.lib.util.ResourceUtil;
 import com.mojang.blaze3d.GpuFormat;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.GpuDevice;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.textures.AddressMode;
 import com.mojang.blaze3d.textures.FilterMode;
-import com.mohistmc.mod.module.flywheel.lib.util.ResourceUtil;
 import java.io.IOException;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.resources.Identifier;

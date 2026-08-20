@@ -1,6 +1,11 @@
 package com.mohistmc.mod.module.create.content.equipment.armor;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;

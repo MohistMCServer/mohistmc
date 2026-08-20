@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.command;
 
+import com.mohistmc.mod.module.create.client.content.kinetics.KineticDebugger;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mohistmc.mod.module.create.client.content.kinetics.KineticDebugger;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 import net.minecraft.network.chat.Component;

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.mixin.farmersdelight;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.dispenser.CuttingBoardDispenseBehavior;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
@@ -36,7 +35,7 @@ public abstract class CuttingBoardDispenserMixin
 	)
 	public void onCuttingBoardDispenseFromInject(ServerLevel level, BlockState state, BlockPos pos, CallbackInfo ci, DispenserBlockEntity dispenser, BlockSource source, int slot, ItemStack stack) {
 		BlockState facingState = level.getBlockState(pos.relative(state.getValue(DispenserBlock.FACING)));
-		if (Configuration.ENABLE_DISPENSER_TOOLS_CUTTING_BOARD.get() && facingState.is(ModBlocks.CUTTING_BOARD.get())) {
+		if (facingState.is(ModBlocks.CUTTING_BOARD.get())) {
 			dispenser.setItem(slot, CuttingBoardDispenseBehavior.INSTANCE.dispense(source, stack));
 			ci.cancel();
 		}

@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.kinetics.transmission.sequencer;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
 import java.util.Arrays;
 import java.util.Locale;

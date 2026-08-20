@@ -1,8 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
@@ -17,6 +14,9 @@ import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
 import com.mohistmc.mod.module.create.content.trains.track.BezierConnection.Segment;
 import com.mohistmc.mod.module.create.content.trains.track.TrackBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.math.Axis;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;

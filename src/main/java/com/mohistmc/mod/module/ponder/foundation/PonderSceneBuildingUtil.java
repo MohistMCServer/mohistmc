@@ -2,7 +2,11 @@ package com.mohistmc.mod.module.ponder.foundation;
 
 
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
-import com.mohistmc.mod.module.ponder.api.scene.*;
+import com.mohistmc.mod.module.ponder.api.scene.PositionUtil;
+import com.mohistmc.mod.module.ponder.api.scene.SceneBuildingUtil;
+import com.mohistmc.mod.module.ponder.api.scene.Selection;
+import com.mohistmc.mod.module.ponder.api.scene.SelectionUtil;
+import com.mohistmc.mod.module.ponder.api.scene.VectorUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;

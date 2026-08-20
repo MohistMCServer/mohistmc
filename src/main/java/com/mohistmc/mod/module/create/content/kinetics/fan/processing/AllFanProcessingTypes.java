@@ -1,6 +1,11 @@
 package com.mohistmc.mod.module.create.content.kinetics.fan.processing;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllDamageSources;
+import com.mohistmc.mod.module.create.AllFluidTags;
+import com.mohistmc.mod.module.create.AllRecipeSets;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.catnip.theme.Color;

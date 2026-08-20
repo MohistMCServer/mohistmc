@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.mixer;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.content.fluids.potion.PotionFluidHandler;
@@ -13,6 +11,8 @@ import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering
 import com.mohistmc.mod.module.create.foundation.fluid.FluidIngredient;
 import com.mohistmc.mod.module.create.infrastructure.component.BottleType;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;

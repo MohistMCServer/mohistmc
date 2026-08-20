@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.schematics.client;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
@@ -15,6 +14,7 @@ import com.mohistmc.mod.module.create.content.schematics.SchematicExport;
 import com.mohistmc.mod.module.create.content.schematics.SchematicExport.SchematicExportResult;
 import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.InstantSchematicPacket;
+import com.mojang.blaze3d.platform.InputConstants;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

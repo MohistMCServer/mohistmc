@@ -1,5 +1,10 @@
 package com.mohistmc.mod.module.flywheel.backend.engine;
 
+import com.mohistmc.mod.module.flywheel.api.material.DepthTest;
+import com.mohistmc.mod.module.flywheel.api.material.Material;
+import com.mohistmc.mod.module.flywheel.api.material.Transparency;
+import com.mohistmc.mod.module.flywheel.api.material.WriteMask;
+import com.mohistmc.mod.module.flywheel.backend.Samplers;
 import com.mojang.blaze3d.opengl.GlDevice;
 import com.mojang.blaze3d.opengl.GlSampler;
 import com.mojang.blaze3d.opengl.GlStateManager;
@@ -10,11 +15,6 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.textures.FilterMode;
 import com.mojang.blaze3d.textures.GpuSampler;
 import com.mojang.blaze3d.textures.GpuTextureView;
-import com.mohistmc.mod.module.flywheel.api.material.DepthTest;
-import com.mohistmc.mod.module.flywheel.api.material.Material;
-import com.mohistmc.mod.module.flywheel.api.material.Transparency;
-import com.mohistmc.mod.module.flywheel.api.material.WriteMask;
-import com.mohistmc.mod.module.flywheel.backend.Samplers;
 import java.util.Collections;
 import java.util.Comparator;
 import net.minecraft.client.Minecraft;

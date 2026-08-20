@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.redstone.link.controller;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.infrastructure.model.LinkedControllerModel;
 import com.mohistmc.mod.module.create.content.redstone.link.controller.LecternControllerBlock;
 import com.mohistmc.mod.module.create.content.redstone.link.controller.LecternControllerBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

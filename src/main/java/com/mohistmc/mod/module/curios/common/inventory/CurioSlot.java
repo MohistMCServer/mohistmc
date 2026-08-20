@@ -20,7 +20,7 @@
 
 package com.mohistmc.mod.module.curios.common.inventory;
 
-import com.mohistmc.mod.mixin.curios.core.AccessorEntity;
+import com.mohistmc.mod.mixin.curios.AccessorEntity;
 import com.mohistmc.mod.module.curios.api.CuriosApi;
 import com.mohistmc.mod.module.curios.api.SlotContext;
 import com.mohistmc.mod.module.curios.api.extensions.ICurioSlotExtension;

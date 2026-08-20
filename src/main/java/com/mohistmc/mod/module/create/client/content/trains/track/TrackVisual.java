@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -8,6 +7,8 @@ import com.mohistmc.mod.module.create.client.AllTrackMaterialModels.TrackModelHo
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackRenderer.GirderAngles;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackRenderer.SegmentAngles;
+import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
+import com.mohistmc.mod.module.create.content.trains.track.TrackBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.BlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
@@ -16,8 +17,7 @@ import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
 import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractVisual;
-import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
-import com.mohistmc.mod.module.create.content.trains.track.TrackBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import it.unimi.dsi.fastutil.longs.LongArraySet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import java.util.ArrayList;

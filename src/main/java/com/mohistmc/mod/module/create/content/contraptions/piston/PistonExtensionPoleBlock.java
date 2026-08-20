@@ -36,7 +36,12 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.*;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.PistonState;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.STATE;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isExtensionPole;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isPiston;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isPistonHead;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.maxAllowedPistonPoles;
 
 public class PistonExtensionPoleBlock extends WrenchableDirectionalBlock implements IWrenchable, SimpleWaterloggedBlock {
 

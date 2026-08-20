@@ -1,6 +1,11 @@
 package com.mohistmc.mod.module.create.content.contraptions;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllPackets;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.behaviour.movement.MovementBehaviour;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
@@ -15,7 +20,11 @@ import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
 import com.mohistmc.mod.module.create.content.trains.entity.Train;
 import com.mohistmc.mod.module.create.foundation.collision.Matrix3d;
-import com.mohistmc.mod.module.create.infrastructure.packet.s2c.*;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ContraptionBlockChangedPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ContraptionDisassemblyPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ContraptionSeatMappingPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.ContraptionStallPacket;
+import com.mohistmc.mod.module.create.infrastructure.packet.s2c.NbtSpawnPacket;
 import io.netty.handler.codec.DecoderException;
 import java.util.Collection;
 import java.util.IdentityHashMap;

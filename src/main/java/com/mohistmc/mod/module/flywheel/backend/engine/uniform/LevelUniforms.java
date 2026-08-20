@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.flywheel.backend.engine.uniform;
 
-import com.mojang.blaze3d.platform.Lighting;
 import com.mohistmc.mod.module.flywheel.api.backend.RenderContext;
+import com.mojang.blaze3d.platform.Lighting;
 import java.util.EnumMap;
 import java.util.Map;
 import net.minecraft.client.renderer.state.level.LevelRenderState;

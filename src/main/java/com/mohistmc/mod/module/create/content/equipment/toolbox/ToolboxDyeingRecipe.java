@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.toolbox;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItemTags;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

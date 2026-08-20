@@ -1,6 +1,14 @@
 package com.mohistmc.mod.module.flywheel.backend.compile;
 
-import com.mohistmc.mod.module.flywheel.api.layout.*;
+import com.mohistmc.mod.module.flywheel.api.layout.ArrayElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.ElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.IntegerRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.MatrixElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.ScalarElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.UnsignedIntegerRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.ValueRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.VectorElementType;
 
 public class LayoutInterpreter {
     public static String typeName(ElementType type) {

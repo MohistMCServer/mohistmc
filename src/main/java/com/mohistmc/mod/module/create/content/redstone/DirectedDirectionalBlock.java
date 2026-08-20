@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.redstone;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlock;
 import com.mohistmc.mod.module.create.content.contraptions.StructureTransform;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;

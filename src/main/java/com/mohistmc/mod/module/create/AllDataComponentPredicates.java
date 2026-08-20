@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardTypePredicate;
+import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.predicates.DataComponentPredicate;
 import net.minecraft.core.component.predicates.DataComponentPredicate.Type;

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.track;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlockTags;
 import com.mohistmc.mod.module.create.AllBlocks;
@@ -14,6 +13,7 @@ import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import com.mohistmc.mod.module.create.foundation.blockEntity.IMergeableBE;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import com.mohistmc.mod.module.create.infrastructure.packet.s2c.RemoveBlockEntityPacket;
+import com.mojang.serialization.Codec;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;

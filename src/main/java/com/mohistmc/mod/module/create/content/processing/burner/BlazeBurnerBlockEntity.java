@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.processing.burner;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;

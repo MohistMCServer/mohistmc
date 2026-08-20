@@ -5,12 +5,10 @@ import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.ingredient.ChanceResult;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import com.mohistmc.mod.module.jei.CreateCategory;
 import com.mohistmc.mod.module.jei.JeiClientPlugin;
 import com.mohistmc.mod.module.jei.renderer.IconRenderer;
-import java.util.List;
 import java.util.function.Supplier;
 import javax.annotation.ParametersAreNonnullByDefault;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -28,7 +26,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeMap;
 
 // Mirrors the Create JEI category style: no-arg constructor, no IGuiHelper.
 @ParametersAreNonnullByDefault

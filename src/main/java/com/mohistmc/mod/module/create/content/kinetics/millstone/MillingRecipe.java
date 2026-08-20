@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.kinetics.millstone;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
 import com.mohistmc.mod.module.create.foundation.recipe.CreateSingleStackRollableRecipe;
 import com.mohistmc.mod.module.create.foundation.recipe.TimedRecipe;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

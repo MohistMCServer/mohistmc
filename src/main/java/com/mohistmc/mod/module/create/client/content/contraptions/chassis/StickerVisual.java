@@ -2,6 +2,8 @@ package com.mohistmc.mod.module.create.client.content.contraptions.chassis;
 
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlock;
+import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
@@ -10,8 +12,6 @@ import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlock;
-import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction;

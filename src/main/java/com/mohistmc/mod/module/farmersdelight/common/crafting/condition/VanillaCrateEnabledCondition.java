@@ -3,7 +3,6 @@ package com.mohistmc.mod.module.farmersdelight.common.crafting.condition;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.conditions.ICondition;
 import org.jetbrains.annotations.NotNull;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 
 public class VanillaCrateEnabledCondition implements ICondition
 {
@@ -16,7 +15,7 @@ public class VanillaCrateEnabledCondition implements ICondition
 
 	@Override
 	public boolean test(@NotNull IContext context) {
-		return Configuration.ENABLE_VANILLA_CROP_CRATES.get();
+		return true;
 	}
 
 	@Override

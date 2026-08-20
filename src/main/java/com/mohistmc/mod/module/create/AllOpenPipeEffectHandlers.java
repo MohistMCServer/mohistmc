@@ -2,7 +2,11 @@ package com.mohistmc.mod.module.create;
 
 import com.mohistmc.mod.module.create.api.effect.OpenPipeEffectHandler;
 import com.mohistmc.mod.module.create.api.registry.SimpleRegistry;
-import com.mohistmc.mod.module.create.impl.effect.*;
+import com.mohistmc.mod.module.create.impl.effect.LavaEffectHandler;
+import com.mohistmc.mod.module.create.impl.effect.MilkEffectHandler;
+import com.mohistmc.mod.module.create.impl.effect.PotionEffectHandler;
+import com.mohistmc.mod.module.create.impl.effect.TeaEffectHandler;
+import com.mohistmc.mod.module.create.impl.effect.WaterEffectHandler;
 import net.minecraft.tags.FluidTags;
 
 public class AllOpenPipeEffectHandlers {

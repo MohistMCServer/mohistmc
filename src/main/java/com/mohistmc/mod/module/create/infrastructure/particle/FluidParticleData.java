@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.particle;
 
+import com.mohistmc.mod.module.create.AllParticleTypes;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.AllParticleTypes;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;

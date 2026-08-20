@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.actors.trainControls;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -16,6 +15,7 @@ import com.mohistmc.mod.module.create.content.contraptions.actors.trainControls.
 import com.mohistmc.mod.module.create.content.contraptions.actors.trainControls.ControlsMovementBehaviour.LeverAngles;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.Collection;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;

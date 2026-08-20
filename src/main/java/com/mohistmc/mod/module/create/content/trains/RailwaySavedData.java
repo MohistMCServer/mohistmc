@@ -1,5 +1,11 @@
 package com.mohistmc.mod.module.create.content.trains;
 
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
+import com.mohistmc.mod.module.create.content.trains.graph.EdgePointType;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
+import com.mohistmc.mod.module.create.content.trains.signal.SignalEdgeGroup;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
@@ -7,12 +13,6 @@ import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.content.trains.entity.Train;
-import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
-import com.mohistmc.mod.module.create.content.trains.graph.EdgePointType;
-import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
-import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
-import com.mohistmc.mod.module.create.content.trains.signal.SignalEdgeGroup;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;

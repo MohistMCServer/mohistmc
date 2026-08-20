@@ -1,8 +1,6 @@
 package com.mohistmc.mod.module.ponder.foundation;
 
 import com.google.common.base.Strings;
-import com.mojang.blaze3d.platform.InputConstants;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
@@ -14,6 +12,8 @@ import com.mohistmc.mod.module.ponder.Ponder;
 import com.mohistmc.mod.module.ponder.enums.PonderKeybinds;
 import com.mohistmc.mod.module.ponder.foundation.registration.PonderLocalization;
 import com.mohistmc.mod.module.ponder.foundation.ui.PonderUI;
+import com.mojang.blaze3d.platform.InputConstants;
+import com.mojang.blaze3d.systems.RenderSystem;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

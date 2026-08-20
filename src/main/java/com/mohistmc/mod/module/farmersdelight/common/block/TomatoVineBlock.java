@@ -1,12 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
-import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
 
 // Renamed to TomatoBlock. This class will be removed in the next minor/major release.
 @Deprecated(forRemoval = true)
@@ -25,7 +23,7 @@ public class TomatoVineBlock extends TomatoBlock
 		if (random.nextFloat() < 0.3F) {
 			BlockPos posAbove = pos.above();
 			BlockState stateAbove = level.getBlockState(posAbove);
-			boolean canClimb = Configuration.ENABLE_TOMATO_VINE_CLIMBING_TAGGED_ROPES.get() ? stateAbove.is(ModTags.Blocks.ROPES) : stateAbove.is(ModBlocks.ROPE.get());
+			boolean canClimb = stateAbove.is(ModTags.Blocks.ROPES);
 			if (canClimb) {
 				int vineHeight;
 				for (vineHeight = 1; level.getBlockState(pos.below(vineHeight)).is(this); ++vineHeight) {

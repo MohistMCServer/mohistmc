@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.steamEngine;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -11,6 +9,8 @@ import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.Sma
 import com.mohistmc.mod.module.create.content.kinetics.steamEngine.PoweredShaftBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.steamEngine.SteamEngineBlock;
 import com.mohistmc.mod.module.create.content.kinetics.steamEngine.SteamEngineBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -28,7 +28,10 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getAngleForBe;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotationAxisOf;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getXRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getYRotateAngle;
 
 public class SteamEngineRenderer implements BlockEntityRenderer<SteamEngineBlockEntity, SteamEngineRenderer.SteamEngineRenderState> {
     public SteamEngineRenderer(Context context) {

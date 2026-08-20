@@ -1,8 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.equipment.symmetryWand;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
 import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
@@ -20,6 +18,8 @@ import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.Plan
 import com.mohistmc.mod.module.create.content.equipment.symmetryWand.mirror.TriplePlaneMirror;
 import com.mohistmc.mod.module.create.infrastructure.component.SymmetryMirror;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ConfigureSymmetryWandPacket;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.CommonComponents;

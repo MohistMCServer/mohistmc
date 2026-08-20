@@ -3,10 +3,13 @@ package com.mohistmc.mod.module.flywheel.backend.compile.component;
 import com.mohistmc.mod.module.flywheel.api.instance.InstanceType;
 import com.mohistmc.mod.module.flywheel.api.layout.Layout;
 import com.mohistmc.mod.module.flywheel.backend.engine.indirect.BufferBindings;
-import com.mohistmc.mod.module.flywheel.backend.glsl.generate.*;
+import com.mohistmc.mod.module.flywheel.backend.glsl.generate.FnSignature;
+import com.mohistmc.mod.module.flywheel.backend.glsl.generate.GlslBlock;
+import com.mohistmc.mod.module.flywheel.backend.glsl.generate.GlslBuilder;
+import com.mohistmc.mod.module.flywheel.backend.glsl.generate.GlslExpr;
+import com.mohistmc.mod.module.flywheel.backend.glsl.generate.GlslStmt;
 import com.mohistmc.mod.module.flywheel.lib.math.MoreMath;
 import com.mohistmc.mod.module.flywheel.lib.util.ResourceUtil;
-
 import java.util.ArrayList;
 
 public class SsboInstanceComponent extends InstanceAssemblerComponent {

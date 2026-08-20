@@ -1,11 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.gauge;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.ShaftVisual;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlock;
+import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.instance.Instancer;
 import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
@@ -16,8 +17,7 @@ import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlock;
-import com.mohistmc.mod.module.create.content.kinetics.gauge.GaugeBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;

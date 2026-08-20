@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.contraptionControls;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.content.contraptions.actors.trainControls.ControlsBlock;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;

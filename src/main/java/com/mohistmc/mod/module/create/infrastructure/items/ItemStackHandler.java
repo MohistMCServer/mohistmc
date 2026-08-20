@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.create.infrastructure.items;
 
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
@@ -7,7 +8,6 @@ import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.ValueInput;

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllDataComponents;
@@ -20,6 +19,7 @@ import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
 import com.mohistmc.mod.module.create.content.trains.track.ITrackBlock;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mojang.serialization.Codec;
 import java.util.List;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;

@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.schedule;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.Create;
@@ -19,6 +14,11 @@ import com.mohistmc.mod.module.create.content.trains.schedule.destination.Destin
 import com.mohistmc.mod.module.create.content.trains.schedule.destination.ScheduleInstruction;
 import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

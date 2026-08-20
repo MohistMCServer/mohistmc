@@ -7,7 +7,6 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.tag.CommonTags;
 import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
 import com.mohistmc.mod.module.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeOutput;

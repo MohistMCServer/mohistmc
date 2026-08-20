@@ -1,16 +1,16 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
 import com.google.common.base.Suppliers;
-import com.mojang.blaze3d.platform.Lighting;
-import com.mojang.blaze3d.platform.Lighting.Entry;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.client.Create;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
 import com.mohistmc.mod.module.create.client.foundation.render.CreateRenderTypes;
+import com.mojang.blaze3d.platform.Lighting;
+import com.mojang.blaze3d.platform.Lighting.Entry;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
+import com.mojang.serialization.MapCodec;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

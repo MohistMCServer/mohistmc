@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.equipment.clipboard;
 
 import com.google.common.collect.Lists;
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllSoundEvents;
@@ -14,6 +13,7 @@ import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
 import com.mohistmc.mod.module.create.infrastructure.component.ClipboardEntry;
 import com.mohistmc.mod.module.create.infrastructure.component.ClipboardType;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ClipboardEditPacket;
+import com.mojang.blaze3d.platform.Window;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import java.util.ArrayList;

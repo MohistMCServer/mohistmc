@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.item;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import java.util.function.Consumer;
 import net.minecraft.ChatFormatting;
@@ -88,13 +87,11 @@ public class ConsumableItem extends Item
 
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag isAdvanced) {
-		if (Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
-			if (this.hasCustomTooltip) {
-				tooltip.accept(TextUtils.tooltip(BuiltInRegistries.ITEM.getKey(this).getPath()).withStyle(ChatFormatting.BLUE));
-			}
-			if (this.hasFoodEffectTooltip) {
-				TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F, context.tickRate());
-			}
+		if (this.hasCustomTooltip) {
+			tooltip.accept(TextUtils.tooltip(BuiltInRegistries.ITEM.getKey(this).getPath()).withStyle(ChatFormatting.BLUE));
+		}
+		if (this.hasFoodEffectTooltip) {
+			TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F, context.tickRate());
 		}
 	}
 }

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
 import com.google.common.base.Predicates;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.content.trains.entity.Train;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

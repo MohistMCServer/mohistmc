@@ -18,25 +18,24 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
-@Mixin(PiglinAi.class)
-public class MixinPiglinAi {
+@Mixin(LivingEntity.class)
+public class MixinLivingEntity {
 
-  @Inject(at = @At("RETURN"), method = "isWearingSafeArmor", cancellable = true)
-  private static void curios$isWearingGold(LivingEntity livingEntity,
-                                           CallbackInfoReturnable<Boolean> cir) {
+  @SuppressWarnings("ConstantConditions")
+  @Inject(at = @At("TAIL"), method = "canFreeze()Z", cancellable = true)
+  public void curio$canFreeze(CallbackInfoReturnable<Boolean> cir) {
 
-    if (CuriosCommonMixinHooks.canNeutralizePiglins(livingEntity)) {
-      cir.setReturnValue(true);
+    if (CuriosCommonMixinHooks.isFreezeImmune((LivingEntity) (Object) this)) {
+      cir.setReturnValue(false);
     }
   }
 }

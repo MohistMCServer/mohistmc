@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.redstone.analogLever;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRender
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.redstone.analogLever.AnalogLeverBlock;
 import com.mohistmc.mod.module.create.content.redstone.analogLever.AnalogLeverBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -23,7 +23,10 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_180;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_90;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getEastRadiansRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
 
 public class AnalogLeverRenderer implements BlockEntityRenderer<AnalogLeverBlockEntity, AnalogLeverRenderer.AnalogLeverRenderState> {
     public AnalogLeverRenderer(Context context) {

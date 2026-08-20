@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.depot;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -19,6 +18,7 @@ import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollVal
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.EjectorAwardPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.EjectorElytraPacket;
+import com.mojang.serialization.Codec;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;

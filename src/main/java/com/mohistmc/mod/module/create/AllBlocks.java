@@ -35,7 +35,11 @@ import com.mohistmc.mod.module.create.content.decoration.copycat.CopycatStepBloc
 import com.mohistmc.mod.module.create.content.decoration.encasing.CasingBlock;
 import com.mohistmc.mod.module.create.content.decoration.girder.GirderBlock;
 import com.mohistmc.mod.module.create.content.decoration.girder.GirderEncasedShaftBlock;
-import com.mohistmc.mod.module.create.content.decoration.palettes.*;
+import com.mohistmc.mod.module.create.content.decoration.palettes.ConnectedGlassBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.ConnectedGlassPaneBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.ConnectedPillarBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.GlassPaneBlock;
+import com.mohistmc.mod.module.create.content.decoration.palettes.WindowBlock;
 import com.mohistmc.mod.module.create.content.decoration.placard.PlacardBlock;
 import com.mohistmc.mod.module.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import com.mohistmc.mod.module.create.content.decoration.steamWhistle.WhistleBlock;

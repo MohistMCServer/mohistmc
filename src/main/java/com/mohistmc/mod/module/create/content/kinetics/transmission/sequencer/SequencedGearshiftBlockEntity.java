@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.transmission.sequencer;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.transmission.SplitShaftBlockEntity;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.Objects;
 import java.util.Vector;
 import net.minecraft.core.BlockPos;

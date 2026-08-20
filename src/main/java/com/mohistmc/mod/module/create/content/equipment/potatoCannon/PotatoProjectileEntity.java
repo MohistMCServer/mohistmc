@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllDamageSources;
+import com.mohistmc.mod.module.create.AllEnchantments;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
 import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileRenderMode;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.clipboard;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.infrastructure.component.ClipboardContent;
 import com.mohistmc.mod.module.create.infrastructure.component.ClipboardType;
+import com.mojang.serialization.Codec;
 import net.minecraft.core.component.DataComponentGetter;
 import net.minecraft.core.component.predicates.DataComponentPredicate;
 

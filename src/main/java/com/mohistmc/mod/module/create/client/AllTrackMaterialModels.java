@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client;
 
 import com.mohistmc.mod.module.create.AllTrackMaterials;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 
 public class AllTrackMaterialModels {
     static final TrackModelHolder ANDESITE = new TrackModelHolder(

@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.actors.psi;
 
+import com.mohistmc.mod.module.create.content.contraptions.actors.psi.PortableStorageInterfaceBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
@@ -8,7 +9,6 @@ import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleTickableVisual;
-import com.mohistmc.mod.module.create.content.contraptions.actors.psi.PortableStorageInterfaceBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 

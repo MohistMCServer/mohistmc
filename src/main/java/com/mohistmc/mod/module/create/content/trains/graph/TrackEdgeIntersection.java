@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
+import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.data.Couple;
 import java.util.Iterator;
 import java.util.UUID;
 import net.minecraft.core.UUIDUtil;

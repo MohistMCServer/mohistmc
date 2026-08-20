@@ -34,9 +34,6 @@ import com.mohistmc.mod.module.curios.common.inventory.CurioSlot;
 import com.mohistmc.mod.module.curios.common.inventory.container.CuriosMenu;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketPage;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketToggleRender;
-import com.mohistmc.mod.module.curios.config.CuriosClientConfig;
-import com.mohistmc.mod.module.curios.config.CuriosClientConfig.Client;
-import com.mohistmc.mod.module.curios.config.CuriosClientConfig.Client.ButtonCorner;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
@@ -94,17 +91,16 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
     }
 
     public static Pair<Integer, Integer> getButtonOffset(boolean isCreative) {
-        Client client = CuriosClientConfig.CLIENT;
-        ButtonCorner corner = client.buttonCorner.get();
+        ButtonCorner corner = ButtonCorner.TOP_LEFT;
         int x = 0;
         int y = 0;
 
         if (isCreative) {
-            x += corner.getCreativeXoffset() + client.creativeButtonXOffset.get();
-            y += corner.getCreativeYoffset() + client.creativeButtonYOffset.get();
+            x += corner.getCreativeXoffset();
+            y += corner.getCreativeYoffset();
         } else {
-            x += corner.getXoffset() + client.buttonXOffset.get();
-            y += corner.getYoffset() + client.buttonYOffset.get();
+            x += corner.getXoffset();
+            y += corner.getYoffset();
         }
         return new Pair<>(x, y);
     }
@@ -123,9 +119,7 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
                         10,
                         CuriosButton.BIG);
 
-        if (CuriosClientConfig.CLIENT.enableButton.get()) {
-            this.addRenderableWidget(this.buttonCurios);
-        }
+        this.addRenderableWidget(this.buttonCurios);
         this.updateRenderButtons();
     }
 
@@ -510,5 +504,38 @@ public class CuriosScreen extends AbstractRecipeBookScreen<CuriosMenu>
             scrollCooldown = 2;
         }
         return super.mouseScrolled(p_94686_, p_94687_, p_94688_, p_294830_);
+    }
+
+    public enum ButtonCorner {
+        TOP_LEFT(26, -75, 73, -62), TOP_RIGHT(61, -75, 95, -62), BOTTOM_LEFT(26, -20, 73,
+                -29), BOTTOM_RIGHT(61, -20, 95, -29);
+
+        final int xoffset;
+        final int yoffset;
+        final int creativeXoffset;
+        final int creativeYoffset;
+
+        ButtonCorner(int x, int y, int creativeX, int creativeY) {
+            xoffset = x;
+            yoffset = y;
+            creativeXoffset = creativeX;
+            creativeYoffset = creativeY;
+        }
+
+        public int getXoffset() {
+            return xoffset;
+        }
+
+        public int getYoffset() {
+            return yoffset;
+        }
+
+        public int getCreativeXoffset() {
+            return creativeXoffset;
+        }
+
+        public int getCreativeYoffset() {
+            return creativeYoffset;
+        }
     }
 }

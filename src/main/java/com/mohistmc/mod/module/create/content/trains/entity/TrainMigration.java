@@ -1,13 +1,18 @@
 package com.mohistmc.mod.module.create.content.trains.entity;
 
+import com.mohistmc.mod.module.create.catnip.data.Couple;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackEdge;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraphLocation;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.data.Couple;
-import com.mohistmc.mod.module.create.catnip.math.VecHelper;
-import com.mohistmc.mod.module.create.content.trains.graph.*;
 import java.util.Iterator;
 import java.util.Map;
 import net.minecraft.util.Mth;

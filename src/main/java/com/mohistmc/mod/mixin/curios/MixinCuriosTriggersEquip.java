@@ -18,8 +18,11 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.api.CuriosTriggers;
+import com.mohistmc.mod.module.curios.api.SlotPredicate;
+import com.mohistmc.mod.module.curios.common.util.EquipCurioTrigger;
 import java.util.Optional;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.predicates.ItemPredicate;
@@ -30,9 +33,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import com.mohistmc.mod.module.curios.api.CuriosTriggers;
-import com.mohistmc.mod.module.curios.api.SlotPredicate;
-import com.mohistmc.mod.module.curios.common.util.EquipCurioTrigger;
 
 @Mixin(value = CuriosTriggers.EquipBuilder.class, remap = false)
 public class MixinCuriosTriggersEquip {

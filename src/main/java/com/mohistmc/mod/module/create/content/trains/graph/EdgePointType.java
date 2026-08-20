@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.content.trains.observer.TrackObserver;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
 import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
+import com.mojang.serialization.Codec;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;

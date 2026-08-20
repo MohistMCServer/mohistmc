@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.station;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlockEntity;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
@@ -18,8 +22,18 @@ import com.mohistmc.mod.module.create.content.logistics.packagePort.postbox.Post
 import com.mohistmc.mod.module.create.content.redstone.displayLink.DisplayLinkBlock;
 import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlock;
 import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity;
-import com.mohistmc.mod.module.create.content.trains.entity.*;
-import com.mohistmc.mod.module.create.content.trains.graph.*;
+import com.mohistmc.mod.module.create.content.trains.entity.Carriage;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageBogey;
+import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
+import com.mohistmc.mod.module.create.content.trains.entity.Train;
+import com.mohistmc.mod.module.create.content.trains.entity.TravellingPoint;
+import com.mohistmc.mod.module.create.content.trains.graph.DiscoveredPath;
+import com.mohistmc.mod.module.create.content.trains.graph.EdgePointType;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackEdge;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraphLocation;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
 import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation.DiscoveredLocation;
 import com.mohistmc.mod.module.create.content.trains.schedule.Schedule;
 import com.mohistmc.mod.module.create.content.trains.schedule.ScheduleItem;

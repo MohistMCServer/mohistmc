@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
+import com.mohistmc.mod.module.create.AllRecipeSerializers;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
+import com.mohistmc.mod.module.create.foundation.recipe.CreateRecipe;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.AllRecipeSerializers;
-import com.mohistmc.mod.module.create.AllRecipeTypes;
-import com.mohistmc.mod.module.create.foundation.recipe.CreateRecipe;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.network.RegistryFriendlyByteBuf;

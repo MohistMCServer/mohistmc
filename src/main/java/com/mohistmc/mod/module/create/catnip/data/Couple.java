@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.catnip.data;
 
 import com.google.common.collect.ImmutableList;
+import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;

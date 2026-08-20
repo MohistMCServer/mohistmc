@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.Create;
@@ -13,6 +12,7 @@ import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequire
 import com.mohistmc.mod.module.create.foundation.blockEntity.IMergeableBE;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mojang.serialization.Codec;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;

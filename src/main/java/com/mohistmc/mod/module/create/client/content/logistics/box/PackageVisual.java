@@ -2,6 +2,8 @@ package com.mohistmc.mod.module.create.client.content.logistics.box;
 
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
+import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
 import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
@@ -9,8 +11,6 @@ import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.logistics.box.PackageEntity;
-import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;

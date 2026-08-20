@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -17,6 +16,7 @@ import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.Va
 import com.mohistmc.mod.module.create.content.logistics.factoryBoard.FactoryPanelBlockEntity;
 import com.mohistmc.mod.module.create.content.logistics.filter.FilterItem;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

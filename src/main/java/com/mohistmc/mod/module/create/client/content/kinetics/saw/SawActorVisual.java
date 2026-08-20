@@ -3,9 +3,9 @@ package com.mohistmc.mod.module.create.client.content.kinetics.saw;
 import com.mohistmc.mod.module.create.client.content.contraptions.render.ActorVisual;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.RotatingInstance;
-import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.create.client.foundation.virtualWorld.VirtualRenderWorld;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 
 public class SawActorVisual extends ActorVisual {
     private final RotatingInstance shaft;

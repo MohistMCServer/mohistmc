@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.itemHatch;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllItemTags;
 import com.mohistmc.mod.module.create.AllShapes;
@@ -13,6 +12,7 @@ import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
 import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;

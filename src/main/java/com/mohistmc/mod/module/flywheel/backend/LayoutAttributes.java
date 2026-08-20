@@ -1,9 +1,17 @@
 package com.mohistmc.mod.module.flywheel.backend;
 
-import com.mohistmc.mod.module.flywheel.api.layout.*;
+import com.mohistmc.mod.module.flywheel.api.layout.ArrayElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.ElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.FloatRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.IntegerRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.Layout;
+import com.mohistmc.mod.module.flywheel.api.layout.MatrixElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.ScalarElementType;
+import com.mohistmc.mod.module.flywheel.api.layout.UnsignedIntegerRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.ValueRepr;
+import com.mohistmc.mod.module.flywheel.api.layout.VectorElementType;
 import com.mohistmc.mod.module.flywheel.backend.gl.GlNumericType;
 import com.mohistmc.mod.module.flywheel.backend.gl.array.VertexAttribute;
-
 import java.util.ArrayList;
 import java.util.List;
 

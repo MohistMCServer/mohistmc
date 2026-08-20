@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.redstone.displayLink;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -12,6 +11,7 @@ import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviou
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;
 import com.mohistmc.mod.module.create.foundation.block.WrenchableDirectionalBlock;
+import com.mojang.serialization.MapCodec;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;

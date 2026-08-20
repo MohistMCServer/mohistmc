@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.content.fluids.tank.storage;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.SyncedMountedStorage;
@@ -12,6 +10,8 @@ import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import com.mohistmc.mod.module.create.content.fluids.tank.FluidTankBlockEntity;
 import com.mohistmc.mod.module.create.foundation.fluid.FluidTank;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.level.Level;

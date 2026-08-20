@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.network.payload.RichSoilBoostParticlesPayload;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
@@ -40,7 +39,7 @@ public class RichSoilBlock extends Block
 	}
 
 	public static void tryBoostingPlantsAboveAndBelow(ServerLevel level, BlockPos pos, RandomSource random) {
-		if (Configuration.RICH_SOIL_BOOST_CHANCE.get() == 0.0 || random.nextFloat() > Configuration.RICH_SOIL_BOOST_CHANCE.get()) {
+		if (random.nextFloat() > 0.2) {
 			return;
 		}
 

@@ -32,8 +32,6 @@ import com.mohistmc.mod.module.curios.common.capability.ItemizedCurioCapability;
 import com.mohistmc.mod.module.curios.common.data.CuriosSlotResources;
 import com.mohistmc.mod.module.curios.common.integration.CuriosIntegrations;
 import com.mohistmc.mod.module.curios.common.network.NetworkHandler;
-import com.mohistmc.mod.module.curios.config.CuriosClientConfig;
-import com.mohistmc.mod.module.curios.config.CuriosConfig;
 import com.mohistmc.mod.module.curios.impl.CuriosRegistry;
 import com.mohistmc.mod.module.curios.server.command.CuriosCommand;
 import com.mohistmc.mod.module.curios.server.command.CuriosSelectorOptions;
@@ -46,7 +44,6 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModLoader;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -65,9 +62,6 @@ public class CuriosCommonMod {
         eventBus.addListener(this::registerPayloadHandler);
         NeoForge.EVENT_BUS.addListener(this::registerCommands);
         NeoForge.EVENT_BUS.addListener(this::reload);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, CuriosClientConfig.CLIENT_SPEC);
-        modContainer.registerConfig(ModConfig.Type.COMMON, CuriosConfig.COMMON_SPEC);
-        modContainer.registerConfig(ModConfig.Type.SERVER, CuriosConfig.SERVER_SPEC);
     }
 
     public static String itemCacheKey(ItemStack stack) {

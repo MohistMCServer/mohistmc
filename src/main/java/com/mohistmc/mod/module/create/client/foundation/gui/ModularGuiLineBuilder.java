@@ -2,7 +2,11 @@ package com.mohistmc.mod.module.create.client.foundation.gui;
 
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
-import com.mohistmc.mod.module.create.client.foundation.gui.widget.*;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.FilterEditBox;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.Label;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.ScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.SelectionScrollInput;
+import com.mohistmc.mod.module.create.client.foundation.gui.widget.TooltipArea;
 import java.util.function.BiConsumer;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.input.MouseButtonEvent;

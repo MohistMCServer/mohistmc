@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.ponder.api.scene;
 
-import com.mohistmc.mod.module.ponder.api.element.*;
+import com.mohistmc.mod.module.ponder.api.element.AnimatedSceneElement;
+import com.mohistmc.mod.module.ponder.api.element.ElementLink;
+import com.mohistmc.mod.module.ponder.api.element.MinecartElement;
+import com.mohistmc.mod.module.ponder.api.element.ParrotElement;
+import com.mohistmc.mod.module.ponder.api.element.ParrotPose;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

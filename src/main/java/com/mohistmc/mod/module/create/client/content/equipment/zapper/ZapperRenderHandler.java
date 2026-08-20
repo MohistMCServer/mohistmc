@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.equipment.zapper;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
 import com.mohistmc.mod.module.create.content.equipment.zapper.ZapperItem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Supplier;

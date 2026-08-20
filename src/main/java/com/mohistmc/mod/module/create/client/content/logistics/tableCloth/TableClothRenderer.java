@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.logistics.tableCloth;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
@@ -12,6 +10,8 @@ import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.fi
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringRenderer.FilterRenderState;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import java.util.List;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
+import com.mohistmc.mod.module.create.catnip.data.Iterate;
+import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
+import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.data.Iterate;
-import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
-import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
 import io.netty.buffer.ByteBuf;
 import java.util.Collection;
 import java.util.HashSet;

@@ -1,8 +1,12 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
-import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.*;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.Brush;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.CuboidBrush;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.CylinderBrush;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.DynamicBrush;
+import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.SphereBrush;
+import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
 import java.util.Locale;
 import net.minecraft.network.codec.StreamCodec;

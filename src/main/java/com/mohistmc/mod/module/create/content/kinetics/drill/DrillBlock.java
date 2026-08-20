@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.drill;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllDamageSources;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.catnip.placement.IPlacementHelper;
 import com.mohistmc.mod.module.create.catnip.placement.PlacementHelpers;
 import com.mohistmc.mod.module.create.catnip.placement.PlacementOffset;

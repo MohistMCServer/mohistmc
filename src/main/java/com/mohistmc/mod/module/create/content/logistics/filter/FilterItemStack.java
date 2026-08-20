@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.filter;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
 import com.mohistmc.mod.module.create.content.fluids.transfer.GenericItemEmptying;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.It
 import com.mohistmc.mod.module.create.infrastructure.component.AttributeFilterWhitelistMode;
 import com.mohistmc.mod.module.create.infrastructure.component.ItemAttributeEntry;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.component.DataComponents;

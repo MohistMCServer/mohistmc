@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.catnip.math;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
 import com.mohistmc.mod.module.create.catnip.nbt.NBTHelper;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

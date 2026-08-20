@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.utility.ShapeUtils;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;
@@ -8,7 +9,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import com.mohistmc.mod.module.farmersdelight.common.utility.ShapeUtils;
 
 public class RotatedFeastBlock extends FeastBlock
 {

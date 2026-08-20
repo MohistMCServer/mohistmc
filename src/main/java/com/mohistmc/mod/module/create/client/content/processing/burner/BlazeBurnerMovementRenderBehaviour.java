@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.processing.burner;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
@@ -17,6 +15,8 @@ import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementCon
 import com.mohistmc.mod.module.create.content.processing.burner.BlazeBurnerBlock;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraption;
 import com.mohistmc.mod.module.create.content.trains.entity.CarriageContraptionEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;

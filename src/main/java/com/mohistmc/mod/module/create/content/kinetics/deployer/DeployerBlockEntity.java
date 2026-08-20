@@ -1,7 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.mojang.serialization.Codec;
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
@@ -12,6 +15,7 @@ import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.Transporte
 import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering.ServerFilteringBehaviour;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -54,7 +58,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.Create.LOGGER;
 import static com.mohistmc.mod.module.create.content.kinetics.base.DirectionalKineticBlock.FACING;
 
 public class DeployerBlockEntity extends KineticBlockEntity implements Clearable {

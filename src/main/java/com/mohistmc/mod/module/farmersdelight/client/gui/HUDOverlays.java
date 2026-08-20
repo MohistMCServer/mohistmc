@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.client.gui;
 
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModEffects;
 import java.util.Random;
 import net.minecraft.client.DeltaTracker;
@@ -87,8 +86,7 @@ public class HUDOverlays
 
 		@Override
 		public boolean shouldRenderOverlay(Minecraft minecraft, Player player, GuiGraphicsExtractor guiGraphics, int guiTicks) {
-			return super.shouldRenderOverlay(minecraft, player, guiGraphics, guiTicks)
-					&& Configuration.ENABLE_NOURISHMENT_HUNGER_OVERLAY.get();
+			return super.shouldRenderOverlay(minecraft, player, guiGraphics, guiTicks);
 		}
 	}
 
@@ -111,8 +109,7 @@ public class HUDOverlays
 
 		@Override
 		public boolean shouldRenderOverlay(Minecraft minecraft, Player player, GuiGraphicsExtractor guiGraphics, int guiTicks) {
-			return super.shouldRenderOverlay(minecraft, player, guiGraphics, guiTicks)
-					&& Configuration.ENABLE_COMFORT_HEALTH_OVERLAY.get();
+			return super.shouldRenderOverlay(minecraft, player, guiGraphics, guiTicks);
 		}
 	}
 

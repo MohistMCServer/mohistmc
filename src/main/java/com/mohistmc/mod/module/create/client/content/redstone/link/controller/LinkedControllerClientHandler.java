@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.redstone.link.controller;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.AllSoundEvents;
@@ -15,6 +14,7 @@ import com.mohistmc.mod.module.create.content.redstone.link.ServerLinkBehaviour;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.LinkedControllerBindPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.LinkedControllerInputPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.LinkedControllerStopLecternPacket;
+import com.mojang.blaze3d.platform.InputConstants;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;

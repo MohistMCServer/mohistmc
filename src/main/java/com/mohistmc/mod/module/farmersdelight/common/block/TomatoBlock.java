@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
@@ -147,7 +146,7 @@ public class TomatoBlock extends CropBlock
 
 
 	public boolean canClimbBlock(BlockState stateAbove) {
-		return Configuration.ENABLE_TOMATO_VINE_CLIMBING_TAGGED_ROPES.get() ? stateAbove.is(ModTags.Blocks.ROPES) : stateAbove.is(ModBlocks.ROPE.get());
+		return stateAbove.is(ModTags.Blocks.ROPES);
 	}
 
 	@Nullable
@@ -265,7 +264,7 @@ public class TomatoBlock extends CropBlock
 	 */
 	@Deprecated(forRemoval = true)
 	public static void destroyAndPlaceRope(Level level, BlockPos pos) {
-		Block finalRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()))
+		Block finalRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse("mohistmc:rope"))
 				.map(blockReference -> blockReference.value())
 				.orElse(ModBlocks.ROPE.get());
 		level.setBlockAndUpdate(pos, finalRopeBlock.defaultBlockState());

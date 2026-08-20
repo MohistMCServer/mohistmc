@@ -1,9 +1,10 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.bearing;
 
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.OrientedRotatingVisual;
+import com.mohistmc.mod.module.create.content.contraptions.bearing.IBearingBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
@@ -11,8 +12,7 @@ import com.mohistmc.mod.module.flywheel.lib.instance.OrientedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.contraptions.bearing.IBearingBlockEntity;
-import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mojang.math.Axis;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;

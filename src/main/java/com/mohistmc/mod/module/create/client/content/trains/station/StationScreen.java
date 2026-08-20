@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.trains.station;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
@@ -10,7 +9,6 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
 import com.mohistmc.mod.module.create.client.content.decoration.slidingDoor.SlidingDoorRenderer;
 import com.mohistmc.mod.module.create.client.content.trains.entity.TrainIcon;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.gui.widget.IconButton;
@@ -24,6 +22,8 @@ import com.mohistmc.mod.module.create.content.trains.station.GlobalStation;
 import com.mohistmc.mod.module.create.content.trains.station.StationBlockEntity;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.StationEditPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.TrainEditPacket;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
+import com.mojang.blaze3d.platform.InputConstants;
 import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.function.Consumer;

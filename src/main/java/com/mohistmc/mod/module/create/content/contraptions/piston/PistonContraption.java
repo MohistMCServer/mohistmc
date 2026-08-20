@@ -29,7 +29,13 @@ import net.minecraft.world.phys.Vec3;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.*;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.PistonState;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.STATE;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isExtensionPole;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isPiston;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isPistonHead;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.isStickyPiston;
+import static com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock.maxAllowedPistonPoles;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public class PistonContraption extends TranslatingContraption {

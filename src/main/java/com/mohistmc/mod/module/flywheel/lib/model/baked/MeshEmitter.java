@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.flywheel.lib.model.baked;
 
 import com.google.common.collect.ImmutableList;
+import com.mohistmc.mod.module.flywheel.api.material.Material;
+import com.mohistmc.mod.module.flywheel.api.model.Mesh;
+import com.mohistmc.mod.module.flywheel.api.model.Model;
 import com.mojang.blaze3d.PrimitiveTopology;
 import com.mojang.blaze3d.vertex.BufferBuilder;
 import com.mojang.blaze3d.vertex.ByteBufferBuilder;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
-import com.mohistmc.mod.module.flywheel.api.material.Material;
-import com.mohistmc.mod.module.flywheel.api.model.Mesh;
-import com.mohistmc.mod.module.flywheel.api.model.Model;
 import java.util.Arrays;
 import org.jetbrains.annotations.UnknownNullability;
 

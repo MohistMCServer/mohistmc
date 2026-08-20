@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.entity;
 
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.ListBuilder;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.AllSynchedDatas;
@@ -21,6 +16,11 @@ import com.mohistmc.mod.module.create.content.trains.entity.TravellingPoint.ITra
 import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
 import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
 import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.ListBuilder;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.HashSet;

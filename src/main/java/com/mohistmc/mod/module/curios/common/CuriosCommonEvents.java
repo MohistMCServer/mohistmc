@@ -43,7 +43,6 @@ import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncData
 import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncModifiers;
 import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncStack;
 import com.mohistmc.mod.module.curios.common.network.server.sync.SPacketSyncStack.HandlerType;
-import com.mohistmc.mod.module.curios.config.CuriosConfig;
 import com.mohistmc.mod.module.curios.impl.CuriosRegistry;
 import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
@@ -302,10 +301,6 @@ public class CuriosCommonEvents {
                         && livingEntity.level() instanceof ServerLevel serverLevel) {
                     keepInventory =
                             serverLevel.getGameRules().get(GameRules.KEEP_INVENTORY);
-
-                    if (CuriosConfig.SERVER.keepCurios.get() != CuriosConfig.KeepCurios.DEFAULT) {
-                        keepInventory = CuriosConfig.SERVER.keepCurios.get() == CuriosConfig.KeepCurios.ON;
-                    }
                 }
                 boolean finalKeepInventory = keepInventory;
                 curios.forEach((id, stacksHandler) -> {

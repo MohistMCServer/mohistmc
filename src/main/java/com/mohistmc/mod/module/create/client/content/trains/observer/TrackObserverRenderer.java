@@ -1,11 +1,9 @@
 package com.mohistmc.mod.module.create.client.content.trains.observer;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.AllTrackRenders;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderState;
 import com.mohistmc.mod.module.create.client.content.trains.track.TrackBlockRenderer;
-import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringRenderer;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.filtering.FilteringRenderer.FilterRenderState;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
@@ -14,6 +12,8 @@ import com.mohistmc.mod.module.create.content.trains.observer.TrackObserverBlock
 import com.mohistmc.mod.module.create.content.trains.track.ITrackBlock;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour.RenderedTrackOverlayType;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;

@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.contraptions.behaviour.dispenser.storage;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemStorageType;
 import com.mohistmc.mod.module.create.api.contraption.storage.item.menu.MountedStorageMenus;
 import com.mohistmc.mod.module.create.api.contraption.storage.item.simple.SimpleMountedStorage;
+import com.mojang.serialization.MapCodec;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import net.minecraft.network.chat.Component;

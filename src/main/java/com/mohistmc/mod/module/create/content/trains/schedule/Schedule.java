@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.trains.schedule;
 
+import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.ListBuilder;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

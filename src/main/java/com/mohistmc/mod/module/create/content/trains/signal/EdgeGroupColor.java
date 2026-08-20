@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
+import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
 import java.util.Locale;
 import net.minecraft.network.codec.StreamCodec;

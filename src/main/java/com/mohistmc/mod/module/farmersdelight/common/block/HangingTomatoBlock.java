@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -38,13 +37,13 @@ public class HangingTomatoBlock extends TomatoBlock
 	@Override
 	protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean movedByPiston) {
 		super.affectNeighborsAfterRemoval(state, level, pos, movedByPiston);
-		if (Configuration.ENABLE_TOMATO_ROPE_PERMANENCE.get() && !movedByPiston) {
+		if (!movedByPiston) {
 			placeRope(level, pos);
 		}
 	}
 
 	public boolean placeRope(Level level, BlockPos pos) {
-		Block configuredRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse(Configuration.DEFAULT_TOMATO_VINE_ROPE.get()))
+		Block configuredRopeBlock = BuiltInRegistries.BLOCK.get(Identifier.parse("mohistmc:rope"))
 				.map(blockReference -> blockReference.value())
 				.orElse(ModBlocks.ROPE.get());
 		BlockState finalRopeState = configuredRopeBlock.equals(ModBlocks.ROPE.get())

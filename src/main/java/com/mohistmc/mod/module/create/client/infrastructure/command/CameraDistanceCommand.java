@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.client.infrastructure.command;
 
+import com.mohistmc.mod.module.create.client.content.trains.CameraDistanceModifier;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.arguments.FloatArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mohistmc.mod.module.create.client.content.trains.CameraDistanceModifier;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 
 public class CameraDistanceCommand {

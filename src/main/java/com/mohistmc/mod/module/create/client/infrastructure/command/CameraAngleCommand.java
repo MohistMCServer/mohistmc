@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.client.infrastructure.command;
 
 
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.arguments.FloatArgumentType;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mohistmc.mod.module.create.client.foundation.utility.CameraAngleAnimationService;
 import com.mohistmc.mod.module.create.client.foundation.utility.CameraAngleAnimationService.Mode;
 import com.mohistmc.mod.module.create.client.foundation.utility.CameraAngleAnimationService.ModeArgument;
+import com.mojang.brigadier.Command;
+import com.mojang.brigadier.arguments.FloatArgumentType;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;
 
 public class CameraAngleCommand {

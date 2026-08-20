@@ -4,7 +4,6 @@ import com.mohistmc.mod.client.gui.EscGui;
 import com.mohistmc.mod.client.gui.FakeMainGui;
 import com.mohistmc.mod.client.gui.YouerInventoryScreen;
 import com.mohistmc.mod.client.renderer.BulletRenderer;
-import com.mohistmc.mod.module.AttributeFixMod;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.curios.CuriosCommonMod;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
@@ -37,11 +36,9 @@ import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
 import org.slf4j.Logger;
 
 @Mod(MohistMC.MODID)

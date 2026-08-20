@@ -28,7 +28,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
-import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.*;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.TOOLBELT_HOTBAR_OFF;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.TOOLBELT_HOTBAR_ON;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.TOOLBELT_SELECTED_OFF;
+import static com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures.TOOLBELT_SELECTED_ON;
 
 public class ToolboxHandlerClient {
     static int COOLDOWN;

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.client.foundation.gui.render;
 
 import com.google.common.base.Suppliers;
-import com.mojang.blaze3d.platform.Lighting;
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.infrastructure.component.SandPaperItemComponent;
+import com.mojang.blaze3d.platform.Lighting;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.function.Supplier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.render.pip.PictureInPictureRenderer;

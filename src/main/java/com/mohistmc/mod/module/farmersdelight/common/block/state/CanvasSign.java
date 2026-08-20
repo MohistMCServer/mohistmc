@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.state;
 
+import java.util.List;
 import javax.annotation.Nullable;
 import net.minecraft.world.item.DyeColor;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 
 public interface CanvasSign
 {
@@ -17,6 +17,6 @@ public interface CanvasSign
 	 */
 	default boolean isDarkBackground() {
 		DyeColor backgroundDye = this.getBackgroundColor();
-		return backgroundDye != null && Configuration.CANVAS_SIGN_DARK_BACKGROUND_LIST.get().contains(backgroundDye.getName());
+		return backgroundDye != null && List.of("gray", "purple", "blue", "brown", "green", "red", "black").contains(backgroundDye.getName());
 	}
 }

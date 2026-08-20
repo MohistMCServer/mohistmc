@@ -1,12 +1,14 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.mechanicalArm;
 
 import com.google.common.collect.Lists;
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleAxisRotatingVisual;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlock;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity.Phase;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
@@ -17,9 +19,7 @@ import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlock;
-import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
-import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity.Phase;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;

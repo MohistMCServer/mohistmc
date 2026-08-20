@@ -1,7 +1,12 @@
 package com.mohistmc.mod.module.create.content.logistics.packager;
 
-import com.mojang.serialization.Codec;
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllUnpackingHandlers;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.api.packager.unpacking.UnpackingHandler;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -28,6 +33,7 @@ import com.mohistmc.mod.module.create.foundation.item.ItemHelper;
 import com.mohistmc.mod.module.create.infrastructure.component.PackageOrderWithCrafts;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
 import com.mohistmc.mod.module.create.infrastructure.packet.s2c.WiFiEffectPacket;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;

@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.farmersdelight.common.crafting;
 
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.CookingPotBlockEntity;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeSerializers;
 import com.mohistmc.mod.module.farmersdelight.common.utility.ItemUtils;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.NonNullList;

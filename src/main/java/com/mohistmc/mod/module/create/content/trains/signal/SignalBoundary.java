@@ -1,10 +1,6 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
 import com.google.common.base.Objects;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -16,6 +12,10 @@ import com.mohistmc.mod.module.create.content.trains.signal.SignalBlock.SignalTy
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBlockEntity.OverlayState;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBlockEntity.SignalState;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;

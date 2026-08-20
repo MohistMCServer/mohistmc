@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.ponder.foundation.ui;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.catnip.registry.RegisteredObjectsHelper;
 import com.mohistmc.mod.module.create.client.catnip.gui.NavigatableSimiScreen;
 import com.mohistmc.mod.module.create.client.catnip.gui.ScreenOpener;
@@ -14,6 +13,7 @@ import com.mohistmc.mod.module.ponder.Ponder;
 import com.mohistmc.mod.module.ponder.foundation.PonderChapter;
 import com.mohistmc.mod.module.ponder.foundation.PonderIndex;
 import com.mohistmc.mod.module.ponder.foundation.PonderTag;
+import com.mojang.blaze3d.platform.Window;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

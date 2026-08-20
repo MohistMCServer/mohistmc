@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.client.infrastructure.model;
 
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.VirtualBlockGetter;
 import com.mohistmc.mod.module.create.content.decoration.bracket.BracketedBlockEntityBehaviour;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.VirtualBlockGetter;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;

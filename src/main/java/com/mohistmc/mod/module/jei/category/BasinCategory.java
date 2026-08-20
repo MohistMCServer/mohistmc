@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.jei.category;
 
 import com.google.common.base.Suppliers;
 import com.mohistmc.mod.module.create.AllItems;
-import com.mohistmc.mod.module.jei.CreateCategory;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.render.BasinBlazeBurnerRenderState;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
@@ -13,6 +12,7 @@ import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput
 import com.mohistmc.mod.module.create.content.processing.recipe.SizedIngredient;
 import com.mohistmc.mod.module.create.foundation.fluid.FluidIngredient;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mohistmc.mod.module.jei.CreateCategory;
 import java.util.List;
 import java.util.function.Supplier;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

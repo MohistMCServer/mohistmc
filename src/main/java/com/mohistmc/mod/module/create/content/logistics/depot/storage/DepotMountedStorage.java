@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.depot.storage;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.SyncedMountedStorage;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.content.contraptions.Contraption;
 import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
 import com.mohistmc.mod.module.create.content.logistics.depot.DepotBlockEntity;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemInventory;
+import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;

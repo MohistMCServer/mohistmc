@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.client.event;
 
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,11 +19,7 @@ public class TooltipEvents
 		Item food = event.getItemStack().getItem();
 
 		if (food.equals(Items.PUMPKIN_PIE)) {
-			event.getToolTip().add(Configuration.ENABLE_PUMPKIN_PIE_SNEAK_TO_PLACE.get() ? TextUtils.PLACEABLE_SNEAKING : TextUtils.PLACEABLE);
-		}
-
-		if (!Configuration.ENABLE_VANILLA_SOUP_EXTRA_EFFECTS.get() || !Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
-			return;
+			event.getToolTip().add(TextUtils.PLACEABLE);
 		}
 
 		MobEffectInstance soupEffect = FoodValues.VANILLA_SOUP_EFFECTS.get(food);

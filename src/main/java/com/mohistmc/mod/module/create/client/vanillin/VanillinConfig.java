@@ -2,8 +2,11 @@ package com.mohistmc.mod.module.create.client.vanillin;
 
 import com.mohistmc.mod.module.create.catnip.config.Builder;
 import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
-import com.mohistmc.mod.module.create.client.vanillin.config.*;
-
+import com.mohistmc.mod.module.create.client.vanillin.config.CClient;
+import com.mohistmc.mod.module.create.client.vanillin.config.Configurator;
+import com.mohistmc.mod.module.create.client.vanillin.config.ModOverrides;
+import com.mohistmc.mod.module.create.client.vanillin.config.VisualConfigValue;
+import com.mohistmc.mod.module.create.client.vanillin.config.VisualOverride;
 import java.util.List;
 import java.util.Map;
 

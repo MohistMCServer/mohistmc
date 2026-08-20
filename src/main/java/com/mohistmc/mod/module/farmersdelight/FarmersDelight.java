@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.farmersdelight;
 
 import com.mohistmc.mod.MohistMC;
 import com.mohistmc.mod.module.farmersdelight.common.CommonSetup;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModAdvancements;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBiomeFeatures;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBiomeModifiers;
@@ -26,13 +25,8 @@ import com.mohistmc.mod.module.farmersdelight.common.registry.ModSounds;
 import com.mohistmc.mod.module.farmersdelight.common.registry.RegistryAliases;
 import com.mohistmc.mod.module.farmersdelight.common.world.VillageStructures;
 import net.minecraft.resources.Identifier;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.common.NeoForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,12 +42,6 @@ public class FarmersDelight
 
 	public FarmersDelight(IEventBus modEventBus, ModContainer modContainer) {
 		modEventBus.addListener(CommonSetup::init);
-		if (FMLEnvironment.getDist() == Dist.CLIENT) {
-			modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
-		}
-
-		modContainer.registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
-		modContainer.registerConfig(ModConfig.Type.CLIENT, Configuration.CLIENT_CONFIG);
 
 		ModSounds.SOUNDS.register(modEventBus);
 		ModBlocks.BLOCKS.register(modEventBus);

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.edgeInteraction;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.Create;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.content.kinetics.crafter.CrafterHelper;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.edgeInteraction.EdgeInteractionBehaviour;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.edgeInteraction.EdgeInteractionHandler;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;

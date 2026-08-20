@@ -2,13 +2,13 @@ package com.mohistmc.mod.module.create.client.infrastructure.model;
 
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
-import com.mojang.math.Axis;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.content.equipment.extendoGrip.ExtendoGripRenderHandler;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.ItemModelRenderHelper;
 import com.mohistmc.mod.module.create.client.foundation.model.BakedModelHelper;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.ItemModelRenderHelper;
+import com.mojang.math.Axis;
+import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;

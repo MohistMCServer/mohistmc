@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.content.kinetics.turntable;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleAxisRotatingVisual;
+import com.mohistmc.mod.module.create.content.kinetics.turntable.TurntableBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.content.kinetics.turntable.TurntableBlockEntity;
 
 public class TurntableVisual extends SingleAxisRotatingVisual<TurntableBlockEntity> {
     public TurntableVisual(VisualizationContext context, TurntableBlockEntity blockEntity, float partialTick) {

@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.AllItemTags;
 import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.catnip.data.WorldAttached;
@@ -8,8 +7,13 @@ import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.foundation.utility.RaycastHelper;
-import com.mohistmc.mod.module.create.content.trains.track.*;
+import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
+import com.mohistmc.mod.module.create.content.trains.track.TrackBlock;
+import com.mohistmc.mod.module.create.content.trains.track.TrackBlockEntity;
+import com.mohistmc.mod.module.create.content.trains.track.TrackShape;
+import com.mohistmc.mod.module.create.content.trains.track.TrackVoxelShapes;
 import com.mohistmc.mod.module.create.infrastructure.component.BezierTrackPointLocation;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;

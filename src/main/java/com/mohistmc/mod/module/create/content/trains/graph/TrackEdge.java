@@ -1,14 +1,14 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
 import com.google.common.collect.ImmutableList;
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
+import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
+import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.catnip.math.VecHelper;
-import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
-import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.content.processing.burner;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
@@ -15,6 +13,8 @@ import com.mohistmc.mod.module.create.content.processing.basin.BasinBlockEntity;
 import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement;
 import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement.ItemUseType;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import java.util.Locale;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

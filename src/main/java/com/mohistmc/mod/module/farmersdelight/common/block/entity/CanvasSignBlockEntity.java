@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlockEntityTypes;
 
 public class CanvasSignBlockEntity extends SignBlockEntity
 {

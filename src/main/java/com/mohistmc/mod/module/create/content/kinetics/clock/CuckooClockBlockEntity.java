@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.clock;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllDamageSources;
@@ -8,6 +7,7 @@ import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.create.foundation.advancement.CreateTrigger;
+import com.mojang.serialization.Codec;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;

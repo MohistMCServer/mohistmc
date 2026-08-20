@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.fluids.transfer;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.foundation.recipe.CreateSingleStackRecipe;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStackTemplate;

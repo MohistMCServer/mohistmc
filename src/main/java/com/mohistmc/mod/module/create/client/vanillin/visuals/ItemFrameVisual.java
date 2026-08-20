@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.create.client.vanillin.visuals;
 
+import com.mohistmc.mod.module.create.client.vanillin.item.ItemModels;
 import com.mohistmc.mod.module.flywheel.api.model.Model;
 import com.mohistmc.mod.module.flywheel.api.visual.EntityVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
@@ -9,7 +10,6 @@ import com.mohistmc.mod.module.flywheel.lib.model.baked.BakedModelBuilder;
 import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.client.vanillin.item.ItemModels;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
 import net.minecraft.client.resources.model.BlockStateDefinitions;

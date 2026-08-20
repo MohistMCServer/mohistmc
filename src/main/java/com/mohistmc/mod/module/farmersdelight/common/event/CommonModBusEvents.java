@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.farmersdelight.common.event;
 
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.FoodValues;
+import java.util.List;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -20,17 +20,13 @@ public class CommonModBusEvents
 		if (DatagenModLoader.isRunningDataGen()) {
 			return;
 		}
-		if (Configuration.ENABLE_STACKABLE_SOUP_ITEMS.get()) {
-			Configuration.SOUP_ITEM_LIST.get().forEach((key) -> {
-				BuiltInRegistries.ITEM.get(Identifier.parse(key)).ifPresent(item -> {
-					event.modify(item.value(), (builder) -> builder.set(DataComponents.MAX_STACK_SIZE, 16));
-				});
+		List.of("minecraft:mushroom_stew", "minecraft:beetroot_soup", "minecraft:rabbit_stew").forEach((key) -> {
+			BuiltInRegistries.ITEM.get(Identifier.parse(key)).ifPresent(item -> {
+				event.modify(item.value(), (builder) -> builder.set(DataComponents.MAX_STACK_SIZE, 16));
 			});
-		}
-		if (Configuration.ENABLE_RABBIT_STEW_BUFF.get()) {
-			event.modify(Items.RABBIT_STEW, (builder) -> builder
-				.set(DataComponents.FOOD, FoodValues.RABBIT_STEW_BUFF)
-				.set(DataComponents.CONSUMABLE, FoodValues.consumable(FoodValues.RABBIT_STEW_BUFF)));
-		}
+		});
+		event.modify(Items.RABBIT_STEW, (builder) -> builder
+			.set(DataComponents.FOOD, FoodValues.RABBIT_STEW_BUFF)
+			.set(DataComponents.CONSUMABLE, FoodValues.consumable(FoodValues.RABBIT_STEW_BUFF)));
 	}
 }

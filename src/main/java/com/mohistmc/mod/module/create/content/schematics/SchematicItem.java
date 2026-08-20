@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.schematics;
 
-import com.mojang.logging.LogUtils;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.foundation.utility.CreatePaths;
+import com.mojang.logging.LogUtils;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;

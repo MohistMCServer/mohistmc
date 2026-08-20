@@ -1,12 +1,11 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import java.util.function.Supplier;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 
 public class ModParticleTypes
 {

@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
+import com.mohistmc.mod.module.farmersdelight.common.registry.ModParticleTypes;
 import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -11,7 +12,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModParticleTypes;
 
 public class GleamingSaladBlock extends FeastBlock
 {

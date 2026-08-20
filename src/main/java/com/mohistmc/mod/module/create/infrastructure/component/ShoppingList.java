@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.IntAttached;
 import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import com.mohistmc.mod.module.create.content.logistics.packager.InventorySummary;
 import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlockEntity;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

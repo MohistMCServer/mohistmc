@@ -1,9 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.chainConveyor;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -11,13 +7,17 @@ import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolde
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer;
-import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.client.foundation.render.CreateRenderTypes;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorBlockEntity.ConnectionStats;
 import com.mohistmc.mod.module.create.content.kinetics.chainConveyor.ChainConveyorPackage;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;

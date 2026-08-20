@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.content.equipment.zapper.ZapperItem;
 import com.mohistmc.mod.module.create.content.equipment.zapper.terrainzapper.FlattenTool;
+import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
 import java.util.List;
 import java.util.Locale;

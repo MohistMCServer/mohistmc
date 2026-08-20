@@ -2,7 +2,13 @@ package com.mohistmc.mod.module.flywheel.backend.glsl.error;
 
 import com.mohistmc.mod.module.flywheel.backend.glsl.SourceFile;
 import com.mohistmc.mod.module.flywheel.backend.glsl.SourceLines;
-import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.*;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.ErrorLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.FileLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.HeaderLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.NestedLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.SourceLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.SpanHighlightLine;
+import com.mohistmc.mod.module.flywheel.backend.glsl.error.lines.TextLine;
 import com.mohistmc.mod.module.flywheel.backend.glsl.span.Span;
 import com.mohistmc.mod.module.flywheel.lib.util.StringUtil;
 import java.util.ArrayList;

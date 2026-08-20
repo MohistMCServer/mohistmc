@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.infrastructure.packet.c2s;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllHandle;
 import com.mohistmc.mod.module.create.AllPackets;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
 import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.mechanicalArm.ArmInteractionPoint;
+import com.mojang.serialization.Codec;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.ListTag;

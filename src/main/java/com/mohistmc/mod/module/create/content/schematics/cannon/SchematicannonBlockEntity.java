@@ -1,7 +1,10 @@
 package com.mohistmc.mod.module.create.content.schematics.cannon;
 
-import com.mojang.serialization.Codec;
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
@@ -21,6 +24,7 @@ import com.mohistmc.mod.module.create.infrastructure.component.SchematicannonOpt
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import com.mohistmc.mod.module.create.infrastructure.config.CSchematics;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ConfigureSchematicannonPacket;
+import com.mojang.serialization.Codec;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;

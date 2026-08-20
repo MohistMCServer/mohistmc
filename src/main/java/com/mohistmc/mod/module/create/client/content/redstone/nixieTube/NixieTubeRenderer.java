@@ -1,9 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.redstone.nixieTube;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
@@ -21,6 +17,10 @@ import com.mohistmc.mod.module.create.content.redstone.nixieTube.NixieTubeBlock;
 import com.mohistmc.mod.module.create.content.redstone.nixieTube.NixieTubeBlockEntity;
 import com.mohistmc.mod.module.create.content.redstone.nixieTube.NixieTubeBlockEntity.ComputerSignal.TubeDisplay;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBlockEntity.SignalState;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.Font.DisplayMode;
 import net.minecraft.client.gui.font.TextRenderable;

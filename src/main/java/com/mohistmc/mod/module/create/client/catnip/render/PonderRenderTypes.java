@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.client.catnip.render;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mohistmc.mod.module.ponder.enums.PonderSpecialTextures;
+import com.mojang.blaze3d.systems.RenderSystem;
 import java.util.function.BiFunction;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.rendertype.LayeringTransform;

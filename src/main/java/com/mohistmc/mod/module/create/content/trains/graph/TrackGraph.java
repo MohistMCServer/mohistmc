@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.graph;
 
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.ListBuilder;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
@@ -15,6 +10,11 @@ import com.mohistmc.mod.module.create.content.trains.signal.SignalEdgeGroup;
 import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
 import com.mohistmc.mod.module.create.content.trains.track.TrackMaterial;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.ListBuilder;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;

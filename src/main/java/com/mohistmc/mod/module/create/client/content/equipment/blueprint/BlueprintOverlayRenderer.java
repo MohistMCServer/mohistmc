@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.equipment.blueprint;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -17,6 +16,7 @@ import com.mohistmc.mod.module.create.content.logistics.tableCloth.TableClothBlo
 import com.mohistmc.mod.module.create.content.trains.track.TrackPlacement.PlacementInfo;
 import com.mohistmc.mod.module.create.infrastructure.component.ShoppingList;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.BlueprintPreviewRequestPacket;
+import com.mojang.blaze3d.platform.Window;
 import java.util.ArrayList;
 import java.util.IdentityHashMap;
 import java.util.List;

@@ -1,19 +1,19 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.pulley;
 
-import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.ShaftVisual;
 import com.mohistmc.mod.module.create.client.content.processing.burner.ScrollInstance;
+import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.instance.Instancer;
+import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.instance.TransformedInstance;
 import com.mohistmc.mod.module.flywheel.lib.math.MoreMath;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.util.SmartRecycler;
-import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mojang.math.Axis;
 import it.unimi.dsi.fastutil.bytes.ByteArrayList;
 import it.unimi.dsi.fastutil.bytes.ByteList;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;

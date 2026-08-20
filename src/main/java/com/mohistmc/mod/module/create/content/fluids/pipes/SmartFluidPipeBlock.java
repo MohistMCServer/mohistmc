@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.fluids.pipes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviou
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;
 import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;

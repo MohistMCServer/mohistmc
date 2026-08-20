@@ -1,9 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.packagerLink;
 
+import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
-
 import java.util.Comparator;
 
 public class RequestPromise {

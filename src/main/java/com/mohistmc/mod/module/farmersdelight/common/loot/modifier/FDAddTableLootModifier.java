@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.loot.modifier;
 
 import com.google.common.base.Suppliers;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -37,11 +36,9 @@ public class FDAddTableLootModifier extends AddTableLootModifier
 	@Nonnull
 	@Override
 	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-		if (Configuration.GENERATE_FD_CHEST_LOOT.get()) {
-			context.getResolver().lookupOrThrow(Registries.LOOT_TABLE).get(this.lootTable).ifPresent((extraTable) -> {
-				extraTable.value().getRandomItemsRaw(context, createStackSplitter(context.getLevel(), generatedLoot::add));
-			});
-		}
+		context.getResolver().lookupOrThrow(Registries.LOOT_TABLE).get(this.lootTable).ifPresent((extraTable) -> {
+			extraTable.value().getRandomItemsRaw(context, createStackSplitter(context.getLevel(), generatedLoot::add));
+		});
 		return generatedLoot;
 	}
 }

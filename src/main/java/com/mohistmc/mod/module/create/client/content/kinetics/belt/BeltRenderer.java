@@ -1,8 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.kinetics.belt;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.levelWrappers.WrappedLevel;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -12,15 +9,22 @@ import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SpriteShiftEntry;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
-import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
-import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
-import com.mohistmc.mod.module.create.content.kinetics.belt.*;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlockEntity;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltHelper;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltPart;
+import com.mohistmc.mod.module.create.content.kinetics.belt.BeltSlope;
 import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltInventory;
 import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
+import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationManager;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
+import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.math.Axis;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -55,7 +59,12 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_180;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_90;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getAngleForBe;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotationAxisOf;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getYRotateAngle;
 
 public class BeltRenderer implements BlockEntityRenderer<BeltBlockEntity, BeltRenderer.BeltRenderState> {
     private static final List<ShadowPiece> SHADOW = Collections.singletonList(new ShadowPiece(

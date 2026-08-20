@@ -1,22 +1,22 @@
 package com.mohistmc.mod.module.create.client.content.trains.track;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.levelWrappers.SchematicLevel;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.render.CachedBuffers;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBuffer;
 import com.mohistmc.mod.module.create.client.catnip.render.SuperByteBufferRenderState;
-import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
-import com.mohistmc.mod.module.flywheel.lib.transform.Affine;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
-import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
 import com.mohistmc.mod.module.create.content.trains.station.StationBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
 import com.mohistmc.mod.module.create.content.trains.track.TrackBlock;
 import com.mohistmc.mod.module.create.content.trains.track.TrackBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.track.TrackTargetingBehaviour.RenderedTrackOverlayType;
 import com.mohistmc.mod.module.create.infrastructure.component.BezierTrackPointLocation;
+import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
+import com.mohistmc.mod.module.flywheel.lib.transform.Affine;
+import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
+import com.mojang.blaze3d.vertex.PoseStack;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import java.util.function.IntFunction;
@@ -36,7 +36,10 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getUpRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getXRadiansRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getXRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getYRadiansRotateAngle;
 
 public class StandardTrackBlockRenderer implements TrackBlockRenderer {
     @Override

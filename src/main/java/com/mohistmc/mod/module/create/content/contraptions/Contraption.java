@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.create.content.contraptions;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockTags;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -61,6 +60,7 @@ import com.mohistmc.mod.module.create.foundation.collision.CollisionList;
 import com.mohistmc.mod.module.create.foundation.collision.CollisionList.Populate;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mojang.serialization.Codec;
 import it.unimi.dsi.fastutil.objects.Object2BooleanArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
 import java.util.ArrayList;

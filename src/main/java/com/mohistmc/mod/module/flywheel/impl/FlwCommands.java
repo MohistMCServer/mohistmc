@@ -1,12 +1,9 @@
 package com.mohistmc.mod.module.flywheel.impl;
 
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mohistmc.mod.module.create.catnip.config.ConfigBase.ConfigBool;
 import com.mohistmc.mod.module.create.catnip.config.ConfigBase.ConfigEnum;
 import com.mohistmc.mod.module.create.catnip.config.ConfigBase.ConfigString;
+import com.mohistmc.mod.module.create.client.infrastructure.command.ClientCommand;
 import com.mohistmc.mod.module.flywheel.api.backend.Backend;
 import com.mohistmc.mod.module.flywheel.api.backend.BackendManager;
 import com.mohistmc.mod.module.flywheel.backend.BackendDebugFlags;
@@ -14,7 +11,10 @@ import com.mohistmc.mod.module.flywheel.backend.compile.LightSmoothness;
 import com.mohistmc.mod.module.flywheel.backend.compile.PipelineCompiler;
 import com.mohistmc.mod.module.flywheel.backend.engine.uniform.DebugMode;
 import com.mohistmc.mod.module.flywheel.backend.engine.uniform.FrameUniforms;
-import com.mohistmc.mod.module.create.client.infrastructure.command.ClientCommand;
+import com.mojang.brigadier.Command;
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.IntegerArgumentType;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientSuggestionProvider;

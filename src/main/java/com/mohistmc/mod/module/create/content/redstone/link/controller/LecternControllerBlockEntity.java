@@ -1,6 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.link.controller;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import java.util.List;

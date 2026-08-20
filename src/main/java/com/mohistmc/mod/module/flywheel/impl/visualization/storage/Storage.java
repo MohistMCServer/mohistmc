@@ -1,7 +1,12 @@
 package com.mohistmc.mod.module.flywheel.impl.visualization.storage;
 
 import com.mohistmc.mod.module.flywheel.api.task.Plan;
-import com.mohistmc.mod.module.flywheel.api.visual.*;
+import com.mohistmc.mod.module.flywheel.api.visual.DynamicVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.LightUpdatedVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.SectionTrackedVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.TickableVisual;
+import com.mohistmc.mod.module.flywheel.api.visual.Visual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.impl.ImplDebugFlags;
 import com.mohistmc.mod.module.flywheel.lib.task.ConditionalPlan;

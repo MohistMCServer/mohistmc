@@ -1,15 +1,9 @@
 package com.mohistmc.mod.module.farmersdelight.client.renderer;
 
-import com.mohistmc.mod.module.farmersdelight.common.block.AbstractStoveBlock;
 import com.mohistmc.mod.module.farmersdelight.common.block.StoveBlock;
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.AbstractStoveBlockEntity;
-import com.mohistmc.mod.module.farmersdelight.common.block.entity.StoveBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -22,7 +16,6 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;

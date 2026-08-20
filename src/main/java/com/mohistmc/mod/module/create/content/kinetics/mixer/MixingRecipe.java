@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.mixer;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import com.mohistmc.mod.module.create.AllRecipeSerializers;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.content.processing.basin.BasinInput;
@@ -16,6 +11,11 @@ import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.filtering
 import com.mohistmc.mod.module.create.foundation.fluid.FluidIngredient;
 import com.mohistmc.mod.module.create.foundation.recipe.TimedRecipe;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;

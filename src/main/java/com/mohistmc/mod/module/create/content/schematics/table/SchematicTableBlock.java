@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.schematics.table;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;

@@ -13,7 +13,6 @@ import com.mohistmc.mod.module.create.client.catnip.gui.render.DirectionIndicato
 import com.mohistmc.mod.module.create.client.catnip.gui.render.EntityBlockRenderState;
 import com.mohistmc.mod.module.create.client.catnip.gui.render.EntityBlockRenderer;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
-import com.mohistmc.mod.module.ponder.enums.PonderGuiTextures;
 import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalKineticBlock;
 import com.mohistmc.mod.module.create.content.kinetics.base.HorizontalAxisKineticBlock;
 import com.mohistmc.mod.module.create.content.kinetics.base.HorizontalKineticBlock;
@@ -21,6 +20,7 @@ import com.mohistmc.mod.module.create.content.kinetics.base.RotatedPillarKinetic
 import com.mohistmc.mod.module.create.content.kinetics.transmission.sequencer.SequencedGearshiftBlock;
 import com.mohistmc.mod.module.create.content.redstone.DirectedDirectionalBlock;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.RadialWrenchMenuSubmitPacket;
+import com.mohistmc.mod.module.ponder.enums.PonderGuiTextures;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

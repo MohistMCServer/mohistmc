@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.plough;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.content.contraptions.actors.AttachedActorBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 
 public class PloughBlock extends AttachedActorBlock {

@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.actors.contraptionControls;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
@@ -19,6 +17,8 @@ import com.mohistmc.mod.module.create.content.contraptions.actors.contraptionCon
 import com.mohistmc.mod.module.create.content.contraptions.actors.contraptionControls.ContraptionControlsBlockEntity;
 import com.mohistmc.mod.module.create.content.contraptions.actors.contraptionControls.ContraptionControlsMovement;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.PoseStack.Pose;
 import java.util.Random;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;

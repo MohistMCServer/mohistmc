@@ -22,7 +22,6 @@ package com.mohistmc.mod.module.curios.client.screen;
 
 import com.mohistmc.mod.module.curios.client.screen.button.CuriosButton;
 import com.mohistmc.mod.module.curios.common.network.client.CPacketDestroy;
-import com.mohistmc.mod.module.curios.config.CuriosClientConfig;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.datafixers.util.Pair;
@@ -42,10 +41,6 @@ public class CuriosScreenEvents {
     @SubscribeEvent
     public void postScreenInit(final ScreenEvent.Init.Post evt) {
         Screen screen = evt.getScreen();
-
-        if (!CuriosClientConfig.CLIENT.enableButton.get()) {
-            return;
-        }
 
         if (screen instanceof InventoryScreen || screen instanceof CreativeModeInventoryScreen) {
             AbstractContainerScreen<?> gui = (AbstractContainerScreen<?>) screen;

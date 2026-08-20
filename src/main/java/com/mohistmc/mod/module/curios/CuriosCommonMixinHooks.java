@@ -18,8 +18,12 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios;
+package com.mohistmc.mod.module.curios;
 
+import com.mohistmc.mod.module.curios.api.CuriosApi;
+import com.mohistmc.mod.module.curios.api.SlotContext;
+import com.mohistmc.mod.module.curios.api.type.inventory.ICurioStacksHandler;
+import com.mohistmc.mod.module.curios.api.type.inventory.IDynamicStackHandler;
 import com.mojang.datafixers.DSL;
 import com.mojang.datafixers.schemas.Schema;
 import com.mojang.datafixers.types.templates.TypeTemplate;
@@ -51,10 +55,6 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import org.apache.commons.lang3.ArrayUtils;
-import com.mohistmc.mod.module.curios.api.CuriosApi;
-import com.mohistmc.mod.module.curios.api.SlotContext;
-import com.mohistmc.mod.module.curios.api.type.inventory.ICurioStacksHandler;
-import com.mohistmc.mod.module.curios.api.type.inventory.IDynamicStackHandler;
 
 public class CuriosCommonMixinHooks {
 

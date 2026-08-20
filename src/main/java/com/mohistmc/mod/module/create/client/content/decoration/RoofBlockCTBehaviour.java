@@ -1,7 +1,11 @@
 package com.mohistmc.mod.module.create.client.content.decoration;
 
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
-import com.mohistmc.mod.module.create.client.foundation.block.connected.*;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.AllCTTypes;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTSpriteShiftEntry;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.CTType;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.ConnectedTextureBehaviour;
+import com.mohistmc.mod.module.create.client.foundation.block.connected.RoofCTType;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;

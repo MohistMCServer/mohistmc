@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.gantry;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
@@ -12,6 +10,8 @@ import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.Sma
 import com.mohistmc.mod.module.create.content.contraptions.gantry.GantryCarriageBlock;
 import com.mohistmc.mod.module.create.content.contraptions.gantry.GantryCarriageBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
@@ -28,7 +28,17 @@ import org.jetbrains.annotations.UnknownNullability;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;
 
-import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.*;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.KINETIC_BLOCK;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_180;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.RAD_90;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getProgress;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotationAxisOf;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getRotationOffsetForPosition;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getTintColor;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getXRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.getYRotateAngle;
+import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityRenderer.shaft;
 import static com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockEntityVisual.rotationOffset;
 
 public class GantryCarriageRenderer implements BlockEntityRenderer<GantryCarriageBlockEntity, GantryCarriageRenderer.GantryCarriageRenderState> {

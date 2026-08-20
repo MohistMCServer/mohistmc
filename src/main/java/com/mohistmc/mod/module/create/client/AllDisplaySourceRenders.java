@@ -3,8 +3,17 @@ package com.mohistmc.mod.module.create.client;
 import com.mohistmc.mod.module.create.AllDisplaySources;
 import com.mohistmc.mod.module.create.api.behaviour.display.DisplaySource;
 import com.mohistmc.mod.module.create.client.api.behaviour.display.DisplaySourceRender;
-import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.*;
-
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.FillLevelDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.ItemThroughputDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.KineticSpeedDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.KineticStressDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.RedstonePowerDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.ScoreboardDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.SingleLineDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.StatTrackingDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.StationSummaryDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.TimeOfDayDisplaySourceRender;
+import com.mohistmc.mod.module.create.client.content.redstone.displayLink.source.ValueListDisplaySourceRender;
 import java.util.function.Supplier;
 
 public class AllDisplaySourceRenders {

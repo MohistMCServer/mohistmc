@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoCannonProjectileType;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistryKeys;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.Registry;

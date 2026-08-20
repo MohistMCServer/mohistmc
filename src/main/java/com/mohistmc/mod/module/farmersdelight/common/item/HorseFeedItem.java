@@ -2,7 +2,6 @@ package com.mohistmc.mod.module.farmersdelight.common.item;
 
 import com.google.common.collect.Lists;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModParticleTypes;
 import com.mohistmc.mod.module.farmersdelight.common.tag.ModTags;
@@ -84,10 +83,6 @@ public class HorseFeedItem extends Item
 
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag isAdvanced) {
-		if (!Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
-			return;
-		}
-
 		MutableComponent textWhenFeeding = TextUtils.tooltip("horse_feed.when_feeding");
 		tooltip.accept(textWhenFeeding.withStyle(ChatFormatting.GRAY));
 

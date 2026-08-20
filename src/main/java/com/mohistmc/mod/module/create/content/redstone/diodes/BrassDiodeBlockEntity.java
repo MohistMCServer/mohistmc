@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardCloneable;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerBrassDiodeScrollValueBehaviour;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.scrollValue.ServerScrollValueBehaviour;
+import com.mojang.serialization.Codec;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

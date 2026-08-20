@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.contraptions.actors.roller;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.catnip.placement.PlacementHelpers;
 import com.mohistmc.mod.module.create.content.contraptions.actors.AttachedActorBlock;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.placement.PoleHelper;
+import com.mojang.serialization.MapCodec;
 import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

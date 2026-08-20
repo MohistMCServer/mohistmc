@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
+import com.mohistmc.mod.module.create.AllDataComponents;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.AllDataComponents;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.component.DataComponentMap;

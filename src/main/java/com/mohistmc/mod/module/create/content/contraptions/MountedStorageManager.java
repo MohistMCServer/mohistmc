@@ -2,10 +2,6 @@ package com.mohistmc.mod.module.create.content.contraptions;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Sets;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.ListBuilder;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.AllMountedItemStorageTypeTags;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.api.contraption.storage.SyncedMountedStorage;
@@ -18,6 +14,10 @@ import com.mohistmc.mod.module.create.api.contraption.storage.item.MountedItemSt
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mohistmc.mod.module.create.infrastructure.items.CombinedInvWrapper;
 import com.mohistmc.mod.module.create.infrastructure.packet.s2c.MountedStorageSyncPacket;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.ListBuilder;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

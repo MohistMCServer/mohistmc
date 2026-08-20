@@ -10,7 +10,11 @@ import com.mohistmc.mod.module.create.content.decoration.MetalScaffoldingBlockIt
 import com.mohistmc.mod.module.create.content.decoration.bracket.BracketBlockItem;
 import com.mohistmc.mod.module.create.content.equipment.BuildersTeaItem;
 import com.mohistmc.mod.module.create.content.equipment.TreeFertilizerItem;
-import com.mohistmc.mod.module.create.content.equipment.armor.*;
+import com.mohistmc.mod.module.create.content.equipment.armor.AllArmorMaterials;
+import com.mohistmc.mod.module.create.content.equipment.armor.BacktankItem;
+import com.mohistmc.mod.module.create.content.equipment.armor.CardboardArmorItem;
+import com.mohistmc.mod.module.create.content.equipment.armor.DivingBootsItem;
+import com.mohistmc.mod.module.create.content.equipment.armor.DivingHelmetItem;
 import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintItem;
 import com.mohistmc.mod.module.create.content.equipment.clipboard.ClipboardBlockItem;
 import com.mohistmc.mod.module.create.content.equipment.extendoGrip.ExtendoGripItem;

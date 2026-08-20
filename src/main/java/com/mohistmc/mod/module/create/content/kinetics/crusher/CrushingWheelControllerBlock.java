@@ -1,11 +1,15 @@
 package com.mohistmc.mod.module.create.content.kinetics.crusher;
 
-import com.mojang.serialization.MapCodec;
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.AllSynchedDatas;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemInventoryProvider;
+import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

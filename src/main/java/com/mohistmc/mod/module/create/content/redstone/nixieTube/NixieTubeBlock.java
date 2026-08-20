@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.redstone.nixieTube;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllItems;
+import com.mohistmc.mod.module.create.AllShapes;
 import com.mohistmc.mod.module.create.api.schematic.requirement.SpecialBlockItemRequirement;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;

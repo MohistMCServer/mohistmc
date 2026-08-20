@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.redstone.nixieTube;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.content.trains.signal.SignalBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBlockEntity.SignalState;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import com.mohistmc.mod.module.create.foundation.utility.DynamicComponent;
+import com.mojang.serialization.Codec;
 import java.lang.ref.WeakReference;
 import java.nio.ByteBuffer;
 import java.util.List;

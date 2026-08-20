@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.flywheel.impl;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mohistmc.mod.module.flywheel.impl.compat.IrisCompat;
 import com.mohistmc.mod.module.flywheel.impl.extension.PoseStackExtension;
 import com.mohistmc.mod.module.flywheel.lib.internal.FlwLibLink;
 import com.mohistmc.mod.module.flywheel.lib.transform.PoseTransformStack;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import java.util.List;
 import java.util.Map;
 import net.minecraft.client.model.geom.ModelPart;

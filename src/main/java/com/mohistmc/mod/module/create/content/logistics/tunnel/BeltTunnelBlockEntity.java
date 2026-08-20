@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.tunnel;
 
-import com.mojang.datafixers.util.Pair;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.content.logistics.funnel.BeltFunnelBlock;
 import com.mohistmc.mod.module.create.content.logistics.tunnel.BeltTunnelBlock.Shape;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
 import com.mohistmc.mod.module.create.infrastructure.packet.s2c.TunnelFlapPacket;
+import com.mojang.datafixers.util.Pair;
 import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.LinkedList;

@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.impl.contraption.storage;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.item.simple.SimpleMountedStorage;
 import com.mohistmc.mod.module.create.infrastructure.items.ItemStackHandler;
+import com.mojang.serialization.MapCodec;
 import java.util.Optional;
 import net.minecraft.world.Container;
 

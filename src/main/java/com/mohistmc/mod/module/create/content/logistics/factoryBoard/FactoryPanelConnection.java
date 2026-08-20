@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.logistics.factoryBoard;
 
+import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.catnip.math.VecHelper;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;

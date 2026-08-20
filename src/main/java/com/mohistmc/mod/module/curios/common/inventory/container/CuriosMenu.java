@@ -29,7 +29,6 @@ import com.mohistmc.mod.module.curios.api.type.inventory.IDynamicStackHandler;
 import com.mohistmc.mod.module.curios.common.inventory.CurioSlot;
 import com.mohistmc.mod.module.curios.common.network.server.SPacketPage;
 import com.mohistmc.mod.module.curios.common.network.server.SPacketQuickMove;
-import com.mohistmc.mod.module.curios.config.CuriosConfig;
 import com.mohistmc.mod.module.curios.impl.CuriosRegistry;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +94,7 @@ public class CuriosMenu extends AbstractCraftingMenu implements ICuriosMenu {
     public void setPage(int page) {
         this.panelWidth = 0;
         int visibleSlots = 0;
-        int maxSlotsPerPage = CuriosConfig.SERVER.maxSlotsPerPage.get();
+        int maxSlotsPerPage = 48;
         int startingIndex = page * maxSlotsPerPage;
         int columns = 0;
 
@@ -103,7 +102,7 @@ public class CuriosMenu extends AbstractCraftingMenu implements ICuriosMenu {
             visibleSlots = this.curiosHandler.getVisibleSlots();
             int slotsOnPage = Math.min(maxSlotsPerPage, visibleSlots - startingIndex);
             int calculatedColumns = (int) Math.ceil((double) slotsOnPage / 8);
-            int minimumColumns = Math.min(slotsOnPage, CuriosConfig.SERVER.minimumColumns.get());
+            int minimumColumns = Math.min(slotsOnPage, 1);
             columns = Mth.clamp(calculatedColumns, minimumColumns, 8);
             this.panelWidth = 14 + 18 * columns;
         }

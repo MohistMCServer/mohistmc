@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.logistics.funnel;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat.Chaser;

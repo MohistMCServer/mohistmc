@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.equipment.potatoCannon;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.api.equipment.potatoCannon.PotatoProjectileBlockHitAction;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;

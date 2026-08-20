@@ -1,5 +1,6 @@
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
 import net.minecraft.commands.arguments.selector.options.EntitySelectorOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.ProblemReporter;
@@ -10,7 +11,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
 @Mixin(EntitySelectorOptions.class)
 public class MixinEntitySelectorOptions {

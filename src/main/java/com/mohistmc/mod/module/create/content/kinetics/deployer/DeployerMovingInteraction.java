@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.kinetics.deployer;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.api.behaviour.interaction.MovingInteractionBehaviour;
 import com.mohistmc.mod.module.create.content.contraptions.AbstractContraptionEntity;
 import com.mohistmc.mod.module.create.content.contraptions.behaviour.MovementContext;
 import com.mohistmc.mod.module.create.content.contraptions.mounted.MountedContraption;
 import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity.Mode;
+import com.mojang.serialization.Codec;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.UUIDUtil;

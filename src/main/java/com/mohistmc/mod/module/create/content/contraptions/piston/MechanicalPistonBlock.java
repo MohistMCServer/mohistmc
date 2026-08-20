@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.contraptions.piston;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllShapes;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.content.kinetics.base.DirectionalAxisKineticBlock;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;

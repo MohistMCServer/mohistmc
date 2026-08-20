@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.api.registry.CreateRegistries;
 import com.mohistmc.mod.module.create.catnip.codecs.CatnipCodecUtils;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.HolderLookup;

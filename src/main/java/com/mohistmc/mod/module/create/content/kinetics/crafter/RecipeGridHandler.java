@@ -1,8 +1,6 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
 import com.google.common.base.Predicates;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
@@ -10,6 +8,8 @@ import com.mohistmc.mod.module.create.catnip.data.Pair;
 import com.mohistmc.mod.module.create.catnip.math.Pointing;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mohistmc.mod.module.create.infrastructure.config.AllConfigs;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

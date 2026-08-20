@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.farmersdelight.common.block.entity.inventory;
 
 import com.mohistmc.mod.module.farmersdelight.common.block.entity.Basket;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.transfer.DelegatingResourceHandler;
 import net.neoforged.neoforge.transfer.item.ItemResource;
 import net.neoforged.neoforge.transfer.item.VanillaContainerWrapper;

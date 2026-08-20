@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.flywheel.lib.model.baked;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.blaze3d.vertex.BufferBuilder;
 import com.mohistmc.mod.module.flywheel.api.material.Material;
 import com.mohistmc.mod.module.flywheel.api.model.Model;
 import com.mohistmc.mod.module.flywheel.lib.model.SimpleModel;
+import com.mojang.blaze3d.vertex.BufferBuilder;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceArrayMap;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceMap;
 import java.util.function.Function;

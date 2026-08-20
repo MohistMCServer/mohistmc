@@ -2,13 +2,13 @@ package com.mohistmc.mod.module.jei.category;
 
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.AllRecipeTypes;
-import com.mohistmc.mod.module.jei.CreateCategory;
-import com.mohistmc.mod.module.jei.JeiClientPlugin;
-import com.mohistmc.mod.module.jei.renderer.IconRenderer;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.render.CrafterRenderState;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.content.kinetics.crafter.MechanicalCraftingRecipe;
+import com.mohistmc.mod.module.jei.CreateCategory;
+import com.mohistmc.mod.module.jei.JeiClientPlugin;
+import com.mohistmc.mod.module.jei.renderer.IconRenderer;
 import java.util.List;
 import java.util.Optional;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

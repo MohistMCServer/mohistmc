@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.fluids.pipes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
@@ -16,6 +15,7 @@ import com.mohistmc.mod.module.create.content.fluids.FluidTransportBehaviour;
 import com.mohistmc.mod.module.create.foundation.advancement.AdvancementBehaviour;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.NeighborUpdateListeningBlock;
+import com.mojang.serialization.MapCodec;
 import java.util.Arrays;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

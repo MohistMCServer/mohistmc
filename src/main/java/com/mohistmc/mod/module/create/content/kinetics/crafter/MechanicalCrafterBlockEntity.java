@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.kinetics.crafter;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllAdvancements;
+import com.mohistmc.mod.module.create.AllBlockEntityTypes;
+import com.mohistmc.mod.module.create.AllBlocks;
+import com.mohistmc.mod.module.create.AllItemTags;
+import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.api.contraption.transformable.TransformableBlockEntity;
 import com.mohistmc.mod.module.create.catnip.data.Pair;

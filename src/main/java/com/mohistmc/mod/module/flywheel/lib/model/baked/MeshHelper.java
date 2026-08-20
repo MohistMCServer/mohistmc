@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.flywheel.lib.model.baked;
 
-import com.mojang.blaze3d.vertex.MeshData;
 import com.mohistmc.mod.module.flywheel.lib.memory.MemoryBlock;
 import com.mohistmc.mod.module.flywheel.lib.model.SimpleQuadMesh;
 import com.mohistmc.mod.module.flywheel.lib.vertex.FullVertexView;
 import com.mohistmc.mod.module.flywheel.lib.vertex.VertexView;
+import com.mojang.blaze3d.vertex.MeshData;
 import java.nio.ByteBuffer;
 import org.jspecify.annotations.Nullable;
 import org.lwjgl.system.MemoryUtil;

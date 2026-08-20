@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.content.redstone.diodes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.foundation.block.RedStoneConnectBlock;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

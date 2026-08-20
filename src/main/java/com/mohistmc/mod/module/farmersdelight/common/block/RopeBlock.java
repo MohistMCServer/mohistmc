@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.farmersdelight.common.block;
 
-import com.mohistmc.mod.module.farmersdelight.common.Configuration;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModBlocks;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
@@ -63,7 +62,7 @@ public class RopeBlock extends IronBarsBlock
 
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-		if (Configuration.ENABLE_ROPE_REELING.get() && player.isSecondaryUseActive()) {
+		if (player.isSecondaryUseActive()) {
 			if (player.getAbilities().mayBuild && (player.getAbilities().instabuild || player.getInventory().add(new ItemStack(this.asItem())))) {
 				BlockPos.MutableBlockPos reelingPos = pos.mutable().move(Direction.DOWN);
 				int minBuildHeight = level.dimensionType().minY();

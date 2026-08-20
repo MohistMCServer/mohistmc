@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.foundation.blockEntity;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllSoundEvents;
 import com.mohistmc.mod.module.create.client.catnip.gui.AbstractSimiScreen;
 import com.mohistmc.mod.module.create.client.catnip.gui.UIRenderHelper;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.ValueSettings;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ValueSettingsPacket;
+import com.mojang.blaze3d.platform.Window;
 import java.util.function.Consumer;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.KeyEvent;

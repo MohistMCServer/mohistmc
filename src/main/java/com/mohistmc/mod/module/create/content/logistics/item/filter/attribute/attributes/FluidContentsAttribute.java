@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItemAttributeTypes;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecs;
@@ -8,6 +7,7 @@ import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.It
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
 import com.mohistmc.mod.module.create.foundation.fluid.FluidHelper;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidItemInventory;
+import com.mojang.serialization.MapCodec;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.registries.BuiltInRegistries;

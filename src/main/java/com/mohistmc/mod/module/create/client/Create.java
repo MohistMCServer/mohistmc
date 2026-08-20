@@ -8,16 +8,16 @@ import com.mohistmc.mod.module.create.client.content.equipment.zapper.ZapperRend
 import com.mohistmc.mod.module.create.client.content.schematics.client.ClientSchematicLoader;
 import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicAndQuillHandler;
 import com.mohistmc.mod.module.create.client.content.schematics.client.SchematicHandler;
-import com.mohistmc.mod.module.flywheel.impl.Flywheel;
 import com.mohistmc.mod.module.create.client.foundation.ClientResourceReloadListener;
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.ValueSettingsClient;
 import com.mohistmc.mod.module.create.client.foundation.ponder.CreatePonderPlugin;
 import com.mohistmc.mod.module.create.client.foundation.utility.CameraAngleAnimationService;
 import com.mohistmc.mod.module.create.client.infrastructure.config.AllConfigs;
-import com.mohistmc.mod.module.ponder.Ponder;
-import com.mohistmc.mod.module.ponder.foundation.PonderIndex;
 import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
 import com.mohistmc.mod.module.create.content.trains.GlobalRailwayManager;
+import com.mohistmc.mod.module.flywheel.impl.Flywheel;
+import com.mohistmc.mod.module.ponder.Ponder;
+import com.mohistmc.mod.module.ponder.foundation.PonderIndex;
 import net.minecraft.resources.Identifier;
 
 import static com.mohistmc.mod.module.create.Create.MOD_ID;

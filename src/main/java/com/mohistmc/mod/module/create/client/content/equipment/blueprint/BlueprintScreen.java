@@ -1,8 +1,6 @@
 package com.mohistmc.mod.module.create.client.content.equipment.blueprint;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.AllPackets;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
@@ -16,6 +14,8 @@ import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntit
 import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintEntity.BlueprintSection;
 import com.mohistmc.mod.module.create.content.equipment.blueprint.BlueprintMenu;
 import com.mohistmc.mod.module.create.foundation.gui.menu.MenuType;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;

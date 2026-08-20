@@ -2,9 +2,9 @@ package com.mohistmc.mod.module.create.client.content.kinetics.crusher;
 
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.content.kinetics.base.SingleAxisRotatingVisual;
+import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingWheelBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
-import com.mohistmc.mod.module.create.content.kinetics.crusher.CrushingWheelBlockEntity;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class CrushingWheelVisual extends SingleAxisRotatingVisual<CrushingWheelBlockEntity> {

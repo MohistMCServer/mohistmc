@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.contraptions.mounted;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllShapes;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequire
 import com.mohistmc.mod.module.create.content.schematics.requirement.ItemRequirement.ItemUseType;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.MinecartPassBlock;
+import com.mojang.serialization.MapCodec;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

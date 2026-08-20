@@ -1,10 +1,24 @@
 package com.mohistmc.mod.module.create.client.vanillin;
 
 import com.mohistmc.mod.module.create.catnip.config.ConfigBase;
-import com.mohistmc.mod.module.create.client.vanillin.compose.*;
-import com.mohistmc.mod.module.create.client.vanillin.config.*;
+import com.mohistmc.mod.module.create.client.vanillin.compose.ComposableEntityVisual;
+import com.mohistmc.mod.module.create.client.vanillin.compose.ConfiguredElement;
+import com.mohistmc.mod.module.create.client.vanillin.compose.ConfiguredElementImpl;
+import com.mohistmc.mod.module.create.client.vanillin.compose.VisualElement;
+import com.mohistmc.mod.module.create.client.vanillin.compose.VisualizationPredicate;
+import com.mohistmc.mod.module.create.client.vanillin.config.BlockEntityVisualizerBuilder;
+import com.mohistmc.mod.module.create.client.vanillin.config.Configurator;
+import com.mohistmc.mod.module.create.client.vanillin.config.EntityVisualizerBuilder;
+import com.mohistmc.mod.module.create.client.vanillin.config.VisualConfigValue;
+import com.mohistmc.mod.module.create.client.vanillin.config.VisualOverride;
 import com.mohistmc.mod.module.create.client.vanillin.elements.ShadowElement;
-import com.mohistmc.mod.module.create.client.vanillin.visuals.*;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.BellVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.BlockDisplayVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.ChestVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.ItemDisplayVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.ItemFrameVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.MinecartVisual;
+import com.mohistmc.mod.module.create.client.vanillin.visuals.ShulkerBoxVisual;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

@@ -2,6 +2,8 @@ package com.mohistmc.mod.module.create.client.content.contraptions.actors.harves
 
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
+import com.mohistmc.mod.module.create.content.contraptions.actors.harvester.HarvesterBlock;
+import com.mohistmc.mod.module.create.content.contraptions.actors.harvester.HarvesterBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
@@ -9,8 +11,6 @@ import com.mohistmc.mod.module.flywheel.lib.instance.InstanceTypes;
 import com.mohistmc.mod.module.flywheel.lib.instance.OrientedInstance;
 import com.mohistmc.mod.module.flywheel.lib.model.Models;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
-import com.mohistmc.mod.module.create.content.contraptions.actors.harvester.HarvesterBlock;
-import com.mohistmc.mod.module.create.content.contraptions.actors.harvester.HarvesterBlockEntity;
 import java.util.function.Consumer;
 import org.joml.Quaternionf;
 import org.jspecify.annotations.Nullable;

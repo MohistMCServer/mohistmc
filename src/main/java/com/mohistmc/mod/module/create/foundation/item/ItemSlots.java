@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.foundation.item;
 
+import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import java.util.HashMap;

@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.create.client.foundation.ponder.instruction;
 
 import com.mohistmc.mod.module.create.client.content.kinetics.deployer.DeployerRenderer;
-import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
-import com.mohistmc.mod.module.ponder.foundation.PonderScene;
-import com.mohistmc.mod.module.ponder.foundation.instruction.TickingInstruction;
 import com.mohistmc.mod.module.create.content.contraptions.bearing.IBearingBlockEntity;
 import com.mohistmc.mod.module.create.content.contraptions.pulley.PulleyBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.deployer.DeployerBlockEntity;
 import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity;
+import com.mohistmc.mod.module.ponder.api.level.PonderLevel;
+import com.mohistmc.mod.module.ponder.foundation.PonderScene;
+import com.mohistmc.mod.module.ponder.foundation.instruction.TickingInstruction;
 import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Function;

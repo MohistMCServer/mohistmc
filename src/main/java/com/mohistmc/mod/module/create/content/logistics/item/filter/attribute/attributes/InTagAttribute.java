@@ -1,9 +1,9 @@
 package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItemAttributeTypes;
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttribute;
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
+import com.mojang.serialization.MapCodec;
 import io.netty.buffer.ByteBuf;
 import java.util.List;
 import java.util.stream.Collectors;

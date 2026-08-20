@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.kinetics.belt;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllClientHandle;
@@ -10,10 +9,15 @@ import com.mohistmc.mod.module.create.content.kinetics.base.KineticBlockEntity;
 import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.DirectBeltInputBehaviour;
 import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
 import com.mohistmc.mod.module.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour.TransportedResult;
-import com.mohistmc.mod.module.create.content.kinetics.belt.transport.*;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltInventory;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltMovementHandler;
 import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltMovementHandler.TransportedEntityInfo;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.BeltTunnelInteractionHandler;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.ItemHandlerBeltSegment;
+import com.mohistmc.mod.module.create.content.kinetics.belt.transport.TransportedItemStack;
 import com.mohistmc.mod.module.create.content.logistics.tunnel.BrassTunnelBlockEntity;
 import com.mohistmc.mod.module.create.foundation.blockEntity.behaviour.inventory.VersionedInventoryTrackerBehaviour;
+import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

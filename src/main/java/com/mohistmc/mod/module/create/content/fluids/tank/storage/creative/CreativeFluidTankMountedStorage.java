@@ -1,12 +1,12 @@
 package com.mohistmc.mod.module.create.content.fluids.tank.storage.creative;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllMountedStorageTypes;
 import com.mohistmc.mod.module.create.api.contraption.storage.fluid.MountedFluidStorageType;
 import com.mohistmc.mod.module.create.api.contraption.storage.fluid.WrapperMountedFluidStorage;
 import com.mohistmc.mod.module.create.content.fluids.tank.CreativeFluidTankBlockEntity;
 import com.mohistmc.mod.module.create.content.fluids.tank.CreativeFluidTankBlockEntity.CreativeFluidTankInventory;
 import com.mohistmc.mod.module.create.foundation.fluid.FluidTank;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;

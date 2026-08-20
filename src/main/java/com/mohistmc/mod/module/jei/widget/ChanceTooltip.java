@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.jei.widget;
 
-import com.mojang.datafixers.util.Either;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
+import com.mojang.datafixers.util.Either;
 import mezz.jei.api.gui.builder.ITooltipBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotRichTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;

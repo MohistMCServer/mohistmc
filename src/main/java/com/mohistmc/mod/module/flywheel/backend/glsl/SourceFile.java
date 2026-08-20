@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.flywheel.backend.glsl;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.datafixers.util.Pair;
 import com.mohistmc.mod.module.flywheel.backend.glsl.span.Span;
 import com.mohistmc.mod.module.flywheel.backend.glsl.span.StringSpan;
 import com.mohistmc.mod.module.flywheel.lib.util.ResourceUtil;
+import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;

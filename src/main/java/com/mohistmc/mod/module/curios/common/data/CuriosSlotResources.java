@@ -31,7 +31,6 @@ import com.mohistmc.mod.module.curios.api.type.ISlotType;
 import com.mohistmc.mod.module.curios.api.type.data.IEntitiesData;
 import com.mohistmc.mod.module.curios.api.type.data.ISlotData;
 import com.mohistmc.mod.module.curios.common.slot.SlotType;
-import com.mohistmc.mod.module.curios.config.CuriosConfig;
 import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.JsonOps;
 import java.util.ArrayList;
@@ -146,7 +145,7 @@ public class CuriosSlotResources extends SimpleJsonResourceReloadListener<JsonEl
                                          HolderLookup.Provider provider)
             throws IllegalArgumentException {
         List<Map<String, String>> parsed = new ArrayList<>();
-        List<? extends String> list = CuriosConfig.COMMON.slots.get();
+        List<? extends String> list = List.of();
         Set<String> results = new HashSet<>();
 
         for (String s : list) {

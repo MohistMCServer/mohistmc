@@ -1,6 +1,10 @@
 package com.mohistmc.mod.module.create.content.equipment.zapper;
 
-import com.mohistmc.mod.module.create.*;
+import com.mohistmc.mod.module.create.AllBlockTags;
+import com.mohistmc.mod.module.create.AllClientHandle;
+import com.mohistmc.mod.module.create.AllDataComponents;
+import com.mohistmc.mod.module.create.AllSoundEvents;
+import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.catnip.nbt.NBTProcessors;
 import com.mohistmc.mod.module.create.foundation.item.SwingControlItem;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;

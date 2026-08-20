@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.content.schematics.cannon;
 
-import com.mojang.serialization.Codec;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.content.kinetics.belt.BeltBlock;
@@ -11,6 +10,7 @@ import com.mohistmc.mod.module.create.content.kinetics.belt.BeltSlope;
 import com.mohistmc.mod.module.create.content.kinetics.belt.item.BeltConnectorItem;
 import com.mohistmc.mod.module.create.content.kinetics.simpleRelays.AbstractSimpleShaftBlock;
 import com.mohistmc.mod.module.create.foundation.utility.BlockHelper;
+import com.mojang.serialization.Codec;
 import java.util.Arrays;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;

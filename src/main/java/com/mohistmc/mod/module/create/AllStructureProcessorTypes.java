@@ -1,7 +1,7 @@
 package com.mohistmc.mod.module.create;
 
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.content.schematics.SchematicProcessor;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;

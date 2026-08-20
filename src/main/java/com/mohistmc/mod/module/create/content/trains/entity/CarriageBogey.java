@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.entity;
 
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.ListBuilder;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.AllBogeyStyles;
 import com.mohistmc.mod.module.create.catnip.animation.LerpedFloat;
 import com.mohistmc.mod.module.create.catnip.data.Couple;
@@ -17,6 +12,11 @@ import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
 import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
 import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.ListBuilder;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.util.Iterator;
 import java.util.Optional;
 import java.util.Random;

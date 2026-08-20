@@ -1,15 +1,19 @@
 package com.mohistmc.mod.module.create.client.content.trains.graph;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mohistmc.mod.module.create.catnip.data.Pair;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
 import com.mohistmc.mod.module.create.client.Create;
 import com.mohistmc.mod.module.create.client.catnip.outliner.Outliner;
-import com.mohistmc.mod.module.create.content.trains.graph.*;
+import com.mohistmc.mod.module.create.content.trains.graph.EdgeData;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackEdge;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackGraph;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
+import com.mohistmc.mod.module.create.content.trains.graph.TrackNodeLocation;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalBoundary;
 import com.mohistmc.mod.module.create.content.trains.signal.SignalEdgeGroup;
 import com.mohistmc.mod.module.create.content.trains.signal.TrackEdgePoint;
 import com.mohistmc.mod.module.create.content.trains.track.BezierConnection;
+import com.mojang.blaze3d.platform.InputConstants;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;

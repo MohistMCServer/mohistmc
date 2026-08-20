@@ -1,17 +1,17 @@
 package com.mohistmc.mod.module.create.client.content.trains.bogey;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import com.mohistmc.mod.module.create.client.AllBogeyStyleRenders;
+import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlock;
+import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeySize;
+import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
 import com.mohistmc.mod.module.flywheel.api.visualization.VisualizationContext;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
-import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlock;
-import com.mohistmc.mod.module.create.content.trains.bogey.AbstractBogeyBlockEntity;
-import com.mohistmc.mod.module.create.content.trains.bogey.BogeySize;
-import com.mohistmc.mod.module.create.content.trains.bogey.BogeyStyle;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

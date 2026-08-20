@@ -18,8 +18,9 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
 import java.util.function.Predicate;
 import javax.annotation.Nonnull;
 import net.minecraft.tags.TagKey;
@@ -34,7 +35,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
 @Mixin(value = Inventory.class, priority = 4)
 public abstract class MixinInventory implements Container {
@@ -48,9 +48,9 @@ public abstract class MixinInventory implements Container {
       method = "contains(Lnet/minecraft/world/item/ItemStack;)Z",
       cancellable = true
   )
-  private void curios$containsStack(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+  private void curios$containsStack(ItemStack searchStack, CallbackInfoReturnable<Boolean> cir) {
 
-    if (CuriosCommonMixinHooks.containsStack(this.player, stack)) {
+    if (CuriosCommonMixinHooks.containsStack(this.player, searchStack)) {
       cir.setReturnValue(true);
     }
   }
@@ -60,9 +60,9 @@ public abstract class MixinInventory implements Container {
       method = "contains(Lnet/minecraft/tags/TagKey;)Z",
       cancellable = true
   )
-  private void curios$containsTag(TagKey<Item> tagKey, CallbackInfoReturnable<Boolean> cir) {
+  private void curios$containsTag(TagKey<Item> tag, CallbackInfoReturnable<Boolean> cir) {
 
-    if (CuriosCommonMixinHooks.containsTag(this.player, tagKey)) {
+    if (CuriosCommonMixinHooks.containsTag(this.player, tag)) {
       cir.setReturnValue(true);
     }
   }
@@ -83,18 +83,5 @@ public abstract class MixinInventory implements Container {
   @Override
   public boolean hasAnyMatching(@Nonnull Predicate<ItemStack> predicate) {
     return Container.super.hasAnyMatching(predicate);
-  }
-
-  @Inject(
-      at = @At("TAIL"),
-      method = "hasAnyMatching(Ljava/util/function/Predicate;)Z",
-      cancellable = true
-  )
-  private void curios$hasAnyMatching(Predicate<ItemStack> predicate,
-                                     CallbackInfoReturnable<Boolean> cir) {
-
-    if (!cir.getReturnValue() && CuriosCommonMixinHooks.contains(this.player, predicate)) {
-      cir.setReturnValue(true);
-    }
   }
 }

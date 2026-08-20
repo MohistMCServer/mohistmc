@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.contraptions.chassis;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
@@ -10,6 +9,7 @@ import com.mohistmc.mod.module.create.client.content.kinetics.base.KineticBlockE
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.renderer.SmartBlockEntityRenderer;
 import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlock;
 import com.mohistmc.mod.module.create.content.contraptions.chassis.StickerBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

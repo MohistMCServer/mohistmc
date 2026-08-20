@@ -1,13 +1,13 @@
 package com.mohistmc.mod.module.farmersdelight.common.registry;
 
+import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
+import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
+import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
 import java.util.function.Supplier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
-import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
-import com.mohistmc.mod.module.farmersdelight.common.crafting.CuttingBoardRecipe;
 
 public class ModRecipeTypes
 {

@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.attributes;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllItemAttributeTypes;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttribute;
 import com.mohistmc.mod.module.create.content.logistics.item.filter.attribute.ItemAttributeType;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import io.netty.buffer.ByteBuf;
 import java.util.ArrayList;
 import java.util.Arrays;

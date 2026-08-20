@@ -1,10 +1,5 @@
 package com.mohistmc.mod.module.create.content.trains.station;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.MapLike;
-import com.mojang.serialization.RecordBuilder;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.content.logistics.box.PackageItem;
 import com.mohistmc.mod.module.create.content.logistics.packagePort.postbox.PostboxBlockEntity;
@@ -14,6 +9,11 @@ import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
 import com.mohistmc.mod.module.create.content.trains.graph.TrackNode;
 import com.mohistmc.mod.module.create.content.trains.signal.SingleBlockEntityEdgePoint;
 import com.mohistmc.mod.module.create.foundation.codec.CreateCodecs;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.MapLike;
+import com.mojang.serialization.RecordBuilder;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Map;

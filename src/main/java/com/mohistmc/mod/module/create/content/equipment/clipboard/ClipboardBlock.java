@@ -1,7 +1,6 @@
 package com.mohistmc.mod.module.create.content.equipment.clipboard;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.serialization.MapCodec;
 import com.mohistmc.mod.module.create.AllBlockEntityTypes;
 import com.mohistmc.mod.module.create.AllClientHandle;
 import com.mohistmc.mod.module.create.AllShapes;
@@ -9,6 +8,7 @@ import com.mohistmc.mod.module.create.api.entity.FakePlayerHandler;
 import com.mohistmc.mod.module.create.content.equipment.wrench.IWrenchable;
 import com.mohistmc.mod.module.create.foundation.block.IBE;
 import com.mohistmc.mod.module.create.foundation.block.ProperWaterloggedBlock;
+import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

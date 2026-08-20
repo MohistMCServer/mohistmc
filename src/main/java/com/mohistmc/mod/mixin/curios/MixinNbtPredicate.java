@@ -18,8 +18,9 @@
  *
  */
 
-package com.mohistmc.mod.mixin.curios.core;
+package com.mohistmc.mod.mixin.curios;
 
+import com.mohistmc.mod.module.curios.CuriosCommonMixinHooks;
 import net.minecraft.advancements.predicates.NbtPredicate;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.ProblemReporter;
@@ -30,7 +31,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-import com.mohistmc.mod.mixin.curios.CuriosCommonMixinHooks;
 
 @Mixin(NbtPredicate.class)
 public class MixinNbtPredicate {

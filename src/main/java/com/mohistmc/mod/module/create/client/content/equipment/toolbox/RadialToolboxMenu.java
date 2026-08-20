@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.equipment.toolbox;
 
-import com.mojang.blaze3d.platform.InputConstants;
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
 import com.mohistmc.mod.module.create.catnip.theme.Color;
@@ -15,6 +13,8 @@ import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxBlockEnti
 import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ToolboxDisposeAllPacket;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ToolboxEquipPacket;
+import com.mojang.blaze3d.platform.InputConstants;
+import com.mojang.blaze3d.platform.Window;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;

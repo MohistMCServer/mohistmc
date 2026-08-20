@@ -1,8 +1,8 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
+import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.mohistmc.mod.module.create.content.processing.recipe.ProcessingOutput;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.network.RegistryFriendlyByteBuf;

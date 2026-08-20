@@ -1,6 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.equipment.goggles;
 
-import com.mojang.blaze3d.platform.Window;
 import com.mohistmc.mod.module.create.AllBlocks;
 import com.mohistmc.mod.module.create.AllItems;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
@@ -25,6 +24,7 @@ import com.mohistmc.mod.module.create.client.infrastructure.config.CClient;
 import com.mohistmc.mod.module.create.content.contraptions.piston.MechanicalPistonBlock;
 import com.mohistmc.mod.module.create.content.contraptions.piston.PistonExtensionPoleBlock;
 import com.mohistmc.mod.module.create.content.equipment.goggles.GogglesItem;
+import com.mojang.blaze3d.platform.Window;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

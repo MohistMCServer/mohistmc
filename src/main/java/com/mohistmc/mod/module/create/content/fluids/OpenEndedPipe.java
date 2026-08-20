@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.content.fluids;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.AllAdvancements;
 import com.mohistmc.mod.module.create.AllFluids;
 import com.mohistmc.mod.module.create.api.effect.OpenPipeEffectHandler;
@@ -14,6 +12,8 @@ import com.mohistmc.mod.module.create.infrastructure.fluids.BucketFluidInventory
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidInventory;
 import com.mohistmc.mod.module.create.infrastructure.fluids.FluidStack;
 import com.mohistmc.mod.module.create.infrastructure.fluids.SidedFluidInventory;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.Optional;
 import java.util.function.Function;
 import net.minecraft.core.BlockPos;

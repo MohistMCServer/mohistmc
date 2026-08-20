@@ -1,11 +1,11 @@
 package com.mohistmc.mod.module.create.infrastructure.component;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mohistmc.mod.module.create.catnip.codecs.stream.CatnipStreamCodecBuilders;
 import com.mohistmc.mod.module.create.content.logistics.BigItemStack;
 import com.mohistmc.mod.module.create.content.logistics.packager.InventorySummary;
 import com.mohistmc.mod.module.create.content.logistics.stockTicker.PackageOrder;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

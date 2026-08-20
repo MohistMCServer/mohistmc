@@ -1,5 +1,7 @@
 package com.mohistmc.mod.module.flywheel.backend.engine;
 
+import com.mohistmc.mod.module.flywheel.backend.Samplers;
+import com.mohistmc.mod.module.flywheel.backend.gl.GlTextureUnit;
 import com.mojang.blaze3d.opengl.GlSampler;
 import com.mojang.blaze3d.opengl.GlStateManager;
 import com.mojang.blaze3d.opengl.GlTexture;
@@ -7,8 +9,6 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.textures.FilterMode;
 import com.mojang.blaze3d.textures.GpuSampler;
 import com.mojang.blaze3d.textures.GpuTextureView;
-import com.mohistmc.mod.module.flywheel.backend.Samplers;
-import com.mohistmc.mod.module.flywheel.backend.gl.GlTextureUnit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.texture.AbstractTexture;

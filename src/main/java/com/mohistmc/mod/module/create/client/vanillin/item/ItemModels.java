@@ -1,5 +1,6 @@
 package com.mohistmc.mod.module.create.client.vanillin.item;
 
+import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
 import com.mohistmc.mod.module.flywheel.api.material.Transparency;
 import com.mohistmc.mod.module.flywheel.api.model.Mesh;
 import com.mohistmc.mod.module.flywheel.api.model.Model;
@@ -11,7 +12,6 @@ import com.mohistmc.mod.module.flywheel.lib.model.baked.BakedItemModelBufferer;
 import com.mohistmc.mod.module.flywheel.lib.model.baked.ItemChunkLayerSortedListBuilder;
 import com.mohistmc.mod.module.flywheel.lib.model.baked.MeshHelper;
 import com.mohistmc.mod.module.flywheel.lib.util.RendererReloadCache;
-import com.mohistmc.mod.module.create.client.vanillin.Vanillin;
 import it.unimi.dsi.fastutil.Hash;
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenCustomHashMap;
 import java.util.List;

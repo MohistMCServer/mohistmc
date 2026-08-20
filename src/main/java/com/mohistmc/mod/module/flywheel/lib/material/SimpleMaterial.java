@@ -1,6 +1,14 @@
 package com.mohistmc.mod.module.flywheel.lib.material;
 
-import com.mohistmc.mod.module.flywheel.api.material.*;
+import com.mohistmc.mod.module.flywheel.api.material.CardinalLightingMode;
+import com.mohistmc.mod.module.flywheel.api.material.CutoutShader;
+import com.mohistmc.mod.module.flywheel.api.material.DepthTest;
+import com.mohistmc.mod.module.flywheel.api.material.FogShader;
+import com.mohistmc.mod.module.flywheel.api.material.LightShader;
+import com.mohistmc.mod.module.flywheel.api.material.Material;
+import com.mohistmc.mod.module.flywheel.api.material.MaterialShaders;
+import com.mohistmc.mod.module.flywheel.api.material.Transparency;
+import com.mohistmc.mod.module.flywheel.api.material.WriteMask;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.resources.Identifier;
 

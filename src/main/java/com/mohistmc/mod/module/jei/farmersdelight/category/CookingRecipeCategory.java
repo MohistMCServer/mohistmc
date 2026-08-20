@@ -4,14 +4,11 @@ import com.google.common.base.Suppliers;
 import com.mohistmc.mod.module.farmersdelight.FarmersDelight;
 import com.mohistmc.mod.module.farmersdelight.common.crafting.CookingPotRecipe;
 import com.mohistmc.mod.module.farmersdelight.common.registry.ModItems;
-import com.mohistmc.mod.module.farmersdelight.common.registry.ModRecipeTypes;
 import com.mohistmc.mod.module.farmersdelight.common.utility.ClientRenderUtils;
-import com.mohistmc.mod.module.farmersdelight.common.utility.RecipeUtils;
 import com.mohistmc.mod.module.farmersdelight.common.utility.TextUtils;
 import com.mohistmc.mod.module.jei.CreateCategory;
 import com.mohistmc.mod.module.jei.JeiClientPlugin;
 import com.mohistmc.mod.module.jei.renderer.IconRenderer;
-import java.util.List;
 import java.util.function.Supplier;
 import javax.annotation.ParametersAreNonnullByDefault;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -31,7 +28,6 @@ import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeMap;
 
 // Mirrors the Create JEI category style: no-arg constructor, no IGuiHelper.
 // The background and UI icons are drawn directly in draw() via GuiGraphics.blit.

@@ -1,6 +1,7 @@
 package com.mohistmc.mod.module.create.client.content.equipment.bell;
 
 import com.mohistmc.mod.module.create.catnip.math.AngleHelper;
+import com.mohistmc.mod.module.create.content.equipment.bell.AbstractBellBlockEntity;
 import com.mohistmc.mod.module.flywheel.api.instance.Instance;
 import com.mohistmc.mod.module.flywheel.api.model.Model;
 import com.mohistmc.mod.module.flywheel.api.visual.ShaderLightVisual;
@@ -12,7 +13,6 @@ import com.mohistmc.mod.module.flywheel.lib.model.baked.PartialModel;
 import com.mohistmc.mod.module.flywheel.lib.visual.AbstractBlockEntityVisual;
 import com.mohistmc.mod.module.flywheel.lib.visual.SimpleDynamicVisual;
 import com.mohistmc.mod.module.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
-import com.mohistmc.mod.module.create.content.equipment.bell.AbstractBellBlockEntity;
 import java.util.function.Consumer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.BellBlock;

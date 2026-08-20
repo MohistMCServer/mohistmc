@@ -1,14 +1,12 @@
 package com.mohistmc.mod.module.create.client.content.equipment.toolbox;
 
 import com.google.common.collect.ImmutableList;
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mohistmc.mod.module.create.Create;
 import com.mohistmc.mod.module.create.client.AllPartialModels;
 import com.mohistmc.mod.module.create.client.catnip.animation.AnimationTickHolder;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement;
 import com.mohistmc.mod.module.create.client.catnip.gui.element.GuiGameElement.GuiPartialRenderBuilder;
 import com.mohistmc.mod.module.create.client.catnip.gui.widget.ElementWidget;
-import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllGuiTextures;
 import com.mohistmc.mod.module.create.client.foundation.gui.AllIcons;
 import com.mohistmc.mod.module.create.client.foundation.gui.menu.AbstractSimiContainerScreen;
@@ -19,6 +17,8 @@ import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxInventory
 import com.mohistmc.mod.module.create.content.equipment.toolbox.ToolboxMenu;
 import com.mohistmc.mod.module.create.foundation.gui.menu.MenuType;
 import com.mohistmc.mod.module.create.infrastructure.packet.c2s.ToolboxDisposeAllPacket;
+import com.mohistmc.mod.module.flywheel.lib.transform.TransformStack;
+import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.Collections;
 import java.util.List;
 import net.minecraft.client.Minecraft;

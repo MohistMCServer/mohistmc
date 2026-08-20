@@ -1,10 +1,10 @@
 package com.mohistmc.mod.module.create.content.trains.signal;
 
+import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.MapLike;
 import com.mojang.serialization.RecordBuilder;
-import com.mohistmc.mod.module.create.content.trains.graph.DimensionPalette;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;

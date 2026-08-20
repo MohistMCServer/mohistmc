@@ -1,7 +1,5 @@
 package com.mohistmc.mod.module.create.client.content.redstone.link;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.datafixers.util.Pair;
 import com.mohistmc.mod.module.create.api.behaviour.BlockEntityBehaviour;
 import com.mohistmc.mod.module.create.catnip.data.Iterate;
 import com.mohistmc.mod.module.create.client.Create;
@@ -11,6 +9,8 @@ import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.Va
 import com.mohistmc.mod.module.create.client.foundation.blockEntity.behaviour.ValueBoxTransform;
 import com.mohistmc.mod.module.create.client.foundation.utility.CreateLang;
 import com.mohistmc.mod.module.create.foundation.blockEntity.SmartBlockEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.datafixers.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.client.Minecraft;
